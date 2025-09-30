@@ -7,7 +7,7 @@ tags: [aquarium ,betta, kampffisch, walstad, kampfi, fisch]
 excerpt: "Kampfi ist mein erster Betta und der Namensgeber dieser Kategorie. Hier teile ich seine Geschichte."
 image: /assets/fish/dummy_fish.png
 fish_name: Kampfi
-fish_age: 1 Jahr
+fish_birth: Januar 2025
 fish_price: 36 €
 fish_type: Betta plakat
 fish_color: Hellboy red, marbled
