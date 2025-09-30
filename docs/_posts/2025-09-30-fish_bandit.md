@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, bandit, fisch]
 excerpt: "Bandit ist einer meiner besonderen Betta-Fische. Solche Farben habe ich noch nicht gesehen."
-image: /assets/fish/dummy_fish.png
+image: /assets/fish/bandit/bandit.jpg
 fish_name: Bandit
 fish_birth: März 2025
 fish_price: 36 €
