@@ -1,85 +1,39 @@
 ---
 layout: default
 ---
-
 <style>
-    :root {
-        /* Stellschraube: Wabengröße */
-        --hex-w: 150px;
-
-        /* Geometrie (flat-top) */
-        --hex-ar: 0.866;                      /* Höhe/Breite */
-        --hex-h: calc(var(--hex-w) * var(--hex-ar));
-        --edge: calc(var(--hex-w) );       /* Kantenlänge s */
-
-        /* Abstände = eine Kantenlänge */
-        --gap-h: var(--edge);                  /* horizontaler Abstand zwischen Waben */
-        --gap-v: var(--edge);                  /* vertikaler Abstand zwischen Reihen */
-
-        /* Vertikale Verzahnung: 25% Überlappung minus halber vertikaler Abstand */
-        --hex-v-overlap: calc(var(--hex-h) * 0.5 - var(--hex-border-w)*5.5);
-
-        /* Optik */
-        --hex-border: #ffffff;
-        --hex-border-w: 4px;
+    .gallery-masonry {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 18px;
+        max-width: 1200px;
+        margin: 2rem auto;
+        align-items: start;
     }
-
-    .hex-gallery {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-        margin: 2rem 0;
-    }
-
-    .hex-row {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: var(--gap-h);
-        margin-top: calc(var(--hex-v-overlap) * -1);
-    }
-    .hex-row:first-of-type { margin-top: 0; }
-
-    /* Die kurzen Reihen (eine Kachel weniger) eine halbe Wabenbreite nach links verschieben:
-       = (Wabenbreite + horizontaler Abstand) / 2 */
-    .hex-row.short {
-        transform: translateX(calc((var(--hex-w) + var(--gap-h)) / -60));
-    }
-
-    /* Wabe */
-    .hex-tile {
-        width: var(--hex-w);
-        height: var(--hex-h); /* explizit für breite Browser-Kompatibilität */
-        position: relative;
+    .gallery-item {
+        border-radius: 8px;
         overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        clip-path: polygon(
-                25% 0%, 75% 0%,
-                100% 50%,
-                75% 100%, 25% 100%,
-                0% 50%
-        );
-        /* Rand innen, damit sich Außenmaße nicht verändern */
-        box-shadow: inset 0 0 0 var(--hex-border-w) var(--hex-border),
-        0 2px 8px rgba(0,0,0,.08);
         background: #111;
-        transition: transform .2s ease, box-shadow .2s ease;
+        box-shadow: 0 2px 8px rgba(0,0,0,.08);
+        transition: box-shadow .2s;
+        cursor: pointer;
+        position: relative;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
     }
-    .hex-tile img {
+    .gallery-item img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: auto;
         display: block;
         background: #eee;
-        transition: transform .18s ease;
-        cursor: pointer;
+        transition: transform .18s;
+        object-fit: contain;
+        max-height: 320px;
     }
-    .hex-tile:hover img { transform: scale(1.045); }
-
-    /* Lightbox */
+    .gallery-item:hover {
+        box-shadow: 0 6px 24px rgba(0,0,0,.18);
+    }
     #lightbox-overlay {
         display: none;
         position: fixed;
@@ -107,93 +61,42 @@ layout: default
         cursor: pointer;
         line-height: 1;
     }
-
-    /* Responsiv: nur die Wabengröße ändern – Abstände folgen automatisch */
-    @media (max-width: 900px) { :root { --hex-w: 120px; } }
-    @media (max-width: 600px) { :root { --hex-w: 92px; } }
+    @media (max-width: 900px) {
+        .gallery-masonry { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+    }
+    @media (max-width: 600px) {
+        .gallery-masonry { grid-template-columns: 1fr; }
+    }
 </style>
 
-<div class="hex-gallery" id="hexGallery"></div>
-
-<div id="lightbox-overlay" tabindex="-1" aria-hidden="true">
-    <button class="close-btn" aria-label="Schließen">&times;</button>
-    <img src="" alt="Großansicht">
+<div class="gallery-masonry">
+    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/'" %}
+    {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
+    {% for img in gallery_images %}
+        {% assign ext = img.extname | remove: "." | downcase %}
+        {% if image_exts contains ext %}
+            <div class="gallery-item">
+                <img src="{{ img.path }}" alt="Gallery Image"
+                     loading="lazy"
+                     onclick="openLightbox('{{ img.path }}')">
+            </div>
+        {% endif %}
+    {% endfor %}
 </div>
 
+<div id="lightbox-overlay" onclick="closeLightbox(event)">
+    <button class="close-btn" onclick="closeLightbox(event)">&times;</button>
+    <img id="lightbox-img" src="" alt="Großansicht">
+</div>
 <script>
-    /* Einstellungen */
-    const perRow = 6;                 // Anzahl Kacheln in den vollen Reihen
-    const total  = 50;                // Gesamtanzahl Demo-Bilder
-    const makeUrl = i => `https://picsum.photos/seed/hex${i}/1200/800`;
-
-    /* Bildliste */
-    const images = Array.from({ length: total }, (_, i) => makeUrl(i + 1));
-
-    /* DOM-Referenzen */
-    const gallery    = document.getElementById('hexGallery');
-    const overlay    = document.getElementById('lightbox-overlay');
-    const overlayImg = overlay.querySelector('img');
-    const closeBtn   = overlay.querySelector('.close-btn');
-
-    /* Reihen erzeugen:
-       Gerade Reihen: perRow Kacheln
-       Ungerade Reihen: perRow-1 Kacheln + nach links verschoben (per CSS-Klasse) */
-    let ptr = 0, r = 0;
-    while (ptr < images.length) {
-        const fullRow = r % 2 === 0;
-        const count   = Math.min(fullRow ? perRow : perRow - 1, images.length - ptr);
-
-        const rowEl = document.createElement('div');
-        rowEl.className = 'hex-row' + (fullRow ? '' : ' short');
-
-        for (let c = 0; c < count; c++) {
-            const tile = document.createElement('div');
-            tile.className = 'hex-tile';
-
-            const img = document.createElement('img');
-            img.src = images[ptr + c];
-            img.alt = `Demo-Bild ${ptr + c + 1}`;
-            img.className = 'gallery-thumb';
-            img.loading = 'lazy';
-            img.tabIndex = 0;
-            img.dataset.full = images[ptr + c];
-
-            tile.appendChild(img);
-            rowEl.appendChild(tile);
-        }
-
-        gallery.appendChild(rowEl);
-        ptr += count;
-        r++;
+function openLightbox(src) {
+    document.getElementById('lightbox-img').src = src;
+    document.getElementById('lightbox-overlay').classList.add('active');
+}
+function closeLightbox(e) {
+    if (e.target.id === 'lightbox-overlay' || e.target.classList.contains('close-btn')) {
+        document.getElementById('lightbox-overlay').classList.remove('active');
+        document.getElementById('lightbox-img').src = '';
     }
-
-    /* Lightbox */
-    const open = (src, alt) => {
-        overlayImg.src = src;
-        overlayImg.alt = alt || '';
-        overlay.classList.add('active');
-        overlay.setAttribute('aria-hidden', 'false');
-    };
-    const close = () => {
-        overlay.classList.remove('active');
-        overlay.setAttribute('aria-hidden', 'true');
-        overlayImg.src = '';
-    };
-
-    document.addEventListener('click', e => {
-        const t = e.target;
-        if (t.classList && t.classList.contains('gallery-thumb')) {
-            open(t.dataset.full, t.alt);
-        } else if (t === overlay || t.classList.contains('close-btn')) {
-            close();
-        }
-    });
-    document.addEventListener('keydown', e => {
-        if (overlay.classList.contains('active') && (e.key === 'Escape' || e.key === 'Esc')) close();
-        if ((e.key === 'Enter' || e.key === ' ') && document.activeElement.classList.contains('gallery-thumb')) {
-            e.preventDefault();
-            const t = document.activeElement;
-            open(t.dataset.full, t.alt);
-        }
-    });
+}
 </script>
