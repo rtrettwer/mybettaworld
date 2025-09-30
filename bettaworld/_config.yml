@@ -33,6 +33,9 @@ theme: minima
 header_pages:
   - about.md
   - blog.md
+  - fish.md
+  - tanks.md
+  - food.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
