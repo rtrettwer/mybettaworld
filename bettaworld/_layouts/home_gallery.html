@@ -1,0 +1,108 @@
+---
+layout: default
+---
+
+<style>
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 18px;
+    margin: 2em 0;
+}
+.gallery-thumb {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+.gallery-thumb:hover {
+    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+}
+#lightbox-overlay {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+#lightbox-overlay.active {
+    display: flex;
+}
+#lightbox-overlay img {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+#lightbox-overlay .close-btn {
+    position: absolute;
+    top: 32px;
+    right: 48px;
+    font-size: 2.5rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1001;
+    background: none;
+    border: none;
+}
+</style>
+<div class="gallery-grid">
+    {%- for post in site.posts -%}
+        {%- if post.image -%}
+        <img
+            src="{{ post.image | relative_url }}"
+            alt="{{ post.image_alt | default: post.title }}"
+            class="gallery-thumb"
+            loading="lazy"
+            tabindex="0"
+            data-full="{{ post.image | relative_url }}"
+        >
+        {%- endif -%}
+    {%- endfor -%}
+</div>
+
+<div id="lightbox-overlay" tabindex="-1">
+    <button class="close-btn" aria-label="Schließen">&times;</button>
+    <img src="" alt="Großansicht">
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const overlay = document.getElementById('lightbox-overlay');
+    const overlayImg = overlay.querySelector('img');
+    const closeBtn = overlay.querySelector('.close-btn');
+    document.querySelectorAll('.gallery-thumb').forEach(img => {
+        img.addEventListener('click', () => {
+            overlayImg.src = img.dataset.full;
+            overlayImg.alt = img.alt;
+            overlay.classList.add('active');
+        });
+        img.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                overlayImg.src = img.dataset.full;
+                overlayImg.alt = img.alt;
+                overlay.classList.add('active');
+            }
+        });
+    });
+    function closeLightbox() {
+        overlay.classList.remove('active');
+        overlayImg.src = '';
+    }
+    closeBtn.addEventListener('click', closeLightbox);
+    overlay.addEventListener('click', function(e) {
+        if (e.target === overlay) closeLightbox();
+    });
+    document.addEventListener('keydown', function(e) {
+        if (overlay.classList.contains('active') && (e.key === 'Escape' || e.key === 'Esc')) {
+            closeLightbox();
+        }
+    });
+});
+</script>

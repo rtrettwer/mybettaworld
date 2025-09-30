@@ -27,6 +27,8 @@ github_username: rtrettwer
 
 # Build settings
 theme: minima
+#minima:
+#  skin: dark
 
 
 # Header‑Navigation (minima):
@@ -36,6 +38,7 @@ header_pages:
   - fish.md
   - tanks.md
   - food.md
+  - gallery.md
 
 # Exclude from processing.
 # The following items will not be processed, by default.
