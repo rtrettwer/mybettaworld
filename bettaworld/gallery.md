@@ -2,6 +2,6 @@
 layout: home_gallery
 title: "Galerie"
 permalink: /gallery/
+gallery_dir: /assets/gallery/
 ---
 
-Hier findest du eine Galerie aller Bilder aus meinen Beiträgen. Klicke auf ein Bild, um es in groß zu sehen.
