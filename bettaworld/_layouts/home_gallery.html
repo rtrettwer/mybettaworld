@@ -3,106 +3,177 @@ layout: default
 ---
 
 <style>
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 18px;
-    margin: 2em 0;
-}
-.gallery-thumb {
-    width: 100%;
-    aspect-ratio: 1/1;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: box-shadow 0.2s;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
-}
-.gallery-thumb:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.18);
-}
-#lightbox-overlay {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    inset: 0;
-    background: rgba(0,0,0,0.85);
-    justify-content: center;
-    align-items: center;
-}
-#lightbox-overlay.active {
-    display: flex;
-}
-#lightbox-overlay img {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 12px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-}
-#lightbox-overlay .close-btn {
-    position: absolute;
-    top: 32px;
-    right: 48px;
-    font-size: 2.5rem;
-    color: #fff;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 1001;
-    background: none;
-    border: none;
-}
+    :root {
+        --hex-w: 150px;
+        --hex-gap: 6px;
+        --hex-border: #ffffff;
+        --hex-ar: 0.866;
+        --hex-h: calc(var(--hex-w) * var(--hex-ar));
+        --hex-v-overlap: calc(var(--hex-h) * 0.25);
+    }
+    .hex-gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        margin: 2rem 0;
+    }
+    .hex-row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--hex-gap);
+        margin-top: calc(var(--hex-v-overlap) * -1);
+    }
+    .hex-row:first-of-type { margin-top: 0; }
+    .hex-spacer {
+        width: calc(var(--hex-w) / 2);
+        height: var(--hex-h);
+        display: block;
+        visibility: hidden;
+        pointer-events: none;
+    }
+    .hex-tile {
+        width: var(--hex-w);
+        aspect-ratio: 1 / var(--hex-ar);
+        position: relative;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        clip-path: polygon(
+                25% 0%, 75% 0%,
+                100% 50%,
+                75% 100%, 25% 100%,
+                0% 50%
+        );
+        box-shadow: 0 0 0 4px var(--hex-border), 0 2px 8px rgba(0,0,0,.08);
+        background: #111;
+        transition: transform .2s ease, box-shadow .2s ease;
+    }
+    .hex-tile.empty {
+        visibility: hidden;
+        box-shadow: none;
+    }
+    .hex-tile img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        background: #eee;
+        transition: transform .18s ease;
+        cursor: pointer;
+    }
+    .hex-tile:hover img { transform: scale(1.045); }
+    #lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0,0,0,.88);
+        justify-content: center;
+        align-items: center;
+    }
+    #lightbox-overlay.active { display: flex; }
+    #lightbox-overlay img {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 10px 32px rgba(0,0,0,.4);
+    }
+    #lightbox-overlay .close-btn {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+        font-size: 2.2rem;
+        color: #fff;
+        background: none;
+        border: none;
+        cursor: pointer;
+        line-height: 1;
+    }
+    @media (max-width: 900px) { :root { --hex-w: 120px; } }
+    @media (max-width: 600px) { :root { --hex-w: 92px; } }
 </style>
-<div class="gallery-grid">
-    {%- for post in site.posts -%}
-        {%- if post.image -%}
-        <img
-            src="{{ post.image | relative_url }}"
-            alt="{{ post.image_alt | default: post.title }}"
-            class="gallery-thumb"
-            loading="lazy"
-            tabindex="0"
-            data-full="{{ post.image | relative_url }}"
-        >
-        {%- endif -%}
+
+{%- assign gallery_files = site.static_files | where_exp: "file", "file.path contains '/assets/gallery/'" -%}
+{%- assign gallery_images = "" | split: "" -%}
+{%- for file in gallery_files -%}
+    {%- assign ext = file.extname | downcase -%}
+    {%- if ext == '.jpg' or ext == '.jpeg' or ext == '.png' or ext == '.gif' or ext == '.webp' -%}
+        {%- assign gallery_images = gallery_images | push: file -%}
+    {%- endif -%}
+{%- endfor -%}
+{%- assign images_per_row = 6 -%}
+{%- assign row_count = gallery_images.size | divided_by: images_per_row | ceil -%}
+
+<div class="hex-gallery">
+    {%- for row in (0..row_count-1) -%}
+        <div class="hex-row">
+            {%- assign is_odd = row | modulo: 2 -%}
+            {%- if is_odd == 1 -%}
+                <span class="hex-spacer" aria-hidden="true"></span>
+            {%- endif -%}
+            {%- for col in (0..images_per_row-1) -%}
+                {%- assign idx = row | times: images_per_row | plus: col -%}
+                {%- if idx < gallery_images.size -%}
+                    <div class="hex-tile">
+                        <img
+                            src="{{ gallery_images[idx].path | relative_url }}"
+                            alt="Galeriebild"
+                            class="gallery-thumb"
+                            loading="lazy"
+                            tabindex="0"
+                            data-full="{{ gallery_images[idx].path | relative_url }}">
+                    </div>
+                {%- else -%}
+                    <div class="hex-tile empty" aria-hidden="true"></div>
+                {%- endif -%}
+            {%- endfor -%}
+        </div>
     {%- endfor -%}
+    {%- if gallery_images.size == 0 -%}
+        <p>Keine Bilder in <code>assets/gallery</code> gefunden.</p>
+    {%- endif -%}
 </div>
 
-<div id="lightbox-overlay" tabindex="-1">
+<div id="lightbox-overlay" tabindex="-1" aria-hidden="true">
     <button class="close-btn" aria-label="Schließen">&times;</button>
     <img src="" alt="Großansicht">
 </div>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const overlay = document.getElementById('lightbox-overlay');
-    const overlayImg = overlay.querySelector('img');
-    const closeBtn = overlay.querySelector('.close-btn');
-    document.querySelectorAll('.gallery-thumb').forEach(img => {
-        img.addEventListener('click', () => {
-            overlayImg.src = img.dataset.full;
-            overlayImg.alt = img.alt;
+    document.addEventListener('DOMContentLoaded', () => {
+        const overlay = document.getElementById('lightbox-overlay');
+        const overlayImg = overlay.querySelector('img');
+        const closeBtn = overlay.querySelector('.close-btn');
+
+        const open = (src, alt) => {
+            overlayImg.src = src;
+            overlayImg.alt = alt || '';
             overlay.classList.add('active');
+            overlay.setAttribute('aria-hidden', 'false');
+        };
+        const close = () => {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+            overlayImg.src = '';
+        };
+
+        document.querySelectorAll('.gallery-thumb').forEach(img => {
+            img.addEventListener('click', () => open(img.dataset.full, img.alt));
+            img.addEventListener('keydown', e => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    open(img.dataset.full, img.alt);
+                }
+            });
         });
-        img.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                overlayImg.src = img.dataset.full;
-                overlayImg.alt = img.alt;
-                overlay.classList.add('active');
-            }
+
+        closeBtn.addEventListener('click', close);
+        overlay.addEventListener('click', e => { if (e.target === overlay) close(); });
+        document.addEventListener('keydown', e => {
+            if (overlay.classList.contains('active') && (e.key === 'Escape' || e.key === 'Esc')) close();
         });
     });
-    function closeLightbox() {
-        overlay.classList.remove('active');
-        overlayImg.src = '';
-    }
-    closeBtn.addEventListener('click', closeLightbox);
-    overlay.addEventListener('click', function(e) {
-        if (e.target === overlay) closeLightbox();
-    });
-    document.addEventListener('keydown', function(e) {
-        if (overlay.classList.contains('active') && (e.key === 'Escape' || e.key === 'Esc')) {
-            closeLightbox();
-        }
-    });
-});
 </script>
