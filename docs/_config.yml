@@ -18,9 +18,12 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: A betta place to be
+title: The more the betta
+subtitle: Kampffischzucht und mehr
+author: Rike Trettwer
 #email: your-email@example.com
-description: "Ich teste mich hier an Jekyll auf Github und dokumentiere gleichzeitig meine Erfahrungen in der Pflege meiner Kampffischzucht."
+description: >- # this means to ignore newlines until "baseurl:"
+  A blog about Betta splendens breeding, fishkeeping and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""#"https://trettwer.de"
 github_username: rtrettwer
