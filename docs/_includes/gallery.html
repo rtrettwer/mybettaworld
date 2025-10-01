@@ -1,168 +1,122 @@
-{% assign gallery_dir = include.dir | default: '/assets/' %}
-{% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
-{% assign gallery_images = "" | split: "" %}
-{% for file in site.static_files %}
-  {% assign ext = file.extname | remove: "." | downcase %}
-  {% if image_exts contains ext %}
-    {% if file.path contains gallery_dir %}
-      {% assign gallery_images = gallery_images | push: file %}
-    {% endif %}
-  {% endif %}
-{% endfor %}
-{% assign gallery_images = gallery_images | sort: "path" %}
+{%- assign gallery_dir = include.dir | default: '/assets/' -%}
+{%- assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," -%}
+{%- assign gallery_images = "" | split: "" -%}
+{%- for file in site.static_files -%}
+  {%- assign ext = file.extname | remove: "." | downcase -%}
+  {%- if image_exts contains ext and file.path contains gallery_dir -%}
+    {%- assign gallery_images = gallery_images | push: file -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- assign gallery_images = gallery_images | sort: "path" -%}
 
-<html lang="de">
-<head>
-    <meta charset="utf-8">
-    <title>{{ page.title }} • {{ site.title }}</title>
-    <meta name="description" content="{{ page.excerpt | strip_html }}">
-    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    /* Final-Tiles/Masonry Grid */
+    .ftg-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+        grid-auto-rows: 10px;
+        grid-auto-flow: dense;
+        gap: 12px;
+        margin-top: 1rem;
+    }
 
-    <style>
-        #main {
-            width: 100%;
-        }
+    .ftg-item {
+        position: relative;
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
+        background: #000000;
+        cursor: pointer;
+        transition: box-shadow .2s ease;
+    }
 
-        .page-feature-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            display: block;
-        }
+    .ftg-item:hover {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+    }
 
-        /* Final-Tiles/Masonry Grid */
-        .ftg-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            grid-auto-rows: 10px;
-            grid-auto-flow: dense;
-            gap: 12px;
-            margin-top: 1rem;
-        }
+    .ftg-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        background: #eee;
+        transition: transform .25s ease;
+    }
 
-        .ftg-item {
-            position: relative;
-            display: block;
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
-            background: #000000;
-            cursor: pointer;
-            transition: box-shadow .2s ease;
-        }
+    .ftg-item:hover img {
+        transform: scale(1.02);
+    }
 
-        .ftg-item:hover {
-            box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
-        }
+    /* Lightbox */
+    #lightbox-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 1000;
+        background: rgba(0, 0, 0, .9);
+        justify-content: center;
+        align-items: center;
+    }
 
-        .ftg-item img {
-            display: block;
-            width: 100%;
-            height: auto;
-            background: #eee;
-            transition: transform .25s ease;
-        }
+    #lightbox-overlay.active {
+        display: flex;
+    }
 
-        .ftg-item:hover img {
-            transform: scale(1.02);
-        }
+    #lightbox-img {
+        max-width: 90vw;
+        max-height: 90vh;
+        border-radius: 12px;
+        box-shadow: 0 10px 32px rgba(0, 0, 0, .4);
+    }
 
-        /* Lightbox */
-        #lightbox-overlay {
-            display: none;
-            position: fixed;
-            inset: 0;
-            z-index: 1000;
-            background: rgba(0, 0, 0, .9);
-            justify-content: center;
-            align-items: center;
-        }
+    .lb-btn {
+        position: absolute;
+        background: rgba(0, 0, 0, .5);
+        color: #fff;
+        border: none;
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        font-size: 1.6rem;
+        line-height: 44px;
+        text-align: center;
+        cursor: pointer;
+        transition: background .2s ease;
+    }
 
-        #lightbox-overlay.active {
-            display: flex;
-        }
+    .lb-btn:hover {
+        background: rgba(0, 0, 0, .7);
+    }
 
-        #lightbox-img {
-            max-width: 90vw;
-            max-height: 90vh;
-            border-radius: 12px;
-            box-shadow: 0 10px 32px rgba(0, 0, 0, .4);
-        }
+    .lb-close {
+        top: 24px;
+        right: 24px;
+        font-size: 2rem;
+        line-height: 44px;
+    }
 
-        .lb-btn {
-            position: absolute;
-            background: rgba(0, 0, 0, .5);
-            color: #fff;
-            border: none;
-            width: 44px;
-            height: 44px;
-            border-radius: 22px;
-            font-size: 1.6rem;
-            line-height: 44px;
-            text-align: center;
-            cursor: pointer;
-            transition: background .2s ease;
-        }
+    .lb-prev {
+        left: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
 
-        .lb-btn:hover {
-            background: rgba(0, 0, 0, .7);
-        }
+    .lb-next {
+        right: 24px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+</style>
 
-        .lb-close {
-            top: 24px;
-            right: 24px;
-            font-size: 2rem;
-            line-height: 44px;
-        }
-
-        .lb-prev {
-            left: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-
-        .lb-next {
-            right: 24px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-    </style>
-</head>
-<body>
-<div id="main" role="main">
-    <div class="wrap">
-
-        <div class="archive-wrap">
-            <div class="page-content">
-                {{ content }}
-
-                {% assign gallery_dir = page.gallery_dir | default: '/assets/' %}
-                {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
-                {% assign gallery_images = "" | split: "" %}
-                {% for file in site.static_files %}
-                {% assign ext = file.extname | remove: "." | downcase %}
-                {% if image_exts contains ext %}
-                {% if file.path contains gallery_dir %}
-                {% assign gallery_images = gallery_images | push: file %}
-                {% endif %}
-                {% endif %}
-                {% endfor %}
-                {% assign gallery_images = gallery_images | sort: "path" %}
-                <div id="gallery" class="ftg-grid" data-row="10" data-gap="12">
-                    {% for file in gallery_images %}
-                    <a class="ftg-item"
-                       href="{{ file.path | relative_url }}"
-                       data-index="{{ forloop.index0 }}"
-                       onclick="openLightbox(event, {{ forloop.index0 }});">
-                        <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
-                    </a>
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-    </div>
+<div id="gallery" class="ftg-grid" data-row="10" data-gap="12">
+  {%- for file in gallery_images -%}
+    <a class="ftg-item"
+       href="{{ file.path | relative_url }}"
+       data-index="{{ forloop.index0 }}"
+       onclick="openLightbox(event, {{ forloop.index0 }});">
+        <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
+    </a>
+  {%- endfor -%}
 </div>
 
 <!-- Lightbox -->
@@ -245,5 +199,3 @@
         });
     })();
 </script>
-</body>
-</html>
