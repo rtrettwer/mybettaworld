@@ -35,6 +35,7 @@ entwicklung:
     ereignis: Artemia Nauplien
 entwicklung_text: |
   Mittlerweile füttere ich mehrmals täglich mit frischen Artemia Nauplien, Mikrowürmern oder Essigälchen. Hin und wieder Staubfutter. Ansonsten fange ich an zu testen, ob sie feines Granulat oder zermahlene Flocken annehmen.
+gallery_dir: /assets/tanks/babies
 ---
 
 ## Über das Becken

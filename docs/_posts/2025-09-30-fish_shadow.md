@@ -12,6 +12,7 @@ fish_price: 5 €
 fish_type: Betta splendens
 fish_color: Schwarz mit grün-blauem Schimmer
 fish_gender: Weiblich
+gallery_dir: /assets/fish/shadow
 ---
 
 Dieser Eintrag beschreibt die Entwicklung und Pflege meines Dschungel Aquariums mit Betta Kampffischen nach der Walstad Methode.

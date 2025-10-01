@@ -30,6 +30,7 @@ entwicklung:
 
 entwicklung_text: |
   Mittlerweile ist nur noch ein Betta-Weibchen in diesem Becken (Sonnenschein). Eines der Weibchen war ein Männchen (Sir Pryce), ein Weibchen ist gestorben und die anderen beiden sind aktuell bei Kampfi im Dschungel-Aquarium
+gallery_dir: /assets/tanks/mangrove
 ---
 
 ## Über das Becken

@@ -32,6 +32,7 @@ entwicklung:
     ereignis: Erstes Mal probiert, sie mit fein gemahlenen Flocken zu füttern - sie haben es gut angenommen, denke ich.
 entwicklung_text: |
   Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
+gallery_dir: /assets/tanks/jungle
 ---
 
 **Steckbrief**

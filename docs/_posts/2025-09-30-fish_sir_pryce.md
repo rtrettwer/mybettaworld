@@ -12,6 +12,8 @@ fish_price: 5 €
 fish_type: Betta plakat
 fish_color: Blau mit schwarzem Kopf und roten Bauchflossen.
 fish_gender: Männlich
+gallery_dir: /assets/fish/sirPryce
+
 ---
 # Das Überraschungs-Männchen
 Eigentlich hatte ich fünf Betta-Weibchen gekauft, um eine kleine Schwesternschaft zu haben und meine Zucht vorzubereiten.

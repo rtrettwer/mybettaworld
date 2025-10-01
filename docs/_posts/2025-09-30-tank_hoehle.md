@@ -19,21 +19,6 @@ pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
 heizung: Heizstab
 besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik
+gallery_dir: /assets/tanks/cave
 ---
-
-**Steckbrief**
-
-- **Maße (LxBxH):** 30x20x20 cm  
-- **Süßwasser/Salzwasser:** Süßwasser  
-- **Filter:** Nein  
-- **Luftheber:** Ja  
-- **Beleuchtung:** LED  
-- **Bodengrund:** Sand  
-- **Deko:** Höhlen, Pflanzen  
-- **Startdatum:** 10.01.2024  
-- **Besatz:** 1 Betta splendens, Posthornschnecken  
-- **Pflanzen:** Moos, Javafarn  
-- **Technik:** Luftheber, Thermometer  
-- **Besonderheiten:** Viele Höhlen, ruhiges Becken, wenig Technik  
-
 Dieser Eintrag beschreibt die Entwicklung und Pflege meines Höhlen-Beckens mit Betta Kampffischen nach der Walstad Methode.

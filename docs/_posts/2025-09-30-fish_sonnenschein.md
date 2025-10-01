@@ -12,6 +12,7 @@ fish_price: 5 €
 fish_type: Betta splendens
 fish_color: Weißer Körper mit roten Flossen
 fish_gender: Weiblich
+gallery_dir: /assets/fish/sonnenschein
 ---
 
 Dieser Eintrag beschreibt die Entwicklung und Pflege meines Dschungel Aquariums mit Betta Kampffischen nach der Walstad Methode.
