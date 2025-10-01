@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [tank, betta, kampffisch, walstad, zucht]
 excerpt: "Ein Plastik-Kübel für die Zucht von Bettas."
-image: /assets/tanks/dummy_tank.png
+image: /assets/tanks/breeding/breeding.jpg
 dimensions: 30x30x30 cm
 fassungsvermoegen: 40L
 water_type: Süßwasser

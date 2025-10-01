@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, sir pryce, fisch]
 excerpt: "Sir Pryce war eine echte Überraschung - denn eigentlich hatte ich ein Weibchen gekauft"
-image: /assets/fish/dummy_fish.png
+image: /assets/fish/sirPryce/sir_pryce.jpg
 fish_name: Sir Pryce
 fish_age: Juni 2025
 fish_price: 5 €

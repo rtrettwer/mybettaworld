@@ -9,7 +9,7 @@ layout: default
         {%- if post.categories contains "tank" -%}
         <li style="display: flex; align-items: flex-start; margin-bottom: 2em;">
             <div style="flex: 0 0 120px; margin-right: 1.5em;">
-                <img class="post-thumb" src="/assets/tanks/dummy_tank.png" alt="Tank Dummy" loading="lazy" style="width: 120px; height: auto; border-radius: 6px;">
+                <img class="post-thumb" src="{{ post.image | relative_url }}" alt="{{ post.image_alt | default: post.title }}" loading="lazy" style="width: 120px; height: auto; border-radius: 6px;">
             </div>
             <div style="flex: 1;">
                 <h3 style="margin-top: 0;">
