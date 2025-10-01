@@ -19,15 +19,15 @@ layout: default
 
     {% if page.image or page.dimensions or page.fassungsvermoegen or page.water_type or page.filter or page.luftheber or page.beleuchtung or page.bodengrund or page.deko or page.startdatum or page.besatz or page.pflanzen or page.technik or page.heizung or page.besonderheiten %}
     <div class="tank-steckbrief"
-         style="background: rgba(248,248,248,0.7); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); max-width: 700px; margin-left: auto; margin-right: auto;">
+         style="background: rgba(248,248,248,0.7); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); max-width: 900px; margin-left: auto; margin-right: auto;">
         <div style="display: flex; align-items: flex-start; gap: 2rem;">
             {% if page.image %}
-            <div class="tank-image" style="flex: 0 0 250px; max-width: 250px;">
+            <div class="tank-image" style="flex: 0 0 140px; max-width: 140px;">
                 <img src="{{ page.image }}" alt="Aquarium Foto"
                      style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
             </div>
             {% endif %}
-            <div style="flex: 1 1 0%;">
+            <div style="flex: 1 1 0%; min-width: 0;">
                 <h2 style="margin-top:0;">Steckbrief</h2>
                 <dl style="display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.5rem;">
                     {% if page.dimensions %}

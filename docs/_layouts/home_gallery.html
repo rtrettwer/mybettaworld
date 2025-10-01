@@ -1,130 +1,242 @@
 ---
 layout: default
 ---
-<!DOCTYPE html>
-<html>
+
+<html lang="de">
 <head>
     <meta charset="utf-8">
-    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
-    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
-    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
-    {% if page.author %}
-    {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
-    {% endif %}
-
-    {% include head.html %}
-    {% include header.html %}
-
+    <title>{{ page.title }} • {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html }}">
+    <meta name="keywords" content="{{ page.tags | join: ', ' }}">
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
-    <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
-    <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="cleartype" content="on">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
-    <link rel="stylesheet" type="text/css" href="{{site.url}}/css/jekyll-photo-gallery.css">
-    <link rel="stylesheet" href="{{ site.url }}/css/justifiedGallery.min.css">
     <style>
-        .gallery-justified {
+        /* Seite */
+        #main {
+            width: 70%;
+            margin: 30px auto;
+        }
+
+        .page-feature-image {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+        }
+
+        /* Final-Tiles/Masonry Grid */
+        .ftg-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            grid-auto-rows: 10px; /* Baseline beeinflusst Pack-Dichte */
+            grid-auto-flow: dense;
+            gap: 12px;
             margin-top: 2rem;
         }
-        .gallery-justified img {
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+
+        .ftg-item {
+            position: relative;
+            display: block;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
             background: #eee;
             cursor: pointer;
-            transition: box-shadow .2s;
+            transition: box-shadow .2s ease;
         }
-        .gallery-justified img:hover {
-            box-shadow: 0 6px 24px rgba(0,0,0,.18);
+
+        .ftg-item:hover {
+            box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
         }
+
+        .ftg-item img {
+            display: block;
+            width: 100%;
+            height: auto;
+            background: #eee;
+            transition: transform .25s ease;
+        }
+
+        .ftg-item:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Lightbox */
         #lightbox-overlay {
             display: none;
             position: fixed;
             inset: 0;
             z-index: 1000;
-            background: rgba(0,0,0,.88);
+            background: rgba(0, 0, 0, .9);
             justify-content: center;
             align-items: center;
         }
-        #lightbox-overlay.active { display: flex; }
-        #lightbox-overlay img {
+
+        #lightbox-overlay.active {
+            display: flex;
+        }
+
+        #lightbox-img {
             max-width: 90vw;
             max-height: 90vh;
             border-radius: 12px;
-            box-shadow: 0 10px 32px rgba(0,0,0,.4);
+            box-shadow: 0 10px 32px rgba(0, 0, 0, .4);
         }
-        #lightbox-overlay .close-btn {
+
+        .lb-btn {
             position: absolute;
-            top: 24px;
-            right: 32px;
-            font-size: 2.2rem;
+            background: rgba(0, 0, 0, .5);
             color: #fff;
-            background: none;
             border: none;
+            width: 44px;
+            height: 44px;
+            border-radius: 22px;
+            font-size: 1.6rem;
+            line-height: 44px;
+            text-align: center;
             cursor: pointer;
-            line-height: 1;
+            transition: background .2s ease;
+        }
+
+        .lb-btn:hover {
+            background: rgba(0, 0, 0, .7);
+        }
+
+        .lb-close {
+            top: 24px;
+            right: 24px;
+            font-size: 2rem;
+            line-height: 44px;
+        }
+
+        .lb-prev {
+            left: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .lb-next {
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
         }
     </style>
 </head>
 <body>
-<div id="main" role="main" style="width: 70%; margin: auto; margin-top: 30px;">
+<div id="main" role="main">
     <div class="wrap">
-        <div class="page-feature">
-            <div class="page-image">
-                <img src="{{ site.url }}/images/headers/header.jpg" class="page-feature-image" alt="{{ page.title }}">
-                {% if page.image.credit %}{% include image-credit.html %}{% endif %}
-            </div>
-        </div>
+
         <div class="archive-wrap">
             <div class="page-content">
                 {{ content }}
-                <div id="gallery" class="gallery-justified">
-                    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/'" %}
-                    {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
-                    {% for img in gallery_images %}
-                        {% assign ext = img.extname | remove: "." | downcase %}
-                        {% if image_exts contains ext %}
-                            <a href="{{ img.path }}" class="gallery-link" onclick="openLightbox('{{ img.path }}'); return false;">
-                                <img src="{{ img.path }}" alt="Gallery Image" loading="lazy">
-                            </a>
-                        {% endif %}
-                    {% endfor %}
+
+                {% assign gallery_dir = page.gallery_dir | default: '/assets/gallery/' %}
+                {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
+                {% assign gallery_images = "" | split: "" %}
+                {% for file in site.static_files %}
+                  {% assign ext = file.extname | remove: "." | downcase %}
+                  {% if image_exts contains ext %}
+                    {% if file.path contains gallery_dir %}
+                      {% assign gallery_images = gallery_images | push: file %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+                {% assign gallery_images = gallery_images | sort: "path" %}
+                <div id="gallery" class="ftg-grid" data-row="10" data-gap="12">
+                  {% for file in gallery_images %}
+                    <a class="ftg-item"
+                       href="{{ file.path | relative_url }}"
+                       data-index="{{ forloop.index0 }}"
+                       onclick="openLightbox(event, {{ forloop.index0 }});">
+                        <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
+                    </a>
+                  {% endfor %}
                 </div>
             </div>
         </div>
     </div>
 </div>
 
-<div id="lightbox-overlay" onclick="closeLightbox(event)">
-    <button class="close-btn" onclick="closeLightbox(event)">&times;</button>
+<!-- Lightbox -->
+<div id="lightbox-overlay" aria-hidden="true">
+    <button class="lb-btn lb-close" aria-label="Schließen" onclick="closeLightbox()">×</button>
+    <button class="lb-btn lb-prev" aria-label="Vorheriges Bild" onclick="prevLightbox()">‹</button>
     <img id="lightbox-img" src="" alt="Großansicht">
+    <button class="lb-btn lb-next" aria-label="Nächstes Bild" onclick="nextLightbox()">›</button>
 </div>
 
-<script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
-<script src="{{ site.url }}/js/plugins/jquery.justifiedGallery.min.js"></script>
 <script>
-$(function(){
-    $("#gallery").justifiedGallery({
-        rowHeight : 200,
-        lastRow : 'nojustify',
-        margins : 8,
-        captions: false,
-        border: 0
-    });
-});
-function openLightbox(src) {
-    document.getElementById('lightbox-img').src = src;
-    document.getElementById('lightbox-overlay').classList.add('active');
-}
-function closeLightbox(e) {
-    if (e.target.id === 'lightbox-overlay' || e.target.classList.contains('close-btn')) {
-        document.getElementById('lightbox-overlay').classList.remove('active');
-        document.getElementById('lightbox-img').src = '';
-    }
-}
+    (function () {
+        const grid = document.querySelector('.ftg-grid');
+        if (!grid) return;
+
+        const GAP = parseInt(grid.dataset.gap || 12, 10);
+        const ROW = parseInt(grid.dataset.row || 10, 10);
+
+        function setSpan(item) {
+            const img = item.querySelector('img');
+            if (!img) return;
+            const height = img.getBoundingClientRect().height;
+            const span = Math.ceil((height + GAP) / (ROW + GAP));
+            item.style.gridRowEnd = 'span ' + span;
+        }
+
+        function layoutAll() {
+            grid.querySelectorAll('.ftg-item').forEach(setSpan);
+        }
+
+        window.addEventListener('load', layoutAll);
+        window.addEventListener('resize', layoutAll);
+        grid.querySelectorAll('img').forEach(img => {
+            if (img.complete) setSpan(img.closest('.ftg-item'));
+            else img.addEventListener('load', () => setSpan(img.closest('.ftg-item')));
+        });
+
+        // Lightbox-Logik
+        const overlay = document.getElementById('lightbox-overlay');
+        const lbImg = document.getElementById('lightbox-img');
+        const items = Array.from(grid.querySelectorAll('.ftg-item'));
+        let current = -1;
+
+        function show(index) {
+            if (!items.length) return;
+            current = (index + items.length) % items.length;
+            const href = items[current].getAttribute('href');
+            lbImg.src = href;
+            overlay.classList.add('active');
+            overlay.setAttribute('aria-hidden', 'false');
+        }
+
+        window.openLightbox = function (e, index) {
+            e.preventDefault();
+            show(index);
+        };
+
+        window.closeLightbox = function () {
+            overlay.classList.remove('active');
+            overlay.setAttribute('aria-hidden', 'true');
+            lbImg.src = '';
+        };
+
+        window.prevLightbox = function () {
+            show(current - 1);
+        };
+        window.nextLightbox = function () {
+            show(current + 1);
+        };
+
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) window.closeLightbox();
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (!overlay.classList.contains('active')) return;
+            if (e.key === 'Escape') window.closeLightbox();
+            if (e.key === 'ArrowLeft') window.prevLightbox();
+            if (e.key === 'ArrowRight') window.nextLightbox();
+        });
+    })();
 </script>
 </body>
 </html>
