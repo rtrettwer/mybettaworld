@@ -12,6 +12,8 @@ fish_price: 36 €
 fish_type: Betta plakat
 fish_color: Multicolor; braun-orangener Körper, schwarz-Orangene Flossen. Weiße Maske im Gesicht. Grün-blau metallisches Schimmern in den Schuppen am Rücken und in den Flossen. Blaue Augen.
 fish_gender: Männlich
+gallery_dir: /assets/fish/bandit
+
 ---
 # Liebe auf den ersten Blick
 Eigentlich wollte ich ja gar keinen weiteren Fisch kaufen, bis die neuen Becken eingelaufen sind. Ich war im Pflanzen Kölle für 

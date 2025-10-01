@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [tank, betta, kampffisch, walstad, dschungel]
 excerpt: "Dieses Becken ist dicht bepflanzt und bietet viele Verstecke."
-image: /assets/tanks/dummy_tank.png
+image: /assets/tanks/jungle/jungle.jpg
 dimensions: 60x30x30 cm
 water_type: Süßwasser
 filter: Ja
@@ -32,6 +32,7 @@ entwicklung:
     ereignis: Erstes Mal probiert, sie mit fein gemahlenen Flocken zu füttern - sie haben es gut angenommen, denke ich.
 entwicklung_text: |
   Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
+gallery_dir: /assets/tanks/jungle
 ---
 
 **Steckbrief**

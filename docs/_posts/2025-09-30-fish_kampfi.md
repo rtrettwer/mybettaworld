@@ -12,6 +12,7 @@ fish_price: 36 €
 fish_type: Betta plakat
 fish_color: Hellboy red, marbled
 fish_gender: Männlich
+gallery_dir: /assets/fish/kampfi
 ---
 # Kampfis Einzug
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.

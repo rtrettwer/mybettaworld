@@ -18,9 +18,22 @@ layout: default
     </header>
 
     {% if page.image or page.dimensions or page.fassungsvermoegen or page.water_type or page.filter or page.luftheber or page.beleuchtung or page.bodengrund or page.deko or page.startdatum or page.besatz or page.pflanzen or page.technik or page.heizung or page.besonderheiten %}
+    <style>
+      @media (max-width: 700px) {
+        .tank-steckbrief-flex {
+          flex-direction: column !important;
+          gap: 1rem !important;
+        }
+        .tank-image {
+          margin-bottom: 0.5rem;
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+    </style>
     <div class="tank-steckbrief"
          style="background: rgba(248,248,248,0.7); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); max-width: 900px; margin-left: auto; margin-right: auto;">
-        <div style="display: flex; align-items: flex-start; gap: 2rem;">
+        <div class="tank-steckbrief-flex" style="display: flex; align-items: flex-start; gap: 2rem;">
             {% if page.image %}
             <div class="tank-image" style="flex: 0 0 140px; max-width: 140px;">
                 <img src="{{ page.image }}" alt="Aquarium Foto"
@@ -122,6 +135,9 @@ layout: default
 
     <div class="post-content e-content" itemprop="articleBody">
         {{ content }}
+        {% if page.gallery_dir %}
+        {% include gallery.html dir=page.gallery_dir %}
+        {% endif %}
     </div>
 
     {%- if site.disqus.shortname -%}

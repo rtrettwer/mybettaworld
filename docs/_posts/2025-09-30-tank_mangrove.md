@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, mangrove, zucht, nano ]
 excerpt: "Stark befplanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
-image: /assets/tanks/dummy_tank.png
+image: /assets/tanks/mangrove/mangrove.jpg
 dimensions: 50x35x30 cm
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -30,6 +30,7 @@ entwicklung:
 
 entwicklung_text: |
   Mittlerweile ist nur noch ein Betta-Weibchen in diesem Becken (Sonnenschein). Eines der Weibchen war ein Männchen (Sir Pryce), ein Weibchen ist gestorben und die anderen beiden sind aktuell bei Kampfi im Dschungel-Aquarium
+gallery_dir: /assets/tanks/mangrove
 ---
 
 ## Über das Becken

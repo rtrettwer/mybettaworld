@@ -5,7 +5,14 @@ date:   2025-09-30 11:06:51 +0200
 categories: [food]
 tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano, futter, lebendfutter]
 excerpt: "Lebendfutter - Mikrowürmer"
-image: /assets/misc/dummy_wasserfloh.png
+image: /assets/food/organization_food_tools.jpg
+gallery_dir: /assets/food
 ---
 
-Eine abwechslungsreiche Futterroutine ist für die Gesundheit und das Wohlbefinden der Fische entscheidend. Ich verwende Futterautomaten für die tägliche Gabe von Trockenfutter (2x am Tag). Zusätzlich erhalten Garnelen, Schnecken und pflanzenfressende Fische spezielle Tabs und Sticks. Tetra Min Flocken werden gerne als Ergänzung gefüttert. Gelegentlich gibt es Lebendfutter wie Wasserflöhe, Artemia oder Mikrowürmer – entweder aus eigener Zucht oder frisch aus der Zoohandlung. Diese Vielfalt sorgt für eine ausgewogene Ernährung und fördert die Vitalität aller Aquarienbewohner.
+Die meisten meiner Fische füttere ich mit Futterautomaten und Granulat. Da wo Garnelen, Schnecken und Welse drin sind verteile ich zusätzlich Garnelen Sticks und Spirulina Tabs.
+Ich mische alle Kampffisch-Futterarten, damit es ein bisschen Abwechslung gibt.
+Zwischendrin füttere ich mit Tetra Min Flocken - alle meine Tiere (Fische, Schnecken, Garnelen) lieben sie!
+Gelegentlich gibt es auch Lebendfutter. Da die Neons drüber herfallen wie Piranhas habe ich mir angewohnt, relativ gezielt mit Pipette die Kampffische zu versorgen.
+Die Baby-Fische bekommen vor allem Lebendfutter, ganz am Anfang Infusorien. Beim Lebendfutter gibt es vor allem Artemia Nauplien aber zwischendrin auch Mikrowürmer und Essigälchen - die sind pefekt, wenn gerade ein Artemia-Ansatz erst noch schlüpfen muss.
+
+Ich bewahre alle Futerarten und Werkzeuge (Siebe, Pipetten, Holzstäbchen) etc. in kleinen Boxen unter dem Regalbrett mit den Nano Cubes. Daneben stehen dann die Ansätze für das Lebendfutter. 

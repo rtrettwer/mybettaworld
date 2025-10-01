@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, baby, zucht, nano ]
 excerpt: "Meine ersten Betta-Babys"
-image: /assets/tanks/dummy_tank.png
+image: /assets/tanks/babies/babies.jpg
 dimensions: 40x25x25 cm (Dennerle Nano Cube)
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -35,6 +35,7 @@ entwicklung:
     ereignis: Artemia Nauplien
 entwicklung_text: |
   Mittlerweile füttere ich mehrmals täglich mit frischen Artemia Nauplien, Mikrowürmern oder Essigälchen. Hin und wieder Staubfutter. Ansonsten fange ich an zu testen, ob sie feines Granulat oder zermahlene Flocken annehmen.
+gallery_dir: /assets/tanks/babies
 ---
 
 ## Über das Becken
