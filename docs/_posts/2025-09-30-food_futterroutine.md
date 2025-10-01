@@ -6,6 +6,7 @@ categories: [food]
 tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano, futter, lebendfutter]
 excerpt: "Lebendfutter - Mikrowürmer"
 image: /assets/food/organization_food_tools.jpg
+gallery_dir: /assets/food
 ---
 
 Die meisten meiner Fische füttere ich mit Futterautomaten und Granulat. Da wo Garnelen, Schnecken und Welse drin sind verteile ich zusätzlich Garnelen Sticks und Spirulina Tabs.
