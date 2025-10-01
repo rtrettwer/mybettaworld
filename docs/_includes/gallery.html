@@ -23,16 +23,15 @@
     .ftg-item {
         position: relative;
         display: block;
-        border-radius: 10px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 1);
-        background: #000000;
+        box-shadow: none; /* Kein Schatten an der Box */
         cursor: pointer;
         transition: box-shadow .2s ease;
+        padding: 0;
+        background: transparent;
     }
 
     .ftg-item:hover {
-        box-shadow: 0 6px 24px rgba(0, 0, 0, .18);
+        box-shadow: none; /* Auch beim Hover kein Schatten an der Box */
     }
 
     .ftg-item img {
@@ -41,10 +40,13 @@
         height: auto;
         background: #eee;
         transition: transform .25s ease;
+        border-radius: 0;
+        box-shadow: none; /* Kein Schatten am Bild */
     }
 
     .ftg-item:hover img {
         transform: scale(1.02);
+        box-shadow: none; /* Auch beim Hover kein Schatten am Bild */
     }
 
     /* Lightbox */
