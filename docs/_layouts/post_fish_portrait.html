@@ -6,7 +6,19 @@ layout: default
     <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
 
-        <div class="fish-profile" style="display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
+        <style>
+      @media (max-width: 700px) {
+        .fish-profile {
+          flex-direction: column !important;
+          gap: 1rem !important;
+        }
+        .fish-profile img {
+          max-width: 100% !important;
+          width: 100% !important;
+        }
+      }
+    </style>
+    <div class="fish-profile" style="display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
             <div>
                 <img src="{{ page.image }}" alt="Bild von {{ page.title }}" style="max-width: 180px; border-radius: 8px;">
             </div>
