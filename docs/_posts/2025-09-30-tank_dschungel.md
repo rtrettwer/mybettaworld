@@ -1,9 +1,9 @@
 ---
 layout: post_tank
-title:  "Das Dschungel Becken"
-date:   2025-09-30 11:06:51 +0200
-categories: [tank]
-tags: [tank, betta, kampffisch, walstad, dschungel]
+title: "Das Dschungel Becken"
+date: 2025-09-30 11:06:51 +0200
+categories: [ tank ]
+tags: [ tank, betta, kampffisch, walstad, dschungel ]
 excerpt: "Dieses Becken ist dicht bepflanzt und bietet viele Verstecke."
 image: /assets/tanks/jungle/jungle.jpg
 dimensions: 60x30x30 cm
@@ -35,19 +35,5 @@ entwicklung_text: |
 gallery_dir: /assets/tanks/jungle
 ---
 
-**Steckbrief**
-
-- **Maße (LxBxH):** 60x30x30 cm  
-- **Süßwasser/Salzwasser:** Süßwasser  
-- **Filter:** Ja  
-- **Luftheber:** Ja  
-- **Beleuchtung:** LED  
-- **Bodengrund:** Kies  
-- **Deko:** Wurzeln, Steine, Pflanzen  
-- **Startdatum:** 15.02.2023  
-- **Besatz:** 1 Betta splendens, Garnelen, Schnecken  
-- **Pflanzen:** Anubias, Javafarn, Cryptocoryne, Schwimmpflanzen  
-- **Technik:** Außenfilter, Heizstab, CO2-Anlage  
-- **Besonderheiten:** Stark bepflanzt, viele Verstecke, wenig Algen  
-
-Dieser Eintrag beschreibt die Entwicklung und Pflege meines Dschungel-Beckens mit Betta Kampffischen nach der Walstad Methode.
+Das Dschungel-Aquarium ist mein erstes und hat alles ins Rollen gebracht. Es hat schon mehrere Rescapes erfahren und ist
+dicht bepflanzt. Zwischendrin hatte ich eine Garnelenexplosion, aber das hat sich beruhigt.

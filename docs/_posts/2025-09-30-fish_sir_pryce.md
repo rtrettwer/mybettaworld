@@ -8,7 +8,7 @@ excerpt: "Sir Pryce war eine echte Überraschung - denn eigentlich hatte ich ein
 image: /assets/fish/sirPryce/sir_pryce.jpg
 fish_name: Sir Pryce
 fish_age: Juni 2025
-fish_price: 5 €
+fish_price: 5 € (Interaquaristik)
 fish_type: Betta plakat
 fish_color: Blau mit schwarzem Kopf und roten Bauchflossen.
 fish_gender: Männlich
