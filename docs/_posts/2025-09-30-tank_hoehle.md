@@ -17,6 +17,7 @@ startdatum: 10.01.2024
 besatz: 1 Betta splendens, Posthornschnecken
 pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
+heizung: Heizstab
 besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik
 ---
 

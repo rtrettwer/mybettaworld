@@ -6,17 +6,19 @@ categories: [tank]
 tags: [tank, betta, kampffisch, walstad, baby, zucht, nano]
 excerpt: "Meine ersten Betta-Babys"
 image: /assets/tanks/dummy_tank.png
-dimensions: 40x25x25 cm
+dimensions: 40x25x25 cm (Dennerle Nano Cube)
+fassungsvermoegen: 30L
 water_type: Süßwasser
 filter: Ja
 luftheber: Nein
-beleuchtung: LED
+beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Sand
 deko: Wurzeln, Pflanzen
 startdatum: 01.03.2024
 besatz: Jungfische (Betta splendens)
 pflanzen: Javafarn, Wasserpest, Hornkraut
 technik: Heizstab, Thermometer
+heizung: Heizstab
 besonderheiten: Aufzuchtbecken für Jungfische, täglicher Wasserwechsel
 ---
 

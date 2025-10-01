@@ -17,6 +17,7 @@ startdatum: 05.04.2023
 besatz: 1 Betta splendens, Amanogarnelen, Turmdeckelschnecken
 pflanzen: Mangroven, Javafarn, Anubias
 technik: Innenfilter, Heizstab
+heizung: Heizstab
 besonderheiten: Mangrovenwurzeln als zentrales Deko-Element, naturnah gestaltet
 ---
 
@@ -36,4 +37,3 @@ besonderheiten: Mangrovenwurzeln als zentrales Deko-Element, naturnah gestaltet
 - **Besonderheiten:** Mangrovenwurzeln als zentrales Deko-Element, naturnah gestaltet  
 
 Dieser Eintrag beschreibt die Entwicklung und Pflege meines Mangroven-Beckens mit Betta Kampffischen nach der Walstad Methode.
-

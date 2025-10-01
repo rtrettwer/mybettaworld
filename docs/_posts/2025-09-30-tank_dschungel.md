@@ -17,6 +17,7 @@ startdatum: 15.02.2023
 besatz: 1 Betta splendens, Garnelen, Schnecken
 pflanzen: Anubias, Javafarn, Cryptocoryne, Schwimmpflanzen
 technik: Außenfilter, Heizstab, CO2-Anlage
+heizung: Heizstab
 besonderheiten: Stark bepflanzt, viele Verstecke, wenig Algen
 ---
 
