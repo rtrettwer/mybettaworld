@@ -1,0 +1,29 @@
+<footer class="site-footer h-card">
+    <data class="u-url" href="{{ "
+    /" | relative_url }}"></data>
+
+    <div class="wrapper" style="max-width: 1400px; margin: 0 auto; padding: 0 24px;">
+
+        <h2 class="footer-heading">{{ site.title | escape }}</h2>
+
+        <div class="footer-col-wrapper">
+            <div class="footer-col footer-col-1" style="flex: 0 0 120px; max-width: 120px;">
+                <ul class="contact-list">
+                    <li class="p-name">
+                        {{ site.author | escape }}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-col footer-col-2" style="flex: 0 0 120px; max-width: 120px;">
+                {%- include social.html -%}
+            </div>
+
+            <div class="footer-col footer-col-3">
+                <p>{{- site.description | escape -}}</p>
+            </div>
+        </div>
+
+    </div>
+
+</footer>

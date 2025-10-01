@@ -3,25 +3,130 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-meta">
-      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        {{ page.date | date: date_format }}
-      </time>
-      {%- if page.author -%}
-        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
-      {%- endif -%}</p>
-  </header>
+    <header class="post-header">
+        <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+        <p class="post-meta">
+            <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+                {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                {{ page.date | date: date_format }}
+            </time>
+            {%- if page.author -%}
+            • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card"
+                                                                                          itemprop="name">{{ page.author }}</span></span>
+            {%- endif -%}
+        </p>
+    </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-  </div>
+    {% if page.image or page.dimensions or page.fassungsvermoegen or page.water_type or page.filter or page.luftheber or page.beleuchtung or page.bodengrund or page.deko or page.startdatum or page.besatz or page.pflanzen or page.technik or page.heizung or page.besonderheiten %}
+    <div class="tank-steckbrief"
+         style="background: rgba(248,248,248,0.7); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); max-width: 900px; margin-left: auto; margin-right: auto;">
+        <div style="display: flex; align-items: flex-start; gap: 2rem;">
+            {% if page.image %}
+            <div class="tank-image" style="flex: 0 0 140px; max-width: 140px;">
+                <img src="{{ page.image }}" alt="Aquarium Foto"
+                     style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+            </div>
+            {% endif %}
+            <div style="flex: 1 1 0%; min-width: 0;">
+                <h2 style="margin-top:0;">Steckbrief</h2>
+                <dl style="display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.5rem;">
+                    {% if page.dimensions %}
+                    <dt>Maße:</dt>
+                    <dd>{{ page.dimensions }}</dd>
+                    {% endif %}
+                    {% if page.fassungsvermoegen %}
+                    <dt>Fassungsvermögen:</dt>
+                    <dd>{{ page.fassungsvermoegen }}</dd>
+                    {% endif %}
+                    {% if page.water_type %}
+                    <dt>Wasserart:</dt>
+                    <dd>{{ page.water_type }}</dd>
+                    {% endif %}
+                    {% if page.filter %}
+                    <dt>Filter:</dt>
+                    <dd>{{ page.filter }}</dd>
+                    {% endif %}
+                    {% if page.luftheber %}
+                    <dt>Luftheber:</dt>
+                    <dd>{{ page.luftheber }}</dd>
+                    {% endif %}
+                    {% if page.beleuchtung %}
+                    <dt>Beleuchtung:</dt>
+                    <dd>{{ page.beleuchtung }}</dd>
+                    {% endif %}
+                    {% if page.bodengrund %}
+                    <dt>Bodengrund:</dt>
+                    <dd>{{ page.bodengrund }}</dd>
+                    {% endif %}
+                    {% if page.deko %}
+                    <dt>Deko:</dt>
+                    <dd>{{ page.deko }}</dd>
+                    {% endif %}
+                    {% if page.startdatum %}
+                    <dt>Startdatum:</dt>
+                    <dd>{{ page.startdatum }}</dd>
+                    {% endif %}
+                    {% if page.besatz %}
+                    <dt>Besatz:</dt>
+                    <dd>{{ page.besatz }}</dd>
+                    {% endif %}
+                    {% if page.pflanzen %}
+                    <dt>Pflanzen:</dt>
+                    <dd>{{ page.pflanzen }}</dd>
+                    {% endif %}
+                    {% if page.technik %}
+                    <dt>Technik:</dt>
+                    <dd>{{ page.technik }}</dd>
+                    {% endif %}
+                    {% if page.heizung %}
+                    <dt>Heizung:</dt>
+                    <dd>{{ page.heizung }}</dd>
+                    {% endif %}
+                    {% if page.besonderheiten %}
+                    <dt>Besonderheiten:</dt>
+                    <dd>{{ page.besonderheiten }}</dd>
+                    {% endif %}
+                </dl>
+            </div>
+        </div>
+    </div>
+    {% endif %}
 
-  {%- if site.disqus.shortname -%}
+    {% if page.entwicklung %}
+    <section class="tank-entwicklung" style="max-width:700px; margin:0 auto 2rem auto;">
+        <h2>Entwicklung</h2>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Datum</th>
+                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Ereignis</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eintrag in page.entwicklung %}
+                <tr>
+                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.datum }}</td>
+                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.ereignis }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% endif %}
+
+    {% if page.entwicklung_text %}
+    <section class="tank-entwicklung-text" style="max-width:700px; margin:0 auto 2rem auto;">
+        {{ page.entwicklung_text }}
+    </section>
+    {% endif %}
+
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+    </div>
+
+    {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
