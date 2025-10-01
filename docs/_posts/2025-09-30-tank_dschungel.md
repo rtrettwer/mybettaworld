@@ -19,6 +19,19 @@ pflanzen: Anubias, Javafarn, Cryptocoryne, Schwimmpflanzen
 technik: Außenfilter, Heizstab, CO2-Anlage
 heizung: Heizstab
 besonderheiten: Stark bepflanzt, viele Verstecke, wenig Algen
+entwicklung:
+  - datum: 02.09.2025
+    ereignis: Kübel aufgestellt, sehr viele Seemandelbaumblätter dazu, Heizung an
+  - datum: 04.09.2025
+    ereignis: Paarung Bandit und Lila, Lila wieder aus dem Becken genommen
+  - datum: 05.09.2025
+    ereignis: Larven sind geschlüpft
+  - datum: 08.09.2025
+    ereignis: Larven sind frei schwimmend, Bandit aus dem Becken genommen. Mit Infusorien-Fütterung begonnen
+  - datum: 01.10.2025
+    ereignis: Erstes Mal probiert, sie mit fein gemahlenen Flocken zu füttern - sie haben es gut angenommen, denke ich.
+entwicklung_text: |
+  Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
 ---
 
 **Steckbrief**

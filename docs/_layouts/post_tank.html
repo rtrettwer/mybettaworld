@@ -92,6 +92,34 @@ layout: default
     </div>
     {% endif %}
 
+    {% if page.entwicklung %}
+    <section class="tank-entwicklung" style="max-width:700px; margin:0 auto 2rem auto;">
+        <h2>Entwicklung</h2>
+        <table style="width:100%; border-collapse:collapse;">
+            <thead>
+                <tr>
+                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Datum</th>
+                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Ereignis</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for eintrag in page.entwicklung %}
+                <tr>
+                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.datum }}</td>
+                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.ereignis }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </section>
+    {% endif %}
+
+    {% if page.entwicklung_text %}
+    <section class="tank-entwicklung-text" style="max-width:700px; margin:0 auto 2rem auto;">
+        {{ page.entwicklung_text }}
+    </section>
+    {% endif %}
+
     <div class="post-content e-content" itemprop="articleBody">
         {{ content }}
     </div>
