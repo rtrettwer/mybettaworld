@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: gallery
 title: "Galerie"
 permalink: /gallery/
 gallery_dir: /assets/
