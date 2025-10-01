@@ -21,6 +21,13 @@ technik:
 heizung: Heizstab auf 26°C
 besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund
 gallery_dir: /assets/tanks/quarantine
+entwicklung:
+  - datum: 19.09.2025
+    ereignis: Paarung Sir Pryce und Sonnenschein
+  - datum: 20.09.2025
+    ereignis: Die Larven sind geschlüpft. Ich lasse Sir Pryce diesmal im Becken. Entweder die Babys überleben oder nicht.
+
+entwicklung_text: | Bisher läuft alles gut. Sir Pryce scheint sich wohl zu fühlen und die Babys werden nicht von ihm gefressen. Zumindest bisher nicht.
 ---
 ## Quarantäne
 Als sich herausgestellt hat, dass Sir Pryce ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
