@@ -1,0 +1,101 @@
+{% assign gallery_dir = include.dir | default: '/assets/' %}
+{% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
+{% assign gallery_images = "" | split: "" %}
+{% for file in site.static_files %}
+  {% assign ext = file.extname | remove: "." | downcase %}
+  {% if image_exts contains ext %}
+    {% if file.path contains gallery_dir %}
+      {% assign gallery_images = gallery_images | push: file %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+{% assign gallery_images = gallery_images | sort: "path" %}
+<div id="gallery-{{ gallery_dir | slugify }}" class="ftg-grid" data-row="10" data-gap="12">
+  {% for file in gallery_images %}
+    <a class="ftg-item"
+       href="{{ file.path | relative_url }}"
+       data-index="{{ forloop.index0 }}"
+       onclick="openLightbox{{ gallery_dir | slugify }}(event, {{ forloop.index0 }});">
+        <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
+    </a>
+  {% endfor %}
+</div>
+
+<div id="lightbox-overlay-{{ gallery_dir | slugify }}" aria-hidden="true" style="display:none;position:fixed;inset:0;z-index:1000;background:rgba(0,0,0,.9);justify-content:center;align-items:center;">
+    <button class="lb-btn lb-close" aria-label="Schließen" onclick="closeLightbox{{ gallery_dir | slugify }}()">×</button>
+    <button class="lb-btn lb-prev" aria-label="Vorheriges Bild" onclick="prevLightbox{{ gallery_dir | slugify }}()">‹</button>
+    <img id="lightbox-img-{{ gallery_dir | slugify }}" src="" alt="Großansicht">
+    <button class="lb-btn lb-next" aria-label="Nächstes Bild" onclick="nextLightbox{{ gallery_dir | slugify }}()">›</button>
+</div>
+<script>
+(function () {
+    const grid = document.getElementById('gallery-{{ gallery_dir | slugify }}');
+    if (!grid) return;
+    const GAP = parseInt(grid.dataset.gap || 12, 10);
+    const ROW = parseInt(grid.dataset.row || 10, 10);
+
+    function setSpan(item) {
+        const img = item.querySelector('img');
+        if (!img) return;
+        const height = img.getBoundingClientRect().height;
+        const span = Math.ceil((height + GAP) / (ROW + GAP));
+        item.style.gridRowEnd = 'span ' + span;
+    }
+
+    function layoutAll() {
+        grid.querySelectorAll('.ftg-item').forEach(setSpan);
+    }
+
+    window.addEventListener('load', layoutAll);
+    window.addEventListener('resize', layoutAll);
+    grid.querySelectorAll('img').forEach(img => {
+        if (img.complete) setSpan(img.closest('.ftg-item'));
+        else img.addEventListener('load', () => setSpan(img.closest('.ftg-item')));
+    });
+
+    // Lightbox-Logik
+    const overlay = document.getElementById('lightbox-overlay-{{ gallery_dir | slugify }}');
+    const lbImg = document.getElementById('lightbox-img-{{ gallery_dir | slugify }}');
+    const items = Array.from(grid.querySelectorAll('.ftg-item'));
+    let current = -1;
+
+    function show(index) {
+        if (!items.length) return;
+        current = (index + items.length) % items.length;
+        const href = items[current].getAttribute('href');
+        lbImg.src = href;
+        overlay.style.display = 'flex';
+        overlay.setAttribute('aria-hidden', 'false');
+    }
+
+    window["openLightbox{{ gallery_dir | slugify }}"] = function (e, index) {
+        e.preventDefault();
+        show(index);
+    };
+
+    window["closeLightbox{{ gallery_dir | slugify }}"] = function () {
+        overlay.style.display = 'none';
+        overlay.setAttribute('aria-hidden', 'true');
+        lbImg.src = '';
+    };
+
+    window["prevLightbox{{ gallery_dir | slugify }}"] = function () {
+        show(current - 1);
+    };
+    window["nextLightbox{{ gallery_dir | slugify }}"] = function () {
+        show(current + 1);
+    };
+
+    overlay.addEventListener('click', (e) => {
+        if (e.target === overlay) window["closeLightbox{{ gallery_dir | slugify }}"]();
+    });
+
+    document.addEventListener('keydown', (e) => {
+        if (overlay.style.display !== 'flex') return;
+        if (e.key === 'Escape') window["closeLightbox{{ gallery_dir | slugify }}"]();
+        if (e.key === 'ArrowLeft') window["prevLightbox{{ gallery_dir | slugify }}"]();
+        if (e.key === 'ArrowRight') window["nextLightbox{{ gallery_dir | slugify }}"]();
+    });
+})();
+</script>
+
