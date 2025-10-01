@@ -4,7 +4,7 @@ title: Über mich
 permalink: /about/
 ---
 
-Hallo! Ich bin Software-Entwicklerin und seit diesem Jahr auch begeisterte Aquarianerin. Besonders fasziniert mich die Haltung und Zucht von Betta-Kampffischen. 
+Hallo! Ich bin Software-Entwicklerin und seit diesem Jahr auch begeisterte Aquarianerin. Besonders fasziniert mich die Haltung und Zucht von siamesischen Kampffischen (betta splendens). 
 
 Neben meiner Leidenschaft für Technik und Programmierung widme ich mich mit großer Freude meinen Aquarien, die ich möglichst naturnah und im LowTech-Stil pflege. Das bedeutet: wenig Technik, viel Natur und ein harmonisches Gleichgewicht zwischen Pflanzen und Tieren.
 

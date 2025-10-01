@@ -1,94 +1,120 @@
 ---
 layout: default
 ---
-<style>
-    .gallery-masonry {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 18px;
-        max-width: 1200px;
-        margin: 2rem auto;
-        align-items: start;
-    }
-    .gallery-item {
-        border-radius: 8px;
-        overflow: hidden;
-        background: #111;
-        box-shadow: 0 2px 8px rgba(0,0,0,.08);
-        transition: box-shadow .2s;
-        cursor: pointer;
-        position: relative;
-        display: flex;
-        align-items: stretch;
-        justify-content: center;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: auto;
-        display: block;
-        background: #eee;
-        transition: transform .18s;
-        object-fit: contain;
-        max-height: 320px;
-    }
-    .gallery-item:hover {
-        box-shadow: 0 6px 24px rgba(0,0,0,.18);
-    }
-    #lightbox-overlay {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 1000;
-        background: rgba(0,0,0,.88);
-        justify-content: center;
-        align-items: center;
-    }
-    #lightbox-overlay.active { display: flex; }
-    #lightbox-overlay img {
-        max-width: 90vw;
-        max-height: 90vh;
-        border-radius: 12px;
-        box-shadow: 0 10px 32px rgba(0,0,0,.4);
-    }
-    #lightbox-overlay .close-btn {
-        position: absolute;
-        top: 24px;
-        right: 32px;
-        font-size: 2.2rem;
-        color: #fff;
-        background: none;
-        border: none;
-        cursor: pointer;
-        line-height: 1;
-    }
-    @media (max-width: 900px) {
-        .gallery-masonry { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
-    }
-    @media (max-width: 600px) {
-        .gallery-masonry { grid-template-columns: 1fr; }
-    }
-</style>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %}{{ page.title }} • {% endif %}{{ site.title }}</title>
+    {% if page.excerpt %}<meta name="description" content="{{ page.excerpt | strip_html }}">{% endif %}
+    {% if page.tags %}<meta name="keywords" content="{{ page.tags | join: ', ' }}">{% endif %}
+    {% if page.author %}
+    {% assign author = site.data.authors[page.author] %}{% else %}{% assign author = site.owner %}
+    {% endif %}
 
-<div class="gallery-masonry">
-    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/'" %}
-    {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
-    {% for img in gallery_images %}
-        {% assign ext = img.extname | remove: "." | downcase %}
-        {% if image_exts contains ext %}
-            <div class="gallery-item">
-                <img src="{{ img.path }}" alt="Gallery Image"
-                     loading="lazy"
-                     onclick="openLightbox('{{ img.path }}')">
+    {% include head.html %}
+    {% include header.html %}
+
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+    <link href="{{ site.url }}/atom.xml" type="application/atom+xml" rel="alternate" title="{{ site.title }} Atom Feed">
+    <link href="{{ site.url }}/sitemap.xml" type="application/xml" rel="sitemap" title="Sitemap">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cleartype" content="on">
+
+    <link rel="stylesheet" href="{{ site.url }}/css/main.css">
+    <link rel="stylesheet" type="text/css" href="{{site.url}}/css/jekyll-photo-gallery.css">
+    <link rel="stylesheet" href="{{ site.url }}/css/justifiedGallery.min.css">
+    <style>
+        .gallery-justified {
+            margin-top: 2rem;
+        }
+        .gallery-justified img {
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,.08);
+            background: #eee;
+            cursor: pointer;
+            transition: box-shadow .2s;
+        }
+        .gallery-justified img:hover {
+            box-shadow: 0 6px 24px rgba(0,0,0,.18);
+        }
+        #lightbox-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0,0,0,.88);
+            justify-content: center;
+            align-items: center;
+        }
+        #lightbox-overlay.active { display: flex; }
+        #lightbox-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            border-radius: 12px;
+            box-shadow: 0 10px 32px rgba(0,0,0,.4);
+        }
+        #lightbox-overlay .close-btn {
+            position: absolute;
+            top: 24px;
+            right: 32px;
+            font-size: 2.2rem;
+            color: #fff;
+            background: none;
+            border: none;
+            cursor: pointer;
+            line-height: 1;
+        }
+    </style>
+</head>
+<body>
+<div id="main" role="main" style="width: 70%; margin: auto; margin-top: 30px;">
+    <div class="wrap">
+        <div class="page-feature">
+            <div class="page-image">
+                <img src="{{ site.url }}/images/headers/header.jpg" class="page-feature-image" alt="{{ page.title }}">
+                {% if page.image.credit %}{% include image-credit.html %}{% endif %}
             </div>
-        {% endif %}
-    {% endfor %}
+        </div>
+        <div class="archive-wrap">
+            <div class="page-content">
+                {{ content }}
+                <div id="gallery" class="gallery-justified">
+                    {% assign gallery_images = site.static_files | where_exp: "file", "file.path contains '/assets/'" %}
+                    {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
+                    {% for img in gallery_images %}
+                        {% assign ext = img.extname | remove: "." | downcase %}
+                        {% if image_exts contains ext %}
+                            <a href="{{ img.path }}" class="gallery-link" onclick="openLightbox('{{ img.path }}'); return false;">
+                                <img src="{{ img.path }}" alt="Gallery Image" loading="lazy">
+                            </a>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <div id="lightbox-overlay" onclick="closeLightbox(event)">
     <button class="close-btn" onclick="closeLightbox(event)">&times;</button>
     <img id="lightbox-img" src="" alt="Großansicht">
 </div>
+
+<script src="{{ site.url }}/js/vendor/jquery-1.9.1.min.js"></script>
+<script src="{{ site.url }}/js/plugins/jquery.justifiedGallery.min.js"></script>
 <script>
+$(function(){
+    $("#gallery").justifiedGallery({
+        rowHeight : 200,
+        lastRow : 'nojustify',
+        margins : 8,
+        captions: false,
+        border: 0
+    });
+});
 function openLightbox(src) {
     document.getElementById('lightbox-img').src = src;
     document.getElementById('lightbox-overlay').classList.add('active');
@@ -100,3 +126,5 @@ function closeLightbox(e) {
     }
 }
 </script>
+</body>
+</html>

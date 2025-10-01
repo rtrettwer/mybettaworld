@@ -15,8 +15,15 @@ layout: default
       {%- endif -%}</p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
+  <div class="post-tank-flex" style="display: flex; align-items: flex-start; gap: 2rem;">
+    {% if page.image %}
+      <div class="tank-image" style="flex: 0 0 250px; max-width: 250px;">
+        <img src="{{ page.image }}" alt="Aquarium Foto" style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);" />
+      </div>
+    {% endif %}
+    <div class="post-content e-content" itemprop="articleBody" style="flex: 1 1 0%;">
+      {{ content }}
+    </div>
   </div>
 
   {%- if site.disqus.shortname -%}
