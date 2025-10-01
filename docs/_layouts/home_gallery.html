@@ -131,7 +131,7 @@ layout: default
             <div class="page-content">
                 {{ content }}
 
-                {% assign gallery_dir = page.gallery_dir | default: '/assets/gallery/' %}
+                {% assign gallery_dir = page.gallery_dir | default: '/assets/' %}
                 {% assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," %}
                 {% assign gallery_images = "" | split: "" %}
                 {% for file in site.static_files %}
