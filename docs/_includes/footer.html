@@ -1,0 +1,59 @@
+<footer class="site-footer h-card" style="background: #000; color: #fff; padding: 0.6em 0;">
+  <style>
+    .site-footer .footer-heading {
+      color: #fff !important;
+      /* Kein Hover-Effekt für den Titel */
+      transition: none;
+      cursor: default;
+    }
+    .site-footer .footer-col a,
+    .site-footer .footer-col-2 a,
+    .site-footer .footer-col-3 a {
+      color: #fff !important;
+      transition: color 0.2s;
+    }
+    .site-footer .footer-col a:hover,
+    .site-footer .footer-col-2 a:hover,
+    .site-footer .footer-col-3 a:hover,
+    .site-footer .footer-col a:focus,
+    .site-footer .footer-col-2 a:focus,
+    .site-footer .footer-col-3 a:focus {
+      color: #b3c6ff !important;
+    }
+    .site-footer .footer-author,
+    .site-footer .footer-description {
+      color: #bbb !important;
+    }
+  </style>
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+
+  <div class="wrapper" style="max-width: 700px;">
+    <div class="footer-col-wrapper" style="display: flex; align-items: center; gap: 2em;">
+      <div style="display: flex; flex-direction: column; justify-content: center;">
+        <h2 class="footer-heading" style="margin: 0; font-size: 1.1em; font-weight: 600; color: #fff;">
+          {{ site.title | escape }}
+        </h2>
+        <ul class="contact-list" style="margin: 0;">
+          <li class="p-name footer-author" style="display: block; margin: 0;">
+            {%- if site.author -%}
+              {{ site.author | escape }}
+            {%- else -%}
+              {{ site.title | escape }}
+            {%- endif -%}
+          </li>
+          {%- if site.email -%}
+          <li style="display: none;">
+            <a class="u-email" href="mailto:{{ site.email }}" style="color: #fff;">{{ site.email }}</a>
+          </li>
+          {%- endif -%}
+        </ul>
+      </div>
+      <div class="footer-col footer-col-2" style="margin: 0;">
+        {%- include social.html -%}
+      </div>
+      <div class="footer-col footer-col-3" style="margin: 0;">
+        <p class="footer-description" style="margin: 0;">{{- site.description | escape -}}</p>
+      </div>
+    </div>
+  </div>
+</footer>
