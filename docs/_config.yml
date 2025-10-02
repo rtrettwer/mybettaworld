@@ -27,7 +27,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "" # the subpath of your site, e.g. /blog
 url: ""#"https://trettwer.de"
 github_username: rtrettwer
-
+logo: assets/misc/icon.png
 # Build settings
 theme: minima
 #minima:
