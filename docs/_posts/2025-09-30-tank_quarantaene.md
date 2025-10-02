@@ -2,7 +2,7 @@
 layout: post_tank
 title:  "Das Quarantäne Becken"
 date:   2025-09-30 11:06:51 +0200
-categories: [tank]
+categories: [ tank ]
 tags: [tank, betta, kampffisch, walstad, quarantäne, krank]
 excerpt: "Ein separates Becken zur Quarantäne und Behandlung."
 image: /assets/tanks/quarantine/quarantine.jpg
@@ -26,8 +26,6 @@ entwicklung:
     ereignis: Paarung Sir Pryce und Sonnenschein
   - datum: 20.09.2025
     ereignis: Die Larven sind geschlüpft. Ich lasse Sir Pryce diesmal im Becken. Entweder die Babys überleben oder nicht.
-
-entwicklung_text: | Bisher läuft alles gut. Sir Pryce scheint sich wohl zu fühlen und die Babys werden nicht von ihm gefressen. Zumindest bisher nicht.
 ---
 ## Quarantäne
 Als sich herausgestellt hat, dass Sir Pryce ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
