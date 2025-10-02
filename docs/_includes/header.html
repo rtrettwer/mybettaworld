@@ -3,7 +3,6 @@
     .site-header .site-title,
     .site-header .site-nav,
     .site-header .site-nav .page-link,
-    .site-header .menu-icon svg,
     .site-header label[for="nav-trigger"] span {
       color: #fff !important;
       fill: #fff !important;
@@ -16,6 +15,12 @@
     .site-header .site-nav .page-link:hover {
       color: #b3c6ff !important;
     }
+    /* Menü-Icon und Menüleiste hellblau */
+    .site-header .menu-icon svg,
+    .site-header .menu-icon svg path {
+      fill: #b3c6ff !important;
+      stroke: #b3c6ff !important;
+    }
     /* Mobile Menü Hintergrund und Textfarbe */
     @media (max-width: 600px) {
       .site-header .site-nav .trigger {
@@ -23,6 +28,11 @@
       }
       .site-header .site-nav .page-link {
         color: #fff !important;
+      }
+      .site-header .menu-icon svg,
+      .site-header .menu-icon svg path {
+        fill: #b3c6ff !important;
+        stroke: #b3c6ff !important;
       }
     }
   </style>
