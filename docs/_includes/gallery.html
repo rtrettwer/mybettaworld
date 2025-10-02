@@ -8,6 +8,7 @@
   {%- endif -%}
 {%- endfor -%}
 {%- assign gallery_images = gallery_images | sort: "path" -%}
+{%- assign gallery_meta = site.data.gallery | default: [] -%}
 
 <style>
     /* Final-Tiles/Masonry Grid */
@@ -64,11 +65,54 @@
         display: flex;
     }
 
+    #lightbox-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        max-width: 100vw;
+        max-height: 100vh;
+        overflow: hidden;
+        padding: 2vh 0;
+        box-sizing: border-box;
+    }
+
+    #lightbox-filename {
+        color: #fff;
+        text-align: center;
+        margin-bottom: 1rem;
+        max-width: 90vw;
+        font-weight: bold;
+        word-break: break-all;
+        overflow-wrap: anywhere;
+        white-space: pre-line;
+        flex-shrink: 0;
+    }
+
     #lightbox-img {
         max-width: 90vw;
-        max-height: 90vh;
+        max-height: 60vh;
         border-radius: 12px;
         box-shadow: 0 10px 32px rgba(0, 0, 0, .4);
+        margin-bottom: 1rem;
+        margin-top: 0;
+        display: block;
+        object-fit: contain;
+        flex-shrink: 1;
+    }
+
+    #lightbox-caption {
+        color: #fff;
+        text-align: center;
+        margin-top: 0;
+        max-width: 90vw;
+        word-break: break-word;
+        overflow-wrap: anywhere;
+        white-space: pre-line;
+        font-size: 1rem;
+        flex-shrink: 0;
+        margin-bottom: 1rem;
     }
 
     .lb-btn {
@@ -112,9 +156,12 @@
 
 <div id="gallery" class="ftg-grid" data-row="10" data-gap="12">
   {%- for file in gallery_images -%}
+    {%- assign meta = gallery_meta | where: "path", file.path | first -%}
     <a class="ftg-item"
        href="{{ file.path | relative_url }}"
        data-index="{{ forloop.index0 }}"
+       data-title="{{ meta.title | default: '' | escape }}"
+       data-caption="{{ meta.caption | default: '' | escape }}"
        onclick="openLightbox(event, {{ forloop.index0 }});">
         <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
     </a>
@@ -125,7 +172,11 @@
 <div id="lightbox-overlay" aria-hidden="true">
     <button class="lb-btn lb-close" aria-label="Schließen" onclick="closeLightbox()">×</button>
     <button class="lb-btn lb-prev" aria-label="Vorheriges Bild" onclick="prevLightbox()">‹</button>
-    <img id="lightbox-img" src="" alt="Großansicht">
+    <div id="lightbox-content">
+        <div id="lightbox-filename"></div>
+        <img id="lightbox-img" src="" alt="Großansicht">
+        <div id="lightbox-caption"></div>
+    </div>
     <button class="lb-btn lb-next" aria-label="Nächstes Bild" onclick="nextLightbox()">›</button>
 </div>
 
@@ -159,14 +210,40 @@
         // Lightbox-Logik
         const overlay = document.getElementById('lightbox-overlay');
         const lbImg = document.getElementById('lightbox-img');
+        const lbCaption = document.getElementById('lightbox-caption');
+        const lbFilename = document.getElementById('lightbox-filename');
         const items = Array.from(grid.querySelectorAll('.ftg-item'));
         let current = -1;
 
         function show(index) {
             if (!items.length) return;
             current = (index + items.length) % items.length;
-            const href = items[current].getAttribute('href');
+            const item = items[current];
+            const href = item.getAttribute('href');
             lbImg.src = href;
+            // Pfad (z.B. /assets/bild1.jpg) oberhalb anzeigen
+            lbFilename.textContent = href;
+            lbFilename.style.display = 'block';
+            // Beschreibung unterhalb anzeigen (caption oder title)
+            const title = item.getAttribute('data-title');
+            const caption = item.getAttribute('data-caption');
+            let text = '';
+            if (caption || title) {
+                text = caption || title;
+            }
+            lbCaption.textContent = text;
+            lbCaption.style.display = text ? 'block' : 'none';
+
+            // Bildgröße dynamisch anpassen, damit Text immer sichtbar bleibt
+            setTimeout(() => {
+                const overlayHeight = overlay.clientHeight;
+                const filenameHeight = lbFilename.offsetHeight;
+                const captionHeight = lbCaption.offsetHeight;
+                const buttonsHeight = 48; // grob geschätzt für Buttons oben/unten
+                const available = overlayHeight - filenameHeight - captionHeight - buttonsHeight - 40;
+                lbImg.style.maxHeight = (available > 100 ? available : 100) + 'px';
+            }, 50);
+
             overlay.classList.add('active');
             overlay.setAttribute('aria-hidden', 'false');
         }
