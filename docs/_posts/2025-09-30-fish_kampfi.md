@@ -1,6 +1,6 @@
 ---
 layout: post_fish_portrait
-title:  "Fischporträt - Kampfi"
+title:  "Kampfi"
 date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, kampfi, fisch]

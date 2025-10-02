@@ -1,6 +1,6 @@
 ---
 layout: post_fish_portrait
-title:  "Fischporträt - Bandit"
+title:  "Bandit"
 date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, bandit, fisch]
