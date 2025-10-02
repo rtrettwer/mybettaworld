@@ -69,7 +69,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         width: 100vw;
         max-width: 100vw;
         max-height: 100vh;
@@ -92,6 +92,7 @@
 
     #lightbox-img {
         max-width: 90vw;
+        /* Bildhöhe so begrenzen, dass immer Platz für Pfad und Caption bleibt */
         max-height: 60vh;
         border-radius: 12px;
         box-shadow: 0 10px 32px rgba(0, 0, 0, .4);
@@ -221,10 +222,8 @@
             const item = items[current];
             const href = item.getAttribute('href');
             lbImg.src = href;
-            // Pfad (z.B. /assets/bild1.jpg) oberhalb anzeigen
             lbFilename.textContent = href;
             lbFilename.style.display = 'block';
-            // Beschreibung unterhalb anzeigen (caption oder title)
             const title = item.getAttribute('data-title');
             const caption = item.getAttribute('data-caption');
             let text = '';
@@ -240,6 +239,7 @@
                 const filenameHeight = lbFilename.offsetHeight;
                 const captionHeight = lbCaption.offsetHeight;
                 const buttonsHeight = 48; // grob geschätzt für Buttons oben/unten
+                // 40px zusätzlicher Puffer
                 const available = overlayHeight - filenameHeight - captionHeight - buttonsHeight - 40;
                 lbImg.style.maxHeight = (available > 100 ? available : 100) + 'px';
             }, 50);
