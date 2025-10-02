@@ -2,7 +2,6 @@
   <style>
     .site-footer .footer-heading {
       color: #fff !important;
-      /* Kein Hover-Effekt für den Titel */
       transition: none;
       cursor: default;
     }
@@ -23,15 +22,36 @@
     .site-footer .footer-description {
       color: #bbb !important;
     }
+    .site-footer .footer-logo-circle {
+      background: #fff;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.4em;
+      height: 2.4em;
+      margin-right: 0.5em;
+    }
+    .site-footer .footer-logo-circle img {
+      height: 1.6em;
+      width: auto;
+      display: block;
+      border-radius: 50%;
+    }
   </style>
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
 
   <div class="wrapper" style="max-width: 700px;">
     <div class="footer-col-wrapper" style="display: flex; align-items: center; gap: 2em;">
       <div style="display: flex; flex-direction: column; justify-content: center;">
-        <h2 class="footer-heading" style="margin: 0; font-size: 1.1em; font-weight: 600; color: #fff;">
-          {{ site.title | escape }}
-        </h2>
+        <span style="display: flex; align-items: center; gap: 0.5em;">
+          <span class="footer-logo-circle">
+            <img src="/assets/misc/icon.png" alt="Logo">
+          </span>
+          <h2 class="footer-heading" style="margin: 0; font-size: 1.1em; font-weight: 600; color: #fff; display: inline;">
+            {{ site.title | escape }}
+          </h2>
+        </span>
       </div>
       <div class="footer-col footer-col-3" style="margin: 0;">
         <p class="footer-description" style="margin: 0;">{{- site.description | escape -}}</p>
