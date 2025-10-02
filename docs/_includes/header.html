@@ -16,6 +16,15 @@
     .site-header .site-nav .page-link:hover {
       color: #b3c6ff !important;
     }
+    /* Mobile Menü Hintergrund und Textfarbe */
+    @media (max-width: 600px) {
+      .site-header .site-nav .trigger {
+        background: linear-gradient(90deg, #b3c6ff 0%, #9966e4 100%) !important;
+      }
+      .site-header .site-nav .page-link {
+        color: #fff !important;
+      }
+    }
   </style>
   <div class="wrapper">
     {%- assign default_paths = site.pages | map: "path" -%}
