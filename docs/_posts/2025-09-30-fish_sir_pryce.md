@@ -23,7 +23,7 @@ Es mussten zwei neue Becken her - eins für mein neues Männchen und eins als Qu
 # Elternschaft
 
 ## Erste Laichung
-Ich habe das Männchen dann mit dem dominanten Weibchen, mit dem ehr sich gut vertragen hat, in ein neues kleines 30L Becken gesetzt.
+Ich habe das Männchen dann mit dem dominanten Weibchen, mit dem er sich gut vertragen hat, in ein neues kleines 30L Becken gesetzt.
 Und was soll ich sagen, die beiden haben sich sehr bald darauf gepaart. Ich stand zufällig vor dem Becken, als ich plötzlich Eier herabsinken sehe -  wie cool so einen Moment zu erwischen!
 Sir Pryce ist ein sehr fürsorglicher Vater. Er hat sich nie weit entfernt. Er hat die Eier und das Nest auch mehrmals an andere Orte gebaut, die er vermutlich für sicherer gehalten hat. Und selbst als die Larven schon angefangen haben, frei zu schwimmen hat er sie eingesammelt und wieder ins Nest gespuckt.
 Ich musste an diesem Tag sehr an den Film "Findet Nemo" denken, wo Marlin auch so ein fürsorglicher und überbesorgter Vater ist.
