@@ -6,32 +6,26 @@ categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, dschungel ]
 excerpt: "Dieses Becken ist dicht bepflanzt und bietet viele Verstecke."
 image: /assets/tanks/jungle/jungle.jpg
-dimensions: 60x30x30 cm
+dimensions: 60x30x30 cm (Tetra Starter 60)
 water_type: Süßwasser
-filter: Ja
+filter: Nein
 luftheber: Ja
 beleuchtung: LED
-bodengrund: Kies
-deko: Wurzeln, Steine, Pflanzen
-startdatum: 15.02.2023
-besatz: 1 Betta splendens, Garnelen, Schnecken
-pflanzen: Anubias, Javafarn, Cryptocoryne, Schwimmpflanzen
-technik: Außenfilter, Heizstab, CO2-Anlage
+bodengrund: Pflanzengranulat, weißer Sand, Kies, schwarzer Sand
+deko: 1 Mopani Wurzel, Kokosnusshöhle, Kunststoff Höhlensystem, Kunststoff Steintor, roter Lavastrom, Garnelenhöhle 
+startdatum: XX.03.2025
+besatz: 3 Betta splendens (Kampfi, Shadow, Lila), 6 Zwergpanzerwelse, diverse Neocaridina Garnelen, 3 Rennschnecken, diverse Posthornschnecken und Blasenschnecken
+pflanzen: Anubias, Javafarn, Cryptocoryne,Flammenmoos, Alternathea reineckii, Schwimmpflanzen (Schwimmfarn, Froschbiss)
+technik: Heizstab, Luftheber
 heizung: Heizstab
 besonderheiten: Stark bepflanzt, viele Verstecke, wenig Algen
 entwicklung:
-  - datum: 02.09.2025
-    ereignis: Kübel aufgestellt, sehr viele Seemandelbaumblätter dazu, Heizung an
-  - datum: 04.09.2025
-    ereignis: Paarung Bandit und Lila, Lila wieder aus dem Becken genommen
-  - datum: 05.09.2025
-    ereignis: Larven sind geschlüpft
-  - datum: 08.09.2025
-    ereignis: Larven sind frei schwimmend, Bandit aus dem Becken genommen. Mit Infusorien-Fütterung begonnen
-  - datum: 01.10.2025
-    ereignis: Erstes Mal probiert, sie mit fein gemahlenen Flocken zu füttern - sie haben es gut angenommen, denke ich.
+  - datum: XX.03.2025
+    ereignis: Becken gestartet
+  - datum: XX.04.2025
+    ereignis: Kampfi dazu
 entwicklung_text: |
-  Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
+   Dieses Becken hatte die meisten Veränderungen und Rescapes erlebt. 
 gallery_dir: /assets/tanks/jungle
 ---
 
