@@ -54,3 +54,5 @@ Nematol online bestellt. In der Zwischenzeit habe ich ihm schön lebende Artemia
 Endlich ist das Nematol da. Knapp 0,25ml davon ins Wasser. Jetzt hoffe ich, dass die Würmer schnell sterben und Bandit sich gut erholen kann.
 Ich werde ihn aber erstmal im Quarantänebecken lassen, bis er wieder fit ist. Das Höhlen-Becken habe ich (noch) nicht behandelt. Ich bin etwas unsicher - ich möchte die Garnelen und Schnecken nicht gefährden (Nematol wäre tödlich für sie).
 Ich habe also bisher nur einen Filter gekauft und ins Becken gehängt, einen Wasserwechsel gemacht und den Boden abgemulmt.
+## 02.10.2025
+Bandit hatte noch eine Weile tote rote Würmer aus dem After hängen, mittlerweile hat er nichts mehr hängen. Ich habe ihn in ein komplett frisches Quarantäne Becken umgesetzt. Außerdem habe ich mit Artemia und Wasserflöhen versucht ihn ein bisschen aufzupäppeln. Ich bin guten Mutes dass er überlebt<3
