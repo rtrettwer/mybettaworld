@@ -20,12 +20,15 @@
 
 title: The more the betta
 subtitle: Kampffischzucht und mehr
-author: Rike Trettwer
+author:
+  name: Rike trettwer
+  email: rike@trettwer.de
+  github_username: rtrettwer
 #email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
-  A blog about Betta splendens breeding, fishkeeping and more.
+  A blog about betta splendens breeding, fishkeeping and more.
 baseurl: "" # the subpath of your site, e.g. /blog
-url: ""#"https://trettwer.de"
+url: "https://trettwer.de"
 github_username: rtrettwer
 logo: assets/misc/icon.png
 # Build settings
@@ -33,6 +36,9 @@ theme: minima
 #minima:
 #  skin: dark
 
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # Header‑Navigation (minima):
 header_pages:
@@ -42,7 +48,6 @@ header_pages:
   - tanks.md
   - food.md
   - gallery.md
-
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
