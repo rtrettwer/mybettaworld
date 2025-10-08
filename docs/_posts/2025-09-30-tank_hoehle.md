@@ -35,7 +35,8 @@ entwicklung:
     ereignis: Otocinclus ziehen ein; auch die werden von Bandit gestresst
   - datum: XX.08.2025
     ereignis: Ich habe Neon Tetras aus dem Mangroven-Becken dazu gesetzt. Und endlich scheint Bandit zur Ruhe zu kommen und akzeptiert seine Mitbewohner (Reizüberflutung?). Alle! Die Garnelen kommen wieder raus.
-
+  - datum: 08.10.2025
+    ereignis: Ich habe heute stark Pflanzen geschnitten, einige entfernt und ein paar umgepflanzt. Hier war viel zu wenig Licht! Außerdem die Wurzel, die als Versteck vor Bandit gedacht waren, anders platziert. 
 entwicklung_text: |
 
 ---

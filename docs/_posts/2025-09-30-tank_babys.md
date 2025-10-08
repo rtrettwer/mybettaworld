@@ -35,6 +35,8 @@ entwicklung:
     ereignis: Artemia Nauplien
   - datum: 02.10.2025
     ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter 
+  - datum: 08.10.2025
+    ereignis: Ich habe heute testweise Lila aus Kampfis Becken genommen und zu den Jungfischen gesetzt. Ich werde beobachten, ob sie sich vertragen.
 entwicklung_text: |
   Mittlerweile füttere ich mehrmals täglich mit frischen Artemia Nauplien, Mikrowürmern oder Essigälchen. Hin und wieder Staubfutter. Ansonsten fange ich an zu testen, ob sie feines Granulat oder zermahlene Flocken annehmen.
 gallery_dir: /assets/tanks/babies

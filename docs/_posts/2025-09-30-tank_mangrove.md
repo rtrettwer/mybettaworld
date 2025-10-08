@@ -27,6 +27,8 @@ entwicklung:
     ereignis: Besatz mit den Betta-Weibchen (5 Jung-Fische), Sulawesi-Schnecke, Zwerggarnelen
   - datum: 01.08.2025
     ereignis: Neon-Tetras aus dem Dschungel-Aquarium in dieses umgesetzt
+  - datum: 08.10.2025
+    ereignis: Ich habe Bandit aus seinem Quarantäne-Becken in dieses Becken umgesetzt. Er sieht noch schwach und dünn aus - Sonnenschein ist aktuell dominant und sehr kritisch ihrem neuen Mitbewohner gegenüber.
 
 entwicklung_text: |
   Mittlerweile ist nur noch ein Betta-Weibchen in diesem Becken (Sonnenschein). Eines der Weibchen war ein Männchen (Sir Pryce), ein Weibchen ist gestorben und die anderen beiden sind aktuell bei Kampfi im Dschungel-Aquarium

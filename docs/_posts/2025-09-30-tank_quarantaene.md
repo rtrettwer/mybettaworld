@@ -26,6 +26,8 @@ entwicklung:
     ereignis: Paarung Sir Pryce und Sonnenschein
   - datum: 20.09.2025
     ereignis: Die Larven sind geschlüpft. Ich lasse Sir Pryce diesmal im Becken. Entweder die Babys überleben oder nicht.
+  - datum: 08.10.2025
+    ereignis: Ich habe beim Wasserwechsel aus dem Dschungel-Becken einige Garnelen abgesaugt. Die habe ich aus dem Dreckwasser rausgefischt und hier eingesetzt. Mal sehen, ob Sir Pryce sie am Leben lässt, er ist schon sehr beschützend seinen Jungen gegenüber. Aber das Becken könnte dringend ein paar Algenvernichter gebrauchen...
 ---
 ## Quarantäne
 Als sich herausgestellt hat, dass Sir Pryce ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
