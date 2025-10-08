@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, höhle ]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
-image: /assets/tanks/cave/cave.jpg
+image: /assets/tanks/cave/cave.webp
 dimensions: 30x20x20 cm
 water_type: Süßwasser
 filter: Nein

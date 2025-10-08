@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ food ]
 tags: [ aquarium ,betta, kampffisch, walstad, baby, zucht, nano ]
 excerpt: "Kleine Würmchen die sich von Essigbakterien ernähren"
-image: /assets/food/essigaelchen/essigaelchen_reagenzglas.jpg
+image: /assets/food/essigaelchen/essigaelchen_reagenzglas.webp
 gallery_dir: /assets/food/essigaelchen
 ---
 

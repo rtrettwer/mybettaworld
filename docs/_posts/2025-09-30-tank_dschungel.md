@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, dschungel ]
 excerpt: "Dieses Becken ist dicht bepflanzt und bietet viele Verstecke."
-image: /assets/tanks/jungle/jungle.jpg
+image: /assets/tanks/jungle/jungle.webp
 dimensions: 60x30x30 cm (Tetra Starter 60)
 water_type: Süßwasser
 filter: Nein

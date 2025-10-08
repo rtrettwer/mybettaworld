@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, baby, zucht, nano ]
 excerpt: "Meine ersten Betta-Babys"
-image: /assets/tanks/babies/babies.jpg
+image: /assets/tanks/babies/babies.webp
 dimensions: 40x25x25 cm (Dennerle Nano Cube)
 fassungsvermoegen: 30L
 water_type: Süßwasser

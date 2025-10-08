@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, sonnenschein, fisch]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich seine Entwicklung."
-image: /assets/fish/sonnenschein/sonnenschein.jpg
+image: /assets/fish/sonnenschein/sonnenschein.webp
 fish_name: Sonnenschein
 fish_birth: Mai 2025
 fish_price: 5 € (Interaquaristik)
