@@ -10,6 +10,7 @@ gallery_dir: /assets/food/wasserfloehe
 ---
 
 
+
 Wasserflöhe (Daphnien) sind ein beliebtes Lebendfutter für viele Aquarienfische, darunter auch Bettas. Sie fördern die natürliche Jagd und sorgen für Bewegung im Aquarium. Wasserflöhe sind reich an Ballaststoffen und helfen, die Verdauung der Fische zu unterstützen. Sie können sowohl frisch gefangen als auch aus eigener Zucht verfüttert werden. Besonders Jungfische profitieren von der regelmäßigen Gabe, da sie das Wachstum fördern und die Vitalität steigern.
 
 Ganz am Anfang hatte ich Mal eine wunderbar gedeihende Wasserfloh-Zucht. Die hatte ich aber in einem Plastikeimer auf dem Fensterbrett und ich fürchte, da gab es einmal zu viel Sonne und Hitze - alle tot.

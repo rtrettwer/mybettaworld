@@ -30,6 +30,7 @@ entwicklung:
     ereignis: Ich habe beim Wasserwechsel aus dem Dschungel-Becken einige Garnelen abgesaugt. Die habe ich aus dem Dreckwasser rausgefischt und hier eingesetzt. Mal sehen, ob Sir Pryce sie am Leben lässt, er ist schon sehr beschützend seinen Jungen gegenüber. Aber das Becken könnte dringend ein paar Algenvernichter gebrauchen...
 ---
 
+
 ## Quarantäne
 Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/30/fish_sir_pryce.html) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
 Deshalb habe ich ein weiteres Becken besorgt und sie hier zur Quarantäne gesetzt. Das Becken war ohne Bodengrund nur sehr spartanisch eingerichtet. Leider hat das Weibchen sich dennoch nicht mehr erholt. Sie hatte Bauchwassersucht und sah aus wie ein kleiner Tannenzapfen, weil die Schuppen abstanden. Sie hat nicht mehr gefressen und sich kaum bewegt. Ich habe sie mit Nelkenöl hoffentlich sanft von ihrem Leiden erlöst.

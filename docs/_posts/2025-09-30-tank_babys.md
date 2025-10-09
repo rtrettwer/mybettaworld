@@ -43,6 +43,7 @@ gallery_dir: /assets/tanks/babies
 ---
 
 
+
 ## Über das Becken
 
 Einlaufphase war problemlos, schnelle Stabilisierung der Wasserwerte. Tatsächlich habe ich [Sir Pryce](/fish/2025/09/30/fish_sir_pryce.html) sehr schnell (Nach

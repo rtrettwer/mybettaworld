@@ -17,6 +17,7 @@ gallery_dir: /assets/fish/bandit
 ---
 
 
+
 # Liebe auf den ersten Blick
 
 Eigentlich wollte ich ja gar keinen weiteren Fisch kaufen, bis die neuen Becken eingelaufen sind. Ich war im Pflanzen

@@ -16,6 +16,7 @@ gallery_dir: /assets/fish/shadow
 ---
 
 
+
 Shadow ist eine richtige kleine Schönheit. Mit ihren Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove.html)-Becken war sie dauergestresst und hatte
 Stressstreifen.
 Sie lebt bei [Kampfi](/fish/2025/09/30/fish_kampfi.html) im [Dschungel](/tank/2025/09/30/tank_dschungel.html)-Becken - und da scheint es ihr richtig gut zu gehen. Sie hat eine wunderschöne Färbung.

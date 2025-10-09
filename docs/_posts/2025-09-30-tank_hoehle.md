@@ -42,6 +42,7 @@ entwicklung_text: |
 ---
 
 
+
 Das Höhlenbecken war eigentlich einmal für [Kampfi](/fish/2025/09/30/fish_kampfi.html) gedacht, weil er so gerne in Höhlen kriecht. Ich habe über Etsy eine
 schöne große Höhle gekauft, die utner dem Substrat liegt. Außerdem einen Garnelentunnel. Um mehr Vesteckmöglichkeiten zu
 bieten habe ich später weitere Wurzeln und Pflanzen hinzugefügt. Eigentlich sollte das Becken am Anfang einen
