@@ -1,0 +1,38 @@
+@use './variables' as *;
+
+.site-header {
+  background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%);
+
+  .site-title,
+  .site-nav,
+  .site-nav .page-link,
+  label[for="nav-trigger"] span {
+    color: $theme-white !important;
+    fill: $theme-white !important;
+  }
+  .site-nav .page-link {
+    background: transparent !important;
+    transition: color 0.2s;
+  }
+  .site-title:hover {
+    color: $theme-green !important;
+  }
+  .menu-icon svg path {
+    fill: $theme-blue !important;
+    background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%) !important;
+  }
+  /* Mobile Menü Hintergrund und Textfarbe */
+  @media (max-width: 600px) {
+    .site-nav .trigger {
+      background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%) !important;
+      stroke: $theme-green !important;
+      fill: $theme-green !important;
+      color: $theme-white !important;
+    }
+    .menu-icon svg,
+    .menu-icon svg path {
+      fill: $theme-blue !important;
+      stroke: $theme-blue !important;
+    }
+  }
+}

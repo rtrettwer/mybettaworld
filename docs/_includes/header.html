@@ -1,41 +1,4 @@
-<header class="site-header" role="banner" style="background: linear-gradient(90deg, #38d9a9 0%, #3383c9 100%);">
-    <style>
-        .site-header .site-title,
-        .site-header .site-nav,
-        .site-header .site-nav .page-link,
-        .site-header label[for="nav-trigger"] span {
-            color: #fff !important;
-            fill: #fff !important;
-        }
-        .site-header .site-nav .page-link {
-            background: transparent !important;
-            transition: color 0.2s;
-        }
-        .site-header .site-title:hover,
-        color: #38d9a9 !important;
-        /* Menü-Icon und Menüleiste grün */
-        }
-        stroke: #38d9a9 !important;
-        fill: #38d9a9 !important;
-        .site-header .menu-icon svg path {
-            fill: #3383c9 !important;
-            background: linear-gradient(90deg, #38d9a9 0%, #3383c9 100%) !important;
-        }
-        /* Mobile Menü Hintergrund und Textfarbe */
-        @media (max-width: 600px) {
-            .site-header .site-nav .trigger {
-                background: linear-gradient(90deg, #38d9a9 0%, #3383c9 100%) !important;
-                stroke: #38d9a9 !important;
-                fill: #38d9a9 !important;
-                color: #fff !important;
-            }
-            .site-header .menu-icon svg,
-            .site-header .menu-icon svg path {
-                fill: #3383c9 !important;
-                stroke: #3383c9 !important;
-            }
-        }
-    </style>
+<header class="site-header" role="banner">
     <div class="wrapper">
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
