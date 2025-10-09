@@ -1,6 +1,6 @@
 #!/bin/bash
 # Löscht Thumbnails, für die kein passendes Originalbild existiert
-# Thumbnail: assets/thumbnails/foo_thumb.webp → Original: assets/{fish,food,tanks,misc}/foo.webp|jpg|png
+# Thumbnail: docs/assets/thumbnails/foo_thumb.webp → Original: docs/assets/{fish,food,tanks,misc}/foo.webp|jpg|png
 
 THUMB_DIR="$(dirname "$0")/../docs/assets/thumbnails"
 ASSETS_DIR="$(dirname "$0")/../docs/assets"
@@ -23,4 +23,3 @@ for thumb in "$THUMB_DIR"/*_thumb.*; do
     rm "$thumb"
   fi
 done
-

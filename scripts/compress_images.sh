@@ -8,7 +8,10 @@ cp -r ../docs/assets/* assets_backup/
 mkdir -p ../docs/assets/thumbnails
 
 ## Für jedes Bild ein Thumbnail (300px breit, WebP) erzeugen
-find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) | while read img; do
+find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.png" -o -iname "*.webp" \) \
+  ! -path "../docs/assets/thumbnails/*" \
+  ! -path "../docs/assets_backup/*" \
+  | while read img; do
   # Zielpfad für Thumbnail (immer .webp)
   relpath="${img#../docs/assets/}"
   thumb="../docs/assets/thumbnails/${relpath%.*}.webp"
@@ -20,10 +23,19 @@ find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" -o -iname "*.p
 done
 
 ## JPG und PNG komprimieren
-find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) -exec mogrify -strip -interlace Plane -quality 85% {} \;
-find ../docs/assets/ -type f -iname "*.png" -exec mogrify -strip -quality 85 {} \;
+find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.jpeg" \) \
+  ! -path "../docs/assets/thumbnails/*" \
+  ! -path "../docs/assets_backup/*" \
+  -exec mogrify -strip -interlace Plane -quality 85% {} \;
+find ../docs/assets/ -type f -iname "*.png" \
+  ! -path "../docs/assets/thumbnails/*" \
+  ! -path "../docs/assets_backup/*" \
+  -exec mogrify -strip -quality 85 {} \;
 
 ## Optional: Nach WebP konvertieren (ImageMagick muss WebP unterstützen)
-# find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.png" \) -exec sh -c 'cwebp -q 80 "$0" -o "${0%.*}.webp"' {} \;
+# find ../docs/assets/ -type f \( -iname "*.jpg" -o -iname "*.png" \) \
+#   ! -path "../docs/assets/thumbnails/*" \
+#   ! -path "../docs/assets_backup/*" \
+#   -exec sh -c 'cwebp -q 80 "$0" -o "${0%.*}.webp"' {} \;
 
 echo "Bilder wurden komprimiert und WebP-Thumbnails erzeugt. Backup liegt in assets_backup/"
