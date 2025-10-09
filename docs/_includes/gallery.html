@@ -164,7 +164,7 @@
        data-title="{{ meta.title | default: '' | escape }}"
        data-caption="{{ meta.caption | default: '' | escape }}"
        onclick="openLightbox(event, {{ forloop.index0 }});">
-        <img src="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
+        <img src="{{ file.path | replace: '/assets/', '/assets/thumbnails/' | relative_url }}" data-full="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
     </a>
   {%- endfor -%}
 </div>
@@ -220,9 +220,11 @@
             if (!items.length) return;
             current = (index + items.length) % items.length;
             const item = items[current];
-            const href = item.getAttribute('href');
-            lbImg.src = href;
-            lbFilename.textContent = href;
+            // Lade das Originalbild aus data-full statt aus href
+            const imgTag = item.querySelector('img');
+            const fullSrc = imgTag ? imgTag.getAttribute('data-full') : item.getAttribute('href');
+            lbImg.src = fullSrc;
+            lbFilename.textContent = fullSrc;
             lbFilename.style.display = 'block';
             const title = item.getAttribute('data-title');
             const caption = item.getAttribute('data-caption');

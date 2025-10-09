@@ -36,7 +36,7 @@ layout: default
         <div class="tank-steckbrief-flex" style="display: flex; align-items: flex-start; gap: 2rem;">
             {% if page.image %}
             <div class="tank-image" style="flex: 0 0 140px; max-width: 140px;">
-                <img src="{{ page.image }}" alt="Aquarium Foto"
+                <img src="{{ page.image | replace: '/assets/', '/assets/thumbnails/' }}" alt="Aquarium Foto"
                      style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
             </div>
             {% endif %}
