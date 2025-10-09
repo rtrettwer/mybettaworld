@@ -2,23 +2,50 @@ import os
 import re
 import yaml
 
-POSTS_DIR = '../docs/_posts'      # Passe ggf. an deinen Pfad an
-LINKS_FILE = 'keywords.yml'       # YAML mit key/url-paaren
+POSTS_DIR = '../docs/_posts'         # Dein Pfad zu Markdown-Dateien
+LINKS_FILE = 'keywords.yml'          # Deine YAML-Liste mit key/url
 
 def load_links(yaml_file):
+    """
+    Liefert:
+    - keywords_dict: key -> url
+    - url2key: url -> key
+    """
     with open(yaml_file, 'r', encoding='utf-8') as f:
         links = yaml.safe_load(f)
-    return {entry['key']: entry['url'] for entry in links}
+    keywords_dict = {entry['key']: entry['url'] for entry in links}
+    url2key = {entry['url']: entry['key'] for entry in links}
+    return keywords_dict, url2key
 
-def get_target_key(filename, links):
-    basename = os.path.basename(filename)
-    for key, url in links.items():
-        base_key = url.rsplit('/', 1)[-1].replace('.html', '.md').replace('.htm', '.md')
-        if basename == base_key:
-            return key
-    return None
+def target_url_for_file(md_filename):
+    """
+    Rückgabe: Webpfad für diesen Post im Format /fish/2025/09/30/fish_bandit.html
+    Annahme: Standard Jekyll/Blog-Layout yyyy-mm-dd-title.md --> /ordner/jjjj/mm/tt/titel.html
+    """
+    base = os.path.basename(md_filename)
+    # z.B. 2025-09-30-fish_bandit.md
+    m = re.match(r'(\d{4})-(\d{2})-(\d{2})-([^\.]+)\.md$', base)
+    if not m:
+        raise ValueError(f"Ungültiges Dateiformat: {md_filename}")
+    year, month, day, slug = m.groups()
+    # Ordner-Struktur und Präfix individuell anpassbar!
+    # Du hast: /fish/yyyy/mm/dd/fish_bandit.html oder /tank/yyyy/mm/dd/tank_babys.html usw.
+    # Dafür bestimmen wir aus dem Slug den Unterordner ("fish", "tank" etc.)
+    # Gehe davon aus: Das erste "_", das nach dem Datum kommt!
+    if "_" in slug:
+        folder = slug.split("_")[0]
+    else:
+        folder = slug
+    htmlfile = slug + ".html"
+    url = f"/{folder}/{year}/{month}/{day}/{htmlfile}"
+    return url
 
-def autolink_content(content, links, skip_key):
+def get_own_key_for_file(md_filename, url2key):
+    """Gibt den eigenen Key für diese Datei zurück, wenn sie in url2key enthalten ist, sonst None."""
+    own_url = target_url_for_file(md_filename)
+    return url2key.get(own_url)
+
+def autolink_content(content, keywords_dict, skip_key):
     # Front Matter abtrennen
     if content.startswith('---'):
         parts = content.split('---', 2)
@@ -35,14 +62,17 @@ def autolink_content(content, links, skip_key):
     lines = body.splitlines(keepends=True)
     new_lines = []
     for line in lines:
-        if line.lstrip().startswith('#'):
+        if line.lstrip().startswith('#'):  # Überschrift überspringen
             new_lines.append(line)
-            continue  # Skip Überschriften
+            continue
         modified_line = line
-        for key, url in sorted(links.items(), key=lambda x: -len(x[0])):
+        # Begriffe längster zuerst: keine Überschneidung
+        for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
             if key == skip_key:
                 continue
+            # Exakter Match, Case-sensitive, nur Ganzwort
             pattern = r'(?<!\[)(?<!\w)' + re.escape(key) + r'(?!\w)(?!\]\([^)]+\))'
+
             def replacer(match):
                 start = match.start()
                 pre = modified_line[max(0, start-50):start]
@@ -55,15 +85,15 @@ def autolink_content(content, links, skip_key):
     return front_matter + ''.join(new_lines)
 
 def main():
-    links = load_links(LINKS_FILE)
+    keywords_dict, url2key = load_links(LINKS_FILE)
     for filename in os.listdir(POSTS_DIR):
         if not filename.endswith('.md'):
             continue
         path = os.path.join(POSTS_DIR, filename)
+        own_key = get_own_key_for_file(filename, url2key)
         with open(path, 'r', encoding='utf-8') as f:
             content = f.read()
-        skip_key = get_target_key(filename, links)
-        new_content = autolink_content(content, links, skip_key)
+        new_content = autolink_content(content, keywords_dict, own_key)
         if new_content != content:
             with open(path, 'w', encoding='utf-8') as f:
                 f.write(new_content)

@@ -41,12 +41,13 @@ entwicklung_text: |
 
 ---
 
-Das Höhlenbecken war eigentlich einmal für Kampfi gedacht, weil er so gerne in Höhlen kriecht. Ich habe über Etsy eine
+
+Das Höhlenbecken war eigentlich einmal für [Kampfi](/fish/2025/09/30/fish_kampfi.html) gedacht, weil er so gerne in Höhlen kriecht. Ich habe über Etsy eine
 schöne große Höhle gekauft, die utner dem Substrat liegt. Außerdem einen Garnelentunnel. Um mehr Vesteckmöglichkeiten zu
 bieten habe ich später weitere Wurzeln und Pflanzen hinzugefügt. Eigentlich sollte das Becken am Anfang einen
 asiatischen Touch haben, aber die Bambus-ähnliche Pflanze ist mittlerweile verschwunden und die wunderschönen
-Kelch-Pflanzen von Schwimmern überdeckt. Naja... so ist eben der Lauf der Dinge. Da Bandit in dem Becken
-Camallanus-Würmer bekommen hat, habe ich ihn in Quarantäne gesetzt. Ich habe aber das Becken hier selbst noch nicht
+Kelch-Pflanzen von Schwimmern überdeckt. Naja... so ist eben der Lauf der Dinge. Da [Bandit](/fish/2025/09/30/fish_bandit.html) in dem Becken
+Camallanus-Würmer bekommen hat, habe ich ihn in [Quarantäne](/tank/2025/09/30/tank_quarantaene.html) gesetzt. Ich habe aber das Becken hier selbst noch nicht
 behandelt und weiß nicht, ob ich es tun werde/soll. Ich habe die Würmer an keinem der anderen Fische festgestellt. Und
 ich möchte die Schnecken und Garnelen nicht gefährden. Erstmal werde ich somit aber keine Fische dort hineinsetzen oder
 herausnehmen.

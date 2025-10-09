@@ -9,10 +9,11 @@ image: /assets/food/organization_food_tools.webp
 gallery_dir: /assets/food
 ---
 
+
 Die meisten meiner Fische füttere ich mit Futterautomaten und Granulat. Da wo Garnelen, Schnecken und Welse drin sind verteile ich zusätzlich Garnelen Sticks und Spirulina Tabs.
 Ich mische alle Kampffisch-Futterarten, damit es ein bisschen Abwechslung gibt.
 Zwischendrin füttere ich mit Tetra Min Flocken - alle meine Tiere (Fische, Schnecken, Garnelen) lieben sie!
 Gelegentlich gibt es auch Lebendfutter. Da die Neons drüber herfallen wie Piranhas habe ich mir angewohnt, relativ gezielt mit Pipette die Kampffische zu versorgen.
-Die Baby-Fische bekommen vor allem Lebendfutter, ganz am Anfang Infusorien. Beim Lebendfutter gibt es vor allem Artemia Nauplien aber zwischendrin auch Mikrowürmer und Essigälchen - die sind pefekt, wenn gerade ein Artemia-Ansatz erst noch schlüpfen muss.
+Die [Baby](/tank/2025/09/30/tank_babys.html)-Fische bekommen vor allem Lebendfutter, ganz am Anfang Infusorien. Beim Lebendfutter gibt es vor allem Artemia Nauplien aber zwischendrin auch Mikrowürmer und Essigälchen - die sind pefekt, wenn gerade ein Artemia-Ansatz erst noch schlüpfen muss.
 
 Ich bewahre alle Futerarten und Werkzeuge (Siebe, Pipetten, Holzstäbchen) etc. in kleinen Boxen unter dem Regalbrett mit den Nano Cubes. Daneben stehen dann die Ansätze für das Lebendfutter. 
