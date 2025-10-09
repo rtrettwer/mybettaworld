@@ -1,14 +1,14 @@
-{%- assign gallery_dir = include.dir | default: '/assets/' -%}
+{%- assign gallery_dir = include.dir | default: '/assets/image/' -%}
 {%- assign image_exts = "jpg,jpeg,png,gif,webp" | split: "," -%}
 {%- assign gallery_images = "" | split: "" -%}
 {%- for file in site.static_files -%}
   {%- assign ext = file.extname | remove: "." | downcase -%}
-  {%- if image_exts contains ext and file.path contains gallery_dir -%}
+  {%- assign is_thumb = file.path contains '_thumbnail.' -%}
+  {%- if image_exts contains ext and file.path contains gallery_dir and is_thumb -%}
     {%- assign gallery_images = gallery_images | push: file -%}
   {%- endif -%}
 {%- endfor -%}
 {%- assign gallery_images = gallery_images | sort: "path" -%}
-{%- assign gallery_meta = site.data.gallery | default: [] -%}
 
 <style>
     /* Final-Tiles/Masonry Grid */
@@ -157,14 +157,17 @@
 
 <div id="gallery" class="ftg-grid" data-row="10" data-gap="12">
   {%- for file in gallery_images -%}
-    {%- assign meta = gallery_meta | where: "path", file.path | first -%}
+    {%- assign original_path = file.path | replace: '_thumbnail', '' -%}
+    {%- assign original_exists = false -%}
+    {%- for f in site.static_files -%}
+      {%- if f.path == original_path -%}
+        {%- assign original_exists = true -%}
+      {%- endif -%}
+    {%- endfor -%}
     <a class="ftg-item"
-       href="{{ file.path | relative_url }}"
-       data-index="{{ forloop.index0 }}"
-       data-title="{{ meta.title | default: '' | escape }}"
-       data-caption="{{ meta.caption | default: '' | escape }}"
+       href="{{ original_exists | if: original_path, file.path | relative_url }}"
        onclick="openLightbox(event, {{ forloop.index0 }});">
-        <img src="{{ file.path | replace: '/assets/', '/assets/thumbnails/' | relative_url }}" data-full="{{ file.path | relative_url }}" alt="Bild" loading="lazy">
+        <img src="{{ file.path | relative_url }}" data-full="{{ original_exists | if: original_path, file.path | relative_url }}" alt="Bild" loading="lazy">
     </a>
   {%- endfor -%}
 </div>
