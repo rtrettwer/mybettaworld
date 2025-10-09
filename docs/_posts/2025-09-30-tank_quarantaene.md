@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [tank, betta, kampffisch, walstad, quarantäne, krank]
 excerpt: "Ein separates Becken zur Quarantäne und Behandlung."
-image: /assets/tanks/quarantine/quarantine.webp
+image: /assets/images/tanks/quarantine/quarantine.webp
 dimensions: 20x20x20 cm (Dennerle Nano Cube)
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -20,7 +20,7 @@ pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher
 technik: 
 heizung: Heizstab auf 26°C
 besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund
-gallery_dir: /assets/tanks/quarantine
+gallery_dir: /assets/images/tanks/quarantine
 entwicklung:
   - datum: 19.09.2025
     ereignis: Paarung Sir Pryce und Sonnenschein

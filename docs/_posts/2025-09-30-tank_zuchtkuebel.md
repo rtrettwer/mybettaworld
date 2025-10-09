@@ -5,7 +5,7 @@ date:   2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [tank, betta, kampffisch, walstad, zucht]
 excerpt: "Ein Plastik-Kübel für die Zucht von Bettas."
-image: /assets/tanks/breeding/breeding.webp
+image: /assets/images/tanks/breeding/breeding.webp
 dimensions: 30x30x30 cm
 fassungsvermoegen: 40L
 water_type: Süßwasser
@@ -35,7 +35,7 @@ entwicklung:
     ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter 
 entwicklung_text: |
   Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
-gallery_dir: /assets/tanks/breeding
+gallery_dir: /assets/images/tanks/breeding
 ---
 
 

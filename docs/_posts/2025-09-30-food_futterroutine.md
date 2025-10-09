@@ -5,8 +5,8 @@ date:   2025-09-30 11:06:51 +0200
 categories: [food]
 tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano, futter, lebendfutter]
 excerpt: "Lebendfutter - Mikrowürmer"
-image: /assets/food/organization_food_tools.webp
-gallery_dir: /assets/food
+image: /assets/images/food/organization_food_tools.webp
+gallery_dir: /assets/images/food
 ---
 
 

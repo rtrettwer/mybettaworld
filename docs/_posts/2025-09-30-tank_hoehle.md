@@ -5,7 +5,7 @@ date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, höhle ]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
-image: /assets/tanks/cave/cave.webp
+image: /assets/images/tanks/cave/cave.webp
 dimensions: 30x20x20 cm
 water_type: Süßwasser
 filter: Nein
@@ -19,7 +19,7 @@ pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
 heizung: Heizstab
 besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett!
-gallery_dir: /assets/tanks/cave
+gallery_dir: /assets/images/tanks/cave
 entwicklung:
   - datum: 11.07.2025
     ereignis: Start

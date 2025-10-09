@@ -5,8 +5,8 @@ date:   2025-09-30 11:06:51 +0200
 categories: [food]
 tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano]
 excerpt: "Mikrowürmer sind ein beliebtes Lebendfutter für die Aufzucht von Jungfischen, da sie sehr klein, nahrhaft und einfach zu züchten sind."
-image: /assets/food/mikrowuermer/mikrowuermer_staebchen.webp
-gallery_dir: /assets/food/mikrowuermer
+image: /assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp
+gallery_dir: /assets/images/food/mikrowuermer
 
 ---
 

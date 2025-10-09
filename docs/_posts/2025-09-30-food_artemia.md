@@ -5,8 +5,8 @@ date:   2025-09-30 11:06:51 +0200
 categories: [food]
 tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano]
 excerpt: "Artemia sind kleine Salinenkrebse, die als nahrhaftes Lebendfutter für Jungfische und ausgewachsene Bettas dienen. Sie fördern Wachstum und Gesundheit im Aquarium."
-image: /assets/food/artemia/artemia_incubator.webp
-gallery_dir: /assets/food/artemia
+image: /assets/images/food/artemia/artemia_incubator.webp
+gallery_dir: /assets/images/food/artemia
 
 ---
 

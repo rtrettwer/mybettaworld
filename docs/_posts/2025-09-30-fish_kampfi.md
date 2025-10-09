@@ -5,14 +5,14 @@ date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, kampfi, fisch]
 excerpt: "Kampfi ist mein erster Betta und der Namensgeber dieser Kategorie. Hier teile ich seine Geschichte."
-image: /assets/fish/kampfi/P5211280.webp
+image: /assets/images/fish/kampfi/P5211280.webp
 fish_name: Kampfi
 fish_birth: Januar 2025
 fish_price: 36 €
 fish_type: Betta plakat
 fish_color: Hellboy red, marbled
 fish_gender: Männlich
-gallery_dir: /assets/fish/kampfi
+gallery_dir: /assets/images/fish/kampfi
 ---
 
 
