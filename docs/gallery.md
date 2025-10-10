@@ -1,5 +1,6 @@
 ---
 layout: gallery_wide
+title: "Galerie"
 permalink: /gallery/
 gallery_dir: /assets/images
 ---

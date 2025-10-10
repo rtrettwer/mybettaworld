@@ -1,165 +1,116 @@
-// Gallery Component Styles
+// Gallery Component Styles - Sauberes Masonry Layout ohne Überschneidungen
 .db-gallery {
   margin: 2rem 0;
 }
 
 .db-gallery-grid {
-  display: grid;
-  grid-auto-rows: 8px;
-  gap: 8px;
+  columns: 3;
+  column-gap: 15px;
+  column-fill: balance;
   margin: 1rem 0;
 
-  // Mobile: 4 Spalten (mehr als vorher)
-  grid-template-columns: repeat(4, 1fr);
-
   @media (min-width: 480px) {
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
+    columns: 4;
+    column-gap: 15px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(8, 1fr);
-    gap: 12px;
+    columns: 5;
+    column-gap: 15px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(10, 1fr);
-    gap: 14px;
+    columns: 6;
+    column-gap: 15px;
   }
 
   @media (min-width: 1200px) {
-    grid-template-columns: repeat(12, 1fr);
-    gap: 16px;
+    columns: 7;
+    column-gap: 15px;
   }
 
   @media (min-width: 1400px) {
-    grid-template-columns: repeat(14, 1fr);
-    gap: 18px;
+    columns: 8;
+    column-gap: 15px;
   }
 
   @media (min-width: 1600px) {
-    grid-template-columns: repeat(16, 1fr);
-    gap: 20px;
+    columns: 9;
+    column-gap: 15px;
   }
 
   @media (min-width: 1920px) {
-    grid-template-columns: repeat(18, 1fr);
-    gap: 22px;
+    columns: 10;
+    column-gap: 15px;
   }
 }
 
 .db-gallery-item {
-  margin: 0;
+  display: inline-block;
+  width: 100%;
+  margin: 0 0 15px 0; // Einheitlicher Abstand für alle Bilder
   padding: 0;
   border: none;
   background: none;
   position: relative;
+  break-inside: avoid;
+  box-sizing: border-box;
 
-  // Kleinere Basis-Größen für mehr Dichte
-  // Sehr kleine Bilder (1 Spalte)
-  &:nth-child(20n+1),
-  &:nth-child(20n+7),
-  &:nth-child(20n+13),
-  &:nth-child(20n+17) {
-    grid-column: span 1;
+  // Entferne alle komplexen nth-child Variationen
+  // Nur sehr subtile, sichere Größenvariationen
+  &:nth-child(8n+3) {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px; // Gleicher Abstand
   }
 
-  // Kleine Bilder (2 Spalten)
-  &:nth-child(20n+2),
-  &:nth-child(20n+6),
-  &:nth-child(20n+9),
-  &:nth-child(20n+11),
-  &:nth-child(20n+15),
-  &:nth-child(20n+19) {
-    grid-column: span 2;
+  &:nth-child(12n+7) {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px; // Gleicher Abstand
   }
 
-  // Mittlere Bilder (3 Spalten)
-  &:nth-child(20n+3),
-  &:nth-child(20n+8),
-  &:nth-child(20n+12),
-  &:nth-child(20n+16) {
-    grid-column: span 3;
+  &:nth-child(16n+11) {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px; // Gleicher Abstand
+  }
+}
 
-    @media (max-width: 1023px) {
-      grid-column: span 2;
-    }
+// Kompakte Post-Galerien - völlig einheitlich
+.post-content .db-gallery-grid {
+  columns: 2;
+  column-gap: 12px;
 
-    @media (max-width: 767px) {
-      grid-column: span 2;
-    }
+  @media (min-width: 480px) {
+    columns: 3;
+    column-gap: 12px;
   }
 
-  // Große Bilder (4 Spalten)
-  &:nth-child(20n+4),
-  &:nth-child(20n+10),
-  &:nth-child(20n+18) {
-    grid-column: span 4;
-
-    @media (max-width: 1199px) {
-      grid-column: span 3;
-    }
-
-    @media (max-width: 1023px) {
-      grid-column: span 2;
-    }
-
-    @media (max-width: 767px) {
-      grid-column: span 3;
-    }
+  @media (min-width: 768px) {
+    columns: 4;
+    column-gap: 12px;
   }
 
-  // Extra große Bilder (5 Spalten)
-  &:nth-child(20n+5),
-  &:nth-child(20n+14) {
-    grid-column: span 5;
-
-    @media (max-width: 1399px) {
-      grid-column: span 4;
-    }
-
-    @media (max-width: 1199px) {
-      grid-column: span 3;
-    }
-
-    @media (max-width: 1023px) {
-      grid-column: span 3;
-    }
-
-    @media (max-width: 767px) {
-      grid-column: span 3;
-    }
+  @media (min-width: 1024px) {
+    columns: 4;
+    column-gap: 12px;
   }
 
-  // Sehr breite Bilder (6 Spalten)
-  &:nth-child(30n+20) {
-    grid-column: span 6;
-
-    @media (max-width: 1599px) {
-      grid-column: span 5;
-    }
-
-    @media (max-width: 1399px) {
-      grid-column: span 4;
-    }
-
-    @media (max-width: 1199px) {
-      grid-column: span 3;
-    }
-
-    @media (max-width: 1023px) {
-      grid-column: span 3;
-    }
-
-    @media (max-width: 767px) {
-      grid-column: span 4;
-    }
+  @media (min-width: 1200px) {
+    columns: 5;
+    column-gap: 12px;
   }
+}
 
-  // Default für alle anderen
-  &:not(:nth-child(20n+1)):not(:nth-child(20n+2)):not(:nth-child(20n+3)):not(:nth-child(20n+4)):not(:nth-child(20n+5)):not(:nth-child(20n+6)):not(:nth-child(20n+7)):not(:nth-child(20n+8)):not(:nth-child(20n+9)):not(:nth-child(20n+10)):not(:nth-child(20n+11)):not(:nth-child(20n+12)):not(:nth-child(20n+13)):not(:nth-child(20n+14)):not(:nth-child(20n+15)):not(:nth-child(20n+16)):not(:nth-child(20n+17)):not(:nth-child(20n+18)):not(:nth-child(20n+19)):not(:nth-child(30n+20)) {
-    grid-column: span 2;
-  }
+.post-content .db-gallery-item {
+  width: 100% !important; // Überschreibe alle Variationen
+  margin: 0 0 12px 0 !important; // Einheitlicher Abstand
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 .db-gallery-button {
@@ -169,7 +120,7 @@
   border: none;
   background: none;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   position: relative;
@@ -191,21 +142,26 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 12px;
+  border-radius: 8px;
   transition: transform 0.3s ease;
   object-fit: cover;
 }
 
 .db-gallery-thumb-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+  color: white;
   font-size: 0.75rem;
-  color: #666;
-  margin-top: 0.8rem;
+  padding: 1rem 0.5rem 0.5rem;
   text-align: center;
-  line-height: 1.4;
-  padding: 0 0.5rem;
+  line-height: 1.3;
   font-weight: 500;
-  opacity: 0.8;
+  opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 0 0 8px 8px;
 }
 
 .db-gallery-item:hover .db-gallery-thumb-caption {
