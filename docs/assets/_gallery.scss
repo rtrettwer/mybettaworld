@@ -159,14 +159,13 @@
   text-align: center;
   line-height: 1.3;
   font-weight: 500;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  opacity: 0; // Captions sind in der Galerie immer unsichtbar
+  transition: none; // Keine Transition um Aufblitzen zu vermeiden
   border-radius: 0 0 8px 8px;
+  pointer-events: none; // Verhindert ungewollte Interaktionen
 }
 
-.db-gallery-item:hover .db-gallery-thumb-caption {
-  opacity: 1;
-}
+// Hover-Effekt für Captions komplett entfernt - Captions nur in Lightbox sichtbar
 
 // Lightbox Styles
 .db-gallery-lightbox {
