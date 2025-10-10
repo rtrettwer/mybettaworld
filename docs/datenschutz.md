@@ -5,8 +5,6 @@ permalink: /datenschutz/
 ---
 
 <div style="margin: 2rem 0;">
-  <h1>Datenschutzerklärung</h1>
-  
   <div style="margin: 2rem 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
     
     <h2>1. Datenschutz auf einen Blick</h2>

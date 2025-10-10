@@ -12,8 +12,6 @@ email: "rike@trettwer.de"
 ---
 
 <div style="margin: 2rem 0;">
-  <h1>Impressum</h1>
-  
   <div style="margin: 2rem 0; text-align: left; max-width: 800px; margin-left: auto; margin-right: auto;">
     
     <h2>Angaben gemäß § 5 TMG</h2>
