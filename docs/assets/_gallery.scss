@@ -1,115 +1,68 @@
-// Gallery Component Styles - Dynamic Grid mit besseren Defaults
+// Gallery Component Styles - Modernes, rasterauflösendes Grid
 .db-gallery {
   margin: 2rem 0;
 }
 
 .db-gallery-grid {
   display: grid;
-  gap: 15px;
+  gap: 10px;
+  grid-template-columns: repeat(10, 1fr);
+  grid-auto-rows: 100px;
+  grid-auto-flow: dense;
   margin: 1rem 0;
 
-  // Bessere Standard-Spaltenanzahl abhängig von Bildschirmgröße
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  grid-auto-rows: minmax(150px, auto);
-
-  @media (min-width: 480px) {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    grid-auto-rows: minmax(160px, auto);
+  @media (max-width: 1200px) {
+    grid-template-columns: repeat(6, 1fr);
+    grid-auto-rows: 80px;
   }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    grid-auto-rows: minmax(180px, auto);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-auto-rows: minmax(200px, auto);
-  }
-
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    grid-auto-rows: minmax(220px, auto);
-  }
-
-  @media (min-width: 1400px) {
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    grid-auto-rows: minmax(240px, auto);
-  }
-
-  @media (min-width: 1600px) {
-    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-    grid-auto-rows: minmax(260px, auto);
-  }
-
-  @media (min-width: 1920px) {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    grid-auto-rows: minmax(280px, auto);
+  @media (max-width: 700px) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 60px;
   }
 }
 
 .db-gallery-item {
   display: block;
-  margin: 0;
-  padding: 0;
-  border: none;
-  background: none;
   position: relative;
   overflow: hidden;
   border-radius: 8px;
+  margin: 0;
+  padding: 0;
+  background: none;
+  border: none;
 
-  // Subtile Größenvariationen für interessanteres Layout
-  &:nth-child(7n+3) {
+  // Standard: quadratisch
+  grid-column: span 2;
+  grid-row: span 2;
+
+  // Pattern für 10er-Gruppen, damit jede Zeile voll ist:
+  &:nth-child(10n+1) { grid-column: span 4; grid-row: span 2; }
+  &:nth-child(10n+2) { grid-column: span 2; grid-row: span 2; }
+  &:nth-child(10n+3) { grid-column: span 2; grid-row: span 4; }
+  &:nth-child(10n+4) { grid-column: span 2; grid-row: span 2; }
+  &:nth-child(10n+5) { grid-column: span 3; grid-row: span 2; }
+  &:nth-child(10n+6) { grid-column: span 3; grid-row: span 2; }
+  &:nth-child(10n+7) { grid-column: span 2; grid-row: span 2; }
+  &:nth-child(10n+8) { grid-column: span 2; grid-row: span 2; }
+  &:nth-child(10n+9) { grid-column: span 2; grid-row: span 2; }
+  &:nth-child(10n+10) { grid-column: span 1; grid-row: span 2; }
+
+  @media (max-width: 1200px) {
     grid-column: span 2;
-
-    // Auf kleineren Bildschirmen normal
-    @media (max-width: 1024px) {
-      grid-column: span 1;
-    }
-  }
-
-  &:nth-child(11n+5) {
     grid-row: span 2;
-
-    // Auf kleineren Bildschirmen normal
-    @media (max-width: 768px) {
-      grid-row: span 1;
-    }
+    &:nth-child(6n+1) { grid-column: span 3; grid-row: span 2; }
+    &:nth-child(6n+2) { grid-column: span 2; grid-row: span 3; }
+    &:nth-child(6n+3) { grid-column: span 1; grid-row: span 2; }
+    &:nth-child(6n+4) { grid-column: span 2; grid-row: span 2; }
+    &:nth-child(6n+5) { grid-column: span 2; grid-row: span 2; }
+    &:nth-child(6n+6) { grid-column: span 1; grid-row: span 2; }
   }
-
-  &:nth-child(13n+8) {
+  @media (max-width: 700px) {
     grid-column: span 2;
     grid-row: span 2;
-
-    // Auf kleineren Bildschirmen reduzieren
-    @media (max-width: 1024px) {
-      grid-column: span 1;
-      grid-row: span 1;
-    }
+    &:nth-child(2n+1) { grid-column: span 2; grid-row: span 2; }
+    &:nth-child(2n+2) { grid-column: span 2; grid-row: span 2; }
   }
-}
-
-// Post-Galerien bleiben einfach
-.post-content .db-gallery-grid {
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 12px;
-  grid-auto-rows: minmax(180px, auto);
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 10px;
-  }
-
-  @media (max-width: 480px) {
-    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-    gap: 8px;
-  }
-}
-
-.post-content .db-gallery-item {
-  // Keine Spans in Post-Galerien
-  grid-column: span 1 !important;
-  grid-row: span 1 !important;
 }
 
 .db-gallery-button {
@@ -141,10 +94,10 @@
 .db-gallery-thumb {
   width: 100%;
   height: 100%;
+  object-fit: cover;
   display: block;
   border-radius: 8px;
   transition: transform 0.3s ease;
-  object-fit: cover;
 }
 
 .db-gallery-thumb-caption {
