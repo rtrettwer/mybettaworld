@@ -1,7 +1,7 @@
 @import './variables';
 
 .site-header {
-  background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%);
+  background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);
   position: relative;
   z-index: 1000; // Stelle sicher, dass der Header über anderen Elementen liegt
 
@@ -18,15 +18,15 @@
     transition: color 0.2s;
 
     &:hover {
-      color: $theme-green !important;
+      color: $link-color !important;
     }
   }
 
   .site-title:hover {
-    color: $theme-green !important;
+    color: $link-color !important;
   }
   .menu-icon svg path {
-    fill: $theme-blue !important;
+    fill: $theme-primary-2 !important;
   }
 }
 
@@ -49,7 +49,7 @@
       //position: absolute !important;
       //top: 100% !important;
       //right: 0 !important;
-      background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%) !important;
+      background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%) !important;
       border: 1px solid rgba(255, 255, 255, 0.2) !important;
       border-radius: 8px !important;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
@@ -140,9 +140,9 @@
 
 // Explizite Hover-Regeln für Navigation - höchste Spezifität
 .site-header .site-nav a.page-link:hover {
-  color: $theme-green !important;
+  color: $theme-primary-1 !important;
 }
 
 .site-header .site-nav .page-link:hover {
-  color: $theme-green !important;
+  color: $theme-primary-1 !important;
 }

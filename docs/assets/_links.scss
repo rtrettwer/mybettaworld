@@ -1,19 +1,19 @@
 // Globale Link-Styles für die gesamte Website
-// Verwendet das Theme-Grün für konsistente Farbgebung
+// Verwendet die Link-Color Variable für konsistente Farbgebung
 
 // Standard-Links in Posts und Content-Bereichen
 a {
-  color: $theme-green;
+  color: $link-color;
   text-decoration: underline;
   transition: all 0.2s ease;
 
   &:hover {
-    color: darken($theme-green, 15%);
+    color: $link-hover-color;
     text-decoration: underline;
   }
 
   &:visited {
-    color: darken($theme-green, 10%);
+    color: darken($link-color, 10%);
   }
 }
 
@@ -27,7 +27,7 @@ a {
       transition: color 0.2s ease;
 
       &:hover {
-        color: $theme-green !important;
+        color: $link-color !important;
         text-decoration: none;
       }
 
@@ -43,7 +43,7 @@ a {
       transition: color 0.2s ease;
 
       &:hover {
-        color: $theme-green !important;
+        color: $link-color !important;
         text-decoration: none;
       }
 
@@ -59,7 +59,7 @@ a {
     text-decoration: none;
 
     &:hover {
-      color: $theme-green !important;
+      color: $link-color !important;
       text-decoration: none;
     }
 
@@ -77,7 +77,7 @@ a {
     transition: color 0.2s ease;
 
     &:hover {
-      color: $theme-green !important;
+      color: $link-color !important;
       text-decoration: none;
     }
 
@@ -93,7 +93,7 @@ a {
     transition: color 0.2s ease;
 
     &:hover {
-      color: $theme-green !important;
+      color: $link-color !important;
       text-decoration: none;
     }
 
@@ -104,22 +104,22 @@ a {
 
   // Explizite Footer-Hover-Regeln - höchste Spezifität
   a:hover {
-    color: $theme-green !important;
+    color: $link-color !important;
   }
 
   .footer-legal-links a:hover {
-    color: $theme-green !important;
+    color: $link-color !important;
   }
 }
 
-// Post-Links - normale Sichtbarkeit mit grüner Farbe
+// Post-Links - normale Sichtbarkeit mit Link-Farbe
 .post-content {
   a {
-    color: $theme-green;
+    color: $link-color;
     text-decoration: underline;
 
     &:hover {
-      color: darken($theme-green, 15%);
+      color: $link-hover-color;
     }
   }
 }
@@ -127,11 +127,11 @@ a {
 // Page-Content Links (für Impressum, Datenschutz etc.)
 .page-content {
   a {
-    color: $theme-green;
+    color: $link-color;
     text-decoration: underline;
 
     &:hover {
-      color: darken($theme-green, 15%);
+      color: $link-hover-color;
     }
   }
 }
@@ -139,11 +139,11 @@ a {
 // Blog-Post-Preview Links auf der Homepage
 .post-list {
   .post-link {
-    color: $theme-green;
+    color: $link-color;
     text-decoration: none;
 
     &:hover {
-      color: darken($theme-green, 15%);
+      color: $link-hover-color;
       text-decoration: underline;
     }
   }
@@ -152,26 +152,26 @@ a {
 // Tag-Links auf der Blog-Seite
 .post-tags {
   .tag {
-    color: $theme-green !important;
+    color: $link-color !important;
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: darken($theme-green, 15%) !important;
+      color: $link-hover-color !important;
       text-decoration: underline;
     }
 
     &:visited {
-      color: $theme-green !important;
+      color: $link-color !important;
     }
   }
 
   a.tag {
-    color: $theme-green !important;
+    color: $link-color !important;
     text-decoration: none;
 
     &:hover {
-      color: darken($theme-green, 15%) !important;
+      color: $link-hover-color !important;
       text-decoration: underline;
     }
   }
