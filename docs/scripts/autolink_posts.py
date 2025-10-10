@@ -19,8 +19,8 @@ def load_links(yaml_file):
 
 def target_url_for_file(md_filename):
     """
-    Rückgabe: Webpfad für diesen Post im Format /fish/2025/09/30/fish_bandit.html
-    Annahme: Standard Jekyll/Blog-Layout yyyy-mm-dd-title.md --> /ordner/jjjj/mm/tt/titel.html
+    Rückgabe: Webpfad für diesen Post im Jekyll-Format /fish/2025/09/30/fish_bandit/
+    Jekyll erstellt URLs ohne .html Endung
     """
     base = os.path.basename(md_filename)
     # z.B. 2025-09-30-fish_bandit.md
@@ -29,15 +29,13 @@ def target_url_for_file(md_filename):
         raise ValueError(f"Ungültiges Dateiformat: {md_filename}")
     year, month, day, slug = m.groups()
     # Ordner-Struktur und Präfix individuell anpassbar!
-    # Du hast: /fish/yyyy/mm/dd/fish_bandit.html oder /tank/yyyy/mm/dd/tank_babys.html usw.
+    # Du hast: /fish/yyyy/mm/dd/fish_bandit/ oder /tank/yyyy/mm/dd/tank_babys/ usw.
     # Dafür bestimmen wir aus dem Slug den Unterordner ("fish", "tank" etc.)
-    # Gehe davon aus: Das erste "_", das nach dem Datum kommt!
     if "_" in slug:
         folder = slug.split("_")[0]
     else:
         folder = slug
-    htmlfile = slug + ".html"
-    url = f"/{folder}/{year}/{month}/{day}/{htmlfile}"
+    url = f"/{folder}/{year}/{month}/{day}/{slug}/"
     return url
 
 def get_own_key_for_file(md_filename, url2key):

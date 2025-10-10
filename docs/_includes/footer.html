@@ -1,83 +1,18 @@
-<footer class="site-footer h-card" style="background: #000; color: #fff; padding: 0.6em 0;">
-  <style>
-    .site-footer .footer-heading {
-      color: #fff !important;
-      transition: none;
-      cursor: default;
-    }
-    .site-footer .footer-col a,
-    .site-footer .footer-col-2 a,
-    .site-footer .footer-col-3 a {
-      color: #fff !important;
-      transition: color 0.2s;
-    }
-    .site-footer .footer-col a:hover,
-    .site-footer .footer-col-2 a:hover,
-    .site-footer .footer-col-3 a:hover,
-    .site-footer .footer-col a:focus,
-    .site-footer .footer-col-2 a:focus,
-    .site-footer .footer-col-3 a:focus {
-      color: #b3c6ff !important;
-    }
-    .site-footer .footer-description {
-      color: #bbb !important;
-    }
-    .site-footer .footer-logo-circle {
-      background: #fff;
-      border-radius: 50%;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      width: 2.4em;
-      height: 2.4em;
-      min-width: 2.4em;
-      min-height: 2.4em;
-      max-width: 2.4em;
-      max-height: 2.4em;
-      margin-right: 0.5em;
-      flex-shrink: 0;
-      box-sizing: border-box;
-      overflow: hidden;
-    }
-    .site-footer .footer-logo-circle img {
-      height: 80%;
-      width: 80%;
-      min-width: 0;
-      min-height: 0;
-      max-width: 100%;
-      max-height: 100%;
-      display: block;
-      border-radius: 0;
-      object-fit: contain;
-      object-position: center;
-    }
-    @media (max-width: 600px) {
-      .site-footer .footer-col-wrapper {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1em;
-      }
-      .site-footer .footer-logo-circle {
-        margin-bottom: 0.5em;
-      }
-    }
-  </style>
-  <data class="u-url" href="{{ "/" | relative_url }}"></data>
-
-  <div class="wrapper" style="max-width: 700px;">
-    <div class="footer-col-wrapper" style="display: flex; align-items: center; gap: 2em;">
-      <div style="display: flex; flex-direction: column; justify-content: center;">
+<footer class="site-footer h-card">
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <div>
         <span style="display: flex; align-items: center; gap: 0.5em;">
           <span class="footer-logo-circle">
-            <img src="/assets/images/misc/icon.webp" alt="Logo">
+            <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="Logo">
           </span>
-          <h2 class="footer-heading" style="margin: 0; font-size: 1.1em; font-weight: 600; color: #fff; display: inline;">
+          <span class="footer-heading">
             {{ site.title | escape }}
-          </h2>
+          </span>
         </span>
       </div>
-      <div class="footer-col footer-col-3" style="margin: 0;">
-        <p class="footer-description" style="margin: 0;">{{- site.description | escape -}}</p>
+      <div class="footer-col footer-col-3">
+        <p class="footer-description">{{- site.description | escape -}}</p>
       </div>
     </div>
   </div>

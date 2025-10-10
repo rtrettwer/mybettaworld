@@ -17,9 +17,9 @@ gallery_dir: /assets/images/fish/shadow
 
 
 
-Shadow ist eine richtige kleine Schönheit. Mit ihren Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove.html)-Becken war sie dauergestresst und hatte
+Shadow ist eine richtige kleine Schönheit. Mit ihren Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove/)-Becken war sie dauergestresst und hatte
 Stressstreifen.
-Sie lebt bei [Kampfi](/fish/2025/09/30/fish_kampfi.html) im [Dschungel](/tank/2025/09/30/tank_dschungel.html)-Becken - und da scheint es ihr richtig gut zu gehen. Sie hat eine wunderschöne Färbung.
+Sie lebt bei [Kampfi](/fish/2025/09/30/fish_kampfi/) im [Dschungel](/tank/2025/09/30/tank_dschungel/)-Becken - und da scheint es ihr richtig gut zu gehen. Sie hat eine wunderschöne Färbung.
 Sie versteckt sich schon viel, was mit ihrer dunklen Grundfarbe gut geht. Aber sie hat auch gelegentlich ihren Spaß
-daran, [Kampfi](/fish/2025/09/30/fish_kampfi.html) Paroli zu bieten oder ihm hinterherzuschwimmen.
+daran, [Kampfi](/fish/2025/09/30/fish_kampfi/) Paroli zu bieten oder ihm hinterherzuschwimmen.
 Ich denke, die beiden kommen gut miteinander klar. Er ist ja ein sehr lieber und für seine Art friedlicher Fisch.

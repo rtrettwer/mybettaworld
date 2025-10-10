@@ -1,0 +1,78 @@
+// Footer Styles
+.site-footer {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 0.6em 0 !important;
+
+  .footer-heading {
+    color: #fff !important;
+    transition: none;
+    cursor: default;
+  }
+
+  .footer-col a,
+  .footer-col-2 a,
+  .footer-col-3 a {
+    color: #fff !important;
+    transition: color 0.2s;
+
+    &:hover,
+    &:focus {
+      color: #b3c6ff !important;
+    }
+  }
+
+  .footer-description {
+    color: #bbb !important;
+  }
+
+  .footer-logo-circle {
+    background: #fff;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.4em;
+    height: 2.4em;
+    min-width: 2.4em;
+    min-height: 2.4em;
+    max-width: 2.4em;
+    max-height: 2.4em;
+    margin-right: 0.5em;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    img {
+      height: 80%;
+      width: 80%;
+      min-width: 0;
+      min-height: 0;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      border-radius: 0;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+
+  .footer-col-wrapper {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+  }
+
+  @media (max-width: 600px) {
+    .footer-col-wrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1em;
+    }
+
+    .footer-logo-circle {
+      margin-bottom: 0.5em;
+    }
+  }
+}
