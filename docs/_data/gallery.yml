@@ -1,9 +1,434 @@
-- path: /assets/fish/bandit/IMG_20250716_171631.webp
+# Galerie-Metadaten für alle Bilder in /assets/images
+# Die Captions werden als Alt-Text für die Bilder verwendet
+
+# Fisch-Bilder - Allgemein
+- path: /assets/images/fish/IMG_20250801_152554.webp
+  title: Betta Splendens
+  caption: Wunderschöner Kampffisch in seinem natürlichen Verhalten
+
+# Bandit (Betta Splendens)
+- path: /assets/images/fish/bandit/IMG_20250712_063319.webp
+  title: Bandit am Morgen
+  caption: Bandit zeigt seine schönen Farben im Morgenlicht
+- path: /assets/images/fish/bandit/IMG_20250716_155618.webp
+  title: Bandit im Aquarium
+  caption: Bandit schwimmt entspannt durch sein Zuhause
+- path: /assets/images/fish/bandit/IMG_20250716_171631.webp
   title: Ein Eimer für Bandit
   caption: Hier sieht man wunderbar die schönen grün-blauen Glanzschuppen auf Bandits Rücken.
-- path: /assets/fish/bandit/IMG_20250716_171652.webp
+- path: /assets/images/fish/bandit/IMG_20250716_171652.webp
   title: Ein Eimer für Bandit
   caption: Die tollen Farben in den Schuppen sieht man nicht in jedem Licht. Es sieht aus als hätte er eine kleine Galaxie auf dem Rücken.
-- path: /assets/fish/bandit/IMG_20250725_180445.webp
+- path: /assets/images/fish/bandit/IMG_20250716_171657.webp
+  title: Bandits Farbenpracht
+  caption: Detailaufnahme von Bandits einzigartigen Schuppenmustern
+- path: /assets/images/fish/bandit/IMG_20250725_180445.webp
   title: Höhle
   caption: Bandit schwimmt gerade aus der großen Höhlenöffnung des Höhlenbeckens heraus. Er schwimmt dort mehrmals täglich rein und raus.
+- path: /assets/images/fish/bandit/IMG_20250725_182706.webp
+  title: Bandit erkundet
+  caption: Bandit auf Erkundungstour in seinem Aquarium
+- path: /assets/images/fish/bandit/IMG_20250725_182819.webp
+  title: Bandit Portrait
+  caption: Nahaufnahme von Bandits ausdrucksvollem Gesicht
+- path: /assets/images/fish/bandit/IMG_20250725_182905.webp
+  title: Bandit zeigt seine Flossen
+  caption: Bandit präsentiert stolz seine prächtigen Flossen
+- path: /assets/images/fish/bandit/IMG_20250725_182936.webp
+  title: Bandit in Aktion
+  caption: Bandit in typischer Kampffisch-Pose mit gespreizten Flossen
+- path: /assets/images/fish/bandit/IMG_20250806_113139.webp
+  title: Bandit am Vormittag
+  caption: Bandit bei seinem morgendlichen Schwimmrunde
+- path: /assets/images/fish/bandit/IMG_20250806_113333.webp
+  title: Bandit im Detail
+  caption: Detailierte Aufnahme von Bandits charakteristischen Merkmalen
+- path: /assets/images/fish/bandit/IMG_20250806_113342.webp
+  title: Bandits Eleganz
+  caption: Bandit zeigt seine natürliche Eleganz beim Schwimmen
+- path: /assets/images/fish/bandit/IMG_20250806_113343.webp
+  title: Bandit Profile
+  caption: Seitenprofil von Bandit mit seinen markanten Flossen
+- path: /assets/images/fish/bandit/IMG_20250912_110538.webp
+  title: Bandit im September
+  caption: Bandit hat sich prächtig entwickelt
+- path: /assets/images/fish/bandit/IMG_20250912_110539.webp
+  title: Bandits Wachstum
+  caption: Bandit zeigt sein Wachstum und seine Farbentwicklung
+- path: /assets/images/fish/bandit/IMG_20250928_101601.webp
+  title: Bandit Ende September
+  caption: Bandit in seiner vollen Pracht im Herbst
+- path: /assets/images/fish/bandit/IMG_20250928_101603.webp
+  title: Bandits Farbspiel
+  caption: Die Farben von Bandit im wechselnden Licht
+- path: /assets/images/fish/bandit/IMG_20250928_101707.webp
+  title: Bandit aktiv
+  caption: Bandit bei einer seiner aktiven Phasen
+- path: /assets/images/fish/bandit/IMG_20250928_101711_1.webp
+  title: Bandit Detail
+  caption: Detailaufnahme von Bandits prächtigen Farben
+- path: /assets/images/fish/bandit/bandit.webp
+  title: Bandit Porträt
+  caption: Offizielles Porträt von Bandit, dem charakterstarken Kampffisch
+
+# Kampfi (Betta Splendens)
+- path: /assets/images/fish/kampfi/IMG_20250403_202229.webp
+  title: Kampfi im April
+  caption: Kampfi zeigt seine charakteristische Haltung
+- path: /assets/images/fish/kampfi/IMG_20250404_075049.webp
+  title: Kampfi am Morgen
+  caption: Kampfi bei seiner morgendlichen Routine
+- path: /assets/images/fish/kampfi/IMG_20250409_191625.webp
+  title: Kampfi am Abend
+  caption: Kampfi in entspannter Abendhaltung
+- path: /assets/images/fish/kampfi/IMG_20250413_181253.webp
+  title: Kampfi Portrait
+  caption: Nahaufnahme von Kampfis markanten Gesichtszügen
+- path: /assets/images/fish/kampfi/IMG_20250413_181309.webp
+  title: Kampfis Flossen
+  caption: Kampfi präsentiert seine beeindruckenden Flossen
+- path: /assets/images/fish/kampfi/IMG_20250413_181330.webp
+  title: Kampfi in Pose
+  caption: Kampfi in einer typischen Kampffisch-Pose
+- path: /assets/images/fish/kampfi/IMG_20250716_165957.webp
+  title: Kampfi im Sommer
+  caption: Kampfi genießt die warmen Sommertage
+- path: /assets/images/fish/kampfi/IMG_20250729_121056.webp
+  title: Kampfi mittags
+  caption: Kampfi während der aktiven Mittagszeit
+- path: /assets/images/fish/kampfi/IMG_20250729_121100.webp
+  title: Kampfis Aktivität
+  caption: Kampfi bei einer seiner Erkundungstouren
+- path: /assets/images/fish/kampfi/IMG_20250828_110822.webp
+  title: Kampfi im August
+  caption: Kampfi zeigt seine Entwicklung im späten Sommer
+- path: /assets/images/fish/kampfi/P5211222.webp
+  title: Kampfi Professionell
+  caption: Professionelle Aufnahme von Kampfi mit optimaler Beleuchtung
+- path: /assets/images/fish/kampfi/P5211225.webp
+  title: Kampfis Details
+  caption: Detailreiche Aufnahme von Kampfis Schuppen und Flossen
+- path: /assets/images/fish/kampfi/P5211262.webp
+  title: Kampfi Studiofoto
+  caption: Kampfi in perfekter Pose für ein Studiofoto
+- path: /assets/images/fish/kampfi/P5211264.webp
+  title: Kampfis Schönheit
+  caption: Kampfi zeigt seine natürliche Schönheit
+- path: /assets/images/fish/kampfi/P5211270.webp
+  title: Kampfi Nahaufnahme
+  caption: Extreme Nahaufnahme von Kampfis einzigartigen Merkmalen
+- path: /assets/images/fish/kampfi/P5211276.webp
+  title: Kampfis Farben
+  caption: Kampfis Farben in ihrer vollen Pracht
+- path: /assets/images/fish/kampfi/P5211280.webp
+  title: Kampfi Seitenprofil
+  caption: Perfektes Seitenprofil von Kampfi
+- path: /assets/images/fish/kampfi/P5211319.webp
+  title: Kampfi Eleganz
+  caption: Kampfi demonstriert seine natürliche Eleganz
+- path: /assets/images/fish/kampfi/P5211330.webp
+  title: Kampfi Finalshot
+  caption: Abschließende Aufnahme von Kampfi in Bestform
+- path: /assets/images/fish/kampfi/Screenshot_2025-04-13-20-46-04-143_com.miui.gallery.webp
+  title: Kampfi Screenshot
+  caption: Kampfi in einem besonderen Moment festgehalten
+- path: /assets/images/fish/kampfi/Screenshot_2025-10-05-13-17-03-050_com.miui.mediaviewer.webp
+  title: Kampfi Digital
+  caption: Digitale Aufnahme von Kampfi in hoher Qualität
+
+# Lila (Betta Splendens)
+- path: /assets/images/fish/lila/IMG_20251008_174149.webp
+  title: Lila Debüt
+  caption: Lilas erste Aufnahme in ihrer neuen Umgebung
+- path: /assets/images/fish/lila/IMG_20251008_174158.webp
+  title: Lila erkundet
+  caption: Lila bei der Erkundung ihres neuen Zuhauses
+- path: /assets/images/fish/lila/IMG_20251008_174322.webp
+  title: Lilas Anmut
+  caption: Lila zeigt ihre natürliche Anmut beim Schwimmen
+- path: /assets/images/fish/lila/IMG_20251008_174413.webp
+  title: Lila Portrait
+  caption: Porträtaufnahme von Lila mit ihren charakteristischen Farben
+- path: /assets/images/fish/lila/IMG_20251008_174420.webp
+  title: Lilas Schönheit
+  caption: Lila präsentiert ihre einzigartige Schönheit
+- path: /assets/images/fish/lila/IMG_20251008_202116.webp
+  title: Lila am Abend
+  caption: Lila in entspannter Abendhaltung
+- path: /assets/images/fish/lila/IMG_20251008_202221.webp
+  title: Lilas Ruhe
+  caption: Lila in einer ruhigen, meditativen Pose
+- path: /assets/images/fish/lila/IMG_20251008_202308.webp
+  title: Lila Details
+  caption: Detailaufnahme von Lilas feinen Flossenzügen
+- path: /assets/images/fish/lila/IMG_20251008_202402.webp
+  title: Lila Finalaufnahme
+  caption: Abschließende Aufnahme von Lila an ihrem ersten Tag
+
+# Shadow (Betta Splendens)
+- path: /assets/images/fish/shadow/shadow.webp
+  title: Shadow Portrait
+  caption: Shadow, der geheimnisvolle dunkle Kampffisch
+
+# Sir Pryce (Betta Splendens)
+- path: /assets/images/fish/sirPryce/IMG_20250912_110422.webp
+  title: Sir Pryce Eleganz
+  caption: Sir Pryce zeigt seine königliche Haltung
+- path: /assets/images/fish/sirPryce/IMG_20250919_173129.webp
+  title: Sir Pryce Portrait
+  caption: Porträt von Sir Pryce in seiner vollen Pracht
+- path: /assets/images/fish/sirPryce/sir_pryce.webp
+  title: Sir Pryce Offiziell
+  caption: Offizielles Portrait von Sir Pryce, dem aristokratischen Kampffisch
+
+# Sonnenschein (Betta Splendens)
+- path: /assets/images/fish/sonnenschein/IMG_20250801_152543.webp
+  title: Sonnenschein Debut
+  caption: Sonnenschein bei ihrer ersten Fotosession
+- path: /assets/images/fish/sonnenschein/IMG_20250828_124904.webp
+  title: Sonnenschein im August
+  caption: Sonnenschein zeigt ihre Entwicklung im späten Sommer
+- path: /assets/images/fish/sonnenschein/IMG_20250828_125027.webp
+  title: Sonnenscheins Anmut
+  caption: Sonnenschein schwimmt anmutig durch ihr Aquarium
+- path: /assets/images/fish/sonnenschein/IMG_20250828_125038.webp
+  title: Sonnenschein Details
+  caption: Detailaufnahme von Sonnenscheins charakteristischen Merkmalen
+- path: /assets/images/fish/sonnenschein/IMG_20250828_125104.webp
+  title: Sonnenscheins Farben
+  caption: Sonnenschein präsentiert ihre wunderschönen Farben
+- path: /assets/images/fish/sonnenschein/IMG_20251001_115231.webp
+  title: Sonnenschein Oktober
+  caption: Sonnenschein in ihrer herbstlichen Pracht
+
+# Futter und Lebendfutter
+- path: /assets/images/food/artemia/artemia_incubator.webp
+  title: Artemia Inkubator
+  caption: Professioneller Artemia-Inkubator für die Aufzucht von Salzwasserkrebschen
+- path: /assets/images/food/essigaelchen/IMG_20251001_124404.webp
+  title: Essigälchen Zucht
+  caption: Essigälchen-Zuchtansatz in der Entwicklung
+- path: /assets/images/food/essigaelchen/essigaelchen.webp
+  title: Essigälchen
+  caption: Lebende Essigälchen als Futter für Jungfische
+- path: /assets/images/food/essigaelchen/essigaelchen_reagenzglaeser.webp
+  title: Essigälchen Reagenzgläser
+  caption: Mehrere Reagenzgläser mit verschiedenen Essigälchen-Kulturen
+- path: /assets/images/food/essigaelchen/essigaelchen_reagenzglas.webp
+  title: Essigälchen Kultur
+  caption: Einzelnes Reagenzglas mit aktiver Essigälchen-Kultur
+- path: /assets/images/food/mikrowuermer/mikrowuermer_deckel.webp
+  title: Mikrowürmer Deckel
+  caption: Belüftungsdeckel für die Mikrowürmer-Zucht
+- path: /assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp
+  title: Mikrowürmer Stäbchen
+  caption: Holzstäbchen mit Mikrowürmern zum Ernten
+- path: /assets/images/food/mikrowuermer/mikrowuermer_wand.webp
+  title: Mikrowürmer an der Wand
+  caption: Mikrowürmer klettern an der Behälterwand hoch
+- path: /assets/images/food/organization_food_tools.webp
+  title: Futter-Organisation
+  caption: Organisierte Sammlung von Fütterungsutensilien und Werkzeugen
+- path: /assets/images/food/wasserfloehe/wasserfloehe.webp
+  title: Wasserflöhe
+  caption: Lebende Wasserflöhe als nahrhaftes Lebendfutter
+
+# Verschiedenes
+- path: /assets/images/misc/IMAGE_79f582fb-66cf-4bab-9483-346401629236.webp
+  title: Aquaristik Moment
+  caption: Spontaner Moment aus dem Aquaristik-Alltag
+- path: /assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp
+  title: Aquarium Szene
+  caption: Atmosphärische Aufnahme aus der Aquaristik
+- path: /assets/images/misc/IMG_20250411_110707.webp
+  title: Setup Frühjahr
+  caption: Aquarium-Setup im Frühjahr 2025
+- path: /assets/images/misc/IMG_20250413_182941.webp
+  title: Abendliches Aquarium
+  caption: Aquarium in der stimmungsvollen Abendbeleuchtung
+- path: /assets/images/misc/IMG_20250725_181014.webp
+  title: Sommer Setup
+  caption: Aquarium-Anlage während der Sommerzeit
+- path: /assets/images/misc/IMG_20250725_181219.webp
+  title: Aquarium Detail
+  caption: Detailaufnahme der Aquarium-Ausstattung
+- path: /assets/images/misc/IMG_20250725_181227.webp
+  title: Equipment
+  caption: Wichtiges Equipment für die Betta-Haltung
+- path: /assets/images/misc/IMG_20250729_085634.webp
+  title: Morgen Setup
+  caption: Aquarium-Setup am frühen Morgen
+- path: /assets/images/misc/IMG_20250729_111625.webp
+  title: Mittags Kontrolle
+  caption: Routinekontrolle der Aquarien zur Mittagszeit
+- path: /assets/images/misc/IMG_20250731_125501.webp
+  title: Wartung
+  caption: Wartungsarbeiten an den Aquarien
+- path: /assets/images/misc/IMG_20250801_152501.webp
+  title: August Setup
+  caption: Aquarium-Konfiguration im August
+- path: /assets/images/misc/IMG_20250801_152505.webp
+  title: Technik Detail
+  caption: Technische Details der Aquarium-Ausstattung
+- path: /assets/images/misc/IMG_20250801_152527.webp
+  title: System Übersicht
+  caption: Übersicht über das gesamte Aquarium-System
+- path: /assets/images/misc/IMG_20250831_203102.webp
+  title: Ende August
+  caption: Aquarium-Status Ende August 2025
+- path: /assets/images/misc/icon.webp
+  title: Website Icon
+  caption: Offizielles Icon der Betta-Website
+
+# Aquarien - Baby Becken
+- path: /assets/images/tanks/babies/IMG_20250912_110435.webp
+  title: Baby Becken September
+  caption: Das Jungfisch-Becken im September mit heranwachsenden Betta-Babys
+- path: /assets/images/tanks/babies/IMG_20250919_152156.webp
+  title: Baby Entwicklung
+  caption: Entwicklungsstand der Jungfische im Baby-Becken
+- path: /assets/images/tanks/babies/IMG_20250919_152205.webp
+  title: Jungfisch Habitat
+  caption: Optimale Umgebung für heranwachsende Betta-Jungfische
+- path: /assets/images/tanks/babies/IMG_20250930_120938.webp
+  title: Baby Becken Ende September
+  caption: Baby-Becken am Ende des Septembers mit gewachsenen Jungfischen
+- path: /assets/images/tanks/babies/IMG_20250930_121115.webp
+  title: Jungfisch Wachstum
+  caption: Deutliches Wachstum der Jungfische im optimierten Becken
+- path: /assets/images/tanks/babies/IMG_20250930_121506.webp
+  title: Baby Setup Detail
+  caption: Detailaufnahme des speziell für Jungfische eingerichteten Beckens
+- path: /assets/images/tanks/babies/IMG_20250930_121522.webp
+  title: Jungfisch Umgebung
+  caption: Perfekt angepasste Umgebung für die Aufzucht von Betta-Jungfischen
+- path: /assets/images/tanks/babies/babies.webp
+  title: Baby Becken Übersicht
+  caption: Komplettansicht des Baby-Beckens für Betta-Nachwuchs
+
+# Zucht Becken
+- path: /assets/images/tanks/breeding/babies_bandit.webp
+  title: Bandits Nachwuchs
+  caption: Junge Nachkommen von Bandit im Zuchtbecken
+- path: /assets/images/tanks/breeding/breeding.webp
+  title: Zucht Becken
+  caption: Speziell eingerichtetes Becken für die Betta-Zucht
+
+# Höhlen Becken
+- path: /assets/images/tanks/cave/IMG_20250711_072639.webp
+  title: Höhlen Becken Morgen
+  caption: Das Höhlen-Becken im frühen Morgenlicht
+- path: /assets/images/tanks/cave/IMG_20250711_072645.webp
+  title: Höhlen Detail
+  caption: Detailaufnahme der charakteristischen Höhlen-Struktur
+- path: /assets/images/tanks/cave/IMG_20250711_103523.webp
+  title: Höhlen Becken Vormittag
+  caption: Höhlen-Becken zur aktiven Vormittagszeit
+- path: /assets/images/tanks/cave/IMG_20250711_105252.webp
+  title: Höhlen System
+  caption: Das ausgeklügelte Höhlen-System im Detail
+- path: /assets/images/tanks/cave/IMG_20250712_093025.webp
+  title: Höhlen Ambiente
+  caption: Atmosphärisches Höhlen-Ambiente für die Bettas
+- path: /assets/images/tanks/cave/IMG_20250725_182744.webp
+  title: Höhlen Abend
+  caption: Höhlen-Becken in stimmungsvoller Abendbeleuchtung
+- path: /assets/images/tanks/cave/cave.webp
+  title: Höhlen Becken Komplett
+  caption: Komplettansicht des Höhlen-Beckens mit natürlicher Struktur
+
+# Dschungel Becken
+- path: /assets/images/tanks/jungle/IMG_20250228_213939.webp
+  title: Dschungel Becken Aufbau
+  caption: Früher Aufbau des Dschungel-Beckens im Februar
+- path: /assets/images/tanks/jungle/IMG_20250228_214008.webp
+  title: Dschungel Planung
+  caption: Planungsphase für das dicht bepflanzte Dschungel-Becken
+- path: /assets/images/tanks/jungle/IMG_20250228_214159.webp
+  title: Dschungel Start
+  caption: Startphase des Dschungel-Aquariums mit ersten Pflanzen
+- path: /assets/images/tanks/jungle/IMG_20250228_225407.webp
+  title: Dschungel Abend
+  caption: Dschungel-Becken bei abendlicher Beleuchtung
+- path: /assets/images/tanks/jungle/IMG_20250308_120825.webp
+  title: Dschungel März
+  caption: Entwicklung des Dschungel-Beckens im März
+- path: /assets/images/tanks/jungle/IMG_20250308_120834.webp
+  title: Dschungel Wachstum
+  caption: Erstes Pflanzenwachstum im Dschungel-Aquarium
+- path: /assets/images/tanks/jungle/IMG_20250308_120857.webp
+  title: Dschungel Fortschritt
+  caption: Fortschreitende Entwicklung der Dschungel-Landschaft
+- path: /assets/images/tanks/jungle/IMG_20250312_165047.webp
+  title: Dschungel Detail
+  caption: Detailaufnahme der dichten Bepflanzung
+- path: /assets/images/tanks/jungle/IMG_20250312_203533.webp
+  title: Dschungel Nacht
+  caption: Nächtliche Atmosphäre im Dschungel-Becken
+- path: /assets/images/tanks/jungle/IMG_20250313_111223.webp
+  title: Dschungel Entwicklung
+  caption: Weitere Entwicklung der Dschungel-Umgebung
+- path: /assets/images/tanks/jungle/IMG_20250318_163953.webp
+  title: Dschungel Mitte März
+  caption: Dschungel-Becken in der Mitte des Märzes
+- path: /assets/images/tanks/jungle/IMG_20250319_154327.webp
+  title: Dschungel Reife
+  caption: Das Dschungel-Becken erreicht seine erste Reife
+- path: /assets/images/tanks/jungle/IMG_20250320_182038.webp
+  title: Dschungel Harmonie
+  caption: Harmonisches Zusammenspiel von Pflanzen und Technik
+- path: /assets/images/tanks/jungle/IMG_20250321_210716.webp
+  title: Dschungel Abends
+  caption: Abendliche Ruhe im dicht bepflanzten Dschungel
+- path: /assets/images/tanks/jungle/IMG_20250331_172216.webp
+  title: Dschungel Ende März
+  caption: Dschungel-Becken am Ende des ersten Quartals
+- path: /assets/images/tanks/jungle/IMG_20250401_232922.webp
+  title: Dschungel April
+  caption: Übergang ins Frühjahr im Dschungel-Aquarium
+- path: /assets/images/tanks/jungle/IMG_20250408_202111.webp
+  title: Dschungel Frühjahr
+  caption: Frühjahrs-Entwicklung im Dschungel-Becken
+- path: /assets/images/tanks/jungle/IMG_20250413_181243.webp
+  title: Dschungel Mitte April
+  caption: Dschungel-Becken in der Mitte des Aprils
+- path: /assets/images/tanks/jungle/IMG_20250413_181334.webp
+  title: Dschungel Üppigkeit
+  caption: Üppige Vegetation im voll entwickelten Dschungel-Becken
+- path: /assets/images/tanks/jungle/IMG_20250817_201320.webp
+  title: Dschungel Sommer
+  caption: Dschungel-Becken in voller Sommerpracht
+- path: /assets/images/tanks/jungle/jungle.webp
+  title: Dschungel Becken Komplett
+  caption: Komplettansicht des dicht bepflanzten Dschungel-Biotops
+
+# Mangroven Becken
+- path: /assets/images/tanks/mangrove/IMG_20250717_110233.webp
+  title: Mangroven Setup
+  caption: Spezielles Mangroven-Setup mit einzigartiger Wasserlandschaft
+- path: /assets/images/tanks/mangrove/IMG_20250721_210139.webp
+  title: Mangroven Abend
+  caption: Mangroven-Becken bei stimmungsvoller Abendbeleuchtung
+- path: /assets/images/tanks/mangrove/IMG_20250726_081716.webp
+  title: Mangroven Morgen
+  caption: Morgendliche Ruhe im Mangroven-Biotop
+- path: /assets/images/tanks/mangrove/IMG_20250726_081721.webp
+  title: Mangroven Detail
+  caption: Detailaufnahme der charakteristischen Mangroven-Struktur
+- path: /assets/images/tanks/mangrove/IMG_20250728_094419.webp
+  title: Mangroven System
+  caption: Das komplexe Mangroven-Ökosystem im Detail
+- path: /assets/images/tanks/mangrove/IMG_20250801_212031.webp
+  title: Mangroven August
+  caption: Mangroven-Becken im August bei Nachtbeleuchtung
+- path: /assets/images/tanks/mangrove/IMG_20250804_134101.webp
+  title: Mangroven Mittag
+  caption: Mangroven-System zur aktiven Mittagszeit
+- path: /assets/images/tanks/mangrove/mangrove.webp
+  title: Mangroven Becken Übersicht
+  caption: Komplettansicht des einzigartigen Mangroven-Biotops
+
+# Quarantäne Becken
+- path: /assets/images/tanks/quarantine/quarantine.webp
+  title: Quarantäne Becken
+  caption: Speziell eingerichtetes Quarantäne-Becken für neue oder kranke Fische
