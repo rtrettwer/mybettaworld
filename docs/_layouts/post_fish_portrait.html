@@ -3,47 +3,46 @@ layout: default
 ---
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-    <header class="post-header">
         <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <style>
+        @media (max-width: 700px) {
+            .fish-profile {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
 
-        <style>
-      @media (max-width: 700px) {
-        .fish-profile {
-          flex-direction: column !important;
-          gap: 1rem !important;
+            .fish-profile img {
+                max-width: 100% !important;
+                width: 100% !important;
+            }
         }
-        .fish-profile img {
-          max-width: 100% !important;
-          width: 100% !important;
-        }
-      }
     </style>
     <div class="fish-profile" style="display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
-            <div>
-                <img src="{{ page.image }}" alt="Bild von {{ page.title }}" style="max-width: 180px; border-radius: 8px;">
-            </div>
-            <div>
-                <ul style="list-style: none; padding: 0;">
-                    <li><strong>Name:</strong> {{ page.fish_name }}</li>
-                    <li><strong>Geburtsmonat:</strong> Geschätzt {{ page.fish_birth }}</li>
-                    <li><strong>Einkaufspreis:</strong> {{ page.fish_price }}</li>
-                    <li><strong>Betta-Art:</strong> {{ page.fish_type }}</li>
-                    <li><strong>Färbung:</strong> {{ page.fish_color }}</li>
-                    <li><strong>Geschlecht:</strong> {{ page.fish_gender }}</li>
-                </ul>
-            </div>
+        <div>
+            <img src="{{ page.image }}" alt="Bild von {{ page.title }}" style="max-width: 180px; border-radius: 8px;">
         </div>
+        <div>
+            <ul style="list-style: none; padding: 0;">
+                <li><strong>Name:</strong> {{ page.fish_name }}</li>
+                <li><strong>Geburtsmonat:</strong> Geschätzt {{ page.fish_birth }}</li>
+                <li><strong>Einkaufspreis:</strong> {{ page.fish_price }}</li>
+                <li><strong>Betta-Art:</strong> {{ page.fish_type }}</li>
+                <li><strong>Färbung:</strong> {{ page.fish_color }}</li>
+                <li><strong>Geschlecht:</strong> {{ page.fish_gender }}</li>
+            </ul>
+        </div>
+    </div>
 
-  <div class="post-content e-content" itemprop="articleBody">
-    {{ content }}
-      {% if page.gallery_dir %}
-      {% include gallery.html dir=page.gallery_dir %}
-      {% endif %}
-  </div>
+    <div class="post-content e-content" itemprop="articleBody">
+        {{ content }}
+        {% if page.gallery_dir %}
+        {% include gallery.html dir=page.gallery_dir %}
+        {% endif %}
+    </div>
 
-  {%- if site.disqus.shortname -%}
+    {%- if site.disqus.shortname -%}
     {%- include disqus_comments.html -%}
-  {%- endif -%}
+    {%- endif -%}
 
-  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+    <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
