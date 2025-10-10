@@ -111,6 +111,125 @@
         });
     }
 
+    // Verbesserte Grid-Berechnung mit Platz-Berücksichtigung
+    function calculateOptimalGrid(itemCount) {
+        if (itemCount === 0) return { columns: 1, rows: 1 };
+
+        const screenWidth = window.innerWidth;
+        const grid = root.querySelector(".db-gallery-grid");
+        const isPostGallery = grid.closest('.post-content');
+
+        // Minimale Bildbreite basierend auf Bildschirmgröße
+        let minImageWidth;
+        if (screenWidth < 480) {
+            minImageWidth = 120; // Mobile
+        } else if (screenWidth < 768) {
+            minImageWidth = 150; // Tablet
+        } else if (screenWidth < 1024) {
+            minImageWidth = 180; // Desktop
+        } else if (screenWidth < 1400) {
+            minImageWidth = 200; // Große Desktop
+        } else {
+            minImageWidth = 220; // Sehr große Bildschirme
+        }
+
+        // Verfügbare Breite berechnen (mit Padding/Margin)
+        const containerPadding = isPostGallery ? 40 : 80; // Post vs. Hauptgalerie
+        const availableWidth = screenWidth - containerPadding;
+
+        // Gap zwischen Bildern
+        const gap = 15;
+
+        // Maximale Anzahl Spalten basierend auf verfügbarem Platz
+        const maxColumnsByWidth = Math.floor((availableWidth + gap) / (minImageWidth + gap));
+
+        // Beginne mit der maximalen Spaltenanzahl und optimiere
+        let bestColumns = Math.min(maxColumnsByWidth, 12); // Maximal 12 Spalten
+        let bestRows = Math.ceil(itemCount / bestColumns);
+        let bestRatio = Math.abs(bestColumns / bestRows - 1.2); // Leicht rechteckig ist ok
+
+        // Teste verschiedene Spaltenkonfigurationen
+        for (let cols = Math.max(2, maxColumnsByWidth - 3); cols <= maxColumnsByWidth; cols++) {
+            let rows = Math.ceil(itemCount / cols);
+            let ratio = Math.abs(cols / rows - 1.2);
+
+            // Bevorzuge Konfigurationen mit weniger extremen Seitenverhältnissen
+            if (ratio < bestRatio) {
+                bestRatio = ratio;
+                bestColumns = cols;
+                bestRows = rows;
+            }
+        }
+
+        // Für sehr viele Bilder (>50): bevorzuge mehr Spalten
+        if (itemCount > 50) {
+            bestColumns = Math.max(bestColumns, Math.min(8, maxColumnsByWidth));
+            bestRows = Math.ceil(itemCount / bestColumns);
+        }
+
+        console.log(`Bildschirm: ${screenWidth}px, Verfügbar: ${availableWidth}px, Max Spalten: ${maxColumnsByWidth}`);
+
+        return { columns: bestColumns, rows: bestRows };
+    }
+
+    function applyResponsiveGrid(columns, rows) {
+        const screenWidth = window.innerWidth;
+
+        // Weniger aggressive Reduktion der Spalten
+        if (screenWidth < 480) {
+            // Mobile: reduziere nur leicht
+            columns = Math.max(2, Math.min(columns, 3));
+        } else if (screenWidth < 768) {
+            // Tablet:
+            columns = Math.max(3, Math.min(columns, 5));
+        } else if (screenWidth < 1024) {
+            // Desktop:
+            columns = Math.max(4, Math.min(columns, 7));
+        }
+        // Große Bildschirme: verwende berechnete spaltenanzahl
+
+        return { columns, rows: Math.ceil(items.length / columns) };
+    }
+
+    function initDynamicGrid() {
+        const grid = root.querySelector(".db-gallery-grid");
+        const isPostGallery = grid.closest('.post-content');
+
+        // Nur für Hauptgalerie, Post-Galerien bleiben statisch
+        if (!isPostGallery && items.length > 0) {
+            const optimal = calculateOptimalGrid(items.length);
+            const responsive = applyResponsiveGrid(optimal.columns, optimal.rows);
+
+            // Setze die berechneten Grid-Eigenschaften
+            grid.style.gridTemplateColumns = `repeat(${responsive.columns}, 1fr)`;
+
+            // Für sehr breite Layouts: zentriere das Grid mit max-width
+            if (responsive.columns > 8) {
+                const maxWidth = responsive.columns * 280 + (responsive.columns - 1) * 15; // 280px pro Spalte + gaps
+                grid.style.maxWidth = `${maxWidth}px`;
+                grid.style.margin = '1rem auto';
+            } else {
+                grid.style.maxWidth = 'none';
+                grid.style.margin = '1rem 0';
+            }
+
+            console.log(`Galerie Layout: ${items.length} Bilder → ${responsive.columns} Spalten × ${responsive.rows} Zeilen`);
+        }
+
+        // Stelle sicher, dass Bilder geladen sind
+        items.forEach((item) => {
+            const img = item.querySelector("img");
+            if (!img.complete) {
+                img.addEventListener('load', () => {
+                    // Trigger Layout-Update nach Bildladen
+                    item.style.display = 'none';
+                    item.offsetHeight; // Force reflow
+                    item.style.display = 'block';
+                }, { once: true });
+            }
+        });
+    }
+
     function openAt(index) {
         if (index < 0 || index >= items.length) return;
         currentIndex = index;
@@ -218,9 +337,13 @@
 
     // Layout beim Laden und bei Fenstergrößenänderung initialisieren
     initMasonryLayout();
+    initDynamicGrid();
 
     window.addEventListener('resize', () => {
-        setTimeout(initMasonryLayout, 100);
+        setTimeout(() => {
+            initMasonryLayout();
+            initDynamicGrid();
+        }, 100);
     });
 })();
 </script>
