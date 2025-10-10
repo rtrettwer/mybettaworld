@@ -1,0 +1,24 @@
+{
+  "name": "The more the betta",
+  "short_name": "Betta Blog",
+  "description": "A blog about betta splendens breeding, fishkeeping and more.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#4a90e2",
+  "icons": [
+    {
+      "src": "/assets/images/misc/icon.webp",
+      "sizes": "192x192",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/assets/images/misc/icon.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any maskable"
+    }
+  ]
+}
+
