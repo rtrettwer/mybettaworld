@@ -4,7 +4,7 @@ title: "Das Mangroven Becken"
 date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [ tank, betta, kampffisch, walstad, mangrove, zucht, nano ]
-excerpt: "Stark befplanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
+excerpt: "Stark bepflanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
 image: /assets/images/tanks/mangrove/mangrove.webp
 dimensions: 50x35x30 cm
 fassungsvermoegen: 30L
@@ -15,7 +15,7 @@ beleuchtung: AQQA Clip-on Vollspektrum LED, 24/7 Modus, 18W + GERUI Mini LED 7W
 bodengrund: gesiebte Pflanzenerde, darauf feiner schwarzer Sand
 deko: Treibhölzer aus der Ostsee, Kokosnuss-Höhle, rote Lavasteine
 startdatum: 15.07.2025
-besatz: Betta splendens Weibchen (Sonnenschein), Posthornschnecken, Blasenschnecken, Neocaridina Garnelen, 1-2 Rennschnecken, 1 Sulawesi Schnecke, 4-5 Neon Tetras
+besatz: Betta splendens Männchen (Bandit), Posthornschnecken, Blasenschnecken, Neocaridina Garnelen, 1-2 Rennschnecken, 1 Sulawesi Schnecke, 4-5 Neon Tetras
 pflanzen: Javafarn, Trauermoos-Bäumchen, Salvinia, phylantus fluitans
 technik: EEEKit Aquariumthermometer (außen befestigt, Digitalanzeige)
 heizung: Heizstab Aquael, 26 °C
@@ -29,9 +29,11 @@ entwicklung:
     ereignis: Neon-Tetras aus dem Dschungel-Aquarium in dieses umgesetzt
   - datum: 08.10.2025
     ereignis: Ich habe Bandit aus seinem Quarantäne-Becken in dieses Becken umgesetzt. Er sieht noch schwach und dünn aus - Sonnenschein ist aktuell dominant und sehr kritisch ihrem neuen Mitbewohner gegenüber.
+  - datum: 08.10.2025
+    ereignis: Sonnenschein musste raus - sie hat Bandits Flossen gefleddert und ihn gejagt! Sie ist ins Höhlen-Becken umgezogen.
 
 entwicklung_text: |
-  Mittlerweile ist nur noch ein Betta-Weibchen in diesem Becken (Sonnenschein). Eines der Weibchen war ein Männchen (Sir Pryce), ein Weibchen ist gestorben und die anderen beiden sind aktuell bei Kampfi im Dschungel-Aquarium
+  Mittlerweile ist nur noch ein Betta in diesem Becken - Bandit ist aus der Quarantäne eingezogen, nachdem Sonnenschein wegen aggressivem Verhalten ins Höhlen-Becken umziehen musste.
 gallery_dir: /assets/images/tanks/mangrove
 ---
 

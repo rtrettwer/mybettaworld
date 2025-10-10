@@ -105,6 +105,8 @@ Ich habe Bandit vorsichtshalber nochmal eine Dosis Nematol gegeben.
 
 ## 08.10.2025
 
-Bandit ist heute zu [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ins [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
+Bandit ist heute zu [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ins [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
 noch etwas dünn und blass. Aber ich gehe fast davon aus, dass sich das ändern wird, wenn er wieder fitter ist.
 [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
+
+Leider musste ich [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen Artemia füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.
