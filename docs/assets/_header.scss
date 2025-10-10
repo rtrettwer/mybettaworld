@@ -7,15 +7,21 @@
 
   .site-title,
   .site-nav,
-  .site-nav .page-link,
   label[for="nav-trigger"] span {
     color: $theme-white !important;
     fill: $theme-white !important;
   }
+
   .site-nav .page-link {
+    color: $theme-white !important;
     background: transparent !important;
     transition: color 0.2s;
+
+    &:hover {
+      color: $theme-green !important;
+    }
   }
+
   .site-title:hover {
     color: $theme-green !important;
   }
@@ -130,4 +136,13 @@
 // Lightbox sollte über allem liegen außer der Navigation
 .db-gallery-lightbox {
   z-index: 999 !important; // Unter der Navigation aber über allem anderen
+}
+
+// Explizite Hover-Regeln für Navigation - höchste Spezifität
+.site-header .site-nav a.page-link:hover {
+  color: $theme-green !important;
+}
+
+.site-header .site-nav .page-link:hover {
+  color: $theme-green !important;
 }

@@ -1,0 +1,178 @@
+// Globale Link-Styles für die gesamte Website
+// Verwendet das Theme-Grün für konsistente Farbgebung
+
+// Standard-Links in Posts und Content-Bereichen
+a {
+  color: $theme-green;
+  text-decoration: underline;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: darken($theme-green, 15%);
+    text-decoration: underline;
+  }
+
+  &:visited {
+    color: darken($theme-green, 10%);
+  }
+}
+
+// Header-Links - dezent ohne Hervorhebung, nur Hover-Effekt
+.site-header {
+  // Navigation-Links spezifisch - höhere Spezifität für Menüpunkte
+  .site-nav {
+    a {
+      color: $theme-white !important;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $theme-green !important;
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $theme-white !important;
+      }
+    }
+
+    // Spezifisch für page-link Klasse
+    .page-link {
+      color: $theme-white !important;
+      text-decoration: none;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: $theme-green !important;
+        text-decoration: none;
+      }
+
+      &:visited {
+        color: $theme-white !important;
+      }
+    }
+  }
+
+  // Allgemeine Header-Links (weniger spezifisch, nach den Navigation-Links)
+  a {
+    color: inherit;
+    text-decoration: none;
+
+    &:hover {
+      color: $theme-green !important;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: inherit;
+    }
+  }
+}
+
+// Footer-Links - dezent ohne Hervorhebung, nur Hover-Effekt
+.site-footer {
+  a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $theme-green !important;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+
+  // Spezifisch für die rechtlichen Links
+  .footer-legal-links a {
+    color: rgba(255, 255, 255, 0.8) !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: $theme-green !important;
+      text-decoration: none;
+    }
+
+    &:visited {
+      color: rgba(255, 255, 255, 0.8) !important;
+    }
+  }
+
+  // Explizite Footer-Hover-Regeln - höchste Spezifität
+  a:hover {
+    color: $theme-green !important;
+  }
+
+  .footer-legal-links a:hover {
+    color: $theme-green !important;
+  }
+}
+
+// Post-Links - normale Sichtbarkeit mit grüner Farbe
+.post-content {
+  a {
+    color: $theme-green;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($theme-green, 15%);
+    }
+  }
+}
+
+// Page-Content Links (für Impressum, Datenschutz etc.)
+.page-content {
+  a {
+    color: $theme-green;
+    text-decoration: underline;
+
+    &:hover {
+      color: darken($theme-green, 15%);
+    }
+  }
+}
+
+// Blog-Post-Preview Links auf der Homepage
+.post-list {
+  .post-link {
+    color: $theme-green;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($theme-green, 15%);
+      text-decoration: underline;
+    }
+  }
+}
+
+// Tag-Links auf der Blog-Seite
+.post-tags {
+  .tag {
+    color: $theme-green !important;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: darken($theme-green, 15%) !important;
+      text-decoration: underline;
+    }
+
+    &:visited {
+      color: $theme-green !important;
+    }
+  }
+
+  a.tag {
+    color: $theme-green !important;
+    text-decoration: none;
+
+    &:hover {
+      color: darken($theme-green, 15%) !important;
+      text-decoration: underline;
+    }
+  }
+}
