@@ -1,4 +1,4 @@
-@use './variables' as *;
+@import './variables';
 
 .site-header {
   background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%);

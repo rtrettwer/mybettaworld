@@ -40,6 +40,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
+# Sass-Konfiguration für bessere Kompatibilität
+sass:
+  style: compressed
+  sass_dir: assets
+  sourcemap: never
+
 # Header‑Navigation (minima):
 header_pages:
   - about.md
