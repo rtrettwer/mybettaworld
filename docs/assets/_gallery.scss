@@ -1,0 +1,236 @@
+// Gallery Component Styles
+.db-gallery {
+  margin: 2rem 0;
+}
+
+.db-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  grid-auto-rows: 10px;
+  gap: 8px;
+  margin: 1rem 0;
+
+  @media (min-width: 480px) {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 10px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 12px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+  }
+
+  @media (min-width: 1400px) {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 18px;
+  }
+}
+
+.db-gallery-item {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+.db-gallery-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+  border-radius: 6px;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.db-gallery-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.db-gallery-thumb-caption {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 0.4rem;
+  text-align: center;
+  line-height: 1.2;
+}
+
+// Lightbox Styles
+.db-gallery-lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.92);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 1rem;
+  box-sizing: border-box;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+
+  &.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0.5rem;
+  }
+}
+
+.db-gallery-lightbox-content {
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.db-gallery-path {
+  color: #bbb;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+  word-break: break-all;
+  text-align: center;
+  font-family: monospace;
+
+  @media (max-width: 768px) {
+    font-size: 0.7rem;
+  }
+}
+
+.db-gallery-large {
+  max-width: 100%;
+  max-height: 75vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+
+  @media (max-width: 768px) {
+    max-height: 70vh;
+  }
+}
+
+.db-gallery-title {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 1rem 0 0.5rem 0;
+  text-align: center;
+}
+
+.db-gallery-caption {
+  color: #ddd;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  max-width: 600px;
+  line-height: 1.4;
+}
+
+.db-gallery-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    top: 1rem;
+    right: 1rem;
+    width: 35px;
+    height: 35px;
+    font-size: 1.3rem;
+  }
+}
+
+.db-gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+}
+
+.db-gallery-prev {
+  left: 2rem;
+
+  @media (max-width: 768px) {
+    left: 1rem;
+  }
+}
+
+.db-gallery-next {
+  right: 2rem;
+
+  @media (max-width: 768px) {
+    right: 1rem;
+  }
+}
+
+.db-gallery-lightbox-backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
