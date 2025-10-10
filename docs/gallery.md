@@ -1,8 +1,8 @@
 ---
-layout: gallery
+layout: default
 title: "Galerie"
 permalink: /gallery/
-gallery_dir: /assets/images/
+gallery_dir: /assets/images
 ---
 
-{% include gallery.html dir=page.gallery_dir %}
+{% include gallery.html %}

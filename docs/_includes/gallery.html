@@ -1,7 +1,7 @@
 {%- assign dir = page.gallery_dir | default: include.dir | default: '/assets/images' -%}
 {%- if dir -%}
 
-{%- comment -%}Exakte Pfad-Filterung statt contains{%- endcomment -%}
+{%- comment -%}Rekursive Pfad-Filterung: alle Unterverzeichnisse einschließen{%- endcomment -%}
 {%- assign gallery_thumbnails = "" | split: "" -%}
 {%- assign target_dir_with_slash = dir | append: '/' -%}
 
@@ -9,9 +9,17 @@
   {%- if f.extname == '.webp' -%}
     {%- assign filename = f.path | split: '/' | last -%}
     {%- if filename contains '_thumbnail' -%}
-      {%- comment -%}Prüfe ob der Pfad exakt mit dem Zielverzeichnis beginnt{%- endcomment -%}
-      {%- assign file_dir = f.path | remove: filename -%}
-      {%- if file_dir == target_dir_with_slash -%}
+      {%- comment -%}Rekursiv: Prüfe ob der Pfad mit dem Zielverzeichnis BEGINNT (nicht exakt gleich){%- endcomment -%}
+      {%- assign path_starts_with_dir = false -%}
+      {%- assign path_length = f.path | size -%}
+      {%- assign dir_length = target_dir_with_slash | size -%}
+      {%- if path_length >= dir_length -%}
+        {%- assign path_prefix = f.path | slice: 0, dir_length -%}
+        {%- if path_prefix == target_dir_with_slash -%}
+          {%- assign path_starts_with_dir = true -%}
+        {%- endif -%}
+      {%- endif -%}
+      {%- if path_starts_with_dir -%}
         {%- assign gallery_thumbnails = gallery_thumbnails | push: f -%}
       {%- endif -%}
     {%- endif -%}
