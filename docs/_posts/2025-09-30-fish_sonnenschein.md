@@ -5,14 +5,14 @@ date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, sonnenschein, fisch]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich seine Entwicklung."
-image: /assets/images/fish/sonnenschein/IMG_20250801_152543.webp
+image: /assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp
 fish_name: Sonnenschein
 fish_birth: Mai 2025
 fish_price: 5 € (Interaquaristik)
 fish_type: Betta splendens
 fish_color: Weißer Körper mit roten Flossen; potentiell marblend
 fish_gender: Weiblich
-gallery_dir: /assets/images/fish/sonnenschein
+gallery_dir: /assets/images/fish/sonnenschein/
 ---
 
 
