@@ -2,6 +2,8 @@
 
 .site-header {
   background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%);
+  position: relative;
+  z-index: 1000; // Stelle sicher, dass der Header über anderen Elementen liegt
 
   .site-title,
   .site-nav,
@@ -19,20 +21,90 @@
   }
   .menu-icon svg path {
     fill: $theme-blue !important;
-    background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%) !important;
   }
-  /* Mobile Menü Hintergrund und Textfarbe */
-  @media (max-width: 600px) {
-    .site-nav .trigger {
+}
+
+// Mobile Navigation Fixes - Höchste Priorität z-index
+.site-nav {
+  position: relative;
+  z-index: 1001;
+
+  // Mobile Burger Menu Trigger
+  .nav-trigger {
+    z-index: 1002;
+  }
+
+  // Mobile Menu Container
+  .trigger {
+    position: relative;
+    z-index: 1003 !important;
+
+    @media (max-width: 600px) {
+      position: absolute !important;
+      top: 100% !important;
+      right: 0 !important;
       background: linear-gradient(90deg, $theme-green 0%, $theme-blue 100%) !important;
-      stroke: $theme-green !important;
-      fill: $theme-green !important;
-      color: $theme-white !important;
-    }
-    .menu-icon svg,
-    .menu-icon svg path {
-      fill: $theme-blue !important;
-      stroke: $theme-blue !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      border-radius: 8px !important;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+      z-index: 1003 !important;
+      backdrop-filter: blur(10px) !important;
+      padding: 10px 0 !important;
+      min-width: 200px !important;
     }
   }
+
+  // Burger Menu Button
+  label[for="nav-trigger"] {
+    z-index: 1004 !important;
+    position: relative !important;
+
+    @media (max-width: 600px) {
+      cursor: pointer !important;
+      padding: 8px !important;
+      border-radius: 4px !important;
+      transition: background 0.2s !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+      }
+    }
+  }
+
+  // Menu Items in Mobile
+  .page-link {
+    @media (max-width: 600px) {
+      display: block !important;
+      padding: 12px 20px !important;
+      color: $theme-white !important;
+      text-decoration: none !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+      transition: background 0.2s !important;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.1) !important;
+        color: $theme-white !important;
+      }
+
+      &:last-child {
+        border-bottom: none !important;
+      }
+    }
+  }
+}
+
+// Stelle sicher, dass die Galerie unter dem Menü liegt
+.db-gallery {
+  position: relative;
+  z-index: 1; // Niedrigerer z-index als Navigation
+}
+
+.db-gallery-item {
+  position: relative;
+  z-index: 2; // Immer noch niedriger als Navigation
+}
+
+// Lightbox sollte über allem liegen außer der Navigation
+.db-gallery-lightbox {
+  z-index: 999 !important; // Unter der Navigation aber über allem anderen
 }
