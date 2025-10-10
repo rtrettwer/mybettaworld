@@ -46,9 +46,9 @@ Immerhin ist er mir so nicht verhungert.
 
 # Umzug ins Becken
 
-Endlich war das Becken soweit - er durfte ins [Höhlen](/tank/2025/09/30/tank_hoehle/)-Becken einziehen! Eigentlich war das ja Mal für [Kampfi](/fish/2025/09/30/fish_kampfi/) gedacht,
-weil der [Höhlen](/tank/2025/09/30/tank_hoehle/) so liebt. Aber Bandit brauche ein Zuhause.
-Zum Glück mag er die [Höhlen](/tank/2025/09/30/tank_hoehle/) auch :)
+Endlich war das Becken soweit - er durfte ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken einziehen! Eigentlich war das ja Mal für [Kampfi](/fish/2025/09/30/fish_kampfi) gedacht,
+weil der [Höhlen](/tank/2025/09/30/tank_hoehle) so liebt. Aber Bandit brauche ein Zuhause.
+Zum Glück mag er die [Höhlen](/tank/2025/09/30/tank_hoehle) auch :)
 Er hat sich sofort wohlgefühlt und auch direkt wieder ein Schaumnest gebaut.
 
 # Mitbewohner
@@ -87,7 +87,7 @@ was auf die Gräten bekommt.
 
 Endlich ist das Nematol da. Knapp 0,25ml davon ins Wasser. Jetzt hoffe ich, dass die Würmer schnell sterben und Bandit
 sich gut erholen kann.
-Ich werde ihn aber erstmal im Quarantänebecken lassen, bis er wieder fit ist. Das [Höhlen](/tank/2025/09/30/tank_hoehle/)-Becken habe ich (noch) nicht
+Ich werde ihn aber erstmal im Quarantänebecken lassen, bis er wieder fit ist. Das [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken habe ich (noch) nicht
 behandelt. Ich bin etwas unsicher - ich möchte die Garnelen und Schnecken nicht gefährden (Nematol wäre tödlich für
 sie).
 Ich habe also bisher nur einen Filter gekauft und ins Becken gehängt, einen Wasserwechsel gemacht und den Boden
@@ -96,7 +96,7 @@ abgemulmt.
 ## 02.10.2025
 
 Bandit hatte noch eine Weile tote rote Würmer aus dem After hängen, mittlerweile hat er nichts mehr hängen. Ich habe ihn
-in ein komplett frisches [Quarantäne](/tank/2025/09/30/tank_quarantaene/) Becken umgesetzt. Außerdem habe ich mit Artemia und Wasserflöhen versucht ihn ein
+in ein komplett frisches [Quarantäne](/tank/2025/09/30/tank_quarantaene) Becken umgesetzt. Außerdem habe ich mit Artemia und Wasserflöhen versucht ihn ein
 bisschen aufzupäppeln. Ich bin guten Mutes dass er überlebt<3
 
 ## 07.10.2025
@@ -105,6 +105,6 @@ Ich habe Bandit vorsichtshalber nochmal eine Dosis Nematol gegeben.
 
 ## 08.10.2025
 
-Bandit ist heute zu [Sonnenschein](/fish/2025/09/30/fish_sonnenschein/) ins [Dschungel](/tank/2025/09/30/tank_dschungel/)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
+Bandit ist heute zu [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ins [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
 noch etwas dünn und blass. Aber ich gehe fast davon aus, dass sich das ändern wird, wenn er wieder fitter ist.
-[Sonnenschein](/fish/2025/09/30/fish_sonnenschein/) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
+[Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.

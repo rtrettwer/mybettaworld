@@ -32,11 +32,11 @@ entwicklung:
 
 
 ## Quarantäne
-Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/30/fish_sir_pryce/) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
+Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/30/fish_sir_pryce) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
 Deshalb habe ich ein weiteres Becken besorgt und sie hier zur Quarantäne gesetzt. Das Becken war ohne Bodengrund nur sehr spartanisch eingerichtet. Leider hat das Weibchen sich dennoch nicht mehr erholt. Sie hatte Bauchwassersucht und sah aus wie ein kleiner Tannenzapfen, weil die Schuppen abstanden. Sie hat nicht mehr gefressen und sich kaum bewegt. Ich habe sie mit Nelkenöl hoffentlich sanft von ihrem Leiden erlöst.
 
 ## Zuhause für Sir Pryce 
-Da [Sir Pryce](/fish/2025/09/30/fish_sir_pryce/) im Becken mit seinen ersten Babys nicht bleiben durfte, habe ich ihn in dieses Quarantäne-Becken umgezogen. Das Becken habe ich vorher gereinigt und schöner eingerichtet, mit Bodengrund etc.
+Da [Sir Pryce](/fish/2025/09/30/fish_sir_pryce) im Becken mit seinen ersten Babys nicht bleiben durfte, habe ich ihn in dieses Quarantäne-Becken umgezogen. Das Becken habe ich vorher gereinigt und schöner eingerichtet, mit Bodengrund etc.
 Ganz unten ins Becken habe ich so Trenner-Gitter gelegt, damit Steine etc. nicht direkt auf das Glas gestellt werden.
-In diesem Becken lebt [Sir Pryce](/fish/2025/09/30/fish_sir_pryce/) jetzt zusammen mit seiner zweiten Laichung Babys. Ich will diesmal testen, ob er sie an irgend einem Punkt als Futter betrachtet oder ob die Babys bei ihrem Papa groß werden können.
+In diesem Becken lebt [Sir Pryce](/fish/2025/09/30/fish_sir_pryce) jetzt zusammen mit seiner zweiten Laichung Babys. Ich will diesmal testen, ob er sie an irgend einem Punkt als Futter betrachtet oder ob die Babys bei ihrem Papa groß werden können.
 

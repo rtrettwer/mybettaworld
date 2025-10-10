@@ -18,7 +18,7 @@ gallery_dir: /assets/images/fish/kampfi
 
 # Kampfis Einzug
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.
-Ich hatte ihn im (heutigen [Dschungel](/tank/2025/09/30/tank_dschungel/)-) Becken mit Neocaridina Zwerggarnelen, Rennschnecken, Posthornschnecken und etwa 15 Tetra Neons.
+Ich hatte ihn im (heutigen [Dschungel](/tank/2025/09/30/tank_dschungel)-) Becken mit Neocaridina Zwerggarnelen, Rennschnecken, Posthornschnecken und etwa 15 Tetra Neons.
 Mein Eindruck war, dass es ihm damit ganz gut geht, er hat sich gut entwickelt und hatte am Anfang auch Mal ein Schaumnest gebaut.
 
 # Entdeckung des Marbled Gens
@@ -37,9 +37,9 @@ Kampfi ist ein wahnsinnig lieber und friedlicher Fisch. Die Neons waren manchmal
 Becken-Mitbewohner angegriffen oder gejagt hätte. Selbst die Garnelen haben sich eifrig und munter vermehrt.
 Dennoch habe ich die Neons aus dem Becken genommen, da ich befürchtet habe, dass es während meiner Abwesenheit Probleme gab und Kampfi deshalb so anders aussah nach meiner Rückkehr.
 Ich glaube, er hat sich trotzdem ohne die Neons wohler gefühlt, denn er hat danach seit längerem wieder Schaumnester gebaut.
-Mittlerweile hat er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/30/fish_lila/) und Schatten). 
+Mittlerweile hat er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/30/fish_lila) und Schatten). 
 
 # Zuchtversuche 
 Ich habe den Eindruck, dass er Schatten sehr gerne mag, aber dennoch kam es noch nicht zu einer Paarung bzw. Eiern.
-Schatten scheint sich in dem Becken auch wohl zu fühlen, sie hatte mit ihren Schwestern Stress-Streifen und bei Kampfi schillert sie wunderschön. Ich bin nicht sicher, ob sie sich über ihre Schwester [Lila](/fish/2025/09/30/fish_lila/) freut, aber sie scheinen sich zu arrangieren.
+Schatten scheint sich in dem Becken auch wohl zu fühlen, sie hatte mit ihren Schwestern Stress-Streifen und bei Kampfi schillert sie wunderschön. Ich bin nicht sicher, ob sie sich über ihre Schwester [Lila](/fish/2025/09/30/fish_lila) freut, aber sie scheinen sich zu arrangieren.
 Ich hoffe, dass es nochmal irgendwann Nachwuchs von Kampfi gibt, ich hätte sehr gerne Fischbabys mit seinem liebenswerten Charakter.
