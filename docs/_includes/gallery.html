@@ -69,9 +69,8 @@
         <button class="db-gallery-nav db-gallery-next" aria-label="Nächstes Bild">&#8250;</button>
 
         <div class="db-gallery-lightbox-content">
-            <div class="db-gallery-path"></div>
-            <img class="db-gallery-large" src="" alt="">
             <div class="db-gallery-title"></div>
+            <img class="db-gallery-large" src="" alt="">
             <div class="db-gallery-caption"></div>
         </div>
     </div>
@@ -84,7 +83,6 @@
 
     const lightbox = root.querySelector(".db-gallery-lightbox");
     const imgLarge = root.querySelector(".db-gallery-large");
-    const pathEl = root.querySelector(".db-gallery-path");
     const titleEl = root.querySelector(".db-gallery-title");
     const captionEl = root.querySelector(".db-gallery-caption");
     const btnClose = root.querySelector(".db-gallery-close");
@@ -238,11 +236,9 @@
         const thumb = item.dataset.thumb;
         const title = item.dataset.title || "";
         const caption = item.dataset.caption || "";
-        const displayPath = item.dataset.pathRaw || large;
 
         imgLarge.src = large;
         imgLarge.alt = title || "";
-        pathEl.textContent = displayPath;
         titleEl.textContent = title;
         captionEl.textContent = caption;
 
@@ -253,7 +249,6 @@
         imgLarge.onerror = function () {
             if (imgLarge.src !== thumb) {
                 imgLarge.src = thumb;
-                pathEl.textContent = 'Fallback: ' + (item.dataset.pathRaw || thumb);
             }
         };
 
