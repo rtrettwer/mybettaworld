@@ -5,29 +5,46 @@
 
 .db-gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
-  grid-auto-rows: 10px;
+  grid-auto-rows: 8px;
   gap: 8px;
   margin: 1rem 0;
 
+  // Mobile: 4 Spalten (mehr als vorher)
+  grid-template-columns: repeat(4, 1fr);
+
   @media (min-width: 480px) {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    grid-template-columns: repeat(6, 1fr);
     gap: 10px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-template-columns: repeat(8, 1fr);
     gap: 12px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-    gap: 15px;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 14px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 16px;
   }
 
   @media (min-width: 1400px) {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(14, 1fr);
     gap: 18px;
+  }
+
+  @media (min-width: 1600px) {
+    grid-template-columns: repeat(16, 1fr);
+    gap: 20px;
+  }
+
+  @media (min-width: 1920px) {
+    grid-template-columns: repeat(18, 1fr);
+    gap: 22px;
   }
 }
 
@@ -36,6 +53,113 @@
   padding: 0;
   border: none;
   background: none;
+  position: relative;
+
+  // Kleinere Basis-Größen für mehr Dichte
+  // Sehr kleine Bilder (1 Spalte)
+  &:nth-child(20n+1),
+  &:nth-child(20n+7),
+  &:nth-child(20n+13),
+  &:nth-child(20n+17) {
+    grid-column: span 1;
+  }
+
+  // Kleine Bilder (2 Spalten)
+  &:nth-child(20n+2),
+  &:nth-child(20n+6),
+  &:nth-child(20n+9),
+  &:nth-child(20n+11),
+  &:nth-child(20n+15),
+  &:nth-child(20n+19) {
+    grid-column: span 2;
+  }
+
+  // Mittlere Bilder (3 Spalten)
+  &:nth-child(20n+3),
+  &:nth-child(20n+8),
+  &:nth-child(20n+12),
+  &:nth-child(20n+16) {
+    grid-column: span 3;
+
+    @media (max-width: 1023px) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: span 2;
+    }
+  }
+
+  // Große Bilder (4 Spalten)
+  &:nth-child(20n+4),
+  &:nth-child(20n+10),
+  &:nth-child(20n+18) {
+    grid-column: span 4;
+
+    @media (max-width: 1199px) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: span 2;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: span 3;
+    }
+  }
+
+  // Extra große Bilder (5 Spalten)
+  &:nth-child(20n+5),
+  &:nth-child(20n+14) {
+    grid-column: span 5;
+
+    @media (max-width: 1399px) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: 1199px) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: span 3;
+    }
+  }
+
+  // Sehr breite Bilder (6 Spalten)
+  &:nth-child(30n+20) {
+    grid-column: span 6;
+
+    @media (max-width: 1599px) {
+      grid-column: span 5;
+    }
+
+    @media (max-width: 1399px) {
+      grid-column: span 4;
+    }
+
+    @media (max-width: 1199px) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: 1023px) {
+      grid-column: span 3;
+    }
+
+    @media (max-width: 767px) {
+      grid-column: span 4;
+    }
+  }
+
+  // Default für alle anderen
+  &:not(:nth-child(20n+1)):not(:nth-child(20n+2)):not(:nth-child(20n+3)):not(:nth-child(20n+4)):not(:nth-child(20n+5)):not(:nth-child(20n+6)):not(:nth-child(20n+7)):not(:nth-child(20n+8)):not(:nth-child(20n+9)):not(:nth-child(20n+10)):not(:nth-child(20n+11)):not(:nth-child(20n+12)):not(:nth-child(20n+13)):not(:nth-child(20n+14)):not(:nth-child(20n+15)):not(:nth-child(20n+16)):not(:nth-child(20n+17)):not(:nth-child(20n+18)):not(:nth-child(20n+19)):not(:nth-child(30n+20)) {
+    grid-column: span 2;
+  }
 }
 
 .db-gallery-button {
@@ -45,13 +169,21 @@
   border: none;
   background: none;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 12px;
   overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  position: relative;
 
   &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25);
+    filter: brightness(1.05) contrast(1.05);
+    z-index: 10;
+  }
+
+  &:active {
+    transform: translateY(-2px) scale(1.01);
+    transition: transform 0.1s ease;
   }
 }
 
@@ -59,15 +191,25 @@
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 6px;
+  border-radius: 12px;
+  transition: transform 0.3s ease;
+  object-fit: cover;
 }
 
 .db-gallery-thumb-caption {
   font-size: 0.75rem;
   color: #666;
-  margin-top: 0.4rem;
+  margin-top: 0.8rem;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.4;
+  padding: 0 0.5rem;
+  font-weight: 500;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.db-gallery-item:hover .db-gallery-thumb-caption {
+  opacity: 1;
 }
 
 // Lightbox Styles
@@ -88,6 +230,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  backdrop-filter: blur(4px);
 
   &.active {
     opacity: 1;
@@ -115,9 +258,13 @@
   word-break: break-all;
   text-align: center;
   font-family: monospace;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
 
   @media (max-width: 768px) {
     font-size: 0.7rem;
+    padding: 0.3rem 0.8rem;
   }
 }
 
@@ -125,20 +272,23 @@
   max-width: 100%;
   max-height: 75vh;
   object-fit: contain;
-  border-radius: 8px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
 
   @media (max-width: 768px) {
     max-height: 70vh;
+    border-radius: 8px;
   }
 }
 
 .db-gallery-title {
   color: #fff;
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: bold;
-  margin: 1rem 0 0.5rem 0;
+  margin: 1.5rem 0 0.5rem 0;
   text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .db-gallery-caption {
@@ -147,7 +297,8 @@
   margin-top: 0.5rem;
   text-align: center;
   max-width: 600px;
-  line-height: 1.4;
+  line-height: 1.5;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .db-gallery-close {
@@ -157,27 +308,29 @@
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  backdrop-filter: blur(10px);
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1);
   }
 
   @media (max-width: 768px) {
     top: 1rem;
     right: 1rem;
-    width: 35px;
-    height: 35px;
-    font-size: 1.3rem;
+    width: 38px;
+    height: 38px;
+    font-size: 1.4rem;
   }
 }
 
@@ -188,25 +341,27 @@
   background: rgba(255, 255, 255, 0.2);
   color: white;
   border: none;
-  width: 50px;
-  height: 50px;
+  width: 54px;
+  height: 54px;
   border-radius: 50%;
-  font-size: 1.8rem;
+  font-size: 2rem;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   line-height: 1;
+  backdrop-filter: blur(10px);
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-50%) scale(1.1);
   }
 
   @media (max-width: 768px) {
-    width: 40px;
-    height: 40px;
-    font-size: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1.6rem;
   }
 }
 

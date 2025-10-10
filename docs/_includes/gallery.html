@@ -99,22 +99,51 @@
         const grid = root.querySelector(".db-gallery-grid");
         const gridItems = grid.querySelectorAll(".db-gallery-item");
 
-        gridItems.forEach(item => {
+        gridItems.forEach((item, index) => {
             const img = item.querySelector("img");
             if (img.complete && img.naturalHeight > 0) {
-                setSpan(item, img);
+                setSpan(item, img, index);
             } else {
-                img.addEventListener('load', () => setSpan(item, img), { once: true });
+                img.addEventListener('load', () => setSpan(item, img, index), { once: true });
             }
         });
     }
 
-    function setSpan(item, img) {
+    function setSpan(item, img, index) {
         const height = img.offsetHeight;
         const gap = parseInt(getComputedStyle(item.parentElement).gap) || 10;
-        const rowHeight = 10; // grid-auto-rows
-        const span = Math.ceil((height + gap) / (rowHeight + gap));
-        item.style.gridRowEnd = `span ${Math.max(span, 1)}`;
+        const rowHeight = 8; // grid-auto-rows (reduziert von 10px)
+        let span = Math.ceil((height + gap) / (rowHeight + gap));
+
+        // Dynamische Höhen-Anpassungen basierend auf der Bildgröße
+        const aspectRatio = img.naturalWidth / img.naturalHeight;
+
+        // Portrait-Bilder bekommen mehr Höhe
+        if (aspectRatio < 0.7) {
+            span = Math.max(span, Math.ceil(span * 1.5));
+        }
+        else if (aspectRatio < 0.9) {
+            span = Math.max(span, Math.ceil(span * 1.2));
+        }
+        // Panorama-Bilder bleiben niedriger aber nicht zu niedrig
+        else if (aspectRatio > 2.5) {
+            span = Math.max(span, Math.ceil(span * 0.6));
+        }
+        else if (aspectRatio > 1.8) {
+            span = Math.max(span, Math.ceil(span * 0.8));
+        }
+        // Quadratische Bilder - optimale Höhe
+        else if (aspectRatio >= 0.9 && aspectRatio <= 1.1) {
+            span = Math.max(span, Math.ceil(span * 1.0));
+        }
+
+        // Mindest-Span um zu kleine Bilder zu vermeiden
+        span = Math.max(span, 15);
+
+        // Maximum begrenzen um zu große Lücken zu vermeiden
+        span = Math.min(span, 80);
+
+        item.style.gridRowEnd = `span ${span}`;
     }
 
     function openAt(index) {
