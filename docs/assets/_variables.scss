@@ -3,9 +3,6 @@ $theme-primary-1: #38d9a9;  // Grün (war $theme-green)
 $theme-primary-2: #3383c9;  // Blau (war $theme-blue)
 $theme-white: #fff;
 
-// Für Rückwärtskompatibilität (falls noch irgendwo verwendet)
-$theme-green: $theme-primary-1;
-$theme-blue: $theme-primary-2;
 
 // Link-Farben (basierend auf Theme-Farben)
 $link-color: $theme-primary-1;

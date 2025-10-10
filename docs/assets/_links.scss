@@ -139,11 +139,11 @@ a {
 // Blog-Post-Preview Links auf der Homepage
 .post-list {
   .post-link {
-    color: $link-color;
+    color: $theme-primary-2;
     text-decoration: none;
 
     &:hover {
-      color: $link-hover-color;
+      color: darken($theme-primary-2, 15%);
       text-decoration: underline;
     }
   }
@@ -174,5 +174,44 @@ a {
       color: $link-hover-color !important;
       text-decoration: underline;
     }
+  }
+}
+
+// Sehr spezifische Post-Content Link-Regeln um alle Standard-Styles zu überschreiben
+article.post .post-content a,
+.post-content a,
+.e-content a {
+  color: $link-color !important;
+  text-decoration: underline !important;
+  transition: color 0.2s ease !important;
+
+  &:hover {
+    color: $link-hover-color !important;
+    text-decoration: underline !important;
+  }
+
+  &:visited {
+    color: darken($link-color, 10%) !important;
+  }
+
+  &:focus {
+    color: $link-hover-color !important;
+  }
+}
+
+// Überschreibe alle möglichen Link-Styles in Posts
+.post a,
+.post-content a,
+.e-content a,
+article a {
+  color: $link-color !important;
+
+  &:hover,
+  &:focus {
+    color: $link-hover-color !important;
+  }
+
+  &:visited {
+    color: darken($link-color, 10%) !important;
   }
 }
