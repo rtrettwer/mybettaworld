@@ -1,42 +1,24 @@
-{%- assign dir = include.dir | default: page.gallery_dir -%}
+{%- assign dir = page.gallery_dir | default: include.dir | default: '/assets/images' -%}
 {%- if dir -%}
-{%- assign last_char = dir | slice: -1, 1 -%}
-{%- if last_char != '/' -%}
-  {%- assign dir = dir | append: '/' -%}
-{%- endif -%}
-{%- assign dir_len = dir | size -%}
-{%- assign gallery_thumbnails = "" | split: "" -%}
 
-{%- comment -%}Filtere NUR Thumbnails aus dem spezifischen Verzeichnis{%- endcomment -%}
+{%- comment -%}Exakte Pfad-Filterung statt contains{%- endcomment -%}
+{%- assign gallery_thumbnails = "" | split: "" -%}
+{%- assign target_dir_with_slash = dir | append: '/' -%}
+
 {%- for f in site.static_files -%}
-  {%- assign path_prefix = f.path | slice: 0, dir_len -%}
-  {%- assign is_in_dir = path_prefix == dir -%}
-  {%- assign is_webp = f.extname == '.webp' -%}
-  {%- assign filename = f.path | split: '/' | last -%}
-  {%- comment -%}Nur Dateien die EXAKT auf _thumbnail.webp enden{%- endcomment -%}
-  {%- assign filename_len = filename | size -%}
-  {%- if filename_len >= 14 -%}
-    {%- assign thumb_suffix = filename | slice: -14, 14 -%}
-    {%- assign is_exact_thumb = thumb_suffix == '_thumbnail.webp' -%}
-    {%- comment -%}Zusätzliche Prüfung: Datei MUSS _thumbnail enthalten{%- endcomment -%}
-    {%- assign contains_thumb = filename contains '_thumbnail' -%}
-    {%- if is_in_dir and is_webp and is_exact_thumb and contains_thumb -%}
-      {%- assign gallery_thumbnails = gallery_thumbnails | push: f -%}
+  {%- if f.extname == '.webp' -%}
+    {%- assign filename = f.path | split: '/' | last -%}
+    {%- if filename contains '_thumbnail' -%}
+      {%- comment -%}Prüfe ob der Pfad exakt mit dem Zielverzeichnis beginnt{%- endcomment -%}
+      {%- assign file_dir = f.path | remove: filename -%}
+      {%- if file_dir == target_dir_with_slash -%}
+        {%- assign gallery_thumbnails = gallery_thumbnails | push: f -%}
+      {%- endif -%}
     {%- endif -%}
   {%- endif -%}
 {%- endfor -%}
 
-{%- comment -%}Debug: Entferne alle Nicht-Thumbnails explizit{%- endcomment -%}
-{%- assign final_thumbnails = "" | split: "" -%}
-{%- for thumb in gallery_thumbnails -%}
-  {%- assign filename = thumb.path | split: '/' | last -%}
-  {%- unless filename contains '_thumbnail' -%}
-    {%- continue -%}
-  {%- endunless -%}
-  {%- assign final_thumbnails = final_thumbnails | push: thumb -%}
-{%- endfor -%}
-
-{%- assign gallery_thumbnails = final_thumbnails | uniq | sort: "path" -%}
+{%- assign gallery_thumbnails = gallery_thumbnails | uniq | sort: "path" -%}
 {%- assign gallery_meta = site.data.gallery | default: empty -%}
 {%- assign gallery_id = include.gallery_id | default: 'main' -%}
 

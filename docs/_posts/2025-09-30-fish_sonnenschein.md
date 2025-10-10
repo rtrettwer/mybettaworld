@@ -12,7 +12,7 @@ fish_price: 5 € (Interaquaristik)
 fish_type: Betta splendens
 fish_color: Weißer Körper mit roten Flossen; potentiell marblend
 fish_gender: Weiblich
-gallery_dir: /assets/images/fish/sonnenschein/
+gallery_dir: /assets/images/fish/sonnenschein
 ---
 
 
