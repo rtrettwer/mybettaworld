@@ -15,14 +15,15 @@
   max-width: 1800px;
   width: 98%;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 12px 20px; // Gleichmäßiges vertikales Padding reduziert
+  box-sizing: border-box; // Wichtig für korrekte Höhenberechnung
 
   // Zwei-Spalten-Layout: Brand-Container + Navigation
   display: grid;
   grid-template-columns: auto 1fr; // Brand-Container, dann Navigation
   gap: 20px; // Abstand zwischen Brand und Navigation
   align-items: center; // Vertikal zentriert
-  min-height: 70px; // Etwas höher für bessere vertikale Zentrierung
+  height: 64px; // Feste Höhe statt min-height für präzise Kontrolle
 }
 
 // Container für Icon + Titel zusammen
@@ -31,6 +32,7 @@
   align-items: center;
   gap: 12px; // Kleiner Abstand zwischen Icon und Titel
   flex-shrink: 0;
+  height: 40px; // Feste Höhe gleich dem Logo für konsistente Zentrierung
 }
 
 // Spalte 1: Logo - immer sichtbar, angemessene Größe
@@ -38,6 +40,7 @@
   display: flex;
   align-items: center;
   flex-shrink: 0; // Logo wird nie kleiner
+  height: 40px; // Feste Höhe für konsistente Zentrierung
 
   .logo-link {
     display: block;
@@ -50,7 +53,7 @@
     height: 40px; // Größer: von 32px auf 40px
     border-radius: 50%; // Runder weißer Hintergrund
     background: $theme-white; // Weißer Hintergrund für bessere Sichtbarkeit
-    padding: 0; // Kein Padding - Fisch liegt über dem Kreis
+    padding: 0; // Kein Padding - Fisch liegt über den Kreis
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); // Subtiler Schatten
     transition: transform 0.2s, box-shadow 0.2s;
     position: relative; // Für absolute Positionierung des Bildes
@@ -77,6 +80,10 @@
 
 // Spalte 2: Titel (verschwindet früher bei Platzmangel)
 .header-title {
+  height: 40px; // Gleiche Höhe wie Logo
+  display: flex;
+  align-items: center; // Vertikal zentriert im Container
+
   .site-title {
     color: $theme-white !important;
     font-weight: 600;
@@ -85,6 +92,7 @@
     white-space: nowrap;
     transition: color 0.2s;
     margin: 0; // Kein zusätzlicher Margin
+    line-height: 1; // Reduzierte Zeilenhöhe für kompaktere Darstellung
 
     &:hover {
       color: $link-color !important;
@@ -149,37 +157,65 @@
     }
   }
 
-  // Burger Menu - nur bei sehr kleinen Screens
+  // Burger Menu - einheitliches Styling für ALLE Bildschirmgrößen - mit höchster Spezifität
   .burger-menu {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    background: $theme-white;
-    border-radius: 4px;
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    transition: background 0.2s;
-    margin-left: auto; // Schiebt das Burger-Menü nach rechts
+    display: none !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    cursor: pointer !important;
+    transition: none !important;
+    flex-shrink: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
 
     &:hover {
-      background: rgba(255, 255, 255, 0.9);
+      background: transparent !important;
     }
 
-    .menu-icon svg {
-      width: 18px;
-      height: 18px;
+    .menu-icon {
+      width: 24px !important;
+      height: 24px !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+      padding: 6px !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-radius: 4px !important;
+      transition: background 0.2s !important;
 
-      path {
-        fill: $theme-primary-1;
+      &:hover {
+        background: rgba(255, 255, 255, 1) !important;
+      }
+
+      svg {
+        width: 18px !important;
+        height: 18px !important;
+        display: block !important;
+        margin: 0 !important;
+        padding: 0 !important;
+
+        path {
+          fill: $theme-primary-1 !important;
+        }
       }
     }
   }
 
-  // Wechsel zu Burger Menu bei kleineren Screens (früher)
-  @media (max-width: 800px) {
-    // Burger-Menü nach rechts ausrichten
-    justify-self: end;
+  // Einheitlicher Media Query für ALLE kleinen Bildschirme - mit !important Regeln
+  @media (max-width: 1000px) {
+    width: auto !important;
+    height: 40px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    justify-self: end !important;
+    position: relative !important;
 
     .trigger {
       display: none;
@@ -212,11 +248,76 @@
     }
 
     .burger-menu {
-      display: flex;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      position: static !important;
+
+      .menu-icon {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        // Gleiche Eigenschaften für ALLE Bildschirmgrößen unter 1000px - mit !important
+        width: 24px !important;
+        height: 24px !important;
+        padding: 6px !important;
+        background: rgba(255, 255, 255, 0.9) !important;
+        border-radius: 4px !important;
+        margin: 0 !important;
+      }
     }
 
     .nav-trigger:checked ~ .trigger {
       display: flex;
+    }
+  }
+}
+
+// Zusätzliche hochspezifische Regeln für Burger-Menü - als Backup gegen Minima-Overrides
+.site-header .site-nav .burger-menu {
+  display: none !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  margin: 0 !important;
+
+  .menu-icon {
+    width: 24px !important;
+    height: 24px !important;
+    padding: 6px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    border-radius: 4px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 0 !important;
+
+    svg {
+      width: 18px !important;
+      height: 18px !important;
+
+      path {
+        fill: $theme-primary-1 !important;
+      }
+    }
+  }
+}
+
+// Mobile Burger-Menü mit maximaler Spezifität
+@media (max-width: 1000px) {
+  .site-header .site-nav .burger-menu {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    .menu-icon {
+      width: 24px !important;
+      height: 24px !important;
+      padding: 6px !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border-radius: 4px !important;
     }
   }
 }
