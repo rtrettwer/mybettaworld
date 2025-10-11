@@ -14,6 +14,10 @@ gallery_dir: /assets/images/food
 
 
 
+
+
+
+
 Die meisten meiner Fische füttere ich mit Futterautomaten und Granulat. Da wo Garnelen, Schnecken und Welse drin sind verteile ich zusätzlich Garnelen Sticks und Spirulina Tabs.
 Ich mische alle Kampffisch-Futterarten, damit es ein bisschen Abwechslung gibt.
 Zwischendrin füttere ich mit Tetra Min Flocken - alle meine Tiere (Fische, Schnecken, Garnelen) lieben sie!

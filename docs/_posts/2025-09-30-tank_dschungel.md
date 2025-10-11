@@ -36,5 +36,9 @@ gallery_dir: /assets/images/tanks/jungle
 
 
 
+
+
+
+
 Das Dschungel-Aquarium ist mein erstes und hat alles ins Rollen gebracht. Es hat schon mehrere Rescapes erfahren und ist
 dicht bepflanzt. Zwischendrin hatte ich eine Garnelenexplosion, aber das hat sich beruhigt.

@@ -8,6 +8,10 @@ date: 2025-10-11 10:00:00 +0200
 excerpt: "Wie ich Betta splendens und ihre Varianten bestimmen kann– mit Beispielen zu meinen sechs Fischen."
 ---
 
+
+
+
+
 Als ich anfing, mich intensiver mit Bettas zu beschäftigen, war ich oft überfordert von all den Fachbegriffen: Plakat,
 Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich eigentlich, welche Art und welchen
 Farbschlag meine Fische haben?
@@ -79,7 +83,7 @@ vertikale Bereitschaftsbalken
 </thead>
 <tbody>
 <tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Kampfi</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -116,7 +120,7 @@ vertikale Bereitschaftsbalken
 </td>
 </tr>
 <tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Bandit</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/29/fish_bandit">Bandit</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -153,7 +157,7 @@ vertikale Bereitschaftsbalken
 </td>
 </tr>
 <tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Shadow</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/26/fish_shadow">Shadow</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -190,7 +194,7 @@ vertikale Bereitschaftsbalken
 </td>
 </tr>
 <tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Lila</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/27/fish_lila">Lila</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -227,7 +231,7 @@ vertikale Bereitschaftsbalken
 </td>
 </tr>
 <tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Sonnenschein</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -264,7 +268,7 @@ vertikale Bereitschaftsbalken
 </td>
 </tr>
 <tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Sir Pryce</td>
+<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a></td>
 <td style="border: 1px solid #ddd; padding: 8px;">
 <span style="color: #38d9a9;">✓ Domestic</span><br>
 ○ Wildform
@@ -306,17 +310,17 @@ vertikale Bereitschaftsbalken
 
 ### Fazit: So würde ich meine Fische beschreiben
 
-**Kampfi:** Domestic Betta splendens, Männchen, Plakat mit ca. 160° Caudale-Winkel. Rotbasis mit aktiver Marble-Genetik, starke Dragon/Metallic-Zonen und teilweise Butterfly-Kanten an den Flossen. Typischer Show-Plakat mit komplexer Farbgenetik.
+**[Kampfi](/fish/2025/09/30/fish_kampfi):** Domestic Betta splendens, Männchen, Plakat mit ca. 160° Caudale-Winkel. Rotbasis mit aktiver Marble-Genetik, starke Dragon/Metallic-Zonen und teilweise Butterfly-Kanten an den Flossen. Typischer Show-Plakat mit komplexer Farbgenetik.
 
-**Bandit:** Domestic Betta splendens, Männchen, Plakat mit fächerförmiger Caudale. Kupfer/braune Grundfarbe mit intensivem blau-metallischem Schimmer, markante weiße Gesichtsmask und Marble-Einfluss. Copper-Blue-Metallic mit White-Mask-Pattern.
+**[Bandit](/fish/2025/09/29/fish_bandit):** Domestic Betta splendens, Männchen, Plakat mit fächerförmiger Caudale. Kupfer/braune Grundfarbe mit intensivem blau-metallischem Schimmer, markante weiße Gesichtsmask und Marble-Einfluss. Copper-Blue-Metallic mit White-Mask-Pattern.
 
-**Shadow:** Domestic Betta splendens, Weibchen, Plakat-typische Proportionen. Tiefschwarze Grundfarbe mit kräftigem teal/royal-blue Irideszenz-Schimmer, keine Musterung. Black-Blue-Iridescent Female.
+**[Shadow](/fish/2025/09/26/fish_shadow):** Domestic Betta splendens, Weibchen, Plakat-typische Proportionen. Tiefschwarze Grundfarbe mit kräftigem teal/royal-blue Irideszenz-Schimmer, keine Musterung. Black-Blue-Iridescent Female.
 
-**Lila:** Domestic Betta splendens, Weibchen, Plakat-typische Form. Dunkle indigo/blaue Metallic-Färbung, weitgehend einfarbig ohne komplexe Muster. Dark-Blue-Metallic Female.
+**[Lila](/fish/2025/09/27/fish_lila):** Domestic Betta splendens, Weibchen, Plakat-typische Form. Dunkle indigo/blaue Metallic-Färbung, weitgehend einfarbig ohne komplexe Muster. Dark-Blue-Metallic Female.
 
-**Sonnenschein:** Domestic Betta splendens, Weibchen, Plakat-typisch. Weißer/cremefarbener Körper mit roten Flossen, wahrscheinlich Marble-Genetik (Farbveränderungen über Zeit). White-Red-Marble Female.
+**[Sonnenschein](/fish/2025/09/25/fish_sonnenschein):** Domestic Betta splendens, Weibchen, Plakat-typisch. Weißer/cremefarbener Körper mit roten Flossen, wahrscheinlich Marble-Genetik (Farbveränderungen über Zeit). White-Red-Marble Female.
 
-**Sir Pryce:** Domestic Betta splendens, Männchen, Plakat. Blau-metallischer Körper mit schwarzer Kopf-Mask und roten Pelvic-Flossen, klare Farbabgrenzungen ohne Marble-Aktivität. Blue-Metallic-Black-Mask mit Red-Pelvics.
+**[Sir Pryce](/fish/2025/09/28/fish_sir_pryce):** Domestic Betta splendens, Männchen, Plakat. Blau-metallischer Körper mit schwarzer Kopf-Mask und roten Pelvic-Flossen, klare Farbabgrenzungen ohne Marble-Aktivität. Blue-Metallic-Black-Mask mit Red-Pelvics.
 
 ##  Hinweise für Fotos zur Bestimmung
 

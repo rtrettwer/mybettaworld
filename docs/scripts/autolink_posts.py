@@ -57,40 +57,89 @@ def autolink_content(content, keywords_dict, skip_key):
         front_matter = ''
         body = content
 
+    # Erstmal alle Tabellen finden und HTML-Links darin erstellen
+    def process_table_links(match):
+        table_content = match.group(0)
+
+        # Erst bestehende Markdown-Links zu HTML-Links umwandeln
+        markdown_link_pattern = r'\[([^\]]+)\]\(([^)]+)\)'
+        def markdown_to_html(md_match):
+            text = md_match.group(1)
+            url = md_match.group(2)
+            return f'<a href="{url}">{text}</a>'
+        table_content = re.sub(markdown_link_pattern, markdown_to_html, table_content)
+
+        # Dann alle Keywords in diesem Tabellen-Inhalt durch HTML-Links ersetzen
+        for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
+            if key == skip_key:
+                continue
+            # Nur Begriffe ersetzen, die nicht bereits Links sind
+            pattern = r'(?<!href=")(?<!>)(?<!</a>)' + re.escape(key) + r'(?!\w)(?!</a>)'
+            def table_replacer(table_match):
+                start = table_match.start()
+                pre = table_content[max(0, start-30):start]
+                post = table_content[start:start+30]
+                # Prüfen ob wir bereits in einem Link sind
+                if 'href=' in pre or '<a ' in pre or '</a>' in post:
+                    return table_match.group(0)
+                return f'<a href="{url}">{key}</a>'
+            table_content = re.sub(pattern, table_replacer, table_content)
+        return table_content
+
+    # Alle Tabellen durch verbesserte Versionen ersetzen
+    table_pattern = re.compile(r'<table[^>]*>.*?</table>', re.DOTALL | re.IGNORECASE)
+    body = table_pattern.sub(process_table_links, body)
+
+    # Dann normale Markdown-Links für den Rest
     lines = body.splitlines(keepends=True)
     new_lines = []
+    in_table = False
+
     for line in lines:
+        # Prüfen ob wir in einer HTML-Tabelle sind
+        if '<table' in line.lower():
+            in_table = True
+        elif '</table>' in line.lower():
+            in_table = False
+
         if line.lstrip().startswith('#'):  # Überschrift überspringen
             new_lines.append(line)
             continue
-        modified_line = line
-        # 1. Bestehende Links auf Keywords prüfen und ggf. korrigieren
-        for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
-            if key == skip_key:
-                continue
-            # Finde alle [key](irgendeine_url) und prüfe die URL
-            link_pattern = re.compile(r'\[' + re.escape(key) + r'\]\(([^)]+)\)')
-            def link_replacer(match):
-                current_url = match.group(1)
-                if current_url != url:
-                    return f'[{key}]({url})'  # Korrigiere die URL
-                else:
-                    return match.group(0)  # Link ist korrekt
-            modified_line = link_pattern.sub(link_replacer, modified_line)
-        # 2. Begriffe längster zuerst: keine Überschneidung, nur noch nicht verlinkte Begriffe
-        for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
-            if key == skip_key:
-                continue
-            # Exakter Match, Case-sensitive, nur Ganzwort, nicht bereits verlinkt
-            pattern = r'(?<!\[)' + re.escape(key) + r'(?!\w)(?!\]\([^)]+\))'
-            def replacer(match):
-                start = match.start()
-                pre = modified_line[max(0, start-50):start]
-                if '](' in pre[-10:] or '<a ' in pre[-10:]:
-                    return match.group(0)
-                return f'[{key}]({url})'
-            modified_line = re.sub(pattern, replacer, modified_line)
-        new_lines.append(modified_line)
+
+        # Nur außerhalb von Tabellen normale Autolinks erstellen
+        if not in_table:
+            modified_line = line
+            # 1. Bestehende Links auf Keywords prüfen und ggf. korrigieren
+            for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
+                if key == skip_key:
+                    continue
+                # Finde alle [key](irgendeine_url) und prüfe die URL
+                link_pattern = re.compile(r'\[' + re.escape(key) + r'\]\(([^)]+)\)')
+                def link_replacer(match):
+                    current_url = match.group(1)
+                    if current_url != url:
+                        return f'[{key}]({url})'  # Korrigiere die URL
+                    else:
+                        return match.group(0)  # Link ist korrekt
+                modified_line = link_pattern.sub(link_replacer, modified_line)
+            # 2. Begriffe längster zuerst: keine Überschneidung, nur noch nicht verlinkte Begriffe
+            for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
+                if key == skip_key:
+                    continue
+                # Exakter Match, Case-sensitive, nur Ganzwort, nicht bereits verlinkt
+                pattern = r'(?<!\[)' + re.escape(key) + r'(?!\w)(?!\]\([^)]+\))'
+                def replacer(match):
+                    start = match.start()
+                    pre = modified_line[max(0, start-50):start]
+                    if '](' in pre[-10:] or '<a ' in pre[-10:]:
+                        return match.group(0)
+                    return f'[{key}]({url})'
+                modified_line = re.sub(pattern, replacer, modified_line)
+            new_lines.append(modified_line)
+        else:
+            # In Tabellen: Zeile unverändert lassen (Links wurden schon oben erstellt)
+            new_lines.append(line)
+
     return front_matter + ''.join(new_lines)
 
 def main():
