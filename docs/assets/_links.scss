@@ -215,3 +215,18 @@ article a {
     color: darken($link-color, 10%) !important;
   }
 }
+
+// Autoren-Link in Blog-Übersicht und Posts: grau wie das Datum, erst beim Hover grün
+.author-link-meta {
+  color: #888 !important;
+  font-size: inherit;
+  text-decoration: none !important;
+  font-weight: normal;
+  transition: color 0.2s;
+
+  &:hover,
+  &:focus {
+    color: $theme-primary-1 !important;
+    text-decoration: underline !important;
+  }
+}

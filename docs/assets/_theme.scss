@@ -3,3 +3,16 @@
 // Beispiel: Globale Theme-Styles
 // Hier kannst du gezielt Theme-spezifische Styles ergänzen, z.B. Akzentfarben oder Buttons.
 // Vermeide globale body-Styles, damit das Minima-Layout erhalten bleibt.
+
+// Autoren-Link in der Blog-Übersicht: grau, wie das Datum, erst beim Hover grün
+.author-link-meta {
+  color: #888;
+  font-size: inherit;
+  text-decoration: none;
+  font-weight: normal;
+  transition: color 0.2s;
+  &:hover, &:focus {
+    color: $theme-primary-1;
+    text-decoration: underline;
+  }
+}

@@ -8,7 +8,12 @@ layout: default
       {%- for post in site.posts -%}
       <li>
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <span class="post-meta">
+          {{ post.date | date: date_format }}
+          • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+              <a class="p-author h-card author-link-meta" itemprop="name" href="{{ site.baseurl }}/about/">{{ post.author }}</a>
+            </span>
+        </span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
             {{ post.title | escape }}
