@@ -10,3 +10,19 @@
 
 // Hier kannst du weitere eigene SCSS-Dateien einbinden
 // z.B. @import 'gallery';
+
+// Globale Wrapper-Regel für Layout-Breite und Ränder
+.wrapper {
+  width: 66.6667vw; // 2/3 der Viewport-Breite für Inhalt
+  max-width: none;
+  margin-left: 16.6667vw; // 1/6 links
+  margin-right: 16.6667vw; // 1/6 rechts
+  box-sizing: border-box;
+}
+
+// Header und Footer übernehmen die neue Breite automatisch durch .wrapper
+
+// Optional: Footer-Text mittig, aber mit gleichem Rand
+.site-footer .wrapper {
+  text-align: left;
+}

@@ -3,7 +3,9 @@
 .site-header {
   background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);
   position: relative;
-  z-index: 1000; // Stelle sicher, dass der Header über anderen Elementen liegt
+  z-index: 1000;
+  min-width: 1500px; // Noch mehr Platz für Navigation und Titel
+  width: 100%;
 
   .site-title,
   .site-nav,
@@ -145,4 +147,11 @@
 
 .site-header .site-nav .page-link:hover {
   color: $theme-primary-1 !important;
+}
+
+.wrapper {
+  max-width: 1800px;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
 }
