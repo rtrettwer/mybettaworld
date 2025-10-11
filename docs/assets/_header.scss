@@ -37,13 +37,15 @@
 
   .logo-circle {
     display: block;
-    width: 32px; // Kleinere, angemessene Größe für Header
-    height: 32px;
-    border-radius: 50%;
-    background: $theme-white;
-    padding: 3px; // Weniger Padding
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); // Subtilerer Schatten
+    width: 40px; // Größer: von 32px auf 40px
+    height: 40px; // Größer: von 32px auf 40px
+    border-radius: 50%; // Runder weißer Hintergrund
+    background: $theme-white; // Weißer Hintergrund für bessere Sichtbarkeit
+    padding: 0; // Kein Padding - Fisch liegt über dem Kreis
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); // Subtiler Schatten
     transition: transform 0.2s, box-shadow 0.2s;
+    position: relative; // Für absolute Positionierung des Bildes
+    overflow: visible; // Wichtig: Bild darf über den Kreis hinausragen
 
     &:hover {
       transform: scale(1.05);
@@ -51,10 +53,15 @@
     }
 
     img {
-      width: 100%;
-      height: 100%;
-      border-radius: 50%;
-      object-fit: cover;
+      position: absolute; // Absolute Positionierung über dem weißen Kreis
+      top: 50%; // Zentriert vertikal
+      left: 50%; // Zentriert horizontal
+      transform: translate(-50%, -50%); // Perfekte Zentrierung
+      width: 120%; // Größer als der Kreis, damit er darüber liegt
+      height: 120%;
+      object-fit: contain; // Vollständiges Bild ohne Abschneiden
+      display: block;
+      z-index: 2; // Über dem weißen Hintergrund
     }
   }
 }
@@ -91,30 +98,30 @@
     display: none;
   }
 
-  // Desktop Navigation - horizontale Menüpunkte
+  // Desktop Navigation - horizontale Menüpunkte mit engeren Abständen
   .trigger {
     display: flex;
     align-items: center;
-    gap: 25px; // Gleichmäßiger Abstand
+    gap: 15px; // Kleinerer Startabstand (war 25px)
 
-    // Bei weniger Platz kleinere Abstände
+    // Bei weniger Platz noch kleinere Abstände
     @media (max-width: 1200px) {
-      gap: 20px;
+      gap: 12px; // Reduziert von 20px
     }
 
     @media (max-width: 1000px) {
-      gap: 15px;
+      gap: 8px; // Reduziert von 15px
     }
 
     @media (max-width: 900px) {
-      gap: 10px;
+      gap: 5px; // Reduziert von 10px
     }
   }
 
   .page-link {
     color: $theme-white !important;
     text-decoration: none !important;
-    padding: 8px 12px;
+    padding: 8px 10px; // Weniger horizontales Padding (war 8px 12px)
     border-radius: 4px;
     transition: all 0.2s;
     white-space: nowrap;
@@ -125,10 +132,10 @@
       color: $link-color !important;
     }
 
-    // Bei sehr wenig Platz kleinere Schrift und weniger Padding
+    // Bei sehr wenig Platz noch kompakter
     @media (max-width: 900px) {
       font-size: 0.9rem;
-      padding: 6px 8px;
+      padding: 6px 6px; // Noch weniger Padding
     }
   }
 
@@ -158,8 +165,8 @@
     }
   }
 
-  // Wechsel zu Burger Menu bei sehr kleinen Screens
-  @media (max-width: 600px) {
+  // Wechsel zu Burger Menu bei kleineren Screens (früher)
+  @media (max-width: 800px) {
     .trigger {
       display: none;
       position: absolute;
