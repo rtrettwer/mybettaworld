@@ -1,0 +1,15 @@
+// Einheitliche Button-Styles
+.btn {
+  background: $theme-primary-1;
+  color: #fff !important;
+  border: none;
+  border-radius: 6px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(56,217,169,0.08);
+  transition: background 0.2s, box-shadow 0.2s;
+  &:hover, &:focus {
+    background: darken($theme-primary-1, 10%);
+    box-shadow: 0 4px 16px rgba(56,217,169,0.16);
+  }
+}

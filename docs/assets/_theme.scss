@@ -16,3 +16,7 @@
     text-decoration: underline;
   }
 }
+
+body {
+  background-color: darken($theme-primary-2, 10%);
+}

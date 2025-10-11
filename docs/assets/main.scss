@@ -1,48 +1,14 @@
 ---
 ---
 @import './variables';
-@import './theme';
 @import './header';
 @import './gallery';
 @import './footer';
 @import './links';
 @import "minima";
+@import './theme';
+@import './typography';
+@import './buttons';
+@import './cards';
+// ...existing code...
 
-// Hier kannst du weitere eigene SCSS-Dateien einbinden
-// z.B. @import 'gallery';
-
-// Globale Wrapper-Regel für Layout-Breite und Ränder
-.wrapper {
-  width: 66.6667vw; // 2/3 der Viewport-Breite für Inhalt
-  max-width: none;
-  margin-left: 16.6667vw; // 1/6 links
-  margin-right: 16.6667vw; // 1/6 rechts
-  box-sizing: border-box;
-}
-
-// Responsive Anpassung für Tablets
-@media (max-width: 1200px) {
-  .wrapper {
-    width: 90vw;
-    margin-left: 5vw;
-    margin-right: 5vw;
-  }
-}
-
-// Responsive Anpassung für Smartphones
-@media (max-width: 700px) {
-  .wrapper {
-    width: 100vw;
-    margin-left: 0;
-    margin-right: 0;
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-// Header und Footer übernehmen die neue Breite automatisch durch .wrapper
-
-// Optional: Footer-Text mittig, aber mit gleichem Rand
-.site-footer .wrapper {
-  text-align: left;
-}
