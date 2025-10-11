@@ -1,9 +1,14 @@
 // Theme-Farbpalette
-$theme-primary-1: #ffa83d;  // Grün (war $theme-green)
-$theme-primary-2: #3383c9;  // Blau (war $theme-blue)
+$theme-primary-1: #ffa83d;
+$theme-primary-2: #cc1010;
+$theme-primary-3: #850043;
 $theme-white: #fff;
 
 
 // Link-Farben (basierend auf Theme-Farben)
 $link-color: $theme-primary-1;
 $link-hover-color: darken($theme-primary-1, 15%);
+
+
+// Header-Gradient
+$header-gradient: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 50%, $theme-primary-3 100%);

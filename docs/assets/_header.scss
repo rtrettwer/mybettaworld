@@ -1,7 +1,7 @@
 @import './variables';
 
 .site-header {
-  background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);
+  background: $header-gradient;
   position: relative;
   z-index: 1000;
   width: 100%;
