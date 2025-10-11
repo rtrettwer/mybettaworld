@@ -1,26 +1,22 @@
 <footer class="site-footer h-card">
-  <div class="wrapper">
-    <div class="footer-col-wrapper">
-      <div>
-        <span style="display: flex; align-items: center; gap: 0.5em;">
-          <span class="footer-logo-circle">
-            <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="Logo">
-          </span>
-          <span class="footer-heading">
-            {{ site.title | escape }}
-          </span>
-        </span>
+  <div class="footer-col-wrapper">
+    <div class="footer-row footer-row-heading">
+      <span class="footer-logo-circle">
+        <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="Logo">
+      </span>
+      <div class="footer-title-group">
+        <span class="footer-heading">{{ site.title | escape }}</span>
       </div>
-      <div class="footer-col footer-col-3">
-        <p class="footer-description">{{- site.description | escape -}}</p>
-
-        <!-- Legal Links -->
-        <div class="footer-legal-links" style="margin-top: 1rem; padding-top: 1rem; border-top: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; gap: 1.5em; flex-wrap: wrap;">
-          <a href="{{ '/impressum/' | relative_url }}" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9em;">Impressum</a>
-          <a href="{{ '/datenschutz/' | relative_url }}" style="color: rgba(255,255,255,0.8); text-decoration: none; font-size: 0.9em;">Datenschutz</a>
-          <span style="color: rgba(255,255,255,0.7); font-size: 0.9em; white-space: nowrap;">&copy; 2025 Rike Trettwer. Alle Rechte vorbehalten.</span>
-        </div>
-      </div>
+    </div>
+    <div class="footer-row footer-row-meta">
+      <span class="footer-meta-left">
+        <span class="footer-subtitle">{{- site.description | escape -}}</span>
+      </span>
+      <span class="footer-meta-right">
+        <a href="{{ '/impressum/' | relative_url }}" class="footer-link">Impressum</a>
+        <a href="{{ '/datenschutz/' | relative_url }}" class="footer-link">Datenschutz</a>
+        <span class="footer-copyright">&copy; 2025 Rike Trettwer. Alle Rechte vorbehalten.</span>
+      </span>
     </div>
   </div>
 </footer>
