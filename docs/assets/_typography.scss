@@ -3,10 +3,11 @@ body {
   font-family: 'Inter', 'Lato', Arial, sans-serif;
   font-size: 18px;
   line-height: 1.7;
-  color: #222;
+  color: #e8e8e8; // Helle Schrift für dunklen Hintergrund
+  background-color: #1a1a1a; // Dunkler Hintergrund
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%); // Subtiler Gradient
 }
 h1, h2, h3 {
   font-weight: 700;
   margin-bottom: 0.5em;
 }
-

@@ -10,18 +10,27 @@
   border: none !important;
 }
 
-.wrapper {
+// Wrapper NUR für den Header - nicht global!
+.site-header .wrapper {
   max-width: 1800px;
   width: 98%;
   margin: 0 auto;
   padding: 0 20px;
 
-  // Drei-Spalten-Layout mit CSS Grid
+  // Zwei-Spalten-Layout: Brand-Container + Navigation
   display: grid;
-  grid-template-columns: auto 1fr auto;
-  gap: 20px;
+  grid-template-columns: auto 1fr; // Brand-Container, dann Navigation
+  gap: 20px; // Abstand zwischen Brand und Navigation
+  align-items: center; // Vertikal zentriert
+  min-height: 70px; // Etwas höher für bessere vertikale Zentrierung
+}
+
+// Container für Icon + Titel zusammen
+.header-brand {
+  display: flex;
   align-items: center;
-  min-height: 60px;
+  gap: 12px; // Kleiner Abstand zwischen Icon und Titel
+  flex-shrink: 0;
 }
 
 // Spalte 1: Logo - immer sichtbar, angemessene Größe
@@ -68,8 +77,6 @@
 
 // Spalte 2: Titel (verschwindet früher bei Platzmangel)
 .header-title {
-  justify-self: center;
-
   .site-title {
     color: $theme-white !important;
     font-weight: 600;
@@ -77,6 +84,7 @@
     text-decoration: none !important;
     white-space: nowrap;
     transition: color 0.2s;
+    margin: 0; // Kein zusätzlicher Margin
 
     &:hover {
       color: $link-color !important;
@@ -91,7 +99,9 @@
 
 // Spalte 3: Navigation
 .site-nav {
-  justify-self: end;
+  justify-self: end; // Navigation rechts ausrichten
+  display: flex;
+  align-items: center; // Vertikal zentriert
   position: relative;
 
   .nav-trigger {
@@ -150,6 +160,7 @@
     height: 36px;
     cursor: pointer;
     transition: background 0.2s;
+    margin-left: auto; // Schiebt das Burger-Menü nach rechts
 
     &:hover {
       background: rgba(255, 255, 255, 0.9);
@@ -167,6 +178,9 @@
 
   // Wechsel zu Burger Menu bei kleineren Screens (früher)
   @media (max-width: 800px) {
+    // Burger-Menü nach rechts ausrichten
+    justify-self: end;
+
     .trigger {
       display: none;
       position: absolute;

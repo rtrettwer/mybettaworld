@@ -1,14 +1,12 @@
 ---
 ---
 @import './variables';
-@import './header';
-@import './gallery';
-@import './footer';
-@import './links';
-@import "minima";
+@import "minima"; // Minima zuerst laden
 @import './theme';
 @import './typography';
+@import './header';
+@import './gallery'; // Galerie nach Minima, damit unsere Styles Vorrang haben
+@import './footer';
+@import './links';
 @import './buttons';
 @import './cards';
-// ...existing code...
-

@@ -1,6 +1,20 @@
 // Gallery Component Styles - Modernes, rasterauflösendes Grid
 .db-gallery {
-  margin: 2rem 0;
+  margin: 2rem auto !important; // !important für Zentrierung gegen Jekyll-Overrides
+  max-width: 1200px !important; // !important um gallery-wide override zu besiegen
+  padding: 0 20px; // Padding links/rechts
+  width: calc(100% - 40px) !important; // Berücksichtigt das Padding, !important für Override
+  box-sizing: border-box; // Padding in Breite einrechnen
+  display: block; // Explizit als Block-Element
+}
+
+// Spezifischere Regel für gallery-wide-container
+.gallery-wide-container .db-gallery {
+  margin: 2rem auto !important;
+  max-width: 1200px !important;
+  width: calc(100% - 40px) !important;
+  padding: 0 20px !important;
+  box-sizing: border-box !important;
 }
 
 .db-gallery-grid {
@@ -9,7 +23,9 @@
   grid-template-columns: repeat(12, 1fr); // 12 Spalten für lückenloses Pattern
   grid-auto-rows: 90px;
   grid-auto-flow: dense;
-  margin: 1rem 0;
+  margin: 1rem auto !important; // !important für Zentrierung
+  width: 100% !important; // !important für Override
+  box-sizing: border-box;
 
   @media (max-width: 1100px) {
     grid-template-columns: repeat(8, 1fr);
