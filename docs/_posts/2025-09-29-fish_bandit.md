@@ -1,20 +1,34 @@
 ---
 layout: post_fish_portrait
 title: "Bandit"
-date: 2025-09-30 11:06:51 +0200
-categories: [ fish ]
+date: 2025-09-29 11:06:51 +0200
+categories: [fish]
 tags: [ aquarium ,betta, kampffisch, walstad, bandit, fisch ]
 excerpt: "Bandit ist einer meiner besonderen Betta-Fische. Solche Farben habe ich noch nicht gesehen."
 image: /assets/images/fish/bandit/IMG_20250912_110539.webp
-fish_name: Bandit
-fish_birth: März 2025
-fish_price: 36 €
-fish_type: Betta plakat
-fish_color: Multicolor; braun-orangener Körper, schwarz-Orangene Flossen. Weiße Maske im Gesicht. Grün-blau metallisches Schimmern in den Schuppen am Rücken und in den Flossen. Blaue Augen.
-fish_gender: Männlich
+fish_name: "Bandit"
+fish_birth: "März 2025"
+fish_price: "36 €"
+fish_type: "Betta splendens (Domestic), Plakat (Kurzflosser)"
+fish_fins: "Plakat (Kurzflosser)"
+fish_gender: "Männlich"
+fish_age: "7 Monate"
+fish_body: "kompakt, gerade Rückenlinie; Caudale fächerförmig mit kräftigen, überwiegend geraden Strahlen; Dorsale und Anal moderat ausgeprägt"
+fish_color_base: "braun-orange/kupfer am Körper"
+fish_iridescence: "starkes grün-blaues Schimmern auf Rücken und Flossen (deutliche Irideszenz/Metallic; Dragon-Einfluss möglich, aber nicht extrem 'plattenartig')"
+fish_pattern: "Marble (wechselnde Fleckenverteilung); schwarze Flossenränder; auffällige weiße Gesichtsmaske ('Bandit'); teils rote Akzente in den Flossen; Augen wirken hellblau bis blaugrau"
+fish_pectorals: "hell/weißliche Spitzen sichtbar"
+fish_behavior: "sehr nestaktiv; bildet häufig Schaumnester; reaktiv auf Bewegung; initial Jagdtrieb gegenüber Garnelen und ruhigen Boden-/Algenfressern (Amano, Otocinclus); mit schnellen Schwarmfischen (Neons) deutlich weniger fokussiert auf Mitbewohner"
+fish_feeding: "ausgeprägter 'Picky Eater'; bevorzugt Lebendfutter (Artemia, Wasserflöhe); Frost- und Trockenfutter meist abgelehnt, gelegentlich Annahme von NatureHolic Betta-Granulat"
+fish_health: "Diagnose: Camallanus (Fräskopfwürmer) mit sichtbaren roten Endoparasiten; Maßnahmen: Quarantäne, Behandlung mit Nematol (zweimal dosiert), Umzug in frisches Quarantänebecken, gezielte Aufbaufütterung mit Lebendfutter; Status: aktuell blasser und etwas dünn, aber wieder munter; keine sichtbaren Würmer mehr; erholt sich in Einzelhaltung; Hinweis: Display-Becken wegen Wirbellosen nicht behandelt, Bodengrund abgesaugt und Filter ergänzt"
+fish_housing: "Übergangsphase im 30-L-Behälter mit Pflanzen, Heizung und Licht — sehr gutes Nestverhalten; aktuell Einzelhaltung zur Rekonvaleszenz; Höhlen und Deckung werden angenommen"
+fish_breeding: "solide Plakat-Proportionen mit guter Caudalbreite; Marble mit Mask, starke Metallic/Irideszenz; Farbresultate in der Nachzucht erfahrungsgemäß variabel (Marble 'springt'); Empfehlung: erst nach vollständiger Erholung und stabiler Kondition (mind. 3–4 Wochen symptomfrei, guter Ernährungszustand) über Zucht nachdenken"
+fish_special_traits: "auffällige weiße Gesichtsmaske ('Bandit'), starke Irideszenz, Marble-Pattern, hellblaue Augen"
+fish_lineage: "unbekannt"
 gallery_dir: /assets/images/fish/bandit
-
 ---
+
+
 
 
 
@@ -80,7 +94,7 @@ Leider ist mir mein kleiner Bandit krank geworden.
 Ich habe bemerkt, dass Bandit blass und dünn aussieht. Später hingen ihm rote Würmer aus der After-Öffnung (Igitt!).
 Diagnose klar: Camallanus (Fräskopfwürmer). Muss unbedingt behandelt werden, sonst wird er sterben.
 Also Extra-Heizung in eine Plastikbox, Schwimmpflanzen und voila - ein Quarantänebecken für Bandit.
-Nematol online bestellt. In der Zwischenzeit habe ich ihm schön lebende Artemia gegeben, damit er womöglich ein bisschen
+Nematol online bestellt. In der Zwischenzeit habe ich ihm schön lebende [Artemia](/food/2025/09/30/food_artemia) gegeben, damit er womöglich ein bisschen
 was auf die Gräten bekommt.
 
 ## 30.09.2025
@@ -96,7 +110,7 @@ abgemulmt.
 ## 02.10.2025
 
 Bandit hatte noch eine Weile tote rote Würmer aus dem After hängen, mittlerweile hat er nichts mehr hängen. Ich habe ihn
-in ein komplett frisches [Quarantäne](/tank/2025/09/30/tank_quarantaene) Becken umgesetzt. Außerdem habe ich mit Artemia und Wasserflöhen versucht ihn ein
+in ein komplett frisches [Quarantäne](/tank/2025/09/30/tank_quarantaene) Becken umgesetzt. Außerdem habe ich mit [Artemia](/food/2025/09/30/food_artemia) und Wasserflöhen versucht ihn ein
 bisschen aufzupäppeln. Ich bin guten Mutes dass er überlebt<3
 
 ## 07.10.2025
@@ -105,8 +119,8 @@ Ich habe Bandit vorsichtshalber nochmal eine Dosis Nematol gegeben.
 
 ## 08.10.2025
 
-Bandit ist heute zu [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ins [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
+Bandit ist heute zu [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) ins [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
 noch etwas dünn und blass. Aber ich gehe fast davon aus, dass sich das ändern wird, wenn er wieder fitter ist.
-[Sonnenschein](/fish/2025/09/30/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
+[Sonnenschein](/fish/2025/09/25/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
 
-Leider musste ich [Sonnenschein](/fish/2025/09/30/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen Artemia füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.
+Leider musste ich [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen [Artemia](/food/2025/09/30/food_artemia) füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.

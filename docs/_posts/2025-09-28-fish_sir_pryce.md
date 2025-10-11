@@ -1,20 +1,34 @@
 ---
 layout: post_fish_portrait
 title:  "Sir Pryce"
-date:   2025-09-30 11:06:51 +0200
+date:   2025-09-28 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, sir pryce, fisch]
 excerpt: "Sir Pryce war eine echte Überraschung - denn eigentlich hatte ich ein Weibchen gekauft"
 image: /assets/images/fish/sirPryce/sir_pryce.webp
-fish_name: Sir Pryce
-fish_age: Juni 2025
-fish_price: 5 € (Interaquaristik)
-fish_type: Betta plakat
-fish_color: Blau mit schwarzem Kopf und roten Bauchflossen.
-fish_gender: Männlich
+fish_name: "Sir Pryce"
+fish_birth: "Frühling 2025"
+fish_age: "4 Monate"
+fish_price: "5 € (Interaquaristik)"
+fish_type: "Betta splendens (Domestic), Plakat"
+fish_gender: "Männlich"
+fish_fins: "Plakat (Kurzflosser); kompakte, fächerförmige Caudale mit geraden Strahlen; Dorsale und Anal moderat; keine Doubletail-/Dumbo-Merkmale"
+fish_body: "kräftiger, kompakter Körper; gerade Rückenlinie; Caudale weitgehend symmetrisch"
+fish_color_base: "tiefblauer bis stahlblauer Körper"
+fish_iridescence: "deutliches Blau-/Teal-Schimmern auf Schuppen und Flossen"
+fish_pattern: "einfarbig blau mit schwarzer Kopfpartie (dunkle 'Mask'/Kopfzeichnung); Pelvic/Bauchflossen rot mit teils hellen Spitzen; gelegentlich rote Akzente in den Flossen"
+fish_pectorals: "dunkel bis transparent (je nach Licht)"
+fish_behavior: "zunächst als 'Überraschungs-Männchen' deutlich territorial; sehr nestaktiv, baut und versetzt Nester; zeigt ausgeprägte Brutpflege"
+fish_feeding: "nicht explizit angegeben (bitte ergänzen); aktuell keine Auffälligkeiten berichtet"
+fish_health: "unauffällig; keine Erkrankungen beschrieben"
+fish_housing: "Paarungen in ca. 30‑Liter‑Becken mit Schwimmpflanzen; wenig Strömung und geschützte Oberflächenbereiche begünstigen Nestbau"
+fish_breeding: "hoher Brutpflegeinstinkt (bewacht, sammelt Larven, spuckt ins Nest zurück) – sehr geeignet als Linienvater. Farblich voraussichtlich Blau‑Metallic mit dunkler Kopfzeichnung und roten Pelvics; je nach Partner stark variabel: Mit Sonnenschein (hell + Marble): breite Farbpalette, inkl. hell/weiß, rot und Blau‑Metallic; Marble macht Muster sprunghaft. Mit dunkel‑metallic Weibchen (z. B. Lila, ohne starkes Marble): eher stabilere Blau/Dunkel‑Metallic‑Nachzucht mit dunkler Kopfzeichnung möglich."
+fish_special_traits: "fürsorglicher Vater mit ausgeprägter Nest- und Brutpflege; markante Farbkombination (blauer Körper, schwarzer Kopf, rote Pelvics)"
+fish_lineage: "unbekannt"
 gallery_dir: /assets/images/fish/sirPryce
-
 ---
+
+
 
 
 # Das Überraschungs-Männchen

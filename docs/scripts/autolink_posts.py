@@ -23,7 +23,7 @@ def target_url_for_file(md_filename):
     Jekyll erstellt URLs ohne trailing slash
     """
     base = os.path.basename(md_filename)
-    # z.B. 2025-09-30-fish_bandit.md
+    # z.B. 2025-09-29-fish_bandit.md
     m = re.match(r'(\d{4})-(\d{2})-(\d{2})-([^\.]+)\.md$', base)
     if not m:
         raise ValueError(f"Ungültiges Dateiformat: {md_filename}")
@@ -64,13 +64,25 @@ def autolink_content(content, keywords_dict, skip_key):
             new_lines.append(line)
             continue
         modified_line = line
-        # Begriffe längster zuerst: keine Überschneidung
+        # 1. Bestehende Links auf Keywords prüfen und ggf. korrigieren
         for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
             if key == skip_key:
                 continue
-            # Exakter Match, Case-sensitive, nur Ganzwort
-            pattern = r'(?<!\[)(?<!\w)' + re.escape(key) + r'(?!\w)(?!\]\([^)]+\))'
-
+            # Finde alle [key](irgendeine_url) und prüfe die URL
+            link_pattern = re.compile(r'\[' + re.escape(key) + r'\]\(([^)]+)\)')
+            def link_replacer(match):
+                current_url = match.group(1)
+                if current_url != url:
+                    return f'[{key}]({url})'  # Korrigiere die URL
+                else:
+                    return match.group(0)  # Link ist korrekt
+            modified_line = link_pattern.sub(link_replacer, modified_line)
+        # 2. Begriffe längster zuerst: keine Überschneidung, nur noch nicht verlinkte Begriffe
+        for key, url in sorted(keywords_dict.items(), key=lambda x: -len(x[0])):
+            if key == skip_key:
+                continue
+            # Exakter Match, Case-sensitive, nur Ganzwort, nicht bereits verlinkt
+            pattern = r'(?<!\[)' + re.escape(key) + r'(?!\w)(?!\]\([^)]+\))'
             def replacer(match):
                 start = match.start()
                 pre = modified_line[max(0, start-50):start]
@@ -79,7 +91,6 @@ def autolink_content(content, keywords_dict, skip_key):
                 return f'[{key}]({url})'
             modified_line = re.sub(pattern, replacer, modified_line)
         new_lines.append(modified_line)
-
     return front_matter + ''.join(new_lines)
 
 def main():

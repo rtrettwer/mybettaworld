@@ -44,9 +44,11 @@ gallery_dir: /assets/images/tanks/babies
 
 
 
+
+
 ## Über das Becken
 
-Einlaufphase war problemlos, schnelle Stabilisierung der Wasserwerte. Tatsächlich habe ich [Sir Pryce](/fish/2025/09/30/fish_sir_pryce) sehr schnell (Nach
+Einlaufphase war problemlos, schnelle Stabilisierung der Wasserwerte. Tatsächlich habe ich [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) sehr schnell (Nach
 3 Tagen oder so?) eingesetzt, weil er aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus musste. Dort hat er die Weibchen sehr gestresst.
-Außer [Sonnenschein](/fish/2025/09/30/fish_sonnenschein), mit der hat er sich gut vertragen. Deswegen habe ich sie zu ihm gesetzt und voila, einen Tag später
+Außer [Sonnenschein](/fish/2025/09/25/fish_sonnenschein), mit der hat er sich gut vertragen. Deswegen habe ich sie zu ihm gesetzt und voila, einen Tag später
 haben sie sich gepaart.

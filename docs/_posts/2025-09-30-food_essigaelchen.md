@@ -11,6 +11,8 @@ gallery_dir: /assets/images/food/essigaelchen
 
 
 
+
+
 Essigälchen sind winzige Fadenwürmer, die sich hervorragend als Erstfutter für Betta-Larven eignen. Sie sind einfach zu
 züchten und können direkt aus der Kultur entnommen werden. Essigälchen bleiben lange im Wasser beweglich und werden von
 den Jungfischen gerne gefressen. Sie bieten eine gute Ergänzung zu anderen Lebendfuttersorten in der Aufzucht.
