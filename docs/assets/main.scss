@@ -20,6 +20,26 @@
   box-sizing: border-box;
 }
 
+// Responsive Anpassung für Tablets
+@media (max-width: 1200px) {
+  .wrapper {
+    width: 90vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
+  }
+}
+
+// Responsive Anpassung für Smartphones
+@media (max-width: 700px) {
+  .wrapper {
+    width: 100vw;
+    margin-left: 0;
+    margin-right: 0;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 // Header und Footer übernehmen die neue Breite automatisch durch .wrapper
 
 // Optional: Footer-Text mittig, aber mit gleichem Rand
