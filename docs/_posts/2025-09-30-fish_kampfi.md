@@ -1,6 +1,7 @@
 ---
 layout: post_fish_portrait
 title:  "Kampfi"
+author: "Rike Trettwer"
 date:   2025-09-30 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, kampfi, fisch]

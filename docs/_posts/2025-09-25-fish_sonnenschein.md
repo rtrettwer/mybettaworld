@@ -1,6 +1,7 @@
 ---
 layout: post_fish_portrait
 title: "Sonnenschein"
+author: "Rike Trettwer"
 date: 2025-09-25 11:06:51 +0200
 categories: [fish]
 tags: [aquarium ,betta, kampffisch, walstad, sonnenschein, fisch]

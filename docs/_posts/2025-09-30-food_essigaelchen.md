@@ -1,6 +1,7 @@
 ---
 layout: post_food
 title: "Futter: Essigälchen"
+author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [ food ]
 tags: [ aquarium ,betta, kampffisch, walstad, baby, zucht, nano ]

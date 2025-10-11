@@ -1,6 +1,7 @@
 ---
 layout: post_tank
 title:  "Das Quarantäne Becken"
+author: "Rike Trettwer"
 date:   2025-09-30 11:06:51 +0200
 categories: [ tank ]
 tags: [tank, betta, kampffisch, walstad, quarantäne, krank]
@@ -41,4 +42,3 @@ Deshalb habe ich ein weiteres Becken besorgt und sie hier zur Quarantäne gesetz
 Da [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) im Becken mit seinen ersten Babys nicht bleiben durfte, habe ich ihn in dieses Quarantäne-Becken umgezogen. Das Becken habe ich vorher gereinigt und schöner eingerichtet, mit Bodengrund etc.
 Ganz unten ins Becken habe ich so Trenner-Gitter gelegt, damit Steine etc. nicht direkt auf das Glas gestellt werden.
 In diesem Becken lebt [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) jetzt zusammen mit seiner zweiten Laichung Babys. Ich will diesmal testen, ob er sie an irgend einem Punkt als Futter betrachtet oder ob die Babys bei ihrem Papa groß werden können.
-

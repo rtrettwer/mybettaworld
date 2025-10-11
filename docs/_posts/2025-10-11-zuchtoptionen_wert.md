@@ -3,6 +3,7 @@ layout: post
 categories: [zucht]
 tags: [zucht, betta, kampffisch, fisch, wert, zuchtoptionen, preise]
 title: "Wert der Tiere & Zuchtoptionen"
+author: "Rike Trettwer"
 date: 2025-10-11 12:00:00 +0200
 excerpt: "Tabellarische Übersicht zu Wert, Zuchtoptionen und Preisrahmen deiner Fische."
 ---

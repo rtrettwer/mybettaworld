@@ -1,6 +1,7 @@
 ---
 layout: post_tank
 title:  "Der Zuchtkübel"
+author: "Rike Trettwer"
 date:   2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [tank, betta, kampffisch, walstad, zucht]
@@ -37,7 +38,3 @@ entwicklung_text: |
   Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
 gallery_dir: /assets/images/tanks/breeding
 ---
-
-
-
-
