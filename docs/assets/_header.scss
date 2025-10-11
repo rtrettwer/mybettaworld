@@ -35,6 +35,13 @@
 .site-nav {
   position: relative;
   z-index: 1001;
+  background: transparent !important;
+  border: none !important;
+  @media (max-width: 600px) {
+    background: transparent !important;
+    border: none !important;
+    border-color: transparent !important;
+  }
 
   // Mobile Burger Menu Trigger
   .nav-trigger {
@@ -45,19 +52,15 @@
   .trigger {
     position: relative;
     z-index: 1003 !important;
-
     @media (max-width: 600px) {
-      //position: absolute !important;
-      //top: 100% !important;
-      //right: 0 !important;
       background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%) !important;
       border: 1px solid rgba(255, 255, 255, 0.2) !important;
       border-radius: 8px !important;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
       z-index: 1003 !important;
       backdrop-filter: blur(10px) !important;
-      //padding: 10px 0 !important;
       min-width: 200px !important;
+      background-color: transparent !important; // Absicherung gegen weißen Hintergrund
     }
   }
 
@@ -67,7 +70,9 @@
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-
+    background: #fff !important;
+    color: $theme-primary-1 !important;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
     @media (max-width: 600px) {
       cursor: pointer !important;
       padding: 0 !important; // Kleineres Padding für kompaktere Größe
@@ -75,9 +80,8 @@
       transition: background 0.2s !important;
       height: 36px !important; // Feste Höhe für bessere Kontrolle
       width: 36px !important; // Feste Breite für quadratische Form
-
       &:hover {
-        background: rgba(255, 255, 255, 0.1) !important;
+        background: rgba(255, 255, 255, 0.85) !important;
       }
     }
 
@@ -121,6 +125,19 @@
       }
     }
   }
+}
+
+// Menü-Hintergrund NUR wenn offen (mobile)
+@media (max-width: 600px) {
+  input#nav-trigger:checked ~ .site-header .site-nav,
+  input#nav-trigger:checked ~ .site-header .site-nav .trigger {
+    background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  }
+  // Wenn Menü nicht offen, bleibt alles transparent
 }
 
 // Stelle sicher, dass die Galerie unter dem Menü liegt
