@@ -10,29 +10,52 @@
     justify-content: center;
 
     .filter-btn {
-      // Verwende Theme-Button-Styles
-      @extend .btn-secondary;
+      // Theme-konforme Button-Styles
+      background: var(--theme-white);
+      color: var(--theme-primary-1);
+      border: 2px solid var(--theme-primary-1);
       padding: 0.6rem 1.2rem;
       font-size: 0.9rem;
       border-radius: 25px;
       font-weight: 600;
       transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        background: var(--theme-primary-1);
+        color: var(--theme-white);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
+      }
 
       &.active {
-        @extend .btn;
-        border-radius: 25px;
-        box-shadow: 0 4px 16px rgba(46, 196, 182, 0.2);
+        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+        color: var(--theme-white);
+        border-color: transparent;
+        box-shadow: 0 4px 16px rgba(46, 196, 182, 0.4);
+        transform: translateY(-2px);
       }
     }
 
     .filter-toggle {
-      @extend .btn-secondary;
+      background: rgba(46, 196, 182, 0.1);
+      color: var(--theme-primary-2);
+      border: 1px solid rgba(46, 196, 182, 0.3);
       padding: 0.6rem 1rem;
       font-size: 0.85rem;
       border-radius: 20px;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(46, 196, 182, 0.2);
+        border-color: var(--theme-primary-1);
+        transform: translateY(-1px);
+      }
     }
   }
 
@@ -53,24 +76,72 @@
     animation: fadeIn 0.5s ease-in-out;
 
     &:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 15px 40px rgba(46, 196, 182, 0.2);
-      border-color: var(--theme-primary-1);
+      transform: translateY(-8px) scale(1.02);
+      box-shadow: 0 20px 60px rgba(46, 196, 182, 0.25);
+
+      .fish-image-section img {
+        transform: scale(1.05);
+      }
+
+      .price-tag {
+        transform: scale(1.1);
+        box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+      }
+
+      .status-badge {
+        transform: scale(1.05);
+      }
+
+      .gender-tag {
+        transform: translateY(-2px);
+      }
+
+      .detail-tag {
+        transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(46, 196, 182, 0.2);
+      }
+    }
+
+    // Animation für das Erscheinen der Karten
+    animation: slideInUp 0.6s ease-out forwards;
+    opacity: 0;
+    transform: translateY(30px);
+
+    &:nth-child(odd) {
+      animation-delay: 0.1s;
+    }
+
+    &:nth-child(even) {
+      animation-delay: 0.2s;
     }
 
     &.available {
       border-color: var(--theme-primary-1);
       box-shadow: 0 8px 30px rgba(46, 196, 182, 0.15);
+
+      &:hover {
+        border-color: var(--theme-primary-2);
+        box-shadow: 0 20px 60px rgba(46, 196, 182, 0.3);
+      }
     }
 
     &.reserved {
       border-color: #ff9800;
       opacity: 0.9;
+
+      &:hover {
+        border-color: #f57c00;
+        opacity: 1;
+      }
     }
 
     &.sold {
       border-color: #f44336;
       opacity: 0.7;
+
+      &:hover {
+        opacity: 0.95;
+      }
     }
 
     &.hidden {
@@ -209,18 +280,32 @@
       border-radius: 8px;
       border-left: 4px solid var(--theme-primary-1);
       font-style: italic;
+
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: linear-gradient(135deg, rgba(255, 193, 7, 0.12), rgba(255, 152, 0, 0.12));
+        border-color: rgba(255, 193, 7, 0.3);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 15px rgba(255, 193, 7, 0.1);
+      }
     }
 
     .contact-info {
       text-align: center;
 
       .interest-btn {
-        @extend .btn;
+        // Theme-konforme Aktions-Buttons
+        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+        color: var(--theme-white);
+        border: none;
         border-radius: 25px;
         padding: 0.8rem 2rem;
         font-weight: 700;
+        font-size: 1rem;
         margin-bottom: 0.75rem;
-        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+        cursor: pointer;
+        transition: all 0.3s ease;
         box-shadow: 0 6px 20px rgba(46, 196, 182, 0.3);
 
         &:hover:not(:disabled) {
@@ -233,6 +318,7 @@
           background: linear-gradient(135deg, #ccc, #bbb);
           cursor: not-allowed;
           box-shadow: none;
+          color: #888;
 
           &:hover {
             transform: none;
@@ -523,6 +609,18 @@
   to {
     opacity: 0;
     transform: translateY(-20px);
+  }
+}
+
+// Neue Animationen für die schönen Cards
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
