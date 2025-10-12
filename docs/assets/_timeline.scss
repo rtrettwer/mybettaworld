@@ -147,8 +147,8 @@
     margin-left: 1rem;
     cursor: pointer;
 
-    // Gradient-Rand wie bei Blog-Posts
-    border: 3px solid transparent;
+    // Gradient-Rand konsistent mit anderen Cards
+    border: 2px solid transparent;
     background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
                 linear-gradient(135deg,
                   var(--theme-primary-1),

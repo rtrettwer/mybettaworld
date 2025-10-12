@@ -1,19 +1,31 @@
 // Card-Design für Blog-Übersicht und andere Bereiche
 .card {
-  background: #fff;
-  border-radius: 12px;
+  background: var(--theme-white);
+  border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
-  border: 1px solid rgba(0, 0, 0, 0.1);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   // GPU-Beschleunigung für bessere Performance
   transform: translateZ(0);
   will-change: transform;
 
+  // Gradient-Rand für alle Cards
+  border: 2px solid transparent;
+  background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+              linear-gradient(135deg,
+                var(--theme-primary-1),
+                var(--theme-primary-2),
+                var(--theme-primary-3)) border-box;
+
+  // Leuchtender Schatten-Effekt
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+              0 0 20px rgba(46, 196, 182, 0.1);
+
   &:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
+                0 0 30px rgba(46, 196, 182, 0.2),
+                0 0 50px rgba(127, 83, 172, 0.1);
   }
 
   .card-header {
@@ -64,8 +76,8 @@
   transition: all 0.3s ease;
   cursor: default;
 
-  // Gradient-Rand wie bei Blog-Posts und Timeline
-  border: 3px solid transparent;
+  // Gradient-Rand - sichtbar aber nicht zu dick
+  border: 2px solid transparent;
   background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
               linear-gradient(135deg,
                 var(--theme-primary-1),
