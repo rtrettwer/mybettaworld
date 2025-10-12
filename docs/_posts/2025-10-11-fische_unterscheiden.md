@@ -1,11 +1,11 @@
 ---
 layout: post
-categories: [ blog ]
-tags: [ betta, bestimmung, farbschlag, flossenform, kampffisch, fisch ]
-title: "Betta splendens unterscheiden"
+title: "Fische unterscheiden lernen"
 author: "Rike Trettwer"
-date: 2025-10-11 10:00:00 +0200
-excerpt: "Wie ich Betta splendens und ihre Varianten bestimmen kann– mit Beispielen zu meinen sechs Fischen."
+date: 2025-10-11 11:06:51 +0200
+categories: [blog]
+tags: [zucht, identifikation, jungfische]
+excerpt: "Wie man Betta-Jungfische voneinander unterscheidet und ihre Entwicklung verfolgt."
 ---
 
 

@@ -1,11 +1,11 @@
 ---
 layout: post_food
-title:  "Futterroutine"
+title: "Futterroutine"
 author: "Rike Trettwer"
-date:   2025-09-30 11:06:51 +0200
+date: 2025-09-30 11:06:51 +0200
 categories: [food]
-tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano, futter, lebendfutter]
-excerpt: "Lebendfutter - Mikrowürmer"
+tags: [fütterung, routine, pflege]
+excerpt: "Meine tägliche Futterroutine für gesunde und glückliche Bettas."
 image: /assets/images/food/organization_food_tools.webp
 gallery_dir: /assets/images/food
 ---

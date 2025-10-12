@@ -4,7 +4,7 @@ title: "Das Mangroven Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
-tags: [ tank, betta, kampffisch, walstad, mangrove, zucht, nano ]
+tags: [ walstad, treibholz, einzelhaltung ]
 excerpt: "Stark bepflanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
 image: /assets/images/tanks/mangrove/mangrove.webp
 dimensions: 50x35x30 cm

@@ -4,7 +4,7 @@ title:  "Der Zuchtkübel"
 author: "Rike Trettwer"
 date:   2025-09-30 11:06:51 +0200
 categories: [tank]
-tags: [tank, betta, kampffisch, walstad, zucht]
+tags: [zucht, laichbecken]
 excerpt: "Ein Plastik-Kübel für die Zucht von Bettas."
 image: /assets/images/tanks/breeding/breeding.webp
 dimensions: 30x30x30 cm

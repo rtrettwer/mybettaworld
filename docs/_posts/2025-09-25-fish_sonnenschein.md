@@ -4,7 +4,7 @@ title: "Sonnenschein"
 author: "Rike Trettwer"
 date: 2025-09-25 11:06:51 +0200
 categories: [fish]
-tags: [aquarium ,betta, kampffisch, walstad, sonnenschein, fisch]
+tags: [betta, weibchen, zucht]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich ihre Entwicklung."
 image: /assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp
 fish_name: "Sonnenschein"

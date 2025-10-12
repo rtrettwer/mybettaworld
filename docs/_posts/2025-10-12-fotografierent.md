@@ -1,11 +1,11 @@
 ---
 layout: post
-categories: [fotografie]
-tags: [zucht, betta, kampffisch, fisch, fotografie, fotografieren]
-title: "Fische fotografieren"
+title: "Fotografie-Experiment"
 author: "Rike Trettwer"
-date: 2025-10-11 12:00:00 +0200
-excerpt: "Meine Erfahrungswerte und Ausrüstung um Fische gut zu fotografieren."
+date: 2025-10-12 11:06:51 +0200
+categories: [blog]
+tags: [fotografie, experiment, dokumentation]
+excerpt: "Ein Experiment mit verschiedenen Fotografieansätzen für die Betta-Dokumentation."
 ---
 
 ## Fische fotografieren – meine Erfahrungen

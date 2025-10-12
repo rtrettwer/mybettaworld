@@ -1,11 +1,11 @@
 ---
 layout: post_food
-title: "Futter: Essigälchen"
+title: "Essigälchen"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
-categories: [ food ]
-tags: [ aquarium ,betta, kampffisch, walstad, baby, zucht, nano ]
-excerpt: "Kleine Würmchen die sich von Essigbakterien ernähren"
+categories: [food]
+tags: [lebendfutter, nematoden, jungfische]
+excerpt: "Essigälchen sind winzige Würmer, die sich hervorragend als Erstfutter eignen."
 image: /assets/images/food/essigaelchen/essigaelchen_reagenzglas.webp
 gallery_dir: /assets/images/food/essigaelchen
 ---

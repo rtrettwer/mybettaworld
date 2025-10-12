@@ -3,9 +3,9 @@ layout: post_fish_portrait
 title: "Shadow"
 author: "Rike Trettwer"
 date: 2025-09-26 11:06:51 +0200
-categories: [ fish ]
-tags: [ aquarium ,betta, kampffisch, walstad, shadow, fisch ]
-excerpt: "Shadow ist ein schüchterner Betta, der sich gerne versteckt. Hier halte ich ihre Entwicklung fest."
+categories: [fish]
+tags: [betta, weibchen, schwarz]
+excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."
 image: /assets/images/fish/shadow/shadow.webp
 fish_name: "Shadow"
 fish_birth: "Mai 2025"

@@ -4,7 +4,7 @@ title: "Das Baby Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
-tags: [ tank, betta, kampffisch, walstad, baby, zucht, nano ]
+tags: [ nano, aufzucht, jungfische ]
 excerpt: "Meine ersten Betta-Babys"
 image: /assets/images/tanks/babies/babies.webp
 dimensions: 40x25x25 cm (Dennerle Nano Cube)

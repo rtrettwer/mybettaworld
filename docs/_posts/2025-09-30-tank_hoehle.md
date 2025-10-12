@@ -4,7 +4,7 @@ title: "Das Höhlen Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
-tags: [ tank, betta, kampffisch, walstad, höhle ]
+tags: [ höhlen, verstecke, gemeinschaftsbecken ]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
 image: /assets/images/tanks/cave/cave.webp
 dimensions: 30x20x20 cm

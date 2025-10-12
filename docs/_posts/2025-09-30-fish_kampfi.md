@@ -1,11 +1,11 @@
 ---
 layout: post_fish_portrait
-title:  "Kampfi"
+title: "Kampfi"
 author: "Rike Trettwer"
-date:   2025-09-30 11:06:51 +0200
+date: 2025-09-30 11:06:51 +0200
 categories: [fish]
-tags: [aquarium ,betta, kampffisch, walstad, kampfi, fisch]
-excerpt: "Kampfi ist mein erster Betta und der Namensgeber dieser Kategorie. Hier teile ich seine Geschichte."
+tags: [betta, männchen, friedlich]
+excerpt: "Kampfi ist mein friedlichster Betta mit wunderschöner roter Färbung."
 image: /assets/images/fish/kampfi/P5211280_thumbnail.webp
 fish_name: Kampfi
 fish_birth: Januar 2025

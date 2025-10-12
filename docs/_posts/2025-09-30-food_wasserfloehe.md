@@ -1,11 +1,11 @@
 ---
 layout: post_food
-title:  "Futter: Wasserflöhe"
+title: "Wasserflöhe"
 author: "Rike Trettwer"
-date:   2025-09-30 11:06:51 +0200
+date: 2025-09-30 11:06:51 +0200
 categories: [food]
-tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano]
-excerpt: "Wasserflöhe (Daphnien) sind ein nährstoffreiches Lebendfutter, das die Verdauung und Vitalität von Aquarienfischen wie Bettas fördert."
+tags: [lebendfutter, daphnien]
+excerpt: "Wasserflöhe sind ein nährstoffreiches Lebendfutter für erwachsene Bettas."
 image: /assets/images/food/wasserfloehe/wasserfloehe.webp
 gallery_dir: /assets/images/food/wasserfloehe
 ---

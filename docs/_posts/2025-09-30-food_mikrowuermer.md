@@ -1,11 +1,11 @@
 ---
 layout: post_food
-title:  "Futter: Mikrowürmer"
+title: "Mikrowürmer"
 author: "Rike Trettwer"
-date:   2025-09-30 11:06:51 +0200
+date: 2025-09-30 11:06:51 +0200
 categories: [food]
-tags: [aquarium ,betta, kampffisch, walstad, baby, zucht, nano]
-excerpt: "Mikrowürmer sind ein beliebtes Lebendfutter für die Aufzucht von Jungfischen, da sie sehr klein, nahrhaft und einfach zu züchten sind."
+tags: [lebendfutter, würmer, jungfische]
+excerpt: "Mikrowürmer sind ideal für die Aufzucht von Betta-Jungfischen."
 image: /assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp
 gallery_dir: /assets/images/food/mikrowuermer
 

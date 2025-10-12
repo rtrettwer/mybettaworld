@@ -1,11 +1,11 @@
 ---
 layout: post_fish_portrait
-title:  "Sir Pryce"
+title: "Sir Pryce"
 author: "Rike Trettwer"
-date:   2025-09-28 11:06:51 +0200
+date: 2025-09-28 11:06:51 +0200
 categories: [fish]
-tags: [aquarium ,betta, kampffisch, walstad, sir pryce, fisch]
-excerpt: "Sir Pryce war eine echte Überraschung - denn eigentlich hatte ich ein Weibchen gekauft"
+tags: [betta, männchen, zucht]
+excerpt: "Sir Pryce ist mein erster Zuchtmännchen mit beeindruckender Persönlichkeit."
 image: /assets/images/fish/sirPryce/sir_pryce.webp
 fish_name: "Sir Pryce"
 fish_birth: "Frühling 2025"

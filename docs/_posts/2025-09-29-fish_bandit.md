@@ -4,8 +4,8 @@ title: "Bandit"
 author: "Rike Trettwer"
 date: 2025-09-29 11:06:51 +0200
 categories: [fish]
-tags: [ aquarium ,betta, kampffisch, walstad, bandit, fisch ]
-excerpt: "Bandit ist einer meiner besonderen Betta-Fische. Solche Farben habe ich noch nicht gesehen."
+tags: [betta, männchen, camallanus, quarantäne]
+excerpt: "Bandit ist ein temperamentvoller Betta, der leider an Camallanus erkrankt ist."
 image: /assets/images/fish/bandit/IMG_20250912_110539.webp
 fish_name: "Bandit"
 fish_birth: "März 2025"
