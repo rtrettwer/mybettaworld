@@ -51,12 +51,9 @@
     width: 10rem; // Deutlich vergrößert von 6rem auf 10rem
     height: 10rem; // Deutlich vergrößert von 6rem auf 10rem
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--theme-white), #f8f9fa);
-    border: 4px solid transparent;
-    background-image: linear-gradient(white, white),
-                      linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
-    background-origin: border-box;
-    background-clip: content-box, border-box;
+    /* Kein Gradient, kein border mehr hier! */
+    /* background: none; */
+    /* border: none; */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -81,6 +78,27 @@
       border-radius: 50%;
       text-decoration: none;
       color: inherit;
+      box-sizing: border-box;
+      background: transparent;
+      position: relative;
+      overflow: visible;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        border-radius: 50%;
+        z-index: 1;
+        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
+        /* Randstärke anpassen */
+        padding: 0;
+        /* Optional: Schatten für Glow-Effekt */
+        box-shadow: 0 0 0 0px transparent;
+      }
+
+      &:hover::before {
+        box-shadow: 0 0 0 6px rgba(46,196,182,0.18), 0 8px 32px 0 rgba(46,196,182,0.25);
+      }
 
       &:hover {
         text-decoration: none;
@@ -88,13 +106,18 @@
     }
 
     .fish-avatar {
-      width: 9rem; // Vergrößert von 5rem auf 9rem
-      height: 9rem; // Vergrößert von 5rem auf 9rem
+      width: 100%;
+      height: 100%;
       border-radius: 50%;
       object-fit: cover;
       object-position: center;
       transition: all 0.3s ease;
-
+      box-shadow: none;
+      display: block;
+      position: relative;
+      z-index: 2;
+      margin: 0;
+      /* Kein margin, kein padding, kein border! */
       &:hover {
         transform: scale(1.05);
       }
