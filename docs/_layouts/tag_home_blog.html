@@ -9,6 +9,7 @@ layout: default
     <ul class="post-list">
       {%- for post in posts -%}
       <li>
+
         <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}</span>
         <h3>
           <a class="post-link" href="{{ post.url | relative_url }}">
