@@ -3,7 +3,12 @@
         {%- assign default_paths = site.pages | map: "path" -%}
         {%- assign page_paths = site.header_pages | default: default_paths -%}
 
-        <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        <div class="header-brand">
+            <a class="site-logo" href="{{ "/" | relative_url }}">
+                <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="{{ site.title }}">
+            </a>
+            <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </div>
 
         {%- if page_paths -%}
         <nav class="site-nav">
