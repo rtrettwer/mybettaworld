@@ -4,4 +4,9 @@ title: "Die Fische"
 permalink: /fish/
 ---
 
-Dein Inhalt für die Über‑Seite.
+# 🐠 Meine Betta-Familie
+
+Hier findest du alle meine Kampffische und ihre Geschichten - von den ersten Tagen bis heute.
+
+<!-- Fisch-Timeline -->
+{% include fish_timeline.html %}

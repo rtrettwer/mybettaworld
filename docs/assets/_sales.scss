@@ -1,0 +1,238 @@
+// Verkaufs-Galerie Styles
+.sales-gallery {
+  margin: 2rem 0;
+
+  .filter-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+
+    .filter-btn {
+      padding: 0.5rem 1rem;
+      border: 2px solid var(--theme-primary-1);
+      background: transparent;
+      color: var(--theme-primary-1);
+      border-radius: 25px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 600;
+
+      &:hover,
+      &.active {
+        background: var(--theme-primary-1);
+        color: var(--theme-white);
+      }
+    }
+  }
+
+  .fish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .fish-card {
+    background: var(--theme-white);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 40px rgba(46, 196, 182, 0.2);
+    }
+
+    &.available {
+      border-color: #4caf50;
+    }
+
+    &.reserved {
+      border-color: #ff9800;
+      opacity: 0.8;
+    }
+
+    &.sold {
+      border-color: #f44336;
+      opacity: 0.6;
+    }
+  }
+
+  .fish-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    &:hover img {
+      transform: scale(1.1);
+    }
+
+    .price-tag {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: var(--theme-primary-1);
+      color: var(--theme-white);
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    .status-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 600;
+
+      &.available {
+        background: #4caf50;
+        color: white;
+      }
+
+      &.reserved {
+        background: #ff9800;
+        color: white;
+      }
+
+      &.sold {
+        background: #f44336;
+        color: white;
+      }
+    }
+  }
+
+  .fish-info {
+    padding: 1.5rem;
+
+    h4 {
+      margin: 0 0 1rem 0;
+      color: var(--theme-primary-2);
+      font-size: 1.2rem;
+    }
+
+    .fish-details {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+
+      span {
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.8rem;
+        font-weight: 600;
+
+        &.gender.male {
+          background: #e3f2fd;
+          color: #1565c0;
+        }
+
+        &.gender.female {
+          background: #fce4ec;
+          color: #c2185b;
+        }
+
+        &.gender.unknown {
+          background: #f5f5f5;
+          color: #666;
+        }
+
+        &.age,
+        &.size {
+          background: rgba(46, 196, 182, 0.1);
+          color: var(--theme-primary-2);
+        }
+      }
+    }
+
+    .description {
+      color: #666;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
+
+    .special-notes {
+      color: var(--theme-primary-2);
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      background: rgba(46, 196, 182, 0.1);
+      border-radius: 6px;
+      border-left: 3px solid var(--theme-primary-1);
+    }
+
+    .contact-info {
+      text-align: center;
+
+      .interest-btn {
+        background: var(--theme-primary-1);
+        color: var(--theme-white);
+        border: none;
+        padding: 0.75rem 1.5rem;
+        border-radius: 25px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        margin-bottom: 0.5rem;
+
+        &:hover:not(:disabled) {
+          background: var(--theme-primary-2);
+          transform: translateY(-2px);
+        }
+
+        &:disabled {
+          background: #ccc;
+          cursor: not-allowed;
+        }
+      }
+
+      small {
+        display: block;
+        color: #666;
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  .sales-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+
+    .info-card {
+      background: var(--theme-white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+
+      h4 {
+        color: var(--theme-primary-2);
+        margin: 0 0 1rem 0;
+      }
+
+      ul {
+        margin: 0;
+        padding-left: 1.2rem;
+
+        li {
+          margin-bottom: 0.5rem;
+          color: #666;
+        }
+      }
+    }
+  }
+}

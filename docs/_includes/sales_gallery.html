@@ -1,0 +1,88 @@
+<!-- Verkaufs-Galerie -->
+<div class="sales-gallery">
+  <h3>Verfügbare Betta-Fische</h3>
+
+  <div class="filter-controls">
+    <button class="filter-btn active" data-filter="all">Alle anzeigen</button>
+    <button class="filter-btn" data-filter="male">Männchen</button>
+    <button class="filter-btn" data-filter="female">Weibchen</button>
+    <button class="filter-btn" data-filter="juvenile">Jungfische</button>
+  </div>
+
+  <div class="fish-grid">
+    {% for fish in site.data.sales %}
+    <div class="fish-card {{ fish.status }}" data-category="{{ fish.gender }}" data-price="{{ fish.price }}">
+      <div class="fish-image">
+        <img src="{{ fish.image | relative_url }}" alt="{{ fish.name }}" loading="lazy"
+             onerror="this.src='/assets/images/placeholder-fish.jpg'">
+        <div class="price-tag">{{ fish.price }}€</div>
+        <div class="status-badge {{ fish.status }}">
+          {% if fish.status == 'available' %}Verfügbar
+          {% elsif fish.status == 'reserved' %}Reserviert
+          {% elsif fish.status == 'sold' %}Verkauft
+          {% endif %}
+        </div>
+      </div>
+      <div class="fish-info">
+        <h4>{{ fish.name }}</h4>
+        <div class="fish-details">
+          <span class="gender {{ fish.gender }}">
+            {% if fish.gender == 'male' %}♂ Männchen
+            {% elsif fish.gender == 'female' %}♀ Weibchen
+            {% else %}? Geschlecht unbekannt
+            {% endif %}
+          </span>
+          <span class="age">{{ fish.age }}</span>
+          <span class="size">{{ fish.size }}</span>
+          <span class="color">{{ fish.color }}</span>
+        </div>
+        <p class="description">{{ fish.description }}</p>
+        {% if fish.special_notes %}
+          <p class="special-notes"><strong>Besonderheit:</strong> {{ fish.special_notes }}</p>
+        {% endif %}
+        <div class="contact-info">
+          {% if fish.status == 'available' %}
+            <button class="interest-btn">Interesse anmelden</button>
+            <small>Nur Abholung möglich</small>
+          {% elsif fish.status == 'reserved' %}
+            <button class="interest-btn" disabled>Reserviert</button>
+            {% if fish.pickup_date %}
+              <small>Abholung: {{ fish.pickup_date | date: "%d.%m.%Y" }}</small>
+            {% endif %}
+          {% elsif fish.status == 'sold' %}
+            <button class="interest-btn" disabled>Verkauft</button>
+            {% if fish.sold_date %}
+              <small>Verkauft am {{ fish.sold_date | date: "%d.%m.%Y" }}</small>
+            {% endif %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <div class="sales-info">
+    <div class="info-card">
+      <h4>📋 Verkaufsbedingungen</h4>
+      <ul>
+        <li>Alle Fische sind gesund und gut gepflegt</li>
+        <li>Nur Abholung möglich - kein Versand</li>
+        <li>Abholort: [Dein Ort/Adresse]</li>
+        <li>Bei Fragen gerne melden: rike@trettwer.de</li>
+        <li>Reservierung gegen Anzahlung von 50% möglich</li>
+        <li>Terminvereinbarung für Abholung erforderlich</li>
+      </ul>
+    </div>
+
+    <div class="info-card">
+      <h4>🏠 Empfohlene Haltung</h4>
+      <ul>
+        <li>Mindestens 20L Aquarium pro Fisch</li>
+        <li>Temperatur: 24-28°C</li>
+        <li>pH-Wert: 6.5-7.5</li>
+        <li>Versteckmöglichkeiten und Pflanzen</li>
+        <li>Männchen einzeln halten!</li>
+      </ul>
+    </div>
+  </div>
+</div>

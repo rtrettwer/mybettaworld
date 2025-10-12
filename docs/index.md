@@ -1,13 +1,61 @@
 ---
 layout: home
 ---
-# Willkommen auf meinem Blog!
 
-Hallo und herzlich willkommen! Ich bin Softwareentwicklerin und teste hier zum ersten Mal die Möglichkeiten von Jekyll. Doch dieser Blog dreht sich nicht um Code, sondern um ein ganz anderes Hobby: meine Leidenschaft für die Zucht von Betta-Fischen.
+<div class="hero-section">
+  <div class="hero-content">
+    <h1>Willkommen in meiner Betta-Welt!</h1>
+    <p class="hero-subtitle">Entdecke die faszinierende Welt der Kampffischzucht - von der ersten Paarung bis zum Verkauf</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="stat-number">{{ site.posts | size }}</span>
+        <span class="stat-label">Blog-Einträge</span>
+      </div>
+      <div class="hero-stat">
+        {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" %}
+        <span class="stat-number">{{ fish_posts | size }}</span>
+        <span class="stat-label">Fisch-Profile</span>
+      </div>
+      <div class="hero-stat">
+        <span class="stat-number">3</span>
+        <span class="stat-label">Aktive Laichungen</span>
+      </div>
+    </div>
+  </div>
+  <!-- Großes Hintergrund-Icon -->
+  <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="Betta Background" class="hero-background-icon">
+</div>
 
-Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und heute kümmere ich mich um drei Laichungen voller Betta-Babys, die ich großziehen und später verkaufen möchte.
+<!-- Card-Container für alle Inhalte -->
+<div class="cards-container">
+  
+  <!-- Einleitungstext Card -->
+  <div class="content-card intro-card">
+    <h2>Mein Weg zur Betta-Zucht</h2>
+    <p>Hallo und herzlich willkommen! Ich bin Softwareentwicklerin und teste hier zum ersten Mal die Möglichkeiten von Jekyll. Doch dieser Blog dreht sich nicht um Code, sondern um ein ganz anderes Hobby: meine Leidenschaft für die Zucht von Betta-Fischen.</p>
+    
+    <p>Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und heute kümmere ich mich um drei Laichungen voller Betta-Babys, die ich großziehen und später verkaufen möchte.</p>
+    
+    <p>In diesem Blog dokumentiere ich die Entwicklung meiner Aquarien, meine Erfahrungen in der Fischzucht und die kleinen und großen Herausforderungen, die dieses Hobby mit sich bringt. Vielleicht findest du hier Inspiration oder hilfreiche Tipps für dein eigenes Aquaristik-Projekt.</p>
+  </div>
 
-In diesem Blog dokumentiere ich die Entwicklung meiner Aquarien, meine Erfahrungen in der Fischzucht und die kleinen und großen Herausforderungen, die dieses Hobby mit sich bringt. Vielleicht findest du hier Inspiration oder hilfreiche Tipps für dein eigenes Aquaristik-Projekt.
+  <!-- Zucht-Fortschritt Card -->
+  <div class="content-card breeding-card">
+    {% include breeding_tracker.html %}
+  </div>
 
-Viel Spaß beim Lesen und Entdecken!
+</div>
 
+<!-- Call-to-Action Bereich -->
+<div class="cta-section">
+  <div class="cta-content">
+    <h2>Möchtest du mehr erfahren?</h2>
+    <p>Folge meiner Reise durch die Welt der Betta-Zucht und lerne von meinen Erfahrungen!</p>
+    <div class="cta-buttons">
+      <a href="{{ '/blog/' | relative_url }}" class="cta-btn primary">Blog durchstöbern</a>
+      <a href="{{ '/fish/' | relative_url }}" class="cta-btn secondary">Meine Fische</a>
+      <a href="{{ '/tanks/' | relative_url }}" class="cta-btn secondary">Aquarien</a>
+      <a href="{{ '/sale/' | relative_url }}" class="cta-btn accent">Fische kaufen</a>
+    </div>
+  </div>
+</div>

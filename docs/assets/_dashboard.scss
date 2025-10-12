@@ -1,0 +1,172 @@
+// Aquarium Dashboard Styles
+.aquarium-dashboard {
+  margin: 2rem 0;
+
+  .tank-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+  }
+
+  .tank-card {
+    background: var(--theme-white);
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 1px solid rgba(46, 196, 182, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--theme-primary-1), var(--theme-primary-2));
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 40px rgba(46, 196, 182, 0.2);
+    }
+  }
+
+  .tank-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+
+    h4 {
+      margin: 0;
+      color: var(--theme-primary-2);
+      font-size: 1.2rem;
+    }
+  }
+
+  .status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+
+    &.active { background: #e8f5e8; color: #2e7d32; }
+    &.breeding { background: #e3f2fd; color: #1565c0; }
+    &.quarantine { background: #fff8e1; color: #f57c00; }
+    &.unknown { background: #f5f5f5; color: #666; }
+  }
+
+  .tank-stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+
+    .stat {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(46, 196, 182, 0.1);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+
+      .stat-icon {
+        font-size: 1rem;
+      }
+
+      .stat-value {
+        font-weight: 600;
+        color: var(--theme-primary-2);
+      }
+    }
+  }
+
+  .tank-image {
+    margin: 1rem 0;
+    border-radius: 12px;
+    overflow: hidden;
+    height: 200px;
+    background: linear-gradient(135deg, rgba(46, 196, 182, 0.1), rgba(32, 99, 155, 0.1));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .placeholder-tank {
+      font-size: 3rem;
+      opacity: 0.6;
+    }
+
+    &:hover img {
+      transform: scale(1.05);
+    }
+  }
+
+  .tank-updates {
+    .last-update {
+      font-size: 0.9rem;
+      color: #666;
+      margin: 0 0 1rem 0;
+    }
+
+    .read-more-btn {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: var(--theme-primary-1);
+      color: var(--theme-white);
+      text-decoration: none;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: var(--theme-primary-2);
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .tank-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .fish-timeline {
+    .timeline-container {
+      padding-left: 1rem;
+
+      &::before {
+        left: 0.5rem;
+      }
+    }
+
+    .timeline-marker {
+      left: -2rem;
+      width: 3rem;
+      height: 3rem;
+
+      .fish-avatar {
+        width: 2rem;
+        height: 2rem;
+      }
+    }
+  }
+}
+
