@@ -94,16 +94,13 @@
     z-index: 9999;
 
     .menu-icon {
-      display: block;
+      display: flex;
       float: right;
       width: 36px;
       height: 36px;
-      line-height: 0;
-      padding: 0;
-      text-align: center;
-      display: flex;
       align-items: center;
       justify-content: center;
+      cursor: pointer;
 
       > svg {
         fill: $theme-white;
@@ -132,6 +129,13 @@
         color: $link-color;
         background: rgba(255, 255, 255, 0.1);
       }
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .menu-icon {
+      // Kein padding-top und kein padding für kleinere Bildschirme
+      padding-top: 0;
     }
   }
 }

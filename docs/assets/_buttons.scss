@@ -1,15 +1,63 @@
-// Einheitliche Button-Styles
+// Einheitliche Button-Styles - Optimiert für Performance
 .btn {
-  background: $theme-primary-1;
+  background: var(--theme-primary-1);
   color: #fff !important;
   border: none;
   border-radius: 6px;
   padding: 0.6em 1.2em;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(56,217,169,0.08);
-  transition: background 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(46, 196, 182, 0.08);
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+
   &:hover, &:focus {
-    background: darken($theme-primary-1, 10%);
-    box-shadow: 0 4px 16px rgba(56,217,169,0.16);
+    background: var(--link-hover-color);
+    box-shadow: 0 4px 16px rgba(46, 196, 182, 0.16);
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  &:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  &:active {
+    transform: translateY(1px);
+    transition: transform 0.1s ease;
+    color: #fff !important;
+  }
+
+  // Disabled state
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    box-shadow: none;
+    color: #fff !important;
+
+    &:hover {
+      background: #ccc;
+      box-shadow: none;
+      color: #fff !important;
+    }
+  }
+}
+
+// Secondary button variant
+.btn-secondary {
+  background: transparent;
+  color: var(--theme-primary-1) !important;
+  border: 2px solid var(--theme-primary-1);
+
+  &:hover, &:focus {
+    background: var(--theme-primary-1);
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  &:visited {
+    color: var(--theme-primary-1) !important;
   }
 }

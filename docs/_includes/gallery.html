@@ -1,4 +1,7 @@
-{%- assign dir = page.gallery_dir | default: include.dir | default: '/assets/images' -%}
+{%- assign dir = include.dir | default: '/assets/images' -%}
+{%- if page.gallery_dir -%}
+  {%- assign dir = page.gallery_dir -%}
+{%- endif -%}
 {%- if dir -%}
 
 {%- comment -%}Rekursive Pfad-Filterung: alle Unterverzeichnisse einschließen{%- endcomment -%}
@@ -91,25 +94,46 @@
     const backdrop = root.querySelector(".db-gallery-lightbox-backdrop");
     const items = Array.from(root.querySelectorAll(".db-gallery-item"));
     let currentIndex = -1;
+    let resizeTimeout;
 
-    // CSS Columns Masonry Layout - automatische Verteilung
-    function initMasonryLayout() {
-        // Das CSS Grid mit den nth-child Selektoren regelt bereits die Spans
-        // Hier nur sicherstellen, dass Bilder geladen sind
-        items.forEach((item) => {
-            const img = item.querySelector("img");
-            if (!img.complete) {
-                img.addEventListener('load', () => {
-                    // Trigger eines Layout-Updates nach dem Laden
-                    item.style.display = 'none';
-                    item.offsetHeight; // Force reflow
-                    item.style.display = 'block';
-                }, { once: true });
-            }
-        });
+    // Debounced resize handler für bessere Performance
+    function debounce(func, wait) {
+        return function executedFunction(...args) {
+            const later = () => {
+                clearTimeout(resizeTimeout);
+                func(...args);
+            };
+            clearTimeout(resizeTimeout);
+            resizeTimeout = setTimeout(later, wait);
+        };
     }
 
-    // Verbesserte Grid-Berechnung mit Platz-Berücksichtigung
+    // Lazy loading für Bilder
+    function initLazyLoading() {
+        if ('IntersectionObserver' in window) {
+            const imageObserver = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        if (img.dataset.src) {
+                          img.src = img.dataset.src;
+                          img.removeAttribute('data-src');
+                        }
+                        observer.unobserve(img);
+                    }
+                });
+            }, { rootMargin: '50px' });
+
+            items.forEach(item => {
+                const img = item.querySelector("img");
+                if (img && img.dataset.src) {
+                    imageObserver.observe(img);
+                }
+            });
+        }
+    }
+
+    // Optimierte Grid-Berechnung
     function calculateOptimalGrid(itemCount) {
         if (itemCount === 0) return { columns: 1, rows: 1 };
 
@@ -117,55 +141,40 @@
         const grid = root.querySelector(".db-gallery-grid");
         const isPostGallery = grid.closest('.post-content');
 
-        // Minimale Bildbreite basierend auf Bildschirmgröße
+        // Cached Werte für bessere Performance
+        const breakpoints = {
+            mobile: 480,
+            tablet: 768,
+            desktop: 1024,
+            large: 1400
+        };
+
         let minImageWidth;
-        if (screenWidth < 480) {
-            minImageWidth = 120; // Mobile
-        } else if (screenWidth < 768) {
-            minImageWidth = 150; // Tablet
-        } else if (screenWidth < 1024) {
-            minImageWidth = 180; // Desktop
-        } else if (screenWidth < 1400) {
-            minImageWidth = 200; // Große Desktop
+        if (screenWidth < breakpoints.mobile) {
+            minImageWidth = 120;
+        } else if (screenWidth < breakpoints.tablet) {
+            minImageWidth = 150;
+        } else if (screenWidth < breakpoints.desktop) {
+            minImageWidth = 180;
+        } else if (screenWidth < breakpoints.large) {
+            minImageWidth = 200;
         } else {
-            minImageWidth = 220; // Sehr große Bildschirme
+            minImageWidth = 220;
         }
 
-        // Verfügbare Breite berechnen (mit Padding/Margin)
-        const containerPadding = isPostGallery ? 40 : 80; // Post vs. Hauptgalerie
+        const containerPadding = isPostGallery ? 40 : 80;
         const availableWidth = screenWidth - containerPadding;
-
-        // Gap zwischen Bildern
         const gap = 15;
-
-        // Maximale Anzahl Spalten basierend auf verfügbarem Platz
         const maxColumnsByWidth = Math.floor((availableWidth + gap) / (minImageWidth + gap));
 
-        // Beginne mit der maximalen Spaltenanzahl und optimiere
-        let bestColumns = Math.min(maxColumnsByWidth, 12); // Maximal 12 Spalten
+        let bestColumns = Math.min(maxColumnsByWidth, 12);
         let bestRows = Math.ceil(itemCount / bestColumns);
-        let bestRatio = Math.abs(bestColumns / bestRows - 1.2); // Leicht rechteckig ist ok
 
-        // Teste verschiedene Spaltenkonfigurationen
-        for (let cols = Math.max(2, maxColumnsByWidth - 3); cols <= maxColumnsByWidth; cols++) {
-            let rows = Math.ceil(itemCount / cols);
-            let ratio = Math.abs(cols / rows - 1.2);
-
-            // Bevorzuge Konfigurationen mit weniger extremen Seitenverhältnissen
-            if (ratio < bestRatio) {
-                bestRatio = ratio;
-                bestColumns = cols;
-                bestRows = rows;
-            }
-        }
-
-        // Für sehr viele Bilder (>50): bevorzuge mehr Spalten
+        // Für große Bildmengen: optimiere Spaltenanzahl
         if (itemCount > 50) {
             bestColumns = Math.max(bestColumns, Math.min(8, maxColumnsByWidth));
             bestRows = Math.ceil(itemCount / bestColumns);
         }
-
-        console.log(`Bildschirm: ${screenWidth}px, Verfügbar: ${availableWidth}px, Max Spalten: ${maxColumnsByWidth}`);
 
         return { columns: bestColumns, rows: bestRows };
     }
@@ -173,18 +182,13 @@
     function applyResponsiveGrid(columns, rows) {
         const screenWidth = window.innerWidth;
 
-        // Weniger aggressive Reduktion der Spalten
         if (screenWidth < 480) {
-            // Mobile: reduziere nur leicht
             columns = Math.max(2, Math.min(columns, 3));
         } else if (screenWidth < 768) {
-            // Tablet:
             columns = Math.max(3, Math.min(columns, 5));
         } else if (screenWidth < 1024) {
-            // Desktop:
             columns = Math.max(4, Math.min(columns, 7));
         }
-        // Große Bildschirme: verwende berechnete spaltenanzahl
 
         return { columns, rows: Math.ceil(items.length / columns) };
     }
@@ -193,39 +197,21 @@
         const grid = root.querySelector(".db-gallery-grid");
         const isPostGallery = grid.closest('.post-content');
 
-        // Nur für Hauptgalerie, Post-Galerien bleiben statisch
         if (!isPostGallery && items.length > 0) {
             const optimal = calculateOptimalGrid(items.length);
             const responsive = applyResponsiveGrid(optimal.columns, optimal.rows);
 
-            // Setze die berechneten Grid-Eigenschaften
             grid.style.gridTemplateColumns = `repeat(${responsive.columns}, 1fr)`;
 
-            // Für sehr breite Layouts: zentriere das Grid mit max-width
             if (responsive.columns > 8) {
-                const maxWidth = responsive.columns * 280 + (responsive.columns - 1) * 15; // 280px pro Spalte + gaps
+                const maxWidth = responsive.columns * 280 + (responsive.columns - 1) * 15;
                 grid.style.maxWidth = `${maxWidth}px`;
                 grid.style.margin = '1rem auto';
             } else {
                 grid.style.maxWidth = 'none';
                 grid.style.margin = '1rem 0';
             }
-
-            console.log(`Galerie Layout: ${items.length} Bilder → ${responsive.columns} Spalten × ${responsive.rows} Zeilen`);
         }
-
-        // Stelle sicher, dass Bilder geladen sind
-        items.forEach((item) => {
-            const img = item.querySelector("img");
-            if (!img.complete) {
-                img.addEventListener('load', () => {
-                    // Trigger Layout-Update nach Bildladen
-                    item.style.display = 'none';
-                    item.offsetHeight; // Force reflow
-                    item.style.display = 'block';
-                }, { once: true });
-            }
-        });
     }
 
     function openAt(index) {
@@ -237,24 +223,28 @@
         const title = item.dataset.title || "";
         const caption = item.dataset.caption || "";
 
-        imgLarge.src = large;
-        imgLarge.alt = title || "";
+        // Preload image für bessere UX
+        const img = new Image();
+        img.onload = () => {
+            imgLarge.src = large;
+            imgLarge.alt = title || "";
+        };
+        img.onerror = () => {
+            imgLarge.src = thumb; // Fallback
+            imgLarge.alt = title || "";
+        };
+        img.src = large;
+
         titleEl.textContent = title;
         captionEl.textContent = caption;
-
         titleEl.style.display = title ? 'block' : 'none';
         captionEl.style.display = caption ? 'block' : 'none';
 
-        // Fallback auf Thumbnail wenn Large-Version nicht existiert
-        imgLarge.onerror = function () {
-            if (imgLarge.src !== thumb) {
-                imgLarge.src = thumb;
-            }
-        };
-
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
-        btnClose.focus();
+
+        // Focus für Barrierefreiheit
+        requestAnimationFrame(() => btnClose.focus());
     }
 
     function close() {
@@ -271,16 +261,20 @@
         if (items.length) openAt(currentIndex >= items.length - 1 ? 0 : currentIndex + 1);
     }
 
-    // Event Listeners
+    // Event Listeners mit passive für bessere Performance
     items.forEach((item, i) => {
-        item.querySelector(".db-gallery-button").addEventListener("click", () => openAt(i));
+        const button = item.querySelector(".db-gallery-button");
+        if (button) {
+            button.addEventListener("click", () => openAt(i), { passive: true });
+        }
     });
 
-    btnClose.addEventListener("click", close);
-    btnPrev.addEventListener("click", prev);
-    btnNext.addEventListener("click", next);
-    backdrop.addEventListener("click", close);
+    if (btnClose) btnClose.addEventListener("click", close);
+    if (btnPrev) btnPrev.addEventListener("click", prev);
+    if (btnNext) btnNext.addEventListener("click", next);
+    if (backdrop) backdrop.addEventListener("click", close);
 
+    // Keyboard navigation
     document.addEventListener("keydown", (ev) => {
         if (!lightbox.classList.contains('active')) return;
 
@@ -299,9 +293,10 @@
         }
     });
 
-    // Touch-Unterstützung für mobile Geräte
+    // Touch-Unterstützung optimiert
     let touchStartX = 0;
     let touchStartY = 0;
+    const minSwipeDistance = 50;
 
     lightbox.addEventListener('touchstart', (e) => {
         touchStartX = e.touches[0].clientX;
@@ -316,30 +311,21 @@
         const diffX = touchStartX - touchEndX;
         const diffY = touchStartY - touchEndY;
 
-        // Horizontale Swipes für Navigation
-        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 50) {
-            if (diffX > 0) {
-                next(); // Swipe links = nächstes Bild
-            } else {
-                prev(); // Swipe rechts = vorheriges Bild
-            }
-        }
-        // Vertikale Swipes zum Schließen
-        else if (Math.abs(diffY) > 100 && Math.abs(diffY) > Math.abs(diffX)) {
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+            diffX > 0 ? next() : prev();
+        } else if (Math.abs(diffY) > 100 && Math.abs(diffY) > Math.abs(diffX)) {
             close();
         }
     }, { passive: true });
 
-    // Layout beim Laden und bei Fenstergrößenänderung initialisieren
-    initMasonryLayout();
-    initDynamicGrid();
+    // Initialisierung mit debounced resize
+    const debouncedResize = debounce(() => {
+        initDynamicGrid();
+    }, 250);
 
-    window.addEventListener('resize', () => {
-        setTimeout(() => {
-            initMasonryLayout();
-            initDynamicGrid();
-        }, 100);
-    });
+    initLazyLoading();
+    initDynamicGrid();
+    window.addEventListener('resize', debouncedResize, { passive: true });
 })();
 </script>
 

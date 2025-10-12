@@ -6,10 +6,11 @@
 @import './typography';
 @import './header';
 @import './gallery'; // Galerie nach Minima, damit unsere Styles Vorrang haben
-@import './footer';
+@import './footer'; // Footer NACH Minima für höchste Priorität
 @import './links';
 @import './buttons';
 @import './cards';
+@import './utilities'; // Neue Utilities für häufig verwendete Styles
 
 // Globale Regel gegen horizontales Scrollen auf mobilen Geräten
 html, body {
@@ -20,4 +21,41 @@ html, body {
 
 *, *::before, *::after {
   box-sizing: border-box;
+}
+
+// Verstärkte Footer-Sichtbarkeit - Notfall-Styles mit höchster Spezifität
+.site-footer {
+  .footer-main-area {
+    .footer-title,
+    .footer-description,
+    .footer-link,
+    .footer-copyright {
+      display: block !important;
+      visibility: visible !important;
+      opacity: 1 !important;
+      height: auto !important;
+      width: auto !important;
+      position: static !important;
+      z-index: auto !important;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .footer-main-area {
+      .footer-title,
+      .footer-description,
+      .footer-link,
+      .footer-copyright {
+        display: block !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        height: auto !important;
+        width: auto !important;
+        position: static !important;
+        z-index: auto !important;
+        font-size: inherit !important;
+        color: inherit !important;
+      }
+    }
+  }
 }

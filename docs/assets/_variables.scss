@@ -1,18 +1,21 @@
-// Theme-Farbpalette
-$theme-primary-1: #2ec4b6; // Türkis (Wasser)
-$theme-primary-2: #20639b; // Tiefes Blau
-$theme-primary-3: #7f53ac; // Aquatisches Lila
-$theme-white: #fff;
+// Theme-Farbpalette - Optimiert mit CSS Custom Properties für bessere Performance
+:root {
+  --theme-primary-1: #2ec4b6; // Türkis (Wasser)
+  --theme-primary-2: #20639b; // Tiefes Blau
+  --theme-primary-3: #7f53ac; // Aquatisches Lila
+  --theme-white: #fff;
+  --link-color: var(--theme-primary-1);
+  --link-hover-color: #26a69a; // Statischer Wert statt darken() für bessere Performance
+}
 
+// SCSS-Variablen für Rückwärtskompatibilität
+$theme-primary-1: var(--theme-primary-1);
+$theme-primary-2: var(--theme-primary-2);
+$theme-primary-3: var(--theme-primary-3);
+$theme-white: var(--theme-white);
+$link-color: var(--link-color);
+$link-hover-color: var(--link-hover-color);
 
-// Link-Farben (basierend auf Theme-Farben)
-$link-color: $theme-primary-1;
-$link-hover-color: darken($theme-primary-1, 10%);
-
-
-// Header-Gradient
-$header-gradient: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 50%, $theme-primary-3 100%);
-
-
-// Mobile-Menu-Gradient (nur 2 Farben)
-$mobile-menu-gradient: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);
+// Optimierte Gradients mit CSS Custom Properties
+$header-gradient: linear-gradient(90deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 50%, var(--theme-primary-3) 100%);
+$mobile-menu-gradient: linear-gradient(90deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 100%);

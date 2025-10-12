@@ -17,4 +17,17 @@
       </div>
     </div>
   </div>
+
+  <!-- Notfall-Footer für mobile Ansicht -->
+  <div class="footer-mobile-fallback">
+    <div class="footer-mobile-content">
+      <h4>{{ site.title | escape }}</h4>
+      <p>{{- site.description | escape -}}</p>
+      <div class="footer-mobile-links">
+        <a href="{{ '/impressum/' | relative_url }}">Impressum</a>
+        <a href="{{ '/datenschutz/' | relative_url }}">Datenschutz</a>
+      </div>
+      <p class="footer-mobile-copyright">&copy; 2025 Rike Trettwer. Alle Rechte vorbehalten.</p>
+    </div>
+  </div>
 </footer>

@@ -1,70 +1,65 @@
-// Globale Link-Styles für die gesamte Website
-// Verwendet die Link-Color Variable für konsistente Farbgebung
-
+// Globale Link-Styles für die gesamte Website - Optimiert für Performance
 // Standard-Links in Posts und Content-Bereichen
 a {
-  color: $link-color;
+  color: var(--link-color);
   text-decoration: underline;
-  transition: all 0.2s ease;
+  transition: color 0.2s ease;
 
   &:hover {
-    color: $link-hover-color;
+    color: var(--link-hover-color);
     text-decoration: underline;
   }
 
   &:visited {
-    color: darken($link-color, 10%);
+    color: #26a69a; // Statischer Wert statt darken() für bessere Performance
   }
 }
 
 // Header-Links - dezent ohne Hervorhebung, nur Hover-Effekt
 .site-header {
-  // Navigation-Links spezifisch - höhere Spezifität für Menüpunkte
   .site-nav {
     a {
-      color: $theme-white !important;
+      color: var(--theme-white);
       text-decoration: none;
       transition: color 0.2s ease;
 
       &:hover {
-        color: $link-color !important;
+        color: var(--link-color);
         text-decoration: none;
       }
 
       &:visited {
-        color: $theme-white !important;
+        color: var(--theme-white);
       }
     }
 
-    // Spezifisch für page-link Klasse
     .page-link {
-      color: $theme-white !important;
+      color: var(--theme-white);
       text-decoration: none;
       transition: color 0.2s ease;
 
       &:hover {
-        color: $link-color !important;
+        color: var(--link-color);
         text-decoration: none;
       }
 
       &:visited {
-        color: $theme-white !important;
+        color: var(--theme-white);
       }
     }
   }
 
-  // Allgemeine Header-Links (weniger spezifisch, nach den Navigation-Links)
-  a {
-    color: inherit;
+  .site-title {
+    color: var(--theme-white);
     text-decoration: none;
 
     &:hover {
-      color: $link-color !important;
+      color: var(--link-color);
       text-decoration: none;
     }
 
     &:visited {
-      color: inherit;
+      color: var(--theme-white);
     }
   }
 }
@@ -139,11 +134,11 @@ a {
 // Blog-Post-Preview Links auf der Homepage
 .post-list {
   .post-link {
-    color: $theme-primary-2;
+    color: #20639b; // Statischer Wert statt var()
     text-decoration: none;
 
     &:hover {
-      color: darken($theme-primary-2, 15%);
+      color: #1a4f7a; // Statischer gedarkter Wert statt darken()
       text-decoration: underline;
     }
   }
@@ -152,26 +147,26 @@ a {
 // Tag-Links auf der Blog-Seite
 .post-tags {
   .tag {
-    color: $link-color !important;
+    color: var(--link-color);
     text-decoration: none;
     transition: color 0.2s ease;
 
     &:hover {
-      color: $link-hover-color !important;
+      color: var(--link-hover-color);
       text-decoration: underline;
     }
 
     &:visited {
-      color: $link-color !important;
+      color: var(--link-color);
     }
   }
 
   a.tag {
-    color: $link-color !important;
+    color: var(--link-color);
     text-decoration: none;
 
     &:hover {
-      color: $link-hover-color !important;
+      color: var(--link-hover-color);
       text-decoration: underline;
     }
   }
@@ -181,21 +176,21 @@ a {
 article.post .post-content a,
 .post-content a,
 .e-content a {
-  color: $link-color !important;
-  text-decoration: underline !important;
-  transition: color 0.2s ease !important;
+  color: var(--link-color);
+  text-decoration: underline;
+  transition: color 0.2s ease;
 
   &:hover {
-    color: $link-hover-color !important;
-    text-decoration: underline !important;
+    color: var(--link-hover-color);
+    text-decoration: underline;
   }
 
   &:visited {
-    color: darken($link-color, 10%) !important;
+    color: #26a69a; // Statischer Wert statt darken()
   }
 
   &:focus {
-    color: $link-hover-color !important;
+    color: var(--link-hover-color);
   }
 }
 
@@ -204,29 +199,29 @@ article.post .post-content a,
 .post-content a,
 .e-content a,
 article a {
-  color: $link-color !important;
+  color: var(--link-color);
 
   &:hover,
   &:focus {
-    color: $link-hover-color !important;
+    color: var(--link-hover-color);
   }
 
   &:visited {
-    color: darken($link-color, 10%) !important;
+    color: #26a69a; // Statischer Wert statt darken()
   }
 }
 
 // Autoren-Link in Blog-Übersicht und Posts: grau wie das Datum, erst beim Hover grün
 .author-link-meta {
-  color: #888 !important;
+  color: #888;
   font-size: inherit;
-  text-decoration: none !important;
+  text-decoration: none;
   font-weight: normal;
   transition: color 0.2s;
 
   &:hover,
   &:focus {
-    color: $theme-primary-1 !important;
-    text-decoration: underline !important;
+    color: var(--theme-primary-1);
+    text-decoration: underline;
   }
 }

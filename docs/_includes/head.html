@@ -1,16 +1,24 @@
 <head>
   <meta charset="utf-8">
-    <meta name="google-site-verification" content="3n4TL-765oBTLmdxVVelNlgbk74-W4aE7AwMsoXpWjc">
+  <meta name="google-site-verification" content="3n4TL-765oBTLmdxVVelNlgbk74-W4aE7AwMsoXpWjc">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Favicon und App Icons -->
+  <!-- Preload kritische Ressourcen für bessere Performance -->
+  <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style">
+  <link rel="preload" href="{{ '/assets/images/misc/icon.webp' | relative_url }}" as="image">
+
+  <!-- DNS-Prefetch für externe Ressourcen -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com">
+  <link rel="dns-prefetch" href="//fonts.gstatic.com">
+
+  <!-- Favicon und App Icons - optimiert mit WebP -->
   <link rel="icon" type="image/webp" sizes="32x32" href="{{ '/assets/images/misc/icon.webp' | relative_url }}">
   <link rel="icon" type="image/webp" sizes="16x16" href="{{ '/assets/images/misc/icon.webp' | relative_url }}">
   <link rel="apple-touch-icon" sizes="180x180" href="{{ '/assets/images/misc/icon.webp' | relative_url }}">
   <link rel="manifest" href="{{ '/site.webmanifest' | relative_url }}">
-  <meta name="msapplication-TileColor" content="#4a90e2">
-  <meta name="theme-color" content="#4a90e2">
+  <meta name="msapplication-TileColor" content="#2ec4b6">
+  <meta name="theme-color" content="#2ec4b6">
 
   {%- seo -%}
   <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">

@@ -8,43 +8,61 @@
 # For technical reasons, this file is *NOT* reloaded automatically when you use
 # 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 #
-# If you need help with YAML syntax, here are some quick references for you:
-# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
-# https://learnxinyminutes.com/docs/yaml/
-#
 # Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-
 title: The more the betta
 subtitle: Kampffischzucht und mehr
 author:
   name: Rike trettwer
   email: rike@trettwer.de
   github_username: rtrettwer
-#email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about betta splendens breeding, fishkeeping and more.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://trettwer.de"
 github_username: rtrettwer
 logo: assets/misc/icon.png
+
 # Build settings
 theme: minima
-#minima:
-#  skin: dark
 
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-feed
 
-# Sass-Konfiguration für bessere Kompatibilität
+# Performance Optimierungen
 sass:
   style: compressed
   sass_dir: assets
   sourcemap: never
+
+# Liquid-Performance Optimierung - Weniger strikt für Kompatibilität
+liquid:
+  error_mode: warn
+  strict_variables: false
+  strict_filters: false
+
+# Markdown-Konfiguration für bessere Performance
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter: rouge
+
+# Exclude-Liste für bessere Build-Performance
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - scripts/
+  - .git/
+  - .gitignore
+  - README.md
+  - LICENSE.txt
 
 # Header‑Navigation (minima):
 header_pages:
@@ -55,22 +73,3 @@ header_pages:
   - food.md
   - sale.md
   - gallery.md
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
