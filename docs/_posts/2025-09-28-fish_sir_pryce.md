@@ -2,14 +2,14 @@
 layout: post_fish_portrait
 title: "Sir Pryce"
 author: "Rike Trettwer"
-date: 2025-09-28 11:06:51 +0200
+date: 15.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, zucht]
 excerpt: "Sir Pryce ist mein erster Zuchtmännchen mit beeindruckender Persönlichkeit."
 image: /assets/images/fish/sirPryce/sir_pryce.webp
 timeline_image: /assets/images/fish/sirPryce/sir_pryce_timeline.webp
 fish_name: "Sir Pryce"
-fish_birth: "Frühling 2025"
+fish_birth: "15.05.2025"
 fish_age: "4 Monate"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Plakat"

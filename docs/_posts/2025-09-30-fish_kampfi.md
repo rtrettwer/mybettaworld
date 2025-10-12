@@ -2,14 +2,14 @@
 layout: post_fish_portrait
 title: "Kampfi"
 author: "Rike Trettwer"
-date: 2025-09-30 11:06:51 +0200
+date: 15.01.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, friedlich]
 excerpt: "Kampfi ist mein friedlichster Betta mit wunderschöner roter Färbung."
 image: /assets/images/fish/kampfi/P5211280_thumbnail.webp
 timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
-fish_birth: Januar 2025
+fish_birth: "15.01.2025"
 fish_age: 9 Monate
 fish_price: 36 €
 fish_type: Betta splendens (Domestic)

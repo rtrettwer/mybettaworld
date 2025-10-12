@@ -2,14 +2,14 @@
 layout: post_fish_portrait
 title: "Shadow"
 author: "Rike Trettwer"
-date: 2025-09-26 11:06:51 +0200
+date: 22.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, schwarz]
 excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."
 image: /assets/images/fish/shadow/shadow.webp
 timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
-fish_birth: "Mai 2025"
+fish_birth: "2025-05-22"
 fish_age: "5 Monate"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Weibchen"

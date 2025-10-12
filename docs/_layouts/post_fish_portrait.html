@@ -36,7 +36,17 @@ layout: default
         <div>
             <ul style="list-style: none; padding: 0;">
                 <li><strong>Name:</strong> {{ page.fish_name }}</li>
-                <li><strong>Geburtsmonat:</strong> {{ page.fish_birth }}</li>
+                <li><strong>Geburtsmonat:</strong>
+                {% if page.fish_birth %}
+                  {% assign birth_date = page.fish_birth | date: "%Y-%m-%d" %}
+                  {% assign birth_day = birth_date | date: "%d" %}
+                  {% assign birth_month = birth_date | date: "%m" %}
+                  {% assign birth_year = birth_date | date: "%Y" %}
+                  {{ birth_day }}.{{ birth_month }}.{{ birth_year }}
+                {% else %}
+                  {{ page.fish_birth }}
+                {% endif %}
+                </li>
                 <li><strong>Alter:</strong> {{ page.fish_age }}</li>
                 <li><strong>Art/Variante:</strong> {{ page.fish_type }}</li>
                 <li><strong>Flossentyp:</strong> {{ page.fish_fins }}</li>

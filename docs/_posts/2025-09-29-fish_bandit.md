@@ -2,14 +2,14 @@
 layout: post_fish_portrait
 title: "Bandit"
 author: "Rike Trettwer"
-date: 2025-09-29 11:06:51 +0200
+date: 15.03.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, camallanus, quarantäne]
 excerpt: "Bandit ist ein temperamentvoller Betta, der leider an Camallanus erkrankt ist."
 image: /assets/images/fish/bandit/IMG_20250912_110539.webp
 timeline_image: /assets/images/fish/bandit/bandit_timeline.webp
 fish_name: "Bandit"
-fish_birth: "März 2025"
+fish_birth: "15.03.2025"
 fish_price: "36 €"
 fish_type: "Betta splendens (Domestic), Plakat (Kurzflosser)"
 fish_fins: "Plakat (Kurzflosser)"

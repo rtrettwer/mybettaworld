@@ -21,7 +21,24 @@
         <div class="timeline-content">
           <div class="timeline-date">
             {% if post.fish_birth %}
-              {{ post.fish_birth }}
+              {% assign birth_date = post.fish_birth | date: "%Y-%m-%d" %}
+              {% assign birth_year = birth_date | date: "%Y" %}
+              {% assign birth_month = birth_date | date: "%m" %}
+              {% case birth_month %}
+                {% when "01" %}{% assign month_name = "Januar" %}
+                {% when "02" %}{% assign month_name = "Februar" %}
+                {% when "03" %}{% assign month_name = "März" %}
+                {% when "04" %}{% assign month_name = "April" %}
+                {% when "05" %}{% assign month_name = "Mai" %}
+                {% when "06" %}{% assign month_name = "Juni" %}
+                {% when "07" %}{% assign month_name = "Juli" %}
+                {% when "08" %}{% assign month_name = "August" %}
+                {% when "09" %}{% assign month_name = "September" %}
+                {% when "10" %}{% assign month_name = "Oktober" %}
+                {% when "11" %}{% assign month_name = "November" %}
+                {% when "12" %}{% assign month_name = "Dezember" %}
+              {% endcase %}
+              {{ month_name }} {{ birth_year }}
             {% else %}
               {{ post.date | date: "%d.%m.%Y" }}
             {% endif %}

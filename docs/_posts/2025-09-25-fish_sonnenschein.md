@@ -2,14 +2,14 @@
 layout: post_fish_portrait
 title: "Sonnenschein"
 author: "Rike Trettwer"
-date: 2025-09-25 11:06:51 +0200
+date: 20.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, zucht]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich ihre Entwicklung."
 image: /assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp
 timeline_image: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
 fish_name: "Sonnenschein"
-fish_birth: "Mai 2025"
+fish_birth: "2025-05-20"
 fish_age: "5 Monate"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic)"
