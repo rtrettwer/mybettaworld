@@ -7,6 +7,7 @@ categories: [fish]
 tags: [betta, weibchen, schwarz]
 excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."
 image: /assets/images/fish/shadow/shadow.webp
+timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
 fish_birth: "Mai 2025"
 fish_age: "5 Monate"

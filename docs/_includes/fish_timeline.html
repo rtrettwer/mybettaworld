@@ -6,17 +6,13 @@
     <div class="timeline-item" data-fish="{{ post.title | slugify }}">
       <div class="timeline-marker">
         <a href="{{ post.url | relative_url }}" class="fish-link">
-          {% if post.image %}
-            <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
-          {% elsif post.featured_image %}
-            <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
-          {% elsif post.fish_image %}
-            <img src="{{ post.fish_image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
+          {% if post.timeline_image %}
+            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
           {% else %}
-            <!-- Fallback: Versuche automatisch ein Bild zu finden -->
+            <!-- Automatisch Timeline-Bild mit _timeline Suffix suchen -->
             {% assign fish_slug = post.title | slugify %}
-            {% assign image_path = '/assets/images/fish/' | append: fish_slug | append: '.webp' %}
-            <img src="{{ image_path | relative_url }}" alt="{{ post.title }}" class="fish-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+            {% assign timeline_image_path = '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
+            <img src="{{ timeline_image_path | relative_url }}" alt="{{ post.title }}" class="fish-avatar" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
             <div class="fish-placeholder" style="display: none;">🐟</div>
           {% endif %}
         </a>

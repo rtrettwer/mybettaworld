@@ -7,6 +7,7 @@ categories: [fish]
 tags: [betta, männchen, zucht]
 excerpt: "Sir Pryce ist mein erster Zuchtmännchen mit beeindruckender Persönlichkeit."
 image: /assets/images/fish/sirPryce/sir_pryce.webp
+timeline_image: /assets/images/fish/sirPryce/sir_pryce_timeline.webp
 fish_name: "Sir Pryce"
 fish_birth: "Frühling 2025"
 fish_age: "4 Monate"

@@ -7,6 +7,7 @@ categories: [fish]
 tags: [betta, weibchen, zucht]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich ihre Entwicklung."
 image: /assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp
+timeline_image: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
 fish_name: "Sonnenschein"
 fish_birth: "Mai 2025"
 fish_age: "5 Monate"

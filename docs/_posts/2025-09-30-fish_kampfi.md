@@ -7,6 +7,7 @@ categories: [fish]
 tags: [betta, männchen, friedlich]
 excerpt: "Kampfi ist mein friedlichster Betta mit wunderschöner roter Färbung."
 image: /assets/images/fish/kampfi/P5211280_thumbnail.webp
+timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
 fish_birth: Januar 2025
 fish_age: 9 Monate
