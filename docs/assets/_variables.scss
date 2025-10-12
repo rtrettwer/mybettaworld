@@ -12,3 +12,7 @@ $link-hover-color: darken($theme-primary-1, 10%);
 
 // Header-Gradient
 $header-gradient: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 50%, $theme-primary-3 100%);
+
+
+// Mobile-Menu-Gradient (nur 2 Farben)
+$mobile-menu-gradient: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);

@@ -2,182 +2,105 @@
 
 .site-header {
   background: $header-gradient;
+  min-height: 55.95px;
   position: relative;
-  z-index: 1000;
   width: 100%;
-  margin: 0 !important;
-  padding: 0 !important;
-  border: none !important;
-  height: 64px !important;
-  display: flex !important;
-  align-items: center !important;
+  border: none;
 }
 
 .site-header .wrapper {
-  width: 100%;
-  max-width: 1800px;
+  width: 95%;
+  max-width: none;
   margin: 0 auto;
-  padding: 0 20px;
-  box-sizing: border-box;
-  display: flex !important;
-  flex-direction: row !important;
-  align-items: center !important;
-  justify-content: space-between !important;
-  height: 64px !important;
-  gap: 0 !important;
+  padding-right: 2.5%;
+  padding-left: 2.5%;
 }
 
-// Container für Icon + Titel zusammen
-.header-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px; // Kleiner Abstand zwischen Icon und Titel
-  flex-shrink: 0;
-  height: 40px; // Feste Höhe gleich dem Logo für konsistente Zentrierung
-}
+.site-title {
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 54px;
+  letter-spacing: -1px;
+  margin-bottom: 0;
+  float: left;
+  color: $theme-white !important;
+  text-decoration: none;
 
-// Spalte 1: Logo - immer sichtbar, angemessene Größe
-.header-logo {
-  display: flex;
-  align-items: center;
-  flex-shrink: 0; // Logo wird nie kleiner
-  height: 40px; // Feste Höhe für konsistente Zentrierung
-
-  .logo-link {
-    display: block;
+  &:hover {
+    color: $link-color !important;
     text-decoration: none;
   }
-
-  .logo-circle {
-    display: block;
-    width: 40px; // Größer: von 32px auf 40px
-    height: 40px; // Größer: von 32px auf 40px
-    border-radius: 50%; // Runder weißer Hintergrund
-    background: $theme-white; // Weißer Hintergrund für bessere Sichtbarkeit
-    padding: 0; // Kein Padding - Fisch liegt über den Kreis
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08); // Subtiler Schatten
-    transition: transform 0.2s, box-shadow 0.2s;
-    position: relative; // Für absolute Positionierung des Bildes
-    overflow: visible; // Wichtig: Bild darf über den Kreis hinausragen
-
-    &:hover {
-      transform: scale(1.05);
-      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-    }
-
-    img {
-      position: absolute; // Absolute Positionierung über dem weißen Kreis
-      top: 50%; // Zentriert vertikal
-      left: 50%; // Zentriert horizontal
-      transform: translate(-50%, -50%); // Perfekte Zentrierung
-      width: 120%; // Größer als der Kreis, damit er darüber liegt
-      height: 120%;
-      object-fit: contain; // Vollständiges Bild ohne Abschneiden
-      display: block;
-      z-index: 2; // Über dem weißen Hintergrund
-    }
-  }
 }
 
-// Spalte 2: Titel (verschwindet früher bei Platzmangel)
-.header-title {
-  height: 40px; // Gleiche Höhe wie Logo
-  display: flex;
-  align-items: center; // Vertikal zentriert im Container
-
-  .site-title {
-    color: $theme-white !important;
-    font-weight: 600;
-    font-size: 1.3rem; // Etwas kleiner für bessere Proportionen
-    text-decoration: none !important;
-    white-space: nowrap;
-    transition: color 0.2s;
-    margin: 0; // Kein zusätzlicher Margin
-    line-height: 1; // Reduzierte Zeilenhöhe für kompaktere Darstellung
-
-    &:hover {
-      color: $link-color !important;
-    }
-  }
-
-  // Titel verschwindet früher um Logo und Navigation Platz zu geben
-  @media (max-width: 900px) {
-    display: none;
-  }
-}
-
-// Spalte 3: Navigation
 .site-nav {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: flex-end !important;
-  min-width: 0 !important;
-  max-width: none !important;
-  width: auto !important;
-  padding: 0 !important;
-  margin: 0 !important;
-  flex: 0 0 auto !important;
+  float: right;
+  line-height: 54px;
 
   .nav-trigger {
     display: none;
   }
 
-  .trigger {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    @media (max-width: 1200px) { gap: 12px; }
-    @media (max-width: 1000px) { gap: 8px; }
-    @media (max-width: 900px) { gap: 5px; }
+  .menu-icon {
+    display: none;
   }
 
   .page-link {
-    color: $theme-white !important;
-    text-decoration: none !important;
-    padding: 8px 10px;
-    border-radius: 4px;
-    transition: all 0.2s;
-    white-space: nowrap;
-    font-size: 0.95rem;
+    color: $theme-white;
+    line-height: 1.5;
+    margin-left: 20px;
+    text-decoration: none;
+
     &:hover {
-      background: rgba(255, 255, 255, 0.1);
-      color: $link-color !important;
-    }
-    @media (max-width: 900px) {
-      font-size: 0.9rem;
-      padding: 6px 6px;
+      color: $link-color;
+      text-decoration: none;
     }
   }
 
-  @media (max-width: 1000px) {
-    .trigger {
-      display: none;
-      position: absolute;
-      top: 100%;
-      right: 0;
-      background: linear-gradient(90deg, $theme-primary-1 0%, $theme-primary-2 100%);
-      border-radius: 8px;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      min-width: 200px;
-      margin-top: 10px;
-      flex-direction: column;
-      gap: 0;
-      .page-link {
-        display: block;
-        padding: 12px 20px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 0;
-        &:last-child { border-bottom: none; }
-        &:hover { background: rgba(255, 255, 255, 0.1); }
+  @media screen and (max-width: 600px) {
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    background: $mobile-menu-gradient;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    text-align: right;
+
+    .menu-icon {
+      display: block;
+      float: right;
+      width: 36px;
+      height: 26px;
+      line-height: 0;
+      padding-top: 10px;
+      text-align: center;
+
+      > svg {
+        fill: $theme-white;
+        width: 18px;
+        height: 15px;
       }
     }
-    .nav-trigger:checked ~ .trigger {
-      display: flex;
+
+    .trigger {
+      clear: both;
+      display: none;
     }
-    button,
-    .burger-menu {
-      display: flex !important;
+
+    &:hover .trigger {
+      display: block;
+      padding-bottom: 5px;
+    }
+
+    .page-link {
+      display: block;
+      padding: 5px 10px;
+      margin-left: 0;
+      color: $theme-white !important;
+
+      &:hover {
+        color: $link-color;
+        background: rgba(255, 255, 255, 0.1);
+      }
     }
   }
 }
