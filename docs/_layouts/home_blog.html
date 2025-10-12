@@ -8,7 +8,7 @@ layout: default
       {%- for post in site.posts -%}
       <li class="card" style="margin-bottom:2em;">
         <div class="post-meta" style="font-size:0.95em; color:#888; margin-bottom:0.5em;">
-          {{ post.date | date: date_format }}
+          {{ post.date | date: "%d.%m.%Y" }}
           • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
             <a class="p-author h-card author-link-meta" itemprop="name" href="{{ site.baseurl }}/about/">{{ post.author }}</a>
           </span>
