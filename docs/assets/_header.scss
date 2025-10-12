@@ -8,22 +8,23 @@
   margin: 0 !important;
   padding: 0 !important;
   border: none !important;
+  height: 64px !important;
+  display: flex !important;
+  align-items: center !important;
 }
 
-// Wrapper NUR für den Header - nicht global!
 .site-header .wrapper {
+  width: 100%;
   max-width: 1800px;
-  width: 98%;
   margin: 0 auto;
-  padding: 12px 20px; // Gleichmäßiges vertikales Padding reduziert
-  box-sizing: border-box; // Wichtig für korrekte Höhenberechnung
-
-  // Zwei-Spalten-Layout: Brand-Container + Navigation
-  display: grid;
-  grid-template-columns: auto 1fr; // Brand-Container, dann Navigation
-  gap: 20px; // Abstand zwischen Brand und Navigation
-  align-items: center; // Vertikal zentriert
-  height: 64px; // Feste Höhe statt min-height für präzise Kontrolle
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  height: 64px !important;
+  gap: 0 !important;
 }
 
 // Container für Icon + Titel zusammen
@@ -107,116 +108,48 @@
 
 // Spalte 3: Navigation
 .site-nav {
-  justify-self: end; // Navigation rechts ausrichten
-  display: flex;
-  align-items: center; // Vertikal zentriert
-  position: relative;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  width: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: 0 0 auto !important;
 
   .nav-trigger {
     display: none;
   }
 
-  // Desktop Navigation - horizontale Menüpunkte mit engeren Abständen
   .trigger {
     display: flex;
     align-items: center;
-    gap: 15px; // Kleinerer Startabstand (war 25px)
-
-    // Bei weniger Platz noch kleinere Abstände
-    @media (max-width: 1200px) {
-      gap: 12px; // Reduziert von 20px
-    }
-
-    @media (max-width: 1000px) {
-      gap: 8px; // Reduziert von 15px
-    }
-
-    @media (max-width: 900px) {
-      gap: 5px; // Reduziert von 10px
-    }
+    gap: 15px;
+    @media (max-width: 1200px) { gap: 12px; }
+    @media (max-width: 1000px) { gap: 8px; }
+    @media (max-width: 900px) { gap: 5px; }
   }
 
   .page-link {
     color: $theme-white !important;
     text-decoration: none !important;
-    padding: 8px 10px; // Weniger horizontales Padding (war 8px 12px)
+    padding: 8px 10px;
     border-radius: 4px;
     transition: all 0.2s;
     white-space: nowrap;
     font-size: 0.95rem;
-
     &:hover {
       background: rgba(255, 255, 255, 0.1);
       color: $link-color !important;
     }
-
-    // Bei sehr wenig Platz noch kompakter
     @media (max-width: 900px) {
       font-size: 0.9rem;
-      padding: 6px 6px; // Noch weniger Padding
+      padding: 6px 6px;
     }
   }
 
-  // Burger Menu - einheitliches Styling für ALLE Bildschirmgrößen - mit höchster Spezifität
-  .burger-menu {
-    display: none !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0 !important;
-    width: auto !important;
-    height: auto !important;
-    cursor: pointer !important;
-    transition: none !important;
-    flex-shrink: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-
-    &:hover {
-      background: transparent !important;
-    }
-
-    .menu-icon {
-      width: 24px !important;
-      height: 24px !important;
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      margin: 0 !important;
-      padding: 6px !important;
-      background: rgba(255, 255, 255, 0.9) !important;
-      border-radius: 4px !important;
-      transition: background 0.2s !important;
-
-      &:hover {
-        background: rgba(255, 255, 255, 1) !important;
-      }
-
-      svg {
-        width: 18px !important;
-        height: 18px !important;
-        display: block !important;
-        margin: 0 !important;
-        padding: 0 !important;
-
-        path {
-          fill: $theme-primary-1 !important;
-        }
-      }
-    }
-  }
-
-  // Einheitlicher Media Query für ALLE kleinen Bildschirme - mit !important Regeln
   @media (max-width: 1000px) {
-    width: auto !important;
-    height: 40px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: flex-end !important;
-    justify-self: end !important;
-    position: relative !important;
-
     .trigger {
       display: none;
       position: absolute;
@@ -230,94 +163,21 @@
       margin-top: 10px;
       flex-direction: column;
       gap: 0;
-
       .page-link {
         display: block;
         padding: 12px 20px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         border-radius: 0;
-
-        &:last-child {
-          border-bottom: none;
-        }
-
-        &:hover {
-          background: rgba(255, 255, 255, 0.1);
-        }
+        &:last-child { border-bottom: none; }
+        &:hover { background: rgba(255, 255, 255, 0.1); }
       }
     }
-
-    .burger-menu {
-      display: flex !important;
-      align-items: center !important;
-      justify-content: center !important;
-      margin: 0 !important;
-      padding: 0 !important;
-      position: static !important;
-
-      .menu-icon {
-        display: flex !important;
-        align-items: center !important;
-        justify-content: center !important;
-        // Gleiche Eigenschaften für ALLE Bildschirmgrößen unter 1000px - mit !important
-        width: 24px !important;
-        height: 24px !important;
-        padding: 6px !important;
-        background: rgba(255, 255, 255, 0.9) !important;
-        border-radius: 4px !important;
-        margin: 0 !important;
-      }
-    }
-
     .nav-trigger:checked ~ .trigger {
       display: flex;
     }
-  }
-}
-
-// Zusätzliche hochspezifische Regeln für Burger-Menü - als Backup gegen Minima-Overrides
-.site-header .site-nav .burger-menu {
-  display: none !important;
-  background: transparent !important;
-  border: none !important;
-  padding: 0 !important;
-  margin: 0 !important;
-
-  .menu-icon {
-    width: 24px !important;
-    height: 24px !important;
-    padding: 6px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    border-radius: 4px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    margin: 0 !important;
-
-    svg {
-      width: 18px !important;
-      height: 18px !important;
-
-      path {
-        fill: $theme-primary-1 !important;
-      }
-    }
-  }
-}
-
-// Mobile Burger-Menü mit maximaler Spezifität
-@media (max-width: 1000px) {
-  .site-header .site-nav .burger-menu {
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-
-    .menu-icon {
-      width: 24px !important;
-      height: 24px !important;
-      padding: 6px !important;
-      background: rgba(255, 255, 255, 0.9) !important;
-      border-radius: 4px !important;
+    button,
+    .burger-menu {
+      display: flex !important;
     }
   }
 }
