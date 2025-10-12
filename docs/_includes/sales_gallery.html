@@ -31,6 +31,8 @@
     <button class="filter-btn" data-filter="male">Männchen</button>
     <button class="filter-btn" data-filter="female">Weibchen</button>
     <button class="filter-btn" data-filter="juvenile">Jungfische</button>
+    <button class="filter-btn" data-filter="special-futter">Futter</button>
+    <button class="filter-btn" data-filter="special-pflanze">Pflanzen</button>
     <button class="filter-toggle" onclick="toggleAdvancedFilters()">🔧 Erweiterte Filter</button>
   </div>
 
@@ -73,6 +75,10 @@
           <span class="gender {{ fish.gender }}">
             {% if fish.gender == 'male' %}♂ Männchen
             {% elsif fish.gender == 'female' %}♀ Weibchen
+            {% elsif fish.gender == 'juvenile' %}Jungfisch
+            {% elsif fish.gender == 'special' and fish.name contains 'Mikrowürmer' %}Futter
+            {% elsif fish.gender == 'special' and fish.name contains 'Essigälchen' %}Futter
+            {% elsif fish.gender == 'special' and fish.name contains 'Schwimmpflanzen' %}Pflanze
             {% else %}? Geschlecht unbekannt
             {% endif %}
           </span>
@@ -135,6 +141,12 @@
         <li>Versteckmöglichkeiten und Pflanzen</li>
         <li>Männchen einzeln halten!</li>
       </ul>
+    </div>
+
+    <div class="info-card">
+      <h4>🔗 Weitere Angebote auf Kleinanzeigen</h4>
+      <p>Du findest meine aktuellen Angebote auch auf <a href="https://www.kleinanzeigen.de/profil/DEIN-PROFIL" target="_blank" rel="noopener" style="font-weight:bold;color:var(--theme-primary-2);text-decoration:underline;">Kleinanzeigen.de</a>.<br>
+      Dort gibt es ggf. weitere Fotos und Infos zu den Fischen.</p>
     </div>
   </div>
 </div>

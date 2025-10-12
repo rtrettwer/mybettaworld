@@ -4,6 +4,11 @@ title: "Verkauf"
 permalink: /sale/
 ---
 
+<div class="blog-header-card content-card">
+  <h1>Verkauf</h1>
+  <p>Hier findest du alle aktuell verfügbaren Betta-Fische und weitere Angebote.</p>
+</div>
+
 <div class="blog-container">
   <!-- Filter Card -->
   <div class="content-card">
@@ -182,6 +187,16 @@ permalink: /sale/
     </div>
   </div>
   {% endfor %}
+
+  <!-- Entfernte Spezial-Angebote und Schwimmpflanzen-Kachel, da alles jetzt einheitlich über sales.yml läuft. -->
+
+</div>
+
+<!-- Info-Kachel: Weitere Angebote auf Kleinanzeigen -->
+<div class="content-card" style="margin-top: 2.5rem;">
+  <h3 style="margin-top: 0;">🔗 Weitere Angebote auf Kleinanzeigen</h3>
+  <p>Du findest meine aktuellen Angebote auch auf <a href="https://www.kleinanzeigen.de/s-bestandsliste.html?userId=36951586" target="_blank" rel="noopener" style="font-weight:bold;color:var(--theme-primary-2);text-decoration:underline;">Kleinanzeigen.de</a>.<br>
+  Dort gibt es ggf. weitere Fotos und Infos zu den Fischen.</p>
 </div>
 
 <!-- JavaScript für Filter-Funktionalität -->

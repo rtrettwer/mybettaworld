@@ -24,6 +24,39 @@
   description: "Ein wahrer Gentleman unter den Bettas! Sir Pryce ist klassisch schön und ein absolut liebevoller und fürsorglicher Brut-Vater."
   special_notes: "Plakat-Typ, kompakte Flossen"
 
+- name: "Mikrowürmer-Kultur (Dose)"
+  status: "available"
+  gender: "special"
+  age: "frisch angesetzt"
+  size: "ca. 50ml Dose"
+  price: 6
+  color: "-"
+  image: "/assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp"
+  description: "Lebende Mikrowürmer als ideales Erstfutter für Jungfische. Die Kultur kommt in einer kleinen Dose, sofort startklar für die Fütterung."
+  special_notes: "Nur Abholung, keine Reservierung nötig."
+
+- name: "Essigälchen-Kultur (Reagenzglas)"
+  status: "available"
+  gender: "special"
+  age: "frisch angesetzt"
+  size: "Reagenzglas ca. 16ml"
+  price: 5
+  color: "-"
+  image: "/assets/images/food/essigaelchen/essigaelchen_reagenzglas.webp"
+  description: "Essigälchen sind ein hervorragendes Lebendfutter für Fischlarven. Die Kultur wird im Reagenzglas abgegeben, einfach zu entnehmen und zu pflegen."
+  special_notes: "Nur Abholung, keine Reservierung nötig."
+
+- name: "Schwimmpflanzen-Mix (Portion)"
+  status: "available"
+  gender: "special"
+  age: "frisch geerntet"
+  size: "ca. 1 Handvoll"
+  price: 2
+  color: "grün"
+  image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
+  description: "Portion aus verschiedenen Schwimmpflanzen (meist Froschbiss, Muschelblume, Wasserlinsen – je nach Verfügbarkeit). Ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
+  special_notes: "Nur Abholung, kein Versand. Bei Interesse einfach per Mail oder beim Fischkauf ansprechen."
+
 # Beispiele für andere Status:
 # - name: "Luna"
 #   status: "sold"
