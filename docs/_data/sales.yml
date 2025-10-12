@@ -7,7 +7,7 @@
   gender: "female"
   age: "5 Monate"
   size: "4.0cm"
-  price: 30
+  price: 10
   color: "Weiß-Marble"
   image: "/assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp"
   description: "Wunderschönes Marble-Weibchen mit zunehmend dunklen Schuppen. Sonnenschein zeigt eine faszinierende Farbentwicklung und ist sehr aktiv."
@@ -18,10 +18,10 @@
   gender: "male"
   age: "4 Monate"
   size: "4.2cm"
-  price: 35
+  price: 30
   color: "Blau-Rot"
   image: "/assets/images/fish/sirPryce/sir_pryce.webp"
-  description: "Ein wahrer Gentleman unter den Bettas! Sir Pryce besticht durch seine elegante Haltung und die prächtigen blau-roten Farben mit schwarzer Kopfmaske."
+  description: "Ein wahrer Gentleman unter den Bettas! Sir Pryce ist klassisch schön und ein absolut liebevoller und fürsorglicher Brut-Vater."
   special_notes: "Plakat-Typ, kompakte Flossen"
 
 # Beispiele für andere Status:

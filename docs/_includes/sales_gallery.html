@@ -2,16 +2,60 @@
 <div class="sales-gallery">
   <h3>Verfügbare Betta-Fische</h3>
 
+  <!-- Erweiterte Filter -->
+  <div class="advanced-filters" id="advanced-filters" style="display: none;">
+    <div class="filter-row">
+      <label for="search-fish">🔍 Suche:</label>
+      <input type="search" id="search-fish" placeholder="Name, Farbe oder Beschreibung...">
+    </div>
+    <div class="filter-row">
+      <label for="status-filter">Status:</label>
+      <select id="status-filter" data-status-filter>
+        <option value="all">Alle Status</option>
+        <option value="available">Verfügbar</option>
+        <option value="reserved">Reserviert</option>
+        <option value="sold">Verkauft</option>
+      </select>
+    </div>
+    <div class="filter-row">
+      <label for="price-range">Max. Preis:</label>
+      <input type="range" id="price-range" min="0" max="200" value="200" step="10">
+      <span id="price-display">200€</span>
+    </div>
+    <button class="filter-toggle" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
+  </div>
+
+  <!-- Standard Filter Controls -->
   <div class="filter-controls">
     <button class="filter-btn active" data-filter="all">Alle anzeigen</button>
     <button class="filter-btn" data-filter="male">Männchen</button>
     <button class="filter-btn" data-filter="female">Weibchen</button>
     <button class="filter-btn" data-filter="juvenile">Jungfische</button>
+    <button class="filter-toggle" onclick="toggleAdvancedFilters()">🔧 Erweiterte Filter</button>
+  </div>
+
+  <!-- Sortier- und Ergebnis-Controls -->
+  <div class="sort-controls">
+    <div class="results-count">
+      <span id="results-count">Lade Fische...</span>
+    </div>
+    <div class="sort-dropdown">
+      <label for="sort-select">Sortieren nach:</label>
+      <select id="sort-select">
+        <option value="name">Name</option>
+        <option value="price-low">Preis (niedrig → hoch)</option>
+        <option value="price-high">Preis (hoch → niedrig)</option>
+        <option value="status">Verfügbarkeit</option>
+      </select>
+    </div>
   </div>
 
   <div class="fish-grid">
     {% for fish in site.data.sales %}
-    <div class="fish-card {{ fish.status }}" data-category="{{ fish.gender }}" data-price="{{ fish.price }}">
+    <div class="fish-card {{ fish.status }}"
+         data-category="{{ fish.gender }}"
+         data-price="{{ fish.price | default: 0 }}"
+         data-status="{{ fish.status | default: 'sold' }}">
       <div class="fish-image">
         <img src="{{ fish.image | relative_url }}" alt="{{ fish.name }}" loading="lazy"
              onerror="this.src='/assets/images/placeholder-fish.jpg'">
@@ -61,6 +105,14 @@
     {% endfor %}
   </div>
 
+  <!-- Keine Ergebnisse Nachricht -->
+  <div class="no-results" id="no-results" style="display: none;">
+    <div class="no-results-icon">🐠</div>
+    <h3>Keine Fische gefunden</h3>
+    <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
+    <button class="reset-filters-btn" onclick="showAllFish()">Alle Fische anzeigen</button>
+  </div>
+
   <div class="sales-info">
     <div class="info-card">
       <h4>📋 Verkaufsbedingungen</h4>
@@ -68,7 +120,7 @@
         <li>Alle Fische sind gesund und gut gepflegt</li>
         <li>Nur Abholung möglich - kein Versand</li>
         <li>Abholort: [Dein Ort/Adresse]</li>
-        <li>Bei Fragen gerne melden: rike@trettwer.de</li>
+        <li>Bei Fragen gerne melden: info@trettwer.de</li>
         <li>Reservierung gegen Anzahlung von 50% möglich</li>
         <li>Terminvereinbarung für Abholung erforderlich</li>
       </ul>
@@ -86,3 +138,104 @@
     </div>
   </div>
 </div>
+
+<!-- JavaScript für Filter-Funktionalität -->
+<script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>
+<script>
+// Zusätzliche JavaScript-Funktionen direkt im HTML
+function toggleAdvancedFilters() {
+  const advancedFilters = document.getElementById('advanced-filters');
+  const isVisible = advancedFilters.style.display !== 'none';
+  advancedFilters.style.display = isVisible ? 'none' : 'block';
+
+  const toggleBtn = event.target;
+  toggleBtn.textContent = isVisible ? '🔧 Erweiterte Filter' : '🔧 Filter ausblenden';
+}
+
+function resetAllFilters() {
+  // Filter-Buttons zurücksetzen
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  document.querySelector('[data-filter="all"]').classList.add('active');
+
+  // Eingabefelder zurücksetzen
+  document.getElementById('search-fish').value = '';
+  document.getElementById('status-filter').value = 'all';
+  document.getElementById('price-range').value = '200';
+  document.getElementById('price-display').textContent = '200€';
+  document.getElementById('sort-select').value = 'name';
+
+  // Alle Fische anzeigen
+  showAllFish();
+  updateResultsCount();
+}
+
+function updateResultsCount() {
+  const visibleCards = document.querySelectorAll('.fish-card:not([style*="display: none"])').length;
+  const totalCards = document.querySelectorAll('.fish-card').length;
+  const resultsCount = document.getElementById('results-count');
+  const noResults = document.getElementById('no-results');
+
+  if (visibleCards === 0) {
+    resultsCount.textContent = 'Keine Ergebnisse';
+    noResults.style.display = 'block';
+  } else {
+    resultsCount.textContent = `${visibleCards} von ${totalCards} Fischen`;
+    noResults.style.display = 'none';
+  }
+}
+
+// Event Listeners für erweiterte Funktionen
+document.addEventListener('DOMContentLoaded', function() {
+  // Preis-Range Display Update
+  const priceRange = document.getElementById('price-range');
+  const priceDisplay = document.getElementById('price-display');
+
+  if (priceRange && priceDisplay) {
+    priceRange.addEventListener('input', function() {
+      priceDisplay.textContent = this.value + '€';
+    });
+  }
+
+  // Sortierung
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) {
+    sortSelect.addEventListener('change', function() {
+      const sortValue = this.value;
+      if (typeof sortFish === 'function') {
+        sortFish(sortValue);
+      }
+      updateResultsCount();
+    });
+  }
+
+  // Suche
+  const searchInput = document.getElementById('search-fish');
+  if (searchInput) {
+    let searchTimeout;
+    searchInput.addEventListener('input', function() {
+      clearTimeout(searchTimeout);
+      searchTimeout = setTimeout(() => {
+        if (typeof searchFish === 'function') {
+          searchFish(this.value);
+        }
+        updateResultsCount();
+      }, 300); // Debounce für bessere Performance
+    });
+  }
+
+  // Initiale Ergebnis-Zählung
+  updateResultsCount();
+
+  // Observer für dynamische Änderungen
+  const observer = new MutationObserver(updateResultsCount);
+  const fishGrid = document.querySelector('.fish-grid');
+  if (fishGrid) {
+    observer.observe(fishGrid, {
+      childList: true,
+      attributes: true,
+      attributeFilter: ['style'],
+      subtree: true
+    });
+  }
+});
+</script>
