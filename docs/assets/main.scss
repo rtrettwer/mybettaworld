@@ -10,3 +10,14 @@
 @import './links';
 @import './buttons';
 @import './cards';
+
+// Globale Regel gegen horizontales Scrollen auf mobilen Geräten
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
