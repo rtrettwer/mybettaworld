@@ -1,6 +1,6 @@
 <!-- Aquarium-spezifische Wasser-Parameter Dashboard -->
 <div class="water-parameters">
-  <h3>💧 Wasser-Parameter Monitor</h3>
+  <h3>Wasser-Parameter Monitor</h3>
   {% if page.water_parameters.last_test %}
   <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.9rem;">
     Letzter Test: {{ page.water_parameters.last_test }}
@@ -10,7 +10,7 @@
   <div class="parameter-grid">
     <div class="parameter-card temperature">
       <div class="parameter-header">
-        <div class="parameter-icon">🌡️</div>
+        <div class="parameter-icon">🌡️ T</div>
         {% assign temp_value = page.water_parameters.temperature | default: 26 %}
         {% if temp_value >= 24 and temp_value <= 28 %}
           <div class="parameter-status optimal">OPTIMAL</div>
@@ -31,7 +31,7 @@
 
     <div class="parameter-card ph">
       <div class="parameter-header">
-        <div class="parameter-icon">⚗️</div>
+        <div class="parameter-icon">⚗️ pH</div>
         {% assign ph_value = page.water_parameters.ph | default: 7.2 %}
         {% if ph_value >= 6.5 and ph_value <= 7.5 %}
           <div class="parameter-status optimal">OPTIMAL</div>
@@ -52,7 +52,7 @@
 
     <div class="parameter-card ammonia">
       <div class="parameter-header">
-        <div class="parameter-icon">☠️</div>
+        <div class="parameter-icon">☠️ NH3</div>
         {% assign ammonia_value = page.water_parameters.ammonia | default: 0.0 %}
         {% if ammonia_value == 0.0 %}
           <div class="parameter-status optimal">OPTIMAL</div>
@@ -76,7 +76,7 @@
 
     <div class="parameter-card nitrite">
       <div class="parameter-header">
-        <div class="parameter-icon">🧪</div>
+        <div class="parameter-icon">🧪 NO2</div>
         {% assign nitrite_value = page.water_parameters.nitrite | default: 0.0 %}
         {% if nitrite_value == 0.0 %}
           <div class="parameter-status optimal">OPTIMAL</div>
@@ -100,7 +100,7 @@
 
     <div class="parameter-card nitrate">
       <div class="parameter-header">
-        <div class="parameter-icon">🌱</div>
+        <div class="parameter-icon">🌱 NO3</div>
         {% assign nitrate_value = page.water_parameters.nitrate | default: 15 %}
         {% if nitrate_value <= 20 %}
           <div class="parameter-status optimal">OPTIMAL</div>
@@ -121,7 +121,7 @@
 
     <div class="parameter-card hardness">
       <div class="parameter-header">
-        <div class="parameter-icon">💎</div>
+        <div class="parameter-icon">💎 dH</div>
         {% assign hardness_value = page.water_parameters.hardness | default: 8 %}
         {% if hardness_value >= 5 and hardness_value <= 15 %}
           <div class="parameter-status optimal">OPTIMAL</div>

@@ -172,10 +172,10 @@
   }
 
   .parameter-card {
-    background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+    background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2)) !important;
     border-radius: 16px;
     padding: 1.5rem;
-    color: var(--theme-white);
+    color: var(--theme-white) !important;
     box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
     border: 2px solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s ease;
@@ -293,26 +293,6 @@
           animation: shimmer 2s infinite;
         }
       }
-    }
-
-    // Spezifische Gradient-Variationen für verschiedene Parameter
-    &.temperature {
-      background: linear-gradient(135deg, #ff6b35, #ff8a65);
-    }
-    &.ph {
-      background: linear-gradient(135deg, #8e44ad, #ba68c8);
-    }
-    &.ammonia {
-      background: linear-gradient(135deg, #e74c3c, #ef5350);
-    }
-    &.nitrite {
-      background: linear-gradient(135deg, #f39c12, #ffb74d);
-    }
-    &.nitrate {
-      background: linear-gradient(135deg, #27ae60, #66bb6a);
-    }
-    &.hardness {
-      background: linear-gradient(135deg, #3498db, #64b5f6);
     }
   }
 }
