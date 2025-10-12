@@ -8,7 +8,7 @@ address: "Hauptstraße 31a"
 postal_code: "82008"
 city: "Unterhaching"
 country: "Deutschland"
-email: "rike@trettwer.de"
+email: "info@trettwer.de"
 ---
 
 <div style="margin: 2rem 0;">
