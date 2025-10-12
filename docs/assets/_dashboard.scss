@@ -142,6 +142,177 @@
   }
 }
 
+// Wasser-Parameter Dashboard Styles (angepasst an Index-Seiten Design)
+.water-parameters {
+  background: var(--theme-white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  border: 1px solid rgba(46, 196, 182, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  }
+
+  h3 {
+    color: var(--theme-primary-2);
+    margin: 0 0 2rem 0;
+    font-size: 1.8rem;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .parameter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .parameter-card {
+    background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+    border-radius: 16px;
+    padding: 1.5rem;
+    color: var(--theme-white);
+    box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1));
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 25px rgba(46, 196, 182, 0.4);
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    .parameter-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+
+      .parameter-icon {
+        font-size: 1.5rem;
+        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+      }
+
+      .parameter-status {
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.2);
+        color: var(--theme-white);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
+    }
+
+    .parameter-title {
+      color: rgba(255, 255, 255, 0.9);
+      font-size: 0.9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin: 0 0 0.5rem 0;
+    }
+
+    .parameter-value {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--theme-white);
+      margin-bottom: 0.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .parameter-range {
+      font-size: 0.8rem;
+      color: rgba(255, 255, 255, 0.8);
+      margin-bottom: 1rem;
+    }
+
+    .parameter-gauge {
+      height: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 3px;
+      overflow: hidden;
+      position: relative;
+
+      .gauge-fill {
+        height: 100%;
+        background: linear-gradient(90deg, rgba(255,255,255,0.8), var(--theme-white));
+        border-radius: 3px;
+        transition: width 0.8s ease;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          right: -10px;
+          bottom: 0;
+          width: 10px;
+          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
+          animation: shimmer 2s infinite;
+        }
+      }
+    }
+
+    // Spezifische Gradient-Variationen für verschiedene Parameter
+    &.temperature {
+      background: linear-gradient(135deg, #ff6b35, #ff8a65);
+    }
+    &.ph {
+      background: linear-gradient(135deg, #8e44ad, #ba68c8);
+    }
+    &.ammonia {
+      background: linear-gradient(135deg, #e74c3c, #ef5350);
+    }
+    &.nitrite {
+      background: linear-gradient(135deg, #f39c12, #ffb74d);
+    }
+    &.nitrate {
+      background: linear-gradient(135deg, #27ae60, #66bb6a);
+    }
+    &.hardness {
+      background: linear-gradient(135deg, #3498db, #64b5f6);
+    }
+  }
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
 // Responsive Design
 @media (max-width: 768px) {
   .tank-grid {
@@ -168,5 +339,27 @@
       }
     }
   }
-}
 
+  .water-parameters {
+    padding: 1.5rem;
+
+    .parameter-grid {
+      grid-template-columns: 1fr;
+      gap: 0.8rem;
+    }
+
+    .parameter-card {
+      padding: 1rem;
+
+      .parameter-value {
+        font-size: 1.8rem;
+      }
+    }
+
+    .dashboard-footer {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      text-align: center;
+    }
+  }
+}

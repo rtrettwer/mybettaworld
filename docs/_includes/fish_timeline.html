@@ -1,27 +1,39 @@
 <!-- Interaktive Fisch-Timeline -->
 <div class="fish-timeline">
-  <h3>🐠 Meine Betta-Familie</h3>
   <div class="timeline-container">
-    {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'date' %}
+    {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_birth' %}
     {% for post in fish_posts %}
     <div class="timeline-item" data-fish="{{ post.title | slugify }}">
       <div class="timeline-marker">
-        {% if post.featured_image %}
+        {% if post.image %}
+          <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
+        {% elsif post.featured_image %}
           <img src="{{ post.featured_image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
         {% elsif post.fish_image %}
           <img src="{{ post.fish_image | relative_url }}" alt="{{ post.title }}" class="fish-avatar">
         {% else %}
           <!-- Fallback: Versuche automatisch ein Bild zu finden -->
           {% assign fish_slug = post.title | slugify %}
-          {% assign image_path = '/assets/images/fish/' | append: fish_slug | append: '.jpg' %}
+          {% assign image_path = '/assets/images/fish/' | append: fish_slug | append: '.webp' %}
           <img src="{{ image_path | relative_url }}" alt="{{ post.title }}" class="fish-avatar" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
           <div class="fish-placeholder" style="display: none;">🐟</div>
         {% endif %}
       </div>
       <div class="timeline-content">
-        <div class="timeline-date">{{ post.date | date: "%d.%m.%Y" }}</div>
+        <div class="timeline-date">
+          {% if post.fish_birth %}
+            {{ post.fish_birth }}
+          {% else %}
+            {{ post.date | date: "%d.%m.%Y" }}
+          {% endif %}
+        </div>
         <h4><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h4>
         <p>{{ post.excerpt | strip_html | truncatewords: 15 }}</p>
+        {% if post.fish_age %}
+          <div class="fish-info">
+            <span class="fish-age">Alter: {{ post.fish_age }}</span>
+          </div>
+        {% endif %}
         {% if post.fish_status %}
           <span class="fish-status status-{{ post.fish_status }}">{{ post.fish_status | capitalize }}</span>
         {% endif %}

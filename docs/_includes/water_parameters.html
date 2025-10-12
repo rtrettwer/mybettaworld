@@ -1,97 +1,95 @@
-<!-- Wasser-Parameter Tracker -->
+<!-- Wasser-Parameter Dashboard -->
 <div class="water-parameters">
-  <h3>💧 Wasser-Parameter</h3>
+  <h3>💧 Wasser-Parameter Monitor</h3>
 
   <div class="parameter-grid">
     <div class="parameter-card temperature">
-      <div class="parameter-icon">🌡️</div>
-      <div class="parameter-info">
-        <h4>Temperatur</h4>
-        <div class="current-value">26°C</div>
-        <div class="optimal-range">Optimal: 24-28°C</div>
-        <div class="status-bar">
-          <div class="status-fill" style="width: 75%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🌡️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Temperatur</div>
+      <div class="parameter-value">26°C</div>
+      <div class="parameter-range">Optimal: 24-28°C</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 75%"></div>
       </div>
     </div>
 
     <div class="parameter-card ph">
-      <div class="parameter-icon">⚗️</div>
-      <div class="parameter-info">
-        <h4>pH-Wert</h4>
-        <div class="current-value">7.2</div>
-        <div class="optimal-range">Optimal: 6.5-7.5</div>
-        <div class="status-bar">
-          <div class="status-fill" style="width: 85%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">⚗️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">pH-Wert</div>
+      <div class="parameter-value">7.2</div>
+      <div class="parameter-range">Optimal: 6.5-7.5</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 85%"></div>
       </div>
     </div>
 
     <div class="parameter-card ammonia">
-      <div class="parameter-icon">☠️</div>
-      <div class="parameter-info">
-        <h4>Ammoniak</h4>
-        <div class="current-value">0.0 mg/l</div>
-        <div class="optimal-range">Optimal: 0.0 mg/l</div>
-        <div class="status-bar">
-          <div class="status-fill good" style="width: 100%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">☠️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Ammoniak</div>
+      <div class="parameter-value">0.0</div>
+      <div class="parameter-range">Optimal: 0.0 mg/l</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 100%"></div>
       </div>
     </div>
 
     <div class="parameter-card nitrite">
-      <div class="parameter-icon">🧪</div>
-      <div class="parameter-info">
-        <h4>Nitrit</h4>
-        <div class="current-value">0.0 mg/l</div>
-        <div class="optimal-range">Optimal: 0.0 mg/l</div>
-        <div class="status-bar">
-          <div class="status-fill good" style="width: 100%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🧪</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Nitrit</div>
+      <div class="parameter-value">0.0</div>
+      <div class="parameter-range">Optimal: 0.0 mg/l</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 100%"></div>
       </div>
     </div>
 
     <div class="parameter-card nitrate">
-      <div class="parameter-icon">🌱</div>
-      <div class="parameter-info">
-        <h4>Nitrat</h4>
-        <div class="current-value">15 mg/l</div>
-        <div class="optimal-range">Optimal: <20 mg/l</div>
-        <div class="status-bar">
-          <div class="status-fill" style="width: 80%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🌱</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Nitrat</div>
+      <div class="parameter-value">15</div>
+      <div class="parameter-range">Optimal: <20 mg/l</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 80%"></div>
       </div>
     </div>
 
     <div class="parameter-card hardness">
-      <div class="parameter-icon">💎</div>
-      <div class="parameter-info">
-        <h4>Härte</h4>
-        <div class="current-value">8°dH</div>
-        <div class="optimal-range">Optimal: 5-15°dH</div>
-        <div class="status-bar">
-          <div class="status-fill" style="width: 70%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">💎</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Härte</div>
+      <div class="parameter-value">8°dH</div>
+      <div class="parameter-range">Optimal: 5-15°dH</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 70%"></div>
       </div>
     </div>
   </div>
 
-  <div class="testing-schedule">
-    <h4>📋 Testplan</h4>
-    <div class="schedule-grid">
-      <div class="test-item">
-        <span class="test-frequency">Täglich</span>
-        <span class="test-parameters">Temperatur, Verhalten beobachten</span>
-      </div>
-      <div class="test-item">
-        <span class="test-frequency">Wöchentlich</span>
-        <span class="test-parameters">pH, Ammoniak, Nitrit, Nitrat</span>
-      </div>
-      <div class="test-item">
-        <span class="test-frequency">Monatlich</span>
-        <span class="test-parameters">Härte, vollständige Analyse</span>
-      </div>
+  <div class="dashboard-footer">
+    <div class="last-update">
+      <div class="update-indicator"></div>
+      Letztes Update: {{ "now" | date: "%d.%m.%Y %H:%M" }}
+    </div>
+    <div class="quick-actions">
+      <button class="action-btn">Test durchführen</button>
+      <button class="action-btn secondary">Verlauf anzeigen</button>
     </div>
   </div>
 </div>
-

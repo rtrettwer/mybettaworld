@@ -1,120 +1,104 @@
-D<!-- Aquarium-spezifische Wasser-Parameter -->
-<div class="aquarium-water-parameters">
-  <h3>💧 Wasser-Parameter</h3>
+<!-- Aquarium-spezifische Wasser-Parameter Dashboard -->
+<div class="water-parameters">
+  <h3>💧 Wasser-Parameter Monitor</h3>
 
   <div class="parameter-grid">
     <div class="parameter-card temperature">
-      <div class="parameter-icon">🌡️</div>
-      <div class="parameter-info">
-        <h4>Temperatur</h4>
-        <div class="current-value">
-          {% if page.temperature %}{{ page.temperature }}°C{% else %}26°C{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: 24-28°C</div>
-        <div class="status-bar">
-          {% assign temp = page.temperature | default: 26 %}
-          {% assign temp_percentage = temp | minus: 20 | times: 10 | at_most: 100 %}
-          <div class="status-fill" style="width: {{ temp_percentage }}%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🌡️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Temperatur</div>
+      <div class="parameter-value">
+        {% if page.temperature %}{{ page.temperature }}°C{% else %}26°C{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: 24-28°C</div>
+      <div class="parameter-gauge">
+        {% assign temp = page.temperature | default: 26 %}
+        {% assign temp_percentage = temp | minus: 20 | times: 10 | at_most: 100 %}
+        <div class="gauge-fill" style="width: {{ temp_percentage }}%"></div>
       </div>
     </div>
 
     <div class="parameter-card ph">
-      <div class="parameter-icon">⚗️</div>
-      <div class="parameter-info">
-        <h4>pH-Wert</h4>
-        <div class="current-value">
-          {% if page.ph_value %}{{ page.ph_value }}{% else %}7.0{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: 6.5-7.5</div>
-        <div class="status-bar">
-          {% assign ph = page.ph_value | default: 7.0 %}
-          {% assign ph_percentage = ph | minus: 6 | times: 50 | at_most: 100 %}
-          <div class="status-fill" style="width: {{ ph_percentage }}%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">⚗️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">pH-Wert</div>
+      <div class="parameter-value">
+        {% if page.ph %}{{ page.ph }}{% else %}7.2{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: 6.5-7.5</div>
+      <div class="parameter-gauge">
+        {% assign ph = page.ph | default: 7.2 %}
+        {% assign ph_percentage = ph | minus: 6 | times: 50 | at_most: 100 %}
+        <div class="gauge-fill" style="width: {{ ph_percentage }}%"></div>
       </div>
     </div>
 
     <div class="parameter-card ammonia">
-      <div class="parameter-icon">☠️</div>
-      <div class="parameter-info">
-        <h4>Ammoniak</h4>
-        <div class="current-value">
-          {% if page.ammonia %}{{ page.ammonia }} mg/l{% else %}0.0 mg/l{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: 0.0 mg/l</div>
-        <div class="status-bar">
-          {% assign ammonia = page.ammonia | default: 0.0 %}
-          {% if ammonia == 0.0 %}
-            <div class="status-fill good" style="width: 100%"></div>
-          {% else %}
-            <div class="status-fill warning" style="width: 30%"></div>
-          {% endif %}
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">☠️</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Ammoniak</div>
+      <div class="parameter-value">
+        {% if page.ammonia %}{{ page.ammonia }}{% else %}0.0{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: 0.0 mg/l</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 100%"></div>
       </div>
     </div>
 
     <div class="parameter-card nitrite">
-      <div class="parameter-icon">🧪</div>
-      <div class="parameter-info">
-        <h4>Nitrit</h4>
-        <div class="current-value">
-          {% if page.nitrite %}{{ page.nitrite }} mg/l{% else %}0.0 mg/l{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: 0.0 mg/l</div>
-        <div class="status-bar">
-          {% assign nitrite = page.nitrite | default: 0.0 %}
-          {% if nitrite == 0.0 %}
-            <div class="status-fill good" style="width: 100%"></div>
-          {% else %}
-            <div class="status-fill warning" style="width: 30%"></div>
-          {% endif %}
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🧪</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Nitrit</div>
+      <div class="parameter-value">
+        {% if page.nitrite %}{{ page.nitrite }}{% else %}0.0{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: 0.0 mg/l</div>
+      <div class="parameter-gauge">
+        <div class="gauge-fill" style="width: 100%"></div>
       </div>
     </div>
 
     <div class="parameter-card nitrate">
-      <div class="parameter-icon">🌱</div>
-      <div class="parameter-info">
-        <h4>Nitrat</h4>
-        <div class="current-value">
-          {% if page.nitrate %}{{ page.nitrate }} mg/l{% else %}15 mg/l{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: <20 mg/l</div>
-        <div class="status-bar">
-          {% assign nitrate = page.nitrate | default: 15 %}
-          {% assign nitrate_percentage = nitrate | times: 4 | at_most: 100 %}
-          <div class="status-fill" style="width: {{ nitrate_percentage }}%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">🌱</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Nitrat</div>
+      <div class="parameter-value">
+        {% if page.nitrate %}{{ page.nitrate }}{% else %}15{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: <20 mg/l</div>
+      <div class="parameter-gauge">
+        {% assign nitrate = page.nitrate | default: 15 %}
+        {% assign nitrate_percentage = nitrate | times: 4 | at_most: 100 %}
+        <div class="gauge-fill" style="width: {{ nitrate_percentage }}%"></div>
       </div>
     </div>
 
     <div class="parameter-card hardness">
-      <div class="parameter-icon">💎</div>
-      <div class="parameter-info">
-        <h4>Härte</h4>
-        <div class="current-value">
-          {% if page.water_hardness %}{{ page.water_hardness }}°dH{% else %}8°dH{% endif %}
-        </div>
-        <div class="optimal-range">Optimal: 5-15°dH</div>
-        <div class="status-bar">
-          {% assign hardness = page.water_hardness | default: 8 %}
-          {% assign hardness_percentage = hardness | times: 6 | at_most: 100 %}
-          <div class="status-fill" style="width: {{ hardness_percentage }}%"></div>
-        </div>
+      <div class="parameter-header">
+        <div class="parameter-icon">💎</div>
+        <div class="parameter-status optimal">OPTIMAL</div>
+      </div>
+      <div class="parameter-title">Härte</div>
+      <div class="parameter-value">
+        {% if page.hardness %}{{ page.hardness }}{% else %}8°dH{% endif %}
+      </div>
+      <div class="parameter-range">Optimal: 5-15°dH</div>
+      <div class="parameter-gauge">
+        {% assign hardness = page.hardness | default: 8 %}
+        {% assign hardness_percentage = hardness | times: 6 | at_most: 100 %}
+        <div class="gauge-fill" style="width: {{ hardness_percentage }}%"></div>
       </div>
     </div>
   </div>
-
-  {% if page.last_water_change %}
-  <div class="water-change-info">
-    <div class="info-card">
-      <h4>🔄 Letzter Wasserwechsel</h4>
-      <p>{{ page.last_water_change | date: "%d.%m.%Y" }}</p>
-      {% assign days_ago = site.time | date: "%s" | minus: page.last_water_change | date: "%s" | divided_by: 86400 %}
-      <small>Vor {{ days_ago }} Tagen</small>
-    </div>
-  </div>
-  {% endif %}
 </div>
-

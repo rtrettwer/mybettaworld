@@ -1,15 +1,15 @@
 // Fisch-Timeline Styles
 .fish-timeline {
-  margin: 2rem 0;
+  margin: 0; // Geändert von 2rem 0 auf 0, da die Card bereits Padding hat
 
   .timeline-container {
     position: relative;
-    padding-left: 2rem;
+    padding-left: 4rem; // Vergrößert von 2rem auf 4rem für größere Marker
 
     &::before {
       content: '';
       position: absolute;
-      left: 1rem;
+      left: 2rem; // Vergrößert von 1rem auf 2rem
       top: 0;
       bottom: 0;
       width: 2px;
@@ -31,14 +31,18 @@
     &:nth-child(odd) {
       animation-delay: 0.4s;
     }
+
+    &:last-child {
+      margin-bottom: 0; // Entfernt Abstand nach dem letzten Element
+    }
   }
 
   .timeline-marker {
     position: absolute;
-    left: -3rem;
+    left: -4rem; // Vergrößert von -3rem auf -4rem
     top: 0.5rem;
-    width: 4rem;
-    height: 4rem;
+    width: 6rem; // Vergrößert von 4rem auf 6rem
+    height: 6rem; // Vergrößert von 4rem auf 6rem
     border-radius: 50%;
     background: var(--theme-white);
     border: 3px solid var(--theme-primary-1);
@@ -53,14 +57,16 @@
     }
 
     .fish-avatar {
-      width: 3rem;
-      height: 3rem;
+      width: 5rem; // Vergrößert von 3rem auf 5rem
+      height: 5rem; // Vergrößert von 3rem auf 5rem
       border-radius: 50%;
-      object-fit: cover;
+      object-fit: cover; // Zurück zu cover für besseres Aussehen
+      object-position: center;
+      background: rgba(46, 196, 182, 0.05); // Heller Hintergrund falls Bild nicht rund ist
     }
 
     .fish-placeholder {
-      font-size: 1.5rem;
+      font-size: 2rem; // Vergrößert von 1.5rem auf 2rem
     }
   }
 
@@ -119,4 +125,3 @@
     transform: translateX(0);
   }
 }
-
