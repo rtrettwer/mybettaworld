@@ -104,7 +104,6 @@
       object-fit: cover;
       object-position: center;
       transition: all 0.3s ease;
-      border: 2px solid rgba(255, 255, 255, 0.8);
 
       &:hover {
         transform: scale(1.05);
@@ -139,37 +138,32 @@
   }
 
   .timeline-content {
-    background: linear-gradient(135deg,
-      var(--theme-white),
-      rgba(46, 196, 182, 0.02),
-      rgba(127, 83, 172, 0.02),
-      #fafafa
-    );
+    background: var(--theme-white);
     padding: 2rem;
     border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
-    border-left: 6px solid transparent;
-    border-image: linear-gradient(135deg,
-      var(--theme-primary-1),
-      var(--theme-primary-2),
-      var(--theme-primary-3)
-    ) 1;
     transition: all 0.3s ease;
     position: relative;
-    z-index: 1; // Niedriger als Marker
-    margin-left: 1rem; // Abstand zum Marker
+    z-index: 1;
+    margin-left: 1rem;
     cursor: pointer;
+
+    // Gradient-Rand wie bei Blog-Posts
+    border: 3px solid transparent;
+    background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+                linear-gradient(135deg,
+                  var(--theme-primary-1),
+                  var(--theme-primary-2),
+                  var(--theme-primary-3)) border-box;
+
+    // Leuchtender Schatten-Effekt
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+                0 0 20px rgba(46, 196, 182, 0.1);
 
     &:hover {
       transform: translateY(-4px) translateX(8px);
-      box-shadow: 0 12px 30px rgba(46, 196, 182, 0.2),
-                  0 0 0 1px rgba(127, 83, 172, 0.1);
-      background: linear-gradient(135deg,
-        var(--theme-white),
-        rgba(46, 196, 182, 0.05),
-        rgba(127, 83, 172, 0.05),
-        #f8f9fa
-      );
+      box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
+                  0 0 30px rgba(46, 196, 182, 0.2),
+                  0 0 50px rgba(127, 83, 172, 0.1);
     }
 
     &::before {

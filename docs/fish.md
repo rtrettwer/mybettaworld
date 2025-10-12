@@ -10,7 +10,5 @@ permalink: /fish/
     <p>Hier findest du alle meine Kampffische und ihre Geschichten - von den ersten Tagen bis heute</p>
   </div>
 
-  <div class="content-card">
-    {% include fish_timeline.html %}
-  </div>
+  {% include fish_timeline.html %}
 </div>
