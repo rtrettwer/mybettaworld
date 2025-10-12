@@ -72,16 +72,6 @@
                   0 0 0 4px rgba(127, 83, 172, 0.4);
     }
 
-    &::before {
-      content: '';
-      position: absolute;
-      inset: -3px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3), var(--theme-primary-1));
-      z-index: -1;
-      opacity: 0.8;
-    }
-
     .fish-link {
       display: flex;
       align-items: center;
