@@ -21,6 +21,15 @@ pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher
 technik: 
 heizung: Heizstab auf 26°C
 besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund
+# Wasserparameter
+water_parameters:
+  temperature: 26
+  ph: 7.2
+  ammonia: 0.0
+  nitrite: 0.0
+  nitrate: 18
+  hardness: 8
+  last_test: "12.10.2025"
 gallery_dir: /assets/images/tanks/quarantine
 entwicklung:
   - datum: 19.09.2025

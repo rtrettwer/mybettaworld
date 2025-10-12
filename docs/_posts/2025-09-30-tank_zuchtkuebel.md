@@ -21,6 +21,15 @@ pflanzen: Schwimmpflanzen, Laub, Kokosmatte mit Javafarn
 technik: 
 heizung: hygger Aquarium Heizung, 100W, 26°C
 besonderheiten:
+# Wasserparameter
+water_parameters:
+  temperature: 26
+  ph: 6.8
+  ammonia: 0.0
+  nitrite: 0.0
+  nitrate: 5
+  hardness: 6
+  last_test: "11.10.2025"
 entwicklung:
   - datum: 02.09.2025
     ereignis: Kübel aufgestellt, sehr viele Seemandelbaumblätter dazu, Heizung an
@@ -38,7 +47,3 @@ entwicklung_text: |
   Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
 gallery_dir: /assets/images/tanks/breeding
 ---
-
-
-
-

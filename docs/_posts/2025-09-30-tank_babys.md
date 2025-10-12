@@ -21,6 +21,15 @@ pflanzen: Javafarn, Anubias, Perlkraut, Nadelsims, Rote Hintergrundpflanze, Fros
 technik: Heizstab, Thermometer
 heizung: Heizstab Aquael, 26 °C
 besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien
+# Wasserparameter
+water_parameters:
+  temperature: 26
+  ph: 7.0
+  ammonia: 0.0
+  nitrite: 0.0
+  nitrate: 8
+  hardness: 7
+  last_test: "10.10.2025"
 entwicklung:
   - datum: 29.08.2025
     ereignis: Paarung Sir Pryce und Sonnenschein

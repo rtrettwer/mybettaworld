@@ -20,6 +20,15 @@ pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
 heizung: Heizstab
 besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett!
+# Wasserparameter
+water_parameters:
+  temperature: 25
+  ph: 7.3
+  ammonia: 0.0
+  nitrite: 0.0
+  nitrate: 15
+  hardness: 9
+  last_test: "09.10.2025"
 gallery_dir: /assets/images/tanks/cave
 entwicklung:
   - datum: 11.07.2025

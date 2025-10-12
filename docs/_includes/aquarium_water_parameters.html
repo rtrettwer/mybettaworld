@@ -1,21 +1,30 @@
 <!-- Aquarium-spezifische Wasser-Parameter Dashboard -->
 <div class="water-parameters">
   <h3>💧 Wasser-Parameter Monitor</h3>
+  {% if page.water_parameters.last_test %}
+  <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.9rem;">
+    Letzter Test: {{ page.water_parameters.last_test }}
+  </p>
+  {% endif %}
 
   <div class="parameter-grid">
     <div class="parameter-card temperature">
       <div class="parameter-header">
         <div class="parameter-icon">🌡️</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign temp_value = page.water_parameters.temperature | default: 26 %}
+        {% if temp_value >= 24 and temp_value <= 28 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif temp_value >= 22 and temp_value <= 30 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">Temperatur</div>
-      <div class="parameter-value">
-        {% if page.temperature %}{{ page.temperature }}°C{% else %}26°C{% endif %}
-      </div>
+      <div class="parameter-value">{{ temp_value }}°C</div>
       <div class="parameter-range">Optimal: 24-28°C</div>
       <div class="parameter-gauge">
-        {% assign temp = page.temperature | default: 26 %}
-        {% assign temp_percentage = temp | minus: 20 | times: 10 | at_most: 100 %}
+        {% assign temp_percentage = temp_value | minus: 20 | times: 10 | at_most: 100 %}
         <div class="gauge-fill" style="width: {{ temp_percentage }}%"></div>
       </div>
     </div>
@@ -23,16 +32,20 @@
     <div class="parameter-card ph">
       <div class="parameter-header">
         <div class="parameter-icon">⚗️</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign ph_value = page.water_parameters.ph | default: 7.2 %}
+        {% if ph_value >= 6.5 and ph_value <= 7.5 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif ph_value >= 6.0 and ph_value <= 8.0 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">pH-Wert</div>
-      <div class="parameter-value">
-        {% if page.ph %}{{ page.ph }}{% else %}7.2{% endif %}
-      </div>
+      <div class="parameter-value">{{ ph_value }}</div>
       <div class="parameter-range">Optimal: 6.5-7.5</div>
       <div class="parameter-gauge">
-        {% assign ph = page.ph | default: 7.2 %}
-        {% assign ph_percentage = ph | minus: 6 | times: 50 | at_most: 100 %}
+        {% assign ph_percentage = ph_value | minus: 6 | times: 50 | at_most: 100 %}
         <div class="gauge-fill" style="width: {{ ph_percentage }}%"></div>
       </div>
     </div>
@@ -40,46 +53,68 @@
     <div class="parameter-card ammonia">
       <div class="parameter-header">
         <div class="parameter-icon">☠️</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign ammonia_value = page.water_parameters.ammonia | default: 0.0 %}
+        {% if ammonia_value == 0.0 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif ammonia_value <= 0.25 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">Ammoniak</div>
-      <div class="parameter-value">
-        {% if page.ammonia %}{{ page.ammonia }}{% else %}0.0{% endif %}
-      </div>
+      <div class="parameter-value">{{ ammonia_value }}</div>
       <div class="parameter-range">Optimal: 0.0 mg/l</div>
       <div class="parameter-gauge">
-        <div class="gauge-fill" style="width: 100%"></div>
+        {% if ammonia_value == 0.0 %}
+          <div class="gauge-fill" style="width: 100%"></div>
+        {% else %}
+          <div class="gauge-fill" style="width: 0%"></div>
+        {% endif %}
       </div>
     </div>
 
     <div class="parameter-card nitrite">
       <div class="parameter-header">
         <div class="parameter-icon">🧪</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign nitrite_value = page.water_parameters.nitrite | default: 0.0 %}
+        {% if nitrite_value == 0.0 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif nitrite_value <= 0.25 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">Nitrit</div>
-      <div class="parameter-value">
-        {% if page.nitrite %}{{ page.nitrite }}{% else %}0.0{% endif %}
-      </div>
+      <div class="parameter-value">{{ nitrite_value }}</div>
       <div class="parameter-range">Optimal: 0.0 mg/l</div>
       <div class="parameter-gauge">
-        <div class="gauge-fill" style="width: 100%"></div>
+        {% if nitrite_value == 0.0 %}
+          <div class="gauge-fill" style="width: 100%"></div>
+        {% else %}
+          <div class="gauge-fill" style="width: 0%"></div>
+        {% endif %}
       </div>
     </div>
 
     <div class="parameter-card nitrate">
       <div class="parameter-header">
         <div class="parameter-icon">🌱</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign nitrate_value = page.water_parameters.nitrate | default: 15 %}
+        {% if nitrate_value <= 20 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif nitrate_value <= 40 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">Nitrat</div>
-      <div class="parameter-value">
-        {% if page.nitrate %}{{ page.nitrate }}{% else %}15{% endif %}
-      </div>
-      <div class="parameter-range">Optimal: <20 mg/l</div>
+      <div class="parameter-value">{{ nitrate_value }}</div>
+      <div class="parameter-range">Optimal: &lt;20 mg/l</div>
       <div class="parameter-gauge">
-        {% assign nitrate = page.nitrate | default: 15 %}
-        {% assign nitrate_percentage = nitrate | times: 4 | at_most: 100 %}
+        {% assign nitrate_percentage = 100 | minus: nitrate_value | times: 2 | at_least: 0 %}
         <div class="gauge-fill" style="width: {{ nitrate_percentage }}%"></div>
       </div>
     </div>
@@ -87,16 +122,20 @@
     <div class="parameter-card hardness">
       <div class="parameter-header">
         <div class="parameter-icon">💎</div>
-        <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign hardness_value = page.water_parameters.hardness | default: 8 %}
+        {% if hardness_value >= 5 and hardness_value <= 15 %}
+          <div class="parameter-status optimal">OPTIMAL</div>
+        {% elsif hardness_value >= 3 and hardness_value <= 20 %}
+          <div class="parameter-status warning">WARNUNG</div>
+        {% else %}
+          <div class="parameter-status critical">KRITISCH</div>
+        {% endif %}
       </div>
       <div class="parameter-title">Härte</div>
-      <div class="parameter-value">
-        {% if page.hardness %}{{ page.hardness }}{% else %}8°dH{% endif %}
-      </div>
+      <div class="parameter-value">{{ hardness_value }}°dH</div>
       <div class="parameter-range">Optimal: 5-15°dH</div>
       <div class="parameter-gauge">
-        {% assign hardness = page.hardness | default: 8 %}
-        {% assign hardness_percentage = hardness | times: 6 | at_most: 100 %}
+        {% assign hardness_percentage = hardness_value | times: 6 | at_most: 100 %}
         <div class="gauge-fill" style="width: {{ hardness_percentage }}%"></div>
       </div>
     </div>
