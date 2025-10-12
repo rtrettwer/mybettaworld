@@ -1,9 +1,16 @@
 ---
-layout: page
+layout: default
 title: "Die Fische"
 permalink: /fish/
 ---
 
-<p>Hier findest du alle meine Kampffische und ihre Geschichten - von den ersten Tagen bis heute.</p>
+<div class="blog-container">
+  <div class="blog-header-card content-card">
+    <h1>Die Fische</h1>
+    <p>Hier findest du alle meine Kampffische und ihre Geschichten - von den ersten Tagen bis heute</p>
+  </div>
 
-{% include fish_timeline.html %}
+  <div class="content-card">
+    {% include fish_timeline.html %}
+  </div>
+</div>
