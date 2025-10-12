@@ -357,11 +357,30 @@
 }
 
 .post-card {
+  position: relative;
+  background: var(--theme-white);
+  border-radius: 16px;
+  padding: 2rem;
+  margin-bottom: 2rem;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 
+  // Einfacher dünner Gradient-Rand mit box-shadow
+  border: 3px solid transparent;
+  background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+              linear-gradient(135deg,
+                var(--theme-primary-1),
+                var(--theme-primary-2),
+                var(--theme-primary-3)) border-box;
+
+  // Leuchtender Schatten-Effekt
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+              0 0 20px rgba(46, 196, 182, 0.1);
+
   &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
+                0 0 30px rgba(46, 196, 182, 0.2),
+                0 0 50px rgba(127, 83, 172, 0.1);
   }
 
   .post-header {
