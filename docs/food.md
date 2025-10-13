@@ -71,18 +71,18 @@ permalink: /food/
 
   <!-- Zusätzliche Info-Karte für Futter-Tipps -->
   <div class="content-card" style="margin-top: 3rem;">
-    <h2 style="color: var(--theme-primary-2); margin-bottom: 1rem;">💡 Fütterungs-Tipps</h2>
+    <h2 style="color: var(--theme-primary-2); margin-bottom: 1rem;">Fütterungs-Tipps</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
       <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)); color: var(--theme-white); border-radius: 12px; box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(46, 196, 182, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(46, 196, 182, 0.3)'">
-        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">🔄 Abwechslung</h4>
+        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Abwechslung</h4>
         <p style="margin: 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.9);">Verschiedene Futtersorten sorgen für eine ausgewogene Ernährung und mehr Farbenpracht.</p>
       </div>
       <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)); color: var(--theme-white); border-radius: 12px; box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(46, 196, 182, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(46, 196, 182, 0.3)'">
-        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">⏰ Regelmäßigkeit</h4>
+        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Regelmäßigkeit</h4>
         <p style="margin: 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.9);">Feste Fütterungszeiten helfen bei der Gesundheit und dem Wohlbefinden der Fische.</p>
       </div>
       <div style="text-align: center; padding: 1.5rem; background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)); color: var(--theme-white); border-radius: 12px; box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(46, 196, 182, 0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(46, 196, 182, 0.3)'">
-        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">🎯 Portionsgröße</h4>
+        <h4 style="color: var(--theme-white); margin-bottom: 0.5rem; font-size: 1.1rem; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Portionsgröße</h4>
         <p style="margin: 0; font-size: 0.9rem; color: rgba(255, 255, 255, 0.9);">Lieber weniger und öfter füttern - Bettas haben kleine Mägen.</p>
       </div>
     </div>

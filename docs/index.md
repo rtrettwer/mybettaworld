@@ -15,19 +15,19 @@ layout: home
 <div class="content-card stats-card">
   <h2>Aktuelle Statistiken</h2>
   <div class="hero-stats">
-    <div class="hero-stat">
+    <a href="/blog/" class="hero-stat" style="text-decoration:none; color:inherit;">
       <span class="stat-number">{{ site.posts | size }}</span>
       <span class="stat-label">Blog-Einträge</span>
-    </div>
-    <div class="hero-stat">
+    </a>
+    <a href="/fish/" class="hero-stat" style="text-decoration:none; color:inherit;">
       {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" %}
       <span class="stat-number">{{ fish_posts | size }}</span>
       <span class="stat-label">Fisch-Profile</span>
-    </div>
-    <div class="hero-stat">
-      <span class="stat-number">3</span>
-      <span class="stat-label">Aktive Laichungen</span>
-    </div>
+    </a>
+    <a href="/tanks/" class="hero-stat" style="text-decoration:none; color:inherit;">
+      <span class="stat-number">6</span>
+      <span class="stat-label">Becken</span>
+    </a>
   </div>
 </div>
 
