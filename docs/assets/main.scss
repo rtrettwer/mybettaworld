@@ -20,13 +20,14 @@
 // Globale Regel gegen horizontales Scrollen auf mobilen Geräten
 html, body {
   overflow-x: hidden;
-  max-width: 100%;
-  box-sizing: border-box;
+  width: 100%;
 }
 
-*, *::before, *::after {
-  box-sizing: border-box;
-}
+.page-content{
+  .wrapper{
+    max-width: 1200px;
+
+}}
 
 // Verstärkte Footer-Sichtbarkeit - Notfall-Styles mit höchster Spezifität
 .site-footer {

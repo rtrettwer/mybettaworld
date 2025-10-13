@@ -5,7 +5,7 @@ layout: home
 <div class="hero-section">
   <div class="hero-content">
     <h1>Willkommen in meiner Betta-Welt!</h1>
-    <p class="hero-subtitle">Entdecke die faszinierende Welt der Kampffischzucht - von der ersten Paarung bis zum Verkauf</p>
+    <p class="hero-subtitle">Entdecke mit mir die faszinierende Welt der Kampffischzucht - von der ersten Paarung bis zum Verkauf</p>
    </div>
   <!-- Großes Hintergrund-Icon -->
   <img src="{{ '/assets/images/misc/icon.webp' | relative_url }}" alt="Betta Background" class="hero-background-icon">
@@ -52,8 +52,8 @@ layout: home
   <p>Folge meiner Reise durch die Welt der Betta-Zucht und lerne von meinen Erfahrungen!</p>
   <div class="cta-buttons">
     <a href="{{ '/blog/' | relative_url }}" class="cta-btn primary">Blog durchstöbern</a>
-    <a href="{{ '/fish/' | relative_url }}" class="cta-btn secondary">Meine Fische</a>
-    <a href="{{ '/tanks/' | relative_url }}" class="cta-btn secondary">Aquarien</a>
+    <a href="{{ '/fish/' | relative_url }}" class="cta-btn accent">Meine Fische</a>
+    <a href="{{ '/tanks/' | relative_url }}" class="cta-btn primary">Aquarien</a>
     <a href="{{ '/sale/' | relative_url }}" class="cta-btn accent">Fische kaufen</a>
   </div>
 </div>

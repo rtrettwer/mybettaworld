@@ -1,6 +1,6 @@
 <!-- Zucht-Fortschritts-Tracker -->
 <div class="breeding-tracker">
-  <h3>🥚 Zucht-Fortschritt</h3>
+  <h3>Zucht-Fortschritt</h3>
 
   <div class="breeding-overview">
     {% assign breeding_posts = site.posts | where_exp: "post", "post.categories contains 'breeding' or post.tags contains 'zucht'" %}
@@ -20,46 +20,5 @@
       </div>
     </div>
 
-    <!-- Zucht-Timeline -->
-    <div class="breeding-phases">
-      <h4>🔄 Zucht-Phasen</h4>
-      <div class="phases-timeline">
-        <div class="phase active">
-          <div class="phase-icon">💕</div>
-          <div class="phase-info">
-            <h5>Paarung</h5>
-            <p>Weibchen und Männchen zusammenführen</p>
-          </div>
-        </div>
-        <div class="phase active">
-          <div class="phase-icon">🥚</div>
-          <div class="phase-info">
-            <h5>Laichen</h5>
-            <p>Eier werden gelegt und befruchtet</p>
-          </div>
-        </div>
-        <div class="phase active">
-          <div class="phase-icon">🐟</div>
-          <div class="phase-info">
-            <h5>Schlüpfen</h5>
-            <p>Nach 24-48h schlüpfen die Larven</p>
-          </div>
-        </div>
-        <div class="phase current">
-          <div class="phase-icon">🐠</div>
-          <div class="phase-info">
-            <h5>Aufzucht</h5>
-            <p>Jungfische werden großgezogen</p>
-          </div>
-        </div>
-        <div class="phase">
-          <div class="phase-icon">💰</div>
-          <div class="phase-info">
-            <h5>Verkauf</h5>
-            <p>Ausgewachsene Fische verkaufen</p>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </div>
