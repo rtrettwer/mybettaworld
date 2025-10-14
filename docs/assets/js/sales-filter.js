@@ -247,7 +247,7 @@
 
         const toggleBtn = event.target;
         if (toggleBtn) {
-            toggleBtn.textContent = isVisible ? '🔧 Erweiterte Filter' : '🔧 Filter ausblenden';
+            toggleBtn.textContent = isVisible ? 'Erweiterte Filter' : 'Filter ausblenden';
         }
     };
 

@@ -39,8 +39,8 @@
     }
 
     .filter-toggle {
-      background: rgba(46, 196, 182, 0.1);
-      color: var(--theme-primary-2);
+      background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+      color: var(--theme-white);
       border: 1px solid rgba(46, 196, 182, 0.3);
       padding: 0.6rem 1rem;
       font-size: 0.85rem;
@@ -52,9 +52,8 @@
       transition: all 0.3s ease;
 
       &:hover {
-        background: rgba(46, 196, 182, 0.2);
-        border-color: var(--theme-primary-1);
-        transform: translateY(-1px);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(46, 196, 182, 0.4);
       }
     }
   }
@@ -397,12 +396,7 @@
       }
     }
 
-    .filter-toggle {
-      @extend .btn-secondary;
-      font-size: 0.85rem;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-    }
+
   }
 
   // Sortier-Optionen

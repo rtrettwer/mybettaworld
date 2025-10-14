@@ -13,7 +13,6 @@ permalink: /sale/
     <div class="content-card">
       <h3>Verkaufsbedingungen</h3>
       <ul>
-        <li>Alle Fische sind gesund und gut gepflegt</li>
         <li>Nur Abholung möglich - kein Versand</li>
         <li>Abholort:  82008 Unterhaching</li>
         <li>Bei Fragen gerne melden: info@trettwer.de</li>
