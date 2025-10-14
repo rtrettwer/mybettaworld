@@ -37,7 +37,7 @@
                     <input type="range" id="price-range" min="0" max="200" value="200" step="10">
                     <span id="price-display">200€</span>
                 </div>
-                <button class="filter-toggle" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
+                <button class="filter-toggle btn" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
             </div>
         </div>
   <!-- Sortier- und Ergebnis-Controls -->
@@ -118,7 +118,7 @@
     <div class="no-results-icon">🐠</div>
     <h3>Keine Artikel gefunden</h3>
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
-    <button class="reset-filters-btn" onclick="showAllFish()">Alle Fische anzeigen</button>
+    <button class="reset-filters-btn" onclick="showAllFish()">Alle Produkte anzeigen</button>
   </div>
 
 <!-- JavaScript für Filter-Funktionalität -->
@@ -148,6 +148,49 @@ function resetAllFilters() {
 
   // Alle Fische anzeigen
   showAllFish();
+  updateResultsCount();
+}
+
+function showAllFish() {
+  // Alle Filter-Buttons zurücksetzen
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+  if (allBtn) allBtn.classList.add('active');
+
+  // Erweiterte Filter zurücksetzen
+  const searchInput = document.getElementById('search-fish');
+  if (searchInput) {
+    searchInput.value = '';
+    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  const statusFilter = document.getElementById('status-filter');
+  if (statusFilter) {
+    statusFilter.value = 'all';
+    statusFilter.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+  const priceRange = document.getElementById('price-range');
+  if (priceRange) {
+    priceRange.value = '200';
+    priceRange.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+  const priceDisplay = document.getElementById('price-display');
+  if (priceDisplay) priceDisplay.textContent = '200€';
+  const sortSelect = document.getElementById('sort-select');
+  if (sortSelect) {
+    sortSelect.value = 'name';
+    sortSelect.dispatchEvent(new Event('change', { bubbles: true }));
+  }
+
+  // Alle Fischkarten anzeigen (explizit)
+  document.querySelectorAll('.fish-card').forEach(card => {
+    card.style.display = '';
+  });
+
+  // Keine Ergebnisse-Nachricht ausblenden
+  const noResults = document.getElementById('no-results');
+  if (noResults) noResults.style.display = 'none';
+
+  // Ergebniszähler aktualisieren
   updateResultsCount();
 }
 
