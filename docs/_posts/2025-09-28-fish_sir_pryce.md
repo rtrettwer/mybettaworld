@@ -37,6 +37,7 @@ gallery_dir: /assets/images/fish/sirPryce
 
 
 
+
 # Das Überraschungs-Männchen
 Eigentlich hatte ich fünf Betta-Weibchen gekauft, um eine kleine Schwesternschaft zu haben und meine Zucht vorzubereiten.
 Die kleinen Mädels waren ja sooo niedlich! Von Größe und Form her gleich, nur unterschiedliche Farben. 

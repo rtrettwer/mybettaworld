@@ -12,6 +12,7 @@ excerpt: "Wie man Betta-Jungfische voneinander unterscheidet und ihre Entwicklun
 
 
 
+
 Als ich anfing, mich intensiver mit Bettas zu beschäftigen, war ich oft überfordert von all den Fachbegriffen: Plakat,
 Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich eigentlich, welche Art und welchen
 Farbschlag meine Fische haben?

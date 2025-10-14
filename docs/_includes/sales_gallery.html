@@ -77,11 +77,10 @@
         <h4>{{ product.name }}</h4>
         <div class="fish-details">
           <span class="gender {{ product.gender }}">
-            {% if product.gender == 'male' %}♂ Männchen
-            {% elsif product.type == 'female' %}♀ Weibchen
-            {% elsif product.type == 'juvenile' %}Jungfisch
-            {% elsif product.type == 'food' %}Futter
-            {% elsif product.type == 'plant' %}Pflanze
+            {% if product.gender == 'male' %}Männchen
+            {% elsif product.gender == 'female' %}Weibchen
+            {% elsif product.gender == 'food' %}Futter
+            {% elsif product.gender == 'plant' %}Pflanze
             {% else %}? Artikeltyp unbekannt
             {% endif %}
           </span>

@@ -12,6 +12,7 @@ excerpt: "Gedanken über verschiedene Zuchtansätze und wie man den Wert von Bet
 
 
 
+
 Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. Da ich noch am Anfang meiner Zuchtlaufbahn stehe, basieren diese Überlegungen auf Recherche und ersten Erfahrungen.
 
 ## Fischübersicht und geschätzter Verkaufswert
