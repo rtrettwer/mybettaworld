@@ -65,3 +65,20 @@ html {
   background-clip: text;
   /* Kein color, kein text-shadow! */
 }
+
+h1 {
+  color: var(--theme-primary-1, #2ec4b6);
+}
+h2 {
+  color: var(--theme-primary-2, #ff9800);
+}
+h3 {
+  color: var(--theme-primary-3, #7f53ac);
+}
+h4 {
+  color: var(--theme-primary-2, #ff9800);
+}
+h5, h6 {
+  color: var(--theme-primary-1, #2ec4b6);
+}
+
