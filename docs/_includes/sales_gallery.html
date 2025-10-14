@@ -1,8 +1,10 @@
 <!-- Verkaufs-Galerie -->
 <div class="sales-gallery">
-  <h3>Verfügbare Betta-Fische</h3>
+
 
   <!-- Erweiterte Filter -->
+    <div class="content-card">
+        <h3>Verfügbare Fische und andere Artikel</h3>
   <div class="advanced-filters" id="advanced-filters" style="display: none;">
     <div class="filter-row">
       <label for="search-fish">🔍 Suche:</label>
@@ -51,58 +53,57 @@
       </select>
     </div>
   </div>
-
+    </div>
   <div class="fish-grid">
-    {% for fish in site.data.sales %}
-    <div class="fish-card {{ fish.status }}"
-         data-category="{{ fish.gender }}"
-         data-price="{{ fish.price | default: 0 }}"
-         data-status="{{ fish.status | default: 'sold' }}">
+    {% for product in site.data.sales %}
+    <div class="fish-card {{ product.status }}"
+         data-category="{{ product.gender }}"
+         data-price="{{ product.price | default: 0 }}"
+         data-status="{{ product.status | default: 'sold' }}">
       <div class="fish-image">
-        <img src="{{ fish.image | relative_url }}" alt="{{ fish.name }}" loading="lazy"
+        <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" loading="lazy"
              onerror="this.src='/assets/images/placeholder-fish.jpg'">
-        <div class="price-tag">{{ fish.price }}€</div>
-        <div class="status-badge {{ fish.status }}">
-          {% if fish.status == 'available' %}Verfügbar
-          {% elsif fish.status == 'reserved' %}Reserviert
-          {% elsif fish.status == 'sold' %}Verkauft
+        <div class="price-tag">{{ product.price }}€</div>
+        <div class="status-badge {{ product.status }}">
+          {% if product.status == 'available' %}Verfügbar
+          {% elsif product.status == 'reserved' %}Reserviert
+          {% elsif product.status == 'sold' %}Verkauft
           {% endif %}
         </div>
       </div>
       <div class="fish-info">
-        <h4>{{ fish.name }}</h4>
+        <h4>{{ product.name }}</h4>
         <div class="fish-details">
-          <span class="gender {{ fish.gender }}">
-            {% if fish.gender == 'male' %}♂ Männchen
-            {% elsif fish.gender == 'female' %}♀ Weibchen
-            {% elsif fish.gender == 'juvenile' %}Jungfisch
-            {% elsif fish.gender == 'special' and fish.name contains 'Mikrowürmer' %}Futter
-            {% elsif fish.gender == 'special' and fish.name contains 'Essigälchen' %}Futter
-            {% elsif fish.gender == 'special' and fish.name contains 'Schwimmpflanzen' %}Pflanze
-            {% else %}? Geschlecht unbekannt
+          <span class="gender {{ product.gender }}">
+            {% if product.gender == 'male' %}♂ Männchen
+            {% elsif product.type == 'female' %}♀ Weibchen
+            {% elsif product.type == 'juvenile' %}Jungfisch
+            {% elsif product.type == 'food' %}Futter
+            {% elsif product.type == 'plant' %}Pflanze
+            {% else %}? Artikeltyp unbekannt
             {% endif %}
           </span>
-          <span class="age">{{ fish.age }}</span>
-          <span class="size">{{ fish.size }}</span>
-          <span class="color">{{ fish.color }}</span>
+          <span class="age">{{ product.age }}</span>
+          <span class="size">{{ product.size }}</span>
+          <span class="color">{{ product.color }}</span>
         </div>
-        <p class="description">{{ fish.description }}</p>
-        {% if fish.special_notes %}
-          <p class="special-notes"><strong>Besonderheit:</strong> {{ fish.special_notes }}</p>
+        <p class="description">{{ product.description }}</p>
+        {% if product.special_notes %}
+          <p class="special-notes"><strong>Besonderheit:</strong> {{ product.special_notes }}</p>
         {% endif %}
         <div class="contact-info">
-          {% if fish.status == 'available' %}
+          {% if product.status == 'available' %}
             <button class="interest-btn">Interesse anmelden</button>
             <small>Nur Abholung möglich</small>
-          {% elsif fish.status == 'reserved' %}
+          {% elsif product.status == 'reserved' %}
             <button class="interest-btn" disabled>Reserviert</button>
-            {% if fish.pickup_date %}
-              <small>Abholung: {{ fish.pickup_date | date: "%d.%m.%Y" }}</small>
+            {% if product.pickup_date %}
+              <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
             {% endif %}
-          {% elsif fish.status == 'sold' %}
+          {% elsif product.status == 'sold' %}
             <button class="interest-btn" disabled>Verkauft</button>
-            {% if fish.sold_date %}
-              <small>Verkauft am {{ fish.sold_date | date: "%d.%m.%Y" }}</small>
+            {% if product.sold_date %}
+              <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
             {% endif %}
           {% endif %}
         </div>
@@ -118,38 +119,6 @@
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
     <button class="reset-filters-btn" onclick="showAllFish()">Alle Fische anzeigen</button>
   </div>
-
-  <div class="sales-info">
-    <div class="info-card">
-      <h4>📋 Verkaufsbedingungen</h4>
-      <ul>
-        <li>Alle Fische sind gesund und gut gepflegt</li>
-        <li>Nur Abholung möglich - kein Versand</li>
-        <li>Abholort:  82008 Unterhaching</li>
-        <li>Bei Fragen gerne melden: info@trettwer.de</li>
-        <li>Reservierung gegen Anzahlung von 50% möglich</li>
-        <li>Terminvereinbarung für Abholung erforderlich</li>
-      </ul>
-    </div>
-
-    <div class="info-card">
-      <h4>🏠 Empfohlene Haltung</h4>
-      <ul>
-        <li>Mindestens 20L Aquarium pro Fisch</li>
-        <li>Temperatur: 24-28°C</li>
-        <li>pH-Wert: 6.5-7.5</li>
-        <li>Versteckmöglichkeiten und Pflanzen</li>
-        <li>Männchen einzeln halten!</li>
-      </ul>
-    </div>
-
-    <div class="info-card">
-      <h4>🔗 Weitere Angebote auf Kleinanzeigen</h4>
-      <p>Du findest meine aktuellen Angebote auch auf <a href="https://www.kleinanzeigen.de/profil/DEIN-PROFIL" target="_blank" rel="noopener" style="font-weight:bold;color:var(--theme-primary-2);text-decoration:underline;">Kleinanzeigen.de</a>.<br>
-      Dort gibt es ggf. weitere Fotos und Infos zu den Fischen.</p>
-    </div>
-  </div>
-</div>
 
 <!-- JavaScript für Filter-Funktionalität -->
 <script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>

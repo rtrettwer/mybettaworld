@@ -1,66 +1,83 @@
 # Verkaufs-Datenbank für Betta-Fische
 # Status: available, reserved, sold
-# Gender: male, female, juvenile
+# type: male, female, juvenile
 
 - name: "Sonnenschein"
   status: "available"
-  gender: "female"
+  type: "female"
   age: "5 Monate"
   size: "4.0cm"
   price: 10
   color: "Weiß-Marble"
   image: "/assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp"
   description: "Wunderschönes Marble-Weibchen mit zunehmend dunklen Schuppen. Sonnenschein zeigt eine faszinierende Farbentwicklung und ist sehr aktiv."
-  special_notes: "Marble-Gene - Farbveränderung im Laufe der Zeit"
+  special_notes: "Marble-Gene - Farbveränderung im Laufe der Zeit möglich"
 
 - name: "Sir Pryce"
   status: "available"
-  gender: "male"
+  type: "male"
   age: "4 Monate"
-  size: "4.2cm"
-  price: 30
+  size: "4.0cm"
+  price: 10
   color: "Blau-Rot"
   image: "/assets/images/fish/sirPryce/sir_pryce.webp"
-  description: "Ein wahrer Gentleman unter den Bettas! Sir Pryce ist klassisch schön und ein absolut liebevoller und fürsorglicher Brut-Vater."
-  special_notes: "Plakat-Typ, kompakte Flossen"
+  description: "Sir Pryce ist klassisch schön und ein absolut liebevoller und fürsorglicher Brut-Vater."
 
-- name: "Mikrowürmer-Kultur (Dose)"
+- name: "Mikrowürmer-Kultur ( inkl. Dose)"
   status: "available"
-  gender: "special"
-  age: "frisch angesetzt"
+  type: "food"
+  age: "bestehende Kultur, kann sofort verwendet werden"
   size: "ca. 50ml Dose"
   price: 6
   color: "-"
   image: "/assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp"
   description: "Lebende Mikrowürmer als ideales Erstfutter für Jungfische. Die Kultur kommt in einer kleinen Dose, sofort startklar für die Fütterung."
-  special_notes: "Nur Abholung, keine Reservierung nötig."
 
 - name: "Essigälchen-Kultur (Reagenzglas)"
   status: "available"
-  gender: "special"
-  age: "frisch angesetzt"
-  size: "Reagenzglas ca. 16ml"
+  type: "food"
+  age: "aus bestehender Kultur, kann sofort verwendet werden"
+  size: "Reagenzglas"
   price: 5
   color: "-"
   image: "/assets/images/food/essigaelchen/essigaelchen_reagenzglas.webp"
   description: "Essigälchen sind ein hervorragendes Lebendfutter für Fischlarven. Die Kultur wird im Reagenzglas abgegeben, einfach zu entnehmen und zu pflegen."
-  special_notes: "Nur Abholung, keine Reservierung nötig."
 
-- name: "Schwimmpflanzen-Mix (Portion)"
+- name: "Froschiss (Portion)"
   status: "available"
-  gender: "special"
-  age: "frisch geerntet"
+  type: "plant"
+  age: "frisch aus dem Becken"
   size: "ca. 1 Handvoll"
   price: 2
   color: "grün"
   image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
-  description: "Portion aus verschiedenen Schwimmpflanzen (meist Froschbiss, Muschelblume, Wasserlinsen – je nach Verfügbarkeit). Ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
-  special_notes: "Nur Abholung, kein Versand. Bei Interesse einfach per Mail oder beim Fischkauf ansprechen."
+  description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
+- name: "Schwimmfarn (Portion)"
+  status: "available"
+  type: "plant"
+  age: "frisch aus dem Becken"
+  size: "ca. 1 Handvoll"
+  price: 2
+  color: "grün"
+  image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
+  special_notes: Froschbiss bekommt sehr lange Wurzeln! Ich schneide sie etwa 1x die Woche kürzer.
+  description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
+
+- name: "Red Root Floaters (Portion)"
+  status: "available"
+  type: "plant"
+  age: "frisch aus dem Becken"
+  size: "ca. 1 Handvoll"
+  price: 2
+  color: "rot-grün"
+  image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
+  special_notes: Wunderschöne rote Farben, wenn die Pflanze genug Licht bekommt.Ansonsten bleiben die Blätter grünlich.
+  description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
 
 # Beispiele für andere Status:
 # - name: "Luna"
 #   status: "sold"
-#   gender: "female"
+#   type: "female"
 #   age: "6 Monate"
 #   size: "3.8cm"
 #   price: 25
@@ -71,7 +88,7 @@
 #
 # - name: "Neptune"
 #   status: "reserved"
-#   gender: "male"
+#   type: "male"
 #   age: "7 Monate"
 #   size: "4.5cm"
 #   price: 40

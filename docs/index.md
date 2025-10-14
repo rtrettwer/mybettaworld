@@ -52,8 +52,8 @@ layout: home
   <p>Folge meiner Reise durch die Welt der Betta-Zucht und lerne von meinen Erfahrungen!</p>
   <div class="cta-buttons">
     <a href="{{ '/blog/' | relative_url }}" class="cta-btn primary">Blog durchstöbern</a>
-    <a href="{{ '/fish/' | relative_url }}" class="cta-btn accent">Meine Fische</a>
+    <a href="{{ '/fish/' | relative_url }}" class="cta-btn primary">Meine Fische</a>
     <a href="{{ '/tanks/' | relative_url }}" class="cta-btn primary">Aquarien</a>
-    <a href="{{ '/sale/' | relative_url }}" class="cta-btn accent">Fische kaufen</a>
+    <a href="{{ '/sale/' | relative_url }}" class="cta-btn primary">Fische kaufen</a>
   </div>
 </div>
