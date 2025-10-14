@@ -247,6 +247,16 @@
           color: #c2185b;
           border: 1px solid #f48fb1;
         }
+        &.gender.food {
+          background: linear-gradient(135deg, #ece4fc, #d1bbf8);
+          color: #4318c2;
+          border: 1px solid #968ff4;
+        }
+        &.gender.plant {
+          background: linear-gradient(135deg, #ecfce4, #c8f8bb);
+          color: #19ae20;
+          border: 1px solid #acf48f;
+        }
 
         &.gender.unknown {
           background: linear-gradient(135deg, #f5f5f5, #eeeeee);
