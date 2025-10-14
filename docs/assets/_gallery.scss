@@ -183,7 +183,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 5000;
+  z-index: 5000; // Muss hoch genug sein, damit es IMMER über allem liegt
   padding: 1rem;
   box-sizing: border-box;
   opacity: 0;

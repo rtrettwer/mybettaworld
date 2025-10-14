@@ -84,17 +84,65 @@
     const root = document.getElementById("gallery-{{ gallery_id }}");
     if (!root) return;
 
-    const lightbox = root.querySelector(".db-gallery-lightbox");
-    const imgLarge = root.querySelector(".db-gallery-large");
-    const titleEl = root.querySelector(".db-gallery-title");
-    const captionEl = root.querySelector(".db-gallery-caption");
-    const btnClose = root.querySelector(".db-gallery-close");
-    const btnPrev = root.querySelector(".db-gallery-prev");
-    const btnNext = root.querySelector(".db-gallery-next");
-    const backdrop = root.querySelector(".db-gallery-lightbox-backdrop");
     const items = Array.from(root.querySelectorAll(".db-gallery-item"));
     let currentIndex = -1;
     let resizeTimeout;
+
+    // Lightbox-Overlay dynamisch ins body verschieben
+    let lightbox = root.querySelector(".db-gallery-lightbox");
+    let originalLightboxParent = null;
+    let originalLightboxNextSibling = null;
+
+    // Diese Variablen müssen nach jedem Verschieben neu gesetzt werden!
+    let imgLarge, titleEl, captionEl, btnClose, btnPrev, btnNext, backdrop;
+
+    function updateLightboxRefs() {
+        imgLarge = lightbox.querySelector(".db-gallery-large");
+        titleEl = lightbox.querySelector(".db-gallery-title");
+        captionEl = lightbox.querySelector(".db-gallery-caption");
+        btnClose = lightbox.querySelector(".db-gallery-close");
+        btnPrev = lightbox.querySelector(".db-gallery-prev");
+        btnNext = lightbox.querySelector(".db-gallery-next");
+        backdrop = lightbox.querySelector(".db-gallery-lightbox-backdrop");
+    }
+
+    function addLightboxListeners() {
+        if (btnClose) btnClose.onclick = close;
+        if (btnPrev) btnPrev.onclick = prev;
+        if (btnNext) btnNext.onclick = next;
+        if (backdrop) backdrop.onclick = close;
+    }
+
+    function removeLightboxListeners() {
+        if (btnClose) btnClose.onclick = null;
+        if (btnPrev) btnPrev.onclick = null;
+        if (btnNext) btnNext.onclick = null;
+        if (backdrop) backdrop.onclick = null;
+    }
+
+    function moveLightboxToBody() {
+        if (!lightbox || lightbox.parentNode === document.body) return;
+        originalLightboxParent = lightbox.parentNode;
+        originalLightboxNextSibling = lightbox.nextSibling;
+        removeLightboxListeners();
+        document.body.appendChild(lightbox);
+        updateLightboxRefs();
+        addLightboxListeners();
+    }
+
+    function restoreLightboxToGallery() {
+        if (!lightbox || !originalLightboxParent) return;
+        removeLightboxListeners();
+        if (originalLightboxNextSibling) {
+            originalLightboxParent.insertBefore(lightbox, originalLightboxNextSibling);
+        } else {
+            originalLightboxParent.appendChild(lightbox);
+        }
+        updateLightboxRefs();
+        addLightboxListeners();
+        originalLightboxParent = null;
+        originalLightboxNextSibling = null;
+    }
 
     // Debounced resize handler für bessere Performance
     function debounce(func, wait) {
@@ -223,6 +271,11 @@
         const title = item.dataset.title || "";
         const caption = item.dataset.caption || "";
 
+        moveLightboxToBody(); // Overlay ins body verschieben
+
+        // Referenzen nach Verschieben aktualisieren!
+        updateLightboxRefs();
+
         // Preload image für bessere UX
         const img = new Image();
         img.onload = () => {
@@ -243,92 +296,15 @@
         lightbox.classList.add('active');
         document.body.style.overflow = 'hidden';
 
-        // Focus für Barrierefreiheit
-        requestAnimationFrame(() => btnClose.focus());
+        requestAnimationFrame(() => btnClose && btnClose.focus());
     }
 
     function close() {
         lightbox.classList.remove('active');
         document.body.style.overflow = '';
         currentIndex = -1;
+        restoreLightboxToGallery(); // Overlay zurückschieben
     }
 
     function prev() {
-        if (items.length) openAt(currentIndex <= 0 ? items.length - 1 : currentIndex - 1);
-    }
-
-    function next() {
-        if (items.length) openAt(currentIndex >= items.length - 1 ? 0 : currentIndex + 1);
-    }
-
-    // Event Listeners mit passive für bessere Performance
-    items.forEach((item, i) => {
-        const button = item.querySelector(".db-gallery-button");
-        if (button) {
-            button.addEventListener("click", () => openAt(i), { passive: true });
-        }
-    });
-
-    if (btnClose) btnClose.addEventListener("click", close);
-    if (btnPrev) btnPrev.addEventListener("click", prev);
-    if (btnNext) btnNext.addEventListener("click", next);
-    if (backdrop) backdrop.addEventListener("click", close);
-
-    // Keyboard navigation
-    document.addEventListener("keydown", (ev) => {
-        if (!lightbox.classList.contains('active')) return;
-
-        switch (ev.key) {
-            case 'Escape':
-                close();
-                break;
-            case 'ArrowLeft':
-                ev.preventDefault();
-                prev();
-                break;
-            case 'ArrowRight':
-                ev.preventDefault();
-                next();
-                break;
-        }
-    });
-
-    // Touch-Unterstützung optimiert
-    let touchStartX = 0;
-    let touchStartY = 0;
-    const minSwipeDistance = 50;
-
-    lightbox.addEventListener('touchstart', (e) => {
-        touchStartX = e.touches[0].clientX;
-        touchStartY = e.touches[0].clientY;
-    }, { passive: true });
-
-    lightbox.addEventListener('touchend', (e) => {
-        if (!lightbox.classList.contains('active')) return;
-
-        const touchEndX = e.changedTouches[0].clientX;
-        const touchEndY = e.changedTouches[0].clientY;
-        const diffX = touchStartX - touchEndX;
-        const diffY = touchStartY - touchEndY;
-
-        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
-            diffX > 0 ? next() : prev();
-        } else if (Math.abs(diffY) > 100 && Math.abs(diffY) > Math.abs(diffX)) {
-            close();
-        }
-    }, { passive: true });
-
-    // Initialisierung mit debounced resize
-    const debouncedResize = debounce(() => {
-        initDynamicGrid();
-    }, 250);
-
-    initLazyLoading();
-    initDynamicGrid();
-    window.addEventListener('resize', debouncedResize, { passive: true });
-})();
-</script>
-
-{%- else -%}
-<div class="db-gallery-error">Bitte gallery_dir im Front Matter oder dir im Include setzen</div>
-{%- endif -%}
+        if
