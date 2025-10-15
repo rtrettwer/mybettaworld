@@ -19,9 +19,13 @@ layout: default
 
   <div class="post-content e-content" itemprop="articleBody">
     {{ content }}
-    {% if page.gallery_dir %}
+      {% assign has_gallery_dir = false %}
+      {% if page.gallery_dir %}
+      {% assign has_gallery_dir = true %}
+      {% endif %}
+      {% if has_gallery_dir %}
       {% include gallery.html dir=page.gallery_dir %}
-    {% endif %}
+      {% endif %}
   </div>
 
   {%- if site.disqus.shortname -%}

@@ -6,6 +6,7 @@ date: 2025-10-12 11:06:51 +0200
 categories: [blog]
 tags: [fotografie, experiment, dokumentation]
 excerpt: "Ein Experiment mit verschiedenen Fotografieansätzen für die Betta-Dokumentation."
+gallery_dir: /assets/images/photography
 ---
 
 
