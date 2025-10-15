@@ -32,3 +32,9 @@ Mir ist wichtig, dass die Fische beim Fotografieren keinen Stress haben. Deshalb
 ---
 
 Sobald ich erste Erfahrungen mit dem Fotobecken gesammelt habe, werde ich diesen Artikel ergänzen und meine besten Tipps und Bilder teilen. Ich bin schon sehr gespannt auf die Ergebnisse!
+
+
+
+### Update 15.10.2025
+
+Endlich ist das Fotobecken angekommen! Ich habe es natürlich gleich ausprobiert und ich bin sehr glücklich mit den Ergebnissen!!! Bilder sind unter dem Post :)
