@@ -38,3 +38,4 @@ Sobald ich erste Erfahrungen mit dem Fotobecken gesammelt habe, werde ich diesen
 ### Update 15.10.2025
 
 Endlich ist das Fotobecken angekommen! Ich habe es natürlich gleich ausprobiert und ich bin sehr glücklich mit den Ergebnissen!!! Bilder sind unter dem Post :)
+Tatsächlich werde ich das nächste Mal nicht Wasser aus dem Becken nehmen sondern sauberes frisches Wasser (in der passenden Temperatur) um weniger Schwebstoffe und Dreck im Wasser und damit auf den Fotos zu haben.
