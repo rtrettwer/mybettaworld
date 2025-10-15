@@ -17,30 +17,85 @@ excerpt: "Gedanken über verschiedene Zuchtansätze und wie man den Wert von Bet
 Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. Da ich noch am Anfang meiner Zuchtlaufbahn stehe, basieren diese Überlegungen auf Recherche und ersten Erfahrungen.
 
 ## Fischübersicht und geschätzter Verkaufswert
-
-| Name         | Geschlecht | Variante/Flossentyp | Farbe/Muster (Kurzfassung) | Besonderheiten/Status                                               | Meine Preiseinschätzung                  |
-|--------------|------------|---------------------|----------------------------|---------------------------------------------------------------------|-------------------------------------------|
-| [Kampfi](/fish/2025/09/30/fish_kampfi)       | M          | Plakat              | Rotbasis, Dragon/Metallic, Marble, teils Butterfly | sehr friedlich; Caudale ~160°; Nestbau gering                  | 30–50 € (Show-Qualität selektiert: bis ~60 €) |
-| [Bandit](/fish/2025/09/29/fish_bandit)       | M          | Plakat              | Braun/Kupfer mit schwarzem Flossensaum, weiße Mask, starker blau‑grüner Metallic | aktuell Rekonvaleszenz nach Camallanus-Behandlung; picky eater | nach vollständiger Genesung: 35–70 €; während Genesung nicht verkaufen |
-| [Shadow](/fish/2025/09/26/fish_shadow)       | W          | Plakat-typisch      | Tiefschwarz mit kräftigem teal/royal‑blue Schimmer | ruhig, versteckt gern; kompatibel mit [Kampfi](/fish/2025/09/30/fish_kampfi)                    | 8–15 €                                    |
-| [Lila](/fish/2025/09/27/fish_lila)         | W          | Plakat-typisch      | Dunkel indigo/blau Metallic | erfolgreich mit [Bandit](/fish/2025/09/29/fish_bandit) verpaart; in Gruppen teils unterlegen      | 10–18 €                                   |
-| [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) | W          | Plakat-typisch      | Sehr heller Körper (weiß/creme), rote Flossen; Marble wahrscheinlich | ausgeprägt dominant; mehrfach gepaart                            | 10–20 €                                   |
-| [Sir Pryce](/fish/2025/09/28/fish_sir_pryce)    | M          | Plakat              | Tiefblau Metallic, schwarze Kopfzeichnung, rote Pelvics | sehr neststarker Vater, gute Brutpflege                         | 25–45 € (Show-Qualität selektiert: bis ~55 €) |
+<div class="card-grid fish-cards">
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-variant">Plakat</div>
+    <div class="fish-card-color">Rotbasis, Dragon/Metallic, Marble, teils Butterfly</div>
+    <div class="fish-card-status">sehr friedlich; Caudale ~160°; Nestbau gering</div>
+    <div class="fish-card-price">30–50 € <span class="fish-card-price-detail">(Show-Qualität selektiert: bis ~60 €)</span></div>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/29/fish_bandit">Bandit</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-variant">Plakat</div>
+    <div class="fish-card-color">Braun/Kupfer mit schwarzem Flossensaum, weiße Mask, starker blau‑grüner Metallic</div>
+    <div class="fish-card-status">aktuell Rekonvaleszenz nach Camallanus-Behandlung; picky eater</div>
+    <div class="fish-card-price">nach vollständiger Genesung: 35–70 €<br><span class="fish-card-price-detail">während Genesung nicht verkaufen</span></div>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/26/fish_shadow">Shadow</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-variant">Plakat-typisch</div>
+    <div class="fish-card-color">Tiefschwarz mit kräftigem teal/royal‑blue Schimmer</div>
+    <div class="fish-card-status">ruhig, versteckt gern; kompatibel mit <a href="/fish/2025/09/30/fish_kampfi">Kampfi</a></div>
+    <div class="fish-card-price">8–15 €</div>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/27/fish_lila">Lila</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-variant">Plakat-typisch</div>
+    <div class="fish-card-color">Dunkel indigo/blau Metallic</div>
+    <div class="fish-card-status">erfolgreich mit <a href="/fish/2025/09/29/fish_bandit">Bandit</a> verpaart; in Gruppen teils unterlegen</div>
+    <div class="fish-card-price">10–18 €</div>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-variant">Plakat-typisch</div>
+    <div class="fish-card-color">Sehr heller Körper (weiß/creme), rote Flossen; Marble wahrscheinlich</div>
+    <div class="fish-card-status">ausgeprägt dominant; mehrfach gepaart</div>
+    <div class="fish-card-price">10–20 €</div>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-variant">Plakat</div>
+    <div class="fish-card-color">Tiefblau Metallic, schwarze Kopfzeichnung, rote Pelvics</div>
+    <div class="fish-card-status">sehr neststarker Vater, gute Brutpflege</div>
+    <div class="fish-card-price">25–45 € <span class="fish-card-price-detail">(Show-Qualität selektiert: bis ~55 €)</span></div>
+  </div>
+</div>
 
 
 ## Meine Zuchtpläne und erwartete Ergebnisse
-
-| Paarung                | Mein Ziel                                               | Erwartete Ergebnisse (Phänotyp)                                   | Preis Männchen | Preis Weibchen |
-|------------------------|--------------------------------------------------------|------------------------------------------------------------------|---------------|----------------|
-| [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Lila](/fish/2025/09/27/fish_lila)       | stabile Dunkel‑/Blau‑Metallic‑Linie; geringere Muster‑Sprunghaftigkeit | Royal‑blue bis indigo Metallic; teils schwarze Kopfmaske; klare Plakat‑Form | 35–60 €       | 15–30 €        |
-| [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Shadow](/fish/2025/09/26/fish_shadow)     | „Black/Blue Metallic" Optik mit kräftigem Teal         | Dunkle Körper mit teal/blau Schimmer; gelegentlich Mask; wenig Rot | 30–55 €       | 12–25 €        |
-| [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) | farbvielfältige Marble‑Nachzucht                     | Blau/weiß/rot gemischt; Mask möglich; Muster variabel (Marble)    | 25–45 €       | 10–22 €        |
-| [Kampfi](/fish/2025/09/30/fish_kampfi) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)  | Koi/Nemo/Hellboy‑artige Plakat mit Butterfly‑Rändern   | Rot/weiß mit Dragon‑Schuppen; teils klare Butterfly‑Saum; starke Farbvielfalt (Marble) | 35–60 €       | 15–30 €        |
-| [Kampfi](/fish/2025/09/30/fish_kampfi) × [Lila](/fish/2025/09/27/fish_lila)          | „Red/Blue Dragon Marble" Linie                         | Rot/blau gemarbelt mit Metallic; einige mit klarer Dragon‑Bedeckung | 30–55 €       | 12–25 €        |
-| [Kampfi](/fish/2025/09/30/fish_kampfi) × [Shadow](/fish/2025/09/26/fish_shadow)        | Dunkle Metallic‑Tiere mit roten Einsprengseln          | Schwarz/dunkel mit teal Schimmer; einzelne rot-weiße Marble‑Abweichungen | 28–50 €       | 10–22 €        |
-| [Bandit](/fish/2025/09/29/fish_bandit) × [Lila](/fish/2025/09/27/fish_lila) (bereits erfolgt) | markante Metallic/Mask‑Kombis                 | Kupfer/Braun + Blau‑Metallic; weiße Mask teils vererbbar; kontrastreiche Flossen | 35–70 €       | 15–35 €        |
-| [Bandit](/fish/2025/09/29/fish_bandit) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)  | „Masked Koi/Nemo Metallic"                             | Weiß/rot/blau gemarbelt; oft starke Irideszenz; Mask‑Varianten    | 35–65 €       | 15–32 €        |
-| [Bandit](/fish/2025/09/29/fish_bandit) × [Shadow](/fish/2025/09/26/fish_shadow)        | „Black/Copper‑Blue Metallic"                           | Dunkle Körper mit kupfer/blau Metallic; kontrastreiche schwarze Flossensäume | 30–55 €       | 12–25 €        |
+<div class="card-grid breeding-cards">
+  <div class="breeding-card">
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/27/fish_lila">Lila</a></div>
+    <div class="breeding-card-goal">Ziel: stabile Dunkel‑/Blau‑Metallic‑Linie; geringere Muster‑Sprunghaftigkeit</div>
+    <div class="breeding-card-phenotype">Royal‑blue bis indigo Metallic; teils schwarze Kopfmaske; klare Plakat‑Form</div>
+    <div class="breeding-card-price">♂ 35–60 €<br>♀ 15–30 €</div>
+  </div>
+  <div class="breeding-card">
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/26/fish_shadow">Shadow</a></div>
+    <div class="breeding-card-goal">Ziel: „Black/Blue Metallic\" Optik mit kräftigem Teal</div>
+    <div class="breeding-card-phenotype">Dunkle Körper mit teal/blau Schimmer; gelegentlich Mask; wenig Rot</div>
+    <div class="breeding-card-price">♂ 30–55 €<br>♀ 12–25 €</div>
+  </div>
+  <div class="breeding-card">
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a></div>
+    <div class="breeding-card-goal">Ziel: farbvielfältige Marble‑Nachzucht</div>
+    <div class="breeding-card-phenotype">Blau/weiß/rot gemischt; Mask möglich; Muster variabel (Marble)</div>
+    <div class="breeding-card-price">♂ 25–45 €<br>♀ 10–22 €</div>
+  </div>
+  <div class="breeding-card">
+    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> × <a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a></div>
+    <div class="breeding-card-goal">Ziel: Koi/Nemo/Hellboy‑artige Plakat mit Butterfly‑Rändern</div>
+    <div class="breeding-card-phenotype">Rot/weiß mit Dragon‑Schuppen; teils klare Butterfly‑Saum; starke Farbvielfalt (Marble)</div>
+    <div class="breeding-card-price">♂ 35–60 €<br>♀ 15–30 €</div>
+  </div>
+  <div class="breeding-card">
+    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> × <a href="/fish/2025/09/27/fish_lila">Lila</a></div>
+    <div class="breeding-card-goal">Ziel: „Red/Blue Dragon Marble\" Linie</div>
+    <div class="breeding-card-phenotype">Rot/blau gemarbelt mit Metallic; einige mit klarer Dragon‑Bedeckung</div>
+    <div class="breeding-card-price">♂ 30–55 €<br>♀ 12–25 €</div>
+  </div>
+</div>
 
 
 ## Meine Überlegungen zur Preisgestaltung und Selektion

@@ -65,3 +65,94 @@ html, body {
     }
   }
 }
+
+.table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-bottom: 1.5em;
+}
+
+.table-responsive table {
+  min-width: 600px;
+  border-collapse: collapse;
+}
+
+.table-responsive::-webkit-scrollbar {
+  height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.fish-card, .breeding-card {
+  background: var(--theme-card-bg, #fff);
+  border-radius: 1.1em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07), 0 1.5px 6px rgba(0,0,0,0.04);
+  border: 1.5px solid var(--theme-accent, #b2d6e6);
+  padding: 1.2em 1.1em 1em 1.1em;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  transition: box-shadow 0.2s;
+}
+.fish-card:hover, .breeding-card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.13), 0 2px 8px rgba(0,0,0,0.08);
+  border-color: var(--theme-accent-strong, #4fa3c7);
+}
+.fish-card-title, .breeding-card-title {
+  font-size: 1.15em;
+  font-weight: 700;
+  color: var(--theme-accent-strong, #4fa3c7);
+  margin-bottom: 0.2em;
+}
+.fish-gender {
+  font-size: 1em;
+  color: #888;
+  margin-left: 0.2em;
+}
+.fish-card-variant, .breeding-card-goal {
+  font-size: 0.98em;
+  color: var(--theme-accent, #b2d6e6);
+  margin-bottom: 0.2em;
+}
+.fish-card-color, .breeding-card-phenotype {
+  font-size: 0.97em;
+  color: #333;
+  margin-bottom: 0.2em;
+}
+.fish-card-status {
+  font-size: 0.93em;
+  color: #666;
+  margin-bottom: 0.3em;
+}
+.fish-card-price, .breeding-card-price {
+  font-size: 1.08em;
+  font-weight: 600;
+  color: var(--theme-accent-strong, #4fa3c7);
+  margin-top: 0.2em;
+}
+.fish-card-price-detail {
+  font-size: 0.92em;
+  color: #888;
+  font-weight: 400;
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1.1rem;
+  }
+  .fish-card, .breeding-card {
+    padding: 1em 0.7em 0.8em 0.7em;
+  }
+}
