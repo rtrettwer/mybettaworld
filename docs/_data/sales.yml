@@ -75,6 +75,27 @@
   special_notes: Wunderschöne rote Farben, wenn die Pflanze genug Licht bekommt.Ansonsten bleiben die Blätter grünlich.
   description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
 
+- name: "Posthornschnecke (1 Stck)"
+  status: "available"
+  gender: "misc"
+  age: "unterschiedliche Größen"
+  size: "1"
+  price: 4
+  color: "rot orange"
+  image: "/assets/images/misc/IMG_20251015_094234.webp"
+  special_notes: Schöne rot/orangene Farbe. Manchmal leuchten sie fast golden, je nach Licht.
+  description: "Posthornschnecken sind nützliche Helfer im Aquarium: Sie fressen Futterreste, halten das Becken sauber und sind dabei pflegeleicht. Mit ihrer schönen Färbung sind sie zudem ein echter Blickfang und ideal für Einsteiger geeignet."
+
+- name: "Posthornschnecke (1 Stck)"
+  status: "available"
+  gender: "misc"
+  age: "unterschiedliche Größen"
+  size: "1"
+  price: 4
+  color: "weiß/perlmutt"
+  image: "/assets/images/misc/IMG_20251015_094108.webp"
+  special_notes: Farbe wirkt hell, fast wie perlmutt.
+  description: "Posthornschnecken sind nützliche Helfer im Aquarium: Sie fressen Futterreste, halten das Becken sauber und sind dabei pflegeleicht. Mit ihrer schönen Färbung sind sie zudem ein echter Blickfang und ideal für Einsteiger geeignet."
 # Beispiele für andere Status:
 # - name: "Luna"
 #   status: "sold"
