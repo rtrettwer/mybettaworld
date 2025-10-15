@@ -258,6 +258,12 @@
           border: 1px solid #acf48f;
         }
 
+        &.gender.misc {
+          background: linear-gradient(135deg, #ecfce4, #c8f8bb);
+          color: #19ae20;
+          border: 1px solid #acf48f;
+        }
+
         &.gender.unknown {
           background: linear-gradient(135deg, #f5f5f5, #eeeeee);
           color: #666;
