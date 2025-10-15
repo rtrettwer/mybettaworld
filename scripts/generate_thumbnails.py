@@ -22,8 +22,12 @@ def is_source_image(filename):
 
 
 def is_webp(filename):
-    """Prüft ob es sich um eine WebP-Datei handelt (kein Thumbnail)."""
-    return filename.lower().endswith('.webp') and not filename.endswith(THUMBNAIL_SUFFIX)
+    """Prüft ob es sich um eine WebP-Datei handelt (kein Thumbnail, kein Timeline, kein _timeline.webp)."""
+    return (
+        filename.lower().endswith('.webp')
+        and not filename.lower().endswith(THUMBNAIL_SUFFIX)
+        and '_timeline' not in filename.lower()
+    )
 
 
 def webp_path(image_path):
@@ -32,8 +36,11 @@ def webp_path(image_path):
 
 
 def thumbnail_path(webp_path):
-    """Gibt den Thumbnail-Pfad für eine WebP-Datei zurück."""
-    return webp_path.with_suffix('').with_suffix(THUMBNAIL_SUFFIX)
+    """Gibt den Thumbnail-Pfad für eine WebP-Datei zurück (Suffix _thumbnail vor .webp)."""
+    p = Path(webp_path)
+    if p.name.endswith(THUMBNAIL_SUFFIX):
+        return p  # Falls schon Thumbnail
+    return p.with_name(p.stem + THUMBNAIL_SUFFIX)
 
 
 def create_webp(image_path, webp_path):
@@ -95,11 +102,11 @@ def process_source_image(file_path):
 def process_webp_image(file_path):
     """Verarbeitet eine WebP-Datei zu Thumbnail."""
     thumb_out = thumbnail_path(file_path)
-
     if thumb_out.exists():
         print(f"→ Thumbnail existiert bereits: {thumb_out.name}")
         return True
     else:
+        print(f"→ Erzeuge Thumbnail für: {file_path.name}")
         return create_thumbnail(file_path, thumb_out)
 
 
@@ -119,9 +126,13 @@ def main():
         filename = file_path.name
 
         if is_source_image(filename):
+            print(f"[DEBUG] Quellbild erkannt: {filename}")
             tasks.append(('source', file_path))
         elif is_webp(filename):
+            print(f"[DEBUG] WebP erkannt (Thumbnail-Kandidat): {filename}")
             tasks.append(('webp', file_path))
+        else:
+            print(f"[DEBUG] Übersprungen: {filename}")
 
     if not tasks:
         print("→ Keine Bilder zur Verarbeitung gefunden.")
