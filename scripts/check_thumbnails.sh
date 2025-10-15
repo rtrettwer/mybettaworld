@@ -1,0 +1,3 @@
+#!/bin/bash
+# ...existing code aus docs/scripts/check_thumbnails.sh...
+

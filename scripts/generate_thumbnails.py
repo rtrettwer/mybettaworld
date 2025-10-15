@@ -1,0 +1,3 @@
+# Skript zum Generieren von Thumbnails
+# ...existing code aus docs/scripts/generate_thumbnails.py...
+

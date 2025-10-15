@@ -36,6 +36,7 @@ gallery_dir: /assets/images/fish/kampfi
 
 
 
+
 # Kampfis Einzug
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.
 Ich hatte ihn im (heutigen [Dschungel](/tank/2025/09/30/tank_dschungel)-) Becken mit Neocaridina Zwerggarnelen, Rennschnecken, Posthornschnecken und etwa 15 Tetra Neons.

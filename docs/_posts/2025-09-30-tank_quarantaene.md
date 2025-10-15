@@ -48,6 +48,7 @@ entwicklung:
 
 
 
+
 ## Quarantäne
 Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
 Deshalb habe ich ein weiteres Becken besorgt und sie hier zur Quarantäne gesetzt. Das Becken war ohne Bodengrund nur sehr spartanisch eingerichtet. Leider hat das Weibchen sich dennoch nicht mehr erholt. Sie hatte Bauchwassersucht und sah aus wie ein kleiner Tannenzapfen, weil die Schuppen abstanden. Sie hat nicht mehr gefressen und sich kaum bewegt. Ich habe sie mit Nelkenöl hoffentlich sanft von ihrem Leiden erlöst.

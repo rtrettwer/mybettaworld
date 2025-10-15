@@ -9,6 +9,7 @@ excerpt: "Ein Experiment mit verschiedenen Fotografieansätzen für die Betta-Do
 ---
 
 
+
 ## Fische fotografieren – meine Erfahrungen
 
 Fische zu fotografieren ist eine kleine Kunst für sich. Die meisten meiner bisherigen Fotos sind tatsächlich mit der Handykamera entstanden – einfach von außen durch die Scheibe des Aquariums. Für Makro-Aufnahmen, zum Beispiel von Kampfis Schuppen, habe ich gelegentlich meine Kompaktkamera verwendet.

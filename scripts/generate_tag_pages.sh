@@ -1,0 +1,3 @@
+#!/bin/bash
+# ...existing code aus docs/scripts/generate_tag_pages.sh...
+
