@@ -77,244 +77,57 @@ Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flo
 vertikale Bereitschaftsbalken
 
 ## Meine Fische als Beispiele
-
-<div style="overflow-x: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead>
-<tr style="background-color: #f8f8f8;">
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Fisch</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Domestic vs. Wildform</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Flossenform</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Farbe</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Muster</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Geschlecht</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Kampfi</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat (160°)</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot</span><br>
-○ Blau<br>
-○ Schwarz<br>
-○ Weiß<br>
-○ Kupfer/Braun<br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Marble</span><br>
-<span style="color: #38d9a9;">✓ Dragon/Metallic</span><br>
-<span style="color: #38d9a9;">✓ Butterfly (teils)</span><br>
-○ Koi/Nemo<br>
-○ Mask<br>
-○ Grizzle<br>
-○ Irideszenz
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ ♂</span><br>
-○ ♀
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Bandit</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Rot<br>
-<span style="color: #38d9a9;">✓ Blau (Metallic)</span><br>
-○ Schwarz<br>
-○ Weiß<br>
-<span style="color: #38d9a9;">✓ Kupfer/Braun</span><br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Marble (Einfluss)</span><br>
-<span style="color: #38d9a9;">✓ Dragon/Metallic</span><br>
-○ Butterfly<br>
-○ Koi/Nemo<br>
-<span style="color: #38d9a9;">✓ Mask (weiß)</span><br>
-○ Grizzle<br>
-○ Irideszenz
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ ♂</span><br>
-○ ♀
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Shadow</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat-typisch</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Rot<br>
-<span style="color: #38d9a9;">✓ Blau (teal/royal)</span><br>
-<span style="color: #38d9a9;">✓ Schwarz</span><br>
-○ Weiß<br>
-○ Kupfer/Braun<br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Marble<br>
-○ Dragon/Metallic<br>
-○ Butterfly<br>
-○ Koi/Nemo<br>
-○ Mask<br>
-○ Grizzle<br>
-<span style="color: #38d9a9;">✓ Irideszenz</span>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ ♂<br>
-<span style="color: #38d9a9;">✓ ♀</span>
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Lila</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat-typisch</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Rot<br>
-<span style="color: #38d9a9;">✓ Blau (indigo)</span><br>
-○ Schwarz<br>
-○ Weiß<br>
-○ Kupfer/Braun<br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Marble<br>
-<span style="color: #38d9a9;">✓ Dragon/Metallic</span><br>
-○ Butterfly<br>
-○ Koi/Nemo<br>
-○ Mask<br>
-○ Grizzle<br>
-○ Irideszenz
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ ♂<br>
-<span style="color: #38d9a9;">✓ ♀</span>
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Sonnenschein</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat-typisch</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot (Flossen)</span><br>
-○ Blau<br>
-○ Schwarz<br>
-<span style="color: #38d9a9;">✓ Weiß (Körper)</span><br>
-○ Kupfer/Braun<br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Marble (wahrscheinlich)</span><br>
-○ Dragon/Metallic<br>
-○ Butterfly<br>
-○ Koi/Nemo<br>
-○ Mask<br>
-○ Grizzle<br>
-○ Irideszenz
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ ♂<br>
-<span style="color: #38d9a9;">✓ ♀</span>
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Sir Pryce</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Domestic</span><br>
-○ Wildform
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Plakat</span><br>
-○ Delta<br>
-○ Super Delta<br>
-○ Halfmoon<br>
-○ Crowntail<br>
-○ Doubletail<br>
-○ Dumbo
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot (Pelvics)</span><br>
-<span style="color: #38d9a9;">✓ Blau (Metallic)</span><br>
-<span style="color: #38d9a9;">✓ Schwarz (Kopf)</span><br>
-○ Weiß<br>
-○ Kupfer/Braun<br>
-○ Gelb/Orange
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Marble<br>
-<span style="color: #38d9a9;">✓ Dragon/Metallic</span><br>
-○ Butterfly<br>
-○ Koi/Nemo<br>
-<span style="color: #38d9a9;">✓ Mask (schwarz)</span><br>
-○ Grizzle<br>
-○ Irideszenz
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ ♂</span><br>
-○ ♀
-</td>
-</tr>
-</tbody>
-</table>
+<div class="card-grid fish-cards">
+  <div class="fish-card">
+    <div class="fish-card-title">Kampfi <span class="fish-gender">♂</span></div>
+    <ul>
+      <li><strong>Typ:</strong> Domestic</li>
+      <li><strong>Variante:</strong> Plakat (160°)</li>
+      <li><strong>Farbe:</strong> Rot</li>
+      <li><strong>Muster:</strong> Marble, Dragon/Metallic, Butterfly (teils)</li>
+      <li><strong>Geschlecht:</strong> Männlich</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Bandit <span class="fish-gender">♂</span></div>
+    <ul>
+      <li><strong>Typ:</strong> Domestic</li>
+      <li><strong>Variante:</strong> Plakat</li>
+      <li><strong>Farbe:</strong> Blau (Metallic), Kupfer/Braun</li>
+      <li><strong>Muster:</strong> Marble (Einfluss), Dragon/Metallic, Mask (weiß)</li>
+      <li><strong>Geschlecht:</strong> Männlich</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Shadow <span class="fish-gender">♀</span></div>
+    <ul>
+      <li><strong>Typ:</strong> Domestic</li>
+      <li><strong>Variante:</strong> Plakat-typisch</li>
+      <li><strong>Farbe:</strong> Blau (teal/royal), Schwarz</li>
+      <li><strong>Muster:</strong> Irideszenz</li>
+      <li><strong>Geschlecht:</strong> Weiblich</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Lila <span class="fish-gender">♀</span></div>
+    <ul>
+      <li><strong>Typ:</strong> Domestic</li>
+      <li><strong>Variante:</strong> Plakat-typisch</li>
+      <li><strong>Farbe:</strong> Blau (indigo)</li>
+      <li><strong>Muster:</strong> Dragon/Metallic</li>
+      <li><strong>Geschlecht:</strong> Weiblich</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Sonnenschein <span class="fish-gender">♀</span></div>
+    <ul>
+      <li><strong>Typ:</strong> Domestic</li>
+      <li><strong>Variante:</strong> Plakat-typisch</li>
+      <li><strong>Farbe:</strong> Sehr heller Körper (weiß/creme), rote Flossen</li>
+      <li><strong>Muster:</strong> Marble (wahrscheinlich)</li>
+      <li><strong>Geschlecht:</strong> Weiblich</li>
+    </ul>
+  </div>
 </div>
 
 ### Fazit: So würde ich meine Fische beschreiben
