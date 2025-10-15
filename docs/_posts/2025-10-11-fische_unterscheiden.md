@@ -79,6 +79,7 @@ vertikale Bereitschaftsbalken
 ## Meine Fische als Beispiele
 <div class="card-grid fish-cards">
   <div class="fish-card">
+    <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="Kampfi" class="fish-card-img">
     <div class="fish-card-title">Kampfi <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -89,6 +90,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
+    <img src="/assets/images/fish/bandit/IMG_20251015_205127_thumbnail.webp" alt="Bandit" class="fish-card-img">
     <div class="fish-card-title">Bandit <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -99,6 +101,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
+    <img src="/assets/images/fish/shadow/IMG_20251015_205320_thumbnail.webp" alt="Shadow" class="fish-card-img">
     <div class="fish-card-title">Shadow <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -109,6 +112,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
+    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="Lila" class="fish-card-img">
     <div class="fish-card-title">Lila <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -119,6 +123,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
+    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="Sonnenschein" class="fish-card-img">
     <div class="fish-card-title">Sonnenschein <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -128,6 +133,17 @@ vertikale Bereitschaftsbalken
       <li><strong>Geschlecht:</strong> Weiblich</li>
     </ul>
   </div>
+</div>
+<div class="fish-card">
+  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="Sir Pryce" class="fish-card-img">
+  <div class="fish-card-title">Sir Pryce <span class="fish-gender">♂</span></div>
+  <ul>
+    <li><strong>Typ:</strong> Domestic</li>
+    <li><strong>Variante:</strong> Plakat</li>
+    <li><strong>Farbe:</strong> Tiefblau Metallic, schwarze Kopfzeichnung, rote Pelvics</li>
+    <li><strong>Muster:</strong> Dragon/Metallic</li>
+    <li><strong>Geschlecht:</strong> Männlich</li>
+  </ul>
 </div>
 
 ### Fazit: So würde ich meine Fische beschreiben
