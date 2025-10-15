@@ -28,6 +28,20 @@ layout: home
       <span class="stat-number">6</span>
       <span class="stat-label">Becken</span>
     </a>
+    {% assign breeding_posts = site.posts | where_exp: "post", "post.categories contains 'breeding' or post.tags contains 'zucht'" %}
+
+      <a href="/tags/zucht/" class="hero-stat" style="text-decoration:none; color:inherit;">
+        <div class="stat-number">{{ breeding_posts | size }}</div>
+        <div class="stat-label">Zucht-Einträge</div>
+      </a>
+      <a href="/tags/laichbecken/" class="hero-stat" style="text-decoration:none; color:inherit;">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Aktive Laichungen</div>
+      </a>
+      <a href="/tags/jungfische/" class="hero-stat" style="text-decoration:none; color:inherit;">
+        <div class="stat-number">~300</div>
+        <div class="stat-label">Baby-Fische</div>
+      </a>
   </div>
 </div>
 
@@ -39,11 +53,6 @@ layout: home
   <p>Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und heute kümmere ich mich um drei Laichungen voller Betta-Babys, die ich großziehen und später verkaufen möchte.</p>
   
   <p>In diesem Blog dokumentiere ich die Entwicklung meiner Aquarien, meine Erfahrungen in der Fischzucht und die kleinen und großen Herausforderungen, die dieses Hobby mit sich bringt. Vielleicht findest du hier Inspiration oder hilfreiche Tipps für dein eigenes Aquaristik-Projekt.</p>
-</div>
-
-<!-- Zucht-Fortschritt Card -->
-<div class="content-card breeding-card">
-  {% include breeding_tracker.html %}
 </div>
 
 <!-- Call-to-Action Card -->
