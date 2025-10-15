@@ -164,6 +164,35 @@ html, body {
   color: #ffe6b3;
   font-weight: 400;
 }
+.fish-card-content, .breeding-card-content {
+  margin: 0.5em 0 0 0;
+  padding: 0;
+  list-style: none;
+}
+.fish-card-content li, .breeding-card-content li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5em;
+  padding: 0.15em 0;
+  border-bottom: 1px solid rgba(255,255,255,0.13);
+  font-size: 0.97em;
+  color: #f8f8f8;
+}
+.fish-card-content li:last-child, .breeding-card-content li:last-child {
+  border-bottom: none;
+}
+.fish-card-content .label, .breeding-card-content .label {
+  min-width: 90px;
+  font-weight: 600;
+  color: #ffe6b3;
+  font-size: 0.97em;
+  flex-shrink: 0;
+}
+.fish-card-content .value, .breeding-card-content .value {
+  flex: 1;
+  color: #fff;
+  font-size: 0.97em;
+}
 
 @media (max-width: 600px) {
   .card-grid {
