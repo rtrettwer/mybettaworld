@@ -6,7 +6,7 @@ date: 22.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, schwarz]
 excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."
-image: /assets/images/fish/shadow/shadow.webp
+image: /assets/images/fish/shadow/IMG_20251015_205320.webp
 timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
 fish_birth: "2025-05-22"
