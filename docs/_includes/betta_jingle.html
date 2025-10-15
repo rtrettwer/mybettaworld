@@ -1,0 +1,229 @@
+<script>
+    (function(){
+        let ctx;
+
+        function createCtx(){
+            if (!ctx || ctx.state === 'closed') {
+                ctx = new (window.AudioContext || window.webkitAudioContext)();
+            }
+            return ctx;
+        }
+
+        function playJingle(){
+            const audio = createCtx();
+            const t0 = audio.currentTime + 0.04;
+
+            // Summenbus + sanfter Kompressor
+            const sum = audio.createGain();
+            const comp = audio.createDynamicsCompressor();
+            comp.threshold.value = -26;
+            comp.knee.value = 18;
+            comp.ratio.value = 2.2;
+            comp.attack.value = 0.006;
+            comp.release.value = 0.28;
+            sum.connect(comp);
+            comp.connect(audio.destination);
+
+            // Master
+            const master = audio.createGain();
+            master.gain.value = 0.14; // weicher/leiser
+            master.connect(sum);
+
+            // Sanftes Stereo-Delay
+            const wetBus = audio.createGain(); wetBus.gain.value = 0.34;
+            const delayL = audio.createDelay(1); delayL.delayTime.value = 0.23;
+            const fbL = audio.createGain(); fbL.gain.value = 0.10;
+            const panL = audio.createStereoPanner(); panL.pan.value = -0.22;
+
+            const delayR = audio.createDelay(1); delayR.delayTime.value = 0.31;
+            const fbR = audio.createGain(); fbR.gain.value = 0.09;
+            const panR = audio.createStereoPanner(); panR.pan.value = 0.22;
+
+            wetBus.connect(delayL); wetBus.connect(delayR);
+            delayL.connect(fbL); fbL.connect(delayL);
+            delayR.connect(fbR); fbR.connect(delayR);
+            delayL.connect(panL); panL.connect(sum);
+            delayR.connect(panR); panR.connect(sum);
+
+            // Hilfsfunktion: Frequenz relativ zu A4=440Hz
+            function freq(semitonesFromA4){
+                return 440 * Math.pow(2, semitonesFromA4 / 12);
+            }
+
+            // Kalimba-Voice: sehr sanft, runde Hüllkurve, leichte Obertöne
+            function kalimba(f, when, {
+                dur = 0.9,
+                peak = 0.8,
+                send = 0.42,
+                pan = 0.0,
+                softTail = false,
+                color = 1.0 // 1.0 = heller, 0.7 = dunkler
+            } = {}){
+                const g = audio.createGain(); g.gain.value = 0;
+                const p = audio.createStereoPanner(); p.pan.value = pan;
+
+                const lp = audio.createBiquadFilter();
+                lp.type = 'lowpass';
+                lp.frequency.value = 2200 * color;
+                lp.Q.value = 0.7;
+
+                // Sehr dezente Filterbewegung
+                const lfo = audio.createOscillator(); lfo.type = 'sine'; lfo.frequency.value = 4.8;
+                const lfoGain = audio.createGain(); lfoGain.gain.value = 70 * color; // kleiner Sweep
+                lfo.connect(lfoGain); lfoGain.connect(lp.frequency);
+                lfo.start(when); lfo.stop(when + dur + 0.25);
+
+                // Obertöne (sehr dezent)
+                const o1 = audio.createOscillator(); o1.type = 'sine'; o1.frequency.value = f;            // Fundament
+                const o2 = audio.createOscillator(); o2.type = 'triangle'; o2.frequency.value = f * 2.15; // leichter metallischer Oberton
+                const o3 = audio.createOscillator(); o3.type = 'sine'; o3.frequency.value = f * 3.4;      // sanfter dritter Oberton
+
+                const o1g = audio.createGain(); o1g.gain.value = 1.0;
+                const o2g = audio.createGain(); o2g.gain.value = 0.22 * color;
+                const o3g = audio.createGain(); o3g.gain.value = 0.14 * color;
+
+                // Klick stark reduziert
+                const noiseBuf = audio.createBuffer(1, audio.sampleRate * 0.016, audio.sampleRate);
+                const nd = noiseBuf.getChannelData(0);
+                for (let i = 0; i < nd.length; i++) nd[i] = (Math.random() * 2 - 1);
+                const nsrc = audio.createBufferSource(); nsrc.buffer = noiseBuf;
+                const nhp = audio.createBiquadFilter(); nhp.type = 'highpass'; nhp.frequency.value = 1000;
+                const nbp = audio.createBiquadFilter(); nbp.type = 'bandpass'; nbp.frequency.value = 1800; nbp.Q.value = 2.4;
+                const ng = audio.createGain(); ng.gain.value = 0;
+
+                const sendGain = audio.createGain(); sendGain.gain.value = send;
+
+                // Verkabelung
+                o1.connect(o1g); o2.connect(o2g); o3.connect(o3g);
+                o1g.connect(lp); o2g.connect(lp); o3g.connect(lp);
+                lp.connect(g); lp.connect(sendGain);
+                sendGain.connect(wetBus);
+                g.connect(p); p.connect(master);
+
+                nsrc.connect(nhp); nhp.connect(nbp); nbp.connect(ng);
+                ng.connect(g);
+
+                // Runde Hüllkurve (weicher Attack + lange, glatte Ausklingphase)
+                const a = 0.010; // weicherer Attack
+                g.gain.setValueAtTime(0, when);
+                g.gain.linearRampToValueAtTime(peak, when + a);
+                // sanfter „Bauch“
+                g.gain.setTargetAtTime(peak * 0.7, when + a + 0.10, 0.18);
+                // langer, glatter Ausklang (zweite Kurve noch weicher)
+                const tailTC = softTail ? 0.35 : 0.25;
+                g.gain.setTargetAtTime(0.0001, when + a + (dur * 0.65), tailTC);
+
+                // Klick minimal
+                ng.gain.setValueAtTime(0, when);
+                ng.gain.linearRampToValueAtTime(0.16, when + 0.004);
+                ng.gain.exponentialRampToValueAtTime(0.0001, when + 0.06);
+
+                // Filter leicht abdunkeln
+                lp.frequency.setValueAtTime(2200 * color, when);
+                lp.frequency.exponentialRampToValueAtTime(1000 * color, when + dur);
+
+                // Start/Stop
+                o1.start(when); o2.start(when); o3.start(when);
+                nsrc.start(when);
+                const stopAt = when + a + dur + (softTail ? 0.35 : 0.25);
+                o1.stop(stopAt); o2.stop(stopAt); o3.stop(stopAt);
+                nsrc.stop(when + 0.08);
+            }
+
+            // Wassertropfen (sehr dezent, runder)
+            function droplet(startF, endF, when, dur = 0.26, send = 0.28){
+                const osc = audio.createOscillator(); osc.type = 'sine';
+                const gain = audio.createGain(); gain.gain.value = 0;
+                const bp = audio.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 900; bp.Q.value = 1.4;
+                const sendGain = audio.createGain(); sendGain.gain.value = send;
+
+                osc.frequency.setValueAtTime(startF, when);
+                osc.frequency.exponentialRampToValueAtTime(endF, when + dur);
+
+                osc.connect(bp);
+                bp.connect(gain);
+                bp.connect(sendGain);
+                sendGain.connect(wetBus);
+                gain.connect(master);
+
+                const a = 0.003;
+                gain.gain.setValueAtTime(0, when);
+                gain.gain.linearRampToValueAtTime(0.38, when + a);
+                gain.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+
+                osc.start(when);
+                osc.stop(when + dur + 0.12);
+            }
+
+            // Sanftes Blubbern (sehr leise)
+            function bubble(when){
+                const noise = audio.createBuffer(1, audio.sampleRate * 0.09, audio.sampleRate);
+                const data = noise.getChannelData(0);
+                for (let i = 0; i < data.length; i++) data[i] = (Math.random() * 2 - 1);
+                const src = audio.createBufferSource(); src.buffer = noise;
+
+                const hp = audio.createBiquadFilter(); hp.type = 'highpass'; hp.frequency.value = 240;
+                const bp = audio.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 760; bp.Q.value = 2.4;
+                const gain = audio.createGain(); gain.gain.value = 0;
+                const sendGain = audio.createGain(); sendGain.gain.value = 0.22;
+
+                src.connect(hp); hp.connect(bp); bp.connect(gain); bp.connect(sendGain);
+                sendGain.connect(wetBus); gain.connect(master);
+
+                gain.gain.setValueAtTime(0, when);
+                gain.gain.linearRampToValueAtTime(0.28, when + 0.01);
+                gain.gain.exponentialRampToValueAtTime(0.0001, when + 0.11);
+
+                src.start(when);
+                src.stop(when + 0.15);
+            }
+
+            // Melodie: zwei sanfte Kurven (Phrase A stärker, Phrase B weicher/lang)
+            // Phrase A (etwas präsenter, aber weich)
+            kalimba(freq(5),   t0,         { dur: 0.90, peak: 0.80, send: 0.40, pan: -0.06, softTail: false, color: 1.0 }); // D5
+            droplet(1500,      750,  t0 + 0.18, 0.24, 0.26);
+            kalimba(freq(7),   t0 + 0.36,  { dur: 0.92, peak: 0.80, send: 0.40, pan:  0.06, softTail: false, color: 1.0 }); // E5
+            bubble(t0 + 0.44);
+            kalimba(freq(9),   t0 + 0.64,  { dur: 0.88, peak: 0.78, send: 0.38, pan: -0.04, softTail: false, color: 0.95 }); // F#5
+
+            // Phrase B (zweite Kurve – leiser, dunkler, länger ausklingend)
+            const t1 = t0 + 0.96;
+            kalimba(freq(7),   t1,         { dur: 1.00, peak: 0.68, send: 0.46, pan:  0.04, softTail: true,  color: 0.85 }); // E5
+            droplet(1200,      600,  t1 + 0.20, 0.24, 0.24);
+            kalimba(freq(12),  t1 + 0.32,  { dur: 1.05, peak: 0.66, send: 0.48, pan: -0.03, softTail: true,  color: 0.80 }); // G5
+            bubble(t1 + 0.40);
+            kalimba(freq(14),  t1 + 0.60,  { dur: 1.08, peak: 0.64, send: 0.50, pan:  0.03, softTail: true,  color: 0.78 }); // A5
+            kalimba(freq(5),   t1 + 0.92,  { dur: 1.20, peak: 0.62, send: 0.52, pan:  0.00, softTail: true,  color: 0.75 }); // D5 Abschluss
+
+            // Ende: keine Session-Sperre, da du testest
+        }
+
+        async function startAfterGesture(){
+            const handler = async () => {
+                try {
+                    ctx = createCtx();
+                    if (ctx.state !== 'running') await ctx.resume();
+                } catch (e) {}
+                playJingle();
+                window.removeEventListener('pointerdown', handler);
+                window.removeEventListener('touchstart', handler);
+                window.removeEventListener('keydown', handler);
+            };
+            window.addEventListener('pointerdown', handler, { once: true });
+            window.addEventListener('touchstart', handler, { once: true });
+            window.addEventListener('keydown', handler, { once: true });
+        }
+
+        // Öffentliche API: manuell starten
+        window.playBettaJingle = async function(){
+            ctx = createCtx();
+            if (ctx.state !== 'running') await ctx.resume();
+            playJingle();
+        };
+
+        // Nur auf der Startseite automatisch nach Nutzerinteraktion
+        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
+            startAfterGesture();
+        }
+    })();
+</script>
