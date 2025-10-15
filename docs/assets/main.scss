@@ -95,64 +95,73 @@ html, body {
 }
 
 .fish-card, .breeding-card {
-  background: var(--theme-white, #fff);
+  background: linear-gradient(135deg,
+    var(--theme-primary-1, #2ec4b6),
+    var(--theme-primary-2, #ff9800),
+    var(--theme-primary-3, #7f53ac)
+  );
+  color: #fff;
   border-radius: 16px;
   padding: 1.5rem 1.1rem 1.2rem 1.1rem;
   margin-bottom: 0;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
   transform: translateZ(0);
   will-change: transform;
-  border: 2px solid transparent;
-  background: linear-gradient(var(--theme-white, #fff), var(--theme-white, #fff)) padding-box,
-              linear-gradient(135deg,
-                var(--theme-primary-1, #2ec4b6),
-                var(--theme-primary-2, #ff9800),
-                var(--theme-primary-3, #7f53ac)) border-box;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
-              0 0 20px rgba(46, 196, 182, 0.08);
+  border: none;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.13), 0 0 20px rgba(46,196,182,0.10);
 }
 .fish-card:hover, .breeding-card:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
-              0 0 30px rgba(46, 196, 182, 0.13),
-              0 0 50px rgba(127, 83, 172, 0.08);
-  border-color: var(--theme-primary-2, #ff9800);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 32px rgba(46,196,182,0.18), 0 0 40px rgba(127,83,172,0.13);
 }
 .fish-card-title, .breeding-card-title {
   font-size: 1.15em;
   font-weight: 700;
-  color: var(--theme-primary-1, #2ec4b6);
+  color: #fff !important;
   margin-bottom: 0.2em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+}
+.fish-card-title a, .breeding-card-title a {
+  color: #fff !important;
+  text-decoration: none;
+  font-weight: 700;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
+  transition: color 0.15s;
+}
+.fish-card-title a:hover, .breeding-card-title a:hover {
+  color: var(--theme-primary-3, #7f53ac) !important;
+  text-decoration: underline;
 }
 .fish-gender {
   font-size: 1em;
-  color: #888;
+  color: #e0e0e0;
   margin-left: 0.2em;
 }
 .fish-card-variant, .breeding-card-goal {
   font-size: 0.98em;
-  color: var(--theme-primary-2, #ff9800);
+  color: #ffe6b3;
   margin-bottom: 0.2em;
 }
 .fish-card-color, .breeding-card-phenotype {
   font-size: 0.97em;
-  color: #333;
+  color: #f8f8f8;
   margin-bottom: 0.2em;
 }
 .fish-card-status {
   font-size: 0.93em;
-  color: #666;
+  color: #e0e0e0;
   margin-bottom: 0.3em;
 }
 .fish-card-price, .breeding-card-price {
   font-size: 1.08em;
   font-weight: 600;
-  color: var(--theme-primary-3, #7f53ac);
+  color: #fff;
   margin-top: 0.2em;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.13);
 }
 .fish-card-price-detail {
   font-size: 0.92em;
-  color: #888;
+  color: #ffe6b3;
   font-weight: 400;
 }
 
