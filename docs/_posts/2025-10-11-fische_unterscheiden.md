@@ -90,7 +90,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/bandit/IMG_20251015_205127_thumbnail.webp" alt="Bandit" class="fish-card-img">
+    <img src="/assets/images/fish/bandit/PA162660.webp" alt="Bandit" class="fish-card-img">
     <div class="fish-card-title">Bandit <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -133,7 +133,6 @@ vertikale Bereitschaftsbalken
       <li><strong>Geschlecht:</strong> Weiblich</li>
     </ul>
   </div>
-</div>
 <div class="fish-card">
   <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="Sir Pryce" class="fish-card-img">
   <div class="fish-card-title">Sir Pryce <span class="fish-gender">♂</span></div>
@@ -144,6 +143,7 @@ vertikale Bereitschaftsbalken
     <li><strong>Muster:</strong> Dragon/Metallic</li>
     <li><strong>Geschlecht:</strong> Männlich</li>
   </ul>
+</div>
 </div>
 
 ### Fazit: So würde ich meine Fische beschreiben
