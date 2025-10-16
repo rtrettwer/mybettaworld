@@ -5,4 +5,4 @@ permalink: /gallery/
 gallery_dir: /assets/images
 ---
 
-{% include gallery.html %}
+{% include gallery.html ignore_folders="photography"%}
