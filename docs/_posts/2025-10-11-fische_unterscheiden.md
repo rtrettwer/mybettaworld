@@ -170,254 +170,75 @@ vertikale Bereitschaftsbalken
 
 ## Übersicht: Farbmuster, deren Bezeichnung man oft liest  und was sie ausmacht
 
-<div style="overflow-x: auto;">
-<table style="width: 100%; border-collapse: collapse; font-size: 0.9em;">
-<thead>
-<tr style="background-color: #f8f8f8;">
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Bezeichnung</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Typ</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Merkmale</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Farben</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Muster</th>
-<th style="border: 1px solid #ddd; padding: 8px; text-align: left;">Besonderheiten</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Koi/Nemo</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Mehrfarbig</span><br>
-○ Einfarbig
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Marble-Basis</span><br>
-<span style="color: #38d9a9;">✓ Unregelmäßige Flecken</span><br>
-○ Klare Trennlinien
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot</span><br>
-<span style="color: #38d9a9;">✓ Orange</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-<span style="color: #38d9a9;">✓ Schwarz</span><br>
-○ Blau<br>
-○ Gelb<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Koi/Nemo</span><br>
-<span style="color: #38d9a9;">✓ Marble</span><br>
-○ Butterfly<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Oft Metallic</span><br>
-○ Dragon<br>
-○ Irideszenz
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Galaxy</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Mehrfarbig</span><br>
-○ Einfarbig
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Koi-Basis</span><br>
-<span style="color: #38d9a9;">✓ Viele helle Punkte</span><br>
-○ Klare Trennlinien
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot</span><br>
-<span style="color: #38d9a9;">✓ Orange</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-<span style="color: #38d9a9;">✓ Schwarz</span><br>
-<span style="color: #38d9a9;">✓ Blau</span><br>
-○ Gelb<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Galaxy</span><br>
-<span style="color: #38d9a9;">✓ Koi/Nemo</span><br>
-○ Butterfly<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Starke Irideszenz</span><br>
-<span style="color: #38d9a9;">✓ Glitzerpunkte</span><br>
-○ Dragon
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Candy</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Mehrfarbig</span><br>
-○ Einfarbig
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Koi-Basis</span><br>
-<span style="color: #38d9a9;">✓ Klare Farbflächen</span><br>
-<span style="color: #38d9a9;">✓ Starke Kontraste</span><br>
-○ Glitzerpunkte
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot</span><br>
-<span style="color: #38d9a9;">✓ Orange</span><br>
-<span style="color: #38d9a9;">✓ Gelb</span><br>
-<span style="color: #38d9a9;">✓ Schwarz</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-○ Blau<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Candy</span><br>
-<span style="color: #38d9a9;">✓ Koi/Nemo</span><br>
-○ Butterfly<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Bonbonartige Farben</span><br>
-<span style="color: #38d9a9;">✓ Klare Abgrenzungen</span><br>
-○ Metallic
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Butterfly</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Mehrfarbig<br>
-<span style="color: #38d9a9;">✓ Einfarbig (mit Muster)</span>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Klare Trennlinien</span><br>
-<span style="color: #38d9a9;">✓ Helle Flossensäume</span><br>
-○ Unregelmäßige Flecken
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Blau</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-○ Rot<br>
-○ Orange<br>
-○ Schwarz<br>
-○ Gelb<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Butterfly</span><br>
-○ Koi/Nemo<br>
-○ Marble<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Helle Flossenkanten</span><br>
-<span style="color: #38d9a9;">✓ Klare Abgrenzung</span><br>
-○ Metallic
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Dragon</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Mehrfarbig<br>
-<span style="color: #38d9a9;">✓ Einfarbig (mit Muster)</span>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Dicke Metallic-Schuppen</span><br>
-<span style="color: #38d9a9;">✓ Klare Kanten</span><br>
-○ Unregelmäßige Flecken
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-<span style="color: #38d9a9;">✓ Blau</span><br>
-<span style="color: #38d9a9;">✓ Kupfer/Braun</span><br>
-○ Rot<br>
-○ Orange<br>
-○ Schwarz<br>
-○ Gelb
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Dragon</span><br>
-○ Koi/Nemo<br>
-○ Marble<br>
-○ Butterfly<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Metallic-Overlay</span><br>
-<span style="color: #38d9a9;">✓ Plattenartige Schuppen</span><br>
-○ Irideszenz
-</td>
-</tr>
-<tr style="background-color: #fafafa;">
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Grizzle</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-○ Mehrfarbig<br>
-<span style="color: #38d9a9;">✓ Einfarbig (mit Muster)</span>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Feine Sprenkel</span><br>
-○ Klare Trennlinien
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Pastellfarben</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-<span style="color: #38d9a9;">✓ Blau</span><br>
-○ Rot<br>
-○ Orange<br>
-○ Schwarz<br>
-○ Gelb<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Grizzle</span><br>
-○ Koi/Nemo<br>
-○ Marble<br>
-○ Butterfly<br>
-○ Mask
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Pfefferartige Sprenkel</span><br>
-○ Metallic
-</td>
-</tr>
-<tr>
-<td style="border: 1px solid #ddd; padding: 8px; font-weight: bold;">Hellboy Red</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Einfarbig</span><br>
-<span style="color: #38d9a9;">✓ Mehrfarbig (mit Weiß/Schwarz)</span>
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Intensive Rotfärbung</span><br>
-<span style="color: #38d9a9;">✓ Oft mit weißem Kopf oder Flossenspitzen</span><br>
-<span style="color: #38d9a9;">✓ Teilweise schwarze Akzente</span><br>
-○ Glitzerpunkte<br>
-○ Klare Trennlinien
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Rot</span><br>
-<span style="color: #38d9a9;">✓ Weiß</span><br>
-○ Schwarz<br>
-○ Orange<br>
-○ Gelb<br>
-○ Blau<br>
-○ Kupfer/Braun
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Hellboy</span><br>
-○ Koi/Nemo<br>
-○ Marble<br>
-○ Butterfly<br>
-○ Mask<br>
-○ Grizzle
-</td>
-<td style="border: 1px solid #ddd; padding: 8px;">
-<span style="color: #38d9a9;">✓ Sehr kräftiges Rot</span><br>
-<span style="color: #38d9a9;">✓ Oft Show-Variante</span><br>
-○ Metallic
-</td>
-</tr>
-</tbody>
-</table>
+<div class="card-grid fish-cards">
+  <div class="fish-card">
+    <div class="fish-card-title">Koi/Nemo</div>
+    <ul>
+      <li><strong>Typ:</strong> Mehrfarbig, Marble-Basis</li>
+      <li><strong>Merkmale:</strong> Unregelmäßige Flecken, oft Metallic</li>
+      <li><strong>Farben:</strong> Rot, Orange, Weiß, Schwarz</li>
+      <li><strong>Muster:</strong> Koi/Nemo, Marble</li>
+      <li><strong>Besonderheiten:</strong> Oft Metallic</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Galaxy</div>
+    <ul>
+      <li><strong>Typ:</strong> Mehrfarbig, Koi-Basis</li>
+      <li><strong>Merkmale:</strong> Viele helle Punkte, starke Irideszenz</li>
+      <li><strong>Farben:</strong> Rot, Orange, Weiß, Schwarz, Blau</li>
+      <li><strong>Muster:</strong> Galaxy, Koi/Nemo</li>
+      <li><strong>Besonderheiten:</strong> Glitzerpunkte</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Candy</div>
+    <ul>
+      <li><strong>Typ:</strong> Mehrfarbig, Koi-Basis</li>
+      <li><strong>Merkmale:</strong> Klare Farbflächen, starke Kontraste</li>
+      <li><strong>Farben:</strong> Rot, Orange, Gelb, Schwarz, Weiß</li>
+      <li><strong>Muster:</strong> Candy, Koi/Nemo</li>
+      <li><strong>Besonderheiten:</strong> Bonbonartige Farben</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Butterfly</div>
+    <ul>
+      <li><strong>Typ:</strong> Einfarbig (mit Muster)</li>
+      <li><strong>Merkmale:</strong> Klare Trennlinien, helle Flossensäume</li>
+      <li><strong>Farben:</strong> Blau, Weiß</li>
+      <li><strong>Muster:</strong> Butterfly</li>
+      <li><strong>Besonderheiten:</strong> Helle Flossenkanten</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Dragon</div>
+    <ul>
+      <li><strong>Typ:</strong> Einfarbig (mit Muster)</li>
+      <li><strong>Merkmale:</strong> Dicke Metallic-Schuppen, klare Kanten</li>
+      <li><strong>Farben:</strong> Weiß, Blau, Kupfer/Braun</li>
+      <li><strong>Muster:</strong> Dragon</li>
+      <li><strong>Besonderheiten:</strong> Metallic-Overlay</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Grizzle</div>
+    <ul>
+      <li><strong>Typ:</strong> Einfarbig (mit Muster)</li>
+      <li><strong>Merkmale:</strong> Feine Sprenkel</li>
+      <li><strong>Farben:</strong> Pastellfarben, Weiß, Blau</li>
+      <li><strong>Muster:</strong> Grizzle</li>
+      <li><strong>Besonderheiten:</strong> Pfefferartige Sprenkel</li>
+    </ul>
+  </div>
+  <div class="fish-card">
+    <div class="fish-card-title">Hellboy Red</div>
+    <ul>
+      <li><strong>Typ:</strong> Einfarbig oder mehrfarbig (mit Weiß/Schwarz)</li>
+      <li><strong>Merkmale:</strong> Intensive Rotfärbung, oft weißer Kopf/Flossenspitzen</li>
+      <li><strong>Farben:</strong> Rot, Weiß</li>
+      <li><strong>Muster:</strong> Hellboy</li>
+      <li><strong>Besonderheiten:</strong> Sehr kräftiges Rot, oft Show-Variante</li>
+    </ul>
+  </div>
 </div>
