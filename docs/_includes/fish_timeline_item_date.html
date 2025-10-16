@@ -1,0 +1,3 @@
+{%- if post.date -%}
+  <span class="fish-timeline-date-inner">{{ post.date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "April", "April" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "August", "August" | replace: "September", "September" | replace: "October", "Oktober" | replace: "November", "November" | replace: "December", "Dezember" }}</span>
+{%- endif -%}

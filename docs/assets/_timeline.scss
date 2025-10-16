@@ -130,24 +130,57 @@
     }
   }
 
-  .timeline-content-link {
+  .timeline-content-link,
+  .timeline-content-link *,
+  .timeline-content-link a,
+  .timeline-content-link a:visited,
+  .timeline-content-link a:hover,
+  .timeline-content-link a:active,
+  .timeline-content-link a:focus,
+  .timeline-content-link .timeline-card-title,
+  .timeline-content-link .timeline-card-desc {
     text-decoration: none !important;
-    color: inherit;
+    color: inherit !important;
+  }
+  .timeline-content-link .timeline-card-title,
+  .timeline-content-link .timeline-card-desc {
+    /* pointer-events: none; */
+  }
+
+  .timeline-link-style,
+  .timeline-link-style:visited,
+  .timeline-link-style:active,
+  .timeline-link-style:focus,
+  .timeline-link-style:hover {
+    text-decoration: none !important;
+    color: inherit !important;
+    outline: none !important;
+    cursor: pointer;
+  }
+
+  .timeline-link-style {
+    transition: transform 0.35s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0.2,0.2,1), filter 0.35s, background 0.35s;
     display: block;
+    border-radius: 2.2rem;
+  }
+  .timeline-link-style:hover,
+  .timeline-link-style:focus {
+    transform: scale(1.06) translateY(-7px);
+    box-shadow: 0 16px 48px 0 var(--theme-primary-2), 0 0 0 10px var(--theme-primary-3), 0 2px 24px 0 #21cbf355;
+    filter: brightness(1.07) saturate(1.12) drop-shadow(0 0 24px var(--theme-primary-3));
+    outline: none;
+    text-decoration: none;
+    background: linear-gradient(120deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 60%, var(--theme-primary-3) 100%);
+  }
 
-    &:hover {
-      text-decoration: none !important;
-      color: inherit;
-    }
-
-    h4, p, .fish-info, .fish-status {
-      text-decoration: none !important;
-    }
-
-    // Alle Textelemente in der Timeline ohne Unterstreichung
-    * {
-      text-decoration: none !important;
-    }
+  // Optional: Card-Glow verstärken
+  .timeline-link-style .timeline-card.gradient-card {
+    transition: box-shadow 0.35s, background 0.35s;
+  }
+  .timeline-link-style:hover .timeline-card.gradient-card,
+  .timeline-link-style:focus .timeline-card.gradient-card {
+    box-shadow: 0 24px 64px 0 var(--theme-primary-2), 0 0 0 14px var(--theme-primary-3), 0 2px 32px 0 #21cbf355;
+    background: linear-gradient(120deg, var(--theme-primary-2) 0%, var(--theme-primary-3) 100%);
   }
 
   .timeline-content {
@@ -162,11 +195,10 @@
 
     // Gradient-Rand konsistent mit anderen Cards
     border: 2px solid transparent;
-    background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
-                linear-gradient(135deg,
-                  var(--theme-primary-1),
-                  var(--theme-primary-2),
-                  var(--theme-primary-3)) border-box;
+    background: var(--theme-white);
+    /* Ursprünglich: linear-gradient(var(--theme-white), var(--theme-white)) padding-box, linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box; */
+    /* Die padding-box-Variante ist fehlerhaft, daher nur einfarbiger Hintergrund */
+    /* Alternativ könnte man einen Border-Gradient mit border-image nutzen */
 
     // Leuchtender Schatten-Effekt
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
@@ -192,7 +224,8 @@
       filter: drop-shadow(-2px 0 3px rgba(0,0,0,0.1));
     }
 
-    .timeline-date {
+    .timeline-date,
+    .fish-timeline-date-inner {
       color: var(--theme-white);
       font-size: 1rem;
       font-weight: 700;
@@ -204,9 +237,12 @@
         var(--theme-primary-3)
       );
       border-radius: 25px;
-      display: inline-block;
+      display: block;
       box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
       text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
     }
 
     h4 {
@@ -331,39 +367,40 @@
   // Responsive Design
   @media (max-width: 768px) {
     .timeline-container {
-      padding-left: 6rem;
-
+      padding-left: 0;
       &::before {
-        left: 3rem;
+        display: none;
       }
     }
-
+    .timeline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: static;
+      margin-bottom: 3rem;
+    }
     .timeline-marker {
-      left: -5.5rem;
+      position: static;
+      left: unset;
+      top: unset;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
       width: 8rem;
       height: 8rem;
-
-      .fish-avatar {
-        width: 7rem;
-        height: 7rem;
-      }
-
-      .fish-placeholder {
-        font-size: 3rem;
-      }
+      z-index: auto;
     }
-
     .timeline-content {
+      margin-left: 0;
+      margin-top: 0;
+      width: 100%;
       padding: 1.5rem;
-      margin-left: 0.5rem;
-
-      h4 {
-        font-size: 1.2rem;
-      }
-
-      .timeline-date {
-        font-size: 0.9rem;
-      }
+      box-sizing: border-box;
+    }
+    .timeline-date,
+    .fish-timeline-date-inner {
+      order: -1;
+      margin-bottom: 0.5rem;
+      margin-top: 0;
     }
   }
 

@@ -4,7 +4,7 @@ layout: home
 
 <div class="hero-section">
   <div class="hero-content">
-    <h1>Willkommen in meiner Betta-Welt!</h1>
+    <h1>Willkommen bei the more the betta!</h1>
     <p class="hero-subtitle">Entdecke mit mir die faszinierende Welt der Kampffischzucht - von der ersten Paarung bis zum Verkauf</p>
    </div>
   <!-- Großes Hintergrund-Icon -->
