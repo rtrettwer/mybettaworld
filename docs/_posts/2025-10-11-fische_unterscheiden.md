@@ -14,6 +14,7 @@ excerpt: "Wie man Betta-Jungfische voneinander unterscheidet und ihre Entwicklun
 
 
 
+
 Als ich anfing, mich intensiver mit Bettas zu beschäftigen, war ich oft überfordert von all den Fachbegriffen: Plakat,
 Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich eigentlich, welche Art und welchen
 Farbschlag meine Fische haben?
@@ -79,8 +80,8 @@ vertikale Bereitschaftsbalken
 ## Meine Fische als Beispiele
 <div class="card-grid fish-cards">
   <div class="fish-card">
-    <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="Kampfi" class="fish-card-img">
-    <div class="fish-card-title">Kampfi <span class="fish-gender">♂</span></div>
+    <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="[Kampfi](/fish/2025/09/30/fish_kampfi)" class="fish-card-img">
+    <div class="fish-card-title">[Kampfi](/fish/2025/09/30/fish_kampfi) <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat (160°)</li>
@@ -90,8 +91,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/bandit/PA162660.webp" alt="Bandit" class="fish-card-img">
-    <div class="fish-card-title">Bandit <span class="fish-gender">♂</span></div>
+    <img src="/assets/images/fish/bandit/PA162660.webp" alt="[Bandit](/fish/2025/09/29/fish_bandit)" class="fish-card-img">
+    <div class="fish-card-title">[Bandit](/fish/2025/09/29/fish_bandit) <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat</li>
@@ -101,8 +102,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/shadow/IMG_20251015_205320_thumbnail.webp" alt="Shadow" class="fish-card-img">
-    <div class="fish-card-title">Shadow <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/shadow/IMG_20251015_205320_thumbnail.webp" alt="[Shadow](/fish/2025/09/26/fish_shadow)" class="fish-card-img">
+    <div class="fish-card-title">[Shadow](/fish/2025/09/26/fish_shadow) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -112,8 +113,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="Lila" class="fish-card-img">
-    <div class="fish-card-title">Lila <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="[Lila](/fish/2025/09/27/fish_lila)" class="fish-card-img">
+    <div class="fish-card-title">[Lila](/fish/2025/09/27/fish_lila) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -123,8 +124,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="Sonnenschein" class="fish-card-img">
-    <div class="fish-card-title">Sonnenschein <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="[Sonnenschein](/fish/2025/09/25/fish_sonnenschein)" class="fish-card-img">
+    <div class="fish-card-title">[Sonnenschein](/fish/2025/09/25/fish_sonnenschein) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -134,8 +135,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
 <div class="fish-card">
-  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="Sir Pryce" class="fish-card-img">
-  <div class="fish-card-title">Sir Pryce <span class="fish-gender">♂</span></div>
+  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)" class="fish-card-img">
+  <div class="fish-card-title">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) <span class="fish-gender">♂</span></div>
   <ul>
     <li><strong>Typ:</strong> Domestic</li>
     <li><strong>Variante:</strong> Plakat</li>

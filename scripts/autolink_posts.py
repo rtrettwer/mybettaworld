@@ -2,7 +2,7 @@ import os
 import re
 import yaml
 
-POSTS_DIR = '../_posts'  # Dein Pfad zu Markdown-Dateien
+POSTS_DIR = '../docs/_posts'  # Dein Pfad zu Markdown-Dateien
 LINKS_FILE = 'keywords.yml'  # Deine YAML-Liste mit key/url
 
 def load_links(yaml_file):

@@ -5,8 +5,8 @@ author: "Rike Trettwer"
 date: 20.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, zucht]
-excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium. Hier dokumentiere ich ihre Entwicklung."
-image: /assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp
+excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium."
+image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 timeline_image: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
 fish_name: "Sonnenschein"
 fish_birth: "2025-05-20"
@@ -27,7 +27,9 @@ fish_housing: "dichter Pflanzenbestand und Höhlen/Verstecke sind hilfreich; ger
 fish_breeding: "hohe Laichbereitschaft; mit Marble‑Anlage sind farbliche Ergebnisse in der Nachzucht erfahrungsgemäß variabel (hell/weiß mit roten Flossen bis hin zu stärker gemarbelten Tieren). Für eine stabil helle Optik wären Partner mit geringer Marble‑Aktivität und heller Basis sinnvoller; für vielfältige Muster sind Marble‑Partner geeignet."
 fish_special_traits: "sehr heller Körper mit roten Flossen, dynamische Musterentwicklung durch Marble; ausgeprägtes Dominanzverhalten"
 fish_lineage: "unbekannt"
+gallery_dir: /assets/images/fish/sonnenschein
 ---
+
 
 
 

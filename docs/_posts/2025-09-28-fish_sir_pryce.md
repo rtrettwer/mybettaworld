@@ -6,7 +6,7 @@ date: 15.05.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, zucht]
 excerpt: "Sir Pryce ist mein erster Zuchtmännchen mit beeindruckender Persönlichkeit."
-image: /assets/images/fish/sirPryce/sir_pryce.webp
+image: /assets/images/fish/sirPryce/IMG_20251016_204600.webp
 timeline_image: /assets/images/fish/sirPryce/sir_pryce_timeline.webp
 fish_name: "Sir Pryce"
 fish_birth: "15.05.2025"
@@ -29,6 +29,7 @@ fish_special_traits: "fürsorglicher Vater mit ausgeprägter Nest- und Brutpfleg
 fish_lineage: "unbekannt"
 gallery_dir: /assets/images/fish/sirPryce
 ---
+
 
 
 

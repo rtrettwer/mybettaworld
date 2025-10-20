@@ -14,12 +14,13 @@ excerpt: "Gedanken über verschiedene Zuchtansätze und wie man den Wert von Bet
 
 
 
+
 Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. Da ich noch am Anfang meiner Zuchtlaufbahn stehe, basieren diese Überlegungen auf Recherche und ersten Erfahrungen.
 
 ## Fischübersicht und geschätzter Verkaufswert
 <div class="card-grid fish-cards">
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/30/fish_kampfi">[Kampfi](/fish/2025/09/30/fish_kampfi)</a> <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat</li>
       <li><strong>Farbe:</strong> Rotbasis, Dragon/Metallic, Marble, teils Butterfly</li>
@@ -28,7 +29,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/29/fish_bandit">Bandit</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/29/fish_bandit">[Bandit](/fish/2025/09/29/fish_bandit)</a> <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat</li>
       <li><strong>Farbe:</strong> Braun/Kupfer mit schwarzem Flossensaum, weiße Mask, starker blau‑grüner Metallic</li>
@@ -37,25 +38,25 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/26/fish_shadow">Shadow</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/26/fish_shadow">[Shadow](/fish/2025/09/26/fish_shadow)</a> <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat-typisch</li>
       <li><strong>Farbe:</strong> Tiefschwarz mit kräftigem teal/royal‑blue Schimmer</li>
-      <li><strong>Status:</strong> ruhig, versteckt gern; kompatibel mit <a href="/fish/2025/09/30/fish_kampfi">Kampfi</a></li>
+      <li><strong>Status:</strong> ruhig, versteckt gern; kompatibel mit <a href="/fish/2025/09/30/fish_kampfi">[Kampfi](/fish/2025/09/30/fish_kampfi)</a></li>
       <li><strong>Preis:</strong> 8–15 €</li>
     </ul>
   </div>
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/27/fish_lila">Lila</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/27/fish_lila">[Lila](/fish/2025/09/27/fish_lila)</a> <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat-typisch</li>
       <li><strong>Farbe:</strong> Dunkel indigo/blau Metallic</li>
-      <li><strong>Status:</strong> erfolgreich mit <a href="/fish/2025/09/29/fish_bandit">Bandit</a> verpaart; in Gruppen teils unterlegen</li>
+      <li><strong>Status:</strong> erfolgreich mit <a href="/fish/2025/09/29/fish_bandit">[Bandit](/fish/2025/09/29/fish_bandit)</a> verpaart; in Gruppen teils unterlegen</li>
       <li><strong>Preis:</strong> 10–18 €</li>
     </ul>
   </div>
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a> <span class="fish-gender">♀</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/25/fish_sonnenschein">[Sonnenschein](/fish/2025/09/25/fish_sonnenschein)</a> <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat-typisch</li>
       <li><strong>Farbe:</strong> Sehr heller Körper (weiß/creme), rote Flossen; Marble wahrscheinlich</li>
@@ -64,7 +65,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="fish-card">
-    <div class="fish-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> <span class="fish-gender">♂</span></div>
+    <div class="fish-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)</a> <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Variante:</strong> Plakat</li>
       <li><strong>Farbe:</strong> Tiefblau Metallic, schwarze Kopfzeichnung, rote Pelvics</li>
@@ -78,7 +79,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
 ## Meine Zuchtpläne und erwartete Ergebnisse
 <div class="card-grid breeding-cards">
   <div class="breeding-card">
-    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/27/fish_lila">Lila</a></div>
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)</a> × <a href="/fish/2025/09/27/fish_lila">[Lila](/fish/2025/09/27/fish_lila)</a></div>
     <ul>
       <li><strong>Ziel:</strong> stabile Dunkel‑/Blau‑Metallic‑Linie; geringere Muster‑Sprunghaftigkeit</li>
       <li><strong>Phänotyp:</strong> Royal‑blue bis indigo Metallic; teils schwarze Kopfmaske; klare Plakat‑Form</li>
@@ -86,7 +87,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="breeding-card">
-    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/26/fish_shadow">Shadow</a></div>
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)</a> × <a href="/fish/2025/09/26/fish_shadow">[Shadow](/fish/2025/09/26/fish_shadow)</a></div>
     <ul>
       <li><strong>Ziel:</strong> „Black/Blue Metallic\" Optik mit kräftigem Teal</li>
       <li><strong>Phänotyp:</strong> Dunkle Körper mit teal/blau Schimmer; gelegentlich Mask; wenig Rot</li>
@@ -94,7 +95,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="breeding-card">
-    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">Sir Pryce</a> × <a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a></div>
+    <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)</a> × <a href="/fish/2025/09/25/fish_sonnenschein">[Sonnenschein](/fish/2025/09/25/fish_sonnenschein)</a></div>
     <ul>
       <li><strong>Ziel:</strong> farbvielfältige Marble‑Nachzucht</li>
       <li><strong>Phänotyp:</strong> Blau/weiß/rot gemischt; Mask möglich; Muster variabel (Marble)</li>
@@ -102,7 +103,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="breeding-card">
-    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> × <a href="/fish/2025/09/25/fish_sonnenschein">Sonnenschein</a></div>
+    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">[Kampfi](/fish/2025/09/30/fish_kampfi)</a> × <a href="/fish/2025/09/25/fish_sonnenschein">[Sonnenschein](/fish/2025/09/25/fish_sonnenschein)</a></div>
     <ul>
       <li><strong>Ziel:</strong> Koi/Nemo/Hellboy‑artige Plakat mit Butterfly‑Rändern</li>
       <li><strong>Phänotyp:</strong> Rot/weiß mit Dragon‑Schuppen; teils klare Butterfly‑Saum; starke Farbvielfalt (Marble)</li>
@@ -110,7 +111,7 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
     </ul>
   </div>
   <div class="breeding-card">
-    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">Kampfi</a> × <a href="/fish/2025/09/27/fish_lila">Lila</a></div>
+    <div class="breeding-card-title"><a href="/fish/2025/09/30/fish_kampfi">[Kampfi](/fish/2025/09/30/fish_kampfi)</a> × <a href="/fish/2025/09/27/fish_lila">[Lila](/fish/2025/09/27/fish_lila)</a></div>
     <ul>
       <li><strong>Ziel:</strong> „Red/Blue Dragon Marble\" Linie</li>
       <li><strong>Phänotyp:</strong> Rot/blau gemarbelt mit Metallic; einige mit klarer Dragon‑Bedeckung</li>
