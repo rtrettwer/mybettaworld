@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Sir Pryce"
 author: "Rike Trettwer"
-date: 15.05.2025 11:06:51 +0200
+date: 28.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, zucht]
 excerpt: "Sir Pryce ist mein erster Zuchtmännchen mit beeindruckender Persönlichkeit."

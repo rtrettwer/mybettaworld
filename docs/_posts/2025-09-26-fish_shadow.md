@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Shadow"
 author: "Rike Trettwer"
-date: 22.05.2025 11:06:51 +0200
+date: 2025-09-26
 categories: [fish]
 tags: [betta, weibchen, schwarz]
 excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."

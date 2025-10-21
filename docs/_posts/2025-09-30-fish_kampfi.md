@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Kampfi"
 author: "Rike Trettwer"
-date: 15.01.2025 11:06:51 +0200
+date: 30.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, friedlich]
 excerpt: "Kampfi ist mein friedlichster Betta mit wunderschöner roter Färbung."

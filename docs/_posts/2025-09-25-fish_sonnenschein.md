@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Sonnenschein"
 author: "Rike Trettwer"
-date: 20.05.2025 11:06:51 +0200
+date: 25.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, zucht]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium."
