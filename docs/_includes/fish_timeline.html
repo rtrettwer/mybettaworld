@@ -83,16 +83,11 @@
   z-index: 2;
 }
 .timeline-marker::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 4px;
-  height: 100%;
-  background: #2196f3;
-  z-index: 0;
-  border-radius: 2px;
+      content: none;
+}
+.timeline-item:first-child .timeline-marker::before,
+.timeline-item:last-child .timeline-marker::before {
+  content: none;
 }
 .fish-timeline-large-image .fish-avatar-large {
   position: relative;
@@ -110,13 +105,6 @@
   flex-grow: 0 !important;
   display: block;
   background: #fff;
-}
-.timeline-item:first-child .timeline-marker::before {
-  top: 50%;
-  height: 50%;
-}
-.timeline-item:last-child .timeline-marker::before {
-  height: 50%;
 }
 .fish-timeline-image-dominant,
 .timeline-marker,
@@ -189,5 +177,8 @@
   font-size: 0.95em;
   color: #888;
   margin-bottom: 0.1em;
+}
+.timeline-center .timeline-line {
+  display: none !important;
 }
 </style>
