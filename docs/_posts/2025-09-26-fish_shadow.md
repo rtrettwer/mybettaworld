@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 2025-09-26
 categories: [fish]
 tags: [betta, weibchen, schwarz]
-excerpt: "Shadow ist ein eleganter dunkler Betta mit interessanter Persönlichkeit."
+excerpt: "Shadow sieht fast nach einer Wildform aus"
 image: /assets/images/fish/shadow/IMG_20251015_205320.webp
 timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"

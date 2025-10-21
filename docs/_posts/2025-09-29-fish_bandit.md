@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 29.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, camallanus, quarantäne]
-excerpt: "Bandit ist ein temperamentvoller Betta, der leider an Camallanus erkrankt ist."
+excerpt: "Bandit ist ein temperamentvoller Betta mit wunderschönen 'Galaxie-Schimmerschuppen"
 image: /assets/images/fish/bandit/PA162660.webp
 timeline_image: /assets/images/fish/bandit/bandit_timeline.webp
 fish_name: "Bandit"

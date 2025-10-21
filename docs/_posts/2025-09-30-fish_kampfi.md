@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 30.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, friedlich]
-excerpt: "Kampfi ist mein friedlichster Betta mit wunderschöner roter Färbung."
+excerpt: "Kampfi ist mein friedlichster Betta"
 image: /assets/images/fish/kampfi/IMG_20251015_205247.webp
 timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
