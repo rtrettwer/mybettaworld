@@ -46,25 +46,25 @@
 
   .timeline-marker {
     position: absolute;
-    left: -7rem; // Angepasst für größere Marker
+    left: -7rem;
     top: 1rem;
-    width: 10rem; // Deutlich vergrößert von 6rem auf 10rem
-    height: 10rem; // Deutlich vergrößert von 6rem auf 10rem
+    width: 10rem;
+    height: 10rem;
     border-radius: 50%;
-    /* Kein Gradient, kein border mehr hier! */
-    /* background: none; */
-    /* border: none; */
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 8px 25px rgba(46, 196, 182, 0.4),
                 0 0 0 2px rgba(127, 83, 172, 0.2);
-    transition: all 0.3s ease;
-    z-index: 10; // Immer über Content
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 10;
     overflow: hidden;
+    // GPU-Beschleunigung für flüssigere Animation
+    will-change: transform;
+    transform: translateZ(0);
 
     &:hover {
-      transform: scale(1.15);
+      transform: translateZ(0) scale(1.08);
       box-shadow: 0 12px 35px rgba(46, 196, 182, 0.6),
                   0 0 0 4px rgba(127, 83, 172, 0.4);
     }
@@ -81,7 +81,7 @@
       box-sizing: border-box;
       background: transparent;
       position: relative;
-      overflow: visible;
+      overflow: hidden;
 
       &::before {
         content: '';
@@ -90,18 +90,12 @@
         border-radius: 50%;
         z-index: 1;
         background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
-        /* Randstärke anpassen */
         padding: 0;
-        /* Optional: Schatten für Glow-Effekt */
-        box-shadow: 0 0 0 0px transparent;
+        transition: box-shadow 0.3s ease;
       }
 
       &:hover::before {
         box-shadow: 0 0 0 6px rgba(46,196,182,0.18), 0 8px 32px 0 rgba(46,196,182,0.25);
-      }
-
-      &:hover {
-        text-decoration: none;
       }
     }
 
@@ -111,22 +105,20 @@
       border-radius: 50%;
       object-fit: cover;
       object-position: center;
-      transition: all 0.3s ease;
       box-shadow: none;
       display: block;
       position: relative;
       z-index: 2;
       margin: 0;
-      /* Kein margin, kein padding, kein border! */
-      &:hover {
-        transform: scale(1.05);
-      }
+      // Kein eigener Hover-Effekt mehr, wird vom Parent gehandelt
     }
 
     .fish-placeholder {
-      font-size: 4rem; // Vergrößert von 2rem auf 4rem
+      font-size: 4rem;
       color: var(--theme-primary-1);
       text-shadow: 0 2px 4px rgba(46, 196, 182, 0.3);
+      position: relative;
+      z-index: 2;
     }
   }
 
@@ -159,28 +151,21 @@
   }
 
   .timeline-link-style {
-    transition: transform 0.35s cubic-bezier(0.4,0.2,0.2,1), box-shadow 0.35s cubic-bezier(0.4,0.2,0.2,1), filter 0.35s, background 0.35s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: block;
-    border-radius: 2.2rem;
-  }
-  .timeline-link-style:hover,
-  .timeline-link-style:focus {
-    transform: scale(1.06) translateY(-7px);
-    box-shadow: 0 16px 48px 0 var(--theme-primary-2), 0 0 0 10px var(--theme-primary-3), 0 2px 24px 0 #21cbf355;
-    filter: brightness(1.07) saturate(1.12) drop-shadow(0 0 24px var(--theme-primary-3));
-    outline: none;
-    text-decoration: none;
-    background: linear-gradient(120deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 60%, var(--theme-primary-3) 100%);
+    border-radius: 16px;
+    // GPU-Beschleunigung
+    will-change: transform;
+    transform: translateZ(0);
   }
 
-  // Optional: Card-Glow verstärken
-  .timeline-link-style .timeline-card.gradient-card {
-    transition: box-shadow 0.35s, background 0.35s;
-  }
-  .timeline-link-style:hover .timeline-card.gradient-card,
-  .timeline-link-style:focus .timeline-card.gradient-card {
-    box-shadow: 0 24px 64px 0 var(--theme-primary-2), 0 0 0 14px var(--theme-primary-3), 0 2px 32px 0 #21cbf355;
-    background: linear-gradient(120deg, var(--theme-primary-2) 0%, var(--theme-primary-3) 100%);
+  .timeline-link-style:hover,
+  .timeline-link-style:focus {
+    transform: translateZ(0) translateY(-4px);
+    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.2),
+                0 0 30px rgba(46, 196, 182, 0.15);
+    outline: none;
+    text-decoration: none;
   }
 
   .timeline-content {
@@ -192,20 +177,21 @@
     z-index: 1;
     margin-left: 1rem;
     cursor: pointer;
+    // GPU-Beschleunigung
+    will-change: transform;
+    transform: translateZ(0);
 
     // Gradient-Rand konsistent mit anderen Cards
     border: 2px solid transparent;
-    background: var(--theme-white);
-    /* Ursprünglich: linear-gradient(var(--theme-white), var(--theme-white)) padding-box, linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box; */
-    /* Die padding-box-Variante ist fehlerhaft, daher nur einfarbiger Hintergrund */
-    /* Alternativ könnte man einen Border-Gradient mit border-image nutzen */
+    background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+                linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
     // Leuchtender Schatten-Effekt
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
                 0 0 20px rgba(46, 196, 182, 0.1);
 
     &:hover {
-      transform: translateY(-4px) translateX(8px);
+      transform: translateZ(0) translateY(-2px);
       box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
                   0 0 30px rgba(46, 196, 182, 0.2),
                   0 0 50px rgba(127, 83, 172, 0.1);

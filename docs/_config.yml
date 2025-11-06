@@ -64,15 +64,10 @@ exclude:
   - README.md
   - LICENSE.txt
 
-# Include _pages directory
+# Include _pages directory (damit Jekyll sie verarbeitet)
 include:
   - _pages
 
-# Collections für Pages
-collections:
-  pages:
-    output: true
-    permalink: /:path/
 
 # Header‑Navigation (minima):
 header_pages:
