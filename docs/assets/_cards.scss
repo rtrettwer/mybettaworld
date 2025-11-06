@@ -325,10 +325,13 @@ h1, h2, h3 {
       font-size: 0.9rem;
       font-weight: 600;
       transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(46, 196, 182, 0.2);
 
       &:hover {
         background: var(--theme-primary-2);
         transform: translateY(-2px);
+        box-shadow: 0 4px 16px rgba(46, 196, 182, 0.3),
+                    0 0 20px rgba(46, 196, 182, 0.2);
       }
     }
   }
@@ -340,17 +343,21 @@ h1, h2, h3 {
     .tag-link {
       color: var(--theme-primary-1);
       text-decoration: none;
-      padding: 0.2rem 0.5rem;
-      background: rgba(46, 196, 182, 0.1);
-      border-radius: 4px;
+      padding: 0.3rem 0.7rem;
+      background: rgba(46, 196, 182, 0.08);
+      border-radius: 6px;
       margin-right: 0.5rem;
       display: inline-block;
       margin-bottom: 0.25rem;
       transition: all 0.3s ease;
+      border: 1px solid rgba(46, 196, 182, 0.2);
+      font-weight: 500;
 
       &:hover {
-        background: rgba(46, 196, 182, 0.2);
+        background: linear-gradient(135deg, rgba(46, 196, 182, 0.15), rgba(127, 83, 172, 0.12));
         transform: translateY(-1px);
+        box-shadow: 0 2px 8px rgba(46, 196, 182, 0.2);
+        border-color: var(--theme-primary-1);
       }
     }
   }

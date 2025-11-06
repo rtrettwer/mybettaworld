@@ -35,10 +35,10 @@ permalink: /tanks/
       <div class="post-excerpt">
         {{ post.excerpt }}
         {% if post.water_type or post.filter or post.beleuchtung %}
-        <div style="margin-top: 1rem; padding: 1rem; background: #f8f9fa; border-radius: 8px; font-size: 0.9rem;">
-          {% if post.water_type %}<strong>Wasserart:</strong> {{ post.water_type }}<br>{% endif %}
-          {% if post.filter %}<strong>Filter:</strong> {{ post.filter }}<br>{% endif %}
-          {% if post.beleuchtung %}<strong>Beleuchtung:</strong> {{ post.beleuchtung }}{% endif %}
+        <div class="tank-info-box" style="margin-top: 1rem; padding: 1rem; border-radius: 12px; font-size: 0.9rem; border: 2px solid transparent; background: linear-gradient(rgba(248,249,250,0.95), rgba(248,249,250,0.95)) padding-box, linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box; box-shadow: 0 2px 8px rgba(46, 196, 182, 0.1); transition: all 0.3s ease;">
+          {% if post.water_type %}<strong>💧 Wasserart:</strong> {{ post.water_type }}<br>{% endif %}
+          {% if post.filter %}<strong>🔄 Filter:</strong> {{ post.filter }}<br>{% endif %}
+          {% if post.beleuchtung %}<strong>💡 Beleuchtung:</strong> {{ post.beleuchtung }}{% endif %}
         </div>
         {% endif %}
       </div>

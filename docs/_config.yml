@@ -64,12 +64,22 @@ exclude:
   - README.md
   - LICENSE.txt
 
+# Include _pages directory
+include:
+  - _pages
+
+# Collections für Pages
+collections:
+  pages:
+    output: true
+    permalink: /:path/
+
 # Header‑Navigation (minima):
 header_pages:
-  - about.md
-  - blog.md
-  - fish.md
-  - tanks.md
-  - food.md
-  - sale.md
-  - gallery.md
+  - _pages/about.md
+  - _pages/blog.md
+  - _pages/fish.md
+  - _pages/tanks.md
+  - _pages/food.md
+  - _pages/sale.md
+  - _pages/gallery.md

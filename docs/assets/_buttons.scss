@@ -1,20 +1,22 @@
-// Einheitliche Button-Styles - Optimiert für Performance
+// Einheitliche Button-Styles - Optimiert für Performance mit Glow-Effekten
 .btn {
   background: var(--theme-primary-1);
   color: #fff !important;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   padding: 0.6em 1.2em;
   font-weight: 600;
-  box-shadow: 0 2px 8px rgba(46, 196, 182, 0.08);
-  transition: background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(46, 196, 182, 0.2);
+  transition: all 0.3s ease;
   cursor: pointer;
   text-decoration: none !important;
   display: inline-block;
 
   &:hover, &:focus {
     background: var(--link-hover-color);
-    box-shadow: 0 4px 16px rgba(46, 196, 182, 0.16);
+    box-shadow: 0 4px 16px rgba(46, 196, 182, 0.3),
+                0 0 20px rgba(46, 196, 182, 0.2);
+    transform: translateY(-2px);
     color: #fff !important;
     text-decoration: none !important;
   }
@@ -25,7 +27,7 @@
   }
 
   &:active {
-    transform: translateY(1px);
+    transform: translateY(0px);
     transition: transform 0.1s ease;
     color: #fff !important;
   }
@@ -40,8 +42,67 @@
     &:hover {
       background: #ccc;
       box-shadow: none;
+      transform: none;
       color: #fff !important;
     }
+  }
+}
+
+// Gradient button variant (für besondere Aktionen)
+.btn-gradient {
+  background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
+  color: #fff !important;
+  border: none;
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(46, 196, 182, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, var(--theme-primary-2), var(--theme-primary-3), var(--theme-primary-1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+  &:hover, &:focus {
+    box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4),
+                0 0 30px rgba(46, 196, 182, 0.3),
+                0 0 50px rgba(127, 83, 172, 0.2);
+    transform: translateY(-2px);
+    color: #fff !important;
+    text-decoration: none !important;
+
+    &::before {
+      opacity: 1;
+    }
+  }
+
+  span {
+    position: relative;
+    z-index: 1;
+  }
+
+  &:visited {
+    color: #fff !important;
+    text-decoration: none !important;
+  }
+
+  &:active {
+    transform: translateY(0px);
+    transition: transform 0.1s ease;
+    color: #fff !important;
   }
 }
 
@@ -50,14 +111,28 @@
   background: transparent;
   color: var(--theme-primary-1) !important;
   border: 2px solid var(--theme-primary-1);
+  border-radius: 8px;
+  padding: 0.6em 1.2em;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none !important;
+  display: inline-block;
 
   &:hover, &:focus {
     background: var(--theme-primary-1);
     color: #fff !important;
     text-decoration: none !important;
+    box-shadow: 0 4px 16px rgba(46, 196, 182, 0.3),
+                0 0 20px rgba(46, 196, 182, 0.2);
+    transform: translateY(-2px);
   }
 
   &:visited {
     color: var(--theme-primary-1) !important;
+  }
+
+  &:active {
+    transform: translateY(0px);
   }
 }

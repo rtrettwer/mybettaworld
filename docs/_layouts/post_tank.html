@@ -19,6 +19,75 @@ layout: default
 
     {% if page.image or page.dimensions or page.fassungsvermoegen or page.water_type or page.filter or page.luftheber or page.beleuchtung or page.bodengrund or page.deko or page.startdatum or page.besatz or page.pflanzen or page.technik or page.heizung or page.besonderheiten %}
     <style>
+      .tank-steckbrief {
+        background: var(--theme-white);
+        border-radius: 16px;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+                    linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(46, 196, 182, 0.1);
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .tank-steckbrief:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
+                    0 0 30px rgba(46, 196, 182, 0.2),
+                    0 0 50px rgba(127, 83, 172, 0.1);
+      }
+
+      .tank-steckbrief h2 {
+        margin-top: 0;
+        color: var(--theme-primary-2);
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+
+      .tank-steckbrief-flex {
+        display: flex;
+        align-items: flex-start;
+        gap: 2rem;
+      }
+
+      .tank-image {
+        flex: 0 0 160px;
+        max-width: 160px;
+      }
+
+      .tank-image img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
+      }
+
+      .tank-image img:hover {
+        transform: scale(1.05);
+      }
+
+      .tank-steckbrief dl {
+        display: grid;
+        grid-template-columns: max-content 1fr;
+        gap: 0.5rem 1.5rem;
+        margin: 0;
+      }
+
+      .tank-steckbrief dt {
+        font-weight: 600;
+        color: var(--theme-primary-1);
+      }
+
+      .tank-steckbrief dd {
+        margin: 0;
+        color: #333;
+      }
+
       @media (max-width: 700px) {
         .tank-steckbrief-flex {
           flex-direction: column !important;
@@ -31,18 +100,16 @@ layout: default
         }
       }
     </style>
-    <div class="tank-steckbrief"
-         style="background: rgba(248,248,248,0.7); border-radius: 8px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; box-shadow: 0 1px 4px rgba(0,0,0,0.04); max-width: 900px; margin-left: auto; margin-right: auto;">
-        <div class="tank-steckbrief-flex" style="display: flex; align-items: flex-start; gap: 2rem;">
+    <div class="tank-steckbrief">
+        <h2>🏠 Steckbrief</h2>
+        <div class="tank-steckbrief-flex">
             {% if page.image %}
-            <div class="tank-image" style="flex: 0 0 140px; max-width: 140px;">
-                <img src="{{ page.image }}" alt="Aquarium Foto"
-                     style="width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"/>
+            <div class="tank-image">
+                <img src="{{ page.image }}" alt="Aquarium Foto"/>
             </div>
             {% endif %}
             <div style="flex: 1 1 0%; min-width: 0;">
-                <h2 style="margin-top:0;">Steckbrief</h2>
-                <dl style="display: grid; grid-template-columns: max-content 1fr; gap: 0.3rem 1.5rem;">
+                <dl>
                     {% if page.dimensions %}
                     <dt>Maße:</dt>
                     <dd>{{ page.dimensions }}</dd>
@@ -109,24 +176,26 @@ layout: default
     {% include aquarium_water_parameters.html %}
 
     {% if page.entwicklung %}
-    <section class="tank-entwicklung" style="max-width:700px; margin:0 auto 2rem auto;">
-        <h2>Entwicklung</h2>
-        <table style="width:100%; border-collapse:collapse;">
-            <thead>
-                <tr>
-                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Datum</th>
-                    <th style="text-align:left; padding:4px 8px; border-bottom:1px solid #ccc;">Ereignis</th>
-                </tr>
-            </thead>
-            <tbody>
-                {% for eintrag in page.entwicklung %}
-                <tr>
-                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.datum }}</td>
-                    <td style="padding:4px 8px; border-bottom:1px solid #eee;">{{ eintrag.ereignis }}</td>
-                </tr>
-                {% endfor %}
-            </tbody>
-        </table>
+    <section class="tank-entwicklung" style="max-width:900px; margin:2rem auto; background: var(--theme-white); border-radius: 16px; padding: 1.5rem; border: 2px solid transparent; background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box, linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(46, 196, 182, 0.1); transition: all 0.3s ease;">
+        <h2 style="margin-top: 0; color: var(--theme-primary-2); font-size: 1.5rem; margin-bottom: 1.5rem;">📅 Entwicklung</h2>
+        <div style="overflow-x: auto;">
+            <table style="width:100%; border-collapse: separate; border-spacing: 0;">
+                <thead>
+                    <tr style="background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));">
+                        <th style="text-align:left; padding: 0.8rem 1rem; color: white; font-weight: 600; border-radius: 8px 0 0 0;">Datum</th>
+                        <th style="text-align:left; padding: 0.8rem 1rem; color: white; font-weight: 600; border-radius: 0 8px 0 0;">Ereignis</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for eintrag in page.entwicklung %}
+                    <tr style="transition: all 0.2s ease; {% if forloop.index == forloop.length %}border-radius: 0 0 8px 8px;{% endif %}" onmouseover="this.style.background='rgba(46, 196, 182, 0.05)'; this.style.transform='translateX(3px)';" onmouseout="this.style.background=''; this.style.transform='translateX(0)';">
+                        <td style="padding: 0.8rem 1rem; border-bottom: 1px solid rgba(46, 196, 182, 0.1); font-weight: 600; color: var(--theme-primary-1); white-space: nowrap;">{{ eintrag.datum }}</td>
+                        <td style="padding: 0.8rem 1rem; border-bottom: 1px solid rgba(46, 196, 182, 0.1); color: #333;">{{ eintrag.ereignis }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
     </section>
     {% endif %}
 

@@ -17,53 +17,163 @@ layout: default
   </header>
 
     <style>
+        .fish-steckbrief {
+            background: var(--theme-white);
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+            background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+                        linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(46, 196, 182, 0.1);
+        }
+
+        .fish-steckbrief:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
+                        0 0 30px rgba(46, 196, 182, 0.2),
+                        0 0 50px rgba(127, 83, 172, 0.1);
+        }
+
+        .fish-steckbrief h2 {
+            margin-top: 0;
+            color: var(--theme-primary-2);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .fish-profile-flex {
+            display: flex;
+            gap: 2rem;
+            align-items: flex-start;
+        }
+
+        .fish-image {
+            flex: 0 0 180px;
+            max-width: 180px;
+        }
+
+        .fish-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .fish-image img:hover {
+            transform: scale(1.05);
+        }
+
+        .fish-details {
+            flex: 1 1 0%;
+            min-width: 0;
+        }
+
+        .fish-details dl {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 0.5rem 1.5rem;
+            margin: 0;
+        }
+
+        .fish-details dt {
+            font-weight: 600;
+            color: var(--theme-primary-1);
+        }
+
+        .fish-details dd {
+            margin: 0;
+            color: #333;
+        }
+
         @media (max-width: 700px) {
-            .fish-profile {
+            .fish-profile-flex {
                 flex-direction: column !important;
                 gap: 1rem !important;
             }
 
-            .fish-profile img {
+            .fish-image {
                 max-width: 100% !important;
                 width: 100% !important;
             }
         }
     </style>
-    <div class="fish-profile" style="display: flex; gap: 2rem; align-items: flex-start; margin-bottom: 2rem;">
-        <div>
-            <img src="{{ page.image }}" alt="Bild von {{ page.title }}" style="max-width: 180px; border-radius: 8px;">
-        </div>
-        <div>
-            <ul style="list-style: none; padding: 0;">
-                <li><strong>Name:</strong> {{ page.fish_name }}</li>
-                <li><strong>Geburtsmonat:</strong>
-                {% if page.fish_birth %}
-                  {% assign birth_date = page.fish_birth | date: "%Y-%m-%d" %}
-                  {% assign birth_day = birth_date | date: "%d" %}
-                  {% assign birth_month = birth_date | date: "%m" %}
-                  {% assign birth_year = birth_date | date: "%Y" %}
-                  {{ birth_day }}.{{ birth_month }}.{{ birth_year }}
-                {% else %}
-                  {{ page.fish_birth }}
-                {% endif %}
-                </li>
-                <li><strong>Alter:</strong> {{ page.fish_age }}</li>
-                <li><strong>Art/Variante:</strong> {{ page.fish_type }}</li>
-                <li><strong>Flossentyp:</strong> {{ page.fish_fins }}</li>
-                <li><strong>Körperform/Proportionen:</strong> {{ page.fish_body }}</li>
-                <li><strong>Farbgrundlage:</strong> {{ page.fish_color_base }}</li>
-                <li><strong>Irideszenz/Metallic:</strong> {{ page.fish_iridescence }}</li>
-                <li><strong>Muster/Pattern:</strong> {{ page.fish_pattern }}</li>
-                <li><strong>Pectoralen:</strong> {{ page.fish_pectorals }}</li>
-                <li><strong>Geschlecht:</strong> {{ page.fish_gender }}</li>
-                <li><strong>Verhalten:</strong> {{ page.fish_behavior }}</li>
-                <li><strong>Fütterung:</strong> {{ page.fish_feeding }}</li>
-                <li><strong>Gesundheit:</strong> {{ page.fish_health }}</li>
-                <li><strong>Haltung/Setup:</strong> {{ page.fish_housing }}</li>
-                <li><strong>Zuchteinordnung:</strong> {{ page.fish_breeding }}</li>
-                <li><strong>Besondere Merkmale:</strong> {{ page.fish_special_traits }}</li>
-                <li><strong>Zuchtlinie:</strong> {{ page.fish_lineage }}</li>
-            </ul>
+
+    <div class="fish-steckbrief">
+        <h2>🐟 Steckbrief</h2>
+        <div class="fish-profile-flex">
+            <div class="fish-image">
+                <img src="{{ page.image }}" alt="Bild von {{ page.title }}">
+            </div>
+            <div class="fish-details">
+                <dl>
+                    <dt>Name:</dt>
+                    <dd>{{ page.fish_name }}</dd>
+
+                    <dt>Geburtsmonat:</dt>
+                    <dd>
+                    {% if page.fish_birth %}
+                      {% assign birth_date = page.fish_birth | date: "%Y-%m-%d" %}
+                      {% assign birth_day = birth_date | date: "%d" %}
+                      {% assign birth_month = birth_date | date: "%m" %}
+                      {% assign birth_year = birth_date | date: "%Y" %}
+                      {{ birth_day }}.{{ birth_month }}.{{ birth_year }}
+                    {% else %}
+                      {{ page.fish_birth }}
+                    {% endif %}
+                    </dd>
+
+                    <dt>Alter:</dt>
+                    <dd>{{ page.fish_age }}</dd>
+
+                    <dt>Art/Variante:</dt>
+                    <dd>{{ page.fish_type }}</dd>
+
+                    <dt>Flossentyp:</dt>
+                    <dd>{{ page.fish_fins }}</dd>
+
+                    <dt>Körperform:</dt>
+                    <dd>{{ page.fish_body }}</dd>
+
+                    <dt>Farbgrundlage:</dt>
+                    <dd>{{ page.fish_color_base }}</dd>
+
+                    <dt>Irideszenz:</dt>
+                    <dd>{{ page.fish_iridescence }}</dd>
+
+                    <dt>Muster/Pattern:</dt>
+                    <dd>{{ page.fish_pattern }}</dd>
+
+                    <dt>Pectoralen:</dt>
+                    <dd>{{ page.fish_pectorals }}</dd>
+
+                    <dt>Geschlecht:</dt>
+                    <dd>{{ page.fish_gender }}</dd>
+
+                    <dt>Verhalten:</dt>
+                    <dd>{{ page.fish_behavior }}</dd>
+
+                    <dt>Fütterung:</dt>
+                    <dd>{{ page.fish_feeding }}</dd>
+
+                    <dt>Gesundheit:</dt>
+                    <dd>{{ page.fish_health }}</dd>
+
+                    <dt>Haltung/Setup:</dt>
+                    <dd>{{ page.fish_housing }}</dd>
+
+                    <dt>Zuchteinordnung:</dt>
+                    <dd>{{ page.fish_breeding }}</dd>
+
+                    <dt>Besondere Merkmale:</dt>
+                    <dd>{{ page.fish_special_traits }}</dd>
+
+                    <dt>Zuchtlinie:</dt>
+                    <dd>{{ page.fish_lineage }}</dd>
+                </dl>
+            </div>
         </div>
     </div>
 
