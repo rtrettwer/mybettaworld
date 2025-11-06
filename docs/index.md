@@ -25,7 +25,8 @@ layout: home
       <span class="stat-label">Fisch-Profile</span>
     </a>
     <a href="/tanks/" class="hero-stat" style="text-decoration:none; color:inherit;">
-      <span class="stat-number">6</span>
+      {% assign tank_posts = site.posts | where_exp: "post", "post.categories contains 'tank'" %}
+      <span class="stat-number">{{ tank_posts | size }}</span>
       <span class="stat-label">Becken</span>
     </a>
     {% assign breeding_posts = site.posts | where_exp: "post", "post.categories contains 'breeding' or post.tags contains 'zucht'" %}
