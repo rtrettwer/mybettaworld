@@ -2,9 +2,6 @@
 # Die Captions werden als Alt-Text für die Bilder verwendet
 
 # Fisch-Bilder - Allgemein
-- path: /assets/images/fish/IMG_20250801_152554.webp
-  title: Betta Splendens
-  caption: Wunderschöner Kampffisch in seinem natürlichen Verhalten
 
 # Bandit (Betta Splendens)
 - path: /assets/images/fish/bandit/IMG_20250712_063319.webp
@@ -13,157 +10,52 @@
 - path: /assets/images/fish/bandit/IMG_20250716_155618.webp
   title: Bandit im Aquarium
   caption: Bandit schwimmt entspannt durch sein Zuhause
-- path: /assets/images/fish/bandit/IMG_20250716_171631.webp
-  title: Ein Eimer für Bandit
-  caption: Hier sieht man wunderbar die schönen grün-blauen Glanzschuppen auf Bandits Rücken.
 - path: /assets/images/fish/bandit/IMG_20250716_171652.webp
   title: Ein Eimer für Bandit
   caption: Die tollen Farben in den Schuppen sieht man nicht in jedem Licht. Es sieht aus als hätte er eine kleine Galaxie auf dem Rücken.
-- path: /assets/images/fish/bandit/IMG_20250716_171657.webp
-  title: Bandits Farbenpracht
-  caption: Detailaufnahme von Bandits einzigartigen Schuppenmustern
 - path: /assets/images/fish/bandit/IMG_20250725_180445.webp
   title: Höhle
   caption: Bandit schwimmt gerade aus der großen Höhlenöffnung des Höhlenbeckens heraus. Er schwimmt dort mehrmals täglich rein und raus.
 - path: /assets/images/fish/bandit/IMG_20250725_182706.webp
   title: Bandit erkundet
   caption: Bandit auf Erkundungstour in seinem Aquarium
-- path: /assets/images/fish/bandit/IMG_20250725_182819.webp
-  title: Bandit Portrait
-  caption: Nahaufnahme von Bandits ausdrucksvollem Gesicht
-- path: /assets/images/fish/bandit/IMG_20250725_182905.webp
-  title: Bandit zeigt seine Flossen
-  caption: Bandit präsentiert stolz seine prächtigen Flossen
-- path: /assets/images/fish/bandit/IMG_20250725_182936.webp
-  title: Bandit in Aktion
-  caption: Bandit in typischer Kampffisch-Pose mit gespreizten Flossen
 - path: /assets/images/fish/bandit/IMG_20250806_113139.webp
   title: Bandit am Vormittag
   caption: Bandit bei seinem morgendlichen Schwimmrunde
-- path: /assets/images/fish/bandit/IMG_20250806_113333.webp
-  title: Bandit im Detail
-  caption: Detailierte Aufnahme von Bandits charakteristischen Merkmalen
 - path: /assets/images/fish/bandit/IMG_20250806_113342.webp
   title: Bandits Eleganz
   caption: Bandit zeigt seine natürliche Eleganz beim Schwimmen
-- path: /assets/images/fish/bandit/IMG_20250806_113343.webp
-  title: Bandit Profile
-  caption: Seitenprofil von Bandit mit seinen markanten Flossen
 - path: /assets/images/fish/bandit/IMG_20250912_110538.webp
   title: Bandit im September
   caption: Bandit hat sich prächtig entwickelt
-- path: /assets/images/fish/bandit/IMG_20250912_110539.webp
-  title: Bandits Wachstum
-  caption: Bandit zeigt sein Wachstum und seine Farbentwicklung
-- path: /assets/images/fish/bandit/IMG_20250928_101601.webp
-  title: Bandit Ende September
-  caption: Bandit in seiner vollen Pracht im Herbst
-- path: /assets/images/fish/bandit/IMG_20250928_101603.webp
-  title: Bandits Farbspiel
-  caption: Die Farben von Bandit im wechselnden Licht
-- path: /assets/images/fish/bandit/IMG_20250928_101707.webp
-  title: Bandit aktiv
-  caption: Bandit bei einer seiner aktiven Phasen
-- path: /assets/images/fish/bandit/IMG_20250928_101711_1.webp
-  title: Bandit Detail
-  caption: Detailaufnahme von Bandits prächtigen Farben
-- path: /assets/images/fish/bandit/bandit.webp
-  title: Bandit Porträt
-  caption: Offizielles Porträt von Bandit, dem charakterstarken Kampffisch
 
 # Kampfi (Betta Splendens)
-- path: /assets/images/fish/kampfi/IMG_20250403_202229.webp
-  title: Kampfi im April
-  caption: Kampfi zeigt seine charakteristische Haltung
-- path: /assets/images/fish/kampfi/IMG_20250404_075049.webp
-  title: Kampfi am Morgen
-  caption: Kampfi bei seiner morgendlichen Routine
 - path: /assets/images/fish/kampfi/IMG_20250409_191625.webp
   title: Kampfi am Abend
   caption: Kampfi in entspannter Abendhaltung
-- path: /assets/images/fish/kampfi/IMG_20250413_181253.webp
-  title: Kampfi Portrait
-  caption: Nahaufnahme von Kampfis markanten Gesichtszügen
-- path: /assets/images/fish/kampfi/IMG_20250413_181309.webp
-  title: Kampfis Flossen
-  caption: Kampfi präsentiert seine beeindruckenden Flossen
 - path: /assets/images/fish/kampfi/IMG_20250413_181330.webp
   title: Kampfi in Pose
   caption: Kampfi in einer typischen Kampffisch-Pose
-- path: /assets/images/fish/kampfi/IMG_20250716_165957.webp
-  title: Kampfi im Sommer
-  caption: Kampfi genießt die warmen Sommertage
-- path: /assets/images/fish/kampfi/IMG_20250729_121056.webp
-  title: Kampfi mittags
-  caption: Kampfi während der aktiven Mittagszeit
 - path: /assets/images/fish/kampfi/IMG_20250729_121100.webp
   title: Kampfis Aktivität
   caption: Kampfi bei einer seiner Erkundungstouren
-- path: /assets/images/fish/kampfi/IMG_20250828_110822.webp
-  title: Kampfi im August
-  caption: Kampfi zeigt seine Entwicklung im späten Sommer
-- path: /assets/images/fish/kampfi/P5211222.webp
-  title: Kampfi Professionell
-  caption: Professionelle Aufnahme von Kampfi mit optimaler Beleuchtung
-- path: /assets/images/fish/kampfi/P5211225.webp
-  title: Kampfis Details
-  caption: Detailreiche Aufnahme von Kampfis Schuppen und Flossen
-- path: /assets/images/fish/kampfi/P5211262.webp
-  title: Kampfi Studiofoto
-  caption: Kampfi in perfekter Pose für ein Studiofoto
 - path: /assets/images/fish/kampfi/P5211264.webp
   title: Kampfis Schönheit
   caption: Kampfi zeigt seine natürliche Schönheit
 - path: /assets/images/fish/kampfi/P5211270.webp
   title: Kampfi Nahaufnahme
   caption: Extreme Nahaufnahme von Kampfis einzigartigen Merkmalen
-- path: /assets/images/fish/kampfi/P5211276.webp
-  title: Kampfis Farben
-  caption: Kampfis Farben in ihrer vollen Pracht
 - path: /assets/images/fish/kampfi/P5211280.webp
   title: Kampfi Seitenprofil
   caption: Perfektes Seitenprofil von Kampfi
-- path: /assets/images/fish/kampfi/P5211319.webp
-  title: Kampfi Eleganz
-  caption: Kampfi demonstriert seine natürliche Eleganz
 - path: /assets/images/fish/kampfi/P5211330.webp
   title: Kampfi Finalshot
   caption: Abschließende Aufnahme von Kampfi in Bestform
-- path: /assets/images/fish/kampfi/Screenshot_2025-04-13-20-46-04-143_com.miui.gallery.webp
-  title: Kampfi Screenshot
-  caption: Kampfi in einem besonderen Moment festgehalten
-- path: /assets/images/fish/kampfi/Screenshot_2025-10-05-13-17-03-050_com.miui.mediaviewer.webp
-  title: Kampfi Digital
-  caption: Digitale Aufnahme von Kampfi in hoher Qualität
 
 # Lila (Betta Splendens)
-- path: /assets/images/fish/lila/IMG_20251008_174149.webp
-  title: Lila Debüt
-  caption: Lilas erste Aufnahme in ihrer neuen Umgebung
-- path: /assets/images/fish/lila/IMG_20251008_174158.webp
-  title: Lila erkundet
-  caption: Lila bei der Erkundung ihres neuen Zuhauses
-- path: /assets/images/fish/lila/IMG_20251008_174322.webp
-  title: Lilas Anmut
-  caption: Lila zeigt ihre natürliche Anmut beim Schwimmen
-- path: /assets/images/fish/lila/IMG_20251008_174413.webp
-  title: Lila Portrait
-  caption: Porträtaufnahme von Lila mit ihren charakteristischen Farben
-- path: /assets/images/fish/lila/IMG_20251008_174420.webp
-  title: Lilas Schönheit
-  caption: Lila präsentiert ihre einzigartige Schönheit
-- path: /assets/images/fish/lila/IMG_20251008_202116.webp
-  title: Lila am Abend
-  caption: Lila in entspannter Abendhaltung
 - path: /assets/images/fish/lila/IMG_20251008_202221.webp
   title: Lilas Ruhe
   caption: Lila in einer ruhigen, meditativen Pose
-- path: /assets/images/fish/lila/IMG_20251008_202308.webp
-  title: Lila Details
-  caption: Detailaufnahme von Lilas feinen Flossenzügen
-- path: /assets/images/fish/lila/IMG_20251008_202402.webp
-  title: Lila Finalaufnahme
-  caption: Abschließende Aufnahme von Lila an ihrem ersten Tag
 
 # Shadow (Betta Splendens)
 - path: /assets/images/fish/shadow/shadow.webp
@@ -171,35 +63,11 @@
   caption: Shadow, der geheimnisvolle dunkle Kampffisch
 
 # Sir Pryce (Betta Splendens)
-- path: /assets/images/fish/sirPryce/IMG_20250912_110422.webp
-  title: Sir Pryce Eleganz
-  caption: Sir Pryce zeigt seine königliche Haltung
-- path: /assets/images/fish/sirPryce/IMG_20250919_173129.webp
-  title: Sir Pryce Portrait
-  caption: Porträt von Sir Pryce in seiner vollen Pracht
-- path: /assets/images/fish/sirPryce/sir_pryce.webp
-  title: Sir Pryce Offiziell
-  caption: Offizielles Portrait von Sir Pryce, dem aristokratischen Kampffisch
 
 # Sonnenschein (Betta Splendens)
 - path: /assets/images/fish/sonnenschein/IMG_20250801_152543.webp
   title: Sonnenschein Debut
   caption: Sonnenschein bei ihrer ersten Fotosession
-- path: /assets/images/fish/sonnenschein/IMG_20250828_124904.webp
-  title: Sonnenschein im August
-  caption: Sonnenschein zeigt ihre Entwicklung im späten Sommer
-- path: /assets/images/fish/sonnenschein/IMG_20250828_125027.webp
-  title: Sonnenscheins Anmut
-  caption: Sonnenschein schwimmt anmutig durch ihr Aquarium
-- path: /assets/images/fish/sonnenschein/IMG_20250828_125038.webp
-  title: Sonnenschein Details
-  caption: Detailaufnahme von Sonnenscheins charakteristischen Merkmalen
-- path: /assets/images/fish/sonnenschein/IMG_20250828_125104.webp
-  title: Sonnenscheins Farben
-  caption: Sonnenschein präsentiert ihre wunderschönen Farben
-- path: /assets/images/fish/sonnenschein/IMG_20251001_115231.webp
-  title: Sonnenschein Oktober
-  caption: Sonnenschein in ihrer herbstlichen Pracht
 
 # Futter und Lebendfutter
 - path: /assets/images/food/artemia/artemia_incubator.webp
@@ -687,4 +555,27 @@
   caption: (Platzhalter)
 - path: /assets/images/fish/sonnenschein/IMG_20251016_203402.webp
   title: /assets/images/fish/sonnenschein/IMG_20251016_203402.webp
+  caption: (Platzhalter)
+
+# Automatisch hinzugefügte neue Fisch-Bilder am 2025-12-03
+- path: /assets/images/fish/breedlings/IMG_20251203_112952.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_112952.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113015.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113015.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113033.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113033.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113059.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113059.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113121.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113121.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113144.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113144.webp
+  caption: (Platzhalter)
+- path: /assets/images/fish/breedlings/IMG_20251203_113211.webp
+  title: /assets/images/fish/breedlings/IMG_20251203_113211.webp
   caption: (Platzhalter)
