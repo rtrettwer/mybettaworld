@@ -23,12 +23,13 @@ besonderheiten: Stark bepflanzt, viele Verstecke, wenig Algen
 # Wasserparameter
 water_parameters:
   temperature: 26
-  ph: 7.1
+  ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
   nitrate: 12
-  hardness: 8
-  last_test: "08.10.2025"
+  hardness: 16.1
+  kh: 15.2
+  last_test: "05.12.2025"
 entwicklung:
   - datum: XX.03.2025
     ereignis: Becken gestartet

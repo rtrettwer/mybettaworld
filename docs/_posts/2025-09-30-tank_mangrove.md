@@ -24,12 +24,13 @@ besonderheiten: Planztöpfe mit einer Monstera-Art und Farn; Pflanze mit großer
 # Wasserparameter
 water_parameters:
   temperature: 26
-  ph: 6.9
+  ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
   nitrate: 10
-  hardness: 7
-  last_test: "11.10.2025"
+  hardness: 16.1
+  kh: 15.2
+  last_test: "05.12.2025"
 entwicklung:
   - datum: 15.07.25
     ereignis: Start

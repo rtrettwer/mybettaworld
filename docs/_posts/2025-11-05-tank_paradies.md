@@ -24,12 +24,13 @@ besonderheiten: Ursprünglich als Paludarium geplant, aber wegen zerkratzter Sch
 # Wasserparameter
 water_parameters:
   temperature: 26
-  ph: 7.0
+  ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
   nitrate: 0
-  hardness: 8
-  last_test: "06.11.2025"
+  hardness: 16.1
+  kh: 15.2
+  last_test: "05.12.2025"
 entwicklung:
   - datum: 06.11.2025
     ereignis: Becken aufgestellt und konzipiert. Planung für Weibchen-Gruppe und Neon-Schwarm beginnt.

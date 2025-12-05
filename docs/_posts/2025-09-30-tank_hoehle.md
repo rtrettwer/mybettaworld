@@ -23,12 +23,13 @@ besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Re
 # Wasserparameter
 water_parameters:
   temperature: 25
-  ph: 7.3
+  ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
   nitrate: 15
-  hardness: 9
-  last_test: "09.10.2025"
+  hardness: 16.1
+  kh: 15.2
+  last_test: "05.12.2025"
 gallery_dir: /assets/images/tanks/cave
 entwicklung:
   - datum: 11.07.2025

@@ -24,12 +24,13 @@ besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien
 # Wasserparameter
 water_parameters:
   temperature: 26
-  ph: 7.0
+  ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
   nitrate: 8
-  hardness: 7
-  last_test: "10.10.2025"
+  hardness: 16.1
+  kh: 15.2
+  last_test: "05.12.2025"
 entwicklung:
   - datum: 29.08.2025
     ereignis: Paarung Sir Pryce und Sonnenschein
