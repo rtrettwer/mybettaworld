@@ -6,7 +6,8 @@ date: 2025-11-15 10:00:00 +0200
 category: blog
 excerpt: "Das ultimative Aquarien-Rack! 2x2m Schwerlastregal für 7 Becken - inklusive Lackier-Marathon, fehlenden Metallfüßen und waghalsiger Wagenheber-Aktion."
 tags: [regal, rack, aquaristik, aufbau, diy, planung, schwerlastregal, proregal]
-image: /assets/images/blog/regal/regal_aufbau1.webp
+image: /assets/images/blog/regal/IMG_20251203_135737.webp
+gallery_dir: /assets/images/blog/regal
 ---
 
 Das ultimative Aquarium-Rack-Projekt! Von der detaillierten Planung in Procreate über den Lackier-Marathon bis zur waghalsigen Wagenheber-Aktion - hier ist die ganze Geschichte, wie mein 2x2m Schwerlastregal für 7 Aquarien entstanden ist.
