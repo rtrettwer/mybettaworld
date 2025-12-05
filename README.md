@@ -106,6 +106,28 @@ GitHub Actions führt automatisch bei jedem Push/PR aus:
 3. **Deploy Workflow** (`.github/workflows/jekyll.yml`)
    - Build und Deploy zu GitHub Pages
 
+### Renovate Bot
+
+Das Projekt nutzt **RenovateBot** für automatische Dependency Updates:
+
+- 🤖 Erstellt automatisch PRs für Updates (Montags vor 6 Uhr)
+- ⚠️ **Merged NIEMALS automatisch** - erfordert manuelle Review
+- ✅ Alle Tests (lint, build, test) müssen bestehen
+- 📧 Email-Benachrichtigungen bei Problemen oder blockierten PRs
+- 📊 Dependency Dashboard Issue im Repository
+- 🔒 Branch Protection Rules verhindern Auto-Merge
+
+**Konfiguration**: `renovate.json`
+**Anleitung**: `RENOVATE_SETUP.md`
+
+**Installation**:
+
+```bash
+./scripts/install_renovate.sh  # Anleitung anzeigen
+```
+
+Oder manuell: https://github.com/apps/renovate
+
 ### Konfigurationsdateien
 
 - `.rubocop.yml` - RuboCop Konfiguration
@@ -114,6 +136,7 @@ GitHub Actions führt automatisch bei jedem Push/PR aus:
 - `.prettierrc.yml` - Prettier Formatting Regeln
 - `.prettierignore` - Von Prettier ignorierte Dateien
 - `.pre-commit-config.yaml` - Pre-commit Hook Konfiguration
+- `renovate.json` - Renovate Bot Konfiguration
 
 ## Features
 

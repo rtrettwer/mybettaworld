@@ -2,7 +2,7 @@
 name: Lint and Test
 
 on:
-  # Bei Pull Requests
+  # Bei Pull Requests (inkl. Renovate PRs)
   pull_request:
     branches: ["master", "main"]
 
@@ -70,8 +70,8 @@ jobs:
         run: npm run lint:prettier
         continue-on-error: true
 
-  test:
-    name: Test HTML
+  build:
+    name: Build Jekyll Site
     runs-on: ubuntu-latest
     needs: lint
     steps:
@@ -90,6 +90,51 @@ jobs:
         env:
           JEKYLL_ENV: production
 
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jekyll-site
+          path: docs/_site/
+          retention-days: 1
+
+  test:
+    name: Test HTML
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+          working-directory: docs
+
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: jekyll-site
+          path: docs/_site/
+
       - name: Run HTML Proofer
         run: bundle exec ruby scripts/test_html.rb
         continue-on-error: true
+
+  notify-renovate:
+    name: Notify on Renovate PR
+    runs-on: ubuntu-latest
+    needs: [lint, build, test]
+    if: github.event.pull_request.user.login == 'renovate[bot]' && failure()
+    steps:
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '⚠️ **Tests fehlgeschlagen!**\n\nBitte überprüfe die Fehler, bevor du diesen PR mergst.\n\n- Prüfe die Website lokal: `cd docs && bundle exec jekyll serve`\n- Schaue dir die Logs an\n- Stelle sicher, dass alles wie erwartet funktioniert'
+            })

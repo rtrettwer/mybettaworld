@@ -1,0 +1,76 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "timezone": "Europe/Berlin",
+  "schedule": ["before 6am on monday"],
+  "labels": ["dependencies", "renovate"],
+  "assignees": ["riketrettwer"],
+  "reviewers": ["riketrettwer"],
+  "packageRules": [
+    {
+      "description": "Ruby Dependencies (Gemfile)",
+      "matchManagers": ["bundler"],
+      "groupName": "Ruby dependencies",
+      "automerge": false,
+      "schedule": ["before 6am on monday"]
+    },
+    {
+      "description": "Node.js Dependencies",
+      "matchManagers": ["npm"],
+      "groupName": "npm dependencies",
+      "automerge": false,
+      "schedule": ["before 6am on monday"]
+    },
+    {
+      "description": "GitHub Actions",
+      "matchManagers": ["github-actions"],
+      "groupName": "GitHub Actions",
+      "automerge": false,
+      "schedule": ["before 6am on monday"]
+    },
+    {
+      "description": "Jekyll major updates - extra vorsichtig",
+      "matchPackageNames": ["jekyll"],
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "labels": ["dependencies", "renovate", "major-update"],
+      "reviewers": ["riketrettwer"],
+      "assignees": ["riketrettwer"]
+    },
+    {
+      "description": "Minor und Patch Updates - mit Tests",
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": false,
+      "minimumReleaseAge": "3 days"
+    }
+  ],
+  "vulnerabilityAlerts": {
+    "labels": ["security", "dependencies"],
+    "assignees": ["riketrettwer"],
+    "reviewers": ["riketrettwer"],
+    "automerge": false
+  },
+  "prConcurrentLimit": 3,
+  "prCreation": "immediate",
+  "prHourlyLimit": 2,
+  "automerge": false,
+  "platformAutomerge": false,
+  "requiredStatusChecks": ["lint", "test", "build"],
+  "rebaseWhen": "behind-base-branch",
+  "semanticCommits": "enabled",
+  "commitMessagePrefix": "chore(deps):",
+  "commitMessageAction": "update",
+  "commitMessageTopic": "{{depName}}",
+  "commitMessageExtra": "to {{newVersion}}",
+  "prTitle": "{{semanticPrefix}}{{#if isPin}}pin{{else}}update{{/if}} {{depName}} to {{#if isMajor}}v{{newMajor}}{{else}}{{#if isSingleVersion}}v{{newVersion}}{{else}}{{newValue}}{{/if}}{{/if}}",
+  "prBodyTemplate": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n{{#each upgrades as |upgrade|}}\n| {{upgrade.depName}} | {{upgrade.depType}} | {{upgrade.updateType}} | `{{upgrade.currentValue}}` -> `{{upgrade.newValue}}` |\n{{/each}}\n\n---\n\n### Release Notes\n{{#each upgrades as |upgrade|}}\n{{#if upgrade.releases}}\n#### {{upgrade.depName}}\n{{#each upgrade.releases as |release|}}\n- {{release.version}}\n{{/each}}\n{{/if}}\n{{/each}}\n\n---\n\n### Configuration\n\n📅 **Schedule**: {{schedule}}\n\n🚦 **Automerge**: Disabled - Manual review erforderlich\n\n♻ **Rebasing**: Whenever PR is behind base branch\n\n---\n\n⚠️ **Wichtig**: Dieser PR wird **nicht automatisch gemerged**!\n\nBitte prüfe:\n1. ✅ Alle Tests (Linting, Build) sind erfolgreich\n2. 👀 Visuelle Prüfung der Website lokal oder im Preview\n3. 📖 Release Notes durchlesen\n4. ✔️ Manueller Merge wenn alles OK\n\n{{#if hasReleaseNotes}}\n💡 Siehe Release Notes für Details zu den Änderungen.\n{{/if}}",
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["before 6am on monday"]
+  },
+  "separateMajorMinor": true,
+  "separateMinorPatch": false,
+  "ignoreDeps": [],
+  "ignorePresets": [],
+  "enabledManagers": ["bundler", "npm", "github-actions"]
+}
