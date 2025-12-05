@@ -7,6 +7,7 @@ categories: [ tank ]
 tags: [quarantäne, behandlung]
 excerpt: "Ein separates Becken zur Quarantäne und Behandlung."
 image: /assets/images/tanks/quarantine/quarantine.webp
+aktiv: true
 dimensions: 20x20x20 cm (Dennerle Nano Cube)
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -16,7 +17,7 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Tetra Complete Substrate, schwarzer feiner Sand
 deko: Große Fingerwurzel, Drachenstein,Kokosnuss-Höhle, großer Stein von einer Wanderung ;-)
 startdatum: 20.05.2024
-besatz: Einzelne Fische bei Bedarf
+besatz: Betta splendens Männchen (Sir Pryce)
 pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher, Lichtwachser
 technik: 
 heizung: Heizstab auf 26°C
@@ -39,6 +40,8 @@ entwicklung:
     ereignis: Die Larven sind geschlüpft. Ich lasse Sir Pryce diesmal im Becken. Entweder die Babys überleben oder nicht.
   - datum: 08.10.2025
     ereignis: Ich habe beim Wasserwechsel aus dem Dschungel-Becken einige Garnelen abgesaugt. Die habe ich aus dem Dreckwasser rausgefischt und hier eingesetzt. Mal sehen, ob Sir Pryce sie am Leben lässt, er ist schon sehr beschützend seinen Jungen gegenüber. Aber das Becken könnte dringend ein paar Algenvernichter gebrauchen...
+  - datum: 28.11.2025
+    ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Sir Pryce lebt jetzt glücklich alleine in diesem Becken und baut wieder Schaumnester!
 ---
 
 

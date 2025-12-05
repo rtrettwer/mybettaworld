@@ -7,6 +7,7 @@ categories: [ tank ]
 tags: [ höhlen, verstecke, gemeinschaftsbecken ]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
 image: /assets/images/tanks/cave/cave.webp
+aktiv: true
 dimensions: 30x20x20 cm
 water_type: Süßwasser
 filter: Nein

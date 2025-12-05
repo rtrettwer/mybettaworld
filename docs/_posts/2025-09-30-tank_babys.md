@@ -4,9 +4,10 @@ title: "Das Baby Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [ tank ]
-tags: [ nano, aufzucht, jungfische ]
-excerpt: "Meine ersten Betta-Babys"
+tags: [ nano, garnelen, neocaridina ]
+excerpt: "Vom Aufzuchtbecken zum Garnelenbecken"
 image: /assets/images/tanks/babies/babies.webp
+aktiv: true
 dimensions: 40x25x25 cm (Dennerle Nano Cube)
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -16,7 +17,7 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: grobes Bodengranulat Komplett
 deko: Mangroven-Wurzel,Steine
 startdatum: 23.08.2025
-besatz: Jungfische (Betta splendens), Posthornschnecken, Blasenschnecken, Neocaridina Garnelen, 1 Stahlhelm Rennschnecke
+besatz: Neocaridina Garnelen (Farbmix), Posthornschnecken, Blasenschnecken, 1 Stahlhelm Rennschnecke
 pflanzen: Javafarn, Anubias, Perlkraut, Nadelsims, Rote Hintergrundpflanze, Froschbiss, Salvinia, phylantus fluitans
 technik: Heizstab, Thermometer
 heizung: Heizstab Aquael, 26 °C
@@ -48,8 +49,12 @@ entwicklung:
     ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter 
   - datum: 08.10.2025
     ereignis: Ich habe heute testweise Lila aus Kampfis Becken genommen und zu den Jungfischen gesetzt. Ich werde beobachten, ob sie sich vertragen.
+  - datum: 28.11.2025
+    ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Das Becken wird jetzt zum Garnelenbecken!
+  - datum: 04.12.2025
+    ereignis: 10 neue Neocaridina Garnelen aus einem Farbmix dazugekommen.
 entwicklung_text: |
-  Mittlerweile füttere ich mehrmals täglich mit frischen Artemia Nauplien, Mikrowürmern oder Essigälchen. Hin und wieder Staubfutter. Ansonsten fange ich an zu testen, ob sie feines Granulat oder zermahlene Flocken annehmen.
+  Nach erfolgreicher Aufzucht der Jungfische wurde dieses Becken zum Garnelenbecken umfunktioniert. Die Garnelen genießen das gut eingefahrene Becken mit vielen Verstecken und dichter Bepflanzung.
 gallery_dir: /assets/images/tanks/babies
 ---
 

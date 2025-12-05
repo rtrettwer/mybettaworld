@@ -7,6 +7,7 @@ categories: [ tank ]
 tags: [ walstad, bepflanzt, kampffisch ]
 excerpt: "Dieses Becken ist dicht bepflanzt und bietet viele Verstecke."
 image: /assets/images/tanks/jungle/jungle.webp
+aktiv: true
 dimensions: 60x30x30 cm (Tetra Starter 60)
 water_type: Süßwasser
 filter: Nein

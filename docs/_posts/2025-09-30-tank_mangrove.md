@@ -7,6 +7,7 @@ categories: [ tank ]
 tags: [ walstad, treibholz, einzelhaltung ]
 excerpt: "Stark bepflanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
 image: /assets/images/tanks/mangrove/mangrove.webp
+aktiv: true
 dimensions: 50x35x30 cm
 fassungsvermoegen: 30L
 water_type: Süßwasser

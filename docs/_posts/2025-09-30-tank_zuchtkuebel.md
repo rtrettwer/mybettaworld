@@ -4,9 +4,11 @@ title:  "Der Zuchtkübel"
 author: "Rike Trettwer"
 date:   2025-09-30 11:06:51 +0200
 categories: [tank]
-tags: [zucht, laichbecken]
+tags: [zucht, laichbecken, inaktiv]
 excerpt: "Ein Plastik-Kübel für die Zucht von Bettas."
 image: /assets/images/tanks/breeding/breeding.webp
+aktiv: false
+inaktiv_seit: "28.11.2025"
 dimensions: 30x30x30 cm
 fassungsvermoegen: 40L
 water_type: Süßwasser
@@ -16,7 +18,7 @@ beleuchtung: hygger Submersible LED, 24/7 Modus, 11W
 bodengrund: 
 deko: 
 startdatum: 
-besatz: Betta splendens Jungfische (Bandit + Lila), Posthornschnecken, Blasenschnecken
+besatz: Derzeit leer (Becken inaktiv)
 pflanzen: Schwimmpflanzen, Laub, Kokosmatte mit Javafarn
 technik: 
 heizung: hygger Aquarium Heizung, 100W, 26°C
@@ -43,9 +45,11 @@ entwicklung:
   - datum: 01.10.2025
     ereignis: Erstes Mal probiert, sie mit fein gemahlenen Flocken zu füttern - sie haben es gut angenommen, denke ich.
   - datum: 02.10.2025
-    ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter 
+    ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter
+  - datum: 28.11.2025
+    ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Zuchtkübel aufgelöst und inaktiv gesetzt.
 entwicklung_text: |
-  Die Fischlein entwickeln sich meines Erachtens gut. Ich bin sehr auf ihre Färbungen gespannt - wunderschöne Eltern ;-)
+  Der Zuchtkübel hat seinen Zweck erfüllt! Die zweite Zucht war erfolgreich und alle Jungfische sind groß und gesund ins Paradies-Becken umgezogen. Der Kübel ist nun inaktiv.
 gallery_dir: /assets/images/tanks/breeding
 ---
 

@@ -13,11 +13,12 @@ permalink: /tanks/
   <div class="blog-posts-list">
     {% assign tank_posts = site.posts | where_exp: "post", "post.categories contains 'tank'" | sort: 'date' | reverse %}
     {% for post in tank_posts %}
-    <article class="post-card content-card">
+    <article class="post-card content-card {% if post.aktiv == false %}tank-inactive{% endif %}">
       <div class="post-header">
         <span class="post-meta">
           {% if post.dimensions %}{{ post.dimensions }}{% endif %}
           {% if post.fassungsvermoegen %} • {{ post.fassungsvermoegen }}{% endif %}
+          {% if post.aktiv == false %} • <span style="color: #999; font-weight: bold;">⚠️ Inaktiv seit {{ post.inaktiv_seit }}</span>{% endif %}
         </span>
         <h2>
           <a class="post-link" href="{{ post.url | relative_url }}">
@@ -28,7 +29,7 @@ permalink: /tanks/
 
       {% if post.image %}
       <div class="post-image" style="margin-bottom: 1rem;">
-        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px;">
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; {% if post.aktiv == false %}filter: grayscale(100%); opacity: 0.7;{% endif %}">
       </div>
       {% endif %}
 

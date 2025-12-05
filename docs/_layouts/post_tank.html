@@ -15,6 +15,11 @@ layout: default
               </span>
             {%- endif -%}
         </p>
+        {% if page.aktiv == false %}
+        <div style="background: linear-gradient(135deg, #f8d7da, #f5c6cb); border: 2px solid #f1aeb5; border-radius: 12px; padding: 1rem; margin-bottom: 1.5rem; text-align: center;">
+            <strong style="color: #842029;">⚠️ Dieses Becken ist seit {{ page.inaktiv_seit }} inaktiv</strong>
+        </div>
+        {% endif %}
     </header>
 
     {% if page.image or page.dimensions or page.fassungsvermoegen or page.water_type or page.filter or page.luftheber or page.beleuchtung or page.bodengrund or page.deko or page.startdatum or page.besatz or page.pflanzen or page.technik or page.heizung or page.besonderheiten %}

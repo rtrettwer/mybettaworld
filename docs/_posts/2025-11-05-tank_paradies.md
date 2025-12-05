@@ -7,6 +7,7 @@ categories: [ tank ]
 tags: [ weibchen, schwarm, neons, gesellschaftsbecken ]
 excerpt: "Ein geräumiges 160L Becken - das perfekte Paradies für eine Weibchen-Gruppe und einen Neon-Schwarm."
 image: /assets/images/tanks/jungle/jungle.webp
+aktiv: true
 dimensions: 100x40x40 cm (160L)
 fassungsvermoegen: 160 Liter
 water_type: Süßwasser
@@ -16,7 +17,7 @@ beleuchtung: LED
 bodengrund: In Planung
 deko: In Planung
 startdatum: 06.11.2025
-besatz: Geplant - Weibchen-Gruppe (Betta splendens) und Neon-Schwarm
+besatz: Jungfische (Betta splendens) aus erster Zucht, Neocaridina Garnelen (30 orange), Amano Garnelen (5), verschiedene Schnecken, Neon-Schwarm (geplant)
 pflanzen: In Planung
 technik: Filter, Heizstab
 heizung: Heizstab
@@ -34,10 +35,14 @@ water_parameters:
 entwicklung:
   - datum: 06.11.2025
     ereignis: Becken aufgestellt und konzipiert. Planung für Weibchen-Gruppe und Neon-Schwarm beginnt.
+  - datum: 28.11.2025
+    ereignis: Alle Jungfische aus dem Baby-Becken und dem Zuchtkübel ins Paradies-Becken umgesetzt!
+  - datum: 04.12.2025
+    ereignis: 30 orange Neocaridina Garnelen, 5 Amano Garnelen und verschiedene Schnecken eingesetzt. Erster Wasserwechsel seit die Babys drin sind. Leider jagen die Jungfische die Garnelen - mal sehen, ob einige überleben.
 entwicklung_text: |
-  Dieses Becken ist mein neuestes Projekt! Ursprünglich wollte ich ein Paludarium mit Landteil daraus machen, aber da die Scheiben ziemlich zerkratzt sind, habe ich mich für ein klassisches Aquarium entschieden - unter Wasser sieht man die Kratzer nicht so sehr.
+  Das Paradies-Becken hat seinen ersten großen Besatz bekommen! Alle Jungfische aus der ersten erfolgreichen Zucht leben jetzt hier. Mit 160 Litern haben sie endlich genug Platz zum Wachsen und ihre Persönlichkeiten zu entwickeln.
   
-  Mit 160 Litern ist es mein größtes Becken und bietet perfekten Platz für eine größere Weibchen-Gruppe und einen schönen Neon-Schwarm. Ich bin gespannt, wie sich das Becken entwickelt!
+  Die Garnelen wurden leider sofort als Beute erkannt - die jungen Bettas sind sehr jagdfreudig. Es bleibt spannend, ob sich einige Garnelen in den Verstecken behaupten können!
 ---
 
 Das **Paradies Becken** ist mein neuestes und größtes Projekt! Mit stolzen 160 Litern bietet es endlich genug Platz für ein richtiges Gesellschaftsbecken.

@@ -26,8 +26,9 @@ layout: home
     </a>
     <a href="/tanks/" class="hero-stat" style="text-decoration:none; color:inherit;">
       {% assign tank_posts = site.posts | where_exp: "post", "post.categories contains 'tank'" %}
-      <span class="stat-number">{{ tank_posts | size }}</span>
-      <span class="stat-label">Becken</span>
+      {% assign active_tanks = tank_posts | where_exp: "post", "post.aktiv != false" %}
+      <span class="stat-number">{{ active_tanks | size }}</span>
+      <span class="stat-label">Aktive Becken</span>
     </a>
     {% assign breeding_posts = site.posts | where_exp: "post", "post.categories contains 'breeding' or post.tags contains 'zucht'" %}
 
@@ -36,12 +37,12 @@ layout: home
         <div class="stat-label">Zucht-Einträge</div>
       </a>
       <a href="/tags/laichbecken/" class="hero-stat" style="text-decoration:none; color:inherit;">
-        <div class="stat-number">3</div>
+        <div class="stat-number">0</div>
         <div class="stat-label">Aktive Laichungen</div>
       </a>
       <a href="/tags/jungfische/" class="hero-stat" style="text-decoration:none; color:inherit;">
-        <div class="stat-number">~300</div>
-        <div class="stat-label">Baby-Fische</div>
+        <div class="stat-number">~60</div>
+        <div class="stat-label">Jungfische im Paradies-Becken</div>
       </a>
   </div>
 </div>
@@ -51,7 +52,7 @@ layout: home
   <h2>Mein Weg zur Betta-Zucht</h2>
   <p>Hallo und herzlich willkommen! Ich bin Softwareentwicklerin und teste hier zum ersten Mal die Möglichkeiten von Jekyll. Doch dieser Blog dreht sich nicht um Code, sondern um ein ganz anderes Hobby: meine Leidenschaft für die Zucht von Betta-Fischen.</p>
   
-  <p>Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und heute kümmere ich mich um drei Laichungen voller Betta-Babys, die ich großziehen und später verkaufen möchte.</p>
+  <p>Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und mittlerweile habe ich bereits erfolgreich Betta-Babys großgezogen! Die Jungfische aus den ersten Zuchten leben jetzt in meinem 160L Paradies-Becken und entwickeln sich prächtig.</p>
   
   <p>In diesem Blog dokumentiere ich die Entwicklung meiner Aquarien, meine Erfahrungen in der Fischzucht und die kleinen und großen Herausforderungen, die dieses Hobby mit sich bringt. Vielleicht findest du hier Inspiration oder hilfreiche Tipps für dein eigenes Aquaristik-Projekt.</p>
 </div>
