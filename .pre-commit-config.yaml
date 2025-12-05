@@ -43,5 +43,13 @@ repos:
         types_or: [css, scss, javascript, json, yaml, markdown]
         exclude: "vendor/|_site/|.jekyll-cache/|.min.(js|css)$"
 
+  # Commitlint für Conventional Commits
+  - repo: https://github.com/alessandrojcm/commitlint-pre-commit-hook
+    rev: v9.11.0
+    hooks:
+      - id: commitlint
+        stages: [commit-msg]
+        additional_dependencies: ["@commitlint/config-conventional"]
+
   # Ruby/Jekyll Linting kann separat ausgeführt werden:
   # cd docs && bundle exec rubocop

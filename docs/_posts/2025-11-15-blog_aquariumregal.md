@@ -141,12 +141,6 @@ Dann kam endlich die **Nachlieferung des Metallfußes** - aber wie sollte ich ih
 
 Die Alternative wäre gewesen, alle Becken abzulassen und rauszustellen. Aber **kein Mensch** kann so ein vollbeladenes Regal anheben... Das wären hunderte Liter Wasser gewesen!
 
-## Fotos & Skizzen
-
-- ![Regal Aufbau 1](/assets/images/blog/regal/regal_aufbau1.webp)
-- ![Regal Aufbau 2](/assets/images/blog/regal/regal_aufbau2.webp)
-- ![Planungsskizze](/assets/images/blog/regal/regal_skizze1.webp)
-
 ## Mein Fazit
 
 **Das hat funktioniert:**
@@ -240,3 +234,9 @@ Diese Verbesserungen sind **nice-to-have**, aber nicht dringend. Das Regal funkt
 4. Step by step umsetzen
 
 Das Schöne an der modularen Planung: Ich kann jederzeit nachrüsten, ohne das gesamte Setup umbauen zu müssen! 🛠️✨
+
+## Bilder vom Aufbau
+
+Hier sind die Fotos vom gesamten Aufbau-Prozess - von der ersten Planung bis zum fertigen Regal:
+
+{% include gallery.html gallery_id="regal-gallery" %}

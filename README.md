@@ -1,5 +1,17 @@
 This is my github pages blog on betta caring.
 
+## 📚 Dokumentation
+
+Alle technischen Guides und Setup-Anleitungen findest du im **[documentation/](documentation/)** Ordner:
+
+- 📖 [INDEX.md](documentation/INDEX.md) - Vollständige Übersicht
+- ⚙️ Setup & Installation
+- 🔧 Linting & Code Quality
+- 📝 Conventional Commits
+- 🤖 Renovate Bot
+- 🚀 GitHub Actions
+- 💻 IntelliJ Run Configs
+
 ## Setup
 
 ### Installation
@@ -86,6 +98,35 @@ Die Pre-Commit Hooks laufen automatisch vor jedem Commit und prüfen:
 git commit --no-verify -m "Your message"
 ```
 
+### Conventional Commits
+
+Das Projekt verwendet **Conventional Commits** für standardisierte Commit Messages:
+
+**Format:**
+
+```
+<type>(<scope>): <subject>
+```
+
+**Beispiele:**
+
+```bash
+feat(gallery): add carousel to sales page
+fix(build): resolve Jekyll build error
+docs(readme): update installation guide
+content(blog): add aquarium rack post
+chore(deps): update dependencies
+```
+
+**Commitlint prüft automatisch:**
+
+- ✅ Type ist gültig (feat, fix, docs, content, etc.)
+- ✅ Subject nicht leer
+- ✅ Korrekte Formatierung
+- ❌ Blockiert ungültige Commits
+
+**Guide:** Siehe `CONVENTIONAL_COMMITS.md` für Details
+
 ### CI/CD
 
 GitHub Actions führt automatisch bei jedem Push/PR aus:
@@ -145,6 +186,7 @@ Oder manuell: https://github.com/apps/renovate
 - `.prettierignore` - Von Prettier ignorierte Dateien
 - `.pre-commit-config.yaml` - Pre-commit Hook Konfiguration
 - `renovate.json` - Renovate Bot Konfiguration
+- `commitlint.config.js` - Conventional Commits Konfiguration
 
 ## Features
 
