@@ -15,7 +15,7 @@ permalink: /sale/
       <ul>
         <li>Nur Abholung möglich - kein Versand</li>
         <li>Abholort:  82008 Unterhaching</li>
-        <li>Bei Fragen gerne melden: info@trettwer.de</li>
+        <li>Bei Fragen gerne melden: themorethebetta@trettwer.de</li>
         <li>Reservierung gegen Anzahlung von 50% möglich</li>
         <li>Terminvereinbarung für Abholung erforderlich</li>
       </ul>

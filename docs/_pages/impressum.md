@@ -4,11 +4,11 @@ title: Impressum
 permalink: /impressum/
 # Impressum-Daten
 owner_name: "Rike Trettwer"
-address: "Hauptstraße 31a"
+address: "Reichweinstraße 8"
 postal_code: "82008"
 city: "Unterhaching"
 country: "Deutschland"
-email: "info@trettwer.de"
+email: "themorethebetta@trettwer.de"
 ---
 
 <div style="margin: 2rem 0;">

@@ -125,7 +125,7 @@
         const body = encodeURIComponent(
           `Hallo,\n\nich interessiere mich für den Betta-Fisch "${fishName}" aus Ihrer Verkaufsanzeige.\n\nBitte kontaktieren Sie mich für weitere Details.\n\nVielen Dank!`
         );
-        const mailtoLink = `mailto:info@trettwer.de?subject=${subject}&body=${body}`;
+        const mailtoLink = `mailto:themorethebetta@trettwer.de?subject=${subject}&body=${body}`;
 
         window.location.href = mailtoLink;
       });
