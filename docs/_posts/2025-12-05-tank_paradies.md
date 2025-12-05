@@ -2,7 +2,7 @@
 layout: post_tank
 title: "Das Paradies Becken"
 author: "Rike Trettwer"
-date: 2025-11-05 14:30:00 +0200
+date: 2025-12-05 12:30:00 +0200
 categories: [tank]
 tags: [jungfische, aufzucht, gesellschaftsbecken, heller-grund, hardscape]
 excerpt: "Mein größtes Projekt - 160L für etwa 100 Jungfische! Mit hellem Bodengrund, beeindruckendem Wurzel-Hardscape und dichter Bepflanzung."
@@ -99,7 +99,7 @@ Zuerst habe ich das Becken gründlich gereinigt. Dann kam eine wichtige Sicherhe
 
 Das war der kreativste und zeitintensivste Teil! **Einen ganzen Abend** habe ich Wurzeln und Steine arrangiert und wieder umgestellt, bis ich zufrieden war.
 
-Das Ergebnis: Es sieht jetzt aus wie ein **Wurzel-/Bodenbereich an einem Baum**. Im Hintergrund sind Steine geschichtet, darüber Wurzeln drapiert, sodass kleine **Höhlen und Überhänge** entstehen - perfekte Verstecke für die Jungfische!
+Das Ergebnis: Es sieht jetzt aus wie ein **Wurzel-/Bodenbereich an einem Baum**. Im Hintergrund sind Steine geschichtet, darüber Wurzeln drapiert, sodass kleine **[Höhlen](/tank/2025/09/30/tank_hoehle) und Überhänge** entstehen - perfekte Verstecke für die Jungfische!
 
 ### Die Bepflanzung
 
@@ -130,7 +130,7 @@ Hier war ich schlau: Da die Jungfische gerne wühlen, habe ich **bewachsene Gitt
 
 **Später dazugekommen:**
 
-- Die **riesige Pflanze aus dem Mangroven-Becken**
+- Die **riesige Pflanze aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken**
 
 Ich bin gespannt, ob sie dem Lotus den Platz wegnimmt. Vielleicht muss ich sie noch mal umpflanzen. Abwarten...
 

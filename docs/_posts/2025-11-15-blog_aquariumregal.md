@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "Mein Aquarium-Regal: Planung, Aufbau & Tipps"
+title: "Mein Aquarium-Regal"
 author: "Rike Trettwer"
-date: 2025-11-06 10:00:00 +0200
+date: 2025-11-15 10:00:00 +0200
 category: blog
-excerpt: "So habe ich mein stabiles Aquarium-Rack geplant und aufgebaut – mit Bodenschutz, Schwerlastregal und maßstabsgetreuer Planung."
+excerpt: "Neue Wohnung - neuer Stauraum für die Aquarien benötigt!"
 tags: [regal, rack, aquaristik, aufbau, diy, planung]
 image: /assets/images/blog/regal/regal_aufbau1.webp
 ---
