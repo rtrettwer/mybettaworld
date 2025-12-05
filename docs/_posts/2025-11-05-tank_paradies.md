@@ -20,11 +20,11 @@ startdatum: Oktober 2025 (ca. 1-2 Monate her)
 besatz: Ca. 100 Jungfische (Betta splendens) aus erster Zucht, Neocaridina Garnelen (30 orange), Amano Garnelen (5), verschiedene Schnecken
 pflanzen: Verschiedene Anubias-Arten (an Wurzeln), Roter Tigerlotus, Wasserkelch, Brasilianisches Schwertblatt, Monte Carlo (auf Gittern), Asiatische Vallisnerien, große Pflanze aus Mangroven-Becken
 technik: 2x Hygger Heizstäbe (links & rechts), JBL CristalProfi e702 Außenfilter, 5x LED-Lampen, Starterbakterien
-heizung: 2x Hygger Heizstäbe, eingestellt auf 25°C (schwankt 24-25°C)
+heizung: 2x Hygger Heizstäbe, eingestellt auf 25°C (hält konstant 24-25°C)
 besonderheiten: Erstes Becken mit hellem Grund! Gebraucht für 20€ gekauft. Ursprünglich als Paludarium geplant, aber wegen Kratzern als Aquarium umgesetzt. Beeindruckendes Wurzel-Hardscape mit Höhlen. Bewachsene Gitter gegen wühlende Fische. Der arme DHL-Bote (30kg Sand!). Ich sitze gerne auf meinem Bodenstuhl davor und beobachte die Kleinen.
 # Wasserparameter
 water_parameters:
-  temperature: 24-25
+  temperature: 24.5
   ph: 7.52
   ammonia: 0.0
   nitrite: 0.0
