@@ -104,8 +104,11 @@
         <div class="price-tag">{{ product.price }}€</div>
         <div class="status-badge {{ product.status }}">
           {% if product.status == 'available' %}Verfügbar {% elsif product.status == 'reserved' %}Reserviert {% elsif
-          product.status == 'sold' %}Verkauft {% endif %}
+          product.status == 'sold' %}Verkauft {% elsif product.status == 'temporarily_unavailable' %}Nicht verfügbar {% endif %}
         </div>
+        {% if product.status == 'temporarily_unavailable' %}
+        <div class="unavailable-warning">⚠️ Bald wieder verfügbar</div>
+        {% endif %}
       </div>
       <div class="fish-info">
         <h4>{{ product.name }}</h4>
@@ -135,7 +138,10 @@
           <button class="interest-btn" disabled>Verkauft</button>
           {% if product.sold_date %}
           <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
-          {% endif %} {% endif %}
+          {% endif %} {% elsif product.status == 'temporarily_unavailable' %}
+          <button class="interest-btn" disabled>Vorübergehend nicht verfügbar</button>
+          <small>Bald wieder vorrätig</small>
+          {% endif %}
         </div>
       </div>
     </div>
