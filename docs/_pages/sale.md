@@ -15,15 +15,17 @@ permalink: /sale/
       <ul>
         <li>Nur Abholung möglich - kein Versand</li>
         <li>Abholort:  82008 Unterhaching</li>
-        <li>Bei Fragen gerne melden: themorethebetta@trettwer.de</li>
         <li>Reservierung gegen Anzahlung von 50% möglich</li>
         <li>Terminvereinbarung für Abholung erforderlich</li>
       </ul>
+      <div class="button-wrapper">
+        <button class="interest-btn" onclick="openContactForm()">Kontakt aufnehmen</button>
+      </div>
     </div>
-  <div class="info-card">
-    {% include sales_gallery.html %}
+    <div class="info-card">
+      {% include sales_gallery.html %}
+    </div>
   </div>
-</div>
 
 </div>
   <div class="content-card">

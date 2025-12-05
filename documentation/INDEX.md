@@ -70,7 +70,7 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
   - Empfohlener Workflow
   - Tastenkombinationen
 
-- **[IDEA_WARNINGS_FIX.md](IDEA_WARNINGS_FIX.md)** *(falls vorhanden)* - IDE Warnings
+- **[IDEA_WARNINGS_FIX.md](IDEA_WARNINGS_FIX.md)** _(falls vorhanden)_ - IDE Warnings
   - Jekyll Link-Warnings deaktivieren
   - Inspection Profile Konfiguration
   - Saubere IDE ohne false positives
@@ -78,9 +78,16 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### Design & Planung
 
 - **[DESIGN_IMPROVEMENTS.md](DESIGN_IMPROVEMENTS.md)** - Design-Ideen
+
   - Geplante Verbesserungen
   - UI/UX Optimierungen
   - Feature-Wünsche
+
+- **[CONTACT_FORM_SUMMARY.md](CONTACT_FORM_SUMMARY.md)** - Kontaktformular
+  - Formspree Integration
+  - Vorausgefüllte Produkt-Anfragen
+  - E-Mail-Schutz & SPAM-Filter
+  - Setup-Anleitung
 
 ---
 

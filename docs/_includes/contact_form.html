@@ -1,0 +1,92 @@
+<div class="contact-form-overlay" id="contactFormOverlay">
+  <div class="contact-form-container">
+    <button class="close-form" onclick="closeContactForm()">&times;</button>
+    <h3>Kontakt aufnehmen</h3>
+    <p class="form-description">
+      Hast du Fragen oder Interesse? Fülle einfach das Formular aus und ich
+      melde mich so schnell wie möglich bei dir!
+    </p>
+
+    <form
+      id="contactForm"
+      action="https://formspree.io/f/YOUR_FORM_ID"
+      method="POST"
+    >
+      <!-- Honeypot for spam protection -->
+      <input type="text" name="_gotcha" style="display: none" aria-hidden="true" tabindex="-1" />
+
+      <!-- Form fields -->
+      <div class="form-group">
+        <label for="subject"
+          >Betreff <span class="required">*</span></label
+        >
+        <input
+          type="text"
+          id="subject"
+          name="subject"
+          placeholder="Worum geht es?"
+          required
+          value="Allgemeine Anfrage"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="email"
+          >Deine E-Mail-Adresse <span class="required">*</span></label
+        >
+        <input
+          type="email"
+          id="email"
+          name="email"
+          required
+          placeholder="deine@email.de"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="name">Dein Name (optional)</label>
+        <input type="text" id="name" name="name" placeholder="Dein Name" />
+      </div>
+
+      <div class="form-group">
+        <label for="message">Nachricht (optional)</label>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          placeholder="Deine Nachricht..."
+        ></textarea>
+      </div>
+
+      <!-- Hidden field for pre-filled product info -->
+      <input type="hidden" id="productInfo" name="product" />
+
+      <div class="form-actions">
+        <button type="button" class="btn-secondary" onclick="closeContactForm()">
+          Abbrechen
+        </button>
+        <button type="submit" class="btn-primary">
+          <span class="btn-text">Nachricht senden</span>
+          <span class="btn-loading" style="display: none">Wird gesendet...</span>
+        </button>
+      </div>
+
+      <p class="form-note">
+        <small
+          >Deine Daten werden nur zur Kontaktaufnahme verwendet und nicht
+          weitergegeben.</small
+        >
+      </p>
+    </form>
+
+    <div id="formSuccess" class="form-message success" style="display: none">
+      ✓ Vielen Dank für deine Nachricht! Ich melde mich so schnell wie möglich
+      bei dir.
+    </div>
+
+    <div id="formError" class="form-message error" style="display: none">
+      ✗ Ups, da ist etwas schiefgelaufen. Bitte versuche es nochmal oder
+      schreibe direkt an themorethebetta@trettwer.de
+    </div>
+  </div>
+</div>

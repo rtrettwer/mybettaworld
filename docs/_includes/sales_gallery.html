@@ -128,7 +128,12 @@
         {% endif %}
         <div class="contact-info">
           {% if product.status == 'available' %}
-          <button class="interest-btn">Interesse anmelden</button>
+          <button
+            class="interest-btn"
+            onclick="openContactForm('{{ product.name }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+          >
+            Kontakt aufnehmen
+          </button>
           <small>Nur Abholung möglich</small>
           {% elsif product.status == 'reserved' %}
           <button class="interest-btn" disabled>Reserviert</button>
@@ -139,7 +144,12 @@
           {% if product.sold_date %}
           <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
           {% endif %} {% elsif product.status == 'temporarily_unavailable' %}
-          <button class="interest-btn" disabled>Vorübergehend nicht verfügbar</button>
+          <button
+            class="interest-btn"
+            onclick="openContactForm('{{ product.name }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+          >
+            Interesse anmelden
+          </button>
           <small>Bald wieder vorrätig</small>
           {% endif %}
         </div>
