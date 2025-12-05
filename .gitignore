@@ -20,7 +20,7 @@ Thumbs.db
 
 # Lock files
 Gemfile.lock
-package-lock.json
+# package-lock.json wird NICHT ignoriert - für CI/CD benötigt
 yarn.lock
 
 # Build artifacts

@@ -30,6 +30,7 @@ Gemfile.lock
 # Package-lock
 package-lock.json
 yarn.lock
+pnpm-lock.yaml
 
 # Jekyll/Liquid Dateien mit komplexer Syntax
 docs/_includes/head.html

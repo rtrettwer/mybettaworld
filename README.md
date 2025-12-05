@@ -106,6 +106,14 @@ GitHub Actions führt automatisch bei jedem Push/PR aus:
 3. **Deploy Workflow** (`.github/workflows/jekyll.yml`)
    - Build und Deploy zu GitHub Pages
 
+**GitHub Pages Einstellungen**:
+
+- Source sollte auf **"GitHub Actions"** gesetzt sein (nicht "Deploy from a branch")
+- Dies deaktiviert den Standard `pages-build-deployment` Workflow
+- Check: `./scripts/check_github_pages.sh`
+
+**Troubleshooting**: Siehe `GITHUB_ACTIONS_TROUBLESHOOTING.md`
+
 ### Renovate Bot
 
 Das Projekt nutzt **RenovateBot** für automatische Dependency Updates:
