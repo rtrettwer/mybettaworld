@@ -10,6 +10,13 @@
   price: 10
   color: "Weiß-Marble"
   image: "/assets/images/fish/sonnenschein/IMG_20251016_203402.webp"
+  gallery:
+    - "/assets/images/fish/sonnenschein/IMG_20251016_203402.webp"
+    - "/assets/images/fish/sonnenschein/IMG_20251016_203218.webp"
+    - "/assets/images/fish/sonnenschein/IMG_20251016_203123.webp"
+    - "/assets/images/fish/sonnenschein/IMG_20251016_203056.webp"
+    - "/assets/images/fish/sonnenschein/IMG_20251016_203021.webp"
+    - "/assets/images/fish/sonnenschein/IMG_20251016_202600.webp"
   description: "Wunderschönes Marble-Weibchen mit zunehmend dunklen Schuppen. Sonnenschein zeigt eine faszinierende Farbentwicklung und ist sehr aktiv."
   special_notes: "Marble-Gene - Farbveränderung im Laufe der Zeit möglich"
 
@@ -21,6 +28,14 @@
   price: 10
   color: "Blau-Rot"
   image: "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"
+  gallery:
+    - "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204702.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204600.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204509.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204427.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204350.webp"
+    - "/assets/images/fish/sirPryce/IMG_20251016_204312.webp"
   description: "Sir Pryce ist klassisch schön und ein absolut liebevoller und fürsorglicher Brut-Vater."
 
 - name: "Mikrowürmer-Kultur ( inkl. Dose)"

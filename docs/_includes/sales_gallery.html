@@ -62,9 +62,33 @@
          data-category="{{ product.gender }}"
          data-price="{{ product.price | default: 0 }}"
          data-status="{{ product.status | default: 'sold' }}">
-      <div class="fish-image">
-        <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" loading="lazy"
-             onerror="this.src='/assets/images/placeholder-fish.jpg'">
+      <div class="fish-image-carousel">
+        {% if product.gallery and product.gallery.size > 0 %}
+          <!-- Carousel mit mehreren Bildern -->
+          <div class="carousel-container">
+            <div class="carousel-slides">
+              {% for img in product.gallery %}
+              <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+                <img src="{{ img | relative_url }}" alt="{{ product.name }} - Bild {{ forloop.index }}" loading="lazy"
+                     onerror="this.src='/assets/images/placeholder-fish.jpg'">
+              </div>
+              {% endfor %}
+            </div>
+            {% if product.gallery.size > 1 %}
+            <button class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
+            <button class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
+            <div class="carousel-indicators">
+              {% for img in product.gallery %}
+              <span class="indicator {% if forloop.first %}active{% endif %}" onclick="goToSlide(this, {{ forloop.index0 }})"></span>
+              {% endfor %}
+            </div>
+            {% endif %}
+          </div>
+        {% else %}
+          <!-- Einzelbild (Fallback) -->
+          <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" loading="lazy"
+               onerror="this.src='/assets/images/placeholder-fish.jpg'">
+        {% endif %}
         <div class="price-tag">{{ product.price }}€</div>
         <div class="status-badge {{ product.status }}">
           {% if product.status == 'available' %}Verfügbar
@@ -125,6 +149,67 @@
 <!-- JavaScript für Filter-Funktionalität -->
 <script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>
 <script>
+// Carousel-Funktionen
+function moveCarousel(button, direction) {
+  const container = button.closest('.carousel-container');
+  const slides = container.querySelectorAll('.carousel-slide');
+  const indicators = container.querySelectorAll('.indicator');
+  let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+
+  slides[currentIndex].classList.remove('active');
+  indicators[currentIndex].classList.remove('active');
+
+  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+
+  slides[currentIndex].classList.add('active');
+  indicators[currentIndex].classList.add('active');
+}
+
+function goToSlide(indicator, index) {
+  const container = indicator.closest('.carousel-container');
+  const slides = container.querySelectorAll('.carousel-slide');
+  const indicators = container.querySelectorAll('.indicator');
+
+  slides.forEach(slide => slide.classList.remove('active'));
+  indicators.forEach(ind => ind.classList.remove('active'));
+
+  slides[index].classList.add('active');
+  indicators[index].classList.add('active');
+}
+
+// Touch-Unterstützung für Carousel
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.carousel-container').forEach(carousel => {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carousel.addEventListener('touchstart', e => {
+      touchStartX = e.changedTouches[0].screenX;
+    });
+
+    carousel.addEventListener('touchend', e => {
+      touchEndX = e.changedTouches[0].screenX;
+      handleSwipe(carousel);
+    });
+
+    function handleSwipe(container) {
+      const slides = container.querySelectorAll('.carousel-slide');
+      if (slides.length <= 1) return;
+
+      if (touchEndX < touchStartX - 50) {
+        // Swipe left - nächstes Bild
+        const nextBtn = container.querySelector('.carousel-btn.next');
+        if (nextBtn) moveCarousel(nextBtn, 1);
+      }
+      if (touchEndX > touchStartX + 50) {
+        // Swipe right - vorheriges Bild
+        const prevBtn = container.querySelector('.carousel-btn.prev');
+        if (prevBtn) moveCarousel(prevBtn, -1);
+      }
+    }
+  });
+});
+
 // Zusätzliche JavaScript-Funktionen direkt im HTML
 function toggleAdvancedFilters() {
   const advancedFilters = document.getElementById('advanced-filters');
