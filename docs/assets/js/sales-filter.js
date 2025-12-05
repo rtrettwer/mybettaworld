@@ -112,26 +112,6 @@
     }
   }
 
-  function setupInterestButtons() {
-    const interestButtons = document.querySelectorAll(".interest-btn:not([disabled])");
-    interestButtons.forEach((button) => {
-      button.addEventListener("click", function (e) {
-        e.preventDefault();
-        const fishCard = this.closest(".fish-card");
-        const fishName = fishCard.querySelector("h4").textContent;
-
-        // E-Mail Link erstellen
-        const subject = encodeURIComponent(`Interesse an Betta-Fisch: ${fishName}`);
-        const body = encodeURIComponent(
-          `Hallo,\n\nich interessiere mich für den Betta-Fisch "${fishName}" aus Ihrer Verkaufsanzeige.\n\nBitte kontaktieren Sie mich für weitere Details.\n\nVielen Dank!`
-        );
-        const mailtoLink = `mailto:themorethebetta@trettwer.de?subject=${subject}&body=${body}`;
-
-        window.location.href = mailtoLink;
-      });
-    });
-  }
-
   function applyAllFilters() {
     console.log("Wende Filter an:", activeFilters);
     let visibleCount = 0;
