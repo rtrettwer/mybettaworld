@@ -4,7 +4,7 @@ category: blog
 title: "Umzug mit Aquarien"
 author: "Rike Trettwer"
 date: 2025-11-06 09:00:00 +0200
-excerpt: "Erfahrungsbericht: So ziehe ich mit meinen Aquarien und Fischen in eine neue Wohnung um."
+excerpt: "Home is where my fish are."
 tags: [umzug, transport, aquaristik, fische, praxis]
 image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 ---
