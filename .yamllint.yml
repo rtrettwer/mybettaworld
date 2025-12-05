@@ -1,0 +1,37 @@
+# YAML Linting Configuration
+# https://yamllint.readthedocs.io/
+
+extends: default
+
+rules:
+  # Erlaubt längere Zeilen für Jekyll-Konfigurationen
+  line-length:
+    max: 120
+    level: warning
+
+  # Erlaubt mehrere Dokumente in einer Datei (Jekyll Front Matter)
+  document-start: disable
+
+  # Mehr Flexibilität bei Kommentaren
+  comments:
+    min-spaces-from-content: 1
+
+  # Erlaubt leere Werte (häufig in Jekyll Front Matter)
+  empty-values:
+    forbid-in-block-mappings: false
+    forbid-in-flow-mappings: false
+
+  # Weniger streng bei Einrückungen (Jekyll-freundlicher)
+  indentation:
+    spaces: 2
+    indent-sequences: true
+
+  # Erlaubt doppelte Keys in manchen Fällen
+  key-duplicates: enable
+
+  # Erlaubt trailing spaces in quoted strings
+  trailing-spaces: enable
+
+  # Erlaubt truthy Werte wie yes/no
+  truthy:
+    allowed-values: ["true", "false", "yes", "no"]

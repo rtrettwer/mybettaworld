@@ -47,7 +47,9 @@
   background: linear-gradient(135deg, var(--theme-primary-1, #2ec4b6), var(--theme-primary-2, #ff9800));
   border: 2px solid transparent;
   box-sizing: border-box;
-  transition: box-shadow 0.35s cubic-bezier(0.4,0,0.2,1), border 0.35s cubic-bezier(0.4,0,0.2,1);
+  transition:
+    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+    border 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   background-clip: border-box;
 
   // Bild immer über dem Rand
@@ -57,7 +59,10 @@
     position: relative;
     z-index: 2;
   }
-  img, picture, .gallery-img, .db-gallery-thumb {
+  img,
+  picture,
+  .gallery-img,
+  .db-gallery-thumb {
     display: block;
     width: 100%;
     height: 100%;
@@ -69,12 +74,18 @@
   }
 
   // Leuchteffekt beim Hover (wie Fisch-Timeline, kein Farbwechsel)
-  &:hover, &:focus {
-    box-shadow: 0 0 0 6px rgba(46,196,182,0.18), 0 8px 32px 0 rgba(46,196,182,0.25);
+  &:hover,
+  &:focus {
+    box-shadow:
+      0 0 0 6px rgba(46, 196, 182, 0.18),
+      0 8px 32px 0 rgba(46, 196, 182, 0.25);
     border-color: transparent;
     z-index: 10;
     // Kein Farbwechsel im Hintergrund!
-    img, picture, .gallery-img, .db-gallery-thumb {
+    img,
+    picture,
+    .gallery-img,
+    .db-gallery-thumb {
       filter: brightness(1.05) saturate(1.1);
     }
   }
@@ -84,36 +95,102 @@
   grid-row: span 2;
 
   // Pattern für 12er-Gruppen, damit jede Zeile voll ist:
-  &:nth-child(12n+1) { grid-column: span 4; grid-row: span 2; }
-  &:nth-child(12n+2) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+3) { grid-column: span 2; grid-row: span 4; }
-  &:nth-child(12n+4) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+5) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+6) { grid-column: span 4; grid-row: span 2; }
-  &:nth-child(12n+7) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+8) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+9) { grid-column: span 2; grid-row: span 4; }
-  &:nth-child(12n+10) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+11) { grid-column: span 2; grid-row: span 2; }
-  &:nth-child(12n+12) { grid-column: span 4; grid-row: span 2; }
+  &:nth-child(12n + 1) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 2) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 3) {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+  &:nth-child(12n + 4) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 5) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 6) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 7) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 8) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 9) {
+    grid-column: span 2;
+    grid-row: span 4;
+  }
+  &:nth-child(12n + 10) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 11) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  &:nth-child(12n + 12) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
 
   @media (max-width: 1100px) {
     grid-column: span 2;
     grid-row: span 2;
-    &:nth-child(8n+1) { grid-column: span 4; grid-row: span 2; }
-    &:nth-child(8n+2) { grid-column: span 2; grid-row: span 2; }
-    &:nth-child(8n+3) { grid-column: span 2; grid-row: span 4; }
-    &:nth-child(8n+4) { grid-column: span 2; grid-row: span 2; }
-    &:nth-child(8n+5) { grid-column: span 2; grid-row: span 2; }
-    &:nth-child(8n+6) { grid-column: span 4; grid-row: span 2; }
-    &:nth-child(8n+7) { grid-column: span 2; grid-row: span 2; }
-    &:nth-child(8n+8) { grid-column: span 2; grid-row: span 2; }
+    &:nth-child(8n + 1) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 2) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 3) {
+      grid-column: span 2;
+      grid-row: span 4;
+    }
+    &:nth-child(8n + 4) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 5) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 6) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 7) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(8n + 8) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
   }
   @media (max-width: 700px) {
     grid-column: span 2;
     grid-row: span 2;
-    &:nth-child(2n+1) { grid-column: span 2; grid-row: span 2; }
-    &:nth-child(2n+2) { grid-column: span 2; grid-row: span 2; }
+    &:nth-child(2n + 1) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    &:nth-child(2n + 2) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
   }
 }
 
@@ -127,7 +204,10 @@
   cursor: pointer;
   border-radius: 8px;
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    filter 0.3s ease;
   position: relative;
 
   &:hover {
@@ -188,7 +268,9 @@
   box-sizing: border-box;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    visibility 0.3s ease;
   backdrop-filter: blur(4px);
 
   &.active {

@@ -58,5 +58,6 @@ permalink: /tanks/
       </div>
     </article>
     {% endfor %}
+
   </div>
 </div>

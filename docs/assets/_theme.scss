@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 // Beispiel: Globale Theme-Styles
 // Hier kannst du gezielt Theme-spezifische Styles ergänzen, z.B. Akzentfarben oder Buttons.
@@ -11,7 +11,8 @@
   text-decoration: none;
   font-weight: normal;
   transition: color 0.2s;
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     color: $theme-primary-1;
     text-decoration: underline;
   }

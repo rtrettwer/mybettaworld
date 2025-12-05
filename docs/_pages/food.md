@@ -39,7 +39,7 @@ permalink: /food/
         {{ post.excerpt }}
         {% if post.categories contains 'food' %}
         <div style="margin-top: 1rem; padding: 1rem; background: linear-gradient(135deg, rgba(46, 196, 182, 0.05), rgba(127, 83, 172, 0.05)); border-radius: 8px; font-size: 0.9rem; border-left: 3px solid var(--theme-primary-3);">
-          <strong>🍽️ Futterart:</strong> 
+          <strong>🍽️ Futterart:</strong>
           {% if post.tags contains 'lebendfutter' %}
             <span style="color: var(--theme-primary-1); font-weight: 600;">Lebendfutter</span>
           {% elsif post.tags contains 'routine' %}
@@ -67,6 +67,7 @@ permalink: /food/
       </div>
     </article>
     {% endfor %}
+
   </div>
 
   <!-- Zusätzliche Info-Karte für Futter-Tipps -->

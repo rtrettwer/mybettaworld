@@ -44,6 +44,7 @@ layout: home
         <div class="stat-number">~60</div>
         <div class="stat-label">Jungfische im Paradies-Becken</div>
       </a>
+
   </div>
 </div>
 
@@ -51,9 +52,9 @@ layout: home
 <div class="content-card intro-card">
   <h2>Mein Weg zur Betta-Zucht</h2>
   <p>Hallo und herzlich willkommen! Ich bin Softwareentwicklerin und teste hier zum ersten Mal die Möglichkeiten von Jekyll. Doch dieser Blog dreht sich nicht um Code, sondern um ein ganz anderes Hobby: meine Leidenschaft für die Zucht von Betta-Fischen.</p>
-  
+
   <p>Alles begann mit einem gebrauchten Aquarium, das ich über Kleinanzeigen gefunden habe. Kurz darauf bekam ich zwei weitere Becken geschenkt. Doch schnell wurde klar, dass ich mehr Platz brauche: Ein Quarantänebecken war notwendig, und schließlich auch ein weiteres Aquarium für ein unerwartetes Männchen. Mit der Zeit wuchs mein Interesse an der Zucht, und mittlerweile habe ich bereits erfolgreich Betta-Babys großgezogen! Die Jungfische aus den ersten Zuchten leben jetzt in meinem 160L Paradies-Becken und entwickeln sich prächtig.</p>
-  
+
   <p>In diesem Blog dokumentiere ich die Entwicklung meiner Aquarien, meine Erfahrungen in der Fischzucht und die kleinen und großen Herausforderungen, die dieses Hobby mit sich bringt. Vielleicht findest du hier Inspiration oder hilfreiche Tipps für dein eigenes Aquaristik-Projekt.</p>
 </div>
 

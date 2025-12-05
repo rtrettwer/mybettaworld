@@ -2,7 +2,7 @@
 <div class="water-parameters">
   <h3>Wasser-Parameter Monitor</h3>
   {% if page.water_parameters.last_test %}
-  <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.9rem;">
+  <p style="text-align: center; color: #666; margin-bottom: 2rem; font-size: 0.9rem">
     Letzter Test: {{ page.water_parameters.last_test }}
   </p>
   {% endif %}
@@ -11,13 +11,13 @@
     <div class="parameter-card temperature">
       <div class="parameter-header">
         <div class="parameter-icon">🌡️ T</div>
-        {% assign temp_value = page.water_parameters.temperature | default: 26 %}
-        {% if temp_value >= 24 and temp_value <= 28 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign temp_value = page.water_parameters.temperature | default: 26 %} {% if temp_value >= 24 and temp_value
+        <= 28 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif temp_value >= 22 and temp_value <= 30 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">Temperatur</div>
@@ -32,13 +32,12 @@
     <div class="parameter-card ph">
       <div class="parameter-header">
         <div class="parameter-icon">⚗️ pH</div>
-        {% assign ph_value = page.water_parameters.ph | default: 7.2 %}
-        {% if ph_value >= 6.5 and ph_value <= 7.5 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign ph_value = page.water_parameters.ph | default: 7.2 %} {% if ph_value >= 6.5 and ph_value <= 7.5 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif ph_value >= 6.0 and ph_value <= 8.0 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">pH-Wert</div>
@@ -53,13 +52,12 @@
     <div class="parameter-card ammonia">
       <div class="parameter-header">
         <div class="parameter-icon">☠️ NH3</div>
-        {% assign ammonia_value = page.water_parameters.ammonia | default: 0.0 %}
-        {% if ammonia_value == 0.0 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign ammonia_value = page.water_parameters.ammonia | default: 0.0 %} {% if ammonia_value == 0.0 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif ammonia_value <= 0.25 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">Ammoniak</div>
@@ -67,9 +65,9 @@
       <div class="parameter-range">Optimal: 0.0 mg/l</div>
       <div class="parameter-gauge">
         {% if ammonia_value == 0.0 %}
-          <div class="gauge-fill" style="width: 100%"></div>
+        <div class="gauge-fill" style="width: 100%"></div>
         {% else %}
-          <div class="gauge-fill" style="width: 0%"></div>
+        <div class="gauge-fill" style="width: 0%"></div>
         {% endif %}
       </div>
     </div>
@@ -77,13 +75,12 @@
     <div class="parameter-card nitrite">
       <div class="parameter-header">
         <div class="parameter-icon">🧪 NO2</div>
-        {% assign nitrite_value = page.water_parameters.nitrite | default: 0.0 %}
-        {% if nitrite_value == 0.0 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign nitrite_value = page.water_parameters.nitrite | default: 0.0 %} {% if nitrite_value == 0.0 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif nitrite_value <= 0.25 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">Nitrit</div>
@@ -91,9 +88,9 @@
       <div class="parameter-range">Optimal: 0.0 mg/l</div>
       <div class="parameter-gauge">
         {% if nitrite_value == 0.0 %}
-          <div class="gauge-fill" style="width: 100%"></div>
+        <div class="gauge-fill" style="width: 100%"></div>
         {% else %}
-          <div class="gauge-fill" style="width: 0%"></div>
+        <div class="gauge-fill" style="width: 0%"></div>
         {% endif %}
       </div>
     </div>
@@ -101,13 +98,12 @@
     <div class="parameter-card nitrate">
       <div class="parameter-header">
         <div class="parameter-icon">🌱 NO3</div>
-        {% assign nitrate_value = page.water_parameters.nitrate | default: 15 %}
-        {% if nitrate_value <= 20 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign nitrate_value = page.water_parameters.nitrate | default: 15 %} {% if nitrate_value <= 20 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif nitrate_value <= 40 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">Nitrat</div>
@@ -122,13 +118,13 @@
     <div class="parameter-card hardness">
       <div class="parameter-header">
         <div class="parameter-icon">💎 dH</div>
-        {% assign hardness_value = page.water_parameters.hardness | default: 8 %}
-        {% if hardness_value >= 5 and hardness_value <= 15 %}
-          <div class="parameter-status optimal">OPTIMAL</div>
+        {% assign hardness_value = page.water_parameters.hardness | default: 8 %} {% if hardness_value >= 5 and
+        hardness_value <= 15 %}
+        <div class="parameter-status optimal">OPTIMAL</div>
         {% elsif hardness_value >= 3 and hardness_value <= 20 %}
-          <div class="parameter-status warning">WARNUNG</div>
+        <div class="parameter-status warning">WARNUNG</div>
         {% else %}
-          <div class="parameter-status critical">KRITISCH</div>
+        <div class="parameter-status critical">KRITISCH</div>
         {% endif %}
       </div>
       <div class="parameter-title">Härte</div>

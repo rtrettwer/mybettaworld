@@ -20,6 +20,13 @@ group :jekyll_plugins do
   gem "jekyll-seo-tag"
 end
 
+# Development and testing gems
+group :development, :test do
+  gem "html-proofer", "~> 5.0"  # HTML validation
+  gem "rubocop", "~> 1.50"       # Ruby linting
+  gem "rubocop-jekyll", "~> 0.13" # Jekyll-specific rules
+end
+
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
 platforms :mingw, :x64_mingw, :mswin, :jruby do

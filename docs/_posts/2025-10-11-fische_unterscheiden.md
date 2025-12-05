@@ -8,13 +8,6 @@ tags: [zucht, identifikation, jungfische]
 excerpt: "Wie man Betta-Jungfische voneinander unterscheidet und ihre Entwicklung verfolgt."
 ---
 
-
-
-
-
-
-
-
 Als ich anfing, mich intensiver mit Bettas zu beschäftigen, war ich oft überfordert von all den Fachbegriffen: Plakat,
 Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich eigentlich, welche Art und welchen
 Farbschlag meine Fische haben?
@@ -22,7 +15,7 @@ Hier versuche ich, eine Unterscheidung zu erklären und sie auf meine Fische anz
 
 ### Betta-Art: Domestic vs. Wildformen
 
-**Domestic Betta splendens** 
+**Domestic Betta splendens**
 
 - Sehr breite Farbpalette und Muster (Rot, Weiß, Kupfer, kräftiges Blau/Türkis, Mask, Butterfly, Marble/Koi,
   Dragon/Metallic)
@@ -40,6 +33,7 @@ Hier versuche ich, eine Unterscheidung zu erklären und sie auf meine Fische anz
 Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flossenform ist eines der wichtigsten Unterscheidungsmerkmale:
 
 **Langflossig:**
+
 - **Halfmoon (HM):** Schwanzflosse öffnet sich zu einem 180-Grad-Bogen (Halbmondform), lange und sehr breite Flossen.
 - **Crowntail (CT):** Einzelne, spitze Flossenstrahlen an den Flossensäumen, Flossenmembran reduziert, zackige Ränder.
 - **Failtail:** Fächerförmige, schleierartige Schwanzflosse.
@@ -47,6 +41,7 @@ Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flo
 - **D-Tail:** Ähnlich dem Double Tail, aber mit scharfer, halbmondförmiger Spitze.
 
 **Kurzflossig:**
+
 - **Plakat:** Traditioneller, kurzflossiger Kampffisch (140–160° Caudale-Winkel), kompakte Flossen.
 - **Shopkat:** Kurzflossige Variante.
 - **Roundtail:** Weitere kurzflossige Form.
@@ -78,6 +73,7 @@ Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flo
 vertikale Bereitschaftsbalken
 
 ## Meine Fische als Beispiele
+
 <div class="card-grid fish-cards">
   <div class="fish-card">
     <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="[Kampfi](/fish/2025/09/30/fish_kampfi)" class="fish-card-img">
@@ -169,7 +165,7 @@ vertikale Bereitschaftsbalken
 - **Flossenränder** für Butterfly-Muster
 - **Bei Weibchen:** ruhiges Foto, Legedorn zwischen Brust- und Afterflosse sichtbar
 
-## Übersicht: Farbmuster, deren Bezeichnung man oft liest  und was sie ausmacht
+## Übersicht: Farbmuster, deren Bezeichnung man oft liest und was sie ausmacht
 
 <div class="card-grid fish-cards">
   <div class="fish-card">

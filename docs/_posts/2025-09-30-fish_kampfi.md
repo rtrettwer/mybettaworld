@@ -28,24 +28,16 @@ fish_special_traits: deutlicher Farbwechsel durch Marble; phasenweise Butterfly-
 gallery_dir: /assets/images/fish/kampfi
 ---
 
-
-
-
-
-
-
-
-
-
-
 # Kampfis Einzug
+
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.
 Ich hatte ihn im (heutigen [Dschungel](/tank/2025/09/30/tank_dschungel)-) Becken mit Neocaridina Zwerggarnelen, Rennschnecken, Posthornschnecken und etwa 15 Tetra Neons.
 Mein Eindruck war, dass es ihm damit ganz gut geht, er hat sich gut entwickelt und hatte am Anfang auch Mal ein Schaumnest gebaut.
 
 # Entdeckung des Marbled Gens
+
 Nach etwa 2 Monaten habe ich dann entdeckt, dass Kampfi das Marbled Gen in sich trägt.
-Ich war etwa zwei Wochen nicht Zuhause und habe nur mit einem Futterautomaten gefüttert (Trommel). Als ich wieder nach Hause kam, 
+Ich war etwa zwei Wochen nicht Zuhause und habe nur mit einem Futterautomaten gefüttert (Trommel). Als ich wieder nach Hause kam,
 sah Kampfi plötzlich ganz anders aus. Er war komplett blass, sah aus als hätte er keine Schuppen mehr an großen Teilen seines Körpers.
 Eine Krankheit konnte ich nicht feststellen, er hat normal gefressen und wirkte auf mich munter und aufgeweckt wie sonst auch.
 
@@ -55,13 +47,15 @@ Wenn ich ihn jedoch z.B. mit einer Taschenlampe direkt anleuchte hat er eine tot
 Ich fand seine Blässe am Anfang total erschreckend, mittlerweile finde ich ihn so auch sehr schön.
 
 # Kampfis Gesellschaft
+
 Kampfi ist ein wahnsinnig lieber und friedlicher Fisch. Die Neons waren manchmal frech zu ihm, da hat er sich gewehrt, aber ich habe nie gesehen dass er aktiv einen
 Becken-Mitbewohner angegriffen oder gejagt hätte. Selbst die Garnelen haben sich eifrig und munter vermehrt.
 Dennoch habe ich die Neons aus dem Becken genommen, da ich befürchtet habe, dass es während meiner Abwesenheit Probleme gab und Kampfi deshalb so anders aussah nach meiner Rückkehr.
 Ich glaube, er hat sich trotzdem ohne die Neons wohler gefühlt, denn er hat danach seit längerem wieder Schaumnester gebaut.
-Mittlerweile hat er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/27/fish_lila) und [Schatten](/fish/2025/09/26/fish_shadow)). 
+Mittlerweile hat er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/27/fish_lila) und [Schatten](/fish/2025/09/26/fish_shadow)).
 
-# Zuchtversuche 
+# Zuchtversuche
+
 Ich habe den Eindruck, dass er [Schatten](/fish/2025/09/26/fish_shadow) sehr gerne mag, aber dennoch kam es noch nicht zu einer Paarung bzw. Eiern.
 [Schatten](/fish/2025/09/26/fish_shadow) scheint sich in dem Becken auch wohl zu fühlen, sie hatte mit ihren Schwestern Stress-Streifen und bei Kampfi schillert sie wunderschön. Ich bin nicht sicher, ob sie sich über ihre Schwester [Lila](/fish/2025/09/27/fish_lila) freut, aber sie scheinen sich zu arrangieren.
 Ich hoffe, dass es nochmal irgendwann Nachwuchs von Kampfi gibt, ich hätte sehr gerne Fischbabys mit seinem liebenswerten Charakter.

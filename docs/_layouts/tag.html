@@ -5,52 +5,47 @@ layout: default
 <div class="blog-container">
   <div class="blog-header-card content-card">
     <h1>Beiträge mit Tag: {{ page.tag }}</h1>
-    {% assign tag = page.tag %}
-    {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
-    {% if tag_posts.size > 0 %}
-      <p>{{ tag_posts.size }} {% if tag_posts.size == 1 %}Beitrag{% else %}Beiträge{% endif %} gefunden:</p>
+    {% assign tag = page.tag %} {% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag" %} {% if
+    tag_posts.size > 0 %}
+    <p>{{ tag_posts.size }} {% if tag_posts.size == 1 %}Beitrag{% else %}Beiträge{% endif %} gefunden:</p>
     {% else %}
-      <p>Keine Beiträge mit diesem Tag gefunden.</p>
+    <p>Keine Beiträge mit diesem Tag gefunden.</p>
     {% endif %}
   </div>
 
   {% if tag_posts.size > 0 %}
-    <div class="blog-posts-list">
-      {% for post in tag_posts %}
-      <article class="post-card content-card">
-        <div class="post-header">
-          <span class="post-meta">{{ post.date | date: "%d.%m.%Y" }}
-            {% if post.author %}
-              • <span itemprop="author" itemscope itemtype="http://schema.org/Person">
-                <a class="author-link" itemprop="name" href="{{ site.baseurl }}/about/">{{ post.author }}</a>
-              </span>
-            {% endif %}
+  <div class="blog-posts-list">
+    {% for post in tag_posts %}
+    <article class="post-card content-card">
+      <div class="post-header">
+        <span class="post-meta"
+          >{{ post.date | date: "%d.%m.%Y" }} {% if post.author %} •
+          <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <a class="author-link" itemprop="name" href="{{ site.baseurl }}/about/">{{ post.author }}</a>
           </span>
-          <h2>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h2>
-        </div>
+          {% endif %}
+        </span>
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}"> {{ post.title | escape }} </a>
+        </h2>
+      </div>
 
-        <div class="post-excerpt">
-          {{ post.excerpt }}
-        </div>
+      <div class="post-excerpt">{{ post.excerpt }}</div>
 
-        <div class="post-footer">
-          <a class="read-more-btn" href="{{ post.url | relative_url }}">Mehr erfahren</a>
+      <div class="post-footer">
+        <a class="read-more-btn" href="{{ post.url | relative_url }}">Mehr erfahren</a>
 
-          {%- if post.tags and post.tags.size > 0 -%}
-            <div class="post-tags">
-              <strong>Tags: </strong>
-              {%- for tag in post.tags -%}
-                <a class="tag-link" href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
-              {%- endfor -%}
-            </div>
-          {%- endif -%}
+        {%- if post.tags and post.tags.size > 0 -%}
+        <div class="post-tags">
+          <strong>Tags: </strong>
+          {%- for tag in post.tags -%}
+          <a class="tag-link" href="/tags/{{ tag | slugify }}/">{{ tag }}</a>
+          {%- endfor -%}
         </div>
-      </article>
-      {% endfor %}
-    </div>
+        {%- endif -%}
+      </div>
+    </article>
+    {% endfor %}
+  </div>
   {% endif %}
 </div>

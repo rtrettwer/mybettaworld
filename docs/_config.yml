@@ -68,7 +68,6 @@ exclude:
 include:
   - _pages
 
-
 # Header‑Navigation (minima):
 header_pages:
   - _pages/about.md

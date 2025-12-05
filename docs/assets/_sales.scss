@@ -547,8 +547,8 @@
       }
 
       select,
-      input[type='range'],
-      input[type='search'] {
+      input[type="range"],
+      input[type="search"] {
         padding: 0.7rem 1rem;
         border: 2px solid rgba(46, 196, 182, 0.2);
         border-radius: 12px;
@@ -563,13 +563,13 @@
         }
       }
 
-      input[type='search'] {
+      input[type="search"] {
         min-width: 250px;
         flex: 1;
         background: linear-gradient(135deg, white, #fafafa);
       }
 
-      input[type='range'] {
+      input[type="range"] {
         accent-color: var(--theme-primary-1);
       }
 
@@ -584,8 +584,6 @@
         text-align: center;
       }
     }
-
-
   }
 
   // Sortier-Optionen
@@ -752,7 +750,7 @@
           width: 100%;
         }
 
-        input[type='search'] {
+        input[type="search"] {
           min-width: auto;
         }
       }
@@ -775,7 +773,7 @@
       .carousel-btn {
         font-size: 1.5rem;
         padding: 0.3rem 0.6rem;
-        opacity: 1;  // Immer sichtbar auf Mobile
+        opacity: 1; // Immer sichtbar auf Mobile
 
         &.prev {
           left: 0.25rem;
@@ -787,7 +785,7 @@
       }
 
       .carousel-indicators {
-        opacity: 1;  // Immer sichtbar auf Mobile
+        opacity: 1; // Immer sichtbar auf Mobile
         bottom: 0.5rem;
 
         .indicator {

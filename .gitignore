@@ -1,1 +1,32 @@
+# IDE
 /.idea/
+
+# Jekyll
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Dependencies
+vendor/
+node_modules/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Lock files
+Gemfile.lock
+package-lock.json
+yarn.lock
+
+# Build artifacts
+docs/_site/
+docs/.jekyll-cache/
+
+# Environment
+.env
+.env.local

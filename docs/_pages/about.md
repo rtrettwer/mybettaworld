@@ -16,5 +16,6 @@ permalink: /about/
     <p>Neben meiner Leidenschaft für Technik und Programmierung widme ich mich mit großer Freude meinen Aquarien, die ich möglichst naturnah und im LowTech-Stil pflege. Das bedeutet: wenig Technik, viel Natur und ein harmonisches Gleichgewicht zwischen Pflanzen und Tieren.</p>
 
     <p>Ich wohne südlich von München in einer gemütlichen kleinen Wohnung, die ich mit meinen Fischen und zahlreichen Pflanzen teile. Hier auf dem Blog dokumentiere ich meine Erfahrungen, Erfolge und Herausforderungen rund um meine Aquarien und Betta-Fische.</p>
+
   </div>
 </div>

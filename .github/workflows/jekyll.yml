@@ -6,8 +6,8 @@ on:
   push:
     branches: ["master", "main"]
     paths:
-      - 'docs/**'
-      - '.github/workflows/**'
+      - "docs/**"
+      - ".github/workflows/**"
 
   # Manueller Trigger
   workflow_dispatch:
@@ -37,7 +37,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.3'
+          ruby-version: "3.3"
           bundler-cache: true
           cache-version: 1
           working-directory: docs

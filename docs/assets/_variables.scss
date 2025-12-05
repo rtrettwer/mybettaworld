@@ -17,5 +17,10 @@ $link-color: var(--link-color);
 $link-hover-color: var(--link-hover-color);
 
 // Optimierte Gradients mit CSS Custom Properties
-$header-gradient: linear-gradient(90deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 50%, var(--theme-primary-3) 100%);
+$header-gradient: linear-gradient(
+  90deg,
+  var(--theme-primary-1) 0%,
+  var(--theme-primary-2) 50%,
+  var(--theme-primary-3) 100%
+);
 $mobile-menu-gradient: linear-gradient(90deg, var(--theme-primary-1) 0%, var(--theme-primary-2) 100%);

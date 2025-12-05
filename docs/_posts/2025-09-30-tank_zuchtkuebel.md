@@ -1,8 +1,8 @@
 ---
 layout: post_tank
-title:  "Der Zuchtkübel"
+title: "Der Zuchtkübel"
 author: "Rike Trettwer"
-date:   2025-09-30 11:06:51 +0200
+date: 2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [zucht, laichbecken, inaktiv]
 excerpt: "Ein Plastik-Kübel für die Zucht von Bettas."
@@ -15,12 +15,12 @@ water_type: Süßwasser
 filter: Nein
 luftheber: Nein
 beleuchtung: hygger Submersible LED, 24/7 Modus, 11W
-bodengrund: 
-deko: 
-startdatum: 
+bodengrund:
+deko:
+startdatum:
 besatz: Derzeit leer (Becken inaktiv)
 pflanzen: Schwimmpflanzen, Laub, Kokosmatte mit Javafarn
-technik: 
+technik:
 heizung: hygger Aquarium Heizung, 100W, 26°C
 besonderheiten:
 # Wasserparameter
@@ -52,6 +52,3 @@ entwicklung_text: |
   Der Zuchtkübel hat seinen Zweck erfüllt! Die zweite Zucht war erfolgreich und alle Jungfische sind groß und gesund ins Paradies-Becken umgezogen. Der Kübel ist nun inaktiv.
 gallery_dir: /assets/images/tanks/breeding
 ---
-
-
-

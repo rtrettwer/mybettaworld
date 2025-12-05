@@ -35,4 +35,3 @@ Der Umzug mit mehreren Aquarien und Fischen ist immer eine Herausforderung – a
 **Mein Fazit:**
 
 Mit etwas Vorbereitung und Ruhe klappt der Umzug auch mit mehreren Aquarien und Fischen. Wichtig ist, die Tiere möglichst kurz außerhalb des Beckens zu lassen und alles gut zu polstern. So kommen alle sicher im neuen Zuhause an!
-

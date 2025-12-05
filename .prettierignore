@@ -1,0 +1,40 @@
+# Prettier Ignore File
+# Dateien, die nicht formatiert werden sollen
+
+# Jekyll Build-Ausgaben
+_site/
+.jekyll-cache/
+.sass-cache/
+
+# Dependencies
+vendor/
+node_modules/
+
+# Jekyll Metadata
+.jekyll-metadata
+
+# Git
+.git/
+
+# IDE
+.idea/
+
+# Thumbnails und generierte Bilder
+**/*_thumbnail.webp
+**/*_thumbnail.jpg
+**/*_thumbnail.png
+
+# Gemfile.lock
+Gemfile.lock
+
+# Package-lock
+package-lock.json
+yarn.lock
+
+# Jekyll/Liquid Dateien mit komplexer Syntax
+docs/_includes/head.html
+docs/_includes/header.html
+docs/_layouts/default.html
+docs/_layouts/home.html
+docs/_layouts/post.html
+docs/_layouts/page.html

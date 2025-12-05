@@ -4,65 +4,63 @@ layout: default
 
 <div class="gallery-wide-container">
   <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="post-content e-content" itemprop="articleBody">
-      {{ content }}
-    </div>
+    <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
   </article>
 </div>
 
 <style>
-/* Vollständige Breiten-Override für Galerie */
-.gallery-wide-container {
-  width: 100vw;
-  max-width: none !important;
-  margin: 0;
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
-  padding: 0 1rem;
-  box-sizing: border-box;
-}
-
-@media (min-width: 768px) {
+  /* Vollständige Breiten-Override für Galerie */
   .gallery-wide-container {
-    padding: 0 2rem;
+    width: 100vw;
+    max-width: none !important;
+    margin: 0;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+    padding: 0 1rem;
+    box-sizing: border-box;
   }
-}
 
-@media (min-width: 1200px) {
-  .gallery-wide-container {
-    padding: 0 3rem;
+  @media (min-width: 768px) {
+    .gallery-wide-container {
+      padding: 0 2rem;
+    }
   }
-}
 
-@media (min-width: 1600px) {
-  .gallery-wide-container {
-    padding: 0 4rem;
+  @media (min-width: 1200px) {
+    .gallery-wide-container {
+      padding: 0 3rem;
+    }
   }
-}
 
-/* Override alle möglichen Theme-Einschränkungen */
-.gallery-wide-container .post {
-  max-width: none !important;
-  width: 100% !important;
-}
+  @media (min-width: 1600px) {
+    .gallery-wide-container {
+      padding: 0 4rem;
+    }
+  }
 
-.gallery-wide-container .post-content {
-  max-width: none !important;
-  width: 100% !important;
-}
+  /* Override alle möglichen Theme-Einschränkungen */
+  .gallery-wide-container .post {
+    max-width: none !important;
+    width: 100% !important;
+  }
 
-.gallery-wide-container .wrapper {
-  max-width: none !important;
-  width: 100% !important;
-}
+  .gallery-wide-container .post-content {
+    max-width: none !important;
+    width: 100% !important;
+  }
 
-/* Sicherstellung dass Container keine Einschränkungen haben */
-.gallery-wide-container * {
-  max-width: none !important;
-}
+  .gallery-wide-container .wrapper {
+    max-width: none !important;
+    width: 100% !important;
+  }
 
-/* Nur die Gallery-Grid selbst kann eingeschränkt werden */
-.gallery-wide-container .db-gallery {
-  max-width: 100%;
-}
+  /* Sicherstellung dass Container keine Einschränkungen haben */
+  .gallery-wide-container * {
+    max-width: none !important;
+  }
+
+  /* Nur die Gallery-Grid selbst kann eingeschränkt werden */
+  .gallery-wide-container .db-gallery {
+    max-width: 100%;
+  }
 </style>

@@ -1,0 +1,39 @@
+# Prettier Configuration für Jekyll
+# https://prettier.io/docs/en/configuration.html
+
+# Allgemeine Einstellungen
+printWidth: 120
+tabWidth: 2
+useTabs: false
+semi: true
+singleQuote: false
+quoteProps: "as-needed"
+trailingComma: "es5"
+bracketSpacing: true
+arrowParens: "always"
+endOfLine: "lf"
+
+# HTML/Liquid (Jekyll)
+htmlWhitespaceSensitivity: "css"
+
+# Markdown
+proseWrap: "preserve"
+
+# YAML
+overrides:
+  - files: "*.yml"
+    options:
+      printWidth: 80
+
+  - files: "*.yaml"
+    options:
+      printWidth: 80
+
+  # Ignore Jekyll-spezifische Dateien
+  - files:
+      - "_site/**/*"
+      - ".jekyll-cache/**/*"
+      - "vendor/**/*"
+      - "node_modules/**/*"
+    options:
+      requirePragma: true

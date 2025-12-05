@@ -1,263 +1,397 @@
 <script>
-    (function(){
-        let ctx;
+  (function () {
+    let ctx;
 
-        function createCtx(){
-            if (!ctx || ctx.state === 'closed') {
-                ctx = new (window.AudioContext || window.webkitAudioContext)();
-            }
-            return ctx;
+    function createCtx() {
+      if (!ctx || ctx.state === "closed") {
+        ctx = new (window.AudioContext || window.webkitAudioContext)();
+      }
+      return ctx;
+    }
+
+    function playJingle() {
+      const audio = createCtx();
+      const t0 = audio.currentTime + 0.05;
+
+      // Summenbus mit sehr subtiler Kompression
+      const sum = audio.createGain();
+      const comp = audio.createDynamicsCompressor();
+      comp.threshold.value = -32;
+      comp.knee.value = 22;
+      comp.ratio.value = 1.7;
+      comp.attack.value = 0.012;
+      comp.release.value = 0.26;
+      sum.connect(comp);
+      comp.connect(audio.destination);
+
+      // Master
+      const master = audio.createGain();
+      master.gain.value = 0.11; // sehr sanft
+      master.connect(sum);
+
+      // Warme Färbung (Low-Shelf + leichte Hochtondämpfung)
+      const shelf = audio.createBiquadFilter();
+      shelf.type = "lowshelf";
+      shelf.frequency.value = 300;
+      shelf.gain.value = 3.0;
+
+      const tilt = audio.createBiquadFilter();
+      tilt.type = "lowpass";
+      tilt.frequency.value = 4500; // sanft dunkler Gesamtklang
+      tilt.Q.value = 0.4;
+
+      shelf.connect(tilt);
+      tilt.connect(master);
+
+      // Warmer Reverb (Convolver mit internem IR, etwas länger & mystischer)
+      const reverb = audio.createConvolver();
+      reverb.buffer = makeMysticIR(audio, 1.25);
+      const reverbWet = audio.createGain();
+      reverbWet.gain.value = 0.22;
+      reverb.connect(reverbWet);
+      reverbWet.connect(sum);
+
+      // Sehr dezentes Stereo-Delay (ohne spürbare Überlagerung)
+      const delayBus = audio.createGain();
+      delayBus.gain.value = 0.12;
+      const delayL = audio.createDelay(1);
+      delayL.delayTime.value = 0.17;
+      const fbL = audio.createGain();
+      fbL.gain.value = 0.04;
+      const panL = audio.createStereoPanner();
+      panL.pan.value = -0.16;
+
+      const delayR = audio.createDelay(1);
+      delayR.delayTime.value = 0.23;
+      const fbR = audio.createGain();
+      fbR.gain.value = 0.04;
+      const panR = audio.createStereoPanner();
+      panR.pan.value = 0.16;
+
+      delayBus.connect(delayL);
+      delayBus.connect(delayR);
+      delayL.connect(fbL);
+      fbL.connect(delayL);
+      delayR.connect(fbR);
+      fbR.connect(delayR);
+      delayL.connect(panL);
+      panL.connect(sum);
+      delayR.connect(panR);
+      panR.connect(sum);
+
+      // Utils
+      function freq(semitonesFromA4) {
+        return 440 * Math.pow(2, semitonesFromA4 / 12);
+      }
+
+      // Mystisches IR: weiches, dunkel abklingendes Rauschen mit leichter Bewegung
+      function makeMysticIR(audio, dur = 1.2) {
+        const sr = audio.sampleRate,
+          len = Math.floor(sr * dur);
+        const buf = audio.createBuffer(2, len, sr);
+        for (let ch = 0; ch < 2; ch++) {
+          const data = buf.getChannelData(ch);
+          let y = 0;
+          const drift = 0.015 + Math.random() * 0.005;
+          for (let i = 0; i < len; i++) {
+            const w = Math.random() * 2 - 1;
+            y = (y + drift * w) * 0.985; // braun/rosa Tendenz
+            const t = i / sr;
+            const env = Math.exp(-t * 2.0); // weich abklingend
+            const hfCut = 1 - (i / len) * 0.35;
+            data[i] = y * env * 0.55 * hfCut;
+          }
+          // winzige frühe Reflexionen
+          for (let k = 1; k <= 3; k++) {
+            const idx = Math.min(len - 1, Math.floor(sr * (0.01 * k)));
+            data[idx] += 0.16 / k;
+          }
         }
+        return buf;
+      }
 
-        function playJingle(){
-            const audio = createCtx();
-            const t0 = audio.currentTime + 0.05;
+      // Mystische, warme Kalimba-Stimme mit sanftem Vibrato & kaum Klick
+      function kalimbaMystic(
+        f,
+        when,
+        {
+          dur = 0.72,
+          peak = 0.68,
+          pan = 0.0,
+          color = 0.82, // 0.7–1.0 dunkler–heller
+          sendRev = 0.3,
+          sendDel = 0.1,
+          tailPad = 0.12,
+          vibratoHz = 3.2, // sehr sanftes Vibrato
+          vibratoCents = 2.5,
+        } = {}
+      ) {
+        const v = audio.createGain();
+        v.gain.value = 0;
+        const p = audio.createStereoPanner();
+        p.pan.value = pan;
 
-            // Summenbus mit sehr subtiler Kompression
-            const sum = audio.createGain();
-            const comp = audio.createDynamicsCompressor();
-            comp.threshold.value = -32;
-            comp.knee.value = 22;
-            comp.ratio.value = 1.7;
-            comp.attack.value = 0.012;
-            comp.release.value = 0.26;
-            sum.connect(comp);
-            comp.connect(audio.destination);
+        // Obertöne: eher weich, leicht detuned für "mystisches" Schweben
+        const o1 = audio.createOscillator();
+        o1.type = "sine";
+        o1.frequency.value = f;
+        o1.detune.value = -2;
+        const o2 = audio.createOscillator();
+        o2.type = "sine";
+        o2.frequency.value = f * 2.0;
+        o2.detune.value = +3;
+        const o3 = audio.createOscillator();
+        o3.type = "triangle";
+        o3.frequency.value = f * 3.0;
+        o3.detune.value = +1;
 
-            // Master
-            const master = audio.createGain();
-            master.gain.value = 0.11; // sehr sanft
-            master.connect(sum);
+        const o1g = audio.createGain();
+        o1g.gain.value = 1.0;
+        const o2g = audio.createGain();
+        o2g.gain.value = 0.2 * color;
+        const o3g = audio.createGain();
+        o3g.gain.value = 0.1 * color;
 
-            // Warme Färbung (Low-Shelf + leichte Hochtondämpfung)
-            const shelf = audio.createBiquadFilter();
-            shelf.type = 'lowshelf';
-            shelf.frequency.value = 300;
-            shelf.gain.value = 3.0;
+        // Vibrato: sehr sanft in Cents
+        const lfo = audio.createOscillator();
+        lfo.type = "sine";
+        lfo.frequency.value = vibratoHz;
+        const lfoGain = audio.createGain();
+        lfoGain.gain.value = vibratoCents; // Cents-Modulation
+        lfo.connect(lfoGain);
+        lfoGain.connect(o1.detune);
+        lfoGain.connect(o2.detune);
 
-            const tilt = audio.createBiquadFilter();
-            tilt.type = 'lowpass';
-            tilt.frequency.value = 4500; // sanft dunkler Gesamtklang
-            tilt.Q.value = 0.4;
+        // Doppel-Lowpass für zusätzliche Weichheit
+        const lp1 = audio.createBiquadFilter();
+        lp1.type = "lowpass";
+        lp1.frequency.value = 1900 * color;
+        lp1.Q.value = 0.6;
+        const lp2 = audio.createBiquadFilter();
+        lp2.type = "lowpass";
+        lp2.frequency.value = 3200 * color;
+        lp2.Q.value = 0.3;
 
-            shelf.connect(tilt);
-            tilt.connect(master);
+        // Sends
+        const toRev = audio.createGain();
+        toRev.gain.value = sendRev;
+        const toDel = audio.createGain();
+        toDel.gain.value = sendDel;
 
-            // Warmer Reverb (Convolver mit internem IR, etwas länger & mystischer)
-            const reverb = audio.createConvolver();
-            reverb.buffer = makeMysticIR(audio, 1.25);
-            const reverbWet = audio.createGain(); reverbWet.gain.value = 0.22;
-            reverb.connect(reverbWet);
-            reverbWet.connect(sum);
+        o1.connect(o1g);
+        o2.connect(o2g);
+        o3.connect(o3g);
+        o1g.connect(lp1);
+        o2g.connect(lp1);
+        o3g.connect(lp1);
+        lp1.connect(lp2);
+        lp2.connect(v);
+        lp2.connect(toRev);
+        lp2.connect(toDel);
+        toRev.connect(reverb);
+        toDel.connect(delayBus);
+        v.connect(p);
+        p.connect(shelf); // durch die warme Färbung
 
-            // Sehr dezentes Stereo-Delay (ohne spürbare Überlagerung)
-            const delayBus = audio.createGain(); delayBus.gain.value = 0.12;
-            const delayL = audio.createDelay(1); delayL.delayTime.value = 0.17;
-            const fbL = audio.createGain(); fbL.gain.value = 0.04;
-            const panL = audio.createStereoPanner(); panL.pan.value = -0.16;
+        // Envelope: sehr weicher Attack, runder Bauch, sanfter kurzer Tail
+        const a = 0.014;
+        v.gain.setValueAtTime(0, when);
+        v.gain.linearRampToValueAtTime(peak, when + a);
+        v.gain.setTargetAtTime(peak * 0.55, when + a + 0.12, 0.18);
+        v.gain.setTargetAtTime(0.0001, when + a + dur * 0.72, 0.24);
 
-            const delayR = audio.createDelay(1); delayR.delayTime.value = 0.23;
-            const fbR = audio.createGain(); fbR.gain.value = 0.04;
-            const panR = audio.createStereoPanner(); panR.pan.value = 0.16;
+        // Filter etwas dunkler über Zeit
+        lp1.frequency.setValueAtTime(1900 * color, when);
+        lp1.frequency.exponentialRampToValueAtTime(1100 * color, when + dur);
 
-            delayBus.connect(delayL); delayBus.connect(delayR);
-            delayL.connect(fbL); fbL.connect(delayL);
-            delayR.connect(fbR); fbR.connect(delayR);
-            delayL.connect(panL); panL.connect(sum);
-            delayR.connect(panR); panR.connect(sum);
+        const stopAt = when + a + dur + tailPad;
+        o1.start(when);
+        o2.start(when);
+        o3.start(when);
+        lfo.start(when);
+        o1.stop(stopAt);
+        o2.stop(stopAt);
+        o3.stop(stopAt);
+        lfo.stop(stopAt + 0.05);
+      }
 
-            // Utils
-            function freq(semitonesFromA4){ return 440 * Math.pow(2, semitonesFromA4 / 12); }
+      // Schimmer-Halo: leise Oktave, nur in den Reverb geschickt (mystisches „Leuchten“)
+      function halo(f, when, { dur = 0.88, gain = 0.18, pan = 0.0 } = {}) {
+        const osc = audio.createOscillator();
+        osc.type = "sine";
+        osc.frequency.value = f * 2.0;
+        const g = audio.createGain();
+        g.gain.value = gain;
+        const lp = audio.createBiquadFilter();
+        lp.type = "lowpass";
+        lp.frequency.value = 2600;
+        lp.Q.value = 0.4;
+        const toRev = audio.createGain();
+        toRev.gain.value = 0.4; // nur Reverb
+        osc.connect(lp);
+        lp.connect(g);
+        g.connect(toRev);
+        toRev.connect(reverb);
+        const p = audio.createStereoPanner();
+        p.pan.value = pan * 0.5;
+        toRev.connect(p); // minimale Breite
+        osc.start(when);
+        osc.stop(when + dur);
+      }
 
-            // Mystisches IR: weiches, dunkel abklingendes Rauschen mit leichter Bewegung
-            function makeMysticIR(audio, dur = 1.2){
-                const sr = audio.sampleRate, len = Math.floor(sr * dur);
-                const buf = audio.createBuffer(2, len, sr);
-                for (let ch = 0; ch < 2; ch++){
-                    const data = buf.getChannelData(ch);
-                    let y = 0; const drift = 0.015 + Math.random()*0.005;
-                    for (let i = 0; i < len; i++){
-                        const w = Math.random()*2 - 1;
-                        y = (y + drift * w) * 0.985;     // braun/rosa Tendenz
-                        const t = i / sr;
-                        const env = Math.exp(-t * 2.0);  // weich abklingend
-                        const hfCut = 1 - (i / len) * 0.35;
-                        data[i] = y * env * 0.55 * hfCut;
-                    }
-                    // winzige frühe Reflexionen
-                    for (let k = 1; k <= 3; k++){
-                        const idx = Math.min(len - 1, Math.floor(sr * (0.010 * k)));
-                        data[idx] += 0.16 / k;
-                    }
-                }
-                return buf;
-            }
+      // „Blubb“: weiche, runde Blasen mit sanftem zweistufigem Glide
+      function blubb(
+        when,
+        { startF = 280, endF = 130, dur = 0.18, gainPeak = 0.26, pan = 0.0, sendRev = 0.32, sendDel = 0.08 } = {}
+      ) {
+        const osc = audio.createOscillator();
+        osc.type = "sine";
+        const g = audio.createGain();
+        g.gain.value = 0;
+        const bp = audio.createBiquadFilter();
+        bp.type = "bandpass";
+        bp.frequency.value = 620;
+        bp.Q.value = 2.2;
+        const p = audio.createStereoPanner();
+        p.pan.value = pan;
 
-            // Mystische, warme Kalimba-Stimme mit sanftem Vibrato & kaum Klick
-            function kalimbaMystic(f, when, {
-                dur = 0.72,
-                peak = 0.68,
-                pan = 0.0,
-                color = 0.82,     // 0.7–1.0 dunkler–heller
-                sendRev = 0.30,
-                sendDel = 0.10,
-                tailPad = 0.12,
-                vibratoHz = 3.2,  // sehr sanftes Vibrato
-                vibratoCents = 2.5
-            } = {}){
-                const v = audio.createGain(); v.gain.value = 0;
-                const p = audio.createStereoPanner(); p.pan.value = pan;
+        const toRev = audio.createGain();
+        toRev.gain.value = sendRev;
+        const toDel = audio.createGain();
+        toDel.gain.value = sendDel;
 
-                // Obertöne: eher weich, leicht detuned für "mystisches" Schweben
-                const o1 = audio.createOscillator(); o1.type = 'sine';     o1.frequency.value = f; o1.detune.value = -2;
-                const o2 = audio.createOscillator(); o2.type = 'sine';     o2.frequency.value = f * 2.0; o2.detune.value = +3;
-                const o3 = audio.createOscillator(); o3.type = 'triangle'; o3.frequency.value = f * 3.0; o3.detune.value = +1;
+        osc.frequency.setValueAtTime(startF, when);
+        osc.frequency.exponentialRampToValueAtTime(startF * 1.22, when + dur * 0.28);
+        osc.frequency.exponentialRampToValueAtTime(endF, when + dur);
 
-                const o1g = audio.createGain(); o1g.gain.value = 1.0;
-                const o2g = audio.createGain(); o2g.gain.value = 0.20 * color;
-                const o3g = audio.createGain(); o3g.gain.value = 0.10 * color;
+        osc.connect(bp);
+        bp.connect(g);
+        g.connect(p);
+        p.connect(shelf);
+        bp.connect(toRev);
+        toRev.connect(reverb);
+        bp.connect(toDel);
+        toDel.connect(delayBus);
 
-                // Vibrato: sehr sanft in Cents
-                const lfo = audio.createOscillator(); lfo.type = 'sine'; lfo.frequency.value = vibratoHz;
-                const lfoGain = audio.createGain(); lfoGain.gain.value = vibratoCents; // Cents-Modulation
-                lfo.connect(lfoGain);
-                lfoGain.connect(o1.detune); lfoGain.connect(o2.detune);
+        g.gain.setValueAtTime(0, when);
+        g.gain.linearRampToValueAtTime(gainPeak, when + 0.012);
+        g.gain.exponentialRampToValueAtTime(0.0001, when + dur + 0.07);
 
-                // Doppel-Lowpass für zusätzliche Weichheit
-                const lp1 = audio.createBiquadFilter(); lp1.type = 'lowpass'; lp1.frequency.value = 1900 * color; lp1.Q.value = 0.6;
-                const lp2 = audio.createBiquadFilter(); lp2.type = 'lowpass'; lp2.frequency.value = 3200 * color; lp2.Q.value = 0.3;
+        osc.start(when);
+        osc.stop(when + dur + 0.1);
+      }
 
-                // Sends
-                const toRev = audio.createGain(); toRev.gain.value = sendRev;
-                const toDel = audio.createGain(); toDel.gain.value = sendDel;
-
-                o1.connect(o1g); o2.connect(o2g); o3.connect(o3g);
-                o1g.connect(lp1); o2g.connect(lp1); o3g.connect(lp1);
-                lp1.connect(lp2);
-                lp2.connect(v);
-                lp2.connect(toRev); lp2.connect(toDel);
-                toRev.connect(reverb);
-                toDel.connect(delayBus);
-                v.connect(p); p.connect(shelf); // durch die warme Färbung
-
-                // Envelope: sehr weicher Attack, runder Bauch, sanfter kurzer Tail
-                const a = 0.014;
-                v.gain.setValueAtTime(0, when);
-                v.gain.linearRampToValueAtTime(peak, when + a);
-                v.gain.setTargetAtTime(peak * 0.55, when + a + 0.12, 0.18);
-                v.gain.setTargetAtTime(0.0001, when + a + (dur * 0.72), 0.24);
-
-                // Filter etwas dunkler über Zeit
-                lp1.frequency.setValueAtTime(1900 * color, when);
-                lp1.frequency.exponentialRampToValueAtTime(1100 * color, when + dur);
-
-                const stopAt = when + a + dur + tailPad;
-                o1.start(when); o2.start(when); o3.start(when); lfo.start(when);
-                o1.stop(stopAt); o2.stop(stopAt); o3.stop(stopAt); lfo.stop(stopAt + 0.05);
-            }
-
-            // Schimmer-Halo: leise Oktave, nur in den Reverb geschickt (mystisches „Leuchten“)
-            function halo(f, when, {dur = 0.88, gain = 0.18, pan = 0.0} = {}){
-                const osc = audio.createOscillator(); osc.type = 'sine'; osc.frequency.value = f * 2.0;
-                const g = audio.createGain(); g.gain.value = gain;
-                const lp = audio.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 2600; lp.Q.value = 0.4;
-                const toRev = audio.createGain(); toRev.gain.value = 0.40; // nur Reverb
-                osc.connect(lp); lp.connect(g); g.connect(toRev); toRev.connect(reverb);
-                const p = audio.createStereoPanner(); p.pan.value = pan * 0.5; toRev.connect(p); // minimale Breite
-                osc.start(when); osc.stop(when + dur);
-            }
-
-            // „Blubb“: weiche, runde Blasen mit sanftem zweistufigem Glide
-            function blubb(when, {
-                startF = 280, endF = 130, dur = 0.18, gainPeak = 0.26, pan = 0.0, sendRev = 0.32, sendDel = 0.08
-            } = {}){
-                const osc = audio.createOscillator(); osc.type = 'sine';
-                const g = audio.createGain(); g.gain.value = 0;
-                const bp = audio.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 620; bp.Q.value = 2.2;
-                const p = audio.createStereoPanner(); p.pan.value = pan;
-
-                const toRev = audio.createGain(); toRev.gain.value = sendRev;
-                const toDel = audio.createGain(); toDel.gain.value = sendDel;
-
-                osc.frequency.setValueAtTime(startF, when);
-                osc.frequency.exponentialRampToValueAtTime(startF * 1.22, when + dur * 0.28);
-                osc.frequency.exponentialRampToValueAtTime(endF, when + dur);
-
-                osc.connect(bp); bp.connect(g); g.connect(p); p.connect(shelf);
-                bp.connect(toRev); toRev.connect(reverb);
-                bp.connect(toDel); toDel.connect(delayBus);
-
-                g.gain.setValueAtTime(0, when);
-                g.gain.linearRampToValueAtTime(gainPeak, when + 0.012);
-                g.gain.exponentialRampToValueAtTime(0.0001, when + dur + 0.07);
-
-                osc.start(when);
-                osc.stop(when + dur + 0.10);
-            }
-
-            // Kleine Blubb-Gruppe (dezent, mit minimalen Zufallsabweichungen)
-            function blubbCluster(startTime, count = 3, spacing = 0.08){
-                for (let i = 0; i < count; i++){
-                    const t = startTime + i * spacing + (Math.random() * 0.02);
-                    const pan = (Math.random() - 0.5) * 0.22;
-                    const startF = 240 + Math.random() * 120;
-                    const endF = 110 + Math.random() * 40;
-                    blubb(t, { startF, endF, dur: 0.16 + Math.random()*0.04, pan, gainPeak: 0.22, sendRev: 0.34, sendDel: 0.08 });
-                }
-            }
-
-            // Melodie: D-moll/Dorian-angehaucht (mystischer Charakter), zwei Phrasen
-            // Phrase A (sanft, warm, mit Halo)
-            kalimbaMystic(freq(5),  t0 + 0.00, { dur: 0.72, peak: 0.68, pan: -0.05, color: 0.84, sendRev: 0.30, sendDel: 0.10, tailPad: 0.12 }); // D5
-            halo(freq(5),           t0 + 0.02, { dur: 0.88, gain: 0.16, pan: -0.05 });
-            blubbCluster(t0 + 0.10, 2, 0.09);
-
-            kalimbaMystic(freq(8),  t0 + 0.28, { dur: 0.70, peak: 0.66, pan:  0.05, color: 0.82, sendRev: 0.30, sendDel: 0.10, tailPad: 0.12 }); // G5
-            halo(freq(8),           t0 + 0.30, { dur: 0.80, gain: 0.15, pan:  0.04 });
-            blubb(t0 + 0.36, { startF: 320, endF: 140, pan: 0.06, gainPeak: 0.20 });
-
-            // kleine Pause
-            const t1 = t0 + 0.68;
-
-            // Phrase B (mystischer, dunkler, länger auslaufend, aber leiser)
-            kalimbaMystic(freq(7),  t1 + 0.00, { dur: 0.78, peak: 0.60, pan:  0.03, color: 0.78, sendRev: 0.32, sendDel: 0.10, tailPad: 0.14 }); // F5
-            halo(freq(7),           t1 + 0.02, { dur: 0.90, gain: 0.14, pan:  0.03 });
-            blubbCluster(t1 + 0.12, 3, 0.08);
-
-            kalimbaMystic(freq(12), t1 + 0.26, { dur: 0.82, peak: 0.58, pan: -0.03, color: 0.76, sendRev: 0.34, sendDel: 0.10, tailPad: 0.16 }); // G5 (tieferer Farbeffekt)
-            kalimbaMystic(freq(3),  t1 + 0.52, { dur: 0.88, peak: 0.58, pan:  0.00, color: 0.74, sendRev: 0.34, sendDel: 0.09, tailPad: 0.18 }); // C5 (sanfter Abschluss)
-            halo(freq(3),           t1 + 0.54, { dur: 0.96, gain: 0.13, pan:  0.00 });
-            blubb(t1 + 0.60, { startF: 290, endF: 120, pan: -0.06, gainPeak: 0.18 });
-
-            // Ende
+      // Kleine Blubb-Gruppe (dezent, mit minimalen Zufallsabweichungen)
+      function blubbCluster(startTime, count = 3, spacing = 0.08) {
+        for (let i = 0; i < count; i++) {
+          const t = startTime + i * spacing + Math.random() * 0.02;
+          const pan = (Math.random() - 0.5) * 0.22;
+          const startF = 240 + Math.random() * 120;
+          const endF = 110 + Math.random() * 40;
+          blubb(t, {
+            startF,
+            endF,
+            dur: 0.16 + Math.random() * 0.04,
+            pan,
+            gainPeak: 0.22,
+            sendRev: 0.34,
+            sendDel: 0.08,
+          });
         }
+      }
 
-        async function startAfterGesture(){
-            const handler = async () => {
-                try {
-                    ctx = createCtx();
-                    if (ctx.state !== 'running') await ctx.resume();
-                } catch (e) {}
-                playJingle();
-                window.removeEventListener('pointerdown', handler);
-                window.removeEventListener('touchstart', handler);
-                window.removeEventListener('keydown', handler);
-            };
-            window.addEventListener('pointerdown', handler, { once: true });
-            window.addEventListener('touchstart', handler, { once: true });
-            window.addEventListener('keydown', handler, { once: true });
-        }
+      // Melodie: D-moll/Dorian-angehaucht (mystischer Charakter), zwei Phrasen
+      // Phrase A (sanft, warm, mit Halo)
+      kalimbaMystic(freq(5), t0 + 0.0, {
+        dur: 0.72,
+        peak: 0.68,
+        pan: -0.05,
+        color: 0.84,
+        sendRev: 0.3,
+        sendDel: 0.1,
+        tailPad: 0.12,
+      }); // D5
+      halo(freq(5), t0 + 0.02, { dur: 0.88, gain: 0.16, pan: -0.05 });
+      blubbCluster(t0 + 0.1, 2, 0.09);
 
-        // Öffentliche API: manuell starten
-        window.playBettaJingle = async function(){
-            ctx = createCtx();
-            if (ctx.state !== 'running') await ctx.resume();
-            playJingle();
-        };
+      kalimbaMystic(freq(8), t0 + 0.28, {
+        dur: 0.7,
+        peak: 0.66,
+        pan: 0.05,
+        color: 0.82,
+        sendRev: 0.3,
+        sendDel: 0.1,
+        tailPad: 0.12,
+      }); // G5
+      halo(freq(8), t0 + 0.3, { dur: 0.8, gain: 0.15, pan: 0.04 });
+      blubb(t0 + 0.36, { startF: 320, endF: 140, pan: 0.06, gainPeak: 0.2 });
 
-        // Nur auf der Startseite automatisch nach Nutzerinteraktion
-        if (window.location.pathname === '/' || window.location.pathname === '/index.html') {
-            startAfterGesture();
-        }
-    })();
+      // kleine Pause
+      const t1 = t0 + 0.68;
+
+      // Phrase B (mystischer, dunkler, länger auslaufend, aber leiser)
+      kalimbaMystic(freq(7), t1 + 0.0, {
+        dur: 0.78,
+        peak: 0.6,
+        pan: 0.03,
+        color: 0.78,
+        sendRev: 0.32,
+        sendDel: 0.1,
+        tailPad: 0.14,
+      }); // F5
+      halo(freq(7), t1 + 0.02, { dur: 0.9, gain: 0.14, pan: 0.03 });
+      blubbCluster(t1 + 0.12, 3, 0.08);
+
+      kalimbaMystic(freq(12), t1 + 0.26, {
+        dur: 0.82,
+        peak: 0.58,
+        pan: -0.03,
+        color: 0.76,
+        sendRev: 0.34,
+        sendDel: 0.1,
+        tailPad: 0.16,
+      }); // G5 (tieferer Farbeffekt)
+      kalimbaMystic(freq(3), t1 + 0.52, {
+        dur: 0.88,
+        peak: 0.58,
+        pan: 0.0,
+        color: 0.74,
+        sendRev: 0.34,
+        sendDel: 0.09,
+        tailPad: 0.18,
+      }); // C5 (sanfter Abschluss)
+      halo(freq(3), t1 + 0.54, { dur: 0.96, gain: 0.13, pan: 0.0 });
+      blubb(t1 + 0.6, { startF: 290, endF: 120, pan: -0.06, gainPeak: 0.18 });
+
+      // Ende
+    }
+
+    async function startAfterGesture() {
+      const handler = async () => {
+        try {
+          ctx = createCtx();
+          if (ctx.state !== "running") await ctx.resume();
+        } catch (e) {}
+        playJingle();
+        window.removeEventListener("pointerdown", handler);
+        window.removeEventListener("touchstart", handler);
+        window.removeEventListener("keydown", handler);
+      };
+      window.addEventListener("pointerdown", handler, { once: true });
+      window.addEventListener("touchstart", handler, { once: true });
+      window.addEventListener("keydown", handler, { once: true });
+    }
+
+    // Öffentliche API: manuell starten
+    window.playBettaJingle = async function () {
+      ctx = createCtx();
+      if (ctx.state !== "running") await ctx.resume();
+      playJingle();
+    };
+
+    // Nur auf der Startseite automatisch nach Nutzerinteraktion
+    if (window.location.pathname === "/" || window.location.pathname === "/index.html") {
+      startAfterGesture();
+    }
+  })();
 </script>

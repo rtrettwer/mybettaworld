@@ -2,471 +2,536 @@
 {%- assign side = include.side | default: 'right' -%}
 <div class="timeline-item-grid timeline-item-{{ side }}">
   {%- if side == 'left' -%}
-    <div class="timeline-side timeline-side-content timeline-hover-group" style="position:relative;">
-      <a href="{{ post.url | relative_url }}" class="timeline-avatar-link">
-        <div class="timeline-avatar timeline-avatar-{{ side }}">
-          <span class="timeline-avatar-gradient">
-            <span class="timeline-avatar-inner">
-              {% if post.timeline_image %}
-                <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img">
-              {% else %}
-                {% assign fish_slug = post.title | slugify %}
-                {% assign timeline_image_path = '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
-                <img src="{{ timeline_image_path | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <span class="timeline-avatar-placeholder" style="display:none;">🐟</span>
-              {% endif %}
-            </span>
+  <div class="timeline-side timeline-side-content timeline-hover-group" style="position: relative">
+    <a href="{{ post.url | relative_url }}" class="timeline-avatar-link">
+      <div class="timeline-avatar timeline-avatar-{{ side }}">
+        <span class="timeline-avatar-gradient">
+          <span class="timeline-avatar-inner">
+            {% if post.timeline_image %}
+            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img" />
+            {% else %} {% assign fish_slug = post.title | slugify %} {% assign timeline_image_path =
+            '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
+            <img
+              src="{{ timeline_image_path | relative_url }}"
+              alt="{{ post.title }}"
+              class="timeline-avatar-img"
+              onerror="
+                this.onerror = null;
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+            <span class="timeline-avatar-placeholder" style="display: none">🐟</span>
+            {% endif %}
           </span>
-        </div>
-      </a>
-      <div class="timeline-card gradient-card timeline-card-clickable" onclick="window.location='{{ post.url | relative_url }}'" tabindex="0" role="link">
-        <div class="timeline-card-title">{{ post.title }}</div>
-        <div class="timeline-card-desc">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+        </span>
       </div>
-      <!-- Datum auf der rechten Seite, gegenüber von Avatar und Card -->
-      <div class="timeline-date timeline-date-opposite" style="position:absolute; right:-300px; top:50%; transform:translateY(-50%); text-align:left; min-width:90px;">{% include fish_timeline_item_date.html post=post %}</div>
+    </a>
+    <div
+      class="timeline-card gradient-card timeline-card-clickable"
+      onclick="window.location='{{ post.url | relative_url }}'"
+      tabindex="0"
+      role="link"
+    >
+      <div class="timeline-card-title">{{ post.title }}</div>
+      <div class="timeline-card-desc">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
     </div>
-    <div class="timeline-center">
-      <div class="timeline-line"></div>
+    <!-- Datum auf der rechten Seite, gegenüber von Avatar und Card -->
+    <div
+      class="timeline-date timeline-date-opposite"
+      style="
+        position: absolute;
+        right: -300px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: left;
+        min-width: 90px;
+      "
+    >
+      {% include fish_timeline_item_date.html post=post %}
     </div>
-    <div class="timeline-side timeline-side-empty"></div>
+  </div>
+  <div class="timeline-center">
+    <div class="timeline-line"></div>
+  </div>
+  <div class="timeline-side timeline-side-empty"></div>
   {%- else -%}
-    <div class="timeline-side timeline-side-empty"></div>
-    <div class="timeline-center">
-      <div class="timeline-line"></div>
+  <div class="timeline-side timeline-side-empty"></div>
+  <div class="timeline-center">
+    <div class="timeline-line"></div>
+  </div>
+  <div class="timeline-side timeline-side-content timeline-hover-group" style="position: relative">
+    <!-- Datum auf der linken Seite, gegenüber von Avatar und Card -->
+    <div
+      class="timeline-date timeline-date-opposite"
+      style="
+        position: absolute;
+        left: -300px;
+        top: 50%;
+        transform: translateY(-50%);
+        text-align: right;
+        min-width: 90px;
+      "
+    >
+      {% include fish_timeline_item_date.html post=post %}
     </div>
-    <div class="timeline-side timeline-side-content timeline-hover-group" style="position:relative;">
-      <!-- Datum auf der linken Seite, gegenüber von Avatar und Card -->
-      <div class="timeline-date timeline-date-opposite" style="position:absolute; left:-300px; top:50%; transform:translateY(-50%); text-align:right; min-width:90px;">{% include fish_timeline_item_date.html post=post %}</div>
-      <a href="{{ post.url | relative_url }}" class="timeline-avatar-link">
-        <div class="timeline-avatar timeline-avatar-{{ side }}">
-          <span class="timeline-avatar-gradient">
-            <span class="timeline-avatar-inner">
-              {% if post.timeline_image %}
-                <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img">
-              {% else %}
-                {% assign fish_slug = post.title | slugify %}
-                {% assign timeline_image_path = '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
-                <img src="{{ timeline_image_path | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img" onerror="this.onerror=null; this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                <span class="timeline-avatar-placeholder" style="display:none;">🐟</span>
-              {% endif %}
-            </span>
+    <a href="{{ post.url | relative_url }}" class="timeline-avatar-link">
+      <div class="timeline-avatar timeline-avatar-{{ side }}">
+        <span class="timeline-avatar-gradient">
+          <span class="timeline-avatar-inner">
+            {% if post.timeline_image %}
+            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img" />
+            {% else %} {% assign fish_slug = post.title | slugify %} {% assign timeline_image_path =
+            '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
+            <img
+              src="{{ timeline_image_path | relative_url }}"
+              alt="{{ post.title }}"
+              class="timeline-avatar-img"
+              onerror="
+                this.onerror = null;
+                this.style.display = 'none';
+                this.nextElementSibling.style.display = 'flex';
+              "
+            />
+            <span class="timeline-avatar-placeholder" style="display: none">🐟</span>
+            {% endif %}
           </span>
-        </div>
-      </a>
-      <div class="timeline-card gradient-card timeline-card-clickable" onclick="window.location='{{ post.url | relative_url }}'" tabindex="0" role="link">
-        <div class="timeline-card-title">{{ post.title }}</div>
-        <div class="timeline-card-desc">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+        </span>
       </div>
+    </a>
+    <div
+      class="timeline-card gradient-card timeline-card-clickable"
+      onclick="window.location='{{ post.url | relative_url }}'"
+      tabindex="0"
+      role="link"
+    >
+      <div class="timeline-card-title">{{ post.title }}</div>
+      <div class="timeline-card-desc">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
     </div>
+  </div>
   {%- endif -%}
 </div>
 
 <style>
-.timeline-item-grid {
-  display: grid;
-  grid-template-columns: 1fr 120px 1fr;
-  align-items: center;
-  width: 100%;
-  position: relative;
-  margin: 3.5rem 0;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.timeline-content-link {
-  text-decoration: none;
-}
-.timeline-card-link {
-  text-decoration: none;
-  display: block;
-}
-.timeline-content-link:hover .timeline-side-content,
-.timeline-content-link:focus .timeline-side-content {
-  box-shadow: 0 0 32px 8px #21cbf366;
-  border-radius: 22px;
-  transform: scale(1.04);
-  z-index: 3;
-  background: inherit;
-}
-.timeline-content-link:hover .timeline-avatar,
-.timeline-content-link:focus .timeline-avatar {
-  box-shadow: 0 0 32px 12px #21cbf3bb, 0 0 64px 24px #fff8;
-  border-radius: 50%;
-  transform: scale(1.10);
-  filter: brightness(1.08) drop-shadow(0 0 16px #21cbf399);
-}
-.timeline-content-link:hover .timeline-card,
-.timeline-content-link:focus .timeline-card {
-  box-shadow: 0 0 32px 8px #21cbf366;
-  border: none;
-  background: inherit;
-  filter: brightness(1.04);
-  transform: scale(1.03);
-}
-.timeline-card-clickable {
-  cursor: pointer;
-  text-decoration: none;
-}
-.timeline-card-title, .timeline-card-desc {
-  text-decoration: none !important;
-  color: inherit;
-}
-.timeline-card-clickable:hover,
-.timeline-card-clickable:focus {
-  box-shadow: 0 0 32px 8px #21cbf366;
-  filter: brightness(1.04);
-  transform: scale(1.03);
-  background: inherit;
-}
-.timeline-card-title, .timeline-card-desc {
-  text-decoration: none !important;
-  color: inherit;
-}
-.timeline-card-link:hover .timeline-card,
-.timeline-card-link:focus .timeline-card {
-  box-shadow: 0 0 32px 8px #21cbf366;
-  filter: brightness(1.04);
-  transform: scale(1.03);
-  background: inherit;
-}
-.timeline-item-left > .timeline-side-content {
-  grid-column: 1;
-}
-.timeline-item-left > .timeline-center {
-  grid-column: 2;
-}
-.timeline-item-left > .timeline-side-empty {
-  grid-column: 3;
-}
-.timeline-item-right > .timeline-side-empty {
-  grid-column: 1;
-}
-.timeline-item-right > .timeline-center {
-  grid-column: 2;
-}
-.timeline-item-right > .timeline-side-content {
-  grid-column: 3;
-}
-.timeline-center {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 120px;
-  min-width: 120px;
-  z-index: 2;
-}
-.timeline-date-center {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  min-width: unset;
-  font-size: 1.08em;
-  line-height: 1.1;
-  white-space: nowrap;
-  z-index: 3;
-}
-.timeline-date-right {
-  left: 100%;
-  padding-left: 0.2rem;
-  text-align: right;
-  transform: translateY(-50%) translateX(0.1rem);
-}
-.timeline-date-left {
-  right: 100%;
-  padding-right: 0.2rem;
-  text-align: left;
-  transform: translateY(-50%) translateX(-0.1rem);
-}
-.timeline-side {
-  min-width: 220px;
-  max-width: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-}
-.timeline-side-right {
-  align-items: flex-start;
-}
-.timeline-line {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 14px;
-  height: 100%;
-  background: linear-gradient(180deg, #2196f3 0%, #21cbf3 50%, #1976d2 100%);
-  border-radius: 7px;
-  z-index: 1;
-  box-shadow: 0 0 24px 6px #2196f366, 0 0 0 2px #21cbf355;
-  transition: width 0.2s, box-shadow 0.2s;
-}
-.timeline-avatar {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 3;
-  /* Avatar ist jetzt deutlich größer */
-}
-.timeline-avatar-gradient {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 220px;
-  height: 220px;
-  border-radius: 50%;
-  background: conic-gradient(from 0deg, #2196f3, #21cbf3, #ff6ec4, #2196f3 100%);
-  padding: 4px;
-  /* Multicolor Glow statt grünem Glow, kein zusätzlicher Rand */
-  box-shadow:
-    0 0 24px 0 #2196f3cc,
-    0 0 32px 0 #21cbf3bb,
-    0 0 40px 0 #ff6ec488;
-  filter: none;
-  position: relative;
-}
-.timeline-avatar-inner {
-  width: 204px;
-  height: 204px;
-  border-radius: 50%;
-  /* Hintergrund entfernt, damit kein weißer Rand mehr sichtbar ist */
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-  position: relative;
-}
-.timeline-avatar-img {
-  width: 204px;
-  height: 204px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: transparent;
-  display: block;
-}
-.timeline-avatar-placeholder {
-  width: 204px;
-  height: 204px;
-  border-radius: 50%;
-  background: transparent;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-}
-.timeline-date {
-  font-size: 1.08em;
-  font-weight: 700;
-  color: #fff;
-  background: transparent;
-  text-shadow: 0 1px 8px #1976d299;
-  margin-bottom: 1.2rem;
-  margin-top: 1.2rem;
-  white-space: nowrap;
-  text-align: right;
-}
-.timeline-side-right .timeline-date {
-  text-align: left;
-}
-.gradient-card {
-  background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2) 60%, var(--theme-primary-3));
-  color: #fff;
-  border-radius: 2.2rem;
-  box-shadow: 0 8px 32px 0 rgba(33,150,243,0.22), 0 0 0 2px #2196f3, 0 2px 16px 0 #21cbf355;
-  padding: 1.7rem 2.2rem;
-  width: 100%;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  margin-top: -60px;
-  /* Avatar überlappt Card nach oben */
-}
-.timeline-card-title {
-  font-size: 1.32em;
-  font-weight: 800;
-  margin-bottom: 0.18em;
-  letter-spacing: 0.01em;
-  text-shadow: 0 1px 0 #fff8;
-}
-.timeline-card-desc {
-  opacity: 0.97;
-  font-weight: 400;
-  line-height: 1.5;
-}
-.timeline-card-spacer {
-  height: 2.5rem;
-}
-.timeline-side-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-  position: relative;
-  /* Platz für Überlappung nach oben */
-  padding-top: 80px;
-}
-.timeline-item- left .timeline-side-content {
-  align-items: flex-end;
-}
-.timeline-item- right .timeline-side-content {
-  align-items: flex-start;
-}
-.timeline-avatar-right {
-  left: -60px;
-  right: auto;
-  transform: translateY(-50%);
-}
-.timeline-avatar-left {
-  right: -60px;
-  left: auto;
-  transform: translateY(-50%);
-}
-.timeline-card.gradient-card {
-  position: relative;
-  padding-top: 60px;
-}
-.timeline-item-right .timeline-card-title,
-.timeline-item-right .timeline-card-desc {
-  text-align: right;
-}
-.timeline-item-left .timeline-card-title,
-.timeline-item-left .timeline-card-desc {
-  text-align: left;
-}
-@media (max-width: 900px) {
   .timeline-item-grid {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 120px 1fr;
     align-items: center;
-    margin: 2.2rem 0;
-  }
-  .timeline-side,
-  .timeline-side-right {
     width: 100%;
-    max-width: 98vw;
-    min-width: 160px;
-    align-items: center !important;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
+    position: relative;
+    margin: 3.5rem 0;
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s;
   }
-  .timeline-date {
-    order: 1 !important;
-    width: 100%;
-    text-align: center !important;
-    margin: 0.7rem 0 1.1rem 0;
-    font-size: 1.13em;
+  .timeline-content-link {
+    text-decoration: none;
+  }
+  .timeline-card-link {
+    text-decoration: none;
+    display: block;
+  }
+  .timeline-content-link:hover .timeline-side-content,
+  .timeline-content-link:focus .timeline-side-content {
+    box-shadow: 0 0 32px 8px #21cbf366;
+    border-radius: 22px;
+    transform: scale(1.04);
+    z-index: 3;
+    background: inherit;
+  }
+  .timeline-content-link:hover .timeline-avatar,
+  .timeline-content-link:focus .timeline-avatar {
+    box-shadow:
+      0 0 32px 12px #21cbf3bb,
+      0 0 64px 24px #fff8;
+    border-radius: 50%;
+    transform: scale(1.1);
+    filter: brightness(1.08) drop-shadow(0 0 16px #21cbf399);
+  }
+  .timeline-content-link:hover .timeline-card,
+  .timeline-content-link:focus .timeline-card {
+    box-shadow: 0 0 32px 8px #21cbf366;
+    border: none;
+    background: inherit;
+    filter: brightness(1.04);
+    transform: scale(1.03);
+  }
+  .timeline-card-clickable {
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .timeline-card-title,
+  .timeline-card-desc {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  .timeline-card-clickable:hover,
+  .timeline-card-clickable:focus {
+    box-shadow: 0 0 32px 8px #21cbf366;
+    filter: brightness(1.04);
+    transform: scale(1.03);
+    background: inherit;
+  }
+  .timeline-card-title,
+  .timeline-card-desc {
+    text-decoration: none !important;
+    color: inherit;
+  }
+  .timeline-card-link:hover .timeline-card,
+  .timeline-card-link:focus .timeline-card {
+    box-shadow: 0 0 32px 8px #21cbf366;
+    filter: brightness(1.04);
+    transform: scale(1.03);
+    background: inherit;
+  }
+  .timeline-item-left > .timeline-side-content {
+    grid-column: 1;
+  }
+  .timeline-item-left > .timeline-center {
+    grid-column: 2;
+  }
+  .timeline-item-left > .timeline-side-empty {
+    grid-column: 3;
+  }
+  .timeline-item-right > .timeline-side-empty {
+    grid-column: 1;
+  }
+  .timeline-item-right > .timeline-center {
+    grid-column: 2;
+  }
+  .timeline-item-right > .timeline-side-content {
+    grid-column: 3;
   }
   .timeline-center {
-    order: 2 !important;
-    width: 116px;
-    min-width: 116px;
-    margin-bottom: 0.5rem;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 120px;
+    min-width: 120px;
+    z-index: 2;
   }
-  .gradient-card,
-  .timeline-card.gradient-card {
-    order: 3 !important;
-    margin: 0.7rem 0 1.1rem 0;
-    width: 100%;
-    max-width: 98vw;
-    min-width: 160px;
-    text-align: center;
+  .timeline-date-center {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    min-width: unset;
+    font-size: 1.08em;
+    line-height: 1.1;
+    white-space: nowrap;
+    z-index: 3;
   }
-  .timeline-card-spacer {
-    display: none;
+  .timeline-date-right {
+    left: 100%;
+    padding-left: 0.2rem;
+    text-align: right;
+    transform: translateY(-50%) translateX(0.1rem);
   }
-  .timeline-side-content {
-    align-items: center !important;
-    width: 100%;
-    gap: 0.2rem;
-    padding-top: 0;
+  .timeline-date-left {
+    right: 100%;
+    padding-right: 0.2rem;
+    text-align: left;
+    transform: translateY(-50%) translateX(-0.1rem);
+  }
+  .timeline-side {
+    min-width: 220px;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .timeline-side-right {
+    align-items: flex-start;
+  }
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 14px;
+    height: 100%;
+    background: linear-gradient(180deg, #2196f3 0%, #21cbf3 50%, #1976d2 100%);
+    border-radius: 7px;
+    z-index: 1;
+    box-shadow:
+      0 0 24px 6px #2196f366,
+      0 0 0 2px #21cbf355;
+    transition:
+      width 0.2s,
+      box-shadow 0.2s;
   }
   .timeline-avatar {
-    position: static;
-    top: auto;
-    left: auto;
-    transform: none;
-    margin-bottom: 0.5rem;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    /* Avatar ist jetzt deutlich größer */
   }
   .timeline-avatar-gradient {
-    width: 108px;
-    height: 108px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    background: conic-gradient(from 0deg, #2196f3, #21cbf3, #ff6ec4, #2196f3 100%);
+    padding: 4px;
+    /* Multicolor Glow statt grünem Glow, kein zusätzlicher Rand */
+    box-shadow:
+      0 0 24px 0 #2196f3cc,
+      0 0 32px 0 #21cbf3bb,
+      0 0 40px 0 #ff6ec488;
+    filter: none;
+    position: relative;
   }
   .timeline-avatar-inner {
-    width: 98px;
-    height: 98px;
+    width: 204px;
+    height: 204px;
+    border-radius: 50%;
+    /* Hintergrund entfernt, damit kein weißer Rand mehr sichtbar ist */
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
   }
-  .timeline-avatar-img,
+  .timeline-avatar-img {
+    width: 204px;
+    height: 204px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: transparent;
+    display: block;
+  }
   .timeline-avatar-placeholder {
-    width: 98px;
-    height: 98px;
+    width: 204px;
+    height: 204px;
+    border-radius: 50%;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+  }
+  .timeline-date {
+    font-size: 1.08em;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    text-shadow: 0 1px 8px #1976d299;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+    white-space: nowrap;
+    text-align: right;
+  }
+  .timeline-side-right .timeline-date {
+    text-align: left;
   }
   .gradient-card {
-    padding-top: 1.7rem;
+    background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2) 60%, var(--theme-primary-3));
+    color: #fff;
+    border-radius: 2.2rem;
+    box-shadow:
+      0 8px 32px 0 rgba(33, 150, 243, 0.22),
+      0 0 0 2px #2196f3,
+      0 2px 16px 0 #21cbf355;
+    padding: 1.7rem 2.2rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: -60px;
+    /* Avatar überlappt Card nach oben */
   }
-  .timeline-card-title,
+  .timeline-card-title {
+    font-size: 1.32em;
+    font-weight: 800;
+    margin-bottom: 0.18em;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 0 #fff8;
+  }
   .timeline-card-desc {
-    text-align: center !important;
+    opacity: 0.97;
+    font-weight: 400;
+    line-height: 1.5;
   }
-}
-.timeline-hover-group {
-  transition: none;
-  box-shadow: none !important;
-  background: none !important;
-  filter: none !important;
-}
-.timeline-hover-group:hover,
-.timeline-hover-group:focus-within {
-  box-shadow: none !important;
-  background: none !important;
-  filter: none !important;
-  transform: none !important;
-}
-.timeline-hover-group:hover .timeline-avatar,
-.timeline-hover-group:focus-within .timeline-avatar {
-  box-shadow: 0 0 32px 12px #21cbf3bb, 0 0 64px 24px #fff8;
-  border-radius: 50%;
-  transform: scale(1.10);
-  filter: brightness(1.08) drop-shadow(0 0 16px #21cbf399);
-}
-.timeline-hover-group:hover .timeline-card,
-.timeline-hover-group:focus-within .timeline-card {
-  box-shadow: 0 0 32px 8px #21cbf366;
-  border: none;
-  background: inherit;
-  filter: brightness(1.04);
-  transform: scale(1.03);
-}
-.timeline-date-opposite {
-  font-size: 1.08em;
-  font-weight: 700;
-  color: #fff;
-  background: transparent;
-  text-shadow: 0 1px 8px #1976d299;
-  white-space: nowrap;
-  z-index: 10;
-  pointer-events: none;
-}
-@media (max-width: 900px) {
-  .timeline-date-opposite {
-    position: static !important;
-    display: block;
-    text-align: center !important;
-    margin: 0.7rem 0 1.1rem 0;
-    font-size: 1.13em;
-    min-width: unset;
+  .timeline-card-spacer {
+    height: 2.5rem;
+  }
+  .timeline-side-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    /* Platz für Überlappung nach oben */
+    padding-top: 80px;
+  }
+  .timeline-item- left .timeline-side-content {
+    align-items: flex-end;
+  }
+  .timeline-item- right .timeline-side-content {
+    align-items: flex-start;
+  }
+  .timeline-avatar-right {
+    left: -60px;
+    right: auto;
+    transform: translateY(-50%);
+  }
+  .timeline-avatar-left {
+    right: -60px;
+    left: auto;
+    transform: translateY(-50%);
+  }
+  .timeline-card.gradient-card {
+    position: relative;
+    padding-top: 60px;
+  }
+  .timeline-item-right .timeline-card-title,
+  .timeline-item-right .timeline-card-desc {
+    text-align: right;
+  }
+  .timeline-item-left .timeline-card-title,
+  .timeline-item-left .timeline-card-desc {
+    text-align: left;
+  }
+  @media (max-width: 900px) {
+    .timeline-item-grid {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 2.2rem 0;
+    }
+    .timeline-side,
+    .timeline-side-right {
+      width: 100%;
+      max-width: 98vw;
+      min-width: 160px;
+      align-items: center !important;
+      justify-content: center;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+    .timeline-date {
+      order: 1 !important;
+      width: 100%;
+      text-align: center !important;
+      margin: 0.7rem 0 1.1rem 0;
+      font-size: 1.13em;
+    }
+    .timeline-center {
+      order: 2 !important;
+      width: 116px;
+      min-width: 116px;
+      margin-bottom: 0.5rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .gradient-card,
+    .timeline-card.gradient-card {
+      order: 3 !important;
+      margin: 0.7rem 0 1.1rem 0;
+      width: 100%;
+      max-width: 98vw;
+      min-width: 160px;
+      text-align: center;
+    }
+    .timeline-card-spacer {
+      display: none;
+    }
+    .timeline-side-content {
+      align-items: center !important;
+      width: 100%;
+      gap: 0.2rem;
+      padding-top: 0;
+    }
+    .timeline-avatar {
+      position: static;
+      top: auto;
+      left: auto;
+      transform: none;
+      margin-bottom: 0.5rem;
+    }
+    .timeline-avatar-gradient {
+      width: 108px;
+      height: 108px;
+    }
+    .timeline-avatar-inner {
+      width: 98px;
+      height: 98px;
+    }
+    .timeline-avatar-img,
+    .timeline-avatar-placeholder {
+      width: 98px;
+      height: 98px;
+    }
+    .gradient-card {
+      padding-top: 1.7rem;
+    }
+    .timeline-card-title,
+    .timeline-card-desc {
+      text-align: center !important;
+    }
+  }
+  .timeline-hover-group {
+    transition: none;
+    box-shadow: none !important;
+    background: none !important;
+    filter: none !important;
+  }
+  .timeline-hover-group:hover,
+  .timeline-hover-group:focus-within {
+    box-shadow: none !important;
+    background: none !important;
+    filter: none !important;
     transform: none !important;
-    right: auto !important;
-    left: auto !important;
-    top: auto !important;
   }
-}
+  .timeline-hover-group:hover .timeline-avatar,
+  .timeline-hover-group:focus-within .timeline-avatar {
+    box-shadow:
+      0 0 32px 12px #21cbf3bb,
+      0 0 64px 24px #fff8;
+    border-radius: 50%;
+    transform: scale(1.1);
+    filter: brightness(1.08) drop-shadow(0 0 16px #21cbf399);
+  }
+  .timeline-hover-group:hover .timeline-card,
+  .timeline-hover-group:focus-within .timeline-card {
+    box-shadow: 0 0 32px 8px #21cbf366;
+    border: none;
+    background: inherit;
+    filter: brightness(1.04);
+    transform: scale(1.03);
+  }
+  .timeline-date-opposite {
+    font-size: 1.08em;
+    font-weight: 700;
+    color: #fff;
+    background: transparent;
+    text-shadow: 0 1px 8px #1976d299;
+    white-space: nowrap;
+    z-index: 10;
+    pointer-events: none;
+  }
+  @media (max-width: 900px) {
+    .timeline-date-opposite {
+      position: static !important;
+      display: block;
+      text-align: center !important;
+      margin: 0.7rem 0 1.1rem 0;
+      font-size: 1.13em;
+      min-width: unset;
+      transform: none !important;
+      right: auto !important;
+      left: auto !important;
+      top: auto !important;
+    }
+  }
 </style>

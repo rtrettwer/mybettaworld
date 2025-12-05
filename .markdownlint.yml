@@ -1,0 +1,53 @@
+# Markdown Linting Configuration
+# https://github.com/markdownlint/markdownlint/blob/main/docs/RULES.md
+
+# MD013: Line length - disable for Jekyll content
+MD013: false
+
+# MD033: Inline HTML - allow for Jekyll/Liquid tags
+MD033: false
+
+# MD041: First line in file should be a top level header - disable for Jekyll front matter
+MD041: false
+
+# MD002: First header should be H1 - disable for posts with front matter
+MD002: false
+
+# MD025: Multiple top level headers - disable for Jekyll posts
+MD025: false
+
+# MD024: Multiple headers with the same content - sometimes needed
+MD024:
+  allow_different_nesting: true
+
+# MD026: Trailing punctuation in headers - allow for Jekyll (emojis, colons, etc.)
+MD026: false
+
+# MD029: Ordered list item prefix - allow different styles
+MD029: false
+
+# MD031: Fenced code blocks should be surrounded by blank lines
+MD031: false
+
+# MD032: Lists should be surrounded by blank lines
+MD032: false
+
+# MD034: Bare URL - disable since we use proper markdown links
+MD034: false
+
+# MD036: Emphasis used instead of a heading
+MD036: false
+
+# MD040: Fenced code blocks should have a language specified
+MD040: false
+
+# MD046: Code block style - allow both fenced and indented
+MD046: false
+
+# MD049: Emphasis style
+MD049:
+  style: asterisk
+
+# MD050: Strong style
+MD050:
+  style: asterisk

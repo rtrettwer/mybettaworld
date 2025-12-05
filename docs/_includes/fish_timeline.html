@@ -2,183 +2,180 @@
 <div class="fish-timeline-modern">
   <div class="fish-timeline-line"></div>
   <div class="fish-timeline-items">
-    {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_birth' %}
-    {% for post in fish_posts %}
-      {% assign side = forloop.index0 | modulo: 2 | plus: 0 %}
-      {% if side == 0 %}
-        {% include fish_timeline_item.html post=post side='right' %}
-      {% else %}
-        {% include fish_timeline_item.html post=post side='left' %}
-      {% endif %}
-    {% endfor %}
+    {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_birth' %} {%
+    for post in fish_posts %} {% assign side = forloop.index0 | modulo: 2 | plus: 0 %} {% if side == 0 %} {% include
+    fish_timeline_item.html post=post side='right' %} {% else %} {% include fish_timeline_item.html post=post
+    side='left' %} {% endif %} {% endfor %}
   </div>
 </div>
 
 <!-- Optionales CSS für Card-Avatar-Einheit, gebogene Card, Textfluss und Hover-Effekt -->
 <style>
-.fish-timeline-modern {
-  position: relative;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 0;
-}
-.fish-timeline-line {
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 6px;
-  height: 100%;
-  background: linear-gradient(180deg, #2196f3 0%, #21cbf3 100%);
-  border-radius: 3px;
-  transform: translateX(-50%);
-  z-index: 0;
-  opacity: 0.18;
-}
-.fish-timeline-items {
-  width: 100%;
-  max-width: 1100px;
-  position: relative;
-  z-index: 1;
-}
-.fish-timeline-centered {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.timeline-container-centered {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2.2rem 0;
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-.timeline-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5rem;
-}
-.timeline-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  gap: 0;
-}
-.timeline-marker {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 140px;
-  margin-right: -40px;
-  z-index: 2;
-}
-.timeline-marker::before {
-      content: none;
-}
-.timeline-item:first-child .timeline-marker::before,
-.timeline-item:last-child .timeline-marker::before {
-  content: none;
-}
-.fish-timeline-large-image .fish-avatar-large {
-  position: relative;
-  z-index: 1;
-  width: 140px !important;
-  height: 140px !important;
-  min-width: 140px !important;
-  min-height: 140px !important;
-  max-width: 140px !important;
-  max-height: 140px !important;
-  object-fit: cover;
-  border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-  flex-shrink: 0 !important;
-  flex-grow: 0 !important;
-  display: block;
-  background: #fff;
-}
-.fish-timeline-image-dominant,
-.timeline-marker,
-.timeline-item,
-.timeline-container,
-.fish-timeline-large-image {
-  overflow: visible !important;
-}
-.fish-card-unit {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  transition: box-shadow 0.2s, transform 0.2s;
-}
-.fish-card-unit:hover .fish-timeline-content-curved {
-  box-shadow: 0 4px 16px rgba(33,150,243,0.18);
-  transform: translateY(-2px) scale(1.02);
-}
-.fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved {
-  padding: 1.2rem 1.6rem 1.2rem 3.8rem;
-  font-size: 1rem;
-  background: #fff;
-  border-radius: 0 1.5rem 1.5rem 2.5rem;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.07);
-  min-width: 260px;
-  max-width: 520px;
-  min-height: 80px;
-  max-height: none;
-  width: auto;
-  display: block;
-  word-break: break-word;
-  margin-left: -60px;
-  text-align: left;
-  z-index: 1;
-  border-left: 0.5rem solid transparent;
-}
-.fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved h4,
-.fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved p,
-.fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved .timeline-date {
-  margin-left: 0;
-}
-@media (max-width: 900px) {
-  .timeline-row {
+  .fish-timeline-modern {
+    position: relative;
+    width: 100%;
+    display: flex;
     flex-direction: column;
-    gap: 0.7rem;
     align-items: center;
+    padding: 2rem 0;
+  }
+  .fish-timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 6px;
+    height: 100%;
+    background: linear-gradient(180deg, #2196f3 0%, #21cbf3 100%);
+    border-radius: 3px;
+    transform: translateX(-50%);
+    z-index: 0;
+    opacity: 0.18;
+  }
+  .fish-timeline-items {
+    width: 100%;
+    max-width: 1100px;
+    position: relative;
+    z-index: 1;
+  }
+  .fish-timeline-centered {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .timeline-container-centered {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2.2rem 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .timeline-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
+  .timeline-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0;
+  }
+  .timeline-marker {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 140px;
+    margin-right: -40px;
+    z-index: 2;
+  }
+  .timeline-marker::before {
+    content: none;
+  }
+  .timeline-item:first-child .timeline-marker::before,
+  .timeline-item:last-child .timeline-marker::before {
+    content: none;
+  }
+  .fish-timeline-large-image .fish-avatar-large {
+    position: relative;
+    z-index: 1;
+    width: 140px !important;
+    height: 140px !important;
+    min-width: 140px !important;
+    min-height: 140px !important;
+    max-width: 140px !important;
+    max-height: 140px !important;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    flex-shrink: 0 !important;
+    flex-grow: 0 !important;
+    display: block;
+    background: #fff;
+  }
+  .fish-timeline-image-dominant,
+  .timeline-marker,
+  .timeline-item,
+  .timeline-container,
+  .fish-timeline-large-image {
+    overflow: visible !important;
   }
   .fish-card-unit {
-    flex-direction: column;
+    display: flex;
     align-items: center;
+    text-decoration: none;
+    transition:
+      box-shadow 0.2s,
+      transform 0.2s;
+  }
+  .fish-card-unit:hover .fish-timeline-content-curved {
+    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
+    transform: translateY(-2px) scale(1.02);
   }
   .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved {
-    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-    min-width: 160px;
-    max-width: 98vw;
-    margin-left: 0;
-    border-radius: 1.5rem;
+    padding: 1.2rem 1.6rem 1.2rem 3.8rem;
+    font-size: 1rem;
+    background: #fff;
+    border-radius: 0 1.5rem 1.5rem 2.5rem;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+    min-width: 260px;
+    max-width: 520px;
+    min-height: 80px;
+    max-height: none;
+    width: auto;
+    display: block;
+    word-break: break-word;
+    margin-left: -60px;
+    text-align: left;
+    z-index: 1;
+    border-left: 0.5rem solid transparent;
   }
-}
-.fish-timeline-content-small h4 {
-  margin: 0.2em 0 0.3em 0;
-  font-size: 1.1em;
-}
-.fish-timeline-content-small p {
-  margin: 0;
-  color: #444;
-  font-size: 0.97em;
-}
-.fish-timeline-content-small .timeline-date {
-  font-size: 0.95em;
-  color: #888;
-  margin-bottom: 0.1em;
-}
-.timeline-center .timeline-line {
-  display: none !important;
-}
+  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved h4,
+  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved p,
+  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved .timeline-date {
+    margin-left: 0;
+  }
+  @media (max-width: 900px) {
+    .timeline-row {
+      flex-direction: column;
+      gap: 0.7rem;
+      align-items: center;
+    }
+    .fish-card-unit {
+      flex-direction: column;
+      align-items: center;
+    }
+    .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved {
+      padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+      min-width: 160px;
+      max-width: 98vw;
+      margin-left: 0;
+      border-radius: 1.5rem;
+    }
+  }
+  .fish-timeline-content-small h4 {
+    margin: 0.2em 0 0.3em 0;
+    font-size: 1.1em;
+  }
+  .fish-timeline-content-small p {
+    margin: 0;
+    color: #444;
+    font-size: 0.97em;
+  }
+  .fish-timeline-content-small .timeline-date {
+    font-size: 0.95em;
+    color: #888;
+    margin-bottom: 0.1em;
+  }
+  .timeline-center .timeline-line {
+    display: none !important;
+  }
 </style>

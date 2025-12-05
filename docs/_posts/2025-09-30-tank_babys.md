@@ -3,8 +3,8 @@ layout: post_tank
 title: "Das Baby Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
-categories: [ tank ]
-tags: [ nano, garnelen, neocaridina ]
+categories: [tank]
+tags: [nano, garnelen, neocaridina]
 excerpt: "Vom Aufzuchtbecken zum Garnelenbecken"
 image: /assets/images/tanks/babies/babies.webp
 aktiv: true
@@ -46,7 +46,7 @@ entwicklung:
   - datum: 09.09.2025
     ereignis: Artemia Nauplien
   - datum: 02.10.2025
-    ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter 
+    ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter
   - datum: 08.10.2025
     ereignis: Ich habe heute testweise Lila aus Kampfis Becken genommen und zu den Jungfischen gesetzt. Ich werde beobachten, ob sie sich vertragen.
   - datum: 28.11.2025
@@ -57,17 +57,6 @@ entwicklung_text: |
   Nach erfolgreicher Aufzucht der Jungfische wurde dieses Becken zum Garnelenbecken umfunktioniert. Die Garnelen genießen das gut eingefahrene Becken mit vielen Verstecken und dichter Bepflanzung.
 gallery_dir: /assets/images/tanks/babies
 ---
-
-
-
-
-
-
-
-
-
-
-
 
 ## Über das Becken
 

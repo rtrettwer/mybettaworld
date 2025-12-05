@@ -19,15 +19,19 @@
 
     // Gradient-Border wie bei anderen Cards
     border: 2px solid transparent;
-    background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
-                linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 0 20px rgba(46, 196, 182, 0.1);
+    background:
+      linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+      linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      0 0 20px rgba(46, 196, 182, 0.1);
 
     &:hover {
       transform: translateY(-2px);
-      box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
-                  0 0 30px rgba(46, 196, 182, 0.2),
-                  0 0 50px rgba(127, 83, 172, 0.1);
+      box-shadow:
+        0 8px 25px rgba(46, 196, 182, 0.15),
+        0 0 30px rgba(46, 196, 182, 0.2),
+        0 0 50px rgba(127, 83, 172, 0.1);
     }
   }
 
@@ -172,8 +176,9 @@
       &:hover {
         background: var(--theme-primary-2);
         transform: translateY(-2px);
-        box-shadow: 0 4px 16px rgba(46, 196, 182, 0.3),
-                    0 0 20px rgba(46, 196, 182, 0.2);
+        box-shadow:
+          0 4px 16px rgba(46, 196, 182, 0.3),
+          0 0 20px rgba(46, 196, 182, 0.2);
       }
     }
   }
@@ -185,13 +190,15 @@
   border-radius: 20px;
   padding: 2.5rem;
   margin: 2rem 0;
-  box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(46, 196, 182, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
 
   h3 {
@@ -220,13 +227,13 @@
     overflow: hidden;
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(135deg, transparent, rgba(255,255,255,0.1));
+      background: linear-gradient(135deg, transparent, rgba(255, 255, 255, 0.1));
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -248,7 +255,7 @@
 
       .parameter-icon {
         font-size: 1.5rem;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.2));
+        filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
       }
 
       .parameter-status {
@@ -296,7 +303,7 @@
       font-weight: 700;
       color: var(--theme-white);
       margin-bottom: 0.5rem;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+      text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     }
 
     .parameter-range {
@@ -314,19 +321,19 @@
 
       .gauge-fill {
         height: 100%;
-        background: linear-gradient(90deg, rgba(255,255,255,0.8), var(--theme-white));
+        background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), var(--theme-white));
         border-radius: 3px;
         transition: width 0.8s ease;
         position: relative;
 
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           right: -10px;
           bottom: 0;
           width: 10px;
-          background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6));
+          background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6));
           animation: shimmer 2s infinite;
         }
       }
@@ -335,22 +342,38 @@
 }
 
 @keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
 @keyframes pulse {
-  0%, 100% { opacity: 0; }
-  50% { opacity: 1; }
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
 }
 
 @keyframes blink {
-  0%, 50% { opacity: 1; }
-  51%, 100% { opacity: 0.3; }
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0.3;
+  }
 }
 
 @keyframes pulse-critical {
-  0%, 100% {
+  0%,
+  100% {
     background: rgba(244, 67, 54, 0.9);
     box-shadow: 0 0 0 0 rgba(244, 67, 54, 0.7);
   }

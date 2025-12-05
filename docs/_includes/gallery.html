@@ -1,373 +1,351 @@
-{%- assign dir = include.dir | default: '/assets/images' -%}
-{%- if page.gallery_dir -%}
-{%- assign dir = page.gallery_dir -%}
-{%- endif -%}
-
-{%- assign ignore_folders = include.ignore_folders | default: empty -%}
-{%- if ignore_folders == empty or ignore_folders == nil -%}
-  {%- assign ignore_folders = '' | split: '' -%}
-{%- elsif ignore_folders contains ',' -%}
-  {%- assign ignore_folders = ignore_folders | split: ',' -%}
-{%- endif -%}
-
-{%- if dir -%}
-
-{%- comment -%}Rekursive Pfad-Filterung: alle Unterverzeichnisse einschließen, aber bestimmte Ordner (egal auf welcher Ebene) ignorieren{%- endcomment -%}
-{%- assign gallery_thumbnails = "" | split: "" -%}
-{%- assign target_dir_with_slash = dir | append: '/' -%}
-
-{%- for f in site.static_files -%}
-  {%- if f.extname == '.webp' -%}
-    {%- assign filename = f.path | split: '/' | last -%}
-    {%- if filename contains '_thumbnail' -%}
-      {%- assign path_starts_with_dir = false -%}
-      {%- assign path_length = f.path | size -%}
-      {%- assign dir_length = target_dir_with_slash | size -%}
-      {%- if path_length >= dir_length -%}
-        {%- assign path_prefix = f.path | slice: 0, dir_length -%}
-        {%- if path_prefix == target_dir_with_slash -%}
-          {%- assign path_starts_with_dir = true -%}
-        {%- endif -%}
-      {%- endif -%}
-      {%- if path_starts_with_dir -%}
-        {%- assign ignore = false -%}
-        {%- for ignore_folder in ignore_folders -%}
-          {%- assign search = '/' | append: ignore_folder | append: '/' -%}
-          {%- if f.path contains search -%}
-            {%- assign ignore = true -%}
-          {%- endif -%}
-        {%- endfor -%}
-        {%- unless ignore -%}
-          {%- assign gallery_thumbnails = gallery_thumbnails | push: f -%}
-        {%- endunless -%}
-      {%- endif -%}
-    {%- endif -%}
-  {%- endif -%}
-{%- endfor -%}
-
-{%- assign gallery_thumbnails = gallery_thumbnails | uniq | sort: "path" -%}
-{%- assign gallery_meta = site.data.gallery | default: empty -%}
-{%- assign gallery_id = include.gallery_id | default: 'main' -%}
+{%- assign dir = include.dir | default: '/assets/images' -%} {%- if page.gallery_dir -%} {%- assign dir =
+page.gallery_dir -%} {%- endif -%} {%- assign ignore_folders = include.ignore_folders | default: empty -%} {%- if
+ignore_folders == empty or ignore_folders == nil -%} {%- assign ignore_folders = '' | split: '' -%} {%- elsif
+ignore_folders contains ',' -%} {%- assign ignore_folders = ignore_folders | split: ',' -%} {%- endif -%} {%- if dir -%}
+{%- comment -%}Rekursive Pfad-Filterung: alle Unterverzeichnisse einschließen, aber bestimmte Ordner (egal auf welcher
+Ebene) ignorieren{%- endcomment -%} {%- assign gallery_thumbnails = "" | split: "" -%} {%- assign target_dir_with_slash
+= dir | append: '/' -%} {%- for f in site.static_files -%} {%- if f.extname == '.webp' -%} {%- assign filename = f.path
+| split: '/' | last -%} {%- if filename contains '_thumbnail' -%} {%- assign path_starts_with_dir = false -%} {%- assign
+path_length = f.path | size -%} {%- assign dir_length = target_dir_with_slash | size -%} {%- if path_length >=
+dir_length -%} {%- assign path_prefix = f.path | slice: 0, dir_length -%} {%- if path_prefix == target_dir_with_slash
+-%} {%- assign path_starts_with_dir = true -%} {%- endif -%} {%- endif -%} {%- if path_starts_with_dir -%} {%- assign
+ignore = false -%} {%- for ignore_folder in ignore_folders -%} {%- assign search = '/' | append: ignore_folder | append:
+'/' -%} {%- if f.path contains search -%} {%- assign ignore = true -%} {%- endif -%} {%- endfor -%} {%- unless ignore
+-%} {%- assign gallery_thumbnails = gallery_thumbnails | push: f -%} {%- endunless -%} {%- endif -%} {%- endif -%} {%-
+endif -%} {%- endfor -%} {%- assign gallery_thumbnails = gallery_thumbnails | uniq | sort: "path" -%} {%- assign
+gallery_meta = site.data.gallery | default: empty -%} {%- assign gallery_id = include.gallery_id | default: 'main' -%}
 
 <div id="gallery-{{ gallery_id }}" class="db-gallery">
-    <div class="db-gallery-grid">
-        {%- for f in gallery_thumbnails -%}
-        {%- assign large_path = f.path | replace: '_thumbnail.webp', '.webp' -%}
-        {%- assign meta = gallery_meta | where: "path", large_path | first -%}
-        {%- assign meta_title = meta.title | default: '' -%}
-        {%- assign meta_caption = meta.caption | default: '' -%}
-        {%- assign thumb_href = f.path | relative_url -%}
-        {%- assign large_href = large_path | relative_url -%}
-        <figure class="db-gallery-item"
-                data-index="{{ forloop.index0 }}"
-                data-thumb="{{ thumb_href }}"
-                data-large="{{ large_href }}"
-                data-title="{{ meta_title | escape }}"
-                data-caption="{{ meta_caption | escape }}"
-                data-path-raw="{{ large_path }}">
-            <button class="db-gallery-button" type="button" aria-label="Bild {{ forloop.index }} öffnen">
-                <img class="db-gallery-thumb"
-                     src="{{ thumb_href }}"
-                     alt="{{ meta_title | default: f.name | escape }}"
-                     loading="lazy"
-                     decoding="async">
-            </button>
-            {%- if meta_caption and meta_caption != '' -%}
-            <figcaption class="db-gallery-thumb-caption">{{ meta_caption | truncate: 50 }}</figcaption>
-            {%- endif -%}
-        </figure>
-        {%- endfor -%}
+  <div class="db-gallery-grid">
+    {%- for f in gallery_thumbnails -%} {%- assign large_path = f.path | replace: '_thumbnail.webp', '.webp' -%} {%-
+    assign meta = gallery_meta | where: "path", large_path | first -%} {%- assign meta_title = meta.title | default: ''
+    -%} {%- assign meta_caption = meta.caption | default: '' -%} {%- assign thumb_href = f.path | relative_url -%} {%-
+    assign large_href = large_path | relative_url -%}
+    <figure
+      class="db-gallery-item"
+      data-index="{{ forloop.index0 }}"
+      data-thumb="{{ thumb_href }}"
+      data-large="{{ large_href }}"
+      data-title="{{ meta_title | escape }}"
+      data-caption="{{ meta_caption | escape }}"
+      data-path-raw="{{ large_path }}"
+    >
+      <button class="db-gallery-button" type="button" aria-label="Bild {{ forloop.index }} öffnen">
+        <img
+          class="db-gallery-thumb"
+          src="{{ thumb_href }}"
+          alt="{{ meta_title | default: f.name | escape }}"
+          loading="lazy"
+          decoding="async"
+        />
+      </button>
+      {%- if meta_caption and meta_caption != '' -%}
+      <figcaption class="db-gallery-thumb-caption">{{ meta_caption | truncate: 50 }}</figcaption>
+      {%- endif -%}
+    </figure>
+    {%- endfor -%}
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div class="db-gallery-lightbox">
+    <div class="db-gallery-lightbox-backdrop"></div>
+
+    <button class="db-gallery-close" aria-label="Schließen">&times;</button>
+    <button class="db-gallery-nav db-gallery-prev" aria-label="Vorheriges Bild">&#8249;</button>
+    <button class="db-gallery-nav db-gallery-next" aria-label="Nächstes Bild">&#8250;</button>
+
+    <div class="db-gallery-lightbox-content">
+      <div class="db-gallery-title"></div>
+      <img class="db-gallery-large" src="" alt="" />
+      <div class="db-gallery-caption"></div>
     </div>
-
-    <!-- Lightbox Overlay -->
-    <div class="db-gallery-lightbox">
-        <div class="db-gallery-lightbox-backdrop"></div>
-
-        <button class="db-gallery-close" aria-label="Schließen">&times;</button>
-        <button class="db-gallery-nav db-gallery-prev" aria-label="Vorheriges Bild">&#8249;</button>
-        <button class="db-gallery-nav db-gallery-next" aria-label="Nächstes Bild">&#8250;</button>
-
-        <div class="db-gallery-lightbox-content">
-            <div class="db-gallery-title"></div>
-            <img class="db-gallery-large" src="" alt="">
-            <div class="db-gallery-caption"></div>
-        </div>
-    </div>
+  </div>
 </div>
 
 <script>
-    (function () {
-        const root = document.getElementById("gallery-{{ gallery_id }}");
-        if (!root) return;
+  (function () {
+    const root = document.getElementById("gallery-{{ gallery_id }}");
+    if (!root) return;
 
-        const lightbox = root.querySelector(".db-gallery-lightbox");
-        const imgLarge = root.querySelector(".db-gallery-large");
-        const titleEl = root.querySelector(".db-gallery-title");
-        const captionEl = root.querySelector(".db-gallery-caption");
-        const btnClose = root.querySelector(".db-gallery-close");
-        const btnPrev = root.querySelector(".db-gallery-prev");
-        const btnNext = root.querySelector(".db-gallery-next");
-        const backdrop = root.querySelector(".db-gallery-lightbox-backdrop");
-        const items = Array.from(root.querySelectorAll(".db-gallery-item"));
-        let currentIndex = -1;
-        let resizeTimeout;
+    const lightbox = root.querySelector(".db-gallery-lightbox");
+    const imgLarge = root.querySelector(".db-gallery-large");
+    const titleEl = root.querySelector(".db-gallery-title");
+    const captionEl = root.querySelector(".db-gallery-caption");
+    const btnClose = root.querySelector(".db-gallery-close");
+    const btnPrev = root.querySelector(".db-gallery-prev");
+    const btnNext = root.querySelector(".db-gallery-next");
+    const backdrop = root.querySelector(".db-gallery-lightbox-backdrop");
+    const items = Array.from(root.querySelectorAll(".db-gallery-item"));
+    let currentIndex = -1;
+    let resizeTimeout;
 
-        // Neu: Lightbox-Overlay dynamisch ins body verschieben
-        let originalLightboxParent = null;
-        let originalLightboxNextSibling = null;
+    // Neu: Lightbox-Overlay dynamisch ins body verschieben
+    let originalLightboxParent = null;
+    let originalLightboxNextSibling = null;
 
-        function moveLightboxToBody() {
-            if (!lightbox || lightbox.parentNode === document.body) return;
-            originalLightboxParent = lightbox.parentNode;
-            originalLightboxNextSibling = lightbox.nextSibling;
-            document.body.appendChild(lightbox);
-        }
+    function moveLightboxToBody() {
+      if (!lightbox || lightbox.parentNode === document.body) return;
+      originalLightboxParent = lightbox.parentNode;
+      originalLightboxNextSibling = lightbox.nextSibling;
+      document.body.appendChild(lightbox);
+    }
 
-        function restoreLightboxToGallery() {
-            if (!lightbox || !originalLightboxParent) return;
-            if (originalLightboxNextSibling) {
-                originalLightboxParent.insertBefore(lightbox, originalLightboxNextSibling);
-            } else {
-                originalLightboxParent.appendChild(lightbox);
-            }
-            originalLightboxParent = null;
-            originalLightboxNextSibling = null;
-        }
+    function restoreLightboxToGallery() {
+      if (!lightbox || !originalLightboxParent) return;
+      if (originalLightboxNextSibling) {
+        originalLightboxParent.insertBefore(lightbox, originalLightboxNextSibling);
+      } else {
+        originalLightboxParent.appendChild(lightbox);
+      }
+      originalLightboxParent = null;
+      originalLightboxNextSibling = null;
+    }
 
-        // Debounced resize handler für bessere Performance
-        function debounce(func, wait) {
-            return function executedFunction(...args) {
-                const later = () => {
-                    clearTimeout(resizeTimeout);
-                    func(...args);
-                };
-                clearTimeout(resizeTimeout);
-                resizeTimeout = setTimeout(later, wait);
-            };
-        }
+    // Debounced resize handler für bessere Performance
+    function debounce(func, wait) {
+      return function executedFunction(...args) {
+        const later = () => {
+          clearTimeout(resizeTimeout);
+          func(...args);
+        };
+        clearTimeout(resizeTimeout);
+        resizeTimeout = setTimeout(later, wait);
+      };
+    }
 
-        // Lazy loading für Bilder
-        function initLazyLoading() {
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            if (img.dataset.src) {
-                                img.src = img.dataset.src;
-                                img.removeAttribute('data-src');
-                            }
-                            observer.unobserve(img);
-                        }
-                    });
-                }, { rootMargin: '50px' });
-
-                items.forEach(item => {
-                    const img = item.querySelector("img");
-                    if (img && img.dataset.src) {
-                        imageObserver.observe(img);
-                    }
-                });
-            }
-        }
-
-        // Optimierte Grid-Berechnung
-        function calculateOptimalGrid(itemCount) {
-            if (itemCount === 0) return { columns: 1, rows: 1 };
-
-            const screenWidth = window.innerWidth;
-            const grid = root.querySelector(".db-gallery-grid");
-            const isPostGallery = grid.closest('.post-content');
-
-            // Cached Werte für bessere Performance
-            const breakpoints = {
-                mobile: 480,
-                tablet: 768,
-                desktop: 1024,
-                large: 1400
-            };
-
-            let minImageWidth;
-            if (screenWidth < breakpoints.mobile) {
-                minImageWidth = 120;
-            } else if (screenWidth < breakpoints.tablet) {
-                minImageWidth = 150;
-            } else if (screenWidth < breakpoints.desktop) {
-                minImageWidth = 180;
-            } else if (screenWidth < breakpoints.large) {
-                minImageWidth = 200;
-            } else {
-                minImageWidth = 220;
-            }
-
-            const containerPadding = isPostGallery ? 40 : 80;
-            const availableWidth = screenWidth - containerPadding;
-            const gap = 15;
-            const maxColumnsByWidth = Math.floor((availableWidth + gap) / (minImageWidth + gap));
-
-            let bestColumns = Math.min(maxColumnsByWidth, 12);
-            let bestRows = Math.ceil(itemCount / bestColumns);
-
-            // Für große Bildmengen: optimiere Spaltenanzahl
-            if (itemCount > 50) {
-                bestColumns = Math.max(bestColumns, Math.min(8, maxColumnsByWidth));
-                bestRows = Math.ceil(itemCount / bestColumns);
-            }
-
-            return { columns: bestColumns, rows: bestRows };
-        }
-
-        function applyResponsiveGrid(columns, rows) {
-            const screenWidth = window.innerWidth;
-
-            if (screenWidth < 480) {
-                columns = Math.max(2, Math.min(columns, 3));
-            } else if (screenWidth < 768) {
-                columns = Math.max(3, Math.min(columns, 5));
-            } else if (screenWidth < 1024) {
-                columns = Math.max(4, Math.min(columns, 7));
-            }
-
-            return { columns, rows: Math.ceil(items.length / columns) };
-        }
-
-        function initDynamicGrid() {
-            const grid = root.querySelector(".db-gallery-grid");
-            const isPostGallery = grid.closest('.post-content');
-
-            if (!isPostGallery && items.length > 0) {
-                const optimal = calculateOptimalGrid(items.length);
-                const responsive = applyResponsiveGrid(optimal.columns, optimal.rows);
-
-                grid.style.gridTemplateColumns = `repeat(${responsive.columns}, 1fr)`;
-
-                if (responsive.columns > 8) {
-                    const maxWidth = responsive.columns * 280 + (responsive.columns - 1) * 15;
-                    grid.style.maxWidth = `${maxWidth}px`;
-                    grid.style.margin = '1rem auto';
-                } else {
-                    grid.style.maxWidth = 'none';
-                    grid.style.margin = '1rem 0';
+    // Lazy loading für Bilder
+    function initLazyLoading() {
+      if ("IntersectionObserver" in window) {
+        const imageObserver = new IntersectionObserver(
+          (entries, observer) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target;
+                if (img.dataset.src) {
+                  img.src = img.dataset.src;
+                  img.removeAttribute("data-src");
                 }
-            }
-        }
+                observer.unobserve(img);
+              }
+            });
+          },
+          { rootMargin: "50px" }
+        );
 
-        function openAt(index) {
-            if (index < 0 || index >= items.length) return;
-            currentIndex = index;
-            const item = items[currentIndex];
-            const large = item.dataset.large;
-            const thumb = item.dataset.thumb;
-            const title = item.dataset.title || "";
-            const caption = item.dataset.caption || "";
-
-            // Preload image für bessere UX
-            const img = new Image();
-            img.onload = () => {
-                imgLarge.src = large;
-                imgLarge.alt = title || "";
-            };
-            img.onerror = () => {
-                imgLarge.src = thumb; // Fallback
-                imgLarge.alt = title || "";
-            };
-            img.src = large;
-
-            titleEl.textContent = title;
-            captionEl.textContent = caption;
-            titleEl.style.display = title ? 'block' : 'none';
-            captionEl.style.display = caption ? 'block' : 'none';
-
-            moveLightboxToBody(); // <-- Overlay ins body verschieben
-
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden';
-
-            // Focus für Barrierefreiheit
-            requestAnimationFrame(() => btnClose.focus());
-        }
-
-        function close() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = '';
-            currentIndex = -1;
-            restoreLightboxToGallery(); // <-- Overlay zurückschieben
-        }
-
-        function prev() {
-            if (items.length) openAt(currentIndex <= 0 ? items.length - 1 : currentIndex - 1);
-        }
-
-        function next() {
-            if (items.length) openAt(currentIndex >= items.length - 1 ? 0 : currentIndex + 1);
-        }
-
-        // Event Listeners mit passive für bessere Performance
-        items.forEach((item, i) => {
-            const button = item.querySelector(".db-gallery-button");
-            if (button) {
-                button.addEventListener("click", () => openAt(i), { passive: true });
-            }
+        items.forEach((item) => {
+          const img = item.querySelector("img");
+          if (img && img.dataset.src) {
+            imageObserver.observe(img);
+          }
         });
+      }
+    }
 
-        if (btnClose) btnClose.addEventListener("click", close);
-        if (btnPrev) btnPrev.addEventListener("click", prev);
-        if (btnNext) btnNext.addEventListener("click", next);
-        if (backdrop) backdrop.addEventListener("click", close);
+    // Optimierte Grid-Berechnung
+    function calculateOptimalGrid(itemCount) {
+      if (itemCount === 0) return { columns: 1, rows: 1 };
 
-        // Keyboard navigation
-        document.addEventListener("keydown", (ev) => {
-            if (!lightbox.classList.contains('active')) return;
+      const screenWidth = window.innerWidth;
+      const grid = root.querySelector(".db-gallery-grid");
+      const isPostGallery = grid.closest(".post-content");
 
-            switch (ev.key) {
-                case 'Escape':
-                    close();
-                    break;
-                case 'ArrowLeft':
-                    ev.preventDefault();
-                    prev();
-                    break;
-                case 'ArrowRight':
-                    ev.preventDefault();
-                    next();
-                    break;
-            }
-        });
+      // Cached Werte für bessere Performance
+      const breakpoints = {
+        mobile: 480,
+        tablet: 768,
+        desktop: 1024,
+        large: 1400,
+      };
 
-        // Touch-Unterstützung optimiert
-        let touchStartX = 0;
-        let touchStartY = 0;
-        const minSwipeDistance = 50;
+      let minImageWidth;
+      if (screenWidth < breakpoints.mobile) {
+        minImageWidth = 120;
+      } else if (screenWidth < breakpoints.tablet) {
+        minImageWidth = 150;
+      } else if (screenWidth < breakpoints.desktop) {
+        minImageWidth = 180;
+      } else if (screenWidth < breakpoints.large) {
+        minImageWidth = 200;
+      } else {
+        minImageWidth = 220;
+      }
 
-        lightbox.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-            touchStartY = e.touches[0].clientY;
-        }, { passive: true });
+      const containerPadding = isPostGallery ? 40 : 80;
+      const availableWidth = screenWidth - containerPadding;
+      const gap = 15;
+      const maxColumnsByWidth = Math.floor((availableWidth + gap) / (minImageWidth + gap));
 
-        lightbox.addEventListener('touchend', (e) => {
-            if (!lightbox.classList.contains('active')) return;
+      let bestColumns = Math.min(maxColumnsByWidth, 12);
+      let bestRows = Math.ceil(itemCount / bestColumns);
 
-            const touchEndX = e.changedTouches[0].clientX;
-            const touchEndY = e.changedTouches[0].clientY;
-            const diffX = touchStartX - touchEndX;
-            const diffY = touchStartY - touchEndY;
+      // Für große Bildmengen: optimiere Spaltenanzahl
+      if (itemCount > 50) {
+        bestColumns = Math.max(bestColumns, Math.min(8, maxColumnsByWidth));
+        bestRows = Math.ceil(itemCount / bestColumns);
+      }
 
-            if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
-                diffX > 0 ? next() : prev();
-            } else if (Math.abs(diffY) > 100 && Math.abs(diffY) > Math.abs(diffX)) {
-                close();
-            }
-        }, { passive: true });
+      return { columns: bestColumns, rows: bestRows };
+    }
 
-        // Initialisierung mit debounced resize
-        const debouncedResize = debounce(() => {
-            initDynamicGrid();
-        }, 250);
+    function applyResponsiveGrid(columns, rows) {
+      const screenWidth = window.innerWidth;
 
-        initLazyLoading();
-        initDynamicGrid();
-        window.addEventListener('resize', debouncedResize, { passive: true });
-    })();
+      if (screenWidth < 480) {
+        columns = Math.max(2, Math.min(columns, 3));
+      } else if (screenWidth < 768) {
+        columns = Math.max(3, Math.min(columns, 5));
+      } else if (screenWidth < 1024) {
+        columns = Math.max(4, Math.min(columns, 7));
+      }
+
+      return { columns, rows: Math.ceil(items.length / columns) };
+    }
+
+    function initDynamicGrid() {
+      const grid = root.querySelector(".db-gallery-grid");
+      const isPostGallery = grid.closest(".post-content");
+
+      if (!isPostGallery && items.length > 0) {
+        const optimal = calculateOptimalGrid(items.length);
+        const responsive = applyResponsiveGrid(optimal.columns, optimal.rows);
+
+        grid.style.gridTemplateColumns = `repeat(${responsive.columns}, 1fr)`;
+
+        if (responsive.columns > 8) {
+          const maxWidth = responsive.columns * 280 + (responsive.columns - 1) * 15;
+          grid.style.maxWidth = `${maxWidth}px`;
+          grid.style.margin = "1rem auto";
+        } else {
+          grid.style.maxWidth = "none";
+          grid.style.margin = "1rem 0";
+        }
+      }
+    }
+
+    function openAt(index) {
+      if (index < 0 || index >= items.length) return;
+      currentIndex = index;
+      const item = items[currentIndex];
+      const large = item.dataset.large;
+      const thumb = item.dataset.thumb;
+      const title = item.dataset.title || "";
+      const caption = item.dataset.caption || "";
+
+      // Preload image für bessere UX
+      const img = new Image();
+      img.onload = () => {
+        imgLarge.src = large;
+        imgLarge.alt = title || "";
+      };
+      img.onerror = () => {
+        imgLarge.src = thumb; // Fallback
+        imgLarge.alt = title || "";
+      };
+      img.src = large;
+
+      titleEl.textContent = title;
+      captionEl.textContent = caption;
+      titleEl.style.display = title ? "block" : "none";
+      captionEl.style.display = caption ? "block" : "none";
+
+      moveLightboxToBody(); // <-- Overlay ins body verschieben
+
+      lightbox.classList.add("active");
+      document.body.style.overflow = "hidden";
+
+      // Focus für Barrierefreiheit
+      requestAnimationFrame(() => btnClose.focus());
+    }
+
+    function close() {
+      lightbox.classList.remove("active");
+      document.body.style.overflow = "";
+      currentIndex = -1;
+      restoreLightboxToGallery(); // <-- Overlay zurückschieben
+    }
+
+    function prev() {
+      if (items.length) openAt(currentIndex <= 0 ? items.length - 1 : currentIndex - 1);
+    }
+
+    function next() {
+      if (items.length) openAt(currentIndex >= items.length - 1 ? 0 : currentIndex + 1);
+    }
+
+    // Event Listeners mit passive für bessere Performance
+    items.forEach((item, i) => {
+      const button = item.querySelector(".db-gallery-button");
+      if (button) {
+        button.addEventListener("click", () => openAt(i), { passive: true });
+      }
+    });
+
+    if (btnClose) btnClose.addEventListener("click", close);
+    if (btnPrev) btnPrev.addEventListener("click", prev);
+    if (btnNext) btnNext.addEventListener("click", next);
+    if (backdrop) backdrop.addEventListener("click", close);
+
+    // Keyboard navigation
+    document.addEventListener("keydown", (ev) => {
+      if (!lightbox.classList.contains("active")) return;
+
+      switch (ev.key) {
+        case "Escape":
+          close();
+          break;
+        case "ArrowLeft":
+          ev.preventDefault();
+          prev();
+          break;
+        case "ArrowRight":
+          ev.preventDefault();
+          next();
+          break;
+      }
+    });
+
+    // Touch-Unterstützung optimiert
+    let touchStartX = 0;
+    let touchStartY = 0;
+    const minSwipeDistance = 50;
+
+    lightbox.addEventListener(
+      "touchstart",
+      (e) => {
+        touchStartX = e.touches[0].clientX;
+        touchStartY = e.touches[0].clientY;
+      },
+      { passive: true }
+    );
+
+    lightbox.addEventListener(
+      "touchend",
+      (e) => {
+        if (!lightbox.classList.contains("active")) return;
+
+        const touchEndX = e.changedTouches[0].clientX;
+        const touchEndY = e.changedTouches[0].clientY;
+        const diffX = touchStartX - touchEndX;
+        const diffY = touchStartY - touchEndY;
+
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > minSwipeDistance) {
+          diffX > 0 ? next() : prev();
+        } else if (Math.abs(diffY) > 100 && Math.abs(diffY) > Math.abs(diffX)) {
+          close();
+        }
+      },
+      { passive: true }
+    );
+
+    // Initialisierung mit debounced resize
+    const debouncedResize = debounce(() => {
+      initDynamicGrid();
+    }, 250);
+
+    initLazyLoading();
+    initDynamicGrid();
+    window.addEventListener("resize", debouncedResize, { passive: true });
+  })();
 </script>
 
 {%- else -%}

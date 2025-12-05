@@ -1,0 +1,33 @@
+# RuboCop configuration for Jekyll project
+# https://docs.rubocop.org/rubocop/configuration.html
+
+require:
+  - rubocop-jekyll
+
+AllCops:
+  NewCops: enable
+  TargetRubyVersion: 2.7
+  Exclude:
+    - "vendor/**/*"
+    - "_site/**/*"
+    - ".jekyll-cache/**/*"
+    - "node_modules/**/*"
+
+# Jekyll-specific configurations
+Jekyll:
+  Enabled: true
+
+# Disable some cops that are too strict for Jekyll projects
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 120
+  Exclude:
+    - "**/*.html"

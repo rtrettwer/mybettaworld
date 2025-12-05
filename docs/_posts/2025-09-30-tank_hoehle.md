@@ -3,8 +3,8 @@ layout: post_tank
 title: "Das Höhlen Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
-categories: [ tank ]
-tags: [ höhlen, verstecke, gemeinschaftsbecken ]
+categories: [tank]
+tags: [höhlen, verstecke, gemeinschaftsbecken]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
 image: /assets/images/tanks/cave/cave.webp
 aktiv: true
@@ -52,19 +52,7 @@ entwicklung:
   - datum: 08.10.2025
     ereignis: Lila und Sonnenschein sind eingezogen. Lila musste aus dem Baby-Becken raus (hat die Babys gejagt), Sonnenschein aus dem Mangroven-Becken (hat Bandits Flossen gefleddert). Die beiden Damen scheinen sich zu arrangieren.
 entwicklung_text: |
-
 ---
-
-
-
-
-
-
-
-
-
-
-
 
 Das Höhlenbecken war eigentlich einmal für [Kampfi](/fish/2025/09/30/fish_kampfi) gedacht, weil er so gerne in Höhlen kriecht. Ich habe über Etsy eine
 schöne große Höhle gekauft, die unter dem Substrat liegt. Außerdem einen Garnelentunnel. Um mehr Versteckmöglichkeiten zu

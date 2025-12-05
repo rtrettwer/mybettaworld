@@ -8,10 +8,7 @@
 // Hero-Sektion - Willkommensbereich
 .hero-section {
   position: relative;
-  background: linear-gradient(135deg,
-    var(--theme-primary-1),
-    var(--theme-primary-2),
-    var(--theme-primary-3));
+  background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
   color: var(--theme-white);
   text-align: center;
   padding: 4rem 2rem;
@@ -76,10 +73,7 @@
     .hero-stat {
       text-align: center;
       padding: 1.2rem;
-      background: linear-gradient(135deg,
-        var(--theme-primary-1),
-        var(--theme-primary-2),
-        var(--theme-primary-3));
+      background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
       color: var(--theme-white);
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
@@ -151,10 +145,7 @@
       .stat-card {
         text-align: center;
         padding: 1.2rem;
-        background: linear-gradient(135deg,
-          var(--theme-primary-1),
-          var(--theme-primary-2),
-          var(--theme-primary-3));
+        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
         color: var(--theme-white);
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
@@ -214,7 +205,8 @@
         }
 
         .phase-info {
-          h5, p {
+          h5,
+          p {
             color: inherit;
           }
 
@@ -329,25 +321,27 @@
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 
   // Konsistenter 2px Gradient-Rand
   border: 2px solid transparent;
-  background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
-              linear-gradient(135deg,
-                var(--theme-primary-1),
-                var(--theme-primary-2),
-                var(--theme-primary-3)) border-box;
+  background:
+    linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+    linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
   // Leuchtender Schatten-Effekt
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
-              0 0 20px rgba(46, 196, 182, 0.1);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.08),
+    0 0 20px rgba(46, 196, 182, 0.1);
 
   &:hover {
     transform: translateY(-6px);
-    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
-                0 0 30px rgba(46, 196, 182, 0.2),
-                0 0 50px rgba(127, 83, 172, 0.1);
+    box-shadow:
+      0 8px 25px rgba(46, 196, 182, 0.15),
+      0 0 30px rgba(46, 196, 182, 0.2),
+      0 0 50px rgba(127, 83, 172, 0.1);
   }
 
   .post-header {

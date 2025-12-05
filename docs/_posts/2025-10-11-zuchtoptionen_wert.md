@@ -8,16 +8,10 @@ tags: [zucht, genetik, wertschätzung]
 excerpt: "Gedanken über verschiedene Zuchtansätze und wie man den Wert von Betta-Fischen betrachtet."
 ---
 
-
-
-
-
-
-
-
 Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. Da ich noch am Anfang meiner Zuchtlaufbahn stehe, basieren diese Überlegungen auf Recherche und ersten Erfahrungen.
 
 ## Fischübersicht und geschätzter Verkaufswert
+
 <div class="card-grid fish-cards">
   <div class="fish-card">
     <div class="fish-card-title"><a href="/fish/2025/09/30/fish_kampfi">[Kampfi](/fish/2025/09/30/fish_kampfi)</a> <span class="fish-gender">♂</span></div>
@@ -75,8 +69,8 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
   </div>
 </div>
 
-
 ## Meine Zuchtpläne und erwartete Ergebnisse
+
 <div class="card-grid breeding-cards">
   <div class="breeding-card">
     <div class="breeding-card-title"><a href="/fish/2025/09/28/fish_sir_pryce">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)</a> × <a href="/fish/2025/09/27/fish_lila">[Lila](/fish/2025/09/27/fish_lila)</a></div>
@@ -120,7 +114,6 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
   </div>
 </div>
 
-
 ## Meine Überlegungen zur Preisgestaltung und Selektion
 
 - **Gesundheit vor Verkauf:** Ich biete nur vollständig genesene, parasitenfreie Tiere an ([Bandit](/fish/2025/09/29/fish_bandit) erst nach mind. 4 Wochen symptomfrei, stabiler Kondition).
@@ -133,47 +126,55 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
 ## Meine Zucht- und Verkaufsstrategie
 
 ### Mein Fazit
+
 - Für maximale „Wow"-Optik und hohe Preise: ich plane mit [Bandit](/fish/2025/09/29/fish_bandit) als Vater (starker Metallic, Mask) und setze je nach Ziel [Lila](/fish/2025/09/27/fish_lila) oder [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) als Partnerin.
 - Für stabile, gut verkäufliche Show-Linie mit hoher Ausbeute: ich nutze [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) als Vater (sehr gute Brutpflege, klare Form) mit [Lila](/fish/2025/09/27/fish_lila) oder [Shadow](/fish/2025/09/26/fish_shadow).
 
 ### Mein Ranking der Paarungen nach interessantesten Ergebnissen und erwarteten Preisen
 
-1) **[Bandit](/fish/2025/09/29/fish_bandit) × [Lila](/fish/2025/09/27/fish_lila)**
+1. **[Bandit](/fish/2025/09/29/fish_bandit) × [Lila](/fish/2025/09/27/fish_lila)**
+
 - Warum ich das prioritär plane: kontraststarker Copper/Blue‑Metallic, oft klare Mask, sehr fotogen.
 - Meine Erwartung: indigo/blau mit kupfernen Zonen, teils weiße Mask, kräftige Irideszenz.
 - Preisrahmen (Top‑Tiere): M 40–70 €, W 18–35 €.
 - Mein Plan: erst züchten, wenn [Bandit](/fish/2025/09/29/fish_bandit) vollständig genesen ist (mind. 4 Wochen symptomfrei).
 
-2) **[Kampfi](/fish/2025/09/30/fish_kampfi) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)**
+2. **[Kampfi](/fish/2025/09/30/fish_kampfi) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)**
+
 - Warum das interessant ist: „Red Dragon/Koi/Butterfly"-Look mit hoher Nachfrage; extrem auffällig.
 - Meine Erwartung: rot/weiß gemarbelt mit Dragon‑Schuppen, häufig kontrastreiche Flossensäume.
 - Preisrahmen (Top‑Tiere): M 40–65 €, W 15–35 €.
 - Was ich beachten muss: Marble ist sprunghaft; ich werde auf saubere Kanten/lesbare Muster selektieren. Kampfis Nestpflege optimieren (ruhige Oberfläche, Nestanker).
 
-3) **[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Lila](/fish/2025/09/27/fish_lila)**
+3. **[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Lila](/fish/2025/09/27/fish_lila)**
+
 - Warum das vielversprechend ist: stabile Royal‑Blue/Indigo‑Metallic‑Linie; showtaugliche, gleichmäßige Tiere.
 - Meine Erwartung: blau‑metallic, teils dunkle Kopfmaske, klare Plakat‑Form.
 - Preisrahmen (Top‑Tiere): M 35–60 €, W 15–30 €.
 - Mein Vorteil: sehr gute Brutpflege des Vaters steigert die Ausbeute und die Gleichmäßigkeit.
 
-4) **[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Shadow](/fish/2025/09/26/fish_shadow)**
+4. **[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Shadow](/fish/2025/09/26/fish_shadow)**
+
 - Warum das elegant ist: „Black/Blue Metallic" (Black‑Orchid‑ähnlich) – elegant, relativ stabil.
 - Meine Erwartung: dunkler Körper mit kräftigem teal/blau Schimmer, gelegentlich Mask.
 - Preisrahmen (Top‑Tiere): M 30–55 €, W 12–25 €.
 - Worauf ich achte: besonders gefragt, wenn der Metallic‑Glanz gleichmäßig und die Caudale sauber symmetrisch ist.
 
-5) **[Bandit](/fish/2025/09/29/fish_bandit) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)**
+5. **[Bandit](/fish/2025/09/29/fish_bandit) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein)**
+
 - Warum das reizvoll ist: „Masked Koi/Nemo Metallic" – sehr variabel und auffällig.
 - Meine Erwartung: weiß/rot/blau gemarbelt, oft starke Irideszenz; Mask‑Varianten.
 - Preisrahmen (Top‑Tiere): M 35–65 €, W 15–32 €.
 - Worauf ich achten muss: Temperament beider Tiere beachten; Zucht nur bei ruhigem Setup.
 
-6) **[Kampfi](/fish/2025/09/30/fish_kampfi) × [Lila](/fish/2025/09/27/fish_lila) oder × [Shadow](/fish/2025/09/26/fish_shadow)**
+6. **[Kampfi](/fish/2025/09/30/fish_kampfi) × [Lila](/fish/2025/09/27/fish_lila) oder × [Shadow](/fish/2025/09/26/fish_shadow)**
+
 - Meine Einschätzung: solide, aber weniger spektakulär als die Top‑Kombos.
 - Meine Erwartung: dunkel/metallic mit roten Einsprengseln (×[Shadow](/fish/2025/09/26/fish_shadow)) bzw. rot/blau‑marble (×[Lila](/fish/2025/09/27/fish_lila)).
 - Preisrahmen (Top‑Tiere): M 28–55 €, W 10–25 €.
 
 ### Wie ich die besten Preise aus den Nachzuchten hole
+
 - Meine Selektion ab Woche 10–12:
   - Form: fächerförmige, symmetrische Caudale; starke, gerade Strahlen; breite Dorsale; kompakte Plakat‑Proportionen.
   - Farbe/Muster: gleichmäßige Metallic‑Bedeckung; klar abgegrenzte Mask; bei Butterfly saubere Kanten; bei Marble „lesbare" Kontraste statt „matschig".
@@ -190,4 +191,5 @@ Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. 
   - „Show‑Stabil"-Linie: [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Lila](/fish/2025/09/27/fish_lila) oder × [Shadow](/fish/2025/09/26/fish_shadow) (F1), gleichmäßige Blau/Teal‑Metallic selektieren, in F2 Geschwisterpaarung oder Rückkreuz zu dem Elternteil mit bester Form.
 
 ### Mein Fazit zu den vielversprechendsten Kombinationen
+
 - Für interessanteste Ergebnisse mit zugleich besten Preisen plane ich: [Bandit](/fish/2025/09/29/fish_bandit) × [Lila](/fish/2025/09/27/fish_lila) und [Kampfi](/fish/2025/09/30/fish_kampfi) × [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) (maximaler „Wow"-Faktor) sowie [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) × [Lila](/fish/2025/09/27/fish_lila) (stabile, showfähige Blau‑Metallic‑Linie mit hoher Verkaufsquote).

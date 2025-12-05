@@ -9,7 +9,7 @@ permalink: /tags/
   <div class="content-card">
     <h2>Alle Tags</h2>
     <p>Hier findest du alle verwendeten Tags und kannst nach spezifischen Themen suchen.</p>
-    
+
     <div class="tags-grid">
       {% assign tags_list = site.tags | sort %}
       {% for tag in tags_list %}
@@ -21,5 +21,6 @@ permalink: /tags/
         </div>
       {% endfor %}
     </div>
+
   </div>
 </div>

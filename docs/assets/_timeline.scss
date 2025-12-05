@@ -7,13 +7,14 @@
     padding-left: 8rem; // Vergrößert für größere Marker
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: 4rem; // Zentriert zur neuen Marker-Position
       top: 0;
       bottom: 0;
       width: 4px;
-      background: linear-gradient(to bottom,
+      background: linear-gradient(
+        to bottom,
         var(--theme-primary-1),
         var(--theme-primary-2),
         var(--theme-primary-3),
@@ -54,9 +55,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.4),
-                0 0 0 2px rgba(127, 83, 172, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow:
+      0 8px 25px rgba(46, 196, 182, 0.4),
+      0 0 0 2px rgba(127, 83, 172, 0.2);
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     z-index: 10;
     overflow: hidden;
     // GPU-Beschleunigung für flüssigere Animation
@@ -65,8 +69,9 @@
 
     &:hover {
       transform: translateZ(0) scale(1.08);
-      box-shadow: 0 12px 35px rgba(46, 196, 182, 0.6),
-                  0 0 0 4px rgba(127, 83, 172, 0.4);
+      box-shadow:
+        0 12px 35px rgba(46, 196, 182, 0.6),
+        0 0 0 4px rgba(127, 83, 172, 0.4);
     }
 
     .fish-link {
@@ -84,7 +89,7 @@
       overflow: hidden;
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
         inset: 0;
         border-radius: 50%;
@@ -95,7 +100,9 @@
       }
 
       &:hover::before {
-        box-shadow: 0 0 0 6px rgba(46,196,182,0.18), 0 8px 32px 0 rgba(46,196,182,0.25);
+        box-shadow:
+          0 0 0 6px rgba(46, 196, 182, 0.18),
+          0 8px 32px 0 rgba(46, 196, 182, 0.25);
       }
     }
 
@@ -151,7 +158,9 @@
   }
 
   .timeline-link-style {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
     display: block;
     border-radius: 16px;
     // GPU-Beschleunigung
@@ -162,8 +171,9 @@
   .timeline-link-style:hover,
   .timeline-link-style:focus {
     transform: translateZ(0) translateY(-4px);
-    box-shadow: 0 8px 25px rgba(46, 196, 182, 0.2),
-                0 0 30px rgba(46, 196, 182, 0.15);
+    box-shadow:
+      0 8px 25px rgba(46, 196, 182, 0.2),
+      0 0 30px rgba(46, 196, 182, 0.15);
     outline: none;
     text-decoration: none;
   }
@@ -183,22 +193,25 @@
 
     // Gradient-Rand konsistent mit anderen Cards
     border: 2px solid transparent;
-    background: linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
-                linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
+    background:
+      linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+      linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
     // Leuchtender Schatten-Effekt
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
-                0 0 20px rgba(46, 196, 182, 0.1);
+    box-shadow:
+      0 4px 12px rgba(0, 0, 0, 0.08),
+      0 0 20px rgba(46, 196, 182, 0.1);
 
     &:hover {
       transform: translateZ(0) translateY(-2px);
-      box-shadow: 0 8px 25px rgba(46, 196, 182, 0.15),
-                  0 0 30px rgba(46, 196, 182, 0.2),
-                  0 0 50px rgba(127, 83, 172, 0.1);
+      box-shadow:
+        0 8px 25px rgba(46, 196, 182, 0.15),
+        0 0 30px rgba(46, 196, 182, 0.2),
+        0 0 50px rgba(127, 83, 172, 0.1);
     }
 
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       left: -1rem;
       top: 2rem;
@@ -207,7 +220,7 @@
       border-top: 15px solid transparent;
       border-bottom: 15px solid transparent;
       border-right: 15px solid var(--theme-white);
-      filter: drop-shadow(-2px 0 3px rgba(0,0,0,0.1));
+      filter: drop-shadow(-2px 0 3px rgba(0, 0, 0, 0.1));
     }
 
     .timeline-date,
@@ -217,15 +230,11 @@
       font-weight: 700;
       margin-bottom: 0.75rem;
       padding: 0.6rem 1.2rem;
-      background: linear-gradient(135deg,
-        var(--theme-primary-1),
-        var(--theme-primary-2),
-        var(--theme-primary-3)
-      );
+      background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
       border-radius: 25px;
       display: block;
       box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
-      text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
       margin-left: auto;
       margin-right: auto;
       text-align: center;
@@ -235,11 +244,7 @@
       margin: 0 0 1rem 0;
       font-size: 1.4rem;
       font-weight: 700;
-      background: linear-gradient(135deg,
-        var(--theme-primary-2),
-        var(--theme-primary-1),
-        var(--theme-primary-3)
-      );
+      background: linear-gradient(135deg, var(--theme-primary-2), var(--theme-primary-1), var(--theme-primary-3));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -247,11 +252,7 @@
       text-decoration: none;
 
       a {
-        background: linear-gradient(135deg,
-          var(--theme-primary-2),
-          var(--theme-primary-1),
-          var(--theme-primary-3)
-        );
+        background: linear-gradient(135deg, var(--theme-primary-2), var(--theme-primary-1), var(--theme-primary-3));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
@@ -259,11 +260,7 @@
         transition: all 0.3s ease;
 
         &:hover {
-          background: linear-gradient(135deg,
-            var(--theme-primary-1),
-            var(--theme-primary-3),
-            var(--theme-primary-2)
-          );
+          background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-3), var(--theme-primary-2));
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
           background-clip: text;
@@ -284,7 +281,8 @@
       margin: 1rem 0;
 
       .fish-age {
-        background: linear-gradient(135deg,
+        background: linear-gradient(
+          135deg,
           rgba(46, 196, 182, 0.15),
           rgba(32, 99, 155, 0.15),
           rgba(127, 83, 172, 0.15)
@@ -300,17 +298,15 @@
         position: relative;
 
         &::before {
-          content: '';
+          content: "";
           position: absolute;
           inset: 0;
           border-radius: 20px;
           padding: 2px;
-          background: linear-gradient(135deg,
-            var(--theme-primary-1),
-            var(--theme-primary-2),
-            var(--theme-primary-3)
-          );
-          mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+          background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3));
+          mask:
+            linear-gradient(#fff 0 0) content-box,
+            linear-gradient(#fff 0 0);
           mask-composite: exclude;
           z-index: -1;
         }

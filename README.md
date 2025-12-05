@@ -1,19 +1,136 @@
 This is my github pages blog on betta caring.
 
+## Setup
+
+### Installation
+
+```bash
+# Ruby Dependencies installieren
+cd docs
+bundle install
+
+# Node.js Dependencies installieren (für Linting)
+cd ..
+npm install
+
+# Pre-commit Hooks installieren (optional aber empfohlen)
+pip install pre-commit
+pre-commit install
+```
+
+### Entwicklung
+
+```bash
+# Jekyll Server starten (mit Live-Reload)
+cd docs
+bundle exec jekyll serve --livereload
+
+# Oder verwende die IntelliJ Run Configuration: "Jekyll Serve"
+```
+
+## Code Quality & Linting
+
+Dieses Projekt verwendet mehrere Linting-Tools für Code-Qualität:
+
+### Tools
+
+- **RuboCop** - Ruby/Jekyll Linting
+- **HTMLProofer** - HTML Validation und Link-Checking
+- **MarkdownLint** - Markdown Formatting
+- **YAML Lint** - YAML Syntax-Prüfung
+- **Prettier** - Code Formatting (CSS, SCSS, JS, JSON, YAML, MD, HTML)
+- **Pre-commit** - Automatische Checks vor Commits
+
+### Verwendung
+
+```bash
+# Alle Linter ausführen
+npm run lint
+
+# Einzelne Linter
+npm run lint:markdown    # Markdown prüfen
+npm run lint:yaml        # YAML prüfen
+npm run lint:prettier    # Prettier Check
+
+# Auto-Format mit Prettier
+npm run format
+
+# HTML Proofer (testet die gebaute Site)
+npm test
+
+# RuboCop (Ruby/Jekyll)
+cd docs && bundle exec rubocop
+
+# Pre-commit Hooks manuell ausführen
+pre-commit run --all-files
+```
+
+### Pre-Commit Hooks
+
+Die Pre-Commit Hooks laufen automatisch vor jedem Commit und prüfen:
+
+- ✅ Trailing Whitespace
+- ✅ End-of-File Fixer
+- ✅ YAML Syntax
+- ✅ JSON Syntax
+- ✅ Große Dateien (max 2MB)
+- ✅ Merge Konflikte
+- ✅ Markdown Linting
+- ✅ YAML Linting
+- ✅ Prettier Formatting
+- ✅ RuboCop (Ruby/Jekyll)
+
+**Hooks überspringen (nicht empfohlen):**
+
+```bash
+git commit --no-verify -m "Your message"
+```
+
+### CI/CD
+
+GitHub Actions führt automatisch bei jedem Push/PR aus:
+
+1. **Lint Workflow** (`.github/workflows/lint.yml`)
+
+   - Pre-commit Hooks
+   - RuboCop
+   - Markdown Lint
+   - YAML Lint
+   - Prettier Check
+
+2. **Test Workflow** (`.github/workflows/lint.yml`)
+
+   - Jekyll Build
+   - HTML Proofer
+
+3. **Deploy Workflow** (`.github/workflows/jekyll.yml`)
+   - Build und Deploy zu GitHub Pages
+
+### Konfigurationsdateien
+
+- `.rubocop.yml` - RuboCop Konfiguration
+- `.markdownlint.yml` - Markdown Linting Regeln
+- `.yamllint.yml` - YAML Linting Regeln
+- `.prettierrc.yml` - Prettier Formatting Regeln
+- `.prettierignore` - Von Prettier ignorierte Dateien
+- `.pre-commit-config.yaml` - Pre-commit Hook Konfiguration
+
 ## Features
 
 ### Verkaufsgalerie mit Carousel
+
 Die Verkaufsseite unterstützt jetzt Bildergalerien für jeden Artikel. Wenn mehrere Bilder verfügbar sind, werden sie als Carousel angezeigt.
 
 **Verwendung:**
+
 ```yaml
 # In _data/sales.yml
 - name: "Fischname"
   status: "available"
   gender: "male"
   price: 10
-  image: "/assets/images/fish/default.webp"  # Fallback-Bild
-  gallery:  # Optional: Mehrere Bilder für Carousel
+  image: "/assets/images/fish/default.webp" # Fallback-Bild
+  gallery: # Optional: Mehrere Bilder für Carousel
     - "/assets/images/fish/fisch1.webp"
     - "/assets/images/fish/fisch2.webp"
     - "/assets/images/fish/fisch3.webp"
@@ -21,10 +138,13 @@ Die Verkaufsseite unterstützt jetzt Bildergalerien für jeden Artikel. Wenn meh
 ```
 
 **Funktionen:**
+
 - ✨ Automatisches Carousel bei mehreren Bildern
 - 👆 Touch/Swipe-Unterstützung für mobile Geräte
 - 🎯 Indikatoren zum direkten Anspringen von Bildern
 - ⌨️ Vor/Zurück Buttons beim Hover
 - 📱 Responsive Design
 
+## License
 
+See [LICENSE.txt](LICENSE.txt)

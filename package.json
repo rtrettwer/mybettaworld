@@ -1,0 +1,31 @@
+{
+  "name": "mybettaworld",
+  "version": "1.0.0",
+  "description": "Betta fish blog with Jekyll",
+  "scripts": {
+    "lint": "npm run lint:markdown && npm run lint:yaml && npm run lint:prettier",
+    "lint:markdown": "markdownlint '**/*.md' --ignore node_modules --ignore vendor --ignore _site",
+    "lint:yaml": "yamllint .",
+    "lint:prettier": "prettier --check '**/*.{css,scss,js,json,yml,yaml,md,html}'",
+    "format": "prettier --write '**/*.{css,scss,js,json,yml,yaml,md,html}'",
+    "test": "cd docs && bundle exec ruby ../scripts/test_html.rb",
+    "prepare": "command -v pre-commit > /dev/null && pre-commit install || echo 'Pre-commit not installed, skipping hook setup'"
+  },
+  "devDependencies": {
+    "markdownlint-cli": "^0.38.0",
+    "prettier": "^3.1.1",
+    "yaml-lint": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/mybettaworld.git"
+  },
+  "keywords": [
+    "jekyll",
+    "blog",
+    "betta",
+    "fish"
+  ],
+  "author": "Rike Trettwer",
+  "license": "MIT"
+}

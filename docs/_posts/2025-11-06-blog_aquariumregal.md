@@ -40,4 +40,3 @@ Hier folgen bald Fotos vom Aufbau und meine Skizzen:
 
 Mit guter Planung und ein paar Extras für den Bodenschutz steht das neue Aquarium-Regal jetzt sicher und stabil – bereit für viele Becken und neue Projekte!
 (Platzhalter für Umzugsbilder)
-

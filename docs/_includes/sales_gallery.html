@@ -1,113 +1,119 @@
 <!-- Verkaufs-Galerie -->
 <div class="sales-gallery">
-
-
   <!-- Erweiterte Filter -->
 
-    <div class="content-card">
-        <h3>Verfügbare Fische und andere Artikel</h3>
+  <div class="content-card">
+    <h3>Verfügbare Fische und andere Artikel</h3>
 
-
-  <!-- Standard Filter Controls -->
-  <div class="filter-controls">
-    <button class="filter-btn active" data-filter="all">Alle anzeigen</button>
-    <button class="filter-btn" data-filter="male">Männchen</button>
-    <button class="filter-btn" data-filter="female">Weibchen</button>
-    <button class="filter-btn" data-filter="food">Futter</button>
-    <button class="filter-btn" data-filter="plant">Pflanzen</button>
-  </div>
-        <div>
-            <div class="filter-controls"><button class="filter-toggle" onclick="toggleAdvancedFilters()">Erweiterte Filter</button> </div>
-            <div class="advanced-filters" id="advanced-filters" style="display: none;">
-                <div class="filter-row">
-                    <label for="search-fish">🔍 Suche:</label>
-                    <input type="search" id="search-fish" placeholder="Name, Farbe oder Beschreibung...">
-                </div>
-                <div class="filter-row">
-                    <label for="status-filter">Status:</label>
-                    <select id="status-filter" data-status-filter>
-                        <option value="all">Alle Status</option>
-                        <option value="available">Verfügbar</option>
-                        <option value="reserved">Reserviert</option>
-                        <option value="sold">Verkauft</option>
-                    </select>
-                </div>
-                <div class="filter-row">
-                    <label for="price-range">Max. Preis:</label>
-                    <input type="range" id="price-range" min="0" max="200" value="200" step="10">
-                    <span id="price-display">200€</span>
-                </div>
-                <button class="filter-toggle btn" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
-            </div>
+    <!-- Standard Filter Controls -->
+    <div class="filter-controls">
+      <button class="filter-btn active" data-filter="all">Alle anzeigen</button>
+      <button class="filter-btn" data-filter="male">Männchen</button>
+      <button class="filter-btn" data-filter="female">Weibchen</button>
+      <button class="filter-btn" data-filter="food">Futter</button>
+      <button class="filter-btn" data-filter="plant">Pflanzen</button>
+    </div>
+    <div>
+      <div class="filter-controls">
+        <button class="filter-toggle" onclick="toggleAdvancedFilters()">Erweiterte Filter</button>
+      </div>
+      <div class="advanced-filters" id="advanced-filters" style="display: none">
+        <div class="filter-row">
+          <label for="search-fish">🔍 Suche:</label>
+          <input type="search" id="search-fish" placeholder="Name, Farbe oder Beschreibung..." />
         </div>
-  <!-- Sortier- und Ergebnis-Controls -->
-  <div class="sort-controls">
-    <div class="results-count">
-      <span id="results-count">Lade Fische...</span>
+        <div class="filter-row">
+          <label for="status-filter">Status:</label>
+          <select id="status-filter" data-status-filter>
+            <option value="all">Alle Status</option>
+            <option value="available">Verfügbar</option>
+            <option value="reserved">Reserviert</option>
+            <option value="sold">Verkauft</option>
+          </select>
+        </div>
+        <div class="filter-row">
+          <label for="price-range">Max. Preis:</label>
+          <input type="range" id="price-range" min="0" max="200" value="200" step="10" />
+          <span id="price-display">200€</span>
+        </div>
+        <button class="filter-toggle btn" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
+      </div>
     </div>
-    <div class="sort-dropdown">
-      <label for="sort-select">Sortieren nach:</label>
-      <select id="sort-select">
-        <option value="name">Name</option>
-        <option value="price-low">Preis (niedrig → hoch)</option>
-        <option value="price-high">Preis (hoch → niedrig)</option>
-        <option value="status">Verfügbarkeit</option>
-      </select>
+    <!-- Sortier- und Ergebnis-Controls -->
+    <div class="sort-controls">
+      <div class="results-count">
+        <span id="results-count">Lade Fische...</span>
+      </div>
+      <div class="sort-dropdown">
+        <label for="sort-select">Sortieren nach:</label>
+        <select id="sort-select">
+          <option value="name">Name</option>
+          <option value="price-low">Preis (niedrig → hoch)</option>
+          <option value="price-high">Preis (hoch → niedrig)</option>
+          <option value="status">Verfügbarkeit</option>
+        </select>
+      </div>
     </div>
   </div>
-    </div>
   <div class="fish-grid">
     {% for product in site.data.sales %}
-    <div class="fish-card {{ product.status }}"
-         data-category="{{ product.gender }}"
-         data-price="{{ product.price | default: 0 }}"
-         data-status="{{ product.status | default: 'sold' }}">
+    <div
+      class="fish-card {{ product.status }}"
+      data-category="{{ product.gender }}"
+      data-price="{{ product.price | default: 0 }}"
+      data-status="{{ product.status | default: 'sold' }}"
+    >
       <div class="fish-image-carousel">
         {% if product.gallery and product.gallery.size > 0 %}
-          <!-- Carousel mit mehreren Bildern -->
-          <div class="carousel-container">
-            <div class="carousel-slides">
-              {% for img in product.gallery %}
-              <div class="carousel-slide {% if forloop.first %}active{% endif %}">
-                <img src="{{ img | relative_url }}" alt="{{ product.name }} - Bild {{ forloop.index }}" loading="lazy"
-                     onerror="this.src='/assets/images/placeholder-fish.jpg'">
-              </div>
-              {% endfor %}
+        <!-- Carousel mit mehreren Bildern -->
+        <div class="carousel-container">
+          <div class="carousel-slides">
+            {% for img in product.gallery %}
+            <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+              <img
+                src="{{ img | relative_url }}"
+                alt="{{ product.name }} - Bild {{ forloop.index }}"
+                loading="lazy"
+                onerror="this.src = '/assets/images/placeholder-fish.jpg'"
+              />
             </div>
-            {% if product.gallery.size > 1 %}
-            <button class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
-            <button class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
-            <div class="carousel-indicators">
-              {% for img in product.gallery %}
-              <span class="indicator {% if forloop.first %}active{% endif %}" onclick="goToSlide(this, {{ forloop.index0 }})"></span>
-              {% endfor %}
-            </div>
-            {% endif %}
+            {% endfor %}
           </div>
+          {% if product.gallery.size > 1 %}
+          <button class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
+          <button class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
+          <div class="carousel-indicators">
+            {% for img in product.gallery %}
+            <span
+              class="indicator {% if forloop.first %}active{% endif %}"
+              onclick="goToSlide(this, {{ forloop.index0 }})"
+            ></span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
         {% else %}
-          <!-- Einzelbild (Fallback) -->
-          <img src="{{ product.image | relative_url }}" alt="{{ product.name }}" loading="lazy"
-               onerror="this.src='/assets/images/placeholder-fish.jpg'">
+        <!-- Einzelbild (Fallback) -->
+        <img
+          src="{{ product.image | relative_url }}"
+          alt="{{ product.name }}"
+          loading="lazy"
+          onerror="this.src = '/assets/images/placeholder-fish.jpg'"
+        />
         {% endif %}
         <div class="price-tag">{{ product.price }}€</div>
         <div class="status-badge {{ product.status }}">
-          {% if product.status == 'available' %}Verfügbar
-          {% elsif product.status == 'reserved' %}Reserviert
-          {% elsif product.status == 'sold' %}Verkauft
-          {% endif %}
+          {% if product.status == 'available' %}Verfügbar {% elsif product.status == 'reserved' %}Reserviert {% elsif
+          product.status == 'sold' %}Verkauft {% endif %}
         </div>
       </div>
       <div class="fish-info">
         <h4>{{ product.name }}</h4>
         <div class="fish-details">
           <span class="gender {{ product.gender }}">
-            {% if product.gender == 'male' %}Männchen
-            {% elsif product.gender == 'female' %}Weibchen
-            {% elsif product.gender == 'food' %}Futter
-            {% elsif product.gender == 'plant' %}Pflanze
-            {% elsif product.gender == 'misc' %}Sonstiges
-            {% else %}? Artikeltyp unbekannt
-            {% endif %}
+            {% if product.gender == 'male' %}Männchen {% elsif product.gender == 'female' %}Weibchen {% elsif
+            product.gender == 'food' %}Futter {% elsif product.gender == 'plant' %}Pflanze {% elsif product.gender ==
+            'misc' %}Sonstiges {% else %}? Artikeltyp unbekannt {% endif %}
           </span>
           <span class="age">{{ product.age }}</span>
           <span class="size">{{ product.size }}</span>
@@ -115,23 +121,21 @@
         </div>
         <p class="description">{{ product.description }}</p>
         {% if product.special_notes %}
-          <p class="special-notes"><strong>Besonderheit:</strong> {{ product.special_notes }}</p>
+        <p class="special-notes"><strong>Besonderheit:</strong> {{ product.special_notes }}</p>
         {% endif %}
         <div class="contact-info">
           {% if product.status == 'available' %}
-            <button class="interest-btn">Interesse anmelden</button>
-            <small>Nur Abholung möglich</small>
+          <button class="interest-btn">Interesse anmelden</button>
+          <small>Nur Abholung möglich</small>
           {% elsif product.status == 'reserved' %}
-            <button class="interest-btn" disabled>Reserviert</button>
-            {% if product.pickup_date %}
-              <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
-            {% endif %}
-          {% elsif product.status == 'sold' %}
-            <button class="interest-btn" disabled>Verkauft</button>
-            {% if product.sold_date %}
-              <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
-            {% endif %}
-          {% endif %}
+          <button class="interest-btn" disabled>Reserviert</button>
+          {% if product.pickup_date %}
+          <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
+          {% endif %} {% elsif product.status == 'sold' %}
+          <button class="interest-btn" disabled>Verkauft</button>
+          {% if product.sold_date %}
+          <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
+          {% endif %} {% endif %}
         </div>
       </div>
     </div>
@@ -139,214 +143,215 @@
   </div>
 
   <!-- Keine Ergebnisse Nachricht -->
-  <div class="no-results" id="no-results" style="display: none;">
+  <div class="no-results" id="no-results" style="display: none">
     <div class="no-results-icon">🐠</div>
     <h3>Keine Artikel gefunden</h3>
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
     <button class="reset-filters-btn" onclick="showAllFish()">Alle Produkte anzeigen</button>
   </div>
 
-<!-- JavaScript für Filter-Funktionalität -->
-<script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>
-<script>
-// Carousel-Funktionen
-function moveCarousel(button, direction) {
-  const container = button.closest('.carousel-container');
-  const slides = container.querySelectorAll('.carousel-slide');
-  const indicators = container.querySelectorAll('.indicator');
-  let currentIndex = Array.from(slides).findIndex(slide => slide.classList.contains('active'));
+  <!-- JavaScript für Filter-Funktionalität -->
+  <script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>
+  <script>
+    // Carousel-Funktionen
+    function moveCarousel(button, direction) {
+      const container = button.closest(".carousel-container");
+      const slides = container.querySelectorAll(".carousel-slide");
+      const indicators = container.querySelectorAll(".indicator");
+      let currentIndex = Array.from(slides).findIndex((slide) => slide.classList.contains("active"));
 
-  slides[currentIndex].classList.remove('active');
-  indicators[currentIndex].classList.remove('active');
+      slides[currentIndex].classList.remove("active");
+      indicators[currentIndex].classList.remove("active");
 
-  currentIndex = (currentIndex + direction + slides.length) % slides.length;
+      currentIndex = (currentIndex + direction + slides.length) % slides.length;
 
-  slides[currentIndex].classList.add('active');
-  indicators[currentIndex].classList.add('active');
-}
+      slides[currentIndex].classList.add("active");
+      indicators[currentIndex].classList.add("active");
+    }
 
-function goToSlide(indicator, index) {
-  const container = indicator.closest('.carousel-container');
-  const slides = container.querySelectorAll('.carousel-slide');
-  const indicators = container.querySelectorAll('.indicator');
+    function goToSlide(indicator, index) {
+      const container = indicator.closest(".carousel-container");
+      const slides = container.querySelectorAll(".carousel-slide");
+      const indicators = container.querySelectorAll(".indicator");
 
-  slides.forEach(slide => slide.classList.remove('active'));
-  indicators.forEach(ind => ind.classList.remove('active'));
+      slides.forEach((slide) => slide.classList.remove("active"));
+      indicators.forEach((ind) => ind.classList.remove("active"));
 
-  slides[index].classList.add('active');
-  indicators[index].classList.add('active');
-}
+      slides[index].classList.add("active");
+      indicators[index].classList.add("active");
+    }
 
-// Touch-Unterstützung für Carousel
-document.addEventListener('DOMContentLoaded', function() {
-  document.querySelectorAll('.carousel-container').forEach(carousel => {
-    let touchStartX = 0;
-    let touchEndX = 0;
+    // Touch-Unterstützung für Carousel
+    document.addEventListener("DOMContentLoaded", function () {
+      document.querySelectorAll(".carousel-container").forEach((carousel) => {
+        let touchStartX = 0;
+        let touchEndX = 0;
 
-    carousel.addEventListener('touchstart', e => {
-      touchStartX = e.changedTouches[0].screenX;
+        carousel.addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carousel.addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe(carousel);
+        });
+
+        function handleSwipe(container) {
+          const slides = container.querySelectorAll(".carousel-slide");
+          if (slides.length <= 1) return;
+
+          if (touchEndX < touchStartX - 50) {
+            // Swipe left - nächstes Bild
+            const nextBtn = container.querySelector(".carousel-btn.next");
+            if (nextBtn) moveCarousel(nextBtn, 1);
+          }
+          if (touchEndX > touchStartX + 50) {
+            // Swipe right - vorheriges Bild
+            const prevBtn = container.querySelector(".carousel-btn.prev");
+            if (prevBtn) moveCarousel(prevBtn, -1);
+          }
+        }
+      });
     });
 
-    carousel.addEventListener('touchend', e => {
-      touchEndX = e.changedTouches[0].screenX;
-      handleSwipe(carousel);
-    });
+    // Zusätzliche JavaScript-Funktionen direkt im HTML
+    function toggleAdvancedFilters() {
+      const advancedFilters = document.getElementById("advanced-filters");
+      const isVisible = advancedFilters.style.display !== "none";
+      advancedFilters.style.display = isVisible ? "none" : "block";
 
-    function handleSwipe(container) {
-      const slides = container.querySelectorAll('.carousel-slide');
-      if (slides.length <= 1) return;
+      const toggleBtn = event.target;
+      toggleBtn.textContent = isVisible ? "Erweiterte Filter" : "Filter ausblenden";
+    }
 
-      if (touchEndX < touchStartX - 50) {
-        // Swipe left - nächstes Bild
-        const nextBtn = container.querySelector('.carousel-btn.next');
-        if (nextBtn) moveCarousel(nextBtn, 1);
+    function resetAllFilters() {
+      // Filter-Buttons zurücksetzen
+      document.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("active"));
+      document.querySelector('[data-filter="all"]').classList.add("active");
+
+      // Eingabefelder zurücksetzen
+      document.getElementById("search-fish").value = "";
+      document.getElementById("status-filter").value = "all";
+      document.getElementById("price-range").value = "200";
+      document.getElementById("price-display").textContent = "200€";
+      document.getElementById("sort-select").value = "name";
+
+      // Alle Fische anzeigen
+      showAllFish();
+      updateResultsCount();
+    }
+
+    function showAllFish() {
+      // Alle Filter-Buttons zurücksetzen
+      document.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("active"));
+      const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
+      if (allBtn) allBtn.classList.add("active");
+
+      // Erweiterte Filter zurücksetzen
+      const searchInput = document.getElementById("search-fish");
+      if (searchInput) {
+        searchInput.value = "";
+        searchInput.dispatchEvent(new Event("input", { bubbles: true }));
       }
-      if (touchEndX > touchStartX + 50) {
-        // Swipe right - vorheriges Bild
-        const prevBtn = container.querySelector('.carousel-btn.prev');
-        if (prevBtn) moveCarousel(prevBtn, -1);
+      const statusFilter = document.getElementById("status-filter");
+      if (statusFilter) {
+        statusFilter.value = "all";
+        statusFilter.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+      const priceRange = document.getElementById("price-range");
+      if (priceRange) {
+        priceRange.value = "200";
+        priceRange.dispatchEvent(new Event("input", { bubbles: true }));
+      }
+      const priceDisplay = document.getElementById("price-display");
+      if (priceDisplay) priceDisplay.textContent = "200€";
+      const sortSelect = document.getElementById("sort-select");
+      if (sortSelect) {
+        sortSelect.value = "name";
+        sortSelect.dispatchEvent(new Event("change", { bubbles: true }));
+      }
+
+      // Alle Fischkarten anzeigen (explizit)
+      document.querySelectorAll(".fish-card").forEach((card) => {
+        card.style.display = "";
+      });
+
+      // Keine Ergebnisse-Nachricht ausblenden
+      const noResults = document.getElementById("no-results");
+      if (noResults) noResults.style.display = "none";
+
+      // Ergebniszähler aktualisieren
+      updateResultsCount();
+    }
+
+    function updateResultsCount() {
+      const visibleCards = document.querySelectorAll('.fish-card:not([style*="display: none"])').length;
+      const totalCards = document.querySelectorAll(".fish-card").length;
+      const resultsCount = document.getElementById("results-count");
+      const noResults = document.getElementById("no-results");
+
+      if (visibleCards === 0) {
+        resultsCount.textContent = "Keine Ergebnisse";
+        noResults.style.display = "block";
+      } else {
+        resultsCount.textContent = `${visibleCards} von ${totalCards} Artikeln`;
+        noResults.style.display = "none";
       }
     }
-  });
-});
 
-// Zusätzliche JavaScript-Funktionen direkt im HTML
-function toggleAdvancedFilters() {
-  const advancedFilters = document.getElementById('advanced-filters');
-  const isVisible = advancedFilters.style.display !== 'none';
-  advancedFilters.style.display = isVisible ? 'none' : 'block';
+    // Event Listeners für erweiterte Funktionen
+    document.addEventListener("DOMContentLoaded", function () {
+      // Preis-Range Display Update
+      const priceRange = document.getElementById("price-range");
+      const priceDisplay = document.getElementById("price-display");
 
-  const toggleBtn = event.target;
-  toggleBtn.textContent = isVisible ? 'Erweiterte Filter' : 'Filter ausblenden';
-}
-
-function resetAllFilters() {
-  // Filter-Buttons zurücksetzen
-  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-  document.querySelector('[data-filter="all"]').classList.add('active');
-
-  // Eingabefelder zurücksetzen
-  document.getElementById('search-fish').value = '';
-  document.getElementById('status-filter').value = 'all';
-  document.getElementById('price-range').value = '200';
-  document.getElementById('price-display').textContent = '200€';
-  document.getElementById('sort-select').value = 'name';
-
-  // Alle Fische anzeigen
-  showAllFish();
-  updateResultsCount();
-}
-
-function showAllFish() {
-  // Alle Filter-Buttons zurücksetzen
-  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-  const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-  if (allBtn) allBtn.classList.add('active');
-
-  // Erweiterte Filter zurücksetzen
-  const searchInput = document.getElementById('search-fish');
-  if (searchInput) {
-    searchInput.value = '';
-    searchInput.dispatchEvent(new Event('input', { bubbles: true }));
-  }
-  const statusFilter = document.getElementById('status-filter');
-  if (statusFilter) {
-    statusFilter.value = 'all';
-    statusFilter.dispatchEvent(new Event('change', { bubbles: true }));
-  }
-  const priceRange = document.getElementById('price-range');
-  if (priceRange) {
-    priceRange.value = '200';
-    priceRange.dispatchEvent(new Event('input', { bubbles: true }));
-  }
-  const priceDisplay = document.getElementById('price-display');
-  if (priceDisplay) priceDisplay.textContent = '200€';
-  const sortSelect = document.getElementById('sort-select');
-  if (sortSelect) {
-    sortSelect.value = 'name';
-    sortSelect.dispatchEvent(new Event('change', { bubbles: true }));
-  }
-
-  // Alle Fischkarten anzeigen (explizit)
-  document.querySelectorAll('.fish-card').forEach(card => {
-    card.style.display = '';
-  });
-
-  // Keine Ergebnisse-Nachricht ausblenden
-  const noResults = document.getElementById('no-results');
-  if (noResults) noResults.style.display = 'none';
-
-  // Ergebniszähler aktualisieren
-  updateResultsCount();
-}
-
-function updateResultsCount() {
-  const visibleCards = document.querySelectorAll('.fish-card:not([style*="display: none"])').length;
-  const totalCards = document.querySelectorAll('.fish-card').length;
-  const resultsCount = document.getElementById('results-count');
-  const noResults = document.getElementById('no-results');
-
-  if (visibleCards === 0) {
-    resultsCount.textContent = 'Keine Ergebnisse';
-    noResults.style.display = 'block';
-  } else {
-    resultsCount.textContent = `${visibleCards} von ${totalCards} Artikeln`;
-    noResults.style.display = 'none';
-  }
-}
-
-// Event Listeners für erweiterte Funktionen
-document.addEventListener('DOMContentLoaded', function() {
-  // Preis-Range Display Update
-  const priceRange = document.getElementById('price-range');
-  const priceDisplay = document.getElementById('price-display');
-
-  if (priceRange && priceDisplay) {
-    priceRange.addEventListener('input', function() {
-      priceDisplay.textContent = this.value + '€';
-    });
-  }
-
-  // Sortierung
-  const sortSelect = document.getElementById('sort-select');
-  if (sortSelect) {
-    sortSelect.addEventListener('change', function() {
-      const sortValue = this.value;
-      if (typeof sortFish === 'function') {
-        sortFish(sortValue);
+      if (priceRange && priceDisplay) {
+        priceRange.addEventListener("input", function () {
+          priceDisplay.textContent = this.value + "€";
+        });
       }
+
+      // Sortierung
+      const sortSelect = document.getElementById("sort-select");
+      if (sortSelect) {
+        sortSelect.addEventListener("change", function () {
+          const sortValue = this.value;
+          if (typeof sortFish === "function") {
+            sortFish(sortValue);
+          }
+          updateResultsCount();
+        });
+      }
+
+      // Suche
+      const searchInput = document.getElementById("search-fish");
+      if (searchInput) {
+        let searchTimeout;
+        searchInput.addEventListener("input", function () {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            if (typeof searchFish === "function") {
+              searchFish(this.value);
+            }
+            updateResultsCount();
+          }, 300); // Debounce für bessere Performance
+        });
+      }
+
+      // Initiale Ergebnis-Zählung
       updateResultsCount();
-    });
-  }
 
-  // Suche
-  const searchInput = document.getElementById('search-fish');
-  if (searchInput) {
-    let searchTimeout;
-    searchInput.addEventListener('input', function() {
-      clearTimeout(searchTimeout);
-      searchTimeout = setTimeout(() => {
-        if (typeof searchFish === 'function') {
-          searchFish(this.value);
-        }
-        updateResultsCount();
-      }, 300); // Debounce für bessere Performance
+      // Observer für dynamische Änderungen
+      const observer = new MutationObserver(updateResultsCount);
+      const fishGrid = document.querySelector(".fish-grid");
+      if (fishGrid) {
+        observer.observe(fishGrid, {
+          childList: true,
+          attributes: true,
+          attributeFilter: ["style"],
+          subtree: true,
+        });
+      }
     });
-  }
-
-  // Initiale Ergebnis-Zählung
-  updateResultsCount();
-
-  // Observer für dynamische Änderungen
-  const observer = new MutationObserver(updateResultsCount);
-  const fishGrid = document.querySelector('.fish-grid');
-  if (fishGrid) {
-    observer.observe(fishGrid, {
-      childList: true,
-      attributes: true,
-      attributeFilter: ['style'],
-      subtree: true
-    });
-  }
-});
-</script>
+  </script>
+</div>

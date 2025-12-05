@@ -3,8 +3,8 @@ layout: post_tank
 title: "Das Mangroven Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
-categories: [ tank ]
-tags: [ walstad, treibholz, einzelhaltung ]
+categories: [tank]
+tags: [walstad, treibholz, einzelhaltung]
 excerpt: "Stark bepflanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
 image: /assets/images/tanks/mangrove/mangrove.webp
 aktiv: true
@@ -49,16 +49,6 @@ entwicklung_text: |
 gallery_dir: /assets/images/tanks/mangrove
 ---
 
-
-
-
-
-
-
-
-
-
-
-
 ## Über das Becken
+
 Das Bodenkraut hat nicht gehalten - Schnecken, Garnelen und Fische haben ihr bestes gegeben, um die Pflanzen aus dem Boden zu graben.
