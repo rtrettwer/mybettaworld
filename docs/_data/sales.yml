@@ -9,7 +9,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Blau-Weiß"
   image: "/assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp"
   gallery:
@@ -46,7 +46,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Rot"
   image: "/assets/images/fish/breedlings/m_feuerrot/IMG_20251203_112952.webp"
   gallery:
@@ -72,7 +72,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Lila-Rot"
   image: "/assets/images/fish/breedlings/m_galaxy_lila_rot/IMG_20251203_114215.webp"
   gallery:
@@ -92,7 +92,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Blau-Weiß-Rot (Koi-Muster)"
   image: "/assets/images/fish/breedlings/m_koi_blau/IMG_20251203_134616.webp"
   gallery:
@@ -114,7 +114,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Weiß-Perlmutt"
   image: "/assets/images/fish/breedlings/m_perlmutt/IMG_20251203_134344.webp"
   gallery:
@@ -131,7 +131,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Rot-Blau"
   image: "/assets/images/fish/breedlings/m_rot_blau/IMG_20251203_135451.webp"
   gallery:
@@ -146,7 +146,7 @@
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
-  price: 15
+  price: "VB"
   color: "Türkis-Grün"
   image: "/assets/images/fish/breedlings/m_tuerkis/IMG_20251203_140316.webp"
   gallery:
@@ -161,7 +161,7 @@
   gender: "female"
   age: "5 Monate"
   size: "4.0cm"
-  price: 10
+  price: "VB"
   color: "Weiß-Marble"
   image: "/assets/images/fish/sonnenschein/IMG_20251016_203402.webp"
   gallery:
@@ -179,7 +179,7 @@
   gender: "male"
   age: "4 Monate"
   size: "4.0cm"
-  price: 10
+  price: "VB"
   color: "Blau-Rot"
   image: "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"
   gallery:
@@ -197,7 +197,7 @@
   gender: "food"
   age: "bestehende Kultur, kann sofort verwendet werden"
   size: "ca. 50ml Dose"
-  price: 6
+  price: "6"
   color: "-"
   image: "/assets/images/food/mikrowuermer/mikrowuermer_staebchen.webp"
   description: "Lebende Mikrowürmer als ideales Erstfutter für Jungfische. Die Kultur kommt in einer kleinen Dose, sofort startklar für die Fütterung."
@@ -207,7 +207,7 @@
   gender: "food"
   age: "aus bestehender Kultur, kann sofort verwendet werden"
   size: "Reagenzglas"
-  price: 5
+  price: "5"
   color: "-"
   image: "/assets/images/food/essigaelchen/essigaelchen_reagenzglas.webp"
   description: "Essigälchen sind ein hervorragendes Lebendfutter für Fischlarven. Die Kultur wird im Reagenzglas abgegeben, einfach zu entnehmen und zu pflegen."
@@ -217,7 +217,7 @@
   gender: "plant"
   age: "frisch aus dem Becken"
   size: "ca. 1 Handvoll"
-  price: 2
+  price: "2"
   color: "grün"
   image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
   description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
@@ -228,7 +228,7 @@
   gender: "plant"
   age: "frisch aus dem Becken"
   size: "ca. 1 Handvoll"
-  price: 2
+  price: "2"
   color: "grün"
   image: "/assets/images/misc/IMAGE_e4cd54f4-e48a-4f91-816e-3031fcbb65e4.webp"
   special_notes: "Aktuell nicht verfügbar - bald wieder da! (Froschbiss bekommt sehr lange Wurzeln! Ich schneide sie etwa 1x die Woche kürzer.)"
@@ -239,10 +239,10 @@
   gender: "plant"
   age: "frisch aus dem Becken"
   size: "ca. 1 Handvoll"
-  price: 2
+  price: "2"
   color: "rot-grün"
   image: "/assets/images/misc/IMG_20251015_093815.webp"
-  special_notes: Wunderschöne rote Farben, wenn die Pflanze genug Licht bekommt.Ansonsten bleiben die Blätter grünlich.
+  special_notes: "Wunderschöne rote Farben, wenn die Pflanze genug Licht bekommt.Ansonsten bleiben die Blätter grünlich."
   description: "Schwimmpflanzen sind ideal für Betta-, Garnelen- und Aufzuchtbecken. Natürlicher Nitratfilter und Versteck für Jungfische."
 
 - name: "Posthornschnecke (1 Stck)"
@@ -250,10 +250,10 @@
   gender: "misc"
   age: "unterschiedliche Größen"
   size: "1"
-  price: 4
+  price: "4"
   color: "rot orange"
   image: "/assets/images/misc/IMG_20251015_094234.webp"
-  special_notes: Schöne rot/orangene Farbe. Manchmal leuchten sie fast golden, je nach Licht.
+  special_notes: "Schöne rot/orangene Farbe. Manchmal leuchten sie fast golden, je nach Licht."
   description: "Posthornschnecken sind nützliche Helfer im Aquarium: Sie fressen Futterreste, halten das Becken sauber und sind dabei pflegeleicht. Mit ihrer schönen Färbung sind sie zudem ein echter Blickfang und ideal für Einsteiger geeignet."
 
 - name: "Posthornschnecke (1 Stck)"
@@ -261,10 +261,10 @@
   gender: "misc"
   age: "unterschiedliche Größen"
   size: "1"
-  price: 4
+  price: "4"
   color: "weiß/perlmutt"
   image: "/assets/images/misc/IMG_20251015_094108.webp"
-  special_notes: Farbe wirkt hell, fast wie perlmutt.
+  special_notes: "Farbe wirkt hell, fast wie perlmutt."
   description: "Posthornschnecken sind nützliche Helfer im Aquarium: Sie fressen Futterreste, halten das Becken sauber und sind dabei pflegeleicht. Mit ihrer schönen Färbung sind sie zudem ein echter Blickfang und ideal für Einsteiger geeignet."
 # Beispiele für andere Status:
 # - name: "Luna"
