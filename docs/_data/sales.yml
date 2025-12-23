@@ -5,12 +5,13 @@
 # ===== Jungfische (3 Monate alt) =====
 
 - name: "Blauer Wasserdrache"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Blau-Weiß"
+  sold_date: "2025-12-23"
   image: "/assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp"
@@ -42,12 +43,13 @@
   special_notes: "Jungfisch - Färbung und Flossen entwickeln sich noch weiter"
 
 - name: "Feuerrot"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Rot"
+  sold_date: "2025-12-23"
   image: "/assets/images/fish/breedlings/m_feuerrot/IMG_20251203_112952.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_feuerrot/IMG_20251203_112952.webp"
@@ -88,12 +90,13 @@
   special_notes: "Jungfisch - Galaxy-Muster entwickelt sich noch weiter"
 
 - name: "Koi Blau"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Blau-Weiß-Rot (Koi-Muster)"
+  sold_date: "2025-12-23"
   image: "/assets/images/fish/breedlings/m_koi_blau/IMG_20251203_134616.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_koi_blau/IMG_20251203_134616.webp"
@@ -127,12 +130,13 @@
   special_notes: "Jungfisch - Perlmutt-Glanz wird mit zunehmendem Alter intensiver"
 
 - name: "Rot-Blau"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Rot-Blau"
+  sold_date: "2025-12-23"
   image: "/assets/images/fish/breedlings/m_rot_blau/IMG_20251203_135451.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_rot_blau/IMG_20251203_135451.webp"
