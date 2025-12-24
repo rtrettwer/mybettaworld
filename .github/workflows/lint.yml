@@ -24,7 +24,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: "3.4.8"
           bundler-cache: true
           working-directory: docs
 
@@ -40,7 +40,7 @@ jobs:
       - name: Setup Python for pre-commit
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
+          python-version: "3.14"
 
       - name: Install pre-commit
         run: pip install pre-commit
@@ -81,7 +81,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: "3.4.8"
           bundler-cache: true
           working-directory: docs
 
@@ -108,7 +108,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3"
+          ruby-version: "3.4.8"
           bundler-cache: true
           working-directory: docs
 
