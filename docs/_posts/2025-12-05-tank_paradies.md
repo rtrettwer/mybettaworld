@@ -17,11 +17,11 @@ beleuchtung: 3x Hygger Submersible LED (im Becken) + 2x kleine LEDs von oben fü
 bodengrund: Pflanzensubstrat + heller Sand (online bestellt)
 deko: Wurzeln und Steine (gebraucht von Kleinanzeigen + Kölle Zoo + Pflanzen Kölle Unterhaching), Bodenschutzgitter
 startdatum: Oktober 2025 (ca. 1-2 Monate her)
-besatz: Ca. 100 Jungfische (Betta splendens) aus erster Zucht (einige bereits verkauft), 6 Marmor Corydoras, Neocaridina Garnelen (wenige überlebende), Amano Garnelen (wenige), 6 Piano Schnecken
+besatz: 8 Betta-Weibchen, 17 Neon Tetra, 7 Otocinclus, 6 Marmor Corydoras, 6 Amano Garnelen, einige Neocaridina Garnelen, 6 Piano Schnecken
 pflanzen: Verschiedene Anubias-Arten (an Wurzeln), Roter Tigerlotus, Wasserkelch, Brasilianisches Schwertblatt, Monte Carlo (auf Gittern), Asiatische Vallisnerien, große Pflanze aus Mangroven-Becken
 technik: 2x Hygger Heizstäbe (links & rechts), JBL CristalProfi e702 Außenfilter, 5x LED-Lampen, Starterbakterien
 heizung: 2x Hygger Heizstäbe, eingestellt auf 25°C (hält konstant 24-25°C)
-besonderheiten: Erstes Becken mit hellem Grund! Gebraucht für 20€ gekauft. Ursprünglich als Paludarium geplant, aber wegen Kratzern als Aquarium umgesetzt. Beeindruckendes Wurzel-Hardscape mit Höhlen. Bewachsene Gitter gegen wühlende Fische. Der arme DHL-Bote (30kg Sand!). Herausforderung durch Überbesatz - erstes Algenproblem trotz Filter. Marmor Corydoras sehen fantastisch auf hellem Sand aus! Ich sitze gerne auf meinem Bodenstuhl davor und beobachte die Kleinen.
+besonderheiten: Erstes Becken mit hellem Grund! Gebraucht für 20€ gekauft. Ursprünglich als Paludarium geplant, aber wegen Kratzern als Aquarium umgesetzt. Beeindruckendes Wurzel-Hardscape mit Höhlen. Bewachsene Gitter gegen wühlende Fische. Der arme DHL-Bote (30kg Sand!). Ursprünglich mit 258 Jungfischen überbesetzt - erstes Algenproblem trotz Filter. Am 02.01.2026 alle Jungfische an Aquaristik Paradies Haidhausen abgegeben und im Tausch neue Fische bekommen. Jetzt harmonisches Gesellschaftsbecken mit Betta-Sorority. Marmor Corydoras sehen fantastisch auf hellem Sand aus! Ich sitze gerne auf meinem Bodenstuhl davor und beobachte die Fische.
 # Wasserparameter
 water_parameters:
   temperature: 24.5
@@ -64,8 +64,12 @@ entwicklung:
     ereignis: 6 Marmor Corydoras eingezogen - endlich Bodenbewohner! Sie sehen auf dem hellen Sand wunderschön aus.
   - datum: 22.12.2025
     ereignis: 6 Piano Schnecken dazu - sie scheinen am besten zu überleben und sind auch noch hübsch!
-  - datum: Januar 2026 (geplant)
-    ereignis: Übrige Jungfische werden an einen Zooladen abgegeben. Der Verkauf läuft zu schleppend und das Becken ist übersetzt.
+  - datum: 02.01.2026
+    ereignis: Alle 258 Jungfische (!) an Aquaristik Paradies Haidhausen abgegeben. Im Tausch 11 Neon Tetra (Schwarm jetzt 17), 6 Otocinclus und 6 große Amano Garnelen bekommen. Der Schwarm aus dem Quarantäne-Becken ist mit ins Paradies-Becken umgezogen.
+  - datum: 02.01.2026
+    ereignis: Shadow ins Paradies-Becken umgezogen. Kampfi scheucht sie im Dschungel-Becken zu sehr, in der Sorority ist sie besser aufgehoben.
+  - datum: Januar 2026
+    ereignis: Erste Algen zeigen sich weiterhin, aber die Situation stabilisiert sich. Schnellwachsende Pflanzen helfen.
 entwicklung_text: |
   Mein größtes Projekt! Das Paradies-Becken ist mein erstes mit hellem Bodengrund - eine schöne Abwechslung. Die Aquarium-Geschichte begann mit einem Schnäppchen auf Kleinanzeigen (20€) vor 1-2 Monaten.
 
@@ -75,14 +79,16 @@ entwicklung_text: |
 
   Bei der Bepflanzung habe ich bewusst auf bewachsene Gitter gesetzt (Monte Carlo, Brasilianisches Schwertblatt). Das war die richtige Entscheidung - die wühlfreudigen Jungfische können die Pflanzen so nicht komplett ausbuddeln!
 
-  Mit etwa 100 Jungfischen war das Becken allerdings zu stark besetzt. Trotz Filter und dichter Bepflanzung zeigten sich erste Algenprobleme durch die vielen Ausscheidungen. Ich habe schnellwachsende Pflanzen ergänzt, um den Algen Konkurrenz zu machen. Einige Jungfische habe ich bereits verkauft, aber der Verkauf läuft schleppend. Im Januar werde ich die übrigen an einen Zooladen abgeben - das Becken braucht Entlastung.
+  Mit etwa 100 Jungfischen war das Becken allerdings zu stark besetzt. Trotz Filter und dichter Bepflanzung zeigten sich erste Algenprobleme durch die vielen Ausscheidungen. Ich habe schnellwachsende Pflanzen ergänzt, um den Algen Konkurrenz zu machen. Der Verkauf lief leider schleppend, und ich habe mich bei der Anzahl der Jungfische total verschätzt - ich bin immer von etwa 100 Fischen ausgegangen.
 
-  Ende Dezember sind 6 Marmor Corydoras und 6 Piano Schnecken eingezogen - die Panzerwelse sehen auf dem hellen Sand fantastisch aus! Die Garnelen haben es leider schwer bei so vielen räuberischen Jungfischen, einige haben aber überlebt.
+  Am 02.01.2026 habe ich alle Jungfische an das Aquaristik Paradies Haidhausen abgegeben. Beim Zählen stellte sich heraus: Es waren trotz Verkauf noch 258 Jungfische! Die waren total nett und haben einen coolen kleinen Laden mitten in München. Im Tausch habe ich meinen Neon Tetra Schwarm um 11 auf 17 Fische aufgestockt, 6 Otocinclus dazubekommen (damit mein einer Oto nicht vor Einsamkeit verkümmert) und 6 relativ große Amano Garnelen.
 
-  Ich habe mir einen Bodenstuhl gekauft und sitze sehr gerne vor dem Becken - es ist so entspannend, den kleinen Kampffischen beim Schwimmen zuzusehen. Trotz der Herausforderungen mit der Übersetzung bleibt es mein Lieblingsbecken!
+  Ende Dezember sind 6 Marmor Corydoras und 6 Piano Schnecken eingezogen - die Panzerwelse sehen auf dem hellen Sand fantastisch aus! Shadow ist Anfang Januar aus dem Dschungel-Becken hierher umgezogen, da Kampfi sie zu sehr gescheucht hat. In der Sorority mit 7 anderen Betta-Weibchen ist sie besser aufgehoben.
+
+  Ich habe mir einen Bodenstuhl gekauft und sitze sehr gerne vor dem Becken - es ist so entspannend, den Fischen beim Schwimmen zuzusehen. Trotz der anfänglichen Herausforderungen mit der Überbesetzung entwickelt sich das Becken jetzt sehr schön!
 ---
 
-Das **Paradies Becken** ist mein größtes und ambitioniertestes Projekt! Mit 160 Litern beherbergt es etwa 100 Jungfische aus meiner ersten erfolgreichen Zucht - ein wahrer Traum für jeden Betta-Züchter.
+Das **Paradies Becken** ist mein größtes und ambitioniertestes Projekt! Mit 160 Litern beherbergte es ursprünglich etwa 100 Jungfische aus meiner ersten erfolgreichen Zucht. Nach der Abgabe am 02.01.2026 stellte sich heraus: Es waren tatsächlich 258 Jungfische! Mittlerweile ist es ein harmonisches Gesellschaftsbecken mit einer Betta-Sorority.
 
 ## Die Entstehungsgeschichte
 
@@ -169,16 +175,21 @@ Vor 2 Tagen habe ich einen **JBL CristalProfi e702 greenline Außenfilter** ange
 
 ### Die Hauptbewohner
 
-Etwa **100 Jungfische** aus meiner ersten Zucht! Mit 160 Litern haben sie endlich genug Platz zum Wachsen und ihre Persönlichkeiten zu entwickeln.
+Ursprünglich etwa **100 Jungfische** aus meiner ersten Zucht - dachte ich jedenfalls! Als ich sie am **02.01.2026** an das Aquaristik Paradies Haidhausen abgegeben habe, stellte sich beim Zählen heraus: Es waren trotz vorheriger Verkäufe noch **258 Jungfische**! Ich hatte mich total verschätzt.
 
-### Die Mitbewohner
+Der Laden war super nett und ich habe im Tausch neue Fische bekommen, die jetzt das Becken beleben:
 
+### Die neue Besatzung
+
+- **8 Betta-Weibchen** - eine harmonische Sorority
+- **17 Neon Tetra** (11 neue + 6 aus dem Quarantäne-Becken)
+- **7 Otocinclus** (6 neue + mein einsamer Oto von früher)
 - **6 Marmor Corydoras** (seit 22.12.2025) - sehen fantastisch auf dem hellen Sand aus!
-- **6 Piano Schnecken** - hübsch und robust, scheinen am besten zu überleben
-- **Einige überlebende Neocaridina Garnelen** (ursprünglich 30 orange)
-- **Einige überlebende Amano Garnelen** (ursprünglich 5)
+- **6 Amano Garnelen** (große, kräftige Exemplare)
+- **Einige Neocaridina Garnelen** - die Überlebenden
+- **6 Piano Schnecken** - hübsch und robust
 
-Leider haben sich die Garnelen als sehr interessant für die jungen Bettas erwiesen - sie werden gejagt. Einige haben in den vielen Verstecken überlebt, aber bei so vielen räuberischen Jungfischen ist es schwierig. Die Corydoras und Piano Schnecken hingegen kommen gut zurecht!
+**Shadow** ist Anfang Januar aus dem [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken hierher umgezogen, da Kampfi sie dort zu sehr gescheucht hat. In der Sorority mit den anderen Weibchen ist sie viel entspannter!
 
 ## Das besondere Highlight
 
@@ -194,14 +205,20 @@ Jeder entwickelt langsam seine eigene Persönlichkeit - manche sind mutig und ne
 
 Die Pflanzen scheinen sich wohlzufühlen, besonders die **bewachsenen Gitter** waren eine richtig gute Entscheidung.
 
-### Herausforderungen durch Überbesatz
+### Die Überbesetzungs-Phase
 
-Mit etwa 100 Jungfischen war das Becken allerdings **zu stark besetzt**. Trotz Filter und dichter Bepflanzung kam es zum **ersten Algenproblem** - die vielen Ausscheidungen waren einfach zu viel. Ich habe daraufhin **schnellwachsende Pflanzen** ergänzt, um den Algen Konkurrenz um die Nährstoffe zu machen.
+Mit etwa 100 Jungfischen - oder wie sich herausstellte, **258 Jungfischen** - war das Becken massiv **überbesetzt**. Trotz Filter und dichter Bepflanzung kam es zum **ersten Algenproblem in meiner Aquaristik-Laufbahn** - die vielen Ausscheidungen waren einfach zu viel. Ich habe daraufhin **schnellwachsende Pflanzen** ergänzt, um den Algen Konkurrenz um die Nährstoffe zu machen.
 
-Einige Jungfische habe ich bereits verkauft, aber der **Verkauf läuft leider schleppend**. Im **Januar 2026** werde ich die übrigen Jungfische an einen Zooladen abgeben - das Becken braucht Entlastung, und die Fische brauchen gute Zuhause.
+Der **Verkauf lief leider schleppend**, obwohl die Fische wunderschön waren. Am **02.01.2026** habe ich daher alle übrigen Jungfische an das **Aquaristik Paradies Haidhausen** abgegeben - ein cooler kleiner Laden mitten in München mit total netten Mitarbeitern!
+
+### Der Neuanfang
+
+Im Tausch habe ich neue Fische bekommen und das Becken neu besetzt. Die **Neon Tetra** aus dem Quarantäne-Becken sind mit eingezogen, sodass ich jetzt einen schönen Schwarm von 17 Tieren habe. Die **6 Otocinclus** sorgen für Algenkontrolle, und die **6 großen Amano Garnelen** sind robust genug, um nicht von den Bettas gejagt zu werden.
+
+Die **8 Betta-Weibchen** bilden eine harmonische Sorority. **Shadow** ist aus dem Dschungel-Becken hierher umgezogen, da Kampfi sie dort zu sehr rumgescheucht hat - hier ist sie viel entspannter!
 
 ### Neue Mitbewohner
 
-Ende Dezember sind **6 Marmor Corydoras** und **6 Piano Schnecken** eingezogen. Die Panzerwelse sehen auf dem hellen Sand einfach **fantastisch** aus - eine sehr schöne Ergänzung! Die Piano Schnecken haben sich als robust erwiesen.
+Die **6 Marmor Corydoras** (seit 22.12.2025) sehen auf dem hellen Sand einfach **fantastisch** aus - eine sehr schöne Ergänzung! Die **6 Piano Schnecken** haben sich als robust erwiesen und sind auch noch hübsch anzusehen.
 
-Das Paradies-Becken bleibt trotz der Herausforderungen der **Stolz meiner Aquaristik-Sammlung** und mein Lieblingsplatz zum Entspannen! 🐠✨
+Das Paradies-Becken hat sich von einem überfüllten Aufzuchtbecken zu einem **harmonischen Gesellschaftsbecken** entwickelt und bleibt der **Stolz meiner Aquaristik-Sammlung** und mein Lieblingsplatz zum Entspannen! 🐠✨

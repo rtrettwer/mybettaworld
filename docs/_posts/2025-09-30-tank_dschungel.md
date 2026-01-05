@@ -16,7 +16,7 @@ beleuchtung: LED
 bodengrund: Pflanzengranulat, weißer Sand, Kies, schwarzer Sand
 deko: 1 Mopani Wurzel, Kokosnusshöhle, Kunststoff Höhlensystem, Kunststoff Steintor, roter Lavastrom, Garnelenhöhle
 startdatum: XX.03.2025
-besatz: 3 Betta splendens (Kampfi, Shadow, Lila), 6 Zwergpanzerwelse, diverse Neocaridina Garnelen, 3 Rennschnecken, diverse Posthornschnecken und Blasenschnecken
+besatz: 2 Betta splendens (Kampfi, Lila), 6 Zwergpanzerwelse, diverse Neocaridina Garnelen, 3 Rennschnecken, diverse Posthornschnecken und Blasenschnecken
 pflanzen: Anubias, Javafarn, Cryptocoryne,Flammenmoos, Alternathea reineckii, Schwimmpflanzen (Schwimmfarn, Froschbiss)
 technik: Heizstab, Luftheber
 heizung: Heizstab
@@ -38,6 +38,8 @@ entwicklung:
     ereignis: Kampfi dazu
   - datum: 08.10.2025
     ereignis: Heute gab es einen Wasserwechsel von etwa 30%. Außerdem habe ich die rote Pflanze umgesetzt und neue dazu gepflanzt. Außerdem einige stark wachsende Pflanzen zurückgeschnitten. Jetzt ist mehr Licht und mehr freier Schwimmraum verfügbar - aber dadurch war besonders Lila sehr gestresst, weil Kampfi sie ständig gesehen und verfolgt hat. Sie hat seit gestern deutliche Stressstreifen. Deshalb habe ich sie testweise zu den Jungischen ins Babybecken gesetzt. Mal sehen ob sie sich vertragen und sie entspannt ist, wenn nur kleine Babys um sie herum sind.
+  - datum: Januar 2026
+    ereignis: Shadow ist ins Paradies-Becken umgezogen, da Kampfi sie zu sehr gescheucht hat. Kampfi ist seit dem Umzug wieder ruhiger geworden.
 entwicklung_text: |
   Dieses Becken hatte die meisten Veränderungen und Rescapes erlebt. Ggf. werde ich hier Mal noch ausführlicher ergänzen. Ansonsten gerne Bilder ansehen :)
 gallery_dir: /assets/images/tanks/jungle

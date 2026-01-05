@@ -11,7 +11,7 @@
   size: "2.5cm"
   price: "VB"
   color: "Blau-Weiß"
-  sold_date: "2025-12-23"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp"
@@ -49,7 +49,7 @@
   size: "2.5cm"
   price: "VB"
   color: "Rot"
-  sold_date: "2025-12-23"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_feuerrot/IMG_20251203_112952.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_feuerrot/IMG_20251203_112952.webp"
@@ -96,7 +96,7 @@
   size: "2.5cm"
   price: "VB"
   color: "Blau-Weiß-Rot (Koi-Muster)"
-  sold_date: "2025-12-23"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_koi_blau/IMG_20251203_134616.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_koi_blau/IMG_20251203_134616.webp"
@@ -136,7 +136,7 @@
   size: "2.5cm"
   price: "VB"
   color: "Rot-Blau"
-  sold_date: "2025-12-23"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_rot_blau/IMG_20251203_135451.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_rot_blau/IMG_20251203_135451.webp"
@@ -161,12 +161,13 @@
 # ===== Erwachsene Fische =====
 
 - name: "Sonnenschein"
-  status: "available"
+  status: "reserved"
   gender: "female"
   age: "5 Monate"
   size: "4.0cm"
   price: "VB"
   color: "Weiß-Marble"
+  reserved_date: "2026-01-05"
   image: "/assets/images/fish/sonnenschein/IMG_20251016_203402.webp"
   gallery:
     - "/assets/images/fish/sonnenschein/IMG_20251016_203402.webp"
@@ -179,12 +180,13 @@
   special_notes: "Marble-Gene - Farbveränderung im Laufe der Zeit möglich"
 
 - name: "Sir Pryce"
-  status: "available"
+  status: "reserved"
   gender: "male"
   age: "4 Monate"
   size: "4.0cm"
   price: "VB"
   color: "Blau-Rot"
+  reserved_date: "2026-01-05"
   image: "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"
   gallery:
     - "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"

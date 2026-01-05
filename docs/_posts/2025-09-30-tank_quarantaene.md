@@ -17,7 +17,7 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Tetra Complete Substrate, schwarzer feiner Sand
 deko: Große Fingerwurzel, Drachenstein,Kokosnuss-Höhle, großer Stein von einer Wanderung ;-)
 startdatum: 20.05.2024
-besatz: Betta splendens Männchen (Sir Pryce)
+besatz: Betta splendens Männchen (Sir Pryce, reserviert), 6 Neon Tetra (temporär, bis Sonnenschein und Sir Pryce abgeholt werden)
 pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher, Lichtwachser
 technik:
 heizung: Heizstab auf 26°C
@@ -42,6 +42,10 @@ entwicklung:
     ereignis: Ich habe beim Wasserwechsel aus dem Dschungel-Becken einige Garnelen abgesaugt. Die habe ich aus dem Dreckwasser rausgefischt und hier eingesetzt. Mal sehen, ob Sir Pryce sie am Leben lässt, er ist schon sehr beschützend seinen Jungen gegenüber. Aber das Becken könnte dringend ein paar Algenvernichter gebrauchen...
   - datum: 28.11.2025
     ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Sir Pryce lebt jetzt glücklich alleine in diesem Becken und baut wieder Schaumnester!
+  - datum: 02.01.2026
+    ereignis: 6 Neon Tetra aus dem Paradies-Becken temporär hier eingesetzt, nachdem die 258 Jungfische abgegeben wurden. Im Tausch kamen 11 neue Neons dazu, die direkt ins Paradies-Becken gingen.
+  - datum: Januar 2026
+    ereignis: Sir Pryce und Sonnenschein sind reserviert und werden bald abgeholt. Danach wird das Becken frei für ein potentielles Betta-Männchen, falls eines der behaltenen Weibchen doch ein Männchen ist.
 ---
 
 ## Quarantäne
