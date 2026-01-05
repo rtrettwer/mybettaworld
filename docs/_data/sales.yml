@@ -70,12 +70,13 @@
   special_notes: "Jungfisch - Färbung intensiviert sich noch mit zunehmendem Alter"
 
 - name: "Galaxy Lila-Rot"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Lila-Rot"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_galaxy_lila_rot/IMG_20251203_114215.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_galaxy_lila_rot/IMG_20251203_114215.webp"
@@ -113,12 +114,13 @@
   special_notes: "Jungfisch - Koi-Muster kann sich noch verändern"
 
 - name: "Perlmutt"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Weiß-Perlmutt"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_perlmutt/IMG_20251203_134344.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_perlmutt/IMG_20251203_134344.webp"
@@ -146,12 +148,13 @@
   special_notes: "Jungfisch - Farbverteilung entwickelt sich noch"
 
 - name: "Türkis"
-  status: "available"
+  status: "sold"
   gender: "male"
   age: "3 Monate"
   size: "2.5cm"
   price: "VB"
   color: "Türkis-Grün"
+  sold_date: "2026-01-02"
   image: "/assets/images/fish/breedlings/m_tuerkis/IMG_20251203_140316.webp"
   gallery:
     - "/assets/images/fish/breedlings/m_tuerkis/IMG_20251203_140316.webp"

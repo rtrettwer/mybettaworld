@@ -64,6 +64,10 @@ entwicklung:
     ereignis: 6 Marmor Corydoras eingezogen - endlich Bodenbewohner! Sie sehen auf dem hellen Sand wunderschön aus.
   - datum: 22.12.2025
     ereignis: 6 Piano Schnecken dazu - sie scheinen am besten zu überleben und sind auch noch hübsch!
+  - datum: Dezember 2025
+    ereignis: Einige Garnelen überleben, aber es ist schwierig bei so vielen räuberischen Bettas. Die robusten Amanos halten sich am besten.
+  - datum: Januar 2026
+    ereignis: Trotz Filter zum ersten Mal Algenproblem durch zu viele Fische und deren Ausscheidungen. Schnellwachsende Pflanzen hinzugefügt, um den Algen Nährstoffe wegzunehmen.
   - datum: 02.01.2026
     ereignis: Alle 258 Jungfische (!) an Aquaristik Paradies Haidhausen abgegeben. Im Tausch 11 Neon Tetra (Schwarm jetzt 17), 6 Otocinclus und 6 große Amano Garnelen bekommen. Der Schwarm aus dem Quarantäne-Becken ist mit ins Paradies-Becken umgezogen.
   - datum: 02.01.2026
@@ -79,9 +83,12 @@ entwicklung_text: |
 
   Bei der Bepflanzung habe ich bewusst auf bewachsene Gitter gesetzt (Monte Carlo, Brasilianisches Schwertblatt). Das war die richtige Entscheidung - die wühlfreudigen Jungfische können die Pflanzen so nicht komplett ausbuddeln!
 
-  Mit etwa 100 Jungfischen war das Becken allerdings zu stark besetzt. Trotz Filter und dichter Bepflanzung zeigten sich erste Algenprobleme durch die vielen Ausscheidungen. Ich habe schnellwachsende Pflanzen ergänzt, um den Algen Konkurrenz zu machen. Der Verkauf lief leider schleppend, und ich habe mich bei der Anzahl der Jungfische total verschätzt - ich bin immer von etwa 100 Fischen ausgegangen.
+  Mit etwa 100 Jungfischen war das Becken allerdings zu stark besetzt. Trotz Filter und dichter Bepflanzung zeigten sich erste Algenprobleme durch die vielen Ausscheidungen - zu viele Fische produzieren trotz Filter einfach zu viele Nährstoffe. Ich habe schnellwachsende Pflanzen ergänzt, um den Algen Konkurrenz zu machen und es ihnen etwas schwerer zu machen. Der Verkauf lief leider schleppend, und ich habe mich bei der Anzahl der Jungfische total verschätzt - ich bin immer von etwa 100 Fischen ausgegangen.
+
+  Die Garnelensituation war ebenfalls herausfordernd - bei so vielen räuberischen Bettas ist es schwierig, Garnelen am Leben zu halten. Einige Neocaridina haben überlebt, aber es ist insgesamt ein schwieriges Unterfangen. Die größeren Amano Garnelen erweisen sich als robuster.
 
   Am 02.01.2026 habe ich alle Jungfische an das Aquaristik Paradies Haidhausen abgegeben. Beim Zählen stellte sich heraus: Es waren trotz Verkauf noch 258 Jungfische! Die waren total nett und haben einen coolen kleinen Laden mitten in München. Im Tausch habe ich meinen Neon Tetra Schwarm um 11 auf 17 Fische aufgestockt, 6 Otocinclus dazubekommen (damit mein einer Oto nicht vor Einsamkeit verkümmert) und 6 relativ große Amano Garnelen.
+
 
   Ende Dezember sind 6 Marmor Corydoras und 6 Piano Schnecken eingezogen - die Panzerwelse sehen auf dem hellen Sand fantastisch aus! Shadow ist Anfang Januar aus dem Dschungel-Becken hierher umgezogen, da Kampfi sie zu sehr gescheucht hat. In der Sorority mit 7 anderen Betta-Weibchen ist sie besser aufgehoben.
 

@@ -1,6 +1,7 @@
-{%- if post.date -%}
+{%- if post.fish_birth -%}
+{%- assign birth_date = post.fish_birth | date: "%Y-%m-%d" -%}
 <span class="fish-timeline-date-inner"
-  >{{ post.date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March",
+  >{{ birth_date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March",
   "März" | replace: "April", "April" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" |
   replace: "August", "August" | replace: "September", "September" | replace: "October", "Oktober" | replace: "November",
   "November" | replace: "December", "Dezember" }}</span
