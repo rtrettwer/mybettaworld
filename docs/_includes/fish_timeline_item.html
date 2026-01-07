@@ -77,16 +77,16 @@
     </div>
     <a href="{{ post.url | relative_url }}" class="timeline-avatar-link">
       <div class="timeline-avatar timeline-avatar-{{ side }}">
-        <span class="timeline-avatar-gradient">
+        <span class="timeline-avatar-gradient {% if is_sold %}timeline-avatar-sold{% endif %}">
           <span class="timeline-avatar-inner">
             {% if post.timeline_image %}
-            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img" />
+            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img {% if is_sold %}timeline-avatar-img-sold{% endif %}" />
             {% else %} {% assign fish_slug = post.title | slugify %} {% assign timeline_image_path =
             '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
             <img
               src="{{ timeline_image_path | relative_url }}"
               alt="{{ post.title }}"
-              class="timeline-avatar-img"
+              class="timeline-avatar-img {% if is_sold %}timeline-avatar-img-sold{% endif %}"
               onerror="
                 this.onerror = null;
                 this.style.display = 'none';
@@ -97,10 +97,13 @@
             {% endif %}
           </span>
         </span>
+        {% if is_sold %}
+        <span class="timeline-sold-badge">Verkauft</span>
+        {% endif %}
       </div>
     </a>
     <div
-      class="timeline-card gradient-card timeline-card-clickable"
+      class="timeline-card gradient-card timeline-card-clickable {% if is_sold %}timeline-card-sold{% endif %}"
       onclick="window.location='{{ post.url | relative_url }}'"
       tabindex="0"
       role="link"

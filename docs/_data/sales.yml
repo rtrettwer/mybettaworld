@@ -183,13 +183,13 @@
   special_notes: "Marble-Gene - Farbveränderung im Laufe der Zeit möglich"
 
 - name: "Sir Pryce"
-  status: "reserved"
+  status: "sold"
   gender: "male"
   age: "4 Monate"
   size: "4.0cm"
   price: "VB"
   color: "Blau-Rot"
-  reserved_date: "2026-01-05"
+  sold_date: "2026-01-07"
   image: "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"
   gallery:
     - "/assets/images/fish/sirPryce/IMG_20251016_204625.webp"

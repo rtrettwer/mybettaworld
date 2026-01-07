@@ -9,7 +9,7 @@ excerpt: "Bandit ist ein temperamentvoller Betta mit wunderschönen 'Galaxie-Sch
 image: /assets/images/fish/bandit/PA162660.webp
 timeline_image: /assets/images/fish/bandit/bandit_timeline.webp
 fish_name: "Bandit"
-fish_birth: "15.03.2025"
+fish_birth: "2025-03-15"
 fish_price: "36 €"
 fish_type: "Betta splendens (Domestic), Plakat (Kurzflosser)"
 fish_fins: "Plakat (Kurzflosser)"

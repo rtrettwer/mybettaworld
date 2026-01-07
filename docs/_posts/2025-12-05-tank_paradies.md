@@ -72,6 +72,8 @@ entwicklung:
     ereignis: Alle 258 Jungfische (!) an Aquaristik Paradies Haidhausen abgegeben. Im Tausch 11 Neon Tetra (Schwarm jetzt 17), 6 Otocinclus und 6 große Amano Garnelen bekommen. Der Schwarm aus dem Quarantäne-Becken ist mit ins Paradies-Becken umgezogen.
   - datum: 02.01.2026
     ereignis: Shadow ins Paradies-Becken umgezogen. Kampfi scheucht sie im Dschungel-Becken zu sehr, in der Sorority ist sie besser aufgehoben.
+  - datum: 07.01.2026
+    ereignis: Lila ins Paradies-Becken umgesetzt. Nachdem Sonnenschein und Sir Pryce verkauft wurden, lebt Lila jetzt in der Sorority mit 7 weiteren Betta-Weibchen.
   - datum: Januar 2026
     ereignis: Erste Algen zeigen sich weiterhin, aber die Situation stabilisiert sich. Schnellwachsende Pflanzen helfen.
 entwicklung_text: |
@@ -188,7 +190,7 @@ Der Laden war super nett und ich habe im Tausch neue Fische bekommen, die jetzt 
 
 ### Die neue Besatzung
 
-- **8 Betta-Weibchen** - eine harmonische Sorority
+- **8 Betta-Weibchen** - eine harmonische Sorority (inkl. Lila und Shadow)
 - **17 Neon Tetra** (11 neue + 6 aus dem Quarantäne-Becken)
 - **7 Otocinclus** (6 neue + mein einsamer Oto von früher)
 - **6 Marmor Corydoras** (seit 22.12.2025) - sehen fantastisch auf dem hellen Sand aus!
@@ -197,6 +199,8 @@ Der Laden war super nett und ich habe im Tausch neue Fische bekommen, die jetzt 
 - **6 Piano Schnecken** - hübsch und robust
 
 **Shadow** ist Anfang Januar aus dem [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken hierher umgezogen, da Kampfi sie dort zu sehr gescheucht hat. In der Sorority mit den anderen Weibchen ist sie viel entspannter!
+
+**Lila** ist am 07.01.2026 aus dem [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken ins Paradies-Becken umgezogen, nachdem [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) und [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) verkauft wurden und zusammen in ihr neues Zuhause gezogen sind.
 
 ## Das besondere Highlight
 

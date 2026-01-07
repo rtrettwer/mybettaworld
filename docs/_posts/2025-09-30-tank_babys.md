@@ -21,7 +21,7 @@ besatz: Neocaridina Garnelen (Farbmix), Posthornschnecken, Blasenschnecken, 1 St
 pflanzen: Javafarn, Anubias, Perlkraut, Nadelsims, Rote Hintergrundpflanze, Froschbiss, Salvinia, phylantus fluitans
 technik: Heizstab, Thermometer
 heizung: Heizstab Aquael, 26 °C
-besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien
+besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien. Seit 28.11.2025 Garnelenbecken. Heizung seit 07.01.2026 ausgeschaltet.
 # Wasserparameter
 water_parameters:
   temperature: 26

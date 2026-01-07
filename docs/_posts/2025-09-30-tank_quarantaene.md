@@ -21,7 +21,7 @@ besatz: Betta splendens M채nnchen (Sir Pryce, reserviert), 6 Neon Tetra (tempor�
 pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-B채umchen, gr체ner Wucher, Lichtwachser
 technik:
 heizung: Heizstab auf 26째C
-besonderheiten: Trittschalld채mmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund
+besonderheiten: Trittschalld채mmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund. Seit 07.01.2026 ohne Betta-Besatz - Heizung ausgeschaltet, nur noch Beleuchtung und Luftheber aktiv.
 # Wasserparameter
 water_parameters:
   temperature: 26

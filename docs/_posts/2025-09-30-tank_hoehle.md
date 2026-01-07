@@ -20,7 +20,7 @@ besatz: Betta splendens Weibchen (Lila und Sonnenschein), Posthornschnecken, Bla
 pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
 heizung: Heizstab
-besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett!
+besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett! Seit 07.01.2026 ohne Betta-Besatz - Heizung ausgeschaltet, nur noch Beleuchtung und Luftheber aktiv.
 # Wasserparameter
 water_parameters:
   temperature: 25

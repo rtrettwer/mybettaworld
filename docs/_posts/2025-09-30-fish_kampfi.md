@@ -9,7 +9,7 @@ excerpt: "Kampfi ist mein friedlichster Betta"
 image: /assets/images/fish/kampfi/IMG_20251015_205247.webp
 timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
-fish_birth: "15.01.2025"
+fish_birth: "2025-01-15"
 fish_age: 9 Monate
 fish_price: 36 €
 fish_type: Betta splendens (Domestic)
