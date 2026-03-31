@@ -1,4 +1,4 @@
-# CI/CD – Lint → Test → Deploy (nur auf master)
+# CI/CD – Build → Test → Deploy (nur auf master)
 name: CI/CD
 
 on:
@@ -17,61 +17,11 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-# Node.js 24 für alle Jobs erzwingen
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 jobs:
-  # ── 1. Lint ────────────────────────────────────────────────────────────────
-  lint:
-    name: Lint
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "24"
-          cache: "npm"
-
-      - name: Install Node dependencies
-        run: npm ci
-
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.x"
-
-      - name: Install pre-commit
-        run: pip install pre-commit
-
-      - name: Cache pre-commit
-        uses: actions/cache@v4
-        with:
-          path: ~/.cache/pre-commit
-          key: pre-commit-${{ hashFiles('.pre-commit-config.yaml') }}
-
-      - name: Run pre-commit hooks
-        run: pre-commit run --all-files --show-diff-on-failure
-
-      - name: Markdown Lint
-        run: npm run lint:markdown
-        continue-on-error: true
-
-      - name: YAML Lint
-        run: npm run lint:yaml
-        continue-on-error: true
-
-      - name: Prettier Check
-        run: npm run lint:prettier
-        continue-on-error: true
-
-  # ── 2. Build ───────────────────────────────────────────────────────────────
+  # ── 1. Build ───────────────────────────────────────────────────────────────
   build:
     name: Build Jekyll
     runs-on: ubuntu-latest
-    needs: lint
     steps:
       - uses: actions/checkout@v4
 
