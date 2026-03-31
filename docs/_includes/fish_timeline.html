@@ -1,252 +1,343 @@
 {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_arrival' %}
 
-<section class="fish-timeline-modern" aria-label="Fisch Timeline">
-  <div class="fish-timeline-modern-line" aria-hidden="true"></div>
+<section class="ftm-wrap" aria-label="Fisch Timeline">
+  <div class="ftm-line" aria-hidden="true"></div>
 
   {% for post in fish_posts %}
   {% assign side = forloop.index0 | modulo: 2 %}
   {% assign fish_status = post.fish_status | default: '' %}
   {% assign is_gone = false %}
-  {% if fish_status == 'sold' or fish_status == 'deceased' %}
-    {% assign is_gone = true %}
-  {% endif %}
+  {% if fish_status == 'sold' or fish_status == 'deceased' %}{% assign is_gone = true %}{% endif %}
 
   {% assign arrival_date = post.fish_arrival | default: post.date %}
-  {% assign arrival_iso = arrival_date | date: "%Y-%m-%d" %}
-  {% assign arrival_label = arrival_iso | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "April", "April" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "August", "August" | replace: "September", "September" | replace: "October", "Oktober" | replace: "November", "November" | replace: "December", "Dezember" %}
+  {% assign arrival_label = arrival_date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "October", "Oktober" | replace: "December", "Dezember" %}
 
-  <article class="fish-timeline-modern-item {% if side == 0 %}is-right{% else %}is-left{% endif %} {% if is_gone %}is-gone{% endif %}">
-    <div class="fish-timeline-modern-point" aria-hidden="true"></div>
+  <div class="ftm-row {% if side == 0 %}ftm-right{% else %}ftm-left{% endif %} {% if is_gone %}ftm-gone{% endif %}">
 
-    <a class="fish-timeline-modern-card" href="{{ post.url | relative_url }}">
-      <div class="fish-timeline-modern-avatar-wrap">
-        {% if post.timeline_image %}
-        <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="fish-timeline-modern-avatar" loading="lazy" />
-        {% else %}
-        {% assign fish_slug = post.title | slugify %}
-        {% assign timeline_image_path = '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
-        <img
-          src="{{ timeline_image_path | relative_url }}"
-          alt="{{ post.title }}"
-          class="fish-timeline-modern-avatar"
-          loading="lazy"
-          onerror="this.onerror = null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
-        />
-        <span class="fish-timeline-modern-avatar-fallback" style="display: none">?</span>
-        {% endif %}
-      </div>
+    <div class="ftm-date-col">
+      <span class="ftm-date">{{ arrival_label }}</span>
+    </div>
 
-      <div class="fish-timeline-modern-content">
-        <div class="fish-timeline-modern-meta">{{ arrival_label }}</div>
-        <h3>{{ post.title }}</h3>
-        <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
-      </div>
+    <div class="ftm-center-col" aria-hidden="true">
+      <div class="ftm-dot"></div>
+    </div>
 
-      {% if is_gone %}
-      <span class="fish-timeline-modern-badge">{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span>
-      {% endif %}
-    </a>
-  </article>
+    <div class="ftm-content-col">
+      <!-- Äußerer Link umschließt alles – Hover-Rand hier -->
+      <a href="{{ post.url | relative_url }}" class="ftm-unit">
+
+        <!-- Rundes Bild, ragt aus der Karte heraus -->
+        <div class="ftm-avatar">
+          {% if post.timeline_image %}
+          <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="ftm-avatar-img" loading="lazy" />
+          {% else %}
+          {% assign fish_slug = post.title | slugify %}
+          <img
+            src="{{ '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' | relative_url }}"
+            alt="{{ post.title }}"
+            class="ftm-avatar-img"
+            loading="lazy"
+            onerror="this.onerror=null;this.style.display='none';this.nextElementSibling.style.display='flex';"
+          />
+          <span class="ftm-avatar-fallback" style="display:none">🐟</span>
+          {% endif %}
+        </div>
+
+        <!-- Karte mit Text, Avatar überlappt von links -->
+        <div class="ftm-card">
+          {% if is_gone %}
+          <span class="ftm-badge">{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span>
+          {% endif %}
+          <div class="ftm-card-title">{{ post.title }}</div>
+          <div class="ftm-card-desc">{{ post.excerpt | strip_html | truncatewords: 15 }}</div>
+        </div>
+
+      </a>
+    </div>
+
+  </div>
   {% endfor %}
 </section>
 
 <style>
-  @keyframes ftm-fadein {
-    from { opacity: 0; transform: translateY(18px); }
+  @keyframes ftm-in {
+    from { opacity: 0; transform: translateY(22px); }
     to   { opacity: 1; transform: translateY(0); }
   }
-
-  @keyframes ftm-pulse-dot {
-    0%, 100% { box-shadow: 0 0 0 4px rgba(46,196,182,0.18); }
-    50%       { box-shadow: 0 0 0 8px rgba(46,196,182,0.08); }
+  @keyframes ftm-pulse {
+    0%,100% { box-shadow: 0 0 0 4px rgba(46,196,182,0.22); }
+    50%      { box-shadow: 0 0 0 9px rgba(46,196,182,0.08); }
   }
 
-  .fish-timeline-modern {
-    --ta: var(--theme-primary-1, #2ec4b6);
-    --tb: var(--theme-primary-2, #20639b);
-    --tc: var(--theme-primary-3, #7f53ac);
+  /* ── Wrapper & Linie ── */
+  .ftm-wrap {
     position: relative;
     width: 100%;
-    max-width: 980px;
+    max-width: 1000px;
     margin: 1.5rem auto 0;
-    padding: 1rem 0 2rem;
+    padding: 1rem 0 3rem;
   }
-
-  .fish-timeline-modern-line {
+  .ftm-line {
     position: absolute;
     top: 0; bottom: 0;
     left: 50%;
-    width: 4px;
+    width: 5px;
     transform: translateX(-50%);
     border-radius: 999px;
-    background: linear-gradient(180deg, var(--ta) 0%, var(--tb) 50%, var(--tc) 100%);
-    opacity: 0.45;
+    background: linear-gradient(180deg,
+      var(--theme-primary-1,#2ec4b6) 0%,
+      var(--theme-primary-2,#20639b) 50%,
+      var(--theme-primary-3,#7f53ac) 100%);
+    opacity: 0.4;
   }
 
-  .fish-timeline-modern-item {
-    position: relative;
-    width: 50%;
-    margin: 0 0 1.6rem;
-    animation: ftm-fadein 0.5s ease both;
-  }
-  .fish-timeline-modern-item:nth-child(1)  { animation-delay: 80ms; }
-  .fish-timeline-modern-item:nth-child(2)  { animation-delay: 160ms; }
-  .fish-timeline-modern-item:nth-child(3)  { animation-delay: 240ms; }
-  .fish-timeline-modern-item:nth-child(4)  { animation-delay: 320ms; }
-  .fish-timeline-modern-item:nth-child(5)  { animation-delay: 400ms; }
-  .fish-timeline-modern-item:nth-child(6)  { animation-delay: 480ms; }
-  .fish-timeline-modern-item:nth-child(7)  { animation-delay: 560ms; }
-  .fish-timeline-modern-item:nth-child(8)  { animation-delay: 640ms; }
-  .fish-timeline-modern-item:nth-child(9)  { animation-delay: 720ms; }
-  .fish-timeline-modern-item:nth-child(10) { animation-delay: 800ms; }
-
-  .fish-timeline-modern-item.is-right {
-    margin-left: 50%;
-    padding-left: 2.4rem;
-  }
-  .fish-timeline-modern-item.is-left {
-    margin-left: 0;
-    padding-right: 2.4rem;
-  }
-
-  .fish-timeline-modern-point {
-    position: absolute;
-    top: 1.75rem;
-    width: 16px;
-    height: 16px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--ta), var(--tc));
-    animation: ftm-pulse-dot 2.8s ease-in-out infinite;
-    z-index: 2;
-  }
-  .fish-timeline-modern-item.is-right .fish-timeline-modern-point { left: -8px; }
-  .fish-timeline-modern-item.is-left  .fish-timeline-modern-point { right: -8px; }
-
-  /* Aktive Karte: voller Blog-Gradient, weiße Schrift */
-  .fish-timeline-modern-card {
-    position: relative;
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding: 1rem 1.1rem;
-    border-radius: 18px;
-    color: #fff;
-    text-decoration: none !important;
-    background: linear-gradient(135deg, var(--ta) 0%, var(--tb) 55%, var(--tc) 100%);
-    border: none;
-    box-shadow:
-      0 4px 18px rgba(0,0,0,0.13),
-      0 0 20px rgba(46,196,182,0.10);
-    transition: box-shadow 0.25s ease, transform 0.25s ease;
-  }
-  .fish-timeline-modern-card:hover,
-  .fish-timeline-modern-card:focus-visible {
-    transform: translateY(-3px) scale(1.015);
-    color: #fff;
-    box-shadow:
-      0 8px 32px rgba(46,196,182,0.22),
-      0 0 40px rgba(127,83,172,0.14);
-  }
-
-  .fish-timeline-modern-avatar-wrap {
-    width: 72px;
-    min-width: 72px;
-    height: 72px;
-    border-radius: 50%;
-    overflow: hidden;
-    background: rgba(255,255,255,0.18);
-    border: 2.5px solid rgba(255,255,255,0.45);
-    display: flex;
+  /* ── Row ── */
+  .ftm-row {
+    display: grid;
+    grid-template-columns: 1fr 80px 1fr;
     align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
+    margin-bottom: 2.8rem;
+    animation: ftm-in 0.55s ease both;
   }
-  .fish-timeline-modern-avatar {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-  }
-  .fish-timeline-modern-avatar-fallback {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.6rem;
-  }
+  .ftm-row:nth-child(2)  { animation-delay:  80ms; }
+  .ftm-row:nth-child(3)  { animation-delay: 160ms; }
+  .ftm-row:nth-child(4)  { animation-delay: 240ms; }
+  .ftm-row:nth-child(5)  { animation-delay: 320ms; }
+  .ftm-row:nth-child(6)  { animation-delay: 400ms; }
+  .ftm-row:nth-child(7)  { animation-delay: 480ms; }
+  .ftm-row:nth-child(8)  { animation-delay: 560ms; }
+  .ftm-row:nth-child(9)  { animation-delay: 640ms; }
+  .ftm-row:nth-child(10) { animation-delay: 720ms; }
 
-  .fish-timeline-modern-content { min-width: 0; }
-  .fish-timeline-modern-content h3 {
-    margin: 0.15rem 0 0.3rem;
-    line-height: 1.2;
-    font-size: 1.08rem;
-    color: #fff;
+  .ftm-right .ftm-date-col   { grid-column: 1; text-align: right; padding-right: 1.2rem; }
+  .ftm-right .ftm-center-col { grid-column: 2; }
+  .ftm-right .ftm-content-col{ grid-column: 3; }
+
+  .ftm-left .ftm-content-col { grid-column: 1; }
+  .ftm-left .ftm-center-col  { grid-column: 2; }
+  .ftm-left .ftm-date-col    { grid-column: 3; text-align: left; padding-left: 1.2rem; }
+
+  /* Datum */
+  .ftm-date {
+    font-size: 0.78rem;
     font-weight: 700;
-    text-shadow: 0 2px 8px rgba(0,0,0,0.13);
-  }
-  .fish-timeline-modern-content p {
-    margin: 0;
-    color: rgba(255,255,255,0.88);
-    font-size: 0.93rem;
-    line-height: 1.5;
-  }
-  .fish-timeline-modern-meta {
-    font-size: 0.76rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: rgba(255,255,255,0.72);
-    margin-bottom: 0.2rem;
-  }
-
-  .fish-timeline-modern-badge {
-    position: absolute;
-    top: -11px;
-    right: 14px;
-    font-size: 0.72rem;
-    font-weight: 700;
-    color: #fff;
-    background: rgba(0,0,0,0.30);
-    padding: 0.22rem 0.6rem;
-    border-radius: 999px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.22);
+    color: var(--theme-primary-1, #2ec4b6);
     white-space: nowrap;
   }
 
-  /* Gone: grauer Karten-Hintergrund + Bild ausgegraut */
-  .fish-timeline-modern-item.is-gone .fish-timeline-modern-card {
-    background: linear-gradient(135deg, #7a8a90 0%, #5a6570 55%, #4a5560 100%);
-    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  /* Dot */
+  .ftm-center-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .fish-timeline-modern-item.is-gone .fish-timeline-modern-avatar {
-    filter: grayscale(100%);
-    opacity: 0.55;
+  .ftm-dot {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg,
+      var(--theme-primary-1,#2ec4b6),
+      var(--theme-primary-3,#7f53ac));
+    animation: ftm-pulse 2.8s ease-in-out infinite;
+    z-index: 2;
+    flex-shrink: 0;
   }
-  .fish-timeline-modern-item.is-gone .fish-timeline-modern-point {
-    background: linear-gradient(135deg, #aaa, #888);
+  .ftm-gone .ftm-dot {
+    background: linear-gradient(135deg, #aaa, #777);
     animation: none;
     box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
   }
 
-  @media (max-width: 860px) {
-    .fish-timeline-modern-line {
-      left: 18px;
-      transform: none;
+  .ftm-content-col { overflow: visible; min-width: 0; }
+
+  /* ── Äußere Link-Einheit ── */
+  .ftm-unit {
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+    color: #fff;
+    position: relative;
+    transition: transform 0.28s ease;
+  }
+  .ftm-unit:hover {
+    transform: translateY(-3px);
+  }
+  .ftm-unit:hover .ftm-card {
+    box-shadow:
+      0 8px 32px rgba(46,196,182,0.30),
+      0 0 40px rgba(127,83,172,0.18);
+  }
+  .ftm-unit:hover .ftm-avatar {
+    box-shadow:
+      0 0 28px rgba(46,196,182,0.65),
+      0 0 48px rgba(127,83,172,0.35);
+  }
+  .ftm-left .ftm-unit {
+    flex-direction: row-reverse;
+  }
+
+  /* Gone hover */
+  .ftm-gone .ftm-unit:hover .ftm-card {
+    box-shadow:
+      0 8px 28px rgba(0,0,0,0.20),
+      0 0 28px rgba(130,150,160,0.20);
+  }
+  .ftm-gone .ftm-unit:hover .ftm-avatar {
+    box-shadow: 0 0 18px rgba(0,0,0,0.20);
+  }
+
+  /* ── Rundes Avatar-Bild, ragt aus der Karte heraus ── */
+  .ftm-avatar {
+    width: 120px;
+    height: 120px;
+    min-width: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: conic-gradient(from 0deg,
+      var(--theme-primary-1,#2ec4b6),
+      var(--theme-primary-2,#20639b),
+      var(--theme-primary-3,#7f53ac),
+      var(--theme-primary-1,#2ec4b6));
+    padding: 3px;
+    z-index: 2;
+    flex-shrink: 0;
+    box-shadow:
+      0 0 18px rgba(46,196,182,0.5),
+      0 0 32px rgba(127,83,172,0.3);
+    /* überlappt die Karte */
+    margin-right: -28px;
+  }
+  .ftm-left .ftm-avatar {
+    margin-right: 0;
+    margin-left: -28px;
+  }
+  .ftm-avatar-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+  }
+  .ftm-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* Gone: Avatar ausgegraut */
+  .ftm-gone .ftm-avatar {
+    background: conic-gradient(from 0deg, #999, #bbb, #888, #999);
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+  }
+  .ftm-gone .ftm-avatar-img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+  }
+
+  /* ── Karte ── */
+  .ftm-card {
+    flex: 1;
+    min-width: 0;
+    padding: 1.05rem 1.2rem 1.05rem 2rem;
+    border-radius: 1.5rem;
+    background: linear-gradient(135deg,
+      var(--theme-primary-1,#2ec4b6) 0%,
+      var(--theme-primary-2,#20639b) 55%,
+      var(--theme-primary-3,#7f53ac) 100%);
+    box-shadow: 0 6px 24px rgba(0,0,0,0.14);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+  }
+  .ftm-left .ftm-card {
+    padding: 1.05rem 2rem 1.05rem 1.2rem;
+    text-align: right;
+  }
+
+  /* Gone: graue Karte */
+  .ftm-gone .ftm-card {
+    background: linear-gradient(135deg, #7a8a90, #5a6570 55%, #4a5560);
+  }
+
+  /* ── Badge ── */
+  .ftm-badge {
+    display: inline-block;
+    align-self: flex-start;
+    margin-bottom: 0.4rem;
+    font-size: 0.67rem;
+    font-weight: 700;
+    color: #fff;
+    background: rgba(0,0,0,0.28);
+    padding: 0.16rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
+  }
+  .ftm-left .ftm-badge { align-self: flex-end; }
+
+  .ftm-card-title {
+    font-size: 1.05rem;
+    font-weight: 800;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.12);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+  }
+  .ftm-card-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.5;
+  }
+
+  /* ── Mobile ── */
+  @media (max-width: 760px) {
+    .ftm-line { left: 22px; transform: none; }
+
+    .ftm-row,
+    .ftm-right,
+    .ftm-left {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 2rem;
     }
-    .fish-timeline-modern-item,
-    .fish-timeline-modern-item.is-right,
-    .fish-timeline-modern-item.is-left {
-      width: 100%;
+    .ftm-date-col   { order: 1; text-align: center !important; padding: 0 0 0.4rem !important; }
+    .ftm-center-col { order: 2; margin-bottom: 0.5rem; }
+    .ftm-content-col{ order: 3; width: 100%; }
+
+    .ftm-unit,
+    .ftm-left .ftm-unit {
+      flex-direction: column;
+      align-items: center;
+      border-radius: 1.2rem;
+    }
+
+    .ftm-avatar {
+      margin-right: 0;
+      margin-bottom: -28px;
+      z-index: 2;
+    }
+    .ftm-left .ftm-avatar {
       margin-left: 0;
-      padding-left: 2.6rem;
-      padding-right: 0;
+      margin-bottom: -28px;
     }
-    .fish-timeline-modern-item .fish-timeline-modern-point,
-    .fish-timeline-modern-item.is-right .fish-timeline-modern-point,
-    .fish-timeline-modern-item.is-left .fish-timeline-modern-point {
-      left: 10px;
-      right: auto;
+
+    .ftm-card,
+    .ftm-left .ftm-card {
+      width: 100%;
+      padding: 2.2rem 1.2rem 1.2rem;
+      text-align: center;
+      border-radius: 1.2rem;
     }
+    .ftm-badge,
+    .ftm-left .ftm-badge { align-self: center; }
   }
 </style>
