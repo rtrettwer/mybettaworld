@@ -1,11 +1,11 @@
 ---
 layout: post_tank
-title: "Das Baby Becken"
+title: "Das Gras Becken"
 author: "Rike Trettwer"
 date: 2025-09-30 11:06:51 +0200
 categories: [tank]
 tags: [nano, garnelen, neocaridina]
-excerpt: "Vom Aufzuchtbecken zum Garnelenbecken"
+excerpt: "Vom Aufzuchtbecken zum Gras-Becken mit Bandit"
 image: /assets/images/tanks/babies/babies.webp
 aktiv: true
 dimensions: 40x25x25 cm (Dennerle Nano Cube)
@@ -17,11 +17,11 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: grobes Bodengranulat Komplett
 deko: Mangroven-Wurzel,Steine
 startdatum: 23.08.2025
-besatz: Neocaridina Garnelen (Farbmix), Posthornschnecken, Blasenschnecken, 1 Stahlhelm Rennschnecke
+besatz: Bandit (Betta splendens, Männchen), Neocaridina Garnelen (Farbmix), Posthornschnecken, Blasenschnecken, 1 Stahlhelm Rennschnecke
 pflanzen: Javafarn, Anubias, Perlkraut, Nadelsims, Rote Hintergrundpflanze, Froschbiss, Salvinia, phylantus fluitans
 technik: Heizstab, Thermometer
-heizung: Heizstab Aquael, 26 °C
-besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien. Seit 28.11.2025 Garnelenbecken. Heizung seit 07.01.2026 ausgeschaltet.
+heizung: Ausgeschaltet seit März 2026
+besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien. Seit 28.11.2025 Garnelenbecken, inzwischen mit dichtem Grasteppich und neuem Namen "Gras-Becken".
 # Wasserparameter
 water_parameters:
   temperature: 26
@@ -53,8 +53,16 @@ entwicklung:
     ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Das Becken wird jetzt zum Garnelenbecken!
   - datum: 04.12.2025
     ereignis: 10 neue Neocaridina Garnelen aus einem Farbmix dazugekommen.
+  - datum: 25.03.2026
+    ereignis: Shadow nach Paarung mit Bandit kurz zur Erholung ins Becken gesetzt.
+  - datum: 27.03.2026
+    ereignis: Shadow wieder zurück ins Paradies-Becken umgesetzt.
+  - datum: 28.03.2026
+    ereignis: Bandit nach dem Freischwimmen der Jungfische aus dem Zuchtbecken herausgenommen und ins Gras-Becken gesetzt.
+  - datum: März 2026
+    ereignis: Becken offiziell in "Gras-Becken" umbenannt, Heizung ausgeschaltet.
 entwicklung_text: |
-  Nach erfolgreicher Aufzucht der Jungfische wurde dieses Becken zum Garnelenbecken umfunktioniert. Die Garnelen genießen das gut eingefahrene Becken mit vielen Verstecken und dichter Bepflanzung.
+  Nach erfolgreicher Aufzucht wurde aus dem ehemaligen Baby-Becken erst ein Garnelenbecken und inzwischen das "Gras-Becken" mit dichtem Teppich. Seit Ende März 2026 lebt Bandit wieder hier, nachdem die Zucht im neuen Zuchtbecken abgeschlossen war.
 gallery_dir: /assets/images/tanks/babies
 ---
 

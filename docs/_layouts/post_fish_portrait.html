@@ -132,9 +132,19 @@ layout: default
 
   <div class="fish-steckbrief">
     <h2>🐟 Steckbrief</h2>
+    {% assign fish_status = page.fish_status | default: '' %}
+    {% if fish_status == 'sold' or fish_status == 'deceased' %}
+    <div style="margin-bottom: 1rem">
+      <span
+        style="display: inline-block; padding: 0.3rem 0.7rem; border-radius: 999px; font-weight: 600; font-size: 0.85rem; background: #efefef; color: #555"
+      >
+        {% if fish_status == 'deceased' %}Nicht mehr bei uns{% else %}Verkauft{% endif %}
+      </span>
+    </div>
+    {% endif %}
     <div class="fish-profile-flex">
       <div class="fish-image">
-        <img src="{{ page.image }}" alt="Bild von {{ page.title }}" />
+        <img src="{{ page.image }}" alt="Bild von {{ page.title }}" {% if fish_status == 'sold' or fish_status == 'deceased' %}style="filter: grayscale(100%); opacity: 0.75"{% endif %} />
       </div>
       <div class="fish-details">
         <dl>
@@ -143,11 +153,18 @@ layout: default
 
           <dt>Geburtsmonat:</dt>
           <dd>
-            {% if page.fish_birth %} {% assign birth_date = page.fish_birth | date: "%Y-%m-%d" %} {% assign birth_day =
-            birth_date | date: "%d" %} {% assign birth_month = birth_date | date: "%m" %} {% assign birth_year =
-            birth_date | date: "%Y" %} {{ birth_day }}.{{ birth_month }}.{{ birth_year }} {% else %} {{ page.fish_birth
-            }} {% endif %}
+            {% if page.fish_birth %}
+              {% assign birth_date = page.fish_birth | date: "%Y-%m-%d" %}
+              {{ birth_date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "April", "April" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "August", "August" | replace: "September", "September" | replace: "October", "Oktober" | replace: "November", "November" | replace: "December", "Dezember" }}
+            {% else %}
+              {{ page.fish_birth }}
+            {% endif %}
           </dd>
+
+          {% if page.fish_death_date %}
+          <dt>Todestag:</dt>
+          <dd>{{ page.fish_death_date | date: "%d.%m.%Y" }}</dd>
+          {% endif %}
 
           <dt>Alter:</dt>
           <dd>{{ page.fish_age }}</dd>

@@ -7,7 +7,8 @@ categories: [tank]
 tags: [walstad, treibholz, einzelhaltung]
 excerpt: "Stark bepflanztes Becken. Das breiteste meiner Becken. Mit Ostsee-Treibholz."
 image: /assets/images/tanks/mangrove/mangrove.webp
-aktiv: true
+aktiv: false
+inaktiv_seit: "März 2026"
 dimensions: 50x35x30 cm
 fassungsvermoegen: 30L
 water_type: Süßwasser
@@ -17,7 +18,7 @@ beleuchtung: AQQA Clip-on Vollspektrum LED, 24/7 Modus, 18W + GERUI Mini LED 7W
 bodengrund: gesiebte Pflanzenerde, darauf feiner schwarzer Sand
 deko: Treibhölzer aus der Ostsee, Kokosnuss-Höhle, rote Lavasteine
 startdatum: 15.07.2025
-besatz: Betta splendens Männchen (Bandit), Posthornschnecken, Blasenschnecken, Neocaridina Garnelen, 1-2 Rennschnecken, 1 Sulawesi Schnecke, 4-5 Neon Tetras
+besatz: Becken aufgelöst (seit März 2026)
 pflanzen: Javafarn, Trauermoos-Bäumchen, Salvinia, phylantus fluitans
 technik: EEEKit Aquariumthermometer (außen befestigt, Digitalanzeige)
 heizung: Heizstab Aquael, 26 °C
@@ -43,9 +44,11 @@ entwicklung:
     ereignis: Ich habe Bandit aus seinem Quarantäne-Becken in dieses Becken umgesetzt. Er sieht noch schwach und dünn aus - Sonnenschein ist aktuell dominant und sehr kritisch ihrem neuen Mitbewohner gegenüber.
   - datum: 08.10.2025
     ereignis: Sonnenschein musste raus - sie hat Bandits Flossen gefleddert und ihn gejagt! Sie ist ins Höhlen-Becken umgezogen.
+  - datum: März 2026
+    ereignis: Becken aufgelöst. Deko und Pflanzen weitgehend recycelt, Becken geleert und gründlich gereinigt.
 
 entwicklung_text: |
-  Mittlerweile ist nur noch ein Betta in diesem Becken - Bandit ist aus der Quarantäne eingezogen, nachdem Sonnenschein wegen aggressivem Verhalten ins Höhlen-Becken umziehen musste.
+  Das Mangroven-Becken wurde im März 2026 beendet. Ich habe Deko und Pflanzen soweit möglich in andere Setups übernommen, das Becken geleert und gereinigt.
 gallery_dir: /assets/images/tanks/mangrove
 ---
 

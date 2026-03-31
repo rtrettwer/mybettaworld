@@ -48,7 +48,9 @@ entwicklung:
     ereignis: Teilwasserwechsel (etwa 30%). Fein gemahlene Tetra Mini Flocken zum gewöhnen an Trockenfutter
   - datum: 28.11.2025
     ereignis: Alle Jungfische ins Paradies-Becken umgesetzt. Zuchtkübel aufgelöst und inaktiv gesetzt.
+  - datum: März 2026
+    ereignis: Das neue Zuchtbecken (ehemaliges Dschungel-Becken) übernimmt ab jetzt die Zuchtrolle vollständig.
 entwicklung_text: |
-  Der Zuchtkübel hat seinen Zweck erfüllt! Die zweite Zucht war erfolgreich und alle Jungfische sind groß und gesund ins Paradies-Becken umgezogen. Der Kübel ist nun inaktiv.
+  Der Zuchtkübel hat seinen Zweck erfüllt! Die zweite Zucht war erfolgreich und alle Jungfische sind groß und gesund ins Paradies-Becken umgezogen. Seit März 2026 wurde er als Zuchtplatz endgültig vom neuen Zuchtbecken abgelöst.
 gallery_dir: /assets/images/tanks/breeding
 ---

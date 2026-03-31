@@ -7,7 +7,8 @@ categories: [tank]
 tags: [höhlen, verstecke, gemeinschaftsbecken]
 excerpt: "Ein Becken mit vielen Höhlen und Verstecken."
 image: /assets/images/tanks/cave/cave.webp
-aktiv: true
+aktiv: false
+inaktiv_seit: "März 2026"
 dimensions: 30x20x20 cm
 water_type: Süßwasser
 filter: Nein
@@ -16,11 +17,11 @@ beleuchtung: LED
 bodengrund: Sand
 deko: Höhlen (Garnelentunnel, größe Eck-Höhle), Lavasteine, Quarzstein aus der Ostsee, Manzanita-Wurzeln
 startdatum: 10.01.2024
-besatz: Betta splendens Weibchen (Lila und Sonnenschein), Posthornschnecken, Blasenschnecken, Piano-Schnecke (männlich), eine Rennschnecke, 8 Neon Tetras, x Amano Garnelen, x Neocaridina Garnelen, 4 Otocinclus
+besatz: Becken aufgelöst (seit März 2026)
 pflanzen: Moos, Javafarn
 technik: Luftheber, Thermometer
 heizung: Heizstab
-besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett! Seit 07.01.2026 ohne Betta-Besatz - Heizung ausgeschaltet, nur noch Beleuchtung und Luftheber aktiv.
+besonderheiten: Viele Höhlen, ruhiges Becken, wenig Technik. Selbst gebautes Regal aus Möbeltransport-Brett mit Rollen, Bierkästen und einem stabilen Holzbrett! Seit März 2026 aufgelöst.
 # Wasserparameter
 water_parameters:
   temperature: 25
@@ -51,7 +52,10 @@ entwicklung:
     ereignis: Ich habe heute stark Pflanzen geschnitten, einige entfernt und ein paar umgepflanzt. Hier war viel zu wenig Licht! Außerdem die Wurzel, die als Versteck vor Bandit gedacht waren, anders platziert. Bandit ist in Quarantäne wegen Camallanus.
   - datum: 08.10.2025
     ereignis: Lila und Sonnenschein sind eingezogen. Lila musste aus dem Baby-Becken raus (hat die Babys gejagt), Sonnenschein aus dem Mangroven-Becken (hat Bandits Flossen gefleddert). Die beiden Damen scheinen sich zu arrangieren.
+  - datum: März 2026
+    ereignis: Höhlen-Becken aufgelöst. Deko und Pflanzen recycelt, Becken geleert und gesäubert.
 entwicklung_text: |
+  Das Höhlen-Becken wurde im März 2026 beendet und vollständig aufgelöst. Material und Pflanzen leben in anderen Becken weiter.
 ---
 
 Das Höhlenbecken war eigentlich einmal für [Kampfi](/fish/2025/09/30/fish_kampfi) gedacht, weil er so gerne in Höhlen kriecht. Ich habe über Etsy eine

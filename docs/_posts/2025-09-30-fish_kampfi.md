@@ -10,6 +10,8 @@ image: /assets/images/fish/kampfi/IMG_20251015_205247.webp
 timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
 fish_birth: "2025-01-15"
+fish_status: "deceased"
+fish_death_date: "2026-03-13"
 fish_age: 9 Monate
 fish_price: 36 €
 fish_type: Betta splendens (Domestic)
@@ -19,8 +21,8 @@ fish_color_base: Rot (Handelsname “Hellboy”)
 fish_pattern: Marble mit zeitabhängigem Farbwechsel; teils Butterfly-Kanten an Caudale/Dorsale
 fish_iridescence: ausgeprägt; Dragon/Metallic-Schuppung mit leicht türkis/bläulichem Schimmer an den Flossenkanten
 fish_body: gerade Rückenlinie, symmetrische Caudale, gute Substanz
-fish_health: bisher unauffällig; frisst lebend/frost/trocken gut; Flossenränder überwiegend intakt
-fish_behavior: sehr friedlich und neugierig; baut kleine Schaumnester, pflegt sie aktuell wenig; Paarung beobachtet, am Folgetag kein Eiernest; hat Shadow viel rumgescheucht, ist seit ihrem Umzug ins Paradies-Becken wieder ruhiger
+fish_health: bis Anfang 2026 überwiegend unauffällig; im März 2026 zunehmend lethargisch, fraß kaum noch und schnappte häufig nach Luft; am 11.03.2026 ins Quarantäne-Becken umgesetzt, am 13.03.2026 verstorben
+fish_behavior: sehr friedlich und neugierig; baute kleine Schaumnester, pflegte sie aber eher kurz; Paarung beobachtet, am Folgetag kein Eiernest; hat Shadow zeitweise viel rumgescheucht, war seit ihrem Umzug ins Paradies-Becken wieder ruhiger
 fish_genotype: aktive Marble-Genetik; Dragon/Metallic-Overlay wahrscheinlich
 fish_lineage: Zuchtlinie unbekannt
 fish_breeding: Plakat-Form mit guter Breite; optisch geeignet für Plakat-Dragon/Marble-Linien; Nestpflege derzeit schwach
@@ -54,6 +56,12 @@ Dennoch habe ich die Neons aus dem Becken genommen, da ich befürchtet habe, das
 Ich glaube, er hat sich trotzdem ohne die Neons wohler gefühlt, denn er hat danach seit längerem wieder Schaumnester gebaut.
 
 Zeitweise hatte er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/27/fish_lila) und [Schatten](/fish/2025/09/26/fish_shadow)). Allerdings hat er [Schatten](/fish/2025/09/26/fish_shadow) doch ziemlich viel rumgescheucht, deswegen ist sie Anfang Januar 2026 ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken umgezogen. Seit Shadow weg ist, ist Kampfi wieder ein bisschen ruhiger geworden.
+
+# Letzte Wochen und Abschied
+
+Im März 2026 ging es Kampfi leider sichtbar schlechter. Schon über Wochen hatte ich das Gefühl, dass etwas nicht stimmt.
+Am 11.03. habe ich ihn deshalb ins [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken umgesetzt. Dort hat er sich kaum noch bewegt, wenig gefressen und oft nach Luft geschnappt.
+Ich befürchte, dass er krank war. Am 13.03.2026 ist Kampfi gestorben.
 
 # Zuchtversuche
 

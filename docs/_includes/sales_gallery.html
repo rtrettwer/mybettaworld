@@ -140,7 +140,10 @@
           {% if product.pickup_date %}
           <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
           {% endif %} {% elsif product.status == 'sold' %}
-          <button class="interest-btn" disabled>Verkauft</button>
+          <small><strong>Verkauft</strong></small>
+          {% if product.gender == 'male' or product.gender == 'female' %}
+          <small>Einzeltiere/Unikate - nicht wieder verfügbar</small>
+          {% endif %}
           {% if product.sold_date %}
           <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
           {% endif %} {% elsif product.status == 'temporarily_unavailable' %}

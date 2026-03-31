@@ -12,7 +12,7 @@ fish_name: "Sir Pryce"
 fish_birth: "2025-05-15"
 fish_age: "4 Monate"
 fish_status: "sold"
-fish_sold_date: "2026-01-07"
+fish_sold_date: "2026-03-31"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Plakat"
 fish_gender: "Männlich"
@@ -22,7 +22,7 @@ fish_color_base: "tiefblauer bis stahlblauer Körper"
 fish_iridescence: "deutliches Blau-/Teal-Schimmern auf Schuppen und Flossen"
 fish_pattern: "einfarbig blau mit schwarzer Kopfpartie (dunkle 'Mask'/Kopfzeichnung); Pelvic/Bauchflossen rot mit teils hellen Spitzen; gelegentlich rote Akzente in den Flossen"
 fish_pectorals: "dunkel bis transparent (je nach Licht)"
-fish_behavior: "zunächst als 'Überraschungs-Männchen' deutlich territorial; sehr nestaktiv, baute und versetzte Nester; zeigte ausgeprägte Brutpflege; im Januar 2026 verkauft und mit Sonnenschein zusammen in ein neues Zuhause gezogen – die beiden haben sich früher gut verstanden"
+fish_behavior: "zunächst als 'Überraschungs-Männchen' deutlich territorial; sehr nestaktiv, baute und versetzte Nester; zeigte ausgeprägte Brutpflege; Ende März 2026 verkauft und mit Sonnenschein zusammen in ein neues Zuhause gezogen - die beiden haben sich früher gut verstanden"
 fish_feeding: "nicht explizit angegeben (bitte ergänzen); aktuell keine Auffälligkeiten berichtet"
 fish_health: "unauffällig; keine Erkrankungen beschrieben"
 fish_housing: "Paarungen in ca. 30‑Liter‑Becken mit Schwimmpflanzen; wenig Strömung und geschützte Oberflächenbereiche begünstigen Nestbau"
@@ -55,3 +55,7 @@ Er wohnte dann im ehemaligen [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Be
 Nach ein paar Wochen habe ich das dominante Weibchen wieder zu ihm gesetzt, weil es ihr bei [Kampfi](/fish/2025/09/30/fish_kampfi) nicht soo gut ging und ich dachte, sie kommt zu jemandem, der sie mag.
 Ich konnte sie nur einen Tag drin lassen, weil dann hatten sie sich schon wieder gepaart! Den ganzen Nachmittag lang.
 Diesmal habe ich Sir Pryce bei seinen Babys gelassen. Entweder er frisst sie, dann hat er einen Snack. Oder sie werden groß. Bisher sieht es sehr gut für die Babys aus - er unterscheidet sehr gut Lebendfutter und Babyfische. Manchmal sammelt er sie noch ein und spuckt sie ins Nest, das er immer noch pflegt.
+
+## 31.03.2026 - Auszug gemeinsam mit Sonnenschein
+
+Sir Pryce ist heute zusammen mit [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) in ein neues Zuhause gezogen. Ich bin gespannt, wie sich die beiden dort entwickeln.

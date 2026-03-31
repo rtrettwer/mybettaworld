@@ -17,11 +17,11 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Tetra Complete Substrate, schwarzer feiner Sand
 deko: Große Fingerwurzel, Drachenstein,Kokosnuss-Höhle, großer Stein von einer Wanderung ;-)
 startdatum: 20.05.2024
-besatz: Betta splendens Männchen (Sir Pryce, reserviert), 6 Neon Tetra (temporär, bis Sonnenschein und Sir Pryce abgeholt werden)
+besatz: Derzeit ohne dauerhaften Fischbesatz (nur temporäre Nutzung bei Bedarf)
 pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher, Lichtwachser
 technik:
-heizung: Heizstab auf 26°C
-besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund. Seit 07.01.2026 ohne Betta-Besatz - Heizung ausgeschaltet, nur noch Beleuchtung und Luftheber aktiv.
+heizung: Ausgeschaltet seit März 2026
+besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund. Wird nur bei Bedarf als Quarantäne genutzt; aktuell nur Beleuchtung und Luftheber aktiv.
 # Wasserparameter
 water_parameters:
   temperature: 26
@@ -46,6 +46,12 @@ entwicklung:
     ereignis: 6 Neon Tetra aus dem Paradies-Becken temporär hier eingesetzt, nachdem die 258 Jungfische abgegeben wurden. Im Tausch kamen 11 neue Neons dazu, die direkt ins Paradies-Becken gingen.
   - datum: Januar 2026
     ereignis: Sir Pryce und Sonnenschein sind reserviert und werden bald abgeholt. Danach wird das Becken frei für ein potentielles Betta-Männchen, falls eines der behaltenen Weibchen doch ein Männchen ist.
+  - datum: 11.03.2026
+    ereignis: Kampfi wegen Lethargie und Verdacht auf Erkrankung ins Quarantäne-Becken umgesetzt.
+  - datum: 13.03.2026
+    ereignis: Kampfi ist trotz Umsetzen leider gestorben.
+  - datum: März 2026
+    ereignis: Heizung abgeschaltet; aktuell läuft nur Beleuchtung und Luftheber.
 ---
 
 ## Quarantäne

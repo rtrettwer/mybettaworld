@@ -122,3 +122,11 @@ noch etwas dünn und blass. Aber ich gehe fast davon aus, dass sich das ändern 
 [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
 
 Leider musste ich [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen [Artemia](/food/2025/09/30/food_artemia) füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.
+
+## Maerz 2026 - Neue Zucht im neuen Zuchtbecken
+
+Am 24.03.2026 habe ich Bandit zusammen mit [Shadow](/fish/2025/09/26/fish_shadow) in das neue [Zuchtbecken](/tank/2026/03/24/tank_zuchtbecken) gesetzt (ca. 28 C).
+Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich Shadow wieder herausgenommen.
+
+Am Freitag waren die ersten Larven sichtbar, am Samstag sind die ersten frei geschwommen.
+Am Sonntag (28.03.) habe ich Bandit wieder aus dem Zuchtbecken genommen und in sein [Gras-Becken](/tank/2025/09/30/tank_babys) gesetzt.

@@ -12,7 +12,7 @@ fish_name: "Sonnenschein"
 fish_birth: "2025-05-20"
 fish_age: "5 Monate"
 fish_status: "sold"
-fish_sold_date: "2026-01-07"
+fish_sold_date: "2026-03-31"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weiblich"
@@ -22,7 +22,7 @@ fish_color_base: "sehr hell (weiß/cremefarbener Körper)"
 fish_iridescence: "gering bis moderat; einzelne dunklere Schuppen mit leichtem Glanz tauchen zunehmend auf"
 fish_pattern: "Marble‑Anlage wahrscheinlich (anfangs komplett weiß, inzwischen dunkle Schuppenflecken); Flossen überwiegend rot/rosa, teils durchsichtig"
 fish_pectorals: "hell bis leicht transparent"
-fish_behavior: "deutlich selbstbewusst/dominant in Gruppen; neigte zum Scheuchen und Flossenknabbern bei ruhigen Mitbewohnern; wiederholte Laichbereitschaft und Paarungen (u. a. mit Sir Pryce); zuletzt im Höhlen‑Becken mit Lila – beide nutzten alle Bereiche und zeigten keine Verletzungen; im Januar 2026 verkauft und mit Sir Pryce zusammen in ein neues Zuhause gezogen"
+fish_behavior: "deutlich selbstbewusst/dominant in Gruppen; neigte zum Scheuchen und Flossenknabbern bei ruhigen Mitbewohnern; wiederholte Laichbereitschaft und Paarungen (u. a. mit Sir Pryce); zuletzt im Höhlen‑Becken mit Lila – beide nutzten alle Bereiche und zeigten keine Verletzungen; Ende März 2026 verkauft und mit Sir Pryce zusammen in ein neues Zuhause gezogen"
 fish_feeding: "nicht explizit dokumentiert; bitte ergänzen (nimmt sie Frost-/Trockenfutter zuverlässig? Lebendfutterpräferenz?)"
 fish_health: "derzeit unauffällig; keine sichtbaren Verletzungen; frühere Dominanz führte zu Umsetzungen zwischen Becken"
 fish_housing: "dichter Pflanzenbestand und Höhlen/Verstecke sind hilfreich; geringere Strömung, abgedeckte Oberfläche; in Einzel-/Duo‑Haltung mit klarer Struktur meist stressärmer"
@@ -39,3 +39,7 @@ Zwischendrin war sie auch nochmal mit [Sir Pryce](/fish/2025/09/28/fish_sir_pryc
 ## 08.10.2025 - Umzug ins Höhlen-Becken
 
 Sonnenschein musste heute aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus, weil sie [Bandits](/fish/2025/09/30/fish_bandit) Flossen gefleddert und ihn gejagt hat. Das ging natürlich nicht! Ich habe sie deshalb ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken umgesetzt. Dort ist sie jetzt zusammen mit [Lila](/fish/2025/09/27/fish_lila), die ebenfalls heute dorthin umgezogen ist. Die beiden Damen scheinen sich zu arrangieren - ich sehe keine Verletzungen und beide schwimmen in allen Bereichen des Beckens. Hoffentlich ist das jetzt das finale Setup!
+
+## 31.03.2026 - Neues Zuhause gemeinsam mit Sir Pryce
+
+Sonnenschein ist heute zusammen mit [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) in ein neues Zuhause gezogen. Ich freue mich sehr, dass die beiden zusammen bleiben, weil sie sich schon früher gut verstanden haben.
