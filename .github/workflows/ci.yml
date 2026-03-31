@@ -17,6 +17,10 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+# Node.js 24 für alle Jobs erzwingen
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   # ── 1. Lint ────────────────────────────────────────────────────────────────
   lint:
