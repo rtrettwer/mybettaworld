@@ -32,18 +32,18 @@
           loading="lazy"
           onerror="this.onerror = null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
         />
-        <span class="fish-timeline-modern-avatar-fallback" style="display: none">🐟</span>
+        <span class="fish-timeline-modern-avatar-fallback" style="display: none">?</span>
         {% endif %}
       </div>
 
       <div class="fish-timeline-modern-content">
-        <div class="fish-timeline-modern-meta">📅 Einzug: {{ arrival_label }}</div>
+        <div class="fish-timeline-modern-meta">{{ arrival_label }}</div>
         <h3>{{ post.title }}</h3>
         <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
       </div>
 
       {% if is_gone %}
-      <span class="fish-timeline-modern-badge">{% if fish_status == 'deceased' %}🕊 Verstorben{% else %}✓ Verkauft{% endif %}</span>
+      <span class="fish-timeline-modern-badge">{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span>
       {% endif %}
     </a>
   </article>
@@ -63,8 +63,8 @@
 
   .fish-timeline-modern {
     --ta: var(--theme-primary-1, #2ec4b6);
-    --tb: var(--theme-primary-2, #7f53ac);
-    --tc: var(--theme-primary-3, #43aee6);
+    --tb: var(--theme-primary-2, #20639b);
+    --tc: var(--theme-primary-3, #7f53ac);
     position: relative;
     width: 100%;
     max-width: 980px;
@@ -83,17 +83,22 @@
     opacity: 0.45;
   }
 
-  /* ── Items ── */
   .fish-timeline-modern-item {
     position: relative;
     width: 50%;
     margin: 0 0 1.6rem;
     animation: ftm-fadein 0.5s ease both;
   }
-
-  {% for i in (1..20) %}
-  .fish-timeline-modern-item:nth-child({{ i }}) { animation-delay: {{ i | times: 80 }}ms; }
-  {% endfor %}
+  .fish-timeline-modern-item:nth-child(1)  { animation-delay: 80ms; }
+  .fish-timeline-modern-item:nth-child(2)  { animation-delay: 160ms; }
+  .fish-timeline-modern-item:nth-child(3)  { animation-delay: 240ms; }
+  .fish-timeline-modern-item:nth-child(4)  { animation-delay: 320ms; }
+  .fish-timeline-modern-item:nth-child(5)  { animation-delay: 400ms; }
+  .fish-timeline-modern-item:nth-child(6)  { animation-delay: 480ms; }
+  .fish-timeline-modern-item:nth-child(7)  { animation-delay: 560ms; }
+  .fish-timeline-modern-item:nth-child(8)  { animation-delay: 640ms; }
+  .fish-timeline-modern-item:nth-child(9)  { animation-delay: 720ms; }
+  .fish-timeline-modern-item:nth-child(10) { animation-delay: 800ms; }
 
   .fish-timeline-modern-item.is-right {
     margin-left: 50%;
@@ -104,21 +109,20 @@
     padding-right: 2.4rem;
   }
 
-  /* ── Dot ── */
   .fish-timeline-modern-point {
     position: absolute;
     top: 1.75rem;
     width: 16px;
     height: 16px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--ta), var(--tb));
+    background: linear-gradient(135deg, var(--ta), var(--tc));
     animation: ftm-pulse-dot 2.8s ease-in-out infinite;
     z-index: 2;
   }
   .fish-timeline-modern-item.is-right .fish-timeline-modern-point { left: -8px; }
   .fish-timeline-modern-item.is-left  .fish-timeline-modern-point { right: -8px; }
 
-  /* ── Card ── */
+  /* Aktive Karte: voller Blog-Gradient, weiße Schrift */
   .fish-timeline-modern-card {
     position: relative;
     display: flex;
@@ -126,61 +130,43 @@
     align-items: flex-start;
     padding: 1rem 1.1rem;
     border-radius: 18px;
-    color: inherit;
-    text-decoration: none;
-    /* gradient statt weißem Kasten */
-    background: linear-gradient(135deg,
-      rgba(46,196,182,0.10) 0%,
-      rgba(127,83,172,0.10) 60%,
-      rgba(67,174,230,0.08) 100%);
-    border: 1.5px solid rgba(46,196,182,0.28);
+    color: #fff;
+    text-decoration: none !important;
+    background: linear-gradient(135deg, var(--ta) 0%, var(--tb) 55%, var(--tc) 100%);
+    border: none;
     box-shadow:
-      0 4px 18px rgba(20,22,27,0.09),
-      inset 0 1px 0 rgba(255,255,255,0.55);
-    backdrop-filter: blur(6px);
-    -webkit-backdrop-filter: blur(6px);
-    transition:
-      box-shadow 0.25s ease,
-      transform  0.25s ease,
-      border-color 0.25s ease,
-      background 0.25s ease;
+      0 4px 18px rgba(0,0,0,0.13),
+      0 0 20px rgba(46,196,182,0.10);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
   }
-
   .fish-timeline-modern-card:hover,
   .fish-timeline-modern-card:focus-visible {
-    transform: translateY(-3px);
-    border-color: rgba(46,196,182,0.55);
-    background: linear-gradient(135deg,
-      rgba(46,196,182,0.18) 0%,
-      rgba(127,83,172,0.14) 60%,
-      rgba(67,174,230,0.12) 100%);
+    transform: translateY(-3px) scale(1.015);
+    color: #fff;
     box-shadow:
-      0 12px 32px rgba(46,196,182,0.18),
-      inset 0 1px 0 rgba(255,255,255,0.7);
+      0 8px 32px rgba(46,196,182,0.22),
+      0 0 40px rgba(127,83,172,0.14);
   }
 
-  /* ── Avatar ── */
   .fish-timeline-modern-avatar-wrap {
     width: 72px;
     min-width: 72px;
     height: 72px;
     border-radius: 50%;
     overflow: hidden;
-    background: linear-gradient(135deg, rgba(46,196,182,0.15), rgba(127,83,172,0.15));
-    border: 2px solid rgba(46,196,182,0.35);
+    background: rgba(255,255,255,0.18);
+    border: 2.5px solid rgba(255,255,255,0.45);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
   }
-
   .fish-timeline-modern-avatar {
     width: 100%;
     height: 100%;
     object-fit: cover;
     display: block;
   }
-
   .fish-timeline-modern-avatar-fallback {
     width: 100%;
     height: 100%;
@@ -190,36 +176,30 @@
     font-size: 1.6rem;
   }
 
-  /* ── Text ── */
   .fish-timeline-modern-content { min-width: 0; }
-
   .fish-timeline-modern-content h3 {
     margin: 0.15rem 0 0.3rem;
     line-height: 1.2;
     font-size: 1.08rem;
-    background: linear-gradient(90deg, var(--ta), var(--tb));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.13);
   }
-
   .fish-timeline-modern-content p {
     margin: 0;
-    color: #3d4650;
+    color: rgba(255,255,255,0.88);
     font-size: 0.93rem;
     line-height: 1.5;
   }
-
   .fish-timeline-modern-meta {
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
-    color: var(--ta);
+    color: rgba(255,255,255,0.72);
     margin-bottom: 0.2rem;
   }
 
-  /* ── Badge ── */
   .fish-timeline-modern-badge {
     position: absolute;
     top: -11px;
@@ -227,28 +207,21 @@
     font-size: 0.72rem;
     font-weight: 700;
     color: #fff;
-    background: linear-gradient(135deg, #9e9e9e, #616161);
+    background: rgba(0,0,0,0.30);
     padding: 0.22rem 0.6rem;
     border-radius: 999px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.22);
     white-space: nowrap;
   }
 
-  /* ── Gone state ── */
+  /* Gone: grauer Karten-Hintergrund + Bild ausgegraut */
+  .fish-timeline-modern-item.is-gone .fish-timeline-modern-card {
+    background: linear-gradient(135deg, #7a8a90 0%, #5a6570 55%, #4a5560 100%);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+  }
   .fish-timeline-modern-item.is-gone .fish-timeline-modern-avatar {
     filter: grayscale(100%);
-    opacity: 0.65;
-  }
-  .fish-timeline-modern-item.is-gone .fish-timeline-modern-card {
-    background: linear-gradient(135deg,
-      rgba(150,150,150,0.08) 0%,
-      rgba(130,130,130,0.06) 100%);
-    border-color: rgba(0,0,0,0.12);
-  }
-  .fish-timeline-modern-item.is-gone .fish-timeline-modern-content h3 {
-    background: linear-gradient(90deg, #888, #aaa);
-    -webkit-background-clip: text;
-    background-clip: text;
+    opacity: 0.55;
   }
   .fish-timeline-modern-item.is-gone .fish-timeline-modern-point {
     background: linear-gradient(135deg, #aaa, #888);
@@ -256,7 +229,6 @@
     box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
   }
 
-  /* ── Mobile ── */
   @media (max-width: 860px) {
     .fish-timeline-modern-line {
       left: 18px;
