@@ -11,241 +11,119 @@
     function playJingle() {
       const audio = createCtx();
       const t0 = audio.currentTime + 0.05;
+      const sr = audio.sampleRate;
 
-      /* ── Bus ─────────────────────────────────────────────────────── */
+      /* ── Master ── */
       const master = audio.createGain();
-      master.gain.value = 0.13;
+      master.gain.value = 0.75;
       const comp = audio.createDynamicsCompressor();
-      comp.threshold.value = -28; comp.knee.value = 18;
-      comp.ratio.value = 2.0; comp.attack.value = 0.01; comp.release.value = 0.22;
-      master.connect(comp);
-      comp.connect(audio.destination);
+      comp.threshold.value = -16; comp.knee.value = 10;
+      comp.ratio.value = 3; comp.attack.value = 0.004; comp.release.value = 0.12;
+      master.connect(comp); comp.connect(audio.destination);
 
-      /* ── Reverb (helles, weites IR – wie Wasseroberfläche) ────────── */
-      const reverb = audio.createConvolver();
-      reverb.buffer = makeWaterIR(audio, 1.8);
-      const revWet = audio.createGain(); revWet.gain.value = 0.28;
-      reverb.connect(revWet); revWet.connect(master);
-
-      /* ── Stereo-Delay (Echo der Tropfen) ─────────────────────────── */
-      const dly = audio.createDelay(1); dly.delayTime.value = 0.21;
-      const dlyFb = audio.createGain(); dlyFb.gain.value = 0.18;
-      const dlyGain = audio.createGain(); dlyGain.gain.value = 0.14;
-      const dlyPanL = audio.createStereoPanner(); dlyPanL.pan.value = -0.35;
-      const dlyPanR = audio.createStereoPanner(); dlyPanR.pan.value = 0.35;
-      dly.connect(dlyFb); dlyFb.connect(dly);
-      dly.connect(dlyPanL); dlyPanL.connect(master);
-      dly.connect(dlyPanR); dlyPanR.connect(master);
-
-      /* ── Helles IR: klares, luftiges Wasser-Reverb ────────────────── */
-      function makeWaterIR(audio, dur) {
-        const sr = audio.sampleRate, len = Math.floor(sr * dur);
-        const buf = audio.createBuffer(2, len, sr);
-        for (let ch = 0; ch < 2; ch++) {
-          const d = buf.getChannelData(ch);
-          for (let i = 0; i < len; i++) {
-            const t = i / sr;
-            const env = Math.pow(1 - t / dur, 1.6);
-            d[i] = (Math.random() * 2 - 1) * env * 0.38;
-          }
-          // frühe Reflexionen (Tropfen-Echo)
-          [0.008, 0.018, 0.031, 0.055].forEach((s, k) => {
-            const idx = Math.min(len - 1, Math.floor(sr * s));
-            d[idx] += 0.22 / (k + 1);
-          });
-        }
-        return buf;
+      /* ── Kurzer feuchter Hall ── */
+      const rev = audio.createConvolver();
+      const rLen = Math.floor(sr * 0.6);
+      const rBuf = audio.createBuffer(2, rLen, sr);
+      for (let ch = 0; ch < 2; ch++) {
+        const d = rBuf.getChannelData(ch);
+        for (let i = 0; i < rLen; i++)
+          d[i] = (Math.random()*2-1) * Math.pow(1 - i/rLen, 2.8) * 0.45;
+      }
+      rev.buffer = rBuf;
+      const revG = audio.createGain(); revG.gain.value = 0.28;
+      rev.connect(revG); revG.connect(master);
+      function wet(node, amt) {
+        const g = audio.createGain(); g.gain.value = amt;
+        node.connect(g); g.connect(rev);
       }
 
-      /* ── Hilfsfunktionen ─────────────────────────────────────────── */
-      function note(semi) { return 440 * Math.pow(2, semi / 12); }
+      /* ── GLOCKE: sinusbasiert, weich angeschlagen, klingt im Wasser ── */
+      function bell(f, when, { dur=0.9, gain=0.38, pan=0 } = {}) {
+        // Glocke = Grundton + wenige harmonische Obertöne, alle Sinus
+        const partials = [1, 2.756, 5.404]; // typische Glocken-Teiltonverhältnisse
+        const gains    = [1.0,  0.35,  0.12];
 
-      /* ── WASSERTROPFEN: natürlicher, tiefer Sinusglide ── */
-      function drop(when, { f0 = 520, f1 = 180, dur = 0.35, gain = 0.42,
-                            pan = 0.0, shimmer = true } = {}) {
-        const osc = audio.createOscillator();
-        osc.type = "sine";
-        // sanfterer, längerer Glide – realer Wassertropfen fällt langsamer
-        osc.frequency.setValueAtTime(f0, when);
-        osc.frequency.exponentialRampToValueAtTime(f1, when + dur * 0.7);
-        osc.frequency.exponentialRampToValueAtTime(f1 * 0.85, when + dur);
-
-        const g = audio.createGain();
-        g.gain.setValueAtTime(0, when);
-        g.gain.linearRampToValueAtTime(gain, when + 0.007);
-        g.gain.exponentialRampToValueAtTime(0.0001, when + dur + 0.08);
-
-        const hp = audio.createBiquadFilter();
-        hp.type = "highpass"; hp.frequency.value = 80;
-        // Tiefpassfilter macht es weicher, weniger elektronisch
-        const lp = audio.createBiquadFilter();
-        lp.type = "lowpass"; lp.frequency.value = 1800;
-
-        const pan_ = audio.createStereoPanner(); pan_.pan.value = pan;
-        const toRev = audio.createGain(); toRev.gain.value = 0.55;
-        const toDly = audio.createGain(); toDly.gain.value = 0.18;
-
-        osc.connect(hp); hp.connect(lp); lp.connect(g);
-        g.connect(pan_); pan_.connect(master);
-        g.connect(toRev); toRev.connect(reverb);
-        g.connect(toDly); toDly.connect(dly);
-        osc.start(when); osc.stop(when + dur + 0.2);
-
-        // Shimmer: sehr dezent, nur eine Oktave höher (kein hartes Klirren)
-        if (shimmer) {
-          const sh = audio.createOscillator();
-          sh.type = "sine"; // sine statt triangle – viel weicher
-          sh.frequency.value = f0 * 1.5; // Quinte statt 2.3-faches
-          const shg = audio.createGain();
-          shg.gain.setValueAtTime(0, when);
-          shg.gain.linearRampToValueAtTime(gain * 0.08, when + 0.005);
-          shg.gain.exponentialRampToValueAtTime(0.0001, when + dur * 0.3);
-          const shRev = audio.createGain(); shRev.gain.value = 0.6;
-          sh.connect(shg); shg.connect(shRev); shRev.connect(reverb); // nur Reverb, nicht direct
-          sh.start(when); sh.stop(when + dur * 0.4);
-        }
-      }
-
-      /* ── FISCH-FLITZEN: weicher, organischer Sweep ─────────────── */
-      function fishDart(when, { fromPan = -0.6, toPan = 0.6, dur = 0.28,
-                                f0 = 180, f1 = 620 } = {}) {
-        const osc = audio.createOscillator();
-        osc.type = "sine"; // sine statt sawtooth – viel natürlicher
-        osc.frequency.setValueAtTime(f0, when);
-        osc.frequency.exponentialRampToValueAtTime(f1, when + dur * 0.5);
-        osc.frequency.exponentialRampToValueAtTime(f0 * 0.7, when + dur);
-
-        const g = audio.createGain();
-        g.gain.setValueAtTime(0, when);
-        g.gain.linearRampToValueAtTime(0.18, when + 0.012); // leiser
-        g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
-
-        const bp = audio.createBiquadFilter();
-        bp.type = "bandpass"; bp.frequency.value = 380; bp.Q.value = 1.2;
-
-        const pan_ = audio.createStereoPanner();
-        pan_.pan.setValueAtTime(fromPan, when);
-        pan_.pan.linearRampToValueAtTime(toPan, when + dur);
-
-        const toRev = audio.createGain(); toRev.gain.value = 0.45;
-
-        osc.connect(bp); bp.connect(g);
-        g.connect(pan_); pan_.connect(master);
-        g.connect(toRev); toRev.connect(reverb);
-        osc.start(when); osc.stop(when + dur + 0.1);
-
-        // Nur sehr leises Wasserrauschen – kein hartes Noise-Burst
-        const bufSize = Math.floor(audio.sampleRate * 0.08);
-        const nBuf = audio.createBuffer(1, bufSize, audio.sampleRate);
-        const nd = nBuf.getChannelData(0);
-        for (let i = 0; i < bufSize; i++) nd[i] = (Math.random() * 2 - 1);
-        const noise = audio.createBufferSource(); noise.buffer = nBuf;
-        const nlp = audio.createBiquadFilter();
-        nlp.type = "lowpass"; nlp.frequency.value = 800; // tiefer = weicher
-        const ng = audio.createGain();
-        ng.gain.setValueAtTime(0, when);
-        ng.gain.linearRampToValueAtTime(0.04, when + 0.01);
-        ng.gain.exponentialRampToValueAtTime(0.0001, when + 0.08);
-        const nRev = audio.createGain(); nRev.gain.value = 0.5;
-        noise.connect(nlp); nlp.connect(ng);
-        ng.connect(pan_); ng.connect(nRev); nRev.connect(reverb);
-        noise.start(when); noise.stop(when + 0.1);
-      }
-
-      /* ── OASEN-PAD: wärmer, auf A-Dur gestimmt ───────────────────── */
-      function oasisPad(when, { dur = 2.4 } = {}) {
-        // A-Dur Pentatonik: A2, E3, A3, C#4 – wärmer und einladender als E
-        const freqs = [note(-21), note(-14), note(-9), note(-5)];
-        freqs.forEach((f, i) => {
+        partials.forEach((ratio, i) => {
           const osc = audio.createOscillator();
           osc.type = "sine";
-          osc.frequency.value = f;
-          osc.detune.value = [-4, 3, -2, 5][i] + Math.random() * 1.5;
+          osc.frequency.value = f * ratio;
 
           const g = audio.createGain();
+          // kurzer Attack (Anschlag), langer exponentieller Ausklang
           g.gain.setValueAtTime(0, when);
-          g.gain.linearRampToValueAtTime(0.055 - i * 0.008, when + dur * 0.4);
-          g.gain.linearRampToValueAtTime(0, when + dur);
+          g.gain.linearRampToValueAtTime(gain * gains[i], when + 0.006);
+          g.gain.exponentialRampToValueAtTime(0.0001, when + dur * (1 - i * 0.18));
 
           const lp = audio.createBiquadFilter();
-          lp.type = "lowpass"; lp.frequency.value = 700 - i * 60;
+          lp.type = "lowpass"; lp.frequency.value = 4000 - i * 800;
 
-          const pan_ = audio.createStereoPanner();
-          pan_.pan.value = [-0.18, 0.18, -0.08, 0.08][i];
+          const p = audio.createStereoPanner(); p.pan.value = pan;
 
-          const toRev = audio.createGain(); toRev.gain.value = 0.75;
-
-          osc.connect(lp); lp.connect(g);
-          g.connect(pan_); pan_.connect(master);
-          g.connect(toRev); toRev.connect(reverb);
-          osc.start(when); osc.stop(when + dur + 0.4);
+          osc.connect(lp); lp.connect(g); g.connect(p); p.connect(master);
+          wet(g, 0.55);
+          osc.start(when); osc.stop(when + dur + 0.1);
         });
       }
 
-      /* ── MELODIE-KRISTALL: weicher, auf A-Dur ────────────────────── */
-      function crystal(f, when, { dur = 0.6, gain = 0.42, pan = 0.0 } = {}) {
-        const osc = audio.createOscillator();
-        osc.type = "sine";
-        osc.frequency.value = f;
-        // zweiter Ton eine reine Oktave (nicht 2.01 – das klang zu nach Elektronik)
+      /* ── GEIGE: weicher Streicher – mehr Sinus, weniger Sägezahn ── */
+      function violin(f, when, { dur=0.55, gain=0.22, pan=0 } = {}) {
+        // Mischung: 70% Sinus (warm) + 30% leiser Sägezahn (Streicher-Charakter)
+        const osc1 = audio.createOscillator();
+        osc1.type = "sine"; osc1.frequency.value = f;
         const osc2 = audio.createOscillator();
-        osc2.type = "sine";
-        osc2.frequency.value = f * 2.0;
-        osc2.detune.value = -2;
+        osc2.type = "sawtooth"; osc2.frequency.value = f;
 
+        // Vibrato: sehr sanft, setzt erst nach dem Attack ein
+        const vib = audio.createOscillator();
+        vib.type = "sine"; vib.frequency.value = 5.5;
+        const vibG = audio.createGain();
+        vibG.gain.setValueAtTime(0, when);
+        vibG.gain.linearRampToValueAtTime(8, when + 0.12); // Vibrato schleicht sich ein
+        vib.connect(vibG); vibG.connect(osc1.detune); vibG.connect(osc2.detune);
+
+        const g1 = audio.createGain(); g1.gain.value = 1.0;   // Sinus-Anteil
+        const g2 = audio.createGain(); g2.gain.value = 0.18;  // Sägezahn-Anteil (dezent)
+
+        // starkes Tiefpassfilter – nimmt die Schärfe raus
+        const lp = audio.createBiquadFilter();
+        lp.type = "lowpass"; lp.frequency.value = 1100; lp.Q.value = 0.5;
+
+        // Bogen-Hüllkurve
         const g = audio.createGain();
         g.gain.setValueAtTime(0, when);
-        g.gain.linearRampToValueAtTime(gain, when + 0.009);
-        g.gain.exponentialRampToValueAtTime(0.0001, when + dur);
+        g.gain.linearRampToValueAtTime(gain, when + 0.07);
+        g.gain.setValueAtTime(gain, when + dur - 0.09);
+        g.gain.linearRampToValueAtTime(0, when + dur);
 
-        const g2 = audio.createGain(); g2.gain.value = 0.09; // Oktave dezenter
-        const lp = audio.createBiquadFilter();
-        lp.type = "lowpass"; lp.frequency.value = 2200;
-        const pan_ = audio.createStereoPanner(); pan_.pan.value = pan;
-        const toRev = audio.createGain(); toRev.gain.value = 0.55;
-        const toDly = audio.createGain(); toDly.gain.value = 0.14;
+        const p = audio.createStereoPanner(); p.pan.value = pan;
 
-        osc.connect(lp); osc2.connect(g2); g2.connect(lp);
-        lp.connect(g);
-        g.connect(pan_); pan_.connect(master);
-        g.connect(toRev); toRev.connect(reverb);
-        g.connect(toDly); toDly.connect(dly);
+        osc1.connect(g1); osc2.connect(g2);
+        g1.connect(lp); g2.connect(lp);
+        lp.connect(g); g.connect(p); p.connect(master);
+        wet(g, 0.52);
 
-        osc.start(when); osc2.start(when);
-        osc.stop(when + dur + 0.25); osc2.stop(when + dur + 0.25);
+        osc1.start(when); osc2.start(when); vib.start(when);
+        osc1.stop(when + dur + 0.05); osc2.stop(when + dur + 0.05); vib.stop(when + dur + 0.05);
       }
 
-      /* ══════════════════════════════════════════════════════════════
+      /* ══════════════════════════════════════
          KOMPOSITION
-         Timing: Oasen-Pad sofort | Tropfen 1–3 | Fisch flitzt | Melodie
-      ══════════════════════════════════════════════════════════════ */
+         3× Glocke (tief → mittel → hell)  →  Geigen-Phrase
+      ══════════════════════════════════════ */
 
-      // Oasen-Atmosphäre: startet sofort, liegt unter allem
-      oasisPad(t0, { dur: 2.6 });
+      // Glocken: tief → mittel → hell (wie Unterwasser-Glockenspiel)
+      bell(220, t0 + 0.00, { dur: 1.0, gain: 0.40, pan: -0.3 }); // A3 – tief
+      bell(330, t0 + 0.28, { dur: 0.9, gain: 0.36, pan:  0.1 }); // E4 – mittel
+      bell(440, t0 + 0.54, { dur: 0.8, gain: 0.32, pan:  0.4 }); // A4 – hell
 
-      // Tropfen-Gruppe: tiefere, natürlichere Frequenzen (wie Wasser in ein Becken)
-      drop(t0 + 0.00, { f0: 480, f1: 160, dur: 0.38, gain: 0.44, pan: -0.42 });
-      drop(t0 + 0.22, { f0: 380, f1: 130, dur: 0.40, gain: 0.40, pan:  0.08 });
-      drop(t0 + 0.46, { f0: 520, f1: 175, dur: 0.35, gain: 0.36, pan:  0.40 });
-
-      // Fisch: sanft, kaum hörbar aber spürbar im Stereo
-      fishDart(t0 + 0.72, { fromPan: -0.55, toPan: 0.55, dur: 0.28, f0: 160, f1: 480 });
-
-      // Melodie: A-Dur Pentatonik – A4, C#5, E5, A5 – warm & einladend
-      crystal(note(9),  t0 + 1.05, { dur: 0.62, gain: 0.40, pan: -0.15 }); // A4
-      crystal(note(13), t0 + 1.28, { dur: 0.60, gain: 0.36, pan:  0.14 }); // C#5
-      crystal(note(16), t0 + 1.50, { dur: 0.58, gain: 0.33, pan: -0.06 }); // E5
-
-      // kleiner Tropfen dazwischen
-      drop(t0 + 1.42, { f0: 340, f1: 115, dur: 0.36, gain: 0.28, pan: 0.35, shimmer: false });
-
-      // Abschluss
-      crystal(note(21), t0 + 1.72, { dur: 0.68, gain: 0.30, pan:  0.0  }); // A5
-      drop(t0 + 1.90,   { f0: 400, f1: 140, dur: 0.38, gain: 0.22, pan: -0.25 });
-      crystal(note(16),  t0 + 2.05, { dur: 0.72, gain: 0.20, pan:  0.0  }); // E5 – leises Ausklingen
+      // Geigen-Phrase: D4 → A4 → D5
+      violin(293.7, t0 + 0.90, { dur: 0.42, gain: 0.20, pan: -0.12 }); // D4
+      violin(440.0, t0 + 1.26, { dur: 0.38, gain: 0.18, pan:  0.0  }); // A4
+      violin(587.3, t0 + 1.58, { dur: 0.46, gain: 0.15, pan:  0.12 }); // D5
     }
 
-    /* ── Bootstrap ───────────────────────────────────────────────── */
+    /* ── API ── */
     window.playBettaJingle = async function () {
       ctx = createCtx();
       if (ctx.state !== "running") await ctx.resume();
