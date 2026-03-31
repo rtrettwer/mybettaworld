@@ -1,224 +1,280 @@
-<!-- Interaktive Fisch-Timeline (nutzt die neue Komponente) -->
-<div class="fish-timeline-modern">
-  <div class="fish-timeline-line"></div>
-  <div class="fish-timeline-items">
-    {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_birth' %} {%
-    for post in fish_posts %} {% assign side = forloop.index0 | modulo: 2 | plus: 0 %} {% if side == 0 %} {% include
-    fish_timeline_item.html post=post side='right' %} {% else %} {% include fish_timeline_item.html post=post
-    side='left' %} {% endif %} {% endfor %}
-  </div>
-</div>
+{% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_arrival' %}
 
-<!-- Optionales CSS für Card-Avatar-Einheit, gebogene Card, Textfluss und Hover-Effekt -->
+<section class="fish-timeline-modern" aria-label="Fisch Timeline">
+  <div class="fish-timeline-modern-line" aria-hidden="true"></div>
+
+  {% for post in fish_posts %}
+  {% assign side = forloop.index0 | modulo: 2 %}
+  {% assign fish_status = post.fish_status | default: '' %}
+  {% assign is_gone = false %}
+  {% if fish_status == 'sold' or fish_status == 'deceased' %}
+    {% assign is_gone = true %}
+  {% endif %}
+
+  {% assign arrival_date = post.fish_arrival | default: post.date %}
+  {% assign arrival_iso = arrival_date | date: "%Y-%m-%d" %}
+  {% assign arrival_label = arrival_iso | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "April", "April" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "August", "August" | replace: "September", "September" | replace: "October", "Oktober" | replace: "November", "November" | replace: "December", "Dezember" %}
+
+  <article class="fish-timeline-modern-item {% if side == 0 %}is-right{% else %}is-left{% endif %} {% if is_gone %}is-gone{% endif %}">
+    <div class="fish-timeline-modern-point" aria-hidden="true"></div>
+
+    <a class="fish-timeline-modern-card" href="{{ post.url | relative_url }}">
+      <div class="fish-timeline-modern-avatar-wrap">
+        {% if post.timeline_image %}
+        <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="fish-timeline-modern-avatar" loading="lazy" />
+        {% else %}
+        {% assign fish_slug = post.title | slugify %}
+        {% assign timeline_image_path = '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
+        <img
+          src="{{ timeline_image_path | relative_url }}"
+          alt="{{ post.title }}"
+          class="fish-timeline-modern-avatar"
+          loading="lazy"
+          onerror="this.onerror = null; this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span class="fish-timeline-modern-avatar-fallback" style="display: none">🐟</span>
+        {% endif %}
+      </div>
+
+      <div class="fish-timeline-modern-content">
+        <div class="fish-timeline-modern-meta">📅 Einzug: {{ arrival_label }}</div>
+        <h3>{{ post.title }}</h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 18 }}</p>
+      </div>
+
+      {% if is_gone %}
+      <span class="fish-timeline-modern-badge">{% if fish_status == 'deceased' %}🕊 Verstorben{% else %}✓ Verkauft{% endif %}</span>
+      {% endif %}
+    </a>
+  </article>
+  {% endfor %}
+</section>
+
 <style>
+  @keyframes ftm-fadein {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes ftm-pulse-dot {
+    0%, 100% { box-shadow: 0 0 0 4px rgba(46,196,182,0.18); }
+    50%       { box-shadow: 0 0 0 8px rgba(46,196,182,0.08); }
+  }
+
   .fish-timeline-modern {
+    --ta: var(--theme-primary-1, #2ec4b6);
+    --tb: var(--theme-primary-2, #7f53ac);
+    --tc: var(--theme-primary-3, #43aee6);
     position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem 0;
+    max-width: 980px;
+    margin: 1.5rem auto 0;
+    padding: 1rem 0 2rem;
   }
-  .fish-timeline-line {
+
+  .fish-timeline-modern-line {
     position: absolute;
+    top: 0; bottom: 0;
     left: 50%;
-    top: 0;
-    width: 6px;
-    height: 100%;
-    background: linear-gradient(180deg, #2196f3 0%, #21cbf3 100%);
-    border-radius: 3px;
+    width: 4px;
     transform: translateX(-50%);
-    z-index: 0;
-    opacity: 0.18;
+    border-radius: 999px;
+    background: linear-gradient(180deg, var(--ta) 0%, var(--tb) 50%, var(--tc) 100%);
+    opacity: 0.45;
   }
-  .fish-timeline-items {
-    width: 100%;
-    max-width: 1100px;
+
+  /* ── Items ── */
+  .fish-timeline-modern-item {
     position: relative;
-    z-index: 1;
+    width: 50%;
+    margin: 0 0 1.6rem;
+    animation: ftm-fadein 0.5s ease both;
   }
-  .fish-timeline-centered {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+
+  {% for i in (1..20) %}
+  .fish-timeline-modern-item:nth-child({{ i }}) { animation-delay: {{ i | times: 80 }}ms; }
+  {% endfor %}
+
+  .fish-timeline-modern-item.is-right {
+    margin-left: 50%;
+    padding-left: 2.4rem;
   }
-  .timeline-container-centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2.2rem 0;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+  .fish-timeline-modern-item.is-left {
+    margin-left: 0;
+    padding-right: 2.4rem;
   }
-  .timeline-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 1.5rem;
-  }
-  .timeline-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    gap: 0;
-  }
-  .timeline-marker {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    min-height: 140px;
-    margin-right: -40px;
+
+  /* ── Dot ── */
+  .fish-timeline-modern-point {
+    position: absolute;
+    top: 1.75rem;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--ta), var(--tb));
+    animation: ftm-pulse-dot 2.8s ease-in-out infinite;
     z-index: 2;
   }
-  .timeline-marker::before {
-    content: none;
-  }
-  .timeline-item:first-child .timeline-marker::before,
-  .timeline-item:last-child .timeline-marker::before {
-    content: none;
-  }
-  .fish-timeline-large-image .fish-avatar-large {
+  .fish-timeline-modern-item.is-right .fish-timeline-modern-point { left: -8px; }
+  .fish-timeline-modern-item.is-left  .fish-timeline-modern-point { right: -8px; }
+
+  /* ── Card ── */
+  .fish-timeline-modern-card {
     position: relative;
-    z-index: 1;
-    width: 140px !important;
-    height: 140px !important;
-    min-width: 140px !important;
-    min-height: 140px !important;
-    max-width: 140px !important;
-    max-height: 140px !important;
-    object-fit: cover;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem 1.1rem;
+    border-radius: 18px;
+    color: inherit;
+    text-decoration: none;
+    /* gradient statt weißem Kasten */
+    background: linear-gradient(135deg,
+      rgba(46,196,182,0.10) 0%,
+      rgba(127,83,172,0.10) 60%,
+      rgba(67,174,230,0.08) 100%);
+    border: 1.5px solid rgba(46,196,182,0.28);
+    box-shadow:
+      0 4px 18px rgba(20,22,27,0.09),
+      inset 0 1px 0 rgba(255,255,255,0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    transition:
+      box-shadow 0.25s ease,
+      transform  0.25s ease,
+      border-color 0.25s ease,
+      background 0.25s ease;
+  }
+
+  .fish-timeline-modern-card:hover,
+  .fish-timeline-modern-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: rgba(46,196,182,0.55);
+    background: linear-gradient(135deg,
+      rgba(46,196,182,0.18) 0%,
+      rgba(127,83,172,0.14) 60%,
+      rgba(67,174,230,0.12) 100%);
+    box-shadow:
+      0 12px 32px rgba(46,196,182,0.18),
+      inset 0 1px 0 rgba(255,255,255,0.7);
+  }
+
+  /* ── Avatar ── */
+  .fish-timeline-modern-avatar-wrap {
+    width: 72px;
+    min-width: 72px;
+    height: 72px;
     border-radius: 50%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-    flex-shrink: 0 !important;
-    flex-grow: 0 !important;
-    display: block;
-    background: #fff;
-  }
-  .fish-timeline-image-dominant,
-  .timeline-marker,
-  .timeline-item,
-  .timeline-container,
-  .fish-timeline-large-image {
-    overflow: visible !important;
-  }
-  .fish-card-unit {
+    overflow: hidden;
+    background: linear-gradient(135deg, rgba(46,196,182,0.15), rgba(127,83,172,0.15));
+    border: 2px solid rgba(46,196,182,0.35);
     display: flex;
     align-items: center;
-    text-decoration: none;
-    transition:
-      box-shadow 0.2s,
-      transform 0.2s;
+    justify-content: center;
+    flex-shrink: 0;
   }
-  .fish-card-unit:hover .fish-timeline-content-curved {
-    box-shadow: 0 4px 16px rgba(33, 150, 243, 0.18);
-    transform: translateY(-2px) scale(1.02);
-  }
-  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved {
-    padding: 1.2rem 1.6rem 1.2rem 3.8rem;
-    font-size: 1rem;
-    background: #fff;
-    border-radius: 0 1.5rem 1.5rem 2.5rem;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
-    min-width: 260px;
-    max-width: 520px;
-    min-height: 80px;
-    max-height: none;
-    width: auto;
+
+  .fish-timeline-modern-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
-    word-break: break-word;
-    margin-left: -60px;
-    text-align: left;
-    z-index: 1;
-    border-left: 0.5rem solid transparent;
   }
-  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved h4,
-  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved p,
-  .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved .timeline-date {
-    margin-left: 0;
+
+  .fish-timeline-modern-avatar-fallback {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
   }
-  @media (max-width: 900px) {
-    .timeline-row {
-      flex-direction: column;
-      gap: 0.7rem;
-      align-items: center;
-    }
-    .fish-card-unit {
-      flex-direction: column;
-      align-items: center;
-    }
-    .fish-timeline-content-small.fish-timeline-content-wide-short.fish-timeline-content-curved {
-      padding: 1.2rem 1.2rem 1.2rem 1.2rem;
-      min-width: 160px;
-      max-width: 98vw;
-      margin-left: 0;
-      border-radius: 1.5rem;
-    }
+
+  /* ── Text ── */
+  .fish-timeline-modern-content { min-width: 0; }
+
+  .fish-timeline-modern-content h3 {
+    margin: 0.15rem 0 0.3rem;
+    line-height: 1.2;
+    font-size: 1.08rem;
+    background: linear-gradient(90deg, var(--ta), var(--tb));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
-  .fish-timeline-content-small h4 {
-    margin: 0.2em 0 0.3em 0;
-    font-size: 1.1em;
-  }
-  .fish-timeline-content-small p {
+
+  .fish-timeline-modern-content p {
     margin: 0;
-    color: #444;
-    font-size: 0.97em;
-  }
-  .fish-timeline-content-small .timeline-date {
-    font-size: 0.95em;
-    color: #888;
-    margin-bottom: 0.1em;
-  }
-  .timeline-center .timeline-line {
-    display: none !important;
+    color: #3d4650;
+    font-size: 0.93rem;
+    line-height: 1.5;
   }
 
-  /* Styles für verkaufte Fische */
-  .timeline-item-sold {
-    opacity: 0.7;
-  }
-
-  .timeline-avatar-img-sold {
-    filter: grayscale(70%) opacity(0.7);
-  }
-
-  .timeline-avatar-sold {
-    opacity: 0.8;
-  }
-
-  .timeline-card-sold {
-    opacity: 0.85;
-    background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%) !important;
-  }
-
-  .timeline-sold-badge {
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: linear-gradient(135deg, #9e9e9e 0%, #757575 100%);
-    color: white;
-    padding: 4px 12px;
-    border-radius: 12px;
-    font-size: 0.75rem;
+  .fish-timeline-modern-meta {
+    font-size: 0.78rem;
     font-weight: 600;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--ta);
+    margin-bottom: 0.2rem;
+  }
+
+  /* ── Badge ── */
+  .fish-timeline-modern-badge {
+    position: absolute;
+    top: -11px;
+    right: 14px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #fff;
+    background: linear-gradient(135deg, #9e9e9e, #616161);
+    padding: 0.22rem 0.6rem;
+    border-radius: 999px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.18);
     white-space: nowrap;
-    z-index: 10;
   }
 
-  /* Hover-Effekt für verkaufte Fische - leichtere Animation */
-  .timeline-item-sold:hover {
-    opacity: 0.85;
+  /* ── Gone state ── */
+  .fish-timeline-modern-item.is-gone .fish-timeline-modern-avatar {
+    filter: grayscale(100%);
+    opacity: 0.65;
+  }
+  .fish-timeline-modern-item.is-gone .fish-timeline-modern-card {
+    background: linear-gradient(135deg,
+      rgba(150,150,150,0.08) 0%,
+      rgba(130,130,130,0.06) 100%);
+    border-color: rgba(0,0,0,0.12);
+  }
+  .fish-timeline-modern-item.is-gone .fish-timeline-modern-content h3 {
+    background: linear-gradient(90deg, #888, #aaa);
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  .fish-timeline-modern-item.is-gone .fish-timeline-modern-point {
+    background: linear-gradient(135deg, #aaa, #888);
+    animation: none;
+    box-shadow: 0 0 0 4px rgba(0,0,0,0.08);
   }
 
-  .timeline-item-sold:hover .timeline-avatar-img-sold {
-    filter: grayscale(50%) opacity(0.8);
+  /* ── Mobile ── */
+  @media (max-width: 860px) {
+    .fish-timeline-modern-line {
+      left: 18px;
+      transform: none;
+    }
+    .fish-timeline-modern-item,
+    .fish-timeline-modern-item.is-right,
+    .fish-timeline-modern-item.is-left {
+      width: 100%;
+      margin-left: 0;
+      padding-left: 2.6rem;
+      padding-right: 0;
+    }
+    .fish-timeline-modern-item .fish-timeline-modern-point,
+    .fish-timeline-modern-item.is-right .fish-timeline-modern-point,
+    .fish-timeline-modern-item.is-left .fish-timeline-modern-point {
+      left: 10px;
+      right: auto;
+    }
   }
 </style>

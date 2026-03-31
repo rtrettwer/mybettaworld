@@ -10,6 +10,7 @@ image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 timeline_image: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
 fish_name: "Sonnenschein"
 fish_birth: "2025-05-20"
+fish_arrival: "2025-07-28"
 fish_age: "5 Monate"
 fish_status: "sold"
 fish_sold_date: "2026-03-31"

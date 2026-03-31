@@ -10,6 +10,7 @@ image: /assets/images/fish/bandit/PA162660.webp
 timeline_image: /assets/images/fish/bandit/bandit_timeline.webp
 fish_name: "Bandit"
 fish_birth: "2025-03-15"
+fish_arrival: "2025-07-24"
 fish_price: "36 €"
 fish_type: "Betta splendens (Domestic), Plakat (Kurzflosser)"
 fish_fins: "Plakat (Kurzflosser)"

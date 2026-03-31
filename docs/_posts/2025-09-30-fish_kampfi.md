@@ -10,6 +10,7 @@ image: /assets/images/fish/kampfi/IMG_20251015_205247.webp
 timeline_image: /assets/images/fish/kampfi/kampfi_timeline.webp
 fish_name: Kampfi
 fish_birth: "2025-01-15"
+fish_arrival: "2025-04-01"
 fish_status: "deceased"
 fish_death_date: "2026-03-13"
 fish_age: 9 Monate

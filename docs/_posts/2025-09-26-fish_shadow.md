@@ -10,6 +10,7 @@ image: /assets/images/fish/shadow/IMG_20251015_205320.webp
 timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
 fish_birth: "2025-05-22"
+fish_arrival: "2025-07-28"
 fish_age: "5 Monate"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Weibchen"

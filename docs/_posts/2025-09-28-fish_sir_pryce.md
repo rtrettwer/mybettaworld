@@ -10,6 +10,7 @@ image: /assets/images/fish/sirPryce/IMG_20251016_204600.webp
 timeline_image: /assets/images/fish/sirPryce/sir_pryce_timeline.webp
 fish_name: "Sir Pryce"
 fish_birth: "2025-05-15"
+fish_arrival: "2025-07-28"
 fish_age: "4 Monate"
 fish_status: "sold"
 fish_sold_date: "2026-03-31"
