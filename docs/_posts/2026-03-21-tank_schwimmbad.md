@@ -17,7 +17,7 @@ beleuchtung: LED
 bodengrund: Bestehender Bodengrund mit neuem, breiterem Gras
 deko: Recycelte Wurzeln, Hardscape und Pflanzen aus alten Becken
 startdatum: 21.03.2026
-besatz: Aufbauphase - Besatz wird gemeinsam mit meinem Partner ausgewaehlt
+besatz: "1 Pärchen Kobaltblaue Zwergfadenfische, 4 Knurrende Gouramis, ~15 Chili Rasboras (+ 2-3 mitgereiste Fischlein mit schwarzem Längsstreifen)"
 pflanzen: Recycelte Bestands-Pflanzen + neues, breiteres Gras
 technik: Standardtechnik fuer 160L Setup
 heizung: Bei Bedarf
@@ -43,6 +43,8 @@ entwicklung:
     ereignis: Deko, Wurzeln und Pflanzen aus den aufgeloesten Becken recycelt und final integriert.
   - datum: Ende Maerz 2026
     ereignis: Neues Gras eingesetzt (grober/breiter als die Zwergnadelsimse aus dem Gras-Becken).
+  - datum: 22.04.2026
+    ereignis: "Erster Besatz eingezogen: 1 Pärchen Kobaltblaue Zwergfadenfische, 4 Knurrende Gouramis, ~15 Chili Rasboras (und 2–3 mitgereiste kleine Fischlein mit schwarzem Längsstreifen). Schwarm und Gouramis sollen perspektivisch noch aufgestockt werden."
 entwicklung_text: |
   Das Schwimmbad ist ein neues 160L Projekt und mehr ein Gemeinschaftsbecken mit meinem Partner.
   Er hat viel mitgestaltet, den Namen gegeben und wird den spaeteren Besatz mit aussuchen.
@@ -51,3 +53,15 @@ gallery_dir: /assets/images/tanks/paradies
 ---
 
 Das Schwimmbad ist seit dem 21.03.2026 aktiv. Der Name kommt von meinem Partner - und passt irgendwie perfekt.
+
+## 22.04.2026 - Erster Besatz
+
+Endlich sind die ersten Bewohner eingezogen! Mein Partner und ich haben uns gemeinsam entschieden und sind sehr happy mit unserer Auswahl.
+
+**Kobaltblaue Zwergfadenfische** – ein Pärchen, das erste Highlight des Beckens. Wunderschöne, lebhafte Farben.
+
+**Knurrende Gouramis** – vier Stück, und sie sind die heimlichen Stars. Sie knurren tatsächlich hörbar! Ein absolut entzückendes kleines Geräusch. Im Endsetup sollen es etwa 7 werden, also kommen noch 3 dazu sobald wir sie finden.
+
+**Chili Rasboras** – etwa 15 Tiere. Einige sind noch etwas blass, aber die Eingewöhnten leuchten schon herrlich rot. Ich hoffe, die anderen folgen mit der Zeit. Im Schwarm haben sich außerdem 2–3 kleinere Fischlein mit schwarzem Längsstreifen miteingeschmuggelt – sie sehen fast aus wie winzige Salmler. Wir wollen den Schwarm perspektivisch auf 20–30 Tiere aufstocken.
+
+Auf Bodenfische (Dornaugen wären ein Traum) warten wir noch 2–3 Wochen, damit das Gras erst ordentlich angewachsen ist.
