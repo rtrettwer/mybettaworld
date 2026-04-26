@@ -6,7 +6,7 @@ date: 2026-03-21 18:00:00 +0200
 categories: [tank]
 tags: [gesellschaftsbecken, 160l, neustart]
 excerpt: "Neues 160L Becken mit recycelter Deko - von meinem Partner liebevoll Schwimmbad genannt."
-image: /assets/images/tanks/paradies/IMG_20251203_135823.webp
+image: /assets/images/tanks/pool/IMG_20260424_195739.webp
 aktiv: true
 dimensions: 120x40x40 cm
 fassungsvermoegen: 160 Liter
@@ -49,7 +49,7 @@ entwicklung_text: |
   Das Schwimmbad ist ein neues 160L Projekt und mehr ein Gemeinschaftsbecken mit meinem Partner.
   Er hat viel mitgestaltet, den Namen gegeben und wird den spaeteren Besatz mit aussuchen.
   Ein grosser Teil des Materials stammt aus den aufgeloesten Becken - so bleibt vieles im Kreislauf.
-gallery_dir: /assets/images/tanks/paradies
+gallery_dir: /assets/images/tanks/pool
 ---
 
 

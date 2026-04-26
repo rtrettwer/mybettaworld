@@ -6,7 +6,7 @@ date: 2026-03-24 19:30:00 +0200
 categories: [tank]
 tags: [zucht, betta, nachwuchs, aktive_laichung]
 excerpt: "Neues Zuchtbecken im ehemaligen Dschungel-Becken-Setup."
-image: /assets/images/tanks/jungle/jungle.webp
+image: /assets/images/tanks/
 aktiv: true
 dimensions: 60x30x30 cm (Tetra Starter 60)
 fassungsvermoegen: 54L
@@ -54,7 +54,7 @@ entwicklung_text: |
   Die Verpaarung von Bandit und Shadow lief schnell an: am Tag nach dem Einsetzen wurde bereits gepaart.
   Shadow durfte nur kurz zur Erholung ins Gras-Becken und ist dann wieder ins Paradies-Becken zurueck.
   Das Timing war super - innerhalb weniger Tage waren Larven sichtbar und kurz darauf frei schwimmend.
-gallery_dir: /assets/images/tanks/jungle
+gallery_dir: 
 ---
 
 
