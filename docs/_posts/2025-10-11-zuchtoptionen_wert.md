@@ -8,6 +8,7 @@ tags: [zucht, genetik, wertschätzung]
 excerpt: "Gedanken über verschiedene Zuchtansätze und wie man den Wert von Betta-Fischen betrachtet."
 ---
 
+
 Meine Einschätzungen zu Wert, Zuchtoptionen und Verkaufspreisen meiner Fische. Da ich noch am Anfang meiner Zuchtlaufbahn stehe, basieren diese Überlegungen auf Recherche und ersten Erfahrungen.
 
 ## Fischübersicht und geschätzter Verkaufswert

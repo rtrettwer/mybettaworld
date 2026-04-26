@@ -9,7 +9,16 @@
     "lint:prettier": "prettier --check '**/*.{css,scss,js,json,yml,yaml,md,html}'",
     "format": "prettier --write '**/*.{css,scss,js,json,yml,yaml,md,html}'",
     "test": "cd docs && bundle exec ruby ../scripts/test_html.rb",
-    "prepare": "command -v pre-commit > /dev/null && pre-commit install || echo 'Pre-commit not installed, skipping hook setup'"
+    "prepare": "command -v pre-commit > /dev/null && pre-commit install || echo 'Pre-commit not installed, skipping hook setup'",
+    "autolink": "python3 scripts/autolink_posts.py",
+    "sync-gallery": "python3 scripts/sync_gallery_yml.py",
+    "generate-thumbnails": "python3 scripts/generate_thumbnails.py",
+    "generate-tags": "bash scripts/generate_tag_pages.sh",
+    "check-thumbnails": "bash scripts/check_thumbnails.sh",
+    "check-pages": "bash scripts/check_github_pages.sh",
+    "test-commitlint": "bash scripts/test_commitlint.sh",
+    "update-stats": "python3 scripts/update_stats.py",
+    "run-local": "cd docs && bundle exec jekyll serve --livereload --incremental"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",

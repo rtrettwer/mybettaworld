@@ -52,6 +52,7 @@ entwicklung_text: |
 gallery_dir: /assets/images/tanks/paradies
 ---
 
+
 Das Schwimmbad ist seit dem 21.03.2026 aktiv. Der Name kommt von meinem Partner - und passt irgendwie perfekt.
 
 ## 22.04.2026 - Erster Besatz

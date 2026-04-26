@@ -31,6 +31,7 @@ fish_lineage: "unbekannt"
 gallery_dir: /assets/images/fish/bandit
 ---
 
+
 # Liebe auf den ersten Blick
 
 Eigentlich wollte ich ja gar keinen weiteren Fisch kaufen, bis die neuen Becken eingelaufen sind. Ich war im Pflanzen
@@ -127,7 +128,7 @@ Leider musste ich [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) wieder raus
 ## Maerz 2026 - Neue Zucht im neuen Zuchtbecken
 
 Am 24.03.2026 habe ich Bandit zusammen mit [Shadow](/fish/2025/09/26/fish_shadow) in das neue [Zuchtbecken](/tank/2026/03/24/tank_zuchtbecken) gesetzt (ca. 28 C).
-Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich Shadow wieder herausgenommen.
+Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich [Shadow](/fish/2025/09/26/fish_shadow) wieder herausgenommen.
 
 Am Freitag waren die ersten Larven sichtbar, am Samstag sind die ersten frei geschwommen.
 Am Sonntag (28.03.) habe ich Bandit wieder aus dem Zuchtbecken genommen und in sein [Gras-Becken](/tank/2025/09/30/tank_babys) gesetzt.

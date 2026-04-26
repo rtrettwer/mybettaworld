@@ -97,6 +97,7 @@ entwicklung_text: |
   Ich habe mir einen Bodenstuhl gekauft und sitze sehr gerne vor dem Becken - es ist so entspannend, den Fischen beim Schwimmen zuzusehen. Trotz der anfänglichen Herausforderungen mit der Überbesetzung entwickelt sich das Becken jetzt sehr schön!
 ---
 
+
 Das **Paradies Becken** ist mein größtes und ambitioniertestes Projekt! Mit 160 Litern beherbergte es ursprünglich etwa 100 Jungfische aus meiner ersten erfolgreichen Zucht. Nach der Abgabe am 02.01.2026 stellte sich heraus: Es waren tatsächlich 258 Jungfische! Mittlerweile ist es ein harmonisches Gesellschaftsbecken mit einer Betta-Sorority.
 
 ## Die Entstehungsgeschichte
@@ -190,17 +191,17 @@ Der Laden war super nett und ich habe im Tausch neue Fische bekommen, die jetzt 
 
 ### Die neue Besatzung
 
-- **8 Betta-Weibchen** - eine harmonische Sorority (inkl. Lila und Shadow)
-- **17 Neon Tetra** (11 neue + 6 aus dem Quarantäne-Becken)
+- **8 Betta-Weibchen** - eine harmonische Sorority (inkl. [Lila](/fish/2025/09/27/fish_lila) und [Shadow](/fish/2025/09/26/fish_shadow))
+- **17 Neon Tetra** (11 neue + 6 aus dem [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken)
 - **7 Otocinclus** (6 neue + mein einsamer Oto von früher)
 - **6 Marmor Corydoras** (seit 22.12.2025) - sehen fantastisch auf dem hellen Sand aus!
 - **6 Amano Garnelen** (große, kräftige Exemplare)
 - **Einige Neocaridina Garnelen** - die Überlebenden
 - **6 Piano Schnecken** - hübsch und robust
 
-**Shadow** ist Anfang Januar aus dem [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken hierher umgezogen, da Kampfi sie dort zu sehr gescheucht hat. In der Sorority mit den anderen Weibchen ist sie viel entspannter!
+**[Shadow](/fish/2025/09/26/fish_shadow)** ist Anfang Januar aus dem [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken hierher umgezogen, da [Kampfi](/fish/2025/09/30/fish_kampfi) sie dort zu sehr gescheucht hat. In der Sorority mit den anderen Weibchen ist sie viel entspannter!
 
-**Lila** ist am 07.01.2026 aus dem [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken ins Paradies-Becken umgezogen, nachdem [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) und [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) verkauft wurden und zusammen in ihr neues Zuhause gezogen sind.
+**[Lila](/fish/2025/09/27/fish_lila)** ist am 07.01.2026 aus dem [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken ins Paradies-Becken umgezogen, nachdem [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) und [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) verkauft wurden und zusammen in ihr neues Zuhause gezogen sind.
 
 ## Das besondere Highlight
 
@@ -224,9 +225,9 @@ Der **Verkauf lief leider schleppend**, obwohl die Fische wunderschön waren. Am
 
 ### Der Neuanfang
 
-Im Tausch habe ich neue Fische bekommen und das Becken neu besetzt. Die **Neon Tetra** aus dem Quarantäne-Becken sind mit eingezogen, sodass ich jetzt einen schönen Schwarm von 17 Tieren habe. Die **6 Otocinclus** sorgen für Algenkontrolle, und die **6 großen Amano Garnelen** sind robust genug, um nicht von den Bettas gejagt zu werden.
+Im Tausch habe ich neue Fische bekommen und das Becken neu besetzt. Die **Neon Tetra** aus dem [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken sind mit eingezogen, sodass ich jetzt einen schönen Schwarm von 17 Tieren habe. Die **6 Otocinclus** sorgen für Algenkontrolle, und die **6 großen Amano Garnelen** sind robust genug, um nicht von den Bettas gejagt zu werden.
 
-Die **8 Betta-Weibchen** bilden eine harmonische Sorority. **Shadow** ist aus dem Dschungel-Becken hierher umgezogen, da Kampfi sie dort zu sehr rumgescheucht hat - hier ist sie viel entspannter!
+Die **8 Betta-Weibchen** bilden eine harmonische Sorority. **[Shadow](/fish/2025/09/26/fish_shadow)** ist aus dem [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken hierher umgezogen, da [Kampfi](/fish/2025/09/30/fish_kampfi) sie dort zu sehr rumgescheucht hat - hier ist sie viel entspannter!
 
 ### Neue Mitbewohner
 

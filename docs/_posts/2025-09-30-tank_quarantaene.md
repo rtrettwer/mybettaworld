@@ -54,6 +54,7 @@ entwicklung:
     ereignis: Heizung abgeschaltet; aktuell läuft nur Beleuchtung und Luftheber.
 ---
 
+
 ## Quarantäne
 
 Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.

@@ -4,7 +4,7 @@ title: "Das Zuchtbecken"
 author: "Rike Trettwer"
 date: 2026-03-24 19:30:00 +0200
 categories: [tank]
-tags: [zucht, betta, nachwuchs]
+tags: [zucht, betta, nachwuchs, aktive_laichung]
 excerpt: "Neues Zuchtbecken im ehemaligen Dschungel-Becken-Setup."
 image: /assets/images/tanks/jungle/jungle.webp
 aktiv: true
@@ -56,5 +56,6 @@ entwicklung_text: |
   Das Timing war super - innerhalb weniger Tage waren Larven sichtbar und kurz darauf frei schwimmend.
 gallery_dir: /assets/images/tanks/jungle
 ---
+
 
 Dieses Becken ist mein neuer Zuchtplatz und loest den alten Zuchtkuebel ab. Ziel ist ein stabileres Setup mit mehr Struktur, besserem Zugriff und weniger Provisorium.

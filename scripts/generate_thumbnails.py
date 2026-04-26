@@ -6,7 +6,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import multiprocessing
 
 # Konfiguration
-IMAGE_ROOT = Path('../docs/assets/images')
+_SCRIPT_DIR = Path(__file__).resolve().parent
+IMAGE_ROOT = _SCRIPT_DIR / '../docs/assets/images'
 THUMBNAIL_SUFFIX = '_thumbnail.webp'
 WEBP_QUALITY = 85
 THUMBNAIL_QUALITY = 70

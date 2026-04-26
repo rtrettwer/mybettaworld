@@ -31,6 +31,7 @@ fish_special_traits: deutlicher Farbwechsel durch Marble; phasenweise Butterfly-
 gallery_dir: /assets/images/fish/kampfi
 ---
 
+
 # Kampfis Einzug
 
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.
@@ -56,7 +57,7 @@ Becken-Mitbewohner angegriffen oder gejagt hätte. Selbst die Garnelen haben sic
 Dennoch habe ich die Neons aus dem Becken genommen, da ich befürchtet habe, dass es während meiner Abwesenheit Probleme gab und Kampfi deshalb so anders aussah nach meiner Rückkehr.
 Ich glaube, er hat sich trotzdem ohne die Neons wohler gefühlt, denn er hat danach seit längerem wieder Schaumnester gebaut.
 
-Zeitweise hatte er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/27/fish_lila) und [Schatten](/fish/2025/09/26/fish_shadow)). Allerdings hat er [Schatten](/fish/2025/09/26/fish_shadow) doch ziemlich viel rumgescheucht, deswegen ist sie Anfang Januar 2026 ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken umgezogen. Seit Shadow weg ist, ist Kampfi wieder ein bisschen ruhiger geworden.
+Zeitweise hatte er Gesellschaft von 2 Betta Weibchen ([Lila](/fish/2025/09/27/fish_lila) und [Schatten](/fish/2025/09/26/fish_shadow)). Allerdings hat er [Schatten](/fish/2025/09/26/fish_shadow) doch ziemlich viel rumgescheucht, deswegen ist sie Anfang Januar 2026 ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken umgezogen. Seit [Shadow](/fish/2025/09/26/fish_shadow) weg ist, ist Kampfi wieder ein bisschen ruhiger geworden.
 
 # Letzte Wochen und Abschied
 
@@ -66,6 +67,6 @@ Ich befürchte, dass er krank war. Am 13.03.2026 ist Kampfi gestorben.
 
 # Zuchtversuche
 
-Ich hatte den Eindruck, dass er [Schatten](/fish/2025/09/26/fish_shadow) sehr gerne mag, aber dennoch kam es noch nicht zu einer Paarung bzw. Eiern. [Schatten](/fish/2025/09/26/fish_shadow) schien sich in dem Becken auch wohl zu fühlen - sie hatte mit ihren Schwestern Stress-Streifen und bei Kampfi schillerte sie wunderschön. Allerdings hat er sie doch zu viel rumgescheucht, deswegen ist sie ins Paradies-Becken umgezogen, wo sie jetzt in einer Sorority lebt.
+Ich hatte den Eindruck, dass er [Schatten](/fish/2025/09/26/fish_shadow) sehr gerne mag, aber dennoch kam es noch nicht zu einer Paarung bzw. Eiern. [Schatten](/fish/2025/09/26/fish_shadow) schien sich in dem Becken auch wohl zu fühlen - sie hatte mit ihren Schwestern Stress-Streifen und bei Kampfi schillerte sie wunderschön. Allerdings hat er sie doch zu viel rumgescheucht, deswegen ist sie ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken umgezogen, wo sie jetzt in einer Sorority lebt.
 
 Ich hoffe, dass es nochmal irgendwann Nachwuchs von Kampfi gibt, ich hätte sehr gerne Fischbabys mit seinem liebenswerten Charakter.

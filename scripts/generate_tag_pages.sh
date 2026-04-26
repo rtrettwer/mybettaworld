@@ -2,8 +2,8 @@
 # Erzeugt für alle in den Posts verwendeten Tags eine eigene Tag-Seite im Verzeichnis docs/tags/
 # Die Seiten nutzen das Layout 'tag_home_blog', das wie die Blog-Startseite aussieht.
 
-POSTS_DIR="$(dirname "$0")/../_posts"
-TAGS_DIR="$(dirname "$0")/../tags"
+POSTS_DIR="$(dirname "$0")/../docs/_posts"
+TAGS_DIR="$(dirname "$0")/../docs/tags"
 LAYOUT="tag_home_blog"
 
 mkdir -p "$TAGS_DIR"

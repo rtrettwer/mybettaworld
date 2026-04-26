@@ -10,6 +10,7 @@ image: /assets/images/blog/regal/IMG_20251203_135737.webp
 gallery_dir: /assets/images/blog/regal
 ---
 
+
 Das ultimative Aquarium-Rack-Projekt! Von der detaillierten Planung in Procreate über den Lackier-Marathon bis zur waghalsigen Wagenheber-Aktion - hier ist die ganze Geschichte, wie mein 2x2m Schwerlastregal für 7 Aquarien entstanden ist.
 
 ## Die Planung
@@ -98,27 +99,27 @@ Als das Regal endlich stand, konnte ich die Aquarien umziehen:
 
 ### Oberste Ebene
 
-- **Mangroven-Becken**
-- **Höhlen-Becken**
-- **Zuchtkübel**
+- **[Mangroven](/tank/2025/09/30/tank_mangrove)-Becken**
+- **[Höhlen](/tank/2025/09/30/tank_hoehle)-Becken**
+- **[Zuchtkübel](/tank/2025/09/30/tank_zuchtkuebel)**
 
 Diese drei haben von der Höhe am besten zusammengepasst.
 
-**Wichtig:** Das **oberste Regalbrett vorne habe ich entfernt**, damit die Pflanzen aus dem Mangroven-Becken nach oben wachsen können! 🌿
+**Wichtig:** Das **oberste Regalbrett vorne habe ich entfernt**, damit die Pflanzen aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken nach oben wachsen können! 🌿
 
 ### Mittlere Ebene
 
-- **Dschungel-Becken**
-- **Baby-Becken**
-- **Quarantäne-Becken**
-- **Artemia-Inkubator** (ganz links)
+- **[Dschungel](/tank/2025/09/30/tank_dschungel)-Becken**
+- **[Baby](/tank/2025/09/30/tank_babys)-Becken**
+- **[Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken**
+- **[Artemia](/food/2025/09/30/food_artemia)-Inkubator** (ganz links)
 
 Von der Höhe haben diese perfekt zueinander gepasst.
 
 ### Unterste Ebene
 
 - **Ausrüstung** (Eimer, Schläuche, Substrat, etc. - was sich halt so ansammelt)
-- **Paradies-Becken** (rechts unten)
+- **[Paradies](/tank/2025/12/05/tank_paradies)-Becken** (rechts unten)
 
 ## Das Wagenheber-Abenteuer
 
@@ -206,7 +207,7 @@ Das Regal funktioniert super, aber es gibt noch ein paar **optische Verbesserung
 **Das Problem:**
 
 - Werkzeug, Futter und Equipment liegen offen rum
-- Pumpengeräusche vom Artemia-Inkubator
+- Pumpengeräusche vom [Artemia](/food/2025/09/30/food_artemia)-Inkubator
 
 **Die Lösung:**
 
