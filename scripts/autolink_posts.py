@@ -24,7 +24,7 @@ def target_url_for_file(md_filename):
     Jekyll erstellt URLs ohne trailing slash
     """
     base = os.path.basename(md_filename)
-    # z.B. 2025-09-29-fish_bandit.md
+    # z.B. 2025-07-24-fish_bandit.md
     m = re.match(r'(\d{4})-(\d{2})-(\d{2})-([^\.]+)\.md$', base)
     if not m:
         raise ValueError(f"Ungültiges Dateiformat: {md_filename}")

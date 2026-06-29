@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Sir Pryce"
 author: "Rike Trettwer"
-date: 28.09.2025 11:06:51 +0200
+date: 28.07.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, zucht]
 excerpt: "Sir Pryce ist ein wundervoller Brutvater - und ein Überraschungs-Männchen"
@@ -34,6 +34,9 @@ gallery_dir: /assets/images/fish/sirPryce
 ---
 
 
+
+
+
 # Das Überraschungs-Männchen
 
 Eigentlich hatte ich fünf Betta-Weibchen gekauft, um eine kleine Schwesternschaft zu haben und meine Zucht vorzubereiten.
@@ -54,10 +57,10 @@ Er wohnte dann im ehemaligen [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Be
 
 ## Zweite Laichung
 
-Nach ein paar Wochen habe ich das dominante Weibchen wieder zu ihm gesetzt, weil es ihr bei [Kampfi](/fish/2025/09/30/fish_kampfi) nicht soo gut ging und ich dachte, sie kommt zu jemandem, der sie mag.
+Nach ein paar Wochen habe ich das dominante Weibchen wieder zu ihm gesetzt, weil es ihr bei [Kampfi](/fish/2025/04/01/fish_kampfi) nicht soo gut ging und ich dachte, sie kommt zu jemandem, der sie mag.
 Ich konnte sie nur einen Tag drin lassen, weil dann hatten sie sich schon wieder gepaart! Den ganzen Nachmittag lang.
 Diesmal habe ich Sir Pryce bei seinen Babys gelassen. Entweder er frisst sie, dann hat er einen Snack. Oder sie werden groß. Bisher sieht es sehr gut für die Babys aus - er unterscheidet sehr gut Lebendfutter und Babyfische. Manchmal sammelt er sie noch ein und spuckt sie ins Nest, das er immer noch pflegt.
 
 ## 31.03.2026 - Auszug gemeinsam mit Sonnenschein
 
-Sir Pryce ist heute zusammen mit [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) in ein neues Zuhause gezogen. Ich bin gespannt, wie sich die beiden dort entwickeln.
+Sir Pryce ist heute zusammen mit [Sonnenschein](/fish/2025/07/28/fish_sonnenschein) in ein neues Zuhause gezogen. Ich bin gespannt, wie sich die beiden dort entwickeln.

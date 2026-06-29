@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Sonnenschein"
 author: "Rike Trettwer"
-date: 25.09.2025 11:06:51 +0200
+date: 28.07.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, zucht]
 excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium"
@@ -34,14 +34,17 @@ gallery_dir: /assets/images/fish/sonnenschein
 ---
 
 
+
+
+
 Die kleine Sonnenschein ist schon ein Tierchen. Am Anfang war sie am Körper komplett weiß. Mittlerweile hat sie aber dunkle Schuppen, ich denke, dass sie das Marble Gen hat und sich ihr Aussehen potentiell noch mehr ändert.
-Sie war am Anfang ein sehr dominantes Weibchen mit allen Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken. Deshalb habe ich sie und [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) in ein eigenes kleines Becken gesetzt - da haben sie sich aber sofort fortgepflanzt, deshalb habe ich die Kleine jetzt schon mehrmals durch die Becken rotiert auf der Suche, wo es ihr am besten geht.
-Zwischendrin war sie auch nochmal mit [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) zusammen - zack - nächste Laichung...
+Sie war am Anfang ein sehr dominantes Weibchen mit allen Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken. Deshalb habe ich sie und [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) in ein eigenes kleines Becken gesetzt - da haben sie sich aber sofort fortgepflanzt, deshalb habe ich die Kleine jetzt schon mehrmals durch die Becken rotiert auf der Suche, wo es ihr am besten geht.
+Zwischendrin war sie auch nochmal mit [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) zusammen - zack - nächste Laichung...
 
 ## 08.10.2025 - Umzug ins Höhlen-Becken
 
-Sonnenschein musste heute aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus, weil sie [Bandits](/fish/2025/09/30/fish_bandit) Flossen gefleddert und ihn gejagt hat. Das ging natürlich nicht! Ich habe sie deshalb ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken umgesetzt. Dort ist sie jetzt zusammen mit [Lila](/fish/2025/09/27/fish_lila), die ebenfalls heute dorthin umgezogen ist. Die beiden Damen scheinen sich zu arrangieren - ich sehe keine Verletzungen und beide schwimmen in allen Bereichen des Beckens. Hoffentlich ist das jetzt das finale Setup!
+Sonnenschein musste heute aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus, weil sie [Bandits](/fish/2025/09/30/fish_bandit) Flossen gefleddert und ihn gejagt hat. Das ging natürlich nicht! Ich habe sie deshalb ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken umgesetzt. Dort ist sie jetzt zusammen mit [Lila](/fish/2025/07/28/fish_lila), die ebenfalls heute dorthin umgezogen ist. Die beiden Damen scheinen sich zu arrangieren - ich sehe keine Verletzungen und beide schwimmen in allen Bereichen des Beckens. Hoffentlich ist das jetzt das finale Setup!
 
 ## 31.03.2026 - Neues Zuhause gemeinsam mit Sir Pryce
 
-Sonnenschein ist heute zusammen mit [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) in ein neues Zuhause gezogen. Ich freue mich sehr, dass die beiden zusammen bleiben, weil sie sich schon früher gut verstanden haben.
+Sonnenschein ist heute zusammen mit [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) in ein neues Zuhause gezogen. Ich freue mich sehr, dass die beiden zusammen bleiben, weil sie sich schon früher gut verstanden haben.

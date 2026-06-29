@@ -7,8 +7,9 @@ categories: [tank]
 tags: [quarantäne, behandlung]
 excerpt: "Ein separates Becken zur Quarantäne und Behandlung."
 image: /assets/images/tanks/quarantine/quarantine.webp
-aktiv: true
+aktiv: false
 dimensions: 20x20x20 cm (Dennerle Nano Cube)
+inaktiv_seit: "25.06.2026"
 fassungsvermoegen: 30L
 water_type: Süßwasser
 filter: Nein
@@ -52,16 +53,21 @@ entwicklung:
     ereignis: Kampfi ist trotz Umsetzen leider gestorben.
   - datum: März 2026
     ereignis: Heizung abgeschaltet; aktuell läuft nur Beleuchtung und Luftheber.
+  - datum:  25.06.2026
+    ereignis: Leider waren nicht genug Pflanzen drin bzw. die, die drin waren, sind vergammelt und das Becken ist fast gekippt. Einige Garnelen sind gestorben. Ich hatte einen Stein eingesetzt, der wunderschön mit Pogostemon helferi bewachsen war, aber der ist leider auch vergammelt. Das Becken habe ich also praktisch resettet (nur etwas Substrat behalten) und es ist jetzt neu befüllt unter dem Namen "Felsen-Becken" zu finden.
 ---
+
+
+
 
 
 ## Quarantäne
 
-Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
+Als sich herausgestellt hat, dass [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) ein Männchen ist, war leider eines der Weibchen schon krank und sehr gestresst.
 Deshalb habe ich ein weiteres Becken besorgt und sie hier zur Quarantäne gesetzt. Das Becken war ohne Bodengrund nur sehr spartanisch eingerichtet. Leider hat das Weibchen sich dennoch nicht mehr erholt. Sie hatte Bauchwassersucht und sah aus wie ein kleiner Tannenzapfen, weil die Schuppen abstanden. Sie hat nicht mehr gefressen und sich kaum bewegt. Ich habe sie mit Nelkenöl hoffentlich sanft von ihrem Leiden erlöst.
 
 ## Zuhause für Sir Pryce
 
-Da [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) im Becken mit seinen ersten Babys nicht bleiben durfte, habe ich ihn in dieses Quarantäne-Becken umgezogen. Das Becken habe ich vorher gereinigt und schöner eingerichtet, mit Bodengrund etc.
+Da [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) im Becken mit seinen ersten Babys nicht bleiben durfte, habe ich ihn in dieses Quarantäne-Becken umgezogen. Das Becken habe ich vorher gereinigt und schöner eingerichtet, mit Bodengrund etc.
 Ganz unten ins Becken habe ich so Trenner-Gitter gelegt, damit Steine etc. nicht direkt auf das Glas gestellt werden.
-In diesem Becken lebt [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) jetzt zusammen mit seiner zweiten Laichung Babys. Ich will diesmal testen, ob er sie an irgend einem Punkt als Futter betrachtet oder ob die Babys bei ihrem Papa groß werden können.
+In diesem Becken lebt [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) jetzt zusammen mit seiner zweiten Laichung Babys. Ich will diesmal testen, ob er sie an irgend einem Punkt als Futter betrachtet oder ob die Babys bei ihrem Papa groß werden können.

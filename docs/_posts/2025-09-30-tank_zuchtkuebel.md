@@ -54,3 +54,6 @@ entwicklung_text: |
   Der Zuchtkübel hat seinen Zweck erfüllt! Die zweite Zucht war erfolgreich und alle Jungfische sind groß und gesund ins Paradies-Becken umgezogen. Seit März 2026 wurde er als Zuchtplatz endgültig vom neuen Zuchtbecken abgelöst.
 gallery_dir: /assets/images/tanks/breeding
 ---
+
+
+

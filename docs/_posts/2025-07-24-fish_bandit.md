@@ -2,7 +2,7 @@
 layout: post_fish_portrait
 title: "Bandit"
 author: "Rike Trettwer"
-date: 29.09.2025 11:06:51 +0200
+date: 24.07.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, camallanus, quarantäne]
 excerpt: "Bandit ist ein temperamentvoller Betta mit wunderschönen 'Galaxie-Schimmerschuppen"
@@ -30,6 +30,9 @@ fish_special_traits: "auffällige weiße Gesichtsmaske ('Bandit'), starke Irides
 fish_lineage: "unbekannt"
 gallery_dir: /assets/images/fish/bandit
 ---
+
+
+
 
 
 # Liebe auf den ersten Blick
@@ -60,7 +63,7 @@ Immerhin ist er mir so nicht verhungert.
 
 # Umzug ins Becken
 
-Endlich war das Becken soweit - er durfte ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken einziehen! Eigentlich war das ja Mal für [Kampfi](/fish/2025/09/30/fish_kampfi) gedacht,
+Endlich war das Becken soweit - er durfte ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken einziehen! Eigentlich war das ja Mal für [Kampfi](/fish/2025/04/01/fish_kampfi) gedacht,
 weil der [Höhlen](/tank/2025/09/30/tank_hoehle) so liebt. Aber Bandit brauche ein Zuhause.
 Zum Glück mag er die [Höhlen](/tank/2025/09/30/tank_hoehle) auch :)
 Er hat sich sofort wohlgefühlt und auch direkt wieder ein Schaumnest gebaut.
@@ -119,16 +122,16 @@ Ich habe Bandit vorsichtshalber nochmal eine Dosis Nematol gegeben.
 
 ## 08.10.2025
 
-Bandit ist heute zu [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) ins [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
+Bandit ist heute zu [Sonnenschein](/fish/2025/07/28/fish_sonnenschein) ins [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken umgezogen - aktuell ist sie noch dominant. Er ist neu und auch
 noch etwas dünn und blass. Aber ich gehe fast davon aus, dass sich das ändern wird, wenn er wieder fitter ist.
-[Sonnenschein](/fish/2025/09/25/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
+[Sonnenschein](/fish/2025/07/28/fish_sonnenschein) ist noch sehr kritisch. Mal sehen ob sie sich mögen.
 
-Leider musste ich [Sonnenschein](/fish/2025/09/25/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen [Artemia](/food/2025/09/30/food_artemia) füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.
+Leider musste ich [Sonnenschein](/fish/2025/07/28/fish_sonnenschein) wieder rausnehmen - sie hat ihn nicht in Ruhe gelassen und er sah sehr erschöpft und ein bisschen lethargisch aus. Das konnte so nicht weitergehen, er braucht Ruhe zur Erholung! Seit er das Becken für sich alleine hat und ich ihn gezielt mit frischen [Artemia](/food/2025/09/30/food_artemia) füttere, wirkt er aber wieder munterer und nimmt hoffentlich ein bisschen zu. Die Erholung steht an erster Stelle.
 
 ## Maerz 2026 - Neue Zucht im neuen Zuchtbecken
 
-Am 24.03.2026 habe ich Bandit zusammen mit [Shadow](/fish/2025/09/26/fish_shadow) in das neue [Zuchtbecken](/tank/2026/03/24/tank_zuchtbecken) gesetzt (ca. 28 C).
-Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich [Shadow](/fish/2025/09/26/fish_shadow) wieder herausgenommen.
+Am 24.03.2026 habe ich Bandit zusammen mit [Shadow](/fish/2025/07/28/fish_shadow) in das neue [Zuchtbecken](/tank/2026/03/24/tank_zuchtbecken) gesetzt (ca. 28 C).
+Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich [Shadow](/fish/2025/07/28/fish_shadow) wieder herausgenommen.
 
 Am Freitag waren die ersten Larven sichtbar, am Samstag sind die ersten frei geschwommen.
 Am Sonntag (28.03.) habe ich Bandit wieder aus dem Zuchtbecken genommen und in sein [Gras-Becken](/tank/2025/09/30/tank_babys) gesetzt.

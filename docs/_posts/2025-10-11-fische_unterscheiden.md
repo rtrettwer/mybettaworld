@@ -9,6 +9,9 @@ excerpt: "Wie man Betta-Jungfische voneinander unterscheidet und ihre Entwicklun
 ---
 
 
+
+
+
 Als ich anfing, mich intensiver mit Bettas zu beschäftigen, war ich oft überfordert von all den Fachbegriffen: Plakat,
 Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich eigentlich, welche Art und welchen
 Farbschlag meine Fische haben?
@@ -77,8 +80,8 @@ vertikale Bereitschaftsbalken
 
 <div class="card-grid fish-cards">
   <div class="fish-card">
-    <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="[Kampfi](/fish/2025/09/30/fish_kampfi)" class="fish-card-img">
-    <div class="fish-card-title">[Kampfi](/fish/2025/09/30/fish_kampfi) <span class="fish-gender">♂</span></div>
+    <img src="/assets/images/fish/kampfi/IMG_20251015_205247_thumbnail.webp" alt="[Kampfi](/fish/2025/04/01/fish_kampfi)" class="fish-card-img">
+    <div class="fish-card-title">[Kampfi](/fish/2025/04/01/fish_kampfi) <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat (160°)</li>
@@ -88,8 +91,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/bandit/PA162660.webp" alt="[Bandit](/fish/2025/09/29/fish_bandit)" class="fish-card-img">
-    <div class="fish-card-title">[Bandit](/fish/2025/09/29/fish_bandit) <span class="fish-gender">♂</span></div>
+    <img src="/assets/images/fish/bandit/PA162660.webp" alt="[Bandit](/fish/2025/07/24/fish_bandit)" class="fish-card-img">
+    <div class="fish-card-title">[Bandit](/fish/2025/07/24/fish_bandit) <span class="fish-gender">♂</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat</li>
@@ -99,8 +102,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/shadow/IMG_20251015_205320_thumbnail.webp" alt="[Shadow](/fish/2025/09/26/fish_shadow)" class="fish-card-img">
-    <div class="fish-card-title">[Shadow](/fish/2025/09/26/fish_shadow) <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/shadow/IMG_20251015_205320_thumbnail.webp" alt="[Shadow](/fish/2025/07/28/fish_shadow)" class="fish-card-img">
+    <div class="fish-card-title">[Shadow](/fish/2025/07/28/fish_shadow) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -110,8 +113,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="[Lila](/fish/2025/09/27/fish_lila)" class="fish-card-img">
-    <div class="fish-card-title">[Lila](/fish/2025/09/27/fish_lila) <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="[Lila](/fish/2025/07/28/fish_lila)" class="fish-card-img">
+    <div class="fish-card-title">[Lila](/fish/2025/07/28/fish_lila) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -121,8 +124,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="[Sonnenschein](/fish/2025/09/25/fish_sonnenschein)" class="fish-card-img">
-    <div class="fish-card-title">[Sonnenschein](/fish/2025/09/25/fish_sonnenschein) <span class="fish-gender">♀</span></div>
+    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="[Sonnenschein](/fish/2025/07/28/fish_sonnenschein)" class="fish-card-img">
+    <div class="fish-card-title">[Sonnenschein](/fish/2025/07/28/fish_sonnenschein) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
       <li><strong>Variante:</strong> Plakat-typisch</li>
@@ -132,8 +135,8 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
 <div class="fish-card">
-  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="[Sir Pryce](/fish/2025/09/28/fish_sir_pryce)" class="fish-card-img">
-  <div class="fish-card-title">[Sir Pryce](/fish/2025/09/28/fish_sir_pryce) <span class="fish-gender">♂</span></div>
+  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="[Sir Pryce](/fish/2025/07/28/fish_sir_pryce)" class="fish-card-img">
+  <div class="fish-card-title">[Sir Pryce](/fish/2025/07/28/fish_sir_pryce) <span class="fish-gender">♂</span></div>
   <ul>
     <li><strong>Typ:</strong> Domestic</li>
     <li><strong>Variante:</strong> Plakat</li>
@@ -146,17 +149,17 @@ vertikale Bereitschaftsbalken
 
 ### Fazit: So würde ich meine Fische beschreiben
 
-**[Kampfi](/fish/2025/09/30/fish_kampfi):** Domestic Betta splendens, Männchen, Plakat mit ca. 160° Caudale-Winkel. Rotbasis mit aktiver Marble-Genetik, starke Dragon/Metallic-Zonen und teilweise Butterfly-Kanten an den Flossen. Typischer Show-Plakat mit komplexer Farbgenetik.
+**[Kampfi](/fish/2025/04/01/fish_kampfi):** Domestic Betta splendens, Männchen, Plakat mit ca. 160° Caudale-Winkel. Rotbasis mit aktiver Marble-Genetik, starke Dragon/Metallic-Zonen und teilweise Butterfly-Kanten an den Flossen. Typischer Show-Plakat mit komplexer Farbgenetik.
 
-**[Bandit](/fish/2025/09/29/fish_bandit):** Domestic Betta splendens, Männchen, Plakat mit fächerförmiger Caudale. Kupfer/braune Grundfarbe mit intensivem blau-metallischem Schimmer, markante weiße Gesichtsmask und Marble-Einfluss. Copper-Blue-Metallic mit White-Mask-Pattern.
+**[Bandit](/fish/2025/07/24/fish_bandit):** Domestic Betta splendens, Männchen, Plakat mit fächerförmiger Caudale. Kupfer/braune Grundfarbe mit intensivem blau-metallischem Schimmer, markante weiße Gesichtsmask und Marble-Einfluss. Copper-Blue-Metallic mit White-Mask-Pattern.
 
-**[Shadow](/fish/2025/09/26/fish_shadow):** Domestic Betta splendens, Weibchen, Plakat-typische Proportionen. Tiefschwarze Grundfarbe mit kräftigem teal/royal-blue Irideszenz-Schimmer, keine Musterung. Black-Blue-Iridescent Female.
+**[Shadow](/fish/2025/07/28/fish_shadow):** Domestic Betta splendens, Weibchen, Plakat-typische Proportionen. Tiefschwarze Grundfarbe mit kräftigem teal/royal-blue Irideszenz-Schimmer, keine Musterung. Black-Blue-Iridescent Female.
 
-**[Lila](/fish/2025/09/27/fish_lila):** Domestic Betta splendens, Weibchen, Plakat-typische Form. Dunkle indigo/blaue Metallic-Färbung, weitgehend einfarbig ohne komplexe Muster. Dark-Blue-Metallic Female.
+**[Lila](/fish/2025/07/28/fish_lila):** Domestic Betta splendens, Weibchen, Plakat-typische Form. Dunkle indigo/blaue Metallic-Färbung, weitgehend einfarbig ohne komplexe Muster. Dark-Blue-Metallic Female.
 
-**[Sonnenschein](/fish/2025/09/25/fish_sonnenschein):** Domestic Betta splendens, Weibchen, Plakat-typisch. Weißer/cremefarbener Körper mit roten Flossen, wahrscheinlich Marble-Genetik (Farbveränderungen über Zeit). White-Red-Marble Female.
+**[Sonnenschein](/fish/2025/07/28/fish_sonnenschein):** Domestic Betta splendens, Weibchen, Plakat-typisch. Weißer/cremefarbener Körper mit roten Flossen, wahrscheinlich Marble-Genetik (Farbveränderungen über Zeit). White-Red-Marble Female.
 
-**[Sir Pryce](/fish/2025/09/28/fish_sir_pryce):** Domestic Betta splendens, Männchen, Plakat. Blau-metallischer Körper mit schwarzer Kopf-Mask und roten Pelvic-Flossen, klare Farbabgrenzungen ohne Marble-Aktivität. Blue-Metallic-Black-Mask mit Red-Pelvics.
+**[Sir Pryce](/fish/2025/07/28/fish_sir_pryce):** Domestic Betta splendens, Männchen, Plakat. Blau-metallischer Körper mit schwarzer Kopf-Mask und roten Pelvic-Flossen, klare Farbabgrenzungen ohne Marble-Aktivität. Blue-Metallic-Black-Mask mit Red-Pelvics.
 
 ## Hinweise für Fotos zur Bestimmung
 

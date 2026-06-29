@@ -1,17 +1,37 @@
 - key: Lila
-  url: /fish/2025/09/27/fish_lila
+  url: /fish/2025/07/28/fish_lila
 - key: Bandit
-  url: /fish/2025/09/29/fish_bandit
+  url: /fish/2025/07/24/fish_bandit
 - key: Kampfi
-  url: /fish/2025/09/30/fish_kampfi
+  url: /fish/2025/04/01/fish_kampfi
 - key: Shadow
-  url: /fish/2025/09/26/fish_shadow
+  url: /fish/2025/07/28/fish_shadow
 - key: Schatten
-  url: /fish/2025/09/26/fish_shadow
+  url: /fish/2025/07/28/fish_shadow
 - key: Sir Pryce
-  url: /fish/2025/09/28/fish_sir_pryce
+  url: /fish/2025/07/28/fish_sir_pryce
 - key: Sonnenschein
-  url: /fish/2025/09/25/fish_sonnenschein
+  url: /fish/2025/07/28/fish_sonnenschein
+- key: Häkchen
+  url: /fish/2025/09/04/fish_haekchen
+- key: Krieger
+  url: /fish/2025/09/04/fish_krieger
+- key: Ocean
+  url: /fish/2025/09/04/fish_ocean
+- key: Saphira
+  url: /fish/2025/09/04/fish_saphira
+- key: Violet
+  url: /fish/2025/09/04/fish_violet
+- key: Bluey
+  url: /fish/2026/03/25/fish_bluey
+- key: Zuko
+  url: /fish/2026/03/25/fish_zuko
+- key: Girl 1
+  url: /fish/2026/03/25/fish_girl_1
+- key: Girl 2
+  url: /fish/2026/03/25/fish_girl_2
+- key: Girl 3
+  url: /fish/2026/03/25/fish_girl_3
 - key: Quarantäne
   url: /tank/2025/09/30/tank_quarantaene
 - key: Dschungel
@@ -26,6 +46,10 @@
   url: /tank/2025/09/30/tank_zuchtkuebel
 - key: Paradies
   url: /tank/2025/12/05/tank_paradies
+- key: Felsen
+  url: /tank/2026/06/25/tank_felsen
+- key: Lagune
+  url: /tank/2026/06/25/tank_lagune
 - key: Artemia
   url: /food/2025/09/30/food_artemia
 - key: Essigälchen

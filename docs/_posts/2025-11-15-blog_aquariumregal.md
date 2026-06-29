@@ -11,6 +11,9 @@ gallery_dir: /assets/images/blog/regal
 ---
 
 
+
+
+
 Das ultimative Aquarium-Rack-Projekt! Von der detaillierten Planung in Procreate über den Lackier-Marathon bis zur waghalsigen Wagenheber-Aktion - hier ist die ganze Geschichte, wie mein 2x2m Schwerlastregal für 7 Aquarien entstanden ist.
 
 ## Die Planung

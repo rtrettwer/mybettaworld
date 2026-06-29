@@ -10,12 +10,15 @@ image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 ---
 
 
+
+
+
 Mein nächster Umzug stand an - und diesmal mit mehreren Aquarien und Fischen!
 
 ## Vorbereitung
 
-- **Fische entfernen:** Ich habe die "Hauptfische" in eigene Behälter umgesetzt. D.h. ich hatte eine große Plastikbox, wo ich kleine Boxen mit den Fischen drin hatte. Die Jungfische aus dem [Zuchtkübel](/tank/2025/09/30/tank_zuchtkuebel) habe ich in zwei Behälter verteilt. Die Jungfische aus dem [Baby](/tank/2025/09/30/tank_babys)-Becken und die mit [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) habe ich tatsächlich allesamt im Becken gelassen...
-- **Wasser ablassen:** Aus den Becken lasse ich so viel Wasser wie möglich ab, sodass nur noch ein Rest für Garnelen und Schnecken bleibt. Außer im [Baby](/tank/2025/09/30/tank_babys)-Becken und bei [Sir Pryce](/fish/2025/09/28/fish_sir_pryce), da sind ide Fische drin geblieben. Ich hatte Sorge, dass [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) seine Brut nicht mehr erkennt und frisst, wenn ich ihn rausnehme.
+- **Fische entfernen:** Ich habe die "Hauptfische" in eigene Behälter umgesetzt. D.h. ich hatte eine große Plastikbox, wo ich kleine Boxen mit den Fischen drin hatte. Die Jungfische aus dem [Zuchtkübel](/tank/2025/09/30/tank_zuchtkuebel) habe ich in zwei Behälter verteilt. Die Jungfische aus dem [Baby](/tank/2025/09/30/tank_babys)-Becken und die mit [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) habe ich tatsächlich allesamt im Becken gelassen...
+- **Wasser ablassen:** Aus den Becken lasse ich so viel Wasser wie möglich ab, sodass nur noch ein Rest für Garnelen und Schnecken bleibt. Außer im [Baby](/tank/2025/09/30/tank_babys)-Becken und bei [Sir Pryce](/fish/2025/07/28/fish_sir_pryce), da sind ide Fische drin geblieben. Ich hatte Sorge, dass [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) seine Brut nicht mehr erkennt und frisst, wenn ich ihn rausnehme.
 - **Technik sichern:** Technik habe ich entfernt (Lampen, Heizung, Kiste).
 
 ## Transport
