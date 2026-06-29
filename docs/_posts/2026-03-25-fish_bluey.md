@@ -10,6 +10,7 @@ image: /assets/images/fish/bluey/XX.webp
 timeline_image: /assets/images/fish/bluey/XX.webp
 fish_name: "Bluey"
 fish_birth: "2026-03-25"
+fish_arrival: "2026-03-25"
 fish_age: "3 Monate"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Männlich"

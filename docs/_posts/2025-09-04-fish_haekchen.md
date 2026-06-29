@@ -10,6 +10,7 @@ image: /assets/images/fish/haekchen/XX.webp
 timeline_image: /assets/images/fish/haekchen/XX.webp
 fish_name: "Häkchen"
 fish_birth: "2025-09-04"
+fish_arrival: "2025-09-04"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weblich"
 gallery_dir: /assets/images/fish/haekchen

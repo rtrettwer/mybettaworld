@@ -10,6 +10,7 @@ image: /assets/images/fish/saphira/XX.webp
 timeline_image: /assets/images/fish/saphira/XX.webp
 fish_name: "Saphira"
 fish_birth: "2025-09-04"
+fish_arrival: "2025-09-04"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weiblich"
 gallery_dir: /assets/images/fish/saphira
