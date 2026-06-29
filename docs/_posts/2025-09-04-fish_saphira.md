@@ -14,6 +14,8 @@ fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weiblich"
 gallery_dir: /assets/images/fish/saphira
 ---
+
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Sie ist ja irgendwie farblich eines meiner Lieblings-Weibchen. Hat die schöne CT-Mix-Flosse. Einen dunklen, fast schwarzen Körper und schöne blaue Schimmer-Schuppen und Flossen-Farben!
-Ich wollte sie schon einmal mit Bandit in seinem Becken paaren, aber das hat nicht geklappt. Vielleicht beim nächsten Mal? Oder mit Bluey, um das Blau zu stärken?
+Ich wollte sie schon einmal mit [Bandit](/fish/2025/09/29/fish_bandit) in seinem Becken paaren, aber das hat nicht geklappt. Vielleicht beim nächsten Mal? Oder mit [Bluey](/fish/2026/03/25/fish_bluey), um das Blau zu stärken?

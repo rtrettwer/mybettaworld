@@ -30,6 +30,8 @@ gallery_dir: /assets/images/fish/shadow
 ---
 
 
+
+
 [Shadow](/fish/2025/09/26/fish_shadow) ist eine richtige kleine Schönheit. Mit ihren Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken war sie dauergestresst und hatte Stressstreifen.
 
 Sie lebte eine Zeit lang bei [Kampfi](/fish/2025/09/30/fish_kampfi) im [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken - und da schien es ihr richtig gut zu gehen. Sie hatte eine wunderschöne Färbung und keine Stressstreifen mehr. Sie versteckte sich zwar viel, was mit ihrer dunklen Grundfarbe gut geht, aber sie hatte auch gelegentlich ihren Spaß daran, [Kampfi](/fish/2025/09/30/fish_kampfi) Paroli zu bieten oder ihm hinterherzuschwimmen.

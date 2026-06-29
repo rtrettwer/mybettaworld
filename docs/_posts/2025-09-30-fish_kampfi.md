@@ -32,6 +32,8 @@ gallery_dir: /assets/images/fish/kampfi
 ---
 
 
+
+
 # Kampfis Einzug
 
 Kampfi habe ich im April 2025 bei Kölle Zoo gekauft. Er war ein wunderschönes Parade-Beispiel für einen hellboy red.

@@ -41,7 +41,7 @@ layout: home
         <div class="stat-label">Aktive Laichungen</div>
       </a>
       <a href="/sale/" class="hero-stat" style="text-decoration:none; color:inherit;">
-        <div class="stat-number">1</div>
+        <div class="stat-number">7</div>
         <div class="stat-label">Betta-Weibchen behalten</div>
       </a>
 

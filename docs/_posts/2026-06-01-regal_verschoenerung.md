@@ -10,6 +10,8 @@ gallery_dir: /assets/images/misc/regal
 ---
 
 
+
+
 ## Das Fisch-Regal steht im Wohnzimmer - sieht bisher aber nicht wohnlich aus...
 
 ### Ausgangslage

@@ -98,6 +98,8 @@ entwicklung_text: |
 ---
 
 
+
+
 Das **Paradies Becken** ist mein größtes und ambitioniertestes Projekt! Mit 160 Litern beherbergte es ursprünglich etwa 100 Jungfische aus meiner ersten erfolgreichen Zucht. Nach der Abgabe am 02.01.2026 stellte sich heraus: Es waren tatsächlich 258 Jungfische! Mittlerweile ist es ein harmonisches Gesellschaftsbecken mit einer Betta-Sorority.
 
 ## Die Entstehungsgeschichte

@@ -10,6 +10,8 @@ image: /assets/images/tanks/paradies/IMG_20251203_135823.webp
 ---
 
 
+
+
 # Die große Überraschung
 
 Ich habe mich total verschätzt! Die ganze Zeit dachte ich, ich hätte etwa 100 Jungfische im [Paradies-Becken](/tank/2025/12/05/tank_paradies). Aber als ich sie am **02.01.2026** zum Aquaristik [Paradies](/tank/2025/12/05/tank_paradies) Haidhausen gebracht und dort gemeinsam gezählt habe, kam die Wahrheit ans Licht: **258 Jungfische**!

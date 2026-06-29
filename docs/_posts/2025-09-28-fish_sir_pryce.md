@@ -34,6 +34,8 @@ gallery_dir: /assets/images/fish/sirPryce
 ---
 
 
+
+
 # Das Überraschungs-Männchen
 
 Eigentlich hatte ich fünf Betta-Weibchen gekauft, um eine kleine Schwesternschaft zu haben und meine Zucht vorzubereiten.

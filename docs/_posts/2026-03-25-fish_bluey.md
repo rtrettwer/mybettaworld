@@ -16,6 +16,8 @@ fish_gender: "Männlich"
 fish_behavior: "in Paarhaltung/Gruppe situationsabhängig; mit 'Sonnenschein' anfangs dominanter, bei Kampfi & Shadow eher unterlegen und kurzzeitig mit Stressstreifen; aktuell ohne Stressstreifen; im Babybecken zeigte sie Jagdverhalten gegenüber Jungfischen"
 gallery_dir: /assets/images/fish/bluey
 ---
+
+
 ## 25.03.2026 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Shadow
 
 ## 28.06.2026 - Umzug ins Rili-Becken

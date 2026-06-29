@@ -58,4 +58,6 @@ gallery_dir:
 ---
 
 
+
+
 Dieses Becken ist mein neuer Zuchtplatz und loest den alten Zuchtkuebel ab. Ziel ist ein stabileres Setup mit mehr Struktur, besserem Zugriff und weniger Provisorium.

@@ -14,11 +14,13 @@ fish_type: "Betta splendens (Domestic)"
 fish_gender: "Männlich"
 gallery_dir: /assets/images/fish/krieger
 ---
+
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Vermeintlich hübsches Weibchen...
 
 ## 2026 - Umzug ins Quarantäne-Becken
-... hat sich sehr spät doch als Männchen herausgestellt. Ich hatte einen kleinen Becher ins Paradies-Becken gehängt, in dem ich vermeintliche Panzerwels-Eier abgelegt hatte.
+... hat sich sehr spät doch als Männchen herausgestellt. Ich hatte einen kleinen Becher ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken gehängt, in dem ich vermeintliche Panzerwels-Eier abgelegt hatte.
 Und plötzlich war da der Fisch drin und hat ein Nest gebaut... . Also ab in ein eigenes Becken, weil er die Weibchen alle gescheucht hat.
 
 ## 18.06.2026 - Rückzug ins Paradies-Becken
