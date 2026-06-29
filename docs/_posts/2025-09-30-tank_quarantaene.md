@@ -7,8 +7,9 @@ categories: [tank]
 tags: [quarantäne, behandlung]
 excerpt: "Ein separates Becken zur Quarantäne und Behandlung."
 image: /assets/images/tanks/quarantine/quarantine.webp
-aktiv: true
+aktiv: false
 dimensions: 20x20x20 cm (Dennerle Nano Cube)
+inaktiv_seit: "25.06.2026"
 fassungsvermoegen: 30L
 water_type: Süßwasser
 filter: Nein
@@ -52,6 +53,8 @@ entwicklung:
     ereignis: Kampfi ist trotz Umsetzen leider gestorben.
   - datum: März 2026
     ereignis: Heizung abgeschaltet; aktuell läuft nur Beleuchtung und Luftheber.
+  - datum:  25.06.2026
+    ereignis: Leider waren nicht genug Pflanzen drin bzw. die, die drin waren, sind vergammelt und das Becken ist fast gekippt. Einige Garnelen sind gestorben. Ich hatte einen Stein eingesetzt, der wunderschön mit Pogostemon helferi bewachsen war, aber der ist leider auch vergammelt. Das Becken habe ich also praktisch resettet (nur etwas Substrat behalten) und es ist jetzt neu befüllt unter dem Namen "Felsen-Becken" zu finden.
 ---
 
 
