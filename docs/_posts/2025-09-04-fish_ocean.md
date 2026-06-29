@@ -16,6 +16,7 @@ gallery_dir: /assets/images/fish/ocean
 ---
 
 
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Sie heißt Ocean, weil sie wunderschön kräftige türkisfarbene Schuppen hat - wie am Meer :)
 ## Leben im Paradies-Becken

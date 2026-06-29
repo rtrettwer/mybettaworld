@@ -30,3 +30,4 @@ entwicklung:
     ereignis: Den kleinen Bluey eingesetzt. Er war sehr aufgeregt. Aber hat dann in der ersten Nacht schon ein Schaumnest gebaut. Mal sehen, ob die Garnelen ihn überleben - er hat schon eine gejagt.
 ---
 
+

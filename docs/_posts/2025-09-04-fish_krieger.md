@@ -16,6 +16,7 @@ gallery_dir: /assets/images/fish/krieger
 ---
 
 
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Vermeintlich hübsches Weibchen...
 

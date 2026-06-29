@@ -16,5 +16,6 @@ gallery_dir: /assets/images/fish/haekchen
 ---
 
 
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Super kleines Fischlein - so klein, dass ich sie beim Einfangen zum Verkaufen übersehen habe. Mittlerweile ist sie etwas größer und traut sich manchmal, schöne erdige Farben zu zeigen. Aber weil sie so lange gebraucht hat, habe ich sie Häkchen, wie beim Nesthäkchen geannnt."

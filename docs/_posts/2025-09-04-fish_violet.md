@@ -16,6 +16,7 @@ gallery_dir: /assets/images/fish/violet
 ---
 
 
+
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
 Ein sehr hübsches Weibchen. Ähnlich wie [Saphira](/fish/2025/09/04/fish_saphira) aber mit warmen schönen Violett-Farben und roten Sprenkeln.
 Leider eher ängstlich und nicht dominant. Wurde zuletzt von [Krieger](/fish/2025/09/04/fish_krieger) ganz schön gefleddert (oder [Ocean](/fish/2025/09/04/fish_ocean)?). Ich wollte ihn schon

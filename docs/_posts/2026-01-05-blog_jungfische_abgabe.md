@@ -12,6 +12,7 @@ image: /assets/images/tanks/paradies/IMG_20251203_135823.webp
 
 
 
+
 # Die große Überraschung
 
 Ich habe mich total verschätzt! Die ganze Zeit dachte ich, ich hätte etwa 100 Jungfische im [Paradies-Becken](/tank/2025/12/05/tank_paradies). Aber als ich sie am **02.01.2026** zum Aquaristik [Paradies](/tank/2025/12/05/tank_paradies) Haidhausen gebracht und dort gemeinsam gezählt habe, kam die Wahrheit ans Licht: **258 Jungfische**!
@@ -41,7 +42,7 @@ Im Tausch habe ich neue Fische für mein [Paradies](/tank/2025/12/05/tank_paradi
 
 Von den vielen Jungfischen habe ich **8 Betta-Weibchen** behalten. Bei einem bin ich zugegebenermaßen nicht 100% sicher, ob es wirklich ein Weibchen ist - aber bald wird das [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken frei, falls es doch ein Männchen sein sollte.
 
-[Sonnenschein](/fish/2025/09/25/fish_sonnenschein) und [Sir Pryce](/fish/2025/09/28/fish_sir_pryce) sind **reserviert** und werden in ein paar Tagen abgeholt. Dann steht das Becken als Backup frei.
+[Sonnenschein](/fish/2025/07/28/fish_sonnenschein) und [Sir Pryce](/fish/2025/07/28/fish_sir_pryce) sind **reserviert** und werden in ein paar Tagen abgeholt. Dann steht das Becken als Backup frei.
 
 ## Neue Beckenkonstellation
 
@@ -57,11 +58,11 @@ Das [Paradies](/tank/2025/12/05/tank_paradies)-Becken hat sich vom überfüllten
 - Einige Neocaridina Garnelen
 - **6 Piano Schnecken**
 
-[Shadow](/fish/2025/09/26/fish_shadow) ist aus dem [Dschungel-Becken](/tank/2025/09/30/tank_dschungel) hierher umgezogen, da [Kampfi](/fish/2025/09/30/fish_kampfi) sie zu sehr gescheucht hat. In der Sorority ist sie viel entspannter!
+[Shadow](/fish/2025/07/28/fish_shadow) ist aus dem [Dschungel-Becken](/tank/2025/09/30/tank_dschungel) hierher umgezogen, da [Kampfi](/fish/2025/04/01/fish_kampfi) sie zu sehr gescheucht hat. In der Sorority ist sie viel entspannter!
 
 ### Dschungel-Becken
 
-[Kampfi](/fish/2025/09/30/fish_kampfi) ist wieder ruhiger geworden, seit [Shadow](/fish/2025/09/26/fish_shadow) nicht mehr bei ihm ist. Er lebt jetzt nur noch mit [Lila](/fish/2025/09/27/fish_lila) zusammen.
+[Kampfi](/fish/2025/04/01/fish_kampfi) ist wieder ruhiger geworden, seit [Shadow](/fish/2025/07/28/fish_shadow) nicht mehr bei ihm ist. Er lebt jetzt nur noch mit [Lila](/fish/2025/07/28/fish_lila) zusammen.
 
 ## Lessons Learned
 
