@@ -1,58 +1,28 @@
 <!-- Verkaufs-Galerie -->
 <div class="sales-gallery">
-  <!-- Erweiterte Filter -->
 
   <div class="content-card">
     <h3>Verfügbare Fische und andere Artikel</h3>
 
-    <!-- Standard Filter Controls -->
+    <!-- Status-Filter -->
     <div class="filter-controls">
-      <button class="filter-btn active" data-filter="all">Alle anzeigen</button>
-      <button class="filter-btn" data-filter="male">Männchen</button>
-      <button class="filter-btn" data-filter="female">Weibchen</button>
-      <button class="filter-btn" data-filter="food">Futter</button>
-      <button class="filter-btn" data-filter="plant">Pflanzen</button>
+      <button class="filter-btn" data-status="all">Alle anzeigen</button>
+      <button class="filter-btn active" data-status="available">Verfügbar</button>
+      <button class="filter-btn" data-status="reserved">Reserviert</button>
+      <button class="filter-btn" data-status="sold">Verkauft</button>
     </div>
-    <div>
-      <div class="filter-controls">
-        <button class="filter-toggle" onclick="toggleAdvancedFilters()">Erweiterte Filter</button>
-      </div>
-      <div class="advanced-filters" id="advanced-filters" style="display: none">
-        <div class="filter-row">
-          <label for="search-fish">🔍 Suche:</label>
-          <input type="search" id="search-fish" placeholder="Name, Farbe oder Beschreibung..." />
-        </div>
-        <div class="filter-row">
-          <label for="status-filter">Status:</label>
-          <select id="status-filter" data-status-filter>
-            <option value="all">Alle Status</option>
-            <option value="available">Verfügbar</option>
-            <option value="reserved">Reserviert</option>
-            <option value="sold">Verkauft</option>
-          </select>
-        </div>
-        <div class="filter-row">
-          <label for="price-range">Max. Preis:</label>
-          <input type="range" id="price-range" min="0" max="200" value="200" step="10" />
-          <span id="price-display">200€</span>
-        </div>
-        <button class="filter-toggle btn" onclick="resetAllFilters()">Alle Filter zurücksetzen</button>
-      </div>
+
+    <!-- Kategorie-Filter -->
+    <div class="filter-controls">
+      <button class="filter-btn active" data-category="all">Alle Kategorien</button>
+      <button class="filter-btn" data-category="male">Männchen</button>
+      <button class="filter-btn" data-category="female">Weibchen</button>
+      <button class="filter-btn" data-category="food">Futter</button>
+      <button class="filter-btn" data-category="plant">Pflanzen</button>
     </div>
-    <!-- Sortier- und Ergebnis-Controls -->
+
     <div class="sort-controls">
-      <div class="results-count">
-        <span id="results-count">Lade Fische...</span>
-      </div>
-      <div class="sort-dropdown">
-        <label for="sort-select">Sortieren nach:</label>
-        <select id="sort-select">
-          <option value="name">Name</option>
-          <option value="price-low">Preis (niedrig → hoch)</option>
-          <option value="price-high">Preis (hoch → niedrig)</option>
-          <option value="status">Verfügbarkeit</option>
-        </select>
-      </div>
+      <span id="results-count"></span>
     </div>
   </div>
   <div class="fish-grid">
@@ -166,211 +136,107 @@
     <div class="no-results-icon">🐠</div>
     <h3>Keine Artikel gefunden</h3>
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
-    <button class="reset-filters-btn" onclick="showAllFish()">Alle Produkte anzeigen</button>
+    <button class="reset-filters-btn" onclick="resetToAvailable()">Verfügbare anzeigen</button>
   </div>
 
-  <!-- JavaScript für Filter-Funktionalität -->
-  <script src="{{ '/assets/js/sales-filter.js' | relative_url }}"></script>
   <script>
-    // Carousel-Funktionen
+    // ── Carousel ─────────────────────────────────────────────
     function moveCarousel(button, direction) {
       const container = button.closest(".carousel-container");
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
-      let currentIndex = Array.from(slides).findIndex((slide) => slide.classList.contains("active"));
-
-      slides[currentIndex].classList.remove("active");
-      indicators[currentIndex].classList.remove("active");
-
-      currentIndex = (currentIndex + direction + slides.length) % slides.length;
-
-      slides[currentIndex].classList.add("active");
-      indicators[currentIndex].classList.add("active");
+      let i = Array.from(slides).findIndex((s) => s.classList.contains("active"));
+      slides[i].classList.remove("active");
+      indicators[i] && indicators[i].classList.remove("active");
+      i = (i + direction + slides.length) % slides.length;
+      slides[i].classList.add("active");
+      indicators[i] && indicators[i].classList.add("active");
     }
 
     function goToSlide(indicator, index) {
       const container = indicator.closest(".carousel-container");
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
-
-      slides.forEach((slide) => slide.classList.remove("active"));
+      slides.forEach((s) => s.classList.remove("active"));
       indicators.forEach((ind) => ind.classList.remove("active"));
-
       slides[index].classList.add("active");
       indicators[index].classList.add("active");
     }
 
-    // Touch-Unterstützung für Carousel
+    // Touch-Swipe für Carousel
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".carousel-container").forEach((carousel) => {
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        carousel.addEventListener("touchstart", (e) => {
-          touchStartX = e.changedTouches[0].screenX;
-        });
-
+        let startX = 0;
+        carousel.addEventListener("touchstart", (e) => { startX = e.changedTouches[0].screenX; });
         carousel.addEventListener("touchend", (e) => {
-          touchEndX = e.changedTouches[0].screenX;
-          handleSwipe(carousel);
+          const diff = e.changedTouches[0].screenX - startX;
+          if (Math.abs(diff) < 50) return;
+          const btn = carousel.querySelector(".carousel-btn." + (diff < 0 ? "next" : "prev"));
+          if (btn) moveCarousel(btn, diff < 0 ? 1 : -1);
         });
-
-        function handleSwipe(container) {
-          const slides = container.querySelectorAll(".carousel-slide");
-          if (slides.length <= 1) return;
-
-          if (touchEndX < touchStartX - 50) {
-            // Swipe left - nächstes Bild
-            const nextBtn = container.querySelector(".carousel-btn.next");
-            if (nextBtn) moveCarousel(nextBtn, 1);
-          }
-          if (touchEndX > touchStartX + 50) {
-            // Swipe right - vorheriges Bild
-            const prevBtn = container.querySelector(".carousel-btn.prev");
-            if (prevBtn) moveCarousel(prevBtn, -1);
-          }
-        }
       });
     });
 
-    // Zusätzliche JavaScript-Funktionen direkt im HTML
-    function toggleAdvancedFilters() {
-      const advancedFilters = document.getElementById("advanced-filters");
-      const isVisible = advancedFilters.style.display !== "none";
-      advancedFilters.style.display = isVisible ? "none" : "block";
+    // ── Filter ───────────────────────────────────────────────
+    let activeStatus   = "available";
+    let activeCategory = "all";
 
-      const toggleBtn = event.target;
-      toggleBtn.textContent = isVisible ? "Erweiterte Filter" : "Filter ausblenden";
-    }
+    function applyFilters() {
+      const cards = document.querySelectorAll(".fish-card");
+      let visible = 0;
 
-    function resetAllFilters() {
-      // Filter-Buttons zurücksetzen
-      document.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("active"));
-      document.querySelector('[data-filter="all"]').classList.add("active");
-
-      // Eingabefelder zurücksetzen
-      document.getElementById("search-fish").value = "";
-      document.getElementById("status-filter").value = "all";
-      document.getElementById("price-range").value = "200";
-      document.getElementById("price-display").textContent = "200€";
-      document.getElementById("sort-select").value = "name";
-
-      // Alle Fische anzeigen
-      showAllFish();
-      updateResultsCount();
-    }
-
-    function showAllFish() {
-      // Alle Filter-Buttons zurücksetzen
-      document.querySelectorAll(".filter-btn").forEach((btn) => btn.classList.remove("active"));
-      const allBtn = document.querySelector('.filter-btn[data-filter="all"]');
-      if (allBtn) allBtn.classList.add("active");
-
-      // Erweiterte Filter zurücksetzen
-      const searchInput = document.getElementById("search-fish");
-      if (searchInput) {
-        searchInput.value = "";
-        searchInput.dispatchEvent(new Event("input", { bubbles: true }));
-      }
-      const statusFilter = document.getElementById("status-filter");
-      if (statusFilter) {
-        statusFilter.value = "all";
-        statusFilter.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-      const priceRange = document.getElementById("price-range");
-      if (priceRange) {
-        priceRange.value = "200";
-        priceRange.dispatchEvent(new Event("input", { bubbles: true }));
-      }
-      const priceDisplay = document.getElementById("price-display");
-      if (priceDisplay) priceDisplay.textContent = "200€";
-      const sortSelect = document.getElementById("sort-select");
-      if (sortSelect) {
-        sortSelect.value = "name";
-        sortSelect.dispatchEvent(new Event("change", { bubbles: true }));
-      }
-
-      // Alle Fischkarten anzeigen (explizit)
-      document.querySelectorAll(".fish-card").forEach((card) => {
-        card.style.display = "";
+      cards.forEach((card) => {
+        const status   = card.dataset.status   || "";
+        const category = card.dataset.category || "";
+        const show =
+          (activeStatus   === "all" || status   === activeStatus) &&
+          (activeCategory === "all" || category === activeCategory);
+        card.style.display = show ? "" : "none";
+        if (show) visible++;
       });
 
-      // Keine Ergebnisse-Nachricht ausblenden
+      const count     = document.getElementById("results-count");
       const noResults = document.getElementById("no-results");
-      if (noResults) noResults.style.display = "none";
-
-      // Ergebniszähler aktualisieren
-      updateResultsCount();
+      if (count)     count.textContent = visible + " von " + cards.length + " Artikeln";
+      if (noResults) noResults.style.display = visible === 0 ? "block" : "none";
     }
 
-    function updateResultsCount() {
-      const visibleCards = document.querySelectorAll('.fish-card:not([style*="display: none"])').length;
-      const totalCards = document.querySelectorAll(".fish-card").length;
-      const resultsCount = document.getElementById("results-count");
-      const noResults = document.getElementById("no-results");
-
-      if (visibleCards === 0) {
-        resultsCount.textContent = "Keine Ergebnisse";
-        noResults.style.display = "block";
-      } else {
-        resultsCount.textContent = `${visibleCards} von ${totalCards} Artikeln`;
-        noResults.style.display = "none";
-      }
+    function resetToAvailable() {
+      activeStatus   = "available";
+      activeCategory = "all";
+      syncButtons();
+      applyFilters();
     }
 
-    // Event Listeners für erweiterte Funktionen
+    function syncButtons() {
+      document.querySelectorAll("[data-status]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.status === activeStatus);
+      });
+      document.querySelectorAll("[data-category]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.category === activeCategory);
+      });
+    }
+
     document.addEventListener("DOMContentLoaded", function () {
-      // Preis-Range Display Update
-      const priceRange = document.getElementById("price-range");
-      const priceDisplay = document.getElementById("price-display");
-
-      if (priceRange && priceDisplay) {
-        priceRange.addEventListener("input", function () {
-          priceDisplay.textContent = this.value + "€";
+      document.querySelectorAll("[data-status]").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          activeStatus = this.dataset.status;
+          syncButtons();
+          applyFilters();
         });
-      }
+      });
 
-      // Sortierung
-      const sortSelect = document.getElementById("sort-select");
-      if (sortSelect) {
-        sortSelect.addEventListener("change", function () {
-          const sortValue = this.value;
-          if (typeof sortFish === "function") {
-            sortFish(sortValue);
-          }
-          updateResultsCount();
+      document.querySelectorAll("[data-category]").forEach((btn) => {
+        btn.addEventListener("click", function () {
+          activeCategory = this.dataset.category;
+          syncButtons();
+          applyFilters();
         });
-      }
+      });
 
-      // Suche
-      const searchInput = document.getElementById("search-fish");
-      if (searchInput) {
-        let searchTimeout;
-        searchInput.addEventListener("input", function () {
-          clearTimeout(searchTimeout);
-          searchTimeout = setTimeout(() => {
-            if (typeof searchFish === "function") {
-              searchFish(this.value);
-            }
-            updateResultsCount();
-          }, 300); // Debounce für bessere Performance
-        });
-      }
-
-      // Initiale Ergebnis-Zählung
-      updateResultsCount();
-
-      // Observer für dynamische Änderungen
-      const observer = new MutationObserver(updateResultsCount);
-      const fishGrid = document.querySelector(".fish-grid");
-      if (fishGrid) {
-        observer.observe(fishGrid, {
-          childList: true,
-          attributes: true,
-          attributeFilter: ["style"],
-          subtree: true,
-        });
-      }
+      // Direkt beim Laden filtern
+      syncButtons();
+      applyFilters();
     });
   </script>
 </div>

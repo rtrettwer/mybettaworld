@@ -4,7 +4,7 @@
 
   let activeFilters = {
     gender: "all",
-    status: "all",
+    status: "available",
     maxPrice: 200,
     search: "",
   };
@@ -45,6 +45,29 @@
   }
 
   function setupFilterButtons() {
+    // Quick-Filter: "Nur Verfügbare" Button
+    const availableFilterBtn = document.getElementById("available-filter-btn");
+    if (availableFilterBtn) {
+      availableFilterBtn.addEventListener("click", function (e) {
+        e.preventDefault();
+        const isActive = this.classList.contains("active");
+        if (isActive) {
+          // Deaktivieren → alle Status zeigen
+          this.classList.remove("active");
+          activeFilters.status = "all";
+          const statusFilter = document.getElementById("status-filter");
+          if (statusFilter) statusFilter.value = "all";
+        } else {
+          // Aktivieren → nur Verfügbare zeigen
+          this.classList.add("active");
+          activeFilters.status = "available";
+          const statusFilter = document.getElementById("status-filter");
+          if (statusFilter) statusFilter.value = "available";
+        }
+        applyAllFilters();
+      });
+    }
+
     filterButtons.forEach((button) => {
       button.addEventListener("click", function (e) {
         e.preventDefault();
@@ -69,6 +92,15 @@
       statusFilter.addEventListener("change", function () {
         console.log("Status-Filter geändert:", this.value);
         activeFilters.status = this.value;
+        // Quick-Filter-Button synchronisieren
+        const availableBtn = document.getElementById("available-filter-btn");
+        if (availableBtn) {
+          if (this.value === "available") {
+            availableBtn.classList.add("active");
+          } else {
+            availableBtn.classList.remove("active");
+          }
+        }
         applyAllFilters();
       });
     }
@@ -251,6 +283,10 @@
     if (priceRange) priceRange.value = "200";
     if (priceDisplay) priceDisplay.textContent = "200€";
     if (sortSelect) sortSelect.value = "name";
+
+    // Quick-Filter-Button zurücksetzen
+    const availableBtn = document.getElementById("available-filter-btn");
+    if (availableBtn) availableBtn.classList.remove("active");
 
     // Filter-State zurücksetzen
     activeFilters = {
