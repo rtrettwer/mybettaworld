@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 04.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weiblich, häkchen]
-excerpt: "Nachzüglerin - monatelang ganz klein geblieben"
+excerpt: "Nachzüglerin - sie ist monatelang ganz klein geblieben."
 image: /assets/images/fish/haekchen/XX.webp
 timeline_image: /assets/images/fish/haekchen/XX.webp
 fish_name: "Häkchen"

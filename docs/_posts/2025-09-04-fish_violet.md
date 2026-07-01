@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 04.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, violet]
-excerpt: "Weibchen aus der Verpaarung von Bandit und Lila"
+excerpt: "Schöne Lilafarben, eher dezent mit Sprenkeln. Hübsches aber eher ängstliches Weibchen."
 image: /assets/images/fish/violet/XX.webp
 timeline_image: /assets/images/fish/violet/timeline.webp
 fish_name: "Violet"

@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 28.07.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, zucht]
-excerpt: "Sir Pryce ist ein wundervoller Brutvater - und ein Überraschungs-Männchen"
+excerpt: "Sir Pryce hielt ich für ein Weibchen - what a surprise! (pun intended)"
 image: /assets/images/fish/sirPryce/IMG_20251016_204600.webp
 timeline_image: /assets/images/fish/sirPryce/sir_pryce_timeline.webp
 fish_name: "Sir Pryce"

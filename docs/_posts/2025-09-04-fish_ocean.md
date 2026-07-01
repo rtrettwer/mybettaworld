@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 04.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, ocean]
-excerpt: "Körper in türkis mit schwarzem Kopf"
+excerpt: "Freches tükisfarbenes Weibchen aus der Verpaarung von Bandit und Lila"
 image: /assets/images/fish/ocean/XX.webp
 timeline_image: /assets/images/fish/ocean/XX.webp
 fish_name: "Ocean"

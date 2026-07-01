@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 28.07.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, zucht]
-excerpt: "Sonnenschein bringt Farbe und Leben ins Aquarium"
+excerpt: "Sonnenschein war sehr selbstbewusst und hat sich prima mit Sir Pryce verstanden."
 image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 timeline_image: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
 fish_name: "Sonnenschein"

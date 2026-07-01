@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Regal Verschönerung"
+title: "Und jedem Abschied wohnt ein Zauber inne"
 author: "Rike Trettwer"
 date: 2026-06-29 12:00:00 +0200
 categories: [blog]

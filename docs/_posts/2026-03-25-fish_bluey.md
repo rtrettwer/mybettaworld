@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 25.03.2026 11:06:51 +0200
 categories: [fish]
 tags: [betta, männchen, bluey]
-excerpt: "Pracht-Exemplar aus der Verpaarung von Bandit und Shadow"
+excerpt: "Pracht-Exemplar aus der Verpaarung von Bandit und Shadow - die Zukunft meiner Zuchtlinie!"
 image: /assets/images/fish/bluey/XX.webp
 timeline_image: /assets/images/fish/bluey/XX.webp
 fish_name: "Bluey"

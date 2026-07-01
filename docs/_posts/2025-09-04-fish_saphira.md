@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 04.09.2025 11:06:51 +0200
 categories: [fish]
 tags: [betta, weibchen, saphira]
-excerpt: "Weibchen aus der Verpaarung von Bandit und Lila"
+excerpt: "Saphira ist einer meiner Lieblinge - wunderschöne Farben!"
 image: /assets/images/fish/saphira/XX.webp
 timeline_image: /assets/images/fish/saphira/XX.webp
 fish_name: "Saphira"

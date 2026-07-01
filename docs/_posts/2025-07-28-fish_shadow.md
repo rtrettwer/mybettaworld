@@ -5,7 +5,7 @@ author: "Rike Trettwer"
 date: 28.07.2025
 categories: [fish]
 tags: [betta, weibchen, schwarz]
-excerpt: "Shadow sieht fast nach einer Wildform aus"
+excerpt: "Shadow sieht farblich fast wie eine Wildform aus. Sie ist ein scheuer und nicht aggressiver Fisch."
 image: /assets/images/fish/shadow/IMG_20251015_205320.webp
 timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
