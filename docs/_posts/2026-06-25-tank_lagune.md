@@ -6,7 +6,7 @@ date: 2026-06-28 11:06:51 +0200
 categories: [tank]
 tags: [lagune, nano, kampffisch, garnelen]
 excerpt: "Ein 30L Cube für Garnelen und ein Kampffisch-Männchen"
-image: /assets/images/tanks/lagune/XX.webp
+image: /assets/images/tanks/lagune/tank_lagune.webp
 aktiv: true
 dimensions: 30x30x35 cm (Dennerle Nano Cube)
 inaktiv_seit: "29.06.2026"
@@ -18,7 +18,7 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Tetra Complete Substrate, schwarzer feiner Sand
 deko: Steine und Wurzeln
 startdatum: 25.06.2026
-besatz: Garnelen, Posthornschnecken, ein Kampffisch-Männchen (Zuko)
+besatz: Garnelen, Posthornschnecken, ein Kampffisch-Männchen (Bluey)
 pflanzen: Cryptocoryne wendtii, Anubias, Ammannia gracilis, Stielpflanzen
 gallery_dir: /assets/images/tanks/lagune
 entwicklung:

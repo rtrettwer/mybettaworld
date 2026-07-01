@@ -54,7 +54,8 @@ entwicklung_text: |
   Die Verpaarung von Bandit und Shadow lief schnell an: am Tag nach dem Einsetzen wurde bereits gepaart.
   Shadow durfte nur kurz zur Erholung ins Gras-Becken und ist dann wieder ins Paradies-Becken zurueck.
   Das Timing war super - innerhalb weniger Tage waren Larven sichtbar und kurz darauf frei schwimmend.
-gallery_dir: 
+gallery_dir: /assets/images/fish/breedlings_2
+
 ---
 
 
