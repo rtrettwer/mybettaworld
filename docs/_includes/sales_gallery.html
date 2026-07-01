@@ -6,19 +6,20 @@
 
     <!-- Status-Filter -->
     <div class="filter-controls">
-      <button class="filter-btn" data-status="all">Alle anzeigen</button>
-      <button class="filter-btn active" data-status="available">Verfügbar</button>
-      <button class="filter-btn" data-status="reserved">Reserviert</button>
-      <button class="filter-btn" data-status="sold">Verkauft</button>
+      <button type="button" class="filter-btn" data-status-filter="all">Alle anzeigen</button>
+      <button type="button" class="filter-btn active" data-status-filter="available">Verfügbar</button>
+      <button type="button" class="filter-btn" data-status-filter="reserved">Reserviert</button>
+      <button type="button" class="filter-btn" data-status-filter="sold">Verkauft</button>
     </div>
 
     <!-- Kategorie-Filter -->
     <div class="filter-controls">
-      <button class="filter-btn active" data-category="all">Alle Kategorien</button>
-      <button class="filter-btn" data-category="male">Männchen</button>
-      <button class="filter-btn" data-category="female">Weibchen</button>
-      <button class="filter-btn" data-category="food">Futter</button>
-      <button class="filter-btn" data-category="plant">Pflanzen</button>
+      <button type="button" class="filter-btn active" data-category-filter="all">Alle Kategorien</button>
+      <button type="button" class="filter-btn" data-category-filter="fish">Fische</button>
+      <button type="button" class="filter-btn" data-category-filter="male">Männchen</button>
+      <button type="button" class="filter-btn" data-category-filter="female">Weibchen</button>
+      <button type="button" class="filter-btn" data-category-filter="food">Futter</button>
+      <button type="button" class="filter-btn" data-category-filter="plant">Pflanzen</button>
     </div>
 
     <div class="sort-controls">
@@ -105,8 +106,8 @@
           </div>
 
           {% if total_gallery_images_count > 1 %}
-          <button class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
-          <button class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
+          <button type="button" class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
+          <button type="button" class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
 
           <div class="carousel-indicators">
             {% for i in (1..total_gallery_images_count) %}
@@ -151,21 +152,21 @@
         <h4>{{ product.name }}</h4>
 
         <div class="fish-details">
-            <span class="gender {{ product.gender }}">
-              {% if product.gender == 'male' %}
-                Männchen
-              {% elsif product.gender == 'female' %}
-                Weibchen
-              {% elsif product.gender == 'food' %}
-                Futter
-              {% elsif product.gender == 'plant' %}
-                Pflanze
-              {% elsif product.gender == 'misc' %}
-                Sonstiges
-              {% else %}
-                Artikeltyp unbekannt
-              {% endif %}
-            </span>
+          <span class="gender {{ product.gender }}">
+            {% if product.gender == 'male' %}
+            Männchen
+            {% elsif product.gender == 'female' %}
+            Weibchen
+            {% elsif product.gender == 'food' %}
+            Futter
+            {% elsif product.gender == 'plant' %}
+            Pflanze
+            {% elsif product.gender == 'misc' %}
+            Sonstiges
+            {% else %}
+            Artikeltyp unbekannt
+            {% endif %}
+          </span>
           <span class="age">{{ product.age }}</span>
           <span class="size">{{ product.size }}</span>
           <span class="color">{{ product.color }}</span>
@@ -180,6 +181,7 @@
         <div class="contact-info">
           {% if product.status == 'available' %}
           <button
+                  type="button"
                   class="interest-btn"
                   onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
@@ -187,7 +189,7 @@
           </button>
           <small>Nur Abholung möglich</small>
           {% elsif product.status == 'reserved' %}
-          <button class="interest-btn" disabled>Reserviert</button>
+          <button type="button" class="interest-btn" disabled>Reserviert</button>
           {% if product.pickup_date %}
           <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
           {% endif %}
@@ -201,6 +203,7 @@
           {% endif %}
           {% elsif product.status == 'temporarily_unavailable' %}
           <button
+                  type="button"
                   class="interest-btn"
                   onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
@@ -219,15 +222,19 @@
     <div class="no-results-icon"></div>
     <h3>Keine Artikel gefunden</h3>
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
-    <button class="reset-filters-btn" onclick="resetToAvailable()">Verfügbare anzeigen</button>
+    <button type="button" class="reset-filters-btn" onclick="resetToAvailable()">Verfügbare anzeigen</button>
   </div>
 
   <script>
     // Carousel
     function moveCarousel(button, direction) {
       const container = button.closest(".carousel-container");
+      if (!container) return;
+
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
+      if (!slides.length) return;
+
       let i = Array.from(slides).findIndex((s) => s.classList.contains("active"));
 
       if (i < 0) {
@@ -235,16 +242,22 @@
       }
 
       slides[i].classList.remove("active");
-      indicators[i] && indicators[i].classList.remove("active");
+      if (indicators[i]) {
+        indicators[i].classList.remove("active");
+      }
 
       i = (i + direction + slides.length) % slides.length;
 
       slides[i].classList.add("active");
-      indicators[i] && indicators[i].classList.add("active");
+      if (indicators[i]) {
+        indicators[i].classList.add("active");
+      }
     }
 
     function goToSlide(indicator, index) {
       const container = indicator.closest(".carousel-container");
+      if (!container) return;
+
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
 
@@ -265,19 +278,20 @@
       document.querySelectorAll(".carousel-container").forEach((carousel) => {
         let startX = 0;
 
-        carousel.addEventListener("touchstart", (e) => {
-          startX = e.changedTouches[0].screenX;
+        carousel.addEventListener("touchstart", (event) => {
+          startX = event.changedTouches[0].screenX;
         });
 
-        carousel.addEventListener("touchend", (e) => {
-          const diff = e.changedTouches[0].screenX - startX;
+        carousel.addEventListener("touchend", (event) => {
+          const diff = event.changedTouches[0].screenX - startX;
 
           if (Math.abs(diff) < 50) return;
 
-          const btn = carousel.querySelector(".carousel-btn." + (diff < 0 ? "next" : "prev"));
+          const direction = diff < 0 ? 1 : -1;
+          const btn = carousel.querySelector(".carousel-btn." + (direction === 1 ? "next" : "prev"));
 
           if (btn) {
-            moveCarousel(btn, diff < 0 ? 1 : -1);
+            moveCarousel(btn, direction);
           }
         });
       });
@@ -287,6 +301,18 @@
     let activeStatus = "available";
     let activeCategory = "all";
 
+    function matchesCategory(category, selectedCategory) {
+      if (selectedCategory === "all") {
+        return true;
+      }
+
+      if (selectedCategory === "fish") {
+        return category === "male" || category === "female";
+      }
+
+      return category === selectedCategory;
+    }
+
     function applyFilters() {
       const cards = document.querySelectorAll(".fish-card");
       let visible = 0;
@@ -294,9 +320,10 @@
       cards.forEach((card) => {
         const status = card.dataset.status || "";
         const category = card.dataset.category || "";
+
         const show =
                 (activeStatus === "all" || status === activeStatus) &&
-                (activeCategory === "all" || category === activeCategory);
+                matchesCategory(category, activeCategory);
 
         card.style.display = show ? "" : "none";
 
@@ -325,27 +352,33 @@
     }
 
     function syncButtons() {
-      document.querySelectorAll("[data-status]").forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.status === activeStatus);
+      document.querySelectorAll("button.filter-btn[data-status-filter]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.statusFilter === activeStatus);
       });
 
-      document.querySelectorAll("[data-category]").forEach((btn) => {
-        btn.classList.toggle("active", btn.dataset.category === activeCategory);
+      document.querySelectorAll("button.filter-btn[data-category-filter]").forEach((btn) => {
+        btn.classList.toggle("active", btn.dataset.categoryFilter === activeCategory);
       });
     }
 
     document.addEventListener("DOMContentLoaded", function () {
-      document.querySelectorAll("[data-status]").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          activeStatus = this.dataset.status;
+      document.querySelectorAll("button.filter-btn[data-status-filter]").forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          activeStatus = this.dataset.statusFilter;
           syncButtons();
           applyFilters();
         });
       });
 
-      document.querySelectorAll("[data-category]").forEach((btn) => {
-        btn.addEventListener("click", function () {
-          activeCategory = this.dataset.category;
+      document.querySelectorAll("button.filter-btn[data-category-filter]").forEach((btn) => {
+        btn.addEventListener("click", function (event) {
+          event.preventDefault();
+          event.stopPropagation();
+
+          activeCategory = this.dataset.categoryFilter;
           syncButtons();
           applyFilters();
         });
