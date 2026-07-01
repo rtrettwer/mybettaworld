@@ -11,10 +11,12 @@ timeline_image: /assets/images/fish/bluey/XX.webp
 fish_name: "Bluey"
 fish_birth: "2026-03-25"
 fish_arrival: "2026-03-25"
-fish_age: "3 Monate"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Männlich"
-fish_behavior: "in Paarhaltung/Gruppe situationsabhängig; mit 'Sonnenschein' anfangs dominanter, bei Kampfi & Shadow eher unterlegen und kurzzeitig mit Stressstreifen; aktuell ohne Stressstreifen; im Babybecken zeigte sie Jagdverhalten gegenüber Jungfischen"
+fish_lineage: "Bandit x Shadow"
+fish_fins: "Kurzflossig mit meiner typischen Zackung"
+fish_color_base: "tbd"
+fish_iridescence: "Türkis
 gallery_dir: /assets/images/fish/bluey
 ---
 

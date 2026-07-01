@@ -13,6 +13,10 @@ fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weblich"
+fish_lineage: "Bandit x Lila"
+fish_fins: "Kurzflossig mit meiner typischen Zackung"
+fish_color_base: "tbd"
+fish_iridescence: "tbd"
 gallery_dir: /assets/images/fish/haekchen
 ---
 

@@ -11,7 +11,6 @@ timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
 fish_birth: "2025-05-22"
 fish_arrival: "2025-07-28"
-fish_age: "5 Monate"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Weibchen"
 fish_fins: "Kurzflossig (plakat-typisch); Caudale fächerförmig, moderat breit; Dorsale und Anal kompakt; keine Doubletail-/Dumbo-Merkmale"

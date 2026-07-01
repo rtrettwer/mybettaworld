@@ -13,7 +13,6 @@ fish_birth: "2025-01-15"
 fish_arrival: "2025-04-01"
 fish_status: "deceased"
 fish_death_date: "2026-03-13"
-fish_age: 9 Monate
 fish_price: 36 €
 fish_type: Betta splendens (Domestic)
 fish_fins: Plakat (Kurzflosser); Caudale fächerförmig, Öffnung etwa 160°, kräftige Strahlen; Dorsale mittelbreit; Anal moderat; keine Dumbo-/Doubletail-Merkmale

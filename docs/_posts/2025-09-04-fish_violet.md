@@ -13,6 +13,10 @@ fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weiblich"
+fish_lineage: "Bandit x Lila"
+fish_fins: "Kurzflossig mit meiner typischen Zackung"
+fish_color_base: "Dunkler Körper, violette Akzente mit roten und schwarzen Sprenkeln"
+fish_iridescence: "türkis"
 gallery_dir: /assets/images/fish/violet
 ---
 
