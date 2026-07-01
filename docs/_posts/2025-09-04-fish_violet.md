@@ -7,7 +7,7 @@ categories: [fish]
 tags: [betta, weibchen, violet]
 excerpt: "Weibchen aus der Verpaarung von Bandit und Lila"
 image: /assets/images/fish/violet/XX.webp
-timeline_image: /assets/images/fish/violet/XX.webp
+timeline_image: /assets/images/fish/violet/timeline.webp
 fish_name: "Violet"
 fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"

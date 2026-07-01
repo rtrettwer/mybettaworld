@@ -7,7 +7,7 @@ categories: [fish]
 tags: [betta, männchen, krieger]
 excerpt: "Überraschungsmännchen aus der Verpaarung von Bandit und Lila"
 image: /assets/images/fish/krieger/XX.webp
-timeline_image: /assets/images/fish/krieger/XX.webp
+timeline_image: /assets/images/fish/krieger/timeline.webp
 fish_name: "Krieger"
 fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"
