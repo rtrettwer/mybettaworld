@@ -25,38 +25,94 @@
       <span id="results-count"></span>
     </div>
   </div>
+
   <div class="fish-grid">
     {% for product in site.data.sales %}
+    {% assign gallery_dir_images_count = 0 %}
+
+    {% if product.gallery_dir %}
+    {% assign normalized_gallery_dir = product.gallery_dir %}
+    {% unless normalized_gallery_dir contains '/' %}
+    {% assign normalized_gallery_dir = normalized_gallery_dir | prepend: '/' %}
+    {% endunless %}
+    {% assign gallery_dir_last_char = normalized_gallery_dir | slice: -1 %}
+    {% unless gallery_dir_last_char == '/' %}
+    {% assign normalized_gallery_dir = normalized_gallery_dir | append: '/' %}
+    {% endunless %}
+
+    {% for file in site.static_files %}
+    {% assign file_ext = file.extname | downcase %}
+    {% if file.path contains normalized_gallery_dir %}
+    {% if file_ext == '.jpg' or file_ext == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %}
+    {% assign gallery_dir_images_count = gallery_dir_images_count | plus: 1 %}
+    {% endif %}
+    {% endif %}
+    {% endfor %}
+    {% endif %}
+
+    {% assign gallery_list_images_count = 0 %}
+    {% if product.gallery and product.gallery.size > 0 %}
+    {% assign gallery_list_images_count = product.gallery.size %}
+    {% endif %}
+
+    {% assign total_gallery_images_count = gallery_list_images_count | plus: gallery_dir_images_count %}
+
     <div
-      class="fish-card {{ product.status }}"
-      data-category="{{ product.gender }}"
-      data-price="{{ product.price | default: 0 }}"
-      data-status="{{ product.status | default: 'sold' }}"
+            class="fish-card {{ product.status }}"
+            data-category="{{ product.gender }}"
+            data-price="{{ product.price | default: 0 }}"
+            data-status="{{ product.status | default: 'sold' }}"
     >
       <div class="fish-image-carousel">
-        {% if product.gallery and product.gallery.size > 0 %}
-        <!-- Carousel mit mehreren Bildern -->
+        {% if total_gallery_images_count > 0 %}
+        <!-- Carousel aus gallery-Liste und/oder gallery_dir -->
         <div class="carousel-container">
           <div class="carousel-slides">
+            {% assign slide_index = 0 %}
+
+            {% if product.gallery and product.gallery.size > 0 %}
             {% for img in product.gallery %}
-            <div class="carousel-slide {% if forloop.first %}active{% endif %}">
+            {% assign slide_index = slide_index | plus: 1 %}
+            <div class="carousel-slide {% if slide_index == 1 %}active{% endif %}">
               <img
-                src="{{ img | relative_url }}"
-                alt="{{ product.name }} - Bild {{ forloop.index }}"
-                loading="lazy"
-                onerror="this.src = '/assets/images/placeholder-fish.jpg'"
+                      src="{{ img | relative_url }}"
+                      alt="{{ product.name }} - Bild {{ slide_index }}"
+                      loading="lazy"
+                      onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
               />
             </div>
             {% endfor %}
+            {% endif %}
+
+            {% if product.gallery_dir %}
+            {% for file in site.static_files %}
+            {% assign file_ext = file.extname | downcase %}
+            {% if file.path contains normalized_gallery_dir %}
+            {% if file_ext == '.jpg' or file_ext == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %}
+            {% assign slide_index = slide_index | plus: 1 %}
+            <div class="carousel-slide {% if slide_index == 1 %}active{% endif %}">
+              <img
+                      src="{{ file.path | relative_url }}"
+                      alt="{{ product.name }} - Bild {{ slide_index }}"
+                      loading="lazy"
+                      onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
+              />
+            </div>
+            {% endif %}
+            {% endif %}
+            {% endfor %}
+            {% endif %}
           </div>
-          {% if product.gallery.size > 1 %}
+
+          {% if total_gallery_images_count > 1 %}
           <button class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
           <button class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
+
           <div class="carousel-indicators">
-            {% for img in product.gallery %}
+            {% for i in (1..total_gallery_images_count) %}
             <span
-              class="indicator {% if forloop.first %}active{% endif %}"
-              onclick="goToSlide(this, {{ forloop.index0 }})"
+                    class="indicator {% if forloop.first %}active{% endif %}"
+                    onclick="goToSlide(this, {{ forloop.index0 }})"
             ></span>
             {% endfor %}
           </div>
@@ -65,42 +121,67 @@
         {% else %}
         <!-- Einzelbild (Fallback) -->
         <img
-          src="{{ product.image | relative_url }}"
-          alt="{{ product.name }}"
-          loading="lazy"
-          onerror="this.src = '/assets/images/placeholder-fish.jpg'"
+                src="{{ product.image | relative_url }}"
+                alt="{{ product.name }}"
+                loading="lazy"
+                onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
         />
         {% endif %}
+
         <div class="price-tag">{{ product.price }}€</div>
+
         <div class="status-badge {{ product.status }}">
-          {% if product.status == 'available' %}Verfügbar {% elsif product.status == 'reserved' %}Reserviert {% elsif
-          product.status == 'sold' %}Verkauft {% elsif product.status == 'temporarily_unavailable' %}Nicht verfügbar {% endif %}
+          {% if product.status == 'available' %}
+          Verfügbar
+          {% elsif product.status == 'reserved' %}
+          Reserviert
+          {% elsif product.status == 'sold' %}
+          Verkauft
+          {% elsif product.status == 'temporarily_unavailable' %}
+          Nicht verfügbar
+          {% endif %}
         </div>
+
         {% if product.status == 'temporarily_unavailable' %}
-        <div class="unavailable-warning">⚠️ Bald wieder verfügbar</div>
+        <div class="unavailable-warning">Bald wieder verfügbar</div>
         {% endif %}
       </div>
+
       <div class="fish-info">
         <h4>{{ product.name }}</h4>
+
         <div class="fish-details">
-          <span class="gender {{ product.gender }}">
-            {% if product.gender == 'male' %}Männchen {% elsif product.gender == 'female' %}Weibchen {% elsif
-            product.gender == 'food' %}Futter {% elsif product.gender == 'plant' %}Pflanze {% elsif product.gender ==
-            'misc' %}Sonstiges {% else %}? Artikeltyp unbekannt {% endif %}
-          </span>
+            <span class="gender {{ product.gender }}">
+              {% if product.gender == 'male' %}
+                Männchen
+              {% elsif product.gender == 'female' %}
+                Weibchen
+              {% elsif product.gender == 'food' %}
+                Futter
+              {% elsif product.gender == 'plant' %}
+                Pflanze
+              {% elsif product.gender == 'misc' %}
+                Sonstiges
+              {% else %}
+                Artikeltyp unbekannt
+              {% endif %}
+            </span>
           <span class="age">{{ product.age }}</span>
           <span class="size">{{ product.size }}</span>
           <span class="color">{{ product.color }}</span>
         </div>
+
         <p class="description">{{ product.description }}</p>
+
         {% if product.special_notes %}
         <p class="special-notes"><strong>Besonderheit:</strong> {{ product.special_notes }}</p>
         {% endif %}
+
         <div class="contact-info">
           {% if product.status == 'available' %}
           <button
-            class="interest-btn"
-            onclick="openContactForm('{{ product.name }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+                  class="interest-btn"
+                  onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
             Kontakt aufnehmen
           </button>
@@ -109,17 +190,19 @@
           <button class="interest-btn" disabled>Reserviert</button>
           {% if product.pickup_date %}
           <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
-          {% endif %} {% elsif product.status == 'sold' %}
+          {% endif %}
+          {% elsif product.status == 'sold' %}
           <small><strong>Verkauft</strong></small>
           {% if product.gender == 'male' or product.gender == 'female' %}
           <small>Einzeltiere/Unikate - nicht wieder verfügbar</small>
           {% endif %}
           {% if product.sold_date %}
           <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
-          {% endif %} {% elsif product.status == 'temporarily_unavailable' %}
+          {% endif %}
+          {% elsif product.status == 'temporarily_unavailable' %}
           <button
-            class="interest-btn"
-            onclick="openContactForm('{{ product.name }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+                  class="interest-btn"
+                  onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
             Interesse anmelden
           </button>
@@ -133,22 +216,29 @@
 
   <!-- Keine Ergebnisse Nachricht -->
   <div class="no-results" id="no-results" style="display: none">
-    <div class="no-results-icon">🐠</div>
+    <div class="no-results-icon"></div>
     <h3>Keine Artikel gefunden</h3>
     <p>Versuche es mit anderen Filtereinstellungen oder schaue später wieder vorbei.</p>
     <button class="reset-filters-btn" onclick="resetToAvailable()">Verfügbare anzeigen</button>
   </div>
 
   <script>
-    // ── Carousel ─────────────────────────────────────────────
+    // Carousel
     function moveCarousel(button, direction) {
       const container = button.closest(".carousel-container");
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
       let i = Array.from(slides).findIndex((s) => s.classList.contains("active"));
+
+      if (i < 0) {
+        i = 0;
+      }
+
       slides[i].classList.remove("active");
       indicators[i] && indicators[i].classList.remove("active");
+
       i = (i + direction + slides.length) % slides.length;
+
       slides[i].classList.add("active");
       indicators[i] && indicators[i].classList.add("active");
     }
@@ -157,28 +247,44 @@
       const container = indicator.closest(".carousel-container");
       const slides = container.querySelectorAll(".carousel-slide");
       const indicators = container.querySelectorAll(".indicator");
+
       slides.forEach((s) => s.classList.remove("active"));
       indicators.forEach((ind) => ind.classList.remove("active"));
-      slides[index].classList.add("active");
-      indicators[index].classList.add("active");
+
+      if (slides[index]) {
+        slides[index].classList.add("active");
+      }
+
+      if (indicators[index]) {
+        indicators[index].classList.add("active");
+      }
     }
 
     // Touch-Swipe für Carousel
     document.addEventListener("DOMContentLoaded", function () {
       document.querySelectorAll(".carousel-container").forEach((carousel) => {
         let startX = 0;
-        carousel.addEventListener("touchstart", (e) => { startX = e.changedTouches[0].screenX; });
+
+        carousel.addEventListener("touchstart", (e) => {
+          startX = e.changedTouches[0].screenX;
+        });
+
         carousel.addEventListener("touchend", (e) => {
           const diff = e.changedTouches[0].screenX - startX;
+
           if (Math.abs(diff) < 50) return;
+
           const btn = carousel.querySelector(".carousel-btn." + (diff < 0 ? "next" : "prev"));
-          if (btn) moveCarousel(btn, diff < 0 ? 1 : -1);
+
+          if (btn) {
+            moveCarousel(btn, diff < 0 ? 1 : -1);
+          }
         });
       });
     });
 
-    // ── Filter ───────────────────────────────────────────────
-    let activeStatus   = "available";
+    // Filter
+    let activeStatus = "available";
     let activeCategory = "all";
 
     function applyFilters() {
@@ -186,23 +292,33 @@
       let visible = 0;
 
       cards.forEach((card) => {
-        const status   = card.dataset.status   || "";
+        const status = card.dataset.status || "";
         const category = card.dataset.category || "";
         const show =
-          (activeStatus   === "all" || status   === activeStatus) &&
-          (activeCategory === "all" || category === activeCategory);
+                (activeStatus === "all" || status === activeStatus) &&
+                (activeCategory === "all" || category === activeCategory);
+
         card.style.display = show ? "" : "none";
-        if (show) visible++;
+
+        if (show) {
+          visible++;
+        }
       });
 
-      const count     = document.getElementById("results-count");
+      const count = document.getElementById("results-count");
       const noResults = document.getElementById("no-results");
-      if (count)     count.textContent = visible + " von " + cards.length + " Artikeln";
-      if (noResults) noResults.style.display = visible === 0 ? "block" : "none";
+
+      if (count) {
+        count.textContent = visible + " von " + cards.length + " Artikeln";
+      }
+
+      if (noResults) {
+        noResults.style.display = visible === 0 ? "block" : "none";
+      }
     }
 
     function resetToAvailable() {
-      activeStatus   = "available";
+      activeStatus = "available";
       activeCategory = "all";
       syncButtons();
       applyFilters();
@@ -212,6 +328,7 @@
       document.querySelectorAll("[data-status]").forEach((btn) => {
         btn.classList.toggle("active", btn.dataset.status === activeStatus);
       });
+
       document.querySelectorAll("[data-category]").forEach((btn) => {
         btn.classList.toggle("active", btn.dataset.category === activeCategory);
       });
@@ -234,7 +351,6 @@
         });
       });
 
-      // Direkt beim Laden filtern
       syncButtons();
       applyFilters();
     });
