@@ -44,3 +44,7 @@ Am 24.03.2026 habe ich [Shadow](/fish/2025/07/28/fish_shadow) zusammen mit [Band
 Die Paarung fand am Folgetag statt, danach habe ich [Shadow](/fish/2025/07/28/fish_shadow) am Abend wieder aus dem Zuchtbecken genommen.
 
 Zur Erholung war sie kurz im [Gras-Becken](/tank/2025/09/30/tank_babys) und ist zwei Tage spaeter wieder ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken zurueckgezogen.
+
+## Juli 2026 - Krankheit
+Leider ist Shadow krank und ich kann nicht sagen, was es ist. Sie hat einen unglaublich dicken, geschwollenen Bauch und schnappt nach Luft.
+Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im Quarantäne-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt. 

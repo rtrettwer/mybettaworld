@@ -18,14 +18,12 @@ beleuchtung: hygger submersible LED, 24/7 Modus, 8W
 bodengrund: Tetra Complete Substrate, schwarzer feiner Sand
 deko: Großer weißer Lochstein
 startdatum: 25.06.2026
-besatz: Garnelen, Posthornschnecken, ein Kampffisch-Männchen (Zuko)
+besatz: Garnelen, Posthornschnecken, ein Kampffisch-Männchen (tbd)
 pflanzen: Cryptocoryne wendtii, Anubias, Ammannia gracilis, Stielpflanzen
 gallery_dir: /assets/images/tanks/felsen
 entwicklung:
   - datum: 25.06.2026
     ereignis: Stein und Pflanzen eingesetzt. Früheres Quarantäne-Becken wurde resettet und inaktiv gesetzt. Das Becken ist jetzt das Felsen-Becken.
-  - datum: 28.06.2026
-    ereignis: Den kleinen Zuko eingesetzt. Er hat sich schon neugierig sein neues Becken angesehen. Garnelen hat er beäugt aber ich habe noch keinen Angriff beobachtet.
 ---
 
 

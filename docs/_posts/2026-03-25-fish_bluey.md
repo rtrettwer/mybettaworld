@@ -16,7 +16,7 @@ fish_gender: "Männlich"
 fish_lineage: "Bandit x Shadow"
 fish_fins: "Kurzflossig mit meiner typischen Zackung"
 fish_color_base: "tbd"
-fish_iridescence: "Türkis
+fish_iridescence: "Türkis"
 gallery_dir: /assets/images/fish/bluey
 ---
 

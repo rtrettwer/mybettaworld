@@ -33,3 +33,6 @@ Und plötzlich war da der Fisch drin und hat ein Nest gebaut... . Also ab in ein
 Die Mädels sind irgendwie sehr farblos und träge geworden. Ich habe Krieger zurückgesetzt und voila - wieder farbenprächtig. Er hat sich auch schon gepaart, aber ich denke nicht, dass das
 im Gesellschaftsbecken jemals erfolgreich ist - die Neons haben sich über leckere frische Fisch-Eier gefreut.
 Aber er scheucht die Weibchen und hält sie auf Trab - ich bin nicht sicher, ob farblos oder müde bei den Mödels schlimmer ist. Mal abwarten.
+
+## Juli 2026 - Krankheit
+Leider scheint sich Krieger im Paradies-Becken verletzt zu haben. Ich habe ihn isoliert, aber die Wunde heilt nicht gut bzw. ein weißlicher Belag breitet sich auf seinem Körper aus. Baktopur und esha2000 haben nicht geholfen. Ich habe in der Nähe keinen Tierarzt gefunden, der Zierfische behandelt. Was nun? Ich habe gelesen, dass Salzbäder gut tun können. Ich habe geeignetes Salz bestellt und werde das noch probieren. Er frisst noch, also gebe ich die Hoffnung nicht auf.
