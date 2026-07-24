@@ -11,6 +11,7 @@ timeline_image: /assets/images/fish/shadow/shadow_timeline.webp
 fish_name: "Shadow"
 fish_birth: "2025-05-22"
 fish_arrival: "2025-07-28"
+fish_death_date: "2026-07-24"
 fish_price: "5 € (Interaquaristik)"
 fish_type: "Betta splendens (Domestic), Weibchen"
 fish_fins: "Kurzflossig (plakat-typisch); Caudale fächerförmig, moderat breit; Dorsale und Anal kompakt; keine Doubletail-/Dumbo-Merkmale"
@@ -48,3 +49,7 @@ Zur Erholung war sie kurz im [Gras-Becken](/tank/2025/09/30/tank_babys) und ist 
 ## Juli 2026 - Krankheit
 Leider ist Shadow krank und ich kann nicht sagen, was es ist. Sie hat einen unglaublich dicken, geschwollenen Bauch und schnappt nach Luft.
 Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im Quarantäne-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt. 
+
+## 24.07.2026 - Tod
+Leider ist Shadow heute Nacht verstorben. Ich vermute, dass es eine Laichverhärtung war - trotz Daphnien Lebendfutter und Ruhe hat sie sich davon nicht erholt. Ich bin ziemlich traurig, muss ich sagen. Es ist ein Trost, dass ich einige ihrer Töchter behalten habe.
+
