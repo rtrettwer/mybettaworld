@@ -47,10 +47,9 @@
   background: linear-gradient(135deg, var(--theme-primary-1, #2ec4b6), var(--theme-primary-2, #ff9800));
   border: 2px solid transparent;
   box-sizing: border-box;
-  transition:
-    box-shadow 0.35s cubic-bezier(0.4, 0, 0.2, 1),
-    border 0.35s cubic-bezier(0.4, 0, 0.2, 1);
   background-clip: border-box;
+
+  @include glow-interactive($strength: 1.3);
 
   // Bild immer über dem Rand
   & > * {
@@ -68,26 +67,14 @@
     height: 100%;
     object-fit: cover;
     border-radius: 6px;
-    transition: filter 0.3s;
     position: relative;
     z-index: 2;
   }
 
-  // Leuchteffekt beim Hover (wie Fisch-Timeline, kein Farbwechsel)
+  // Leuchteffekt beim Hover (identisch zu Buttons & Co. via glow-interactive)
   &:hover,
   &:focus {
-    box-shadow:
-      0 0 0 6px rgba(46, 196, 182, 0.18),
-      0 8px 32px 0 rgba(46, 196, 182, 0.25);
-    border-color: transparent;
     z-index: 10;
-    // Kein Farbwechsel im Hintergrund!
-    img,
-    picture,
-    .gallery-img,
-    .db-gallery-thumb {
-      filter: brightness(1.05) saturate(1.1);
-    }
   }
 
   // Standard: quadratisch
@@ -205,8 +192,9 @@
   border-radius: 8px;
   overflow: hidden;
   position: relative;
-
-  @include glow-interactive($strength: 1.5);
+  // Kein eigener Glow-Effekt: der Button liegt deckungsgleich über
+  // .db-gallery-item, das bereits @include glow-interactive() nutzt -
+  // sonst würde der Leucht-Effekt doppelt/verzerrt erscheinen.
 }
 
 .db-gallery-thumb {
