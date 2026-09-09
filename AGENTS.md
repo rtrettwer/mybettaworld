@@ -6,7 +6,7 @@ müssen. Bitte bei größeren strukturellen Änderungen aktuell halten.
 
 ## Projektüberblick
 
-- Betta-Kampffisch-Blog (privates Hobby-/Zuchtprojekt) von Rike Trettwer,
+- Betta-Kampffisch-Blog (privates Hobby-/Zuchtprojekt der Repo-Inhaberin),
   gehostet über GitHub Pages, gebaut mit **Jekyll** (Theme: `minima`,
   stark angepasst).
 - Sprache der Website und aller Inhalte/Commits/Konversation: **Deutsch**.
