@@ -158,22 +158,12 @@
   }
 
   .timeline-link-style {
-    transition:
-      transform 0.3s ease,
-      box-shadow 0.3s ease;
     display: block;
     border-radius: 16px;
-    // GPU-Beschleunigung
-    will-change: transform;
-    transform: translateZ(0);
   }
 
   .timeline-link-style:hover,
   .timeline-link-style:focus {
-    transform: translateZ(0) translateY(-4px);
-    box-shadow:
-      0 8px 25px rgba(46, 196, 182, 0.2),
-      0 0 30px rgba(46, 196, 182, 0.15);
     outline: none;
     text-decoration: none;
   }
@@ -182,19 +172,15 @@
     background: var(--surface);
     padding: 2rem;
     border-radius: 16px;
-    transition: all 0.3s ease;
     position: relative;
     z-index: 1;
     margin-left: 1rem;
     cursor: pointer;
-    // GPU-Beschleunigung
-    will-change: transform;
-    transform: translateZ(0);
 
     // Gradient-Rand konsistent mit anderen Cards
     border: 2px solid transparent;
     background:
-      linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+      var(--surface) padding-box,
       linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
     // Leuchtender Schatten-Effekt
@@ -202,13 +188,7 @@
       0 4px 12px rgba(0, 0, 0, 0.08),
       0 0 20px rgba(46, 196, 182, 0.1);
 
-    &:hover {
-      transform: translateZ(0) translateY(-2px);
-      box-shadow:
-        0 8px 25px rgba(46, 196, 182, 0.15),
-        0 0 30px rgba(46, 196, 182, 0.2),
-        0 0 50px rgba(127, 83, 172, 0.1);
-    }
+    @include glow-interactive($strength: 1.4);
 
     &::before {
       content: "";

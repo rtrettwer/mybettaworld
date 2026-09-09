@@ -1,0 +1,41 @@
+// =====================================================================
+// Zentraler Hover-/Klick-Effekt: "Leuchten statt Springen"
+// ---------------------------------------------------------------------
+// Alle interaktiven Komponenten (Buttons, Karten, Kacheln, Tags, ...)
+// nutzen dieses Mixin für ihr Hover-/Active-Verhalten. Position und
+// Größe der Elemente bleiben dabei IMMER fest ("kein Springen") - es
+// verändert sich nur der Leucht-Schatten (Glow) plus eine leichte
+// Aufhellung/Abdunkelung.
+//
+// Soll sich der Effekt künftig ändern (Farbe, Stärke, Timing), reicht
+// eine Anpassung an dieser einzigen Stelle - alle Komponenten, die
+// @include glow-interactive(...) nutzen, übernehmen die Änderung
+// automatisch.
+// =====================================================================
+
+$glow-color-default: rgb(46, 196, 182); // Türkis (Standard-Akzent 1)
+$glow-accent-default: rgb(127, 83, 172); // Lila (Standard-Akzent 2)
+
+@mixin glow-interactive($color: $glow-color-default, $accent: $glow-accent-default, $strength: 1) {
+  // Nur Farbe/Schatten/Filter animieren - niemals transform/position/size,
+  // damit Elemente beim Hover/Klick nicht "springen".
+  transition:
+    background-color 0.3s ease,
+    border-color 0.3s ease,
+    color 0.3s ease,
+    box-shadow 0.25s ease,
+    filter 0.2s ease;
+
+  &:hover,
+  &:focus-visible {
+    box-shadow:
+      0 0 #{18px * $strength} rgba($color, 0.4),
+      0 0 #{38px * $strength} rgba($accent, 0.25);
+    filter: brightness(1.06);
+  }
+
+  &:active {
+    box-shadow: 0 0 #{12px * $strength} rgba($color, 0.5);
+    filter: brightness(0.96);
+  }
+}

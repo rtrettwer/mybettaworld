@@ -78,12 +78,8 @@
       border-radius: 12px;
       box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
       flex: 1;
-      transition: transform 0.2s ease;
 
-      &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4);
-      }
+      @include glow-interactive($strength: 0.9);
 
       .stat-number {
         display: block;
@@ -150,13 +146,9 @@
         border-radius: 12px;
         box-shadow: 0 4px 15px rgba(46, 196, 182, 0.3);
         flex: 1;
-        transition: transform 0.2s ease;
         border: none;
 
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 6px 20px rgba(46, 196, 182, 0.4);
-        }
+        @include glow-interactive($strength: 0.9);
 
         .stat-number {
           display: block;
@@ -256,10 +248,7 @@
         background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
         color: var(--theme-white);
 
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(46, 196, 182, 0.4);
-        }
+        @include glow-interactive();
       }
 
       &.secondary {
@@ -267,10 +256,11 @@
         color: var(--theme-primary-1);
         border: 2px solid var(--theme-primary-1);
 
+        @include glow-interactive();
+
         &:hover {
           background: var(--theme-primary-1);
           color: var(--theme-white);
-          transform: translateY(-2px);
         }
       }
 
@@ -278,10 +268,7 @@
         background: linear-gradient(135deg, var(--theme-primary-3), var(--theme-primary-2));
         color: var(--theme-white);
 
-        &:hover {
-          transform: translateY(-2px);
-          box-shadow: 0 8px 20px rgba(127, 83, 172, 0.4);
-        }
+        @include glow-interactive($color: $glow-accent-default, $accent: $glow-color-default);
       }
     }
   }
@@ -321,9 +308,7 @@
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 
   // Konsistenter 2px Gradient-Rand
   border: 2px solid transparent;
@@ -336,13 +321,7 @@
     0 4px 12px rgba(0, 0, 0, 0.08),
     0 0 24px rgba(46, 196, 182, 0.16);
 
-  &:hover {
-    transform: translateY(-6px);
-    box-shadow:
-      0 8px 25px rgba(46, 196, 182, 0.15),
-      0 0 30px rgba(46, 196, 182, 0.2),
-      0 0 50px rgba(127, 83, 172, 0.1);
-  }
+  @include glow-interactive($strength: 1.6);
 
   .post-header {
     margin-bottom: 1rem;
@@ -411,9 +390,9 @@
       font-size: 0.9rem;
       transition: all 0.3s ease;
 
+      @include glow-interactive();
+
       &:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 4px 15px rgba(46, 196, 182, 0.4);
         color: var(--theme-white);
         text-decoration: none;
       }

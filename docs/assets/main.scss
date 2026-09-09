@@ -2,6 +2,7 @@
 ---
 
 @import "./variables";
+@import "./interactions"; // Zentraler Hover/Klick-Glow-Effekt (kein Springen)
 @import "minima"; // Minima zuerst laden
 @import "./theme";
 @import "./typography";
@@ -107,22 +108,12 @@ body {
   border-radius: 16px;
   padding: 1.5rem 1.1rem 1.2rem 1.1rem;
   margin-bottom: 0;
-  transition:
-    transform 0.2s ease,
-    box-shadow 0.2s ease;
-  transform: translateZ(0);
-  will-change: transform;
   border: none;
   box-shadow:
     0 4px 18px rgba(0, 0, 0, 0.13),
     0 0 20px rgba(46, 196, 182, 0.1);
-}
-.fish-card:hover,
-.breeding-card:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow:
-    0 8px 32px rgba(46, 196, 182, 0.18),
-    0 0 40px rgba(127, 83, 172, 0.13);
+
+  @include glow-interactive($strength: 1.3);
 }
 .fish-card-title,
 .breeding-card-title {
