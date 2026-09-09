@@ -1,66 +1,22 @@
 #!/bin/bash
-# Setup-Skript für Development Environment
 
-set -e
+set -euo pipefail
 
-echo "🚀 Setting up mybettaworld development environment..."
-echo ""
+echo "Setting up development environment..."
 
-# Check Ruby
-if ! command -v ruby &> /dev/null; then
-    echo "❌ Ruby nicht gefunden. Bitte installiere Ruby 2.7 oder höher."
-    exit 1
-fi
-echo "✅ Ruby $(ruby --version) gefunden"
+command -v ruby >/dev/null || { echo "Ruby is required."; exit 1; }
+command -v node >/dev/null || { echo "Node.js is required."; exit 1; }
 
-# Check Node.js
-if ! command -v node &> /dev/null; then
-    echo "❌ Node.js nicht gefunden. Bitte installiere Node.js 16 oder höher."
-    exit 1
-fi
-echo "✅ Node.js $(node --version) gefunden"
+echo "Installing Ruby dependencies..."
+(cd docs && bundle install)
 
-# Check Python (für pre-commit)
-if ! command -v python3 &> /dev/null; then
-    echo "⚠️  Python3 nicht gefunden. Pre-commit Hooks werden nicht installiert."
-    SKIP_PRECOMMIT=true
-fi
-
-# Install Ruby dependencies
-echo ""
-echo "📦 Installiere Ruby Dependencies..."
-cd docs
-bundle install
-cd ..
-
-# Install Node.js dependencies
-echo ""
-echo "📦 Installiere Node.js Dependencies..."
+echo "Installing Node.js dependencies..."
 npm install
 
-# Install pre-commit (optional)
-if [ "$SKIP_PRECOMMIT" != "true" ]; then
-    echo ""
-    echo "🔧 Installiere Pre-commit Hooks..."
-    if ! command -v pre-commit &> /dev/null; then
-        pip3 install pre-commit
-    fi
-    pre-commit install
-    echo "✅ Pre-commit Hooks installiert"
+if command -v pre-commit >/dev/null; then
+  pre-commit install
 else
-    echo "⚠️  Pre-commit Hooks übersprungen (Python3 nicht vorhanden)"
+  echo "pre-commit not installed; skipping hook setup."
 fi
 
-echo ""
-echo "✅ Setup abgeschlossen!"
-echo ""
-echo "📝 Nächste Schritte:"
-echo "   1. Starte Jekyll Server: cd docs && bundle exec jekyll serve --livereload"
-echo "   2. Oder nutze IntelliJ Run Config: 'Jekyll Serve'"
-echo "   3. Öffne: http://localhost:4000"
-echo ""
-echo "🔍 Linting:"
-echo "   - npm run lint          # Alle Linter ausführen"
-echo "   - npm run format        # Auto-Format mit Prettier"
-echo "   - npm test              # HTML Tests"
-echo ""
+echo "Done."

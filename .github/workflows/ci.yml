@@ -1,4 +1,4 @@
-# CI/CD – Build → Test → Deploy (nur auf master)
+# CI/CD – Build → Test → Deploy
 name: CI/CD
 
 on:
@@ -6,19 +6,16 @@ on:
     branches: ["master", "main"]
   workflow_dispatch:
 
-# GitHub Pages Berechtigungen
 permissions:
   contents: read
   pages: write
   id-token: write
 
-# Kein paralleles Deployment
 concurrency:
   group: "pages"
   cancel-in-progress: false
 
 jobs:
-  # ── 1. Build ───────────────────────────────────────────────────────────────
   build:
     name: Build Jekyll
     runs-on: ubuntu-latest
@@ -37,7 +34,8 @@ jobs:
         uses: actions/configure-pages@v5
 
       - name: Build Jekyll site
-        run: cd docs && bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
+        working-directory: docs
         env:
           JEKYLL_ENV: production
 
@@ -46,7 +44,6 @@ jobs:
         with:
           path: docs/_site/
 
-  # ── 3. Test ────────────────────────────────────────────────────────────────
   test:
     name: Test HTML
     runs-on: ubuntu-latest
@@ -68,10 +65,9 @@ jobs:
           path: docs/_site/
 
       - name: Run HTML Proofer
-        run: bundle exec ruby scripts/test_html.rb
-        continue-on-error: true
+        run: bundle exec ruby ../scripts/test_html.rb
+        working-directory: docs
 
-  # ── 4. Deploy ──────────────────────────────────────────────────────────────
   deploy:
     name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
