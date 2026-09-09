@@ -29,6 +29,7 @@ bundle _2.7.2_ exec jekyll build                 # Produktions-Build nach docs/_
 ```
 
 Erstinstallation (aus Repo-Root):
+
 ```bash
 npm install
 (cd docs && bundle install)
@@ -36,6 +37,7 @@ npm install
 ```
 
 Node-Skripte (`package.json`):
+
 - `npm run lint` — Markdown/YAML/Prettier-Checks
 - `npm run format` — Prettier Auto-Format
 - `npm test` — Front-Matter-Validierung + HTML-Test (`scripts/test_html.rb`)
@@ -87,6 +89,7 @@ Nach **jeder** inhaltlichen oder CSS/HTML-Änderung dieses Ablaufs folgen:
 ## Front-Matter-Konventionen (wichtig für Konsistenz!)
 
 Fisch-Posts (`categories: [fish]`):
+
 - Pflichtfelder: `title`, `fish_arrival`.
 - `fish_status`: einer von `active`, `deceased`, `sold` (leer = wird nicht
   geprüft, aber Konvention ist immer einen Wert zu setzen).
@@ -100,6 +103,7 @@ Fisch-Posts (`categories: [fish]`):
   `fish_iridescence`, `timeline_image`, `gallery_dir`.
 
 Aquarium/Tank-Posts (`categories: [tank]`):
+
 - Pflichtfelder: `title`, `aktiv` (Boolean).
 - Ist `aktiv: false`, muss `inaktiv_seit` gesetzt sein.
 - **Wichtig:** Der "Wasserparameter"/Steckbrief-Zusatzblock (pH-Kästchen etc.)
@@ -130,7 +134,7 @@ Pflichtfeldern oder Statuswerten dieses Skript mit anpassen.
 ## Design-/CSS-Konventionen
 
 - **Farbschema ist gesetzt und soll erhalten bleiben** — dunkler Hintergrund
-  (App-Header/Top-Navigation *nie* verändern, das Farbschema dort ist explizit
+  (App-Header/Top-Navigation _nie_ verändern, das Farbschema dort ist explizit
   gewünscht). Bei "Modernisierungs"-Wünschen geht es um Layout/Konsistenz,
   nicht um Farben.
 - **Zentrale Hover/Klick-Interaktion:** `docs/assets/_interactions.scss`
