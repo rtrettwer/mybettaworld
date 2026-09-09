@@ -64,6 +64,9 @@ jobs:
           name: github-pages
           path: docs/_site/
 
+      - name: Validate front matter
+        run: ruby scripts/validate_front_matter.rb
+
       - name: Run HTML Proofer
         run: bundle exec ruby ../scripts/test_html.rb
         working-directory: docs
