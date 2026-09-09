@@ -1,19 +1,31 @@
 
 {% assign fish_posts = site.posts | where_exp: "post", "post.categories contains 'fish'" | sort: 'fish_arrival' %}
 
+<div class="ftm-switch">
+  <span class="ftm-switch-label ftm-switch-label-active">Nur aktive Fische</span>
+  <label class="ftm-switch-toggle">
+    <input type="checkbox" id="fish-toggle" />
+    <span class="ftm-switch-slider" aria-hidden="true"></span>
+  </label>
+  <span class="ftm-switch-label ftm-switch-label-all">Alle Fische</span>
+</div>
+
 <section class="ftm-wrap" aria-label="Fisch Timeline">
   <div class="ftm-line" aria-hidden="true"></div>
 
   {% for post in fish_posts %}
   {% assign side = forloop.index0 | modulo: 2 %}
   {% assign fish_status = post.fish_status | default: '' %}
+  {% if fish_status == '' and post.fish_death_date %}
+    {% assign fish_status = 'deceased' %}
+  {% endif %}
   {% assign is_gone = false %}
   {% if fish_status == 'sold' or fish_status == 'deceased' %}{% assign is_gone = true %}{% endif %}
 
   {% assign arrival_date = post.fish_arrival | default: post.date %}
   {% assign arrival_label = arrival_date | date: "%B %Y" | replace: "January", "Januar" | replace: "February", "Februar" | replace: "March", "März" | replace: "May", "Mai" | replace: "June", "Juni" | replace: "July", "Juli" | replace: "October", "Oktober" | replace: "December", "Dezember" %}
 
-  <div class="ftm-row {% if side == 0 %}ftm-right{% else %}ftm-left{% endif %} {% if is_gone %}ftm-gone{% endif %}">
+  <div class="ftm-row {% if side == 0 %}ftm-right{% else %}ftm-left{% endif %}{% if is_gone %} ftm-gone{% endif %}" data-fish-status="{% if is_gone %}gone{% else %}active{% endif %}">
 
     <div class="ftm-date-col">
       <span class="ftm-date">{{ arrival_label }}</span>
@@ -60,6 +72,49 @@
   {% endfor %}
 </section>
 
+<script>
+  (function () {
+    const toggle = document.getElementById("fish-toggle");
+    const wrap = document.querySelector(".ftm-wrap");
+    const rows = Array.prototype.slice.call(document.querySelectorAll(".ftm-row"));
+    if (!toggle || !wrap || !rows.length) return;
+
+    const STORAGE_KEY = "fishTimelineShowAll";
+
+    function applyFilter(showAll) {
+      wrap.classList.toggle("ftm-mode-all", showAll);
+      let visibleIndex = 0;
+      rows.forEach(function (row) {
+        const isGone = row.getAttribute("data-fish-status") === "gone";
+        const visible = showAll || !isGone;
+        if (visible) {
+          row.classList.remove("ftm-left", "ftm-right");
+          row.classList.add(visibleIndex % 2 === 0 ? "ftm-right" : "ftm-left");
+          visibleIndex += 1;
+        }
+      });
+    }
+
+    let showAll = false;
+    try {
+      showAll = window.localStorage.getItem(STORAGE_KEY) === "1";
+    } catch (e) {
+      showAll = false;
+    }
+    toggle.checked = showAll;
+    applyFilter(showAll);
+
+    toggle.addEventListener("change", function () {
+      applyFilter(this.checked);
+      try {
+        window.localStorage.setItem(STORAGE_KEY, this.checked ? "1" : "0");
+      } catch (e) {
+        /* ignore storage errors (e.g. private mode) */
+      }
+    });
+  })();
+</script>
+
 <style>
   @keyframes ftm-in {
     from { opacity: 0; transform: translateY(22px); }
@@ -78,6 +133,80 @@
     margin: 1.5rem auto 0;
     padding: 1rem 0 3rem;
   }
+
+  /* Default: nur aktive Fische anzeigen (funktioniert auch ohne JavaScript) */
+  .ftm-wrap:not(.ftm-mode-all) .ftm-row[data-fish-status="gone"] {
+    display: none;
+  }
+
+  /* ── Switch-Komponente ── */
+  .ftm-switch {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.7rem;
+    margin: 0 auto 1.5rem;
+    max-width: 1000px;
+  }
+  .ftm-switch-label {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #fff;
+    opacity: 0.7;
+    transition: opacity 0.2s ease;
+  }
+  .ftm-switch-label-active {
+    opacity: 1;
+  }
+  .ftm-switch:has(#fish-toggle:checked) .ftm-switch-label-active {
+    opacity: 0.55;
+  }
+  .ftm-switch:has(#fish-toggle:checked) .ftm-switch-label-all {
+    opacity: 1;
+  }
+  .ftm-switch-toggle {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+  .ftm-switch-toggle input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .ftm-switch-slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: rgba(127, 83, 172, 0.25);
+    border-radius: 999px;
+    transition: background 0.25s ease;
+  }
+  .ftm-switch-slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 3px;
+    top: 3px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    transition: transform 0.25s ease;
+  }
+  .ftm-switch-toggle input:checked + .ftm-switch-slider {
+    background: linear-gradient(135deg, var(--theme-primary-1,#2ec4b6), var(--theme-primary-3,#7f53ac));
+  }
+  .ftm-switch-toggle input:checked + .ftm-switch-slider::before {
+    transform: translateX(20px);
+  }
+  .ftm-switch-toggle input:focus-visible + .ftm-switch-slider {
+    outline: 2px solid var(--theme-primary-1, #2ec4b6);
+    outline-offset: 2px;
+  }
+
   .ftm-line {
     position: absolute;
     top: 0; bottom: 0;
