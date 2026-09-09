@@ -11,6 +11,8 @@ timeline_image: /assets/images/fish/ocean/XX.webp
 fish_name: "Ocean"
 fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"
+fish_death_date: "2026-07-24"
+fish_status: "deceased"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Weiblich"
 fish_lineage: "Bandit x Lila"
@@ -29,3 +31,6 @@ Versteht sich normalerweise super mit den anderen Fischen - aber seit [Krieger](
 ## 28.06.2026- Erziehungsmaßnahme bei den Jungs
 Da sie ja so gerne bossy ist, habe ich sie aus dem PAradies-Becken vorübergehend rausgenommen, damit die anderen Weibchen sich etwas erholen können bzw. sich nur vor [Krieger](/fish/2025/09/04/fish_krieger) in Acht nehmen müssen.
 In der Zwischenzeit darf sie bei den Jungfischen Gouvernante sein :D
+
+## 2026-07-24 - Tod
+Ocean ist auch tot. Ich habe sie erfolgreich gegen Flossenfäule behandelt - aber sie ist dann in einer Garnelenhöhle stecken geblieben und so gestorben :(

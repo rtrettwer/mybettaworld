@@ -52,4 +52,3 @@ Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich verm
 
 ## 24.07.2026 - Tod
 Leider ist Shadow heute Nacht verstorben. Ich vermute, dass es eine Laichverhärtung war - trotz Daphnien Lebendfutter und Ruhe hat sie sich davon nicht erholt. Ich bin ziemlich traurig, muss ich sagen. Es ist ein Trost, dass ich einige ihrer Töchter behalten habe.
-

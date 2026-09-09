@@ -11,6 +11,8 @@ timeline_image: /assets/images/fish/krieger/timeline.webp
 fish_name: "Krieger"
 fish_birth: "2025-09-04"
 fish_arrival: "2025-09-04"
+fish_death_date: "2026-07-24"
+fish_status: "deceased"
 fish_type: "Betta splendens (Domestic)"
 fish_gender: "Männlich"
 fish_lineage: "Bandit x Lila"
@@ -36,3 +38,6 @@ Aber er scheucht die Weibchen und hält sie auf Trab - ich bin nicht sicher, ob 
 
 ## Juli 2026 - Krankheit
 Leider scheint sich Krieger im Paradies-Becken verletzt zu haben. Ich habe ihn isoliert, aber die Wunde heilt nicht gut bzw. ein weißlicher Belag breitet sich auf seinem Körper aus. Baktopur und esha2000 haben nicht geholfen. Ich habe in der Nähe keinen Tierarzt gefunden, der Zierfische behandelt. Was nun? Ich habe gelesen, dass Salzbäder gut tun können. Ich habe geeignetes Salz bestellt und werde das noch probieren. Er frisst noch, also gebe ich die Hoffnung nicht auf.
+
+## 2026-07-24 - Tod
+Krieger ist leider an seiner Wunde gestorben. Ich habe ihn mit verschiedenen Mitteln, Antibiotika und gegen den möglichen Pilz behandelt, aber es war einfach zu viel :-(
