@@ -28,8 +28,14 @@ options = {
 }
 
 # Build Jekyll site first
-puts "Building Jekyll site..."
-system('cd docs && bundle exec jekyll build') || exit(1)
+script_dir = File.dirname(File.expand_path(__FILE__))
+repo_root = File.dirname(script_dir) # scripts/ -> repo root
+docs_dir = File.join(repo_root, 'docs')
+
+puts "Building Jekyll site from: #{docs_dir}"
+Dir.chdir(docs_dir) do
+  system('bundle exec jekyll build') || exit(1)
+end
 
 puts "\nRunning HTML Proofer..."
-HTMLProofer.check_directory('./docs/_site', options).run
+HTMLProofer.check_directory(File.join(docs_dir, '_site'), options).run
