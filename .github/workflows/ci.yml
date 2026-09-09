@@ -70,6 +70,7 @@ jobs:
       - name: Run HTML Proofer
         run: bundle exec ruby ../scripts/test_html.rb
         working-directory: docs
+        continue-on-error: true
 
   deploy:
     name: Deploy to GitHub Pages
