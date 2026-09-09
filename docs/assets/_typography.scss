@@ -6,7 +6,13 @@
   --line-height-base: 1.7;
   --text-color: #e8e8e8;
   --bg-color: #1a1a1a;
-  --bg-gradient: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  // Dunkler Hintergrund bleibt erhalten, ergänzt um dezente Farbtupfer im
+  // Theme-Look (Türkis/Blau/Lila), damit die Fläche etwas mehr Tiefe bekommt.
+  --bg-gradient:
+    radial-gradient(circle at 12% -5%, rgba(46, 196, 182, 0.12), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(127, 83, 172, 0.1), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(32, 99, 155, 0.1), transparent 55%),
+    linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
 }
 
 // Moderne Typografie für bessere Lesbarkeit
@@ -17,6 +23,7 @@ body {
   color: var(--text-color);
   background-color: var(--bg-color);
   background: var(--bg-gradient); // Subtiler Gradient
+  background-attachment: fixed;
   // Optimierung für bessere Schrift-Darstellung
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

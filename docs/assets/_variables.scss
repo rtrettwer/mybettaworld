@@ -6,6 +6,11 @@
   --theme-white: #fff;
   --link-color: var(--theme-primary-1);
   --link-hover-color: #26a69a; // Statischer Wert statt darken() für bessere Performance
+
+  // Sanfte Oberflächen-Töne für Cards & Boxen (statt reinem Weiß)
+  --surface-start: #ffffff;
+  --surface-end: #f6fafb;
+  --surface: linear-gradient(180deg, var(--surface-start), var(--surface-end));
 }
 
 // SCSS-Variablen für Rückwärtskompatibilität

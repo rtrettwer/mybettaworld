@@ -1,6 +1,6 @@
 // Card-Design für Blog-Übersicht und andere Bereiche
 .card {
-  background: var(--theme-white);
+  background: var(--surface);
   border-radius: 16px;
   padding: 1.5rem;
   margin-bottom: 1.5rem;
@@ -14,13 +14,13 @@
   // Gradient-Rand für alle Cards
   border: 2px solid transparent;
   background:
-    linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+    var(--surface) padding-box,
     linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
   // Leuchtender Schatten-Effekt
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08),
-    0 0 20px rgba(46, 196, 182, 0.1);
+    0 0 24px rgba(46, 196, 182, 0.16);
 
   &:hover {
     transform: translateY(-2px);
@@ -71,7 +71,7 @@
 
 // Globale Content-Card mit Gradient-Rand
 .content-card {
-  background: var(--theme-white);
+  background: var(--surface);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -81,13 +81,13 @@
   // Gradient-Rand - sichtbar aber nicht zu dick
   border: 2px solid transparent;
   background:
-    linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+    var(--surface) padding-box,
     linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
   // Leuchtender Schatten-Effekt
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08),
-    0 0 20px rgba(46, 196, 182, 0.1);
+    0 0 24px rgba(46, 196, 182, 0.16);
 
   &:hover {
     transform: translateY(-2px);
@@ -125,6 +125,103 @@
 
     &.blog-header-card h1 {
       font-size: 2rem;
+    }
+  }
+}
+
+// Steckbrief-Karte (Fisch- & Aquarium-Profile) - gemeinsame Basis,
+// ersetzt die früher pro Layout duplizierten Inline-<style>-Blöcke.
+// Nutzt .content-card für Hintergrund/Rand/Schatten, hier nur noch die
+// gemeinsamen Layout-Regeln (Bild + Definitionsliste).
+.profile-card {
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2 {
+    margin-top: 0;
+    color: var(--theme-primary-2);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .profile-flex {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+  }
+
+  .profile-image {
+    flex: 0 0 170px;
+    max-width: 170px;
+
+    img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  .profile-details {
+    flex: 1 1 0%;
+    min-width: 0;
+
+    dl {
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 0.5rem 1.5rem;
+      margin: 0;
+    }
+
+    dt {
+      font-weight: 600;
+      color: var(--theme-primary-1);
+    }
+
+    dd {
+      margin: 0;
+      color: #333;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
+      hyphens: auto;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .profile-flex {
+      flex-direction: column !important;
+      gap: 1rem !important;
+    }
+
+    .profile-image {
+      margin-bottom: 0.5rem;
+      max-width: 100% !important;
+      width: 100% !important;
+    }
+
+    .profile-details dl {
+      grid-template-columns: 1fr !important;
+      gap: 0.3rem !important;
+    }
+
+    .profile-details dt {
+      margin-top: 0.8rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+
+    .profile-details dd {
+      margin-bottom: 0;
+      padding-left: 0.5rem;
+      border-left: 3px solid var(--theme-primary-1);
     }
   }
 }

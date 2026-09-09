@@ -57,7 +57,7 @@
 
 // Statistiken-Karte - besondere Hervorhebung
 .stats-card {
-  background: var(--theme-white);
+  background: var(--surface);
   border: 1px solid rgba(46, 196, 182, 0.15);
 
   h2 {
@@ -118,7 +118,7 @@
 
 // Zucht-Karte - Breeding Tracker Integration
 .breeding-card {
-  background: var(--theme-white);
+  background: var(--surface);
   border: 1px solid rgba(46, 196, 182, 0.15);
 
   h2 {
@@ -221,7 +221,7 @@
 
 // Call-to-Action-Karte
 .cta-card {
-  background: var(--theme-white);
+  background: var(--surface);
   border: 1px solid rgba(46, 196, 182, 0.15);
   text-align: center;
 
@@ -317,7 +317,7 @@
 
 .post-card {
   position: relative;
-  background: var(--theme-white);
+  background: var(--surface);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 2rem;
@@ -328,13 +328,13 @@
   // Konsistenter 2px Gradient-Rand
   border: 2px solid transparent;
   background:
-    linear-gradient(var(--theme-white), var(--theme-white)) padding-box,
+    var(--surface) padding-box,
     linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2), var(--theme-primary-3)) border-box;
 
   // Leuchtender Schatten-Effekt
   box-shadow:
     0 4px 12px rgba(0, 0, 0, 0.08),
-    0 0 20px rgba(46, 196, 182, 0.1);
+    0 0 24px rgba(46, 196, 182, 0.16);
 
   &:hover {
     transform: translateY(-6px);
