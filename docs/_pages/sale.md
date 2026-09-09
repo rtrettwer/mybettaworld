@@ -18,8 +18,8 @@ permalink: /sale/
         <li>Reservierung gegen Anzahlung von 50% möglich</li>
         <li>Terminvereinbarung für Abholung erforderlich</li>
       </ul>
-      <div class="button-wrapper">
-        <button class="interest-btn" onclick="openContactForm()">Kontakt aufnehmen</button>
+      <div class="cta-buttons">
+        <button class="cta-btn primary" onclick="openContactForm()">Kontakt aufnehmen</button>
       </div>
     </div>
   <div class="content-card">

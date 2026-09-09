@@ -226,50 +226,54 @@
     text-align: center;
     margin-bottom: 2rem;
   }
+}
 
-  .cta-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-top: 2rem;
+// Wiederverwendbare CTA-Buttons - unabhängig von .cta-card nutzbar,
+// damit "Kontakt aufnehmen" & Co. überall konsistent aussehen.
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 2rem;
 
-    .cta-btn {
-      display: inline-block;
-      padding: 0.75rem 1.5rem;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      border: none;
-      font-size: 0.9rem;
+  .cta-btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: inherit;
 
-      &.primary {
-        background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+    &.primary {
+      background: linear-gradient(135deg, var(--theme-primary-1), var(--theme-primary-2));
+      color: var(--theme-white);
+
+      @include glow-interactive();
+    }
+
+    &.secondary {
+      background: var(--theme-white);
+      color: var(--theme-primary-1);
+      border: 2px solid var(--theme-primary-1);
+
+      @include glow-interactive();
+
+      &:hover {
+        background: var(--theme-primary-1);
         color: var(--theme-white);
-
-        @include glow-interactive();
       }
+    }
 
-      &.secondary {
-        background: var(--theme-white);
-        color: var(--theme-primary-1);
-        border: 2px solid var(--theme-primary-1);
+    &.accent {
+      background: linear-gradient(135deg, var(--theme-primary-3), var(--theme-primary-2));
+      color: var(--theme-white);
 
-        @include glow-interactive();
-
-        &:hover {
-          background: var(--theme-primary-1);
-          color: var(--theme-white);
-        }
-      }
-
-      &.accent {
-        background: linear-gradient(135deg, var(--theme-primary-3), var(--theme-primary-2));
-        color: var(--theme-white);
-
-        @include glow-interactive($color: $glow-accent-default, $accent: $glow-color-default);
-      }
+      @include glow-interactive($color: $glow-accent-default, $accent: $glow-color-default);
     }
   }
 }
