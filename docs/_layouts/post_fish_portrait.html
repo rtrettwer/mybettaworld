@@ -155,17 +155,7 @@ layout: default
         <img
           src="{{ page.image }}"
           alt="Bild von {{ page.title }}"
-          {%
-          if
-          fish_status=""
-          ="sold"
-          or
-          fish_status=""
-          ="deceased"
-          %}style="filter: grayscale(100%); opacity: 0.75"
-          {%
-          endif
-          %}
+          {% if fish_status == 'sold' or fish_status == 'deceased' %}style="filter: grayscale(100%); opacity: 0.75"{% endif %}
         />
       </div>
       <div class="fish-details">
