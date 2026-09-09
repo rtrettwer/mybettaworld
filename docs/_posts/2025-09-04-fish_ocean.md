@@ -22,15 +22,19 @@ fish_iridescence: "Türkis"
 gallery_dir: /assets/images/fish/ocean
 ---
 
-
-
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
+
 Sie heißt Ocean, weil sie wunderschön kräftige türkisfarbene Schuppen hat - wie am Meer :)
+
 ## Leben im Paradies-Becken
+
 Versteht sich normalerweise super mit den anderen Fischen - aber seit [Krieger](/fish/2025/09/04/fish_krieger) wieder da ist und sie sich gepaart haben, war sie ganz schön bossy und sucht und jagt die anderen Weibchen. Nicht cool!
+
 ## 28.06.2026- Erziehungsmaßnahme bei den Jungs
+
 Da sie ja so gerne bossy ist, habe ich sie aus dem PAradies-Becken vorübergehend rausgenommen, damit die anderen Weibchen sich etwas erholen können bzw. sich nur vor [Krieger](/fish/2025/09/04/fish_krieger) in Acht nehmen müssen.
 In der Zwischenzeit darf sie bei den Jungfischen Gouvernante sein :D
 
 ## 2026-07-24 - Tod
+
 Ocean ist auch tot. Ich habe sie erfolgreich gegen Flossenfäule behandelt - aber sie ist dann in einer Garnelenhöhle stecken geblieben und so gestorben :(

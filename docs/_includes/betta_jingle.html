@@ -3,8 +3,7 @@
     let ctx;
 
     function createCtx() {
-      if (!ctx || ctx.state === "closed")
-        ctx = new (window.AudioContext || window.webkitAudioContext)();
+      if (!ctx || ctx.state === "closed") ctx = new (window.AudioContext || window.webkitAudioContext)();
       return ctx;
     }
 
@@ -17,9 +16,13 @@
       const master = audio.createGain();
       master.gain.value = 0.75;
       const comp = audio.createDynamicsCompressor();
-      comp.threshold.value = -16; comp.knee.value = 10;
-      comp.ratio.value = 3; comp.attack.value = 0.004; comp.release.value = 0.12;
-      master.connect(comp); comp.connect(audio.destination);
+      comp.threshold.value = -16;
+      comp.knee.value = 10;
+      comp.ratio.value = 3;
+      comp.attack.value = 0.004;
+      comp.release.value = 0.12;
+      master.connect(comp);
+      comp.connect(audio.destination);
 
       /* ── Kurzer feuchter Hall ── */
       const rev = audio.createConvolver();
@@ -27,22 +30,25 @@
       const rBuf = audio.createBuffer(2, rLen, sr);
       for (let ch = 0; ch < 2; ch++) {
         const d = rBuf.getChannelData(ch);
-        for (let i = 0; i < rLen; i++)
-          d[i] = (Math.random()*2-1) * Math.pow(1 - i/rLen, 2.8) * 0.45;
+        for (let i = 0; i < rLen; i++) d[i] = (Math.random() * 2 - 1) * Math.pow(1 - i / rLen, 2.8) * 0.45;
       }
       rev.buffer = rBuf;
-      const revG = audio.createGain(); revG.gain.value = 0.28;
-      rev.connect(revG); revG.connect(master);
+      const revG = audio.createGain();
+      revG.gain.value = 0.28;
+      rev.connect(revG);
+      revG.connect(master);
       function wet(node, amt) {
-        const g = audio.createGain(); g.gain.value = amt;
-        node.connect(g); g.connect(rev);
+        const g = audio.createGain();
+        g.gain.value = amt;
+        node.connect(g);
+        g.connect(rev);
       }
 
       /* ── GLOCKE: sinusbasiert, weich angeschlagen, klingt im Wasser ── */
-      function bell(f, when, { dur=0.9, gain=0.38, pan=0 } = {}) {
+      function bell(f, when, { dur = 0.9, gain = 0.38, pan = 0 } = {}) {
         // Glocke = Grundton + wenige harmonische Obertöne, alle Sinus
         const partials = [1, 2.756, 5.404]; // typische Glocken-Teiltonverhältnisse
-        const gains    = [1.0,  0.35,  0.12];
+        const gains = [1.0, 0.35, 0.12];
 
         partials.forEach((ratio, i) => {
           const osc = audio.createOscillator();
@@ -56,38 +62,53 @@
           g.gain.exponentialRampToValueAtTime(0.0001, when + dur * (1 - i * 0.18));
 
           const lp = audio.createBiquadFilter();
-          lp.type = "lowpass"; lp.frequency.value = 4000 - i * 800;
+          lp.type = "lowpass";
+          lp.frequency.value = 4000 - i * 800;
 
-          const p = audio.createStereoPanner(); p.pan.value = pan;
+          const p = audio.createStereoPanner();
+          p.pan.value = pan;
 
-          osc.connect(lp); lp.connect(g); g.connect(p); p.connect(master);
+          osc.connect(lp);
+          lp.connect(g);
+          g.connect(p);
+          p.connect(master);
           wet(g, 0.55);
-          osc.start(when); osc.stop(when + dur + 0.1);
+          osc.start(when);
+          osc.stop(when + dur + 0.1);
         });
       }
 
       /* ── GEIGE: weicher Streicher – mehr Sinus, weniger Sägezahn ── */
-      function violin(f, when, { dur=0.55, gain=0.22, pan=0 } = {}) {
+      function violin(f, when, { dur = 0.55, gain = 0.22, pan = 0 } = {}) {
         // Mischung: 70% Sinus (warm) + 30% leiser Sägezahn (Streicher-Charakter)
         const osc1 = audio.createOscillator();
-        osc1.type = "sine"; osc1.frequency.value = f;
+        osc1.type = "sine";
+        osc1.frequency.value = f;
         const osc2 = audio.createOscillator();
-        osc2.type = "sawtooth"; osc2.frequency.value = f;
+        osc2.type = "sawtooth";
+        osc2.frequency.value = f;
 
         // Vibrato: sehr sanft, setzt erst nach dem Attack ein
         const vib = audio.createOscillator();
-        vib.type = "sine"; vib.frequency.value = 5.5;
+        vib.type = "sine";
+        vib.frequency.value = 5.5;
         const vibG = audio.createGain();
         vibG.gain.setValueAtTime(0, when);
         vibG.gain.linearRampToValueAtTime(8, when + 0.12); // Vibrato schleicht sich ein
-        vib.connect(vibG); vibG.connect(osc1.detune); vibG.connect(osc2.detune);
+        vib.connect(vibG);
+        vibG.connect(osc1.detune);
+        vibG.connect(osc2.detune);
 
-        const g1 = audio.createGain(); g1.gain.value = 1.0;   // Sinus-Anteil
-        const g2 = audio.createGain(); g2.gain.value = 0.18;  // Sägezahn-Anteil (dezent)
+        const g1 = audio.createGain();
+        g1.gain.value = 1.0; // Sinus-Anteil
+        const g2 = audio.createGain();
+        g2.gain.value = 0.18; // Sägezahn-Anteil (dezent)
 
         // starkes Tiefpassfilter – nimmt die Schärfe raus
         const lp = audio.createBiquadFilter();
-        lp.type = "lowpass"; lp.frequency.value = 1100; lp.Q.value = 0.5;
+        lp.type = "lowpass";
+        lp.frequency.value = 1100;
+        lp.Q.value = 0.5;
 
         // Bogen-Hüllkurve
         const g = audio.createGain();
@@ -96,15 +117,24 @@
         g.gain.setValueAtTime(gain, when + dur - 0.09);
         g.gain.linearRampToValueAtTime(0, when + dur);
 
-        const p = audio.createStereoPanner(); p.pan.value = pan;
+        const p = audio.createStereoPanner();
+        p.pan.value = pan;
 
-        osc1.connect(g1); osc2.connect(g2);
-        g1.connect(lp); g2.connect(lp);
-        lp.connect(g); g.connect(p); p.connect(master);
+        osc1.connect(g1);
+        osc2.connect(g2);
+        g1.connect(lp);
+        g2.connect(lp);
+        lp.connect(g);
+        g.connect(p);
+        p.connect(master);
         wet(g, 0.52);
 
-        osc1.start(when); osc2.start(when); vib.start(when);
-        osc1.stop(when + dur + 0.05); osc2.stop(when + dur + 0.05); vib.stop(when + dur + 0.05);
+        osc1.start(when);
+        osc2.start(when);
+        vib.start(when);
+        osc1.stop(when + dur + 0.05);
+        osc2.stop(when + dur + 0.05);
+        vib.stop(when + dur + 0.05);
       }
 
       /* ══════════════════════════════════════
@@ -113,14 +143,14 @@
       ══════════════════════════════════════ */
 
       // Glocken: tief → mittel → hell (wie Unterwasser-Glockenspiel)
-      bell(220, t0 + 0.00, { dur: 1.0, gain: 0.40, pan: -0.3 }); // A3 – tief
-      bell(330, t0 + 0.28, { dur: 0.9, gain: 0.36, pan:  0.1 }); // E4 – mittel
-      bell(440, t0 + 0.54, { dur: 0.8, gain: 0.32, pan:  0.4 }); // A4 – hell
+      bell(220, t0 + 0.0, { dur: 1.0, gain: 0.4, pan: -0.3 }); // A3 – tief
+      bell(330, t0 + 0.28, { dur: 0.9, gain: 0.36, pan: 0.1 }); // E4 – mittel
+      bell(440, t0 + 0.54, { dur: 0.8, gain: 0.32, pan: 0.4 }); // A4 – hell
 
       // Geigen-Phrase: D4 → A4 → D5
-      violin(293.7, t0 + 0.90, { dur: 0.42, gain: 0.20, pan: -0.12 }); // D4
-      violin(440.0, t0 + 1.26, { dur: 0.38, gain: 0.18, pan:  0.0  }); // A4
-      violin(587.3, t0 + 1.58, { dur: 0.46, gain: 0.15, pan:  0.12 }); // D5
+      violin(293.7, t0 + 0.9, { dur: 0.42, gain: 0.2, pan: -0.12 }); // D4
+      violin(440.0, t0 + 1.26, { dur: 0.38, gain: 0.18, pan: 0.0 }); // A4
+      violin(587.3, t0 + 1.58, { dur: 0.46, gain: 0.15, pan: 0.12 }); // D5
     }
 
     /* ── API ── */

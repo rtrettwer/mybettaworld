@@ -10,10 +10,6 @@ image: /assets/images/blog/regal/IMG_20251203_135737.webp
 gallery_dir: /assets/images/blog/regal
 ---
 
-
-
-
-
 Das ultimative Aquarium-Rack-Projekt! Von der detaillierten Planung in Procreate über den Lackier-Marathon bis zur waghalsigen Wagenheber-Aktion - hier ist die ganze Geschichte, wie mein 2x2m Schwerlastregal für 7 Aquarien entstanden ist.
 
 ## Die Planung
@@ -131,7 +127,6 @@ Dann kam endlich die **Nachlieferung des Metallfußes** - aber wie sollte ich ih
 **Mein waghalsiger Plan:**
 
 1. **Vorbereitung:**
-
    - Metallfuß auf Eichen-Holzklotz schrauben
    - Mit Schrauben eine **Holzleiste** an die Querseite des Regals "fixieren"
    - **Wagenheber** an dieser Holzleiste anbringen

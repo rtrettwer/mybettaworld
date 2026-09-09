@@ -7,7 +7,6 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### Setup & Installation
 
 - **[SETUP_STATUS.md](SETUP_STATUS.md)** - Vollständige Setup-Zusammenfassung
-
   - Linting & Code Quality Tools
   - Pre-commit Hooks
   - Alle installierten Dependencies
@@ -20,7 +19,6 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### Git & Commits
 
 - **[COMMITLINT_STATUS.md](COMMITLINT_STATUS.md)** - Commitlint Setup
-
   - Conventional Commits vollständig konfiguriert
   - Types, Scopes, Beispiele
 
@@ -33,13 +31,11 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### Renovate Bot
 
 - **[RENOVATE_STATUS.md](RENOVATE_STATUS.md)** - Renovate Setup Status
-
   - Installation abgeschlossen
   - Nächste Schritte
   - Was passiert bei Updates
 
 - **[RENOVATE_SETUP.md](RENOVATE_SETUP.md)** - Detaillierte Einrichtungsanleitung
-
   - Branch Protection Rules
   - Email-Benachrichtigungen
   - Dependency Dashboard
@@ -52,7 +48,6 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### GitHub Actions & CI/CD
 
 - **[GITHUB_ACTIONS_TROUBLESHOOTING.md](GITHUB_ACTIONS_TROUBLESHOOTING.md)** - Troubleshooting
-
   - npm cache / package-lock.json Problem
   - pages-build-deployment Workflow deaktivieren
   - Weitere GitHub Actions Tipps
@@ -65,7 +60,6 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### IntelliJ IDEA
 
 - **[RUN_CONFIGS.md](RUN_CONFIGS.md)** - Run Configurations Übersicht
-
   - Alle 13+ Run Configs erklärt
   - Empfohlener Workflow
   - Tastenkombinationen
@@ -78,7 +72,6 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
 ### Design & Planung
 
 - **[DESIGN_IMPROVEMENTS.md](DESIGN_IMPROVEMENTS.md)** - Design-Ideen
-
   - Geplante Verbesserungen
   - UI/UX Optimierungen
   - Feature-Wünsche

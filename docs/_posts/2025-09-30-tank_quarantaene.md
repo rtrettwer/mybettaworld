@@ -53,13 +53,9 @@ entwicklung:
     ereignis: Kampfi ist trotz Umsetzen leider gestorben.
   - datum: März 2026
     ereignis: Heizung abgeschaltet; aktuell läuft nur Beleuchtung und Luftheber.
-  - datum:  25.06.2026
+  - datum: 25.06.2026
     ereignis: Leider waren nicht genug Pflanzen drin bzw. die, die drin waren, sind vergammelt und das Becken ist fast gekippt. Einige Garnelen sind gestorben. Ich hatte einen Stein eingesetzt, der wunderschön mit Pogostemon helferi bewachsen war, aber der ist leider auch vergammelt. Das Becken habe ich also praktisch resettet (nur etwas Substrat behalten) und es ist jetzt neu befüllt unter dem Namen "Felsen-Becken" zu finden.
 ---
-
-
-
-
 
 ## Quarantäne
 

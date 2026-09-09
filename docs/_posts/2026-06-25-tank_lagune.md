@@ -25,9 +25,7 @@ entwicklung:
   - datum: 20.05.2026
     ereignis: Steine, Wurzeln und Pflanzen eingesetzt. Leider ist der erste Versuch hier komplett vergammelt und gekippt.
   - datum: 13.06.2026
-    ereignis: Zweiter Versuch - sieht schon viel besser aus. Diesmal Pflanzen von Kölle Zoo. 
+    ereignis: Zweiter Versuch - sieht schon viel besser aus. Diesmal Pflanzen von Kölle Zoo.
   - datum: 28.06.2026
     ereignis: Den kleinen Bluey eingesetzt. Er war sehr aufgeregt. Aber hat dann in der ersten Nacht schon ein Schaumnest gebaut. Mal sehen, ob die Garnelen ihn überleben - er hat schon eine gejagt.
 ---
-
-

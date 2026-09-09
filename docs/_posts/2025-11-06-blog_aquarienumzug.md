@@ -9,10 +9,6 @@ tags: [umzug, transport, aquaristik, fische, praxis]
 image: /assets/images/fish/sonnenschein/IMG_20251016_203021.webp
 ---
 
-
-
-
-
 Mein nächster Umzug stand an - und diesmal mit mehreren Aquarien und Fischen!
 
 ## Vorbereitung

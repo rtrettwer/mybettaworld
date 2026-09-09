@@ -46,7 +46,6 @@ Link zur Troubleshooting-Dokumentation und Check-Skript hinzugefügt.
 1. Gehe zu: **https://github.com/riketrettwer/mybettaworld/settings/pages**
 
 2. Unter "Build and deployment":
-
    - **Source**: Wähle **"GitHub Actions"**
    - (statt "Deploy from a branch")
 

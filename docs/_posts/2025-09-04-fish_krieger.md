@@ -22,22 +22,25 @@ fish_iridescence: "Violett"
 gallery_dir: /assets/images/fish/krieger
 ---
 
-
-
 ## 04.09.2025 - Geburt im Zuchtbecken als Nachwuchs von Bandit und Lila
+
 Vermeintlich hübsches Weibchen...
 
 ## 2026 - Umzug ins Quarantäne-Becken
+
 ... hat sich sehr spät doch als Männchen herausgestellt. Ich hatte einen kleinen Becher ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken gehängt, in dem ich vermeintliche Panzerwels-Eier abgelegt hatte.
 Und plötzlich war da der Fisch drin und hat ein Nest gebaut... . Also ab in ein eigenes Becken, weil er die Weibchen alle gescheucht hat.
 
 ## 18.06.2026 - Rückzug ins Paradies-Becken
+
 Die Mädels sind irgendwie sehr farblos und träge geworden. Ich habe Krieger zurückgesetzt und voila - wieder farbenprächtig. Er hat sich auch schon gepaart, aber ich denke nicht, dass das
 im Gesellschaftsbecken jemals erfolgreich ist - die Neons haben sich über leckere frische Fisch-Eier gefreut.
 Aber er scheucht die Weibchen und hält sie auf Trab - ich bin nicht sicher, ob farblos oder müde bei den Mödels schlimmer ist. Mal abwarten.
 
 ## Juli 2026 - Krankheit
+
 Leider scheint sich Krieger im Paradies-Becken verletzt zu haben. Ich habe ihn isoliert, aber die Wunde heilt nicht gut bzw. ein weißlicher Belag breitet sich auf seinem Körper aus. Baktopur und esha2000 haben nicht geholfen. Ich habe in der Nähe keinen Tierarzt gefunden, der Zierfische behandelt. Was nun? Ich habe gelesen, dass Salzbäder gut tun können. Ich habe geeignetes Salz bestellt und werde das noch probieren. Er frisst noch, also gebe ich die Hoffnung nicht auf.
 
 ## 2026-07-24 - Tod
+
 Krieger ist leider an seiner Wunde gestorben. Ich habe ihn mit verschiedenen Mitteln, Antibiotika und gegen den möglichen Pilz behandelt, aber es war einfach zu viel :-(

@@ -55,11 +55,6 @@ entwicklung_text: |
   Shadow durfte nur kurz zur Erholung ins Gras-Becken und ist dann wieder ins Paradies-Becken zurueck.
   Das Timing war super - innerhalb weniger Tage waren Larven sichtbar und kurz darauf frei schwimmend.
 gallery_dir: /assets/images/fish/breedlings_2
-
 ---
-
-
-
-
 
 Dieses Becken ist mein neuer Zuchtplatz und loest den alten Zuchtkuebel ab. Ziel ist ein stabileres Setup mit mehr Struktur, besserem Zugriff und weniger Provisorium.

@@ -33,4 +33,3 @@ permalink: /sale/
   </div>
 
 </div>
-

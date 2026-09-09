@@ -1,6 +1,5 @@
 <!-- Verkaufs-Galerie -->
 <div class="sales-gallery">
-
   <div class="content-card">
     <h3>Verfügbare Fische und andere Artikel</h3>
 
@@ -28,92 +27,67 @@
   </div>
 
   <div class="fish-grid">
-    {% for product in site.data.sales %}
-    {% assign gallery_dir_images_count = 0 %}
-
-    {% if product.gallery_dir %}
-    {% assign normalized_gallery_dir = product.gallery_dir %}
-    {% unless normalized_gallery_dir contains '/' %}
-    {% assign normalized_gallery_dir = normalized_gallery_dir | prepend: '/' %}
-    {% endunless %}
-    {% assign gallery_dir_last_char = normalized_gallery_dir | slice: -1 %}
-    {% unless gallery_dir_last_char == '/' %}
-    {% assign normalized_gallery_dir = normalized_gallery_dir | append: '/' %}
-    {% endunless %}
-
-    {% for file in site.static_files %}
-    {% assign file_ext = file.extname | downcase %}
-    {% if file.path contains normalized_gallery_dir %}
-    {% if file_ext == '.jpg' or file_ext == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %}
-    {% assign gallery_dir_images_count = gallery_dir_images_count | plus: 1 %}
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-    {% endif %}
-
-    {% assign gallery_list_images_count = 0 %}
-    {% if product.gallery and product.gallery.size > 0 %}
-    {% assign gallery_list_images_count = product.gallery.size %}
-    {% endif %}
-
-    {% assign total_gallery_images_count = gallery_list_images_count | plus: gallery_dir_images_count %}
+    {% for product in site.data.sales %} {% assign gallery_dir_images_count = 0 %} {% if product.gallery_dir %} {%
+    assign normalized_gallery_dir = product.gallery_dir %} {% unless normalized_gallery_dir contains '/' %} {% assign
+    normalized_gallery_dir = normalized_gallery_dir | prepend: '/' %} {% endunless %} {% assign gallery_dir_last_char =
+    normalized_gallery_dir | slice: -1 %} {% unless gallery_dir_last_char == '/' %} {% assign normalized_gallery_dir =
+    normalized_gallery_dir | append: '/' %} {% endunless %} {% for file in site.static_files %} {% assign file_ext =
+    file.extname | downcase %} {% if file.path contains normalized_gallery_dir %} {% if file_ext == '.jpg' or file_ext
+    == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %} {% assign gallery_dir_images_count
+    = gallery_dir_images_count | plus: 1 %} {% endif %} {% endif %} {% endfor %} {% endif %} {% assign
+    gallery_list_images_count = 0 %} {% if product.gallery and product.gallery.size > 0 %} {% assign
+    gallery_list_images_count = product.gallery.size %} {% endif %} {% assign total_gallery_images_count =
+    gallery_list_images_count | plus: gallery_dir_images_count %}
 
     <div
-            class="fish-card {{ product.status }}"
-            data-category="{{ product.gender }}"
-            data-price="{{ product.price | default: 0 }}"
-            data-status="{{ product.status | default: 'sold' }}"
+      class="fish-card {{ product.status }}"
+      data-category="{{ product.gender }}"
+      data-price="{{ product.price | default: 0 }}"
+      data-status="{{ product.status | default: 'sold' }}"
     >
       <div class="fish-image-carousel">
         {% if total_gallery_images_count > 0 %}
         <!-- Carousel aus gallery-Liste und/oder gallery_dir -->
         <div class="carousel-container">
           <div class="carousel-slides">
-            {% assign slide_index = 0 %}
-
-            {% if product.gallery and product.gallery.size > 0 %}
-            {% for img in product.gallery %}
-            {% assign slide_index = slide_index | plus: 1 %}
+            {% assign slide_index = 0 %} {% if product.gallery and product.gallery.size > 0 %} {% for img in
+            product.gallery %} {% assign slide_index = slide_index | plus: 1 %}
             <div class="carousel-slide {% if slide_index == 1 %}active{% endif %}">
               <img
-                      src="{{ img | relative_url }}"
-                      alt="{{ product.name }} - Bild {{ slide_index }}"
-                      loading="lazy"
-                      onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
+                src="{{ img | relative_url }}"
+                alt="{{ product.name }} - Bild {{ slide_index }}"
+                loading="lazy"
+                onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
               />
             </div>
-            {% endfor %}
-            {% endif %}
-
-            {% if product.gallery_dir %}
-            {% for file in site.static_files %}
-            {% assign file_ext = file.extname | downcase %}
-            {% if file.path contains normalized_gallery_dir %}
-            {% if file_ext == '.jpg' or file_ext == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %}
-            {% assign slide_index = slide_index | plus: 1 %}
+            {% endfor %} {% endif %} {% if product.gallery_dir %} {% for file in site.static_files %} {% assign file_ext
+            = file.extname | downcase %} {% if file.path contains normalized_gallery_dir %} {% if file_ext == '.jpg' or
+            file_ext == '.jpeg' or file_ext == '.png' or file_ext == '.webp' or file_ext == '.avif' %} {% assign
+            slide_index = slide_index | plus: 1 %}
             <div class="carousel-slide {% if slide_index == 1 %}active{% endif %}">
               <img
-                      src="{{ file.path | relative_url }}"
-                      alt="{{ product.name }} - Bild {{ slide_index }}"
-                      loading="lazy"
-                      onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
+                src="{{ file.path | relative_url }}"
+                alt="{{ product.name }} - Bild {{ slide_index }}"
+                loading="lazy"
+                onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
               />
             </div>
-            {% endif %}
-            {% endif %}
-            {% endfor %}
-            {% endif %}
+            {% endif %} {% endif %} {% endfor %} {% endif %}
           </div>
 
           {% if total_gallery_images_count > 1 %}
-          <button type="button" class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">‹</button>
-          <button type="button" class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">›</button>
+          <button type="button" class="carousel-btn prev" onclick="moveCarousel(this, -1)" aria-label="Vorheriges Bild">
+            ‹
+          </button>
+          <button type="button" class="carousel-btn next" onclick="moveCarousel(this, 1)" aria-label="Nächstes Bild">
+            ›
+          </button>
 
           <div class="carousel-indicators">
             {% for i in (1..total_gallery_images_count) %}
             <span
-                    class="indicator {% if forloop.first %}active{% endif %}"
-                    onclick="goToSlide(this, {{ forloop.index0 }})"
+              class="indicator {% if forloop.first %}active{% endif %}"
+              onclick="goToSlide(this, {{ forloop.index0 }})"
             ></span>
             {% endfor %}
           </div>
@@ -122,24 +96,18 @@
         {% else %}
         <!-- Einzelbild (Fallback) -->
         <img
-                src="{{ product.image | relative_url }}"
-                alt="{{ product.name }}"
-                loading="lazy"
-                onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
+          src="{{ product.image | relative_url }}"
+          alt="{{ product.name }}"
+          loading="lazy"
+          onerror="this.src = '{{ '/assets/images/misc/icon.webp' | relative_url }}'"
         />
         {% endif %}
 
         <div class="price-tag">{{ product.price }}€</div>
 
         <div class="status-badge {{ product.status }}">
-          {% if product.status == 'available' %}
-          Verfügbar
-          {% elsif product.status == 'reserved' %}
-          Reserviert
-          {% elsif product.status == 'sold' %}
-          Verkauft
-          {% elsif product.status == 'temporarily_unavailable' %}
-          Nicht verfügbar
+          {% if product.status == 'available' %} Verfügbar {% elsif product.status == 'reserved' %} Reserviert {% elsif
+          product.status == 'sold' %} Verkauft {% elsif product.status == 'temporarily_unavailable' %} Nicht verfügbar
           {% endif %}
         </div>
 
@@ -153,19 +121,9 @@
 
         <div class="fish-details">
           <span class="gender {{ product.gender }}">
-            {% if product.gender == 'male' %}
-            Männchen
-            {% elsif product.gender == 'female' %}
-            Weibchen
-            {% elsif product.gender == 'food' %}
-            Futter
-            {% elsif product.gender == 'plant' %}
-            Pflanze
-            {% elsif product.gender == 'misc' %}
-            Sonstiges
-            {% else %}
-            Artikeltyp unbekannt
-            {% endif %}
+            {% if product.gender == 'male' %} Männchen {% elsif product.gender == 'female' %} Weibchen {% elsif
+            product.gender == 'food' %} Futter {% elsif product.gender == 'plant' %} Pflanze {% elsif product.gender ==
+            'misc' %} Sonstiges {% else %} Artikeltyp unbekannt {% endif %}
           </span>
           <span class="age">{{ product.age }}</span>
           <span class="size">{{ product.size }}</span>
@@ -181,9 +139,9 @@
         <div class="contact-info">
           {% if product.status == 'available' %}
           <button
-                  type="button"
-                  class="interest-btn"
-                  onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+            type="button"
+            class="interest-btn"
+            onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
             Kontakt aufnehmen
           </button>
@@ -192,20 +150,17 @@
           <button type="button" class="interest-btn" disabled>Reserviert</button>
           {% if product.pickup_date %}
           <small>Abholung: {{ product.pickup_date | date: "%d.%m.%Y" }}</small>
-          {% endif %}
-          {% elsif product.status == 'sold' %}
+          {% endif %} {% elsif product.status == 'sold' %}
           <small><strong>Verkauft</strong></small>
           {% if product.gender == 'male' or product.gender == 'female' %}
           <small>Einzeltiere/Unikate - nicht wieder verfügbar</small>
-          {% endif %}
-          {% if product.sold_date %}
+          {% endif %} {% if product.sold_date %}
           <small>Verkauft am {{ product.sold_date | date: "%d.%m.%Y" }}</small>
-          {% endif %}
-          {% elsif product.status == 'temporarily_unavailable' %}
+          {% endif %} {% elsif product.status == 'temporarily_unavailable' %}
           <button
-                  type="button"
-                  class="interest-btn"
-                  onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
+            type="button"
+            class="interest-btn"
+            onclick="openContactForm('{{ product.name | escape }}', '{% if product.gender == 'male' %}Männchen{% elsif product.gender == 'female' %}Weibchen{% elsif product.gender == 'food' %}Futter{% elsif product.gender == 'plant' %}Pflanze{% else %}Artikel{% endif %}', '{{ product.price }}€')"
           >
             Interesse anmelden
           </button>
@@ -321,9 +276,7 @@
         const status = card.dataset.status || "";
         const category = card.dataset.category || "";
 
-        const show =
-                (activeStatus === "all" || status === activeStatus) &&
-                matchesCategory(category, activeCategory);
+        const show = (activeStatus === "all" || status === activeStatus) && matchesCategory(category, activeCategory);
 
         card.style.display = show ? "" : "none";
 

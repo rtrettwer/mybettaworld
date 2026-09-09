@@ -25,5 +25,3 @@ entwicklung:
   - datum: 25.06.2026
     ereignis: Stein und Pflanzen eingesetzt. Früheres Quarantäne-Becken wurde resettet und inaktiv gesetzt. Das Becken ist jetzt das Felsen-Becken.
 ---
-
-

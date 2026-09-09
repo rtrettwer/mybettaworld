@@ -8,10 +8,6 @@ tags: [australien, urlaub, fischpflege, beckenpflege]
 excerpt: "Ein Monat unterwegs - und zuhause lief dank Futterautomaten alles erstaunlich stabil."
 ---
 
-
-
-
-
 Wir waren einen Monat in Australien und ich war ehrlich gesagt etwas nervoes, wie es den Becken in der Zeit gehen wird.
 
 Die gute Nachricht: Die Fische wurden ausschliesslich ueber Futterautomaten versorgt und das hat ueberraschend gut funktioniert.

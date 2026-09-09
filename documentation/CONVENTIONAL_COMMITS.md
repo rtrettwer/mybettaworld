@@ -13,60 +13,48 @@
 ## Types (Pflicht)
 
 - **feat**: Neue Features oder Funktionalität
-
   - `feat(gallery): add carousel to sales page`
   - `feat(fish): add new fish portrait Sir Pryce`
 
 - **fix**: Bugfixes
-
   - `fix(build): resolve Jekyll liquid template error`
   - `fix(layout): correct mobile responsive issues`
 
 - **docs**: Dokumentation
-
   - `docs(readme): add installation instructions`
   - `docs(contributing): update guidelines`
 
 - **style**: Code-Formatierung (keine funktionalen Änderungen)
-
   - `style: format all files with prettier`
   - `style(scss): fix indentation`
 
 - **refactor**: Code-Refactoring
-
   - `refactor(gallery): simplify image loading logic`
   - `refactor: extract timeline into separate component`
 
 - **perf**: Performance-Verbesserungen
-
   - `perf(images): optimize thumbnail generation`
   - `perf(build): reduce Jekyll build time`
 
 - **test**: Tests hinzufügen oder ändern
-
   - `test(html): add HTML proofer tests`
 
 - **chore**: Maintenance, Dependencies, etc.
-
   - `chore(deps): update jekyll to v4.4.1`
   - `chore: update gitignore`
 
 - **build**: Build-System Änderungen
-
   - `build: add webpack config`
   - `build(npm): update build scripts`
 
 - **ci**: CI/CD Änderungen
-
   - `ci: add GitHub Actions workflow for linting`
   - `ci(renovate): configure auto-merge rules`
 
 - **revert**: Revert eines früheren Commits
-
   - `revert: revert "feat: add new feature"`
 
 - **content**: Blog-Posts, Artikel (Jekyll-spezifisch)
-
   - `content(blog): add post about aquarium move`
   - `content(fish): update Sonnenschein portrait`
 

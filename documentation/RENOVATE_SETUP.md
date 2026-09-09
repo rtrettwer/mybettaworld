@@ -9,14 +9,11 @@ Um sicherzustellen, dass Renovate PRs nicht automatisch gemerged werden und alle
 2. **Branch name pattern**: `main` (oder `master`)
 
 3. **Aktiviere folgende Optionen**:
-
    - ✅ **Require a pull request before merging**
-
      - ✅ Require approvals: 1
      - ✅ Dismiss stale pull request approvals when new commits are pushed
 
    - ✅ **Require status checks to pass before merging**
-
      - ✅ Require branches to be up to date before merging
      - Füge hinzu:
        - `lint`
@@ -34,7 +31,6 @@ Um sicherzustellen, dass Renovate PRs nicht automatisch gemerged werden und alle
 1. **Gehe zu**: GitHub Settings (persönlich) → Notifications
 
 2. **Email notification preferences**:
-
    - ✅ Pull requests
    - ✅ Issues
    - ✅ Actions

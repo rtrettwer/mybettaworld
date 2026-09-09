@@ -29,10 +29,6 @@ fish_selection: "breite Dorsale, gerade Caudal-Strahlen, saubere Flossenränder;
 gallery_dir: /assets/images/fish/shadow
 ---
 
-
-
-
-
 [Shadow](/fish/2025/07/28/fish_shadow) ist eine richtige kleine Schönheit. Mit ihren Geschwistern im [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken war sie dauergestresst und hatte Stressstreifen.
 
 Sie lebte eine Zeit lang bei [Kampfi](/fish/2025/04/01/fish_kampfi) im [Dschungel](/tank/2025/09/30/tank_dschungel)-Becken - und da schien es ihr richtig gut zu gehen. Sie hatte eine wunderschöne Färbung und keine Stressstreifen mehr. Sie versteckte sich zwar viel, was mit ihrer dunklen Grundfarbe gut geht, aber sie hatte auch gelegentlich ihren Spaß daran, [Kampfi](/fish/2025/04/01/fish_kampfi) Paroli zu bieten oder ihm hinterherzuschwimmen.
@@ -47,8 +43,10 @@ Die Paarung fand am Folgetag statt, danach habe ich [Shadow](/fish/2025/07/28/fi
 Zur Erholung war sie kurz im [Gras-Becken](/tank/2025/09/30/tank_babys) und ist zwei Tage spaeter wieder ins [Paradies](/tank/2025/12/05/tank_paradies)-Becken zurueckgezogen.
 
 ## Juli 2026 - Krankheit
+
 Leider ist Shadow krank und ich kann nicht sagen, was es ist. Sie hat einen unglaublich dicken, geschwollenen Bauch und schnappt nach Luft.
-Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im Quarantäne-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt. 
+Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im Quarantäne-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt.
 
 ## 24.07.2026 - Tod
+
 Leider ist Shadow heute Nacht verstorben. Ich vermute, dass es eine Laichverhärtung war - trotz Daphnien Lebendfutter und Ruhe hat sie sich davon nicht erholt. Ich bin ziemlich traurig, muss ich sagen. Es ist ein Trost, dass ich einige ihrer Töchter behalten habe.

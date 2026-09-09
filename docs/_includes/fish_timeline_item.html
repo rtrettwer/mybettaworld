@@ -1,11 +1,7 @@
 <!-- Fish Timeline Item Komponente: Avatar und Datum über Card, für mobile Ansicht optimiert -->
-{%- assign side = include.side | default: 'right' -%}
-{%- assign post = include.post -%}
-{%- assign fish_status = post.fish_status | default: '' -%}
-{%- assign is_gone = false -%}
-{%- if fish_status == 'sold' or fish_status == 'deceased' -%}
-  {%- assign is_gone = true -%}
-{%- endif -%}
+{%- assign side = include.side | default: 'right' -%} {%- assign post = include.post -%} {%- assign fish_status =
+post.fish_status | default: '' -%} {%- assign is_gone = false -%} {%- if fish_status == 'sold' or fish_status ==
+'deceased' -%} {%- assign is_gone = true -%} {%- endif -%}
 <div class="timeline-item-grid timeline-item-{{ side }} {% if is_gone %}timeline-item-sold{% endif %}">
   {%- if side == 'left' -%}
   <div class="timeline-side timeline-side-content timeline-hover-group" style="position: relative">
@@ -14,7 +10,11 @@
         <span class="timeline-avatar-gradient {% if is_gone %}timeline-avatar-sold{% endif %}">
           <span class="timeline-avatar-inner">
             {% if post.timeline_image %}
-            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img {% if is_gone %}timeline-avatar-img-sold{% endif %}" />
+            <img
+              src="{{ post.timeline_image | relative_url }}"
+              alt="{{ post.title }}"
+              class="timeline-avatar-img {% if is_gone %}timeline-avatar-img-sold{% endif %}"
+            />
             {% else %} {% assign fish_slug = post.title | slugify %} {% assign timeline_image_path =
             '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
             <img
@@ -32,7 +32,9 @@
           </span>
         </span>
         {% if is_gone %}
-        <span class="timeline-sold-badge">{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span>
+        <span class="timeline-sold-badge"
+          >{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span
+        >
         {% endif %}
       </div>
     </a>
@@ -89,7 +91,11 @@
         <span class="timeline-avatar-gradient {% if is_gone %}timeline-avatar-sold{% endif %}">
           <span class="timeline-avatar-inner">
             {% if post.timeline_image %}
-            <img src="{{ post.timeline_image | relative_url }}" alt="{{ post.title }}" class="timeline-avatar-img {% if is_gone %}timeline-avatar-img-sold{% endif %}" />
+            <img
+              src="{{ post.timeline_image | relative_url }}"
+              alt="{{ post.title }}"
+              class="timeline-avatar-img {% if is_gone %}timeline-avatar-img-sold{% endif %}"
+            />
             {% else %} {% assign fish_slug = post.title | slugify %} {% assign timeline_image_path =
             '/assets/images/fish/' | append: fish_slug | append: '/' | append: fish_slug | append: '_timeline.webp' %}
             <img
@@ -107,7 +113,9 @@
           </span>
         </span>
         {% if is_gone %}
-        <span class="timeline-sold-badge">{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span>
+        <span class="timeline-sold-badge"
+          >{% if fish_status == 'deceased' %}Verstorben{% else %}Verkauft{% endif %}</span
+        >
         {% endif %}
       </div>
     </a>
