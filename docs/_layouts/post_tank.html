@@ -199,8 +199,7 @@ layout: default
   </div>
   {% endif %}
 
-  <!-- Wasser-Parameter für Aquarien -->
-  {% include aquarium_water_parameters.html %} {% if page.entwicklung %}
+  {% if page.entwicklung %}
   <style>
     .tank-entwicklung-table-wrapper {
       overflow-x: auto;

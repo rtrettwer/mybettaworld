@@ -22,16 +22,6 @@ pflanzen: Anubias, Javafarn, Cryptocoryne,Flammenmoos, Alternathea reineckii, Sc
 technik: Heizstab, Luftheber
 heizung: Heizstab
 besonderheiten: Stark bepflanzt, viele Verstecke, wenig Algen. Im März 2026 in der alten Form beendet und als neues Zuchtbecken neu aufgesetzt.
-# Wasserparameter
-water_parameters:
-  temperature: 26
-  ph: 7.52
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 12
-  hardness: 16.1
-  kh: 15.2
-  last_test: "05.12.2025"
 entwicklung:
   - datum: XX.03.2025
     ereignis: Becken gestartet

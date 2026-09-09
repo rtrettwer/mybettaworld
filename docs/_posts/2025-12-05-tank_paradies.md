@@ -22,16 +22,6 @@ pflanzen: Verschiedene Anubias-Arten (an Wurzeln), Roter Tigerlotus, Wasserkelch
 technik: 2x Hygger Heizstäbe (links & rechts), JBL CristalProfi e702 Außenfilter, 5x LED-Lampen, Starterbakterien
 heizung: 2x Hygger Heizstäbe, eingestellt auf 25°C (hält konstant 24-25°C)
 besonderheiten: Erstes Becken mit hellem Grund! Gebraucht für 20€ gekauft. Ursprünglich als Paludarium geplant, aber wegen Kratzern als Aquarium umgesetzt. Beeindruckendes Wurzel-Hardscape mit Höhlen. Bewachsene Gitter gegen wühlende Fische. Der arme DHL-Bote (30kg Sand!). Ursprünglich mit 258 Jungfischen überbesetzt - erstes Algenproblem trotz Filter. Am 02.01.2026 alle Jungfische an Aquaristik Paradies Haidhausen abgegeben und im Tausch neue Fische bekommen. Jetzt harmonisches Gesellschaftsbecken mit Betta-Sorority. Marmor Corydoras sehen fantastisch auf hellem Sand aus! Ich sitze gerne auf meinem Bodenstuhl davor und beobachte die Fische.
-# Wasserparameter
-water_parameters:
-  temperature: 24.5
-  ph: 7.52
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 0
-  hardness: 16.1
-  kh: 15.2
-  last_test: "05.12.2025"
 gallery_dir: /assets/images/tanks/paradies
 entwicklung:
   - datum: Oktober 2025

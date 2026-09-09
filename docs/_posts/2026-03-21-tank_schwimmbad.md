@@ -22,16 +22,6 @@ pflanzen: Recycelte Bestands-Pflanzen + neues, breiteres Gras
 technik: Standardtechnik fuer 160L Setup
 heizung: Bei Bedarf
 besonderheiten: Das Becken wurde gebraucht Anfang Maerz gekauft. Wegen Grippe konnte ich erst Ende Maerz mit dem finalen Aufbau starten.
-# Wasserparameter
-water_parameters:
-  temperature: 24
-  ph: 7.2
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 5
-  hardness: 12
-  kh: 8
-  last_test: "30.03.2026"
 entwicklung:
   - datum: Anfang Maerz 2026
     ereignis: 160L Becken gebraucht gekauft.

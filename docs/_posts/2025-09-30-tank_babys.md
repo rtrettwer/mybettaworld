@@ -22,16 +22,6 @@ pflanzen: Javafarn, Anubias, Perlkraut, Nadelsims, Rote Hintergrundpflanze, Fros
 technik: Heizstab, Thermometer
 heizung: Ausgeschaltet seit März 2026
 besonderheiten: Aufzuchtbecken für Jungfische; Start war mit Starter-Bakterien. Seit 28.11.2025 Garnelenbecken, inzwischen mit dichtem Grasteppich und neuem Namen "Gras-Becken".
-# Wasserparameter
-water_parameters:
-  temperature: 26
-  ph: 7.52
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 8
-  hardness: 16.1
-  kh: 15.2
-  last_test: "05.12.2025"
 entwicklung:
   - datum: 29.08.2025
     ereignis: Paarung Sir Pryce und Sonnenschein

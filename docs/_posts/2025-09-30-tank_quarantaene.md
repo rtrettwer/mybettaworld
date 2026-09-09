@@ -23,16 +23,6 @@ pflanzen: Froschbiss, Salvinia, Hornkraut, Flammenmoos-Bäumchen, grüner Wucher
 technik:
 heizung: Ausgeschaltet seit März 2026
 besonderheiten: Trittschalldämmung, 5mm PE-Schaumfolie unter dem Becken, Trenner-Gitter unter Bodengrund. Wird nur bei Bedarf als Quarantäne genutzt; aktuell nur Beleuchtung und Luftheber aktiv.
-# Wasserparameter
-water_parameters:
-  temperature: 26
-  ph: 7.52
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 18
-  hardness: 16.1
-  kh: 15.2
-  last_test: "05.12.2025"
 gallery_dir: /assets/images/tanks/quarantine
 entwicklung:
   - datum: 19.09.2025

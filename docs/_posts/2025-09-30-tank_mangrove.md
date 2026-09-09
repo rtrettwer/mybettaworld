@@ -23,16 +23,6 @@ pflanzen: Javafarn, Trauermoos-Bäumchen, Salvinia, phylantus fluitans
 technik: EEEKit Aquariumthermometer (außen befestigt, Digitalanzeige)
 heizung: Heizstab Aquael, 26 °C
 besonderheiten: Planztöpfe mit einer Monstera-Art und Farn; Pflanze mit großer emerser Blüte. Die Einlauf-Phase hat am längsten gedauert mit ordentlicher Bakterienblüte.
-# Wasserparameter
-water_parameters:
-  temperature: 26
-  ph: 7.52
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 10
-  hardness: 16.1
-  kh: 15.2
-  last_test: "05.12.2025"
 entwicklung:
   - datum: 15.07.25
     ereignis: Start

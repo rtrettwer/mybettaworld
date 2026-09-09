@@ -22,16 +22,6 @@ pflanzen: Recycelte Stengelpflanzen, Moose und Schwimmpflanzen
 technik: Luftheber, Thermometer
 heizung: ca. 28 C waehrend der Zuchtphase
 besonderheiten: Ersetzt den frueheren Zuchtkuebel als Hauptzuchtbecken. Shadow wurde nach der Paarung zeitnah wieder umgesetzt.
-# Wasserparameter
-water_parameters:
-  temperature: 28
-  ph: 7.4
-  ammonia: 0.0
-  nitrite: 0.0
-  nitrate: 10
-  hardness: 12
-  kh: 8
-  last_test: "28.03.2026"
 entwicklung:
   - datum: Maerz 2026
     ereignis: Ehemaliges Dschungel-Becken geleert, gesaeubert und als neues Zuchtbecken vorbereitet.
