@@ -38,7 +38,7 @@ Zwischendrin war sie auch nochmal mit [Sir Pryce](/fish/2025/07/28/fish_sir_pryc
 
 ## 08.10.2025 - Umzug ins Höhlen-Becken
 
-Sonnenschein musste heute aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus, weil sie [Bandits](/fish/2025/09/30/fish_bandit) Flossen gefleddert und ihn gejagt hat. Das ging natürlich nicht! Ich habe sie deshalb ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken umgesetzt. Dort ist sie jetzt zusammen mit [Lila](/fish/2025/07/28/fish_lila), die ebenfalls heute dorthin umgezogen ist. Die beiden Damen scheinen sich zu arrangieren - ich sehe keine Verletzungen und beide schwimmen in allen Bereichen des Beckens. Hoffentlich ist das jetzt das finale Setup!
+Sonnenschein musste heute aus dem [Mangroven](/tank/2025/09/30/tank_mangrove)-Becken raus, weil sie [Bandits](/fish/2025/07/24/fish_bandit) Flossen gefleddert und ihn gejagt hat. Das ging natürlich nicht! Ich habe sie deshalb ins [Höhlen](/tank/2025/09/30/tank_hoehle)-Becken umgesetzt. Dort ist sie jetzt zusammen mit [Lila](/fish/2025/07/28/fish_lila), die ebenfalls heute dorthin umgezogen ist. Die beiden Damen scheinen sich zu arrangieren - ich sehe keine Verletzungen und beide schwimmen in allen Bereichen des Beckens. Hoffentlich ist das jetzt das finale Setup!
 
 ## 31.03.2026 - Neues Zuhause gemeinsam mit Sir Pryce
 

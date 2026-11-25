@@ -1,76 +1,57 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:base"],
+  "extends": ["config:recommended", "helpers:pinGitHubActionDigests"],
   "timezone": "Europe/Berlin",
   "schedule": ["before 6am on monday"],
-  "labels": ["dependencies", "renovate"],
-  "assignees": ["riketrettwer"],
-  "reviewers": ["riketrettwer"],
-  "packageRules": [
-    {
-      "description": "Ruby Dependencies (Gemfile)",
-      "matchManagers": ["bundler"],
-      "groupName": "Ruby dependencies",
-      "automerge": false,
-      "schedule": ["before 6am on monday"]
-    },
-    {
-      "description": "Node.js Dependencies",
-      "matchManagers": ["npm"],
-      "groupName": "npm dependencies",
-      "automerge": false,
-      "schedule": ["before 6am on monday"]
-    },
-    {
-      "description": "GitHub Actions",
-      "matchManagers": ["github-actions"],
-      "groupName": "GitHub Actions",
-      "automerge": false,
-      "schedule": ["before 6am on monday"]
-    },
-    {
-      "description": "Jekyll major updates - extra vorsichtig",
-      "matchPackageNames": ["jekyll"],
-      "matchUpdateTypes": ["major"],
-      "automerge": false,
-      "labels": ["dependencies", "renovate", "major-update"],
-      "reviewers": ["riketrettwer"],
-      "assignees": ["riketrettwer"]
-    },
-    {
-      "description": "Minor und Patch Updates - mit Tests",
-      "matchUpdateTypes": ["minor", "patch"],
-      "automerge": false,
-      "minimumReleaseAge": "3 days"
-    }
-  ],
-  "vulnerabilityAlerts": {
-    "labels": ["security", "dependencies"],
-    "assignees": ["riketrettwer"],
-    "reviewers": ["riketrettwer"],
-    "automerge": false
-  },
+  "labels": ["dependencies"],
   "prConcurrentLimit": 3,
-  "prCreation": "immediate",
   "prHourlyLimit": 2,
+  "minimumReleaseAge": "3 days",
   "automerge": false,
+  "automergeType": "pr",
   "platformAutomerge": false,
-  "requiredStatusChecks": ["lint", "test", "build"],
+  "ignoreTests": false,
   "rebaseWhen": "behind-base-branch",
   "semanticCommits": "enabled",
-  "commitMessagePrefix": "chore(deps):",
-  "commitMessageAction": "update",
-  "commitMessageTopic": "{{depName}}",
-  "commitMessageExtra": "to {{newVersion}}",
-  "prTitle": "{{semanticPrefix}}{{#if isPin}}pin{{else}}update{{/if}} {{depName}} to {{#if isMajor}}v{{newMajor}}{{else}}{{#if isSingleVersion}}v{{newVersion}}{{else}}{{newValue}}{{/if}}{{/if}}",
-  "prBodyTemplate": "This PR contains the following updates:\n\n| Package | Type | Update | Change |\n|---|---|---|---|\n{{#each upgrades as |upgrade|}}\n| {{upgrade.depName}} | {{upgrade.depType}} | {{upgrade.updateType}} | `{{upgrade.currentValue}}` -> `{{upgrade.newValue}}` |\n{{/each}}\n\n---\n\n### Release Notes\n{{#each upgrades as |upgrade|}}\n{{#if upgrade.releases}}\n#### {{upgrade.depName}}\n{{#each upgrade.releases as |release|}}\n- {{release.version}}\n{{/each}}\n{{/if}}\n{{/each}}\n\n---\n\n### Configuration\n\n📅 **Schedule**: {{schedule}}\n\n🚦 **Automerge**: Disabled - Manual review erforderlich\n\n♻ **Rebasing**: Whenever PR is behind base branch\n\n---\n\n⚠️ **Wichtig**: Dieser PR wird **nicht automatisch gemerged**!\n\nBitte prüfe:\n1. ✅ Alle Tests (Linting, Build) sind erfolgreich\n2. 👀 Visuelle Prüfung der Website lokal oder im Preview\n3. 📖 Release Notes durchlesen\n4. ✔️ Manueller Merge wenn alles OK\n\n{{#if hasReleaseNotes}}\n💡 Siehe Release Notes für Details zu den Änderungen.\n{{/if}}",
+  "commitMessageAction": "aktualisiere",
+  "commitMessageExtra": "auf {{newVersion}}",
+  "prBodyTemplate": "{{#each upgrades}}- `{{depName}}` von `{{currentValue}}` auf `{{newValue}}` aktualisieren.\n{{/each}}",
+  "packageRules": [
+    {
+      "description": "Stabile Minor- und Patch-Updates nach erfolgreichen Prüfungen mergen",
+      "matchUpdateTypes": ["minor", "patch"],
+      "matchCurrentVersion": "!/^0\\./",
+      "automerge": true,
+      "groupName": "kompatible Abhängigkeiten"
+    },
+    {
+      "description": "Action-Digests nach erfolgreichen Prüfungen aktualisieren",
+      "matchManagers": ["github-actions"],
+      "matchUpdateTypes": ["digest", "pinDigest"],
+      "automerge": true,
+      "groupName": "GitHub Actions"
+    },
+    {
+      "description": "Major- und instabile 0.x-Updates bewusst manuell prüfen",
+      "matchUpdateTypes": ["major"],
+      "automerge": false,
+      "dependencyDashboardApproval": true
+    },
+    {
+      "matchCurrentVersion": "/^0\\./",
+      "automerge": false
+    }
+  ],
   "lockFileMaintenance": {
     "enabled": true,
+    "automerge": false,
     "schedule": ["before 6am on monday"]
   },
-  "separateMajorMinor": true,
-  "separateMinorPatch": false,
-  "ignoreDeps": [],
-  "ignorePresets": [],
-  "enabledManagers": ["bundler", "npm", "github-actions"]
+  "vulnerabilityAlerts": {
+    "enabled": true,
+    "automerge": false,
+    "minimumReleaseAge": "0 days",
+    "schedule": ["at any time"],
+    "labels": ["dependencies", "security"]
+  }
 }

@@ -56,7 +56,8 @@ gallery_meta = site.data.gallery | default: empty -%} {%- assign gallery_id = in
 
     <div class="db-gallery-lightbox-content">
       <div class="db-gallery-title"></div>
-      <img class="db-gallery-large" alt="" />
+      <!-- Die Bildquelle wird erst beim Öffnen der Lightbox gesetzt und im Browsertest geprüft. -->
+      <img class="db-gallery-large" alt="" data-proofer-ignore />
       <div class="db-gallery-caption"></div>
     </div>
   </div>

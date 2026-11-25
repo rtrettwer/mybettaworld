@@ -2,24 +2,14 @@
 
 set -euo pipefail
 
-echo "Setting up development environment..."
+cd "$(dirname "$0")"
+command -v node >/dev/null || { echo "Node.js wird benötigt."; exit 1; }
+command -v python3 >/dev/null || { echo "Python 3 wird benötigt."; exit 1; }
 
-command -v ruby >/dev/null || { echo "Ruby is required."; exit 1; }
-command -v node >/dev/null || { echo "Node.js is required."; exit 1; }
-
-echo "Installing Ruby dependencies..."
-if ! (cd docs && bundle install); then
-  echo "Ruby setup failed. Run 'cd docs && gem install bundler:2.7.2' first if Bundler is missing."
-  exit 1
-fi
-
-echo "Installing Node.js dependencies..."
-npm install
-
-if command -v pre-commit >/dev/null; then
-  pre-commit install
-else
-  echo "pre-commit not installed; skipping hook setup."
-fi
-
-echo "Done."
+python3 -m venv .venv
+.venv/bin/python -m pip install --quiet -r requirements-dev.txt
+bash scripts/run.sh bundle config set --local path vendor/bundle
+bash scripts/run.sh bundle install
+npm ci
+npx playwright install chromium
+echo "Abhängigkeiten und Git-Hooks sind eingerichtet."

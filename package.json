@@ -4,25 +4,33 @@
   "description": "Betta fish blog with Jekyll",
   "scripts": {
     "lint": "npm run lint:markdown && npm run lint:yaml && npm run lint:prettier",
-    "lint:markdown": "markdownlint '**/*.md' --ignore node_modules --ignore vendor --ignore _site",
-    "lint:yaml": "yamllint .",
+    "lint:markdown": "markdownlint '**/*.md' --ignore '**/node_modules/**' --ignore '**/vendor/**' --ignore '**/_site/**' --ignore '.venv/**' --ignore 'playwright-report/**' --ignore 'test-results/**'",
+    "lint:yaml": "bash scripts/run.sh python3 -m yamllint .",
     "lint:prettier": "prettier --check '**/*.{css,scss,js,json,yml,yaml,md,html}'",
     "format": "prettier --write '**/*.{css,scss,js,json,yml,yaml,md,html}'",
-    "test": "npm run test:frontmatter && cd docs && bundle exec ruby ../scripts/test_html.rb",
-    "test:frontmatter": "ruby scripts/validate_front_matter.rb",
-    "prepare": "command -v pre-commit >/dev/null && pre-commit install || true",
-    "run-local": "cd docs && bundle exec jekyll serve --livereload --incremental"
+    "build": "bash scripts/run.sh bundle exec jekyll build --source docs --destination docs/_site",
+    "test": "npm run test:scripts && npm run test:frontmatter && npm run build && npm run test:html && npm run test:browser",
+    "test:scripts": "bash scripts/run.sh python3 -m unittest discover -s tests -p 'test_*.py' && bash scripts/run.sh bundle exec ruby tests/test_html.rb",
+    "test:frontmatter": "bash scripts/run.sh bundle exec ruby scripts/validate_front_matter.rb",
+    "test:html": "bash scripts/run.sh bundle exec ruby scripts/test_html.rb",
+    "test:browser": "playwright test",
+    "content:update": "bash scripts/generate_tag_pages.sh && bash scripts/run.sh python3 scripts/autolink_posts.py && bash scripts/run.sh python3 scripts/generate_thumbnails.py && bash scripts/run.sh python3 scripts/sync_gallery_yml.py && bash scripts/run.sh python3 scripts/update_stats.py && prettier --write 'docs/_posts/*.md' docs/_data/gallery.yml docs/index.md 'docs/tags/*.md' scripts/keywords.yml",
+    "content:check": "npm run content:update && bash scripts/check_generated.sh",
+    "check": "npm run lint && npm test",
+    "prepush": "bash scripts/pre_push.sh",
+    "prepare": "bash scripts/install_hooks.sh",
+    "run-local": "bash scripts/run.sh bundle exec jekyll serve --source docs --destination docs/_site --livereload"
   },
   "devDependencies": {
     "@commitlint/cli": "^18.4.3",
     "@commitlint/config-conventional": "^18.4.3",
+    "@playwright/test": "1.65.1",
     "markdownlint-cli": "^0.48.0",
-    "prettier": "^3.1.1",
-    "yaml-lint": "^1.7.0"
+    "prettier": "^3.10.1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/yourusername/mybettaworld.git"
+    "url": "https://github.com/rtrettwer/mybettaworld.git"
   },
   "keywords": [
     "jekyll",

@@ -9,6 +9,9 @@ _site/
 # Dependencies
 vendor/
 node_modules/
+.venv/
+playwright-report/
+test-results/
 
 # Jekyll Metadata
 .jekyll-metadata

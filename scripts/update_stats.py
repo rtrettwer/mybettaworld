@@ -23,10 +23,7 @@ def parse_frontmatter(filepath):
     parts = content.split("---", 2)
     if len(parts) < 3:
         return {}
-    try:
-        return yaml.safe_load(parts[1]) or {}
-    except yaml.YAMLError:
-        return {}
+    return yaml.safe_load(parts[1]) or {}
 
 
 def parse_all_posts():

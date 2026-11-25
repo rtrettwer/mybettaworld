@@ -1,54 +1,16 @@
-#!/bin/bash
-# Renovate Installation Guide
+#!/usr/bin/env bash
+set -euo pipefail
 
-echo "🤖 Renovate Setup für mybettaworld"
-echo "=================================="
-echo ""
-echo "📋 Voraussetzungen:"
-echo "  ✅ renovate.json Konfiguration erstellt"
-echo "  ✅ GitHub Actions Workflows aktualisiert"
-echo "  ✅ Branch Protection Rules dokumentiert"
-echo ""
-echo "🚀 Nächste Schritte:"
-echo ""
-echo "1. Installiere Renovate GitHub App:"
-echo "   https://github.com/apps/renovate"
-echo ""
-echo "2. Klicke auf 'Install' oder 'Configure'"
-echo ""
-echo "3. Wähle 'Only select repositories' und füge hinzu:"
-echo "   - riketrettwer/mybettaworld"
-echo ""
-echo "4. Klicke auf 'Install' oder 'Save'"
-echo ""
-echo "5. Renovate wird automatisch:"
-echo "   - Eine initiale PR (Onboarding) erstellen"
-echo "   - Ein Dependency Dashboard Issue erstellen"
-echo "   - Dependencies scannen"
-echo "   - Update PRs erstellen (max. 3 gleichzeitig)"
-echo ""
-echo "6. Konfiguriere Branch Protection (siehe RENOVATE_SETUP.md):"
-echo "   Repository → Settings → Branches → Add rule"
-echo "   - Branch: main"
-echo "   - Require PR reviews: 1"
-echo "   - Require status checks: lint, build, test"
-echo ""
-echo "7. Konfiguriere Email Notifications:"
-echo "   GitHub Settings → Notifications"
-echo "   - ✅ Pull requests"
-echo "   - ✅ Issues"
-echo "   - ✅ Actions"
-echo ""
-echo "✅ Fertig! Renovate ist bereit."
-echo ""
-echo "📧 Du erhältst Email-Benachrichtigungen für:"
-echo "   - Neue Renovate PRs"
-echo "   - Fehlgeschlagene Tests"
-echo "   - Merge-Konflikte"
-echo "   - PRs bereit zum Review"
-echo ""
-echo "📚 Mehr Infos:"
-echo "   - renovate.json - Renovate Konfiguration"
-echo "   - RENOVATE_SETUP.md - Detaillierte Anleitung"
-echo "   - .github/workflows/lint.yml - Test Workflow"
-echo ""
+cat <<'GUIDE'
+Renovate ist für rtrettwer/mybettaworld bereits aktiv.
+
+Einmalig in GitHub einrichten:
+- master durch eine aktive Branchregel schützen.
+- Den aktuellen Pflichtcheck "Website prüfen" auswählen.
+- Keine pauschale manuelle Approval-Pflicht, wenn Automerge gewünscht ist.
+- Pages-Quelle: GitHub Actions; Deployment-Branch: master.
+- Benachrichtigungen für fehlgeschlagene Actions aktivieren.
+
+Die vollständige Anleitung steht in documentation/RENOVATE_SETUP.md.
+Dieses Skript zeigt nur Hinweise und verändert keine GitHub-Einstellungen.
+GUIDE

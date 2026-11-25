@@ -64,7 +64,7 @@ Alle technischen Dokumentationen und Setup-Guides für das mybettaworld Jekyll B
   - Empfohlener Workflow
   - Tastenkombinationen
 
-- **[IDEA_WARNINGS_FIX.md](IDEA_WARNINGS_FIX.md)** _(falls vorhanden)_ - IDE Warnings
+- **IDEA_WARNINGS_FIX.md** (falls vorhanden) - IDE Warnings
   - Jekyll Link-Warnings deaktivieren
   - Inspection Profile Konfiguration
   - Saubere IDE ohne false positives
