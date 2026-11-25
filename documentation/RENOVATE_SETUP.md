@@ -63,6 +63,8 @@ Die Bestandsaufnahme am 25.11.2026 zeigte unter anderem Commitlint 18 → 21
 und Markdownlint CLI 0.48 → 0.50. Solche Major-/0.x-Sprünge separat prüfen.
 HTML-Proofer, Jekyll Feed, Jekyll SEO Tag und Prettier wurden innerhalb ihrer
 bestehenden kompatiblen Versionsbereiche aktualisiert.
+Google Protobuf ist auf 4.36.2 aktualisiert; dessen native Linux-Pakete unterstützen
+Ruby 4.0. Ein erfolgreicher macOS-Build allein weist diese Kompatibilität nicht nach.
 
 Jekyll 4.4.1 und Minima 2.5.2 hatten bei der Abfrage kein neueres stabiles Release.
 RuboCop wird durch `rubocop-jekyll` auf die 1.57-Reihe begrenzt; ein isoliertes
