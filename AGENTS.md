@@ -12,8 +12,8 @@ müssen. Bitte bei größeren strukturellen Änderungen aktuell halten.
 - Sprache der Website und aller Inhalte/Commits/Konversation: **Deutsch**.
   Code-Kommentare und CSS/JS-Bezeichner sind meist Englisch, Inhalte
   (Front Matter, Texte) Deutsch.
-- Quellcode der Website liegt komplett unter `docs/` (Jekyll-Root, wegen
-  GitHub Pages `docs/`-Publishing-Modus).
+- Quellcode der Website liegt komplett unter `docs/` (Jekyll-Root).
+  GitHub Pages veröffentlicht das geprüfte Actions-Artefakt, nicht direkt einen Branch.
 
 ## Lokales Setup & Ausführen
 
@@ -31,8 +31,6 @@ bundle _2.7.2_ exec jekyll build                 # Produktions-Build nach docs/_
 Erstinstallation (aus Repo-Root):
 
 ```bash
-npm install
-(cd docs && bundle install)
 ./setup.sh
 ```
 
@@ -40,9 +38,28 @@ Node-Skripte (`package.json`):
 
 - `npm run lint` — Markdown/YAML/Prettier-Checks
 - `npm run format` — Prettier Auto-Format
-- `npm test` — Front-Matter-Validierung + HTML-Test (`scripts/test_html.rb`)
+- `npm test` — Skript-/Hooktests, Front Matter, ein Build, HTML- und Browsertests
+- `npm run check` — Linting und vollständige Testkette (lokal und in CI identisch)
+- `npm run content:update` — URLs, Autolinks, fehlende Bilder/Thumbnails, Galerie, Zahlen und Tags
+- `npm run content:check` — Generierung; bricht bei nicht eingecheckten Änderungen ab
+- `npm run test:html` — prüft ausschließlich einen bestehenden Build
+- `npm run test:browser` — Chromium auf Desktop/Mobil, Bericht in `playwright-report/`
 - `npm run test:frontmatter` — nur `scripts/validate_front_matter.rb`
-- `npm run run-local` — Jekyll-Server mit `--incremental`
+- `npm run run-local` — Jekyll-Server mit Live-Reload
+
+Versionen: `.node-version`, `.ruby-version`, `.python-version`.
+Python-Abhängigkeiten stehen in `requirements-dev.txt` und laufen lokal in `.venv/`.
+`scripts/run.sh` wählt Homebrew-Ruby, virtuelle Python-Umgebung und das Gemfile aus.
+`npm ci` installiert lokal beide Pre-commit-Hooktypen; zuerst `./setup.sh` verwenden.
+Der Push-Hook generiert Dateien und prüft die Website, erstellt aber keine Commits.
+
+CI: `.github/workflows/ci.yml`, Pflichtcheck **Website prüfen**. PRs und Wochenläufe
+deployen nicht; Pushes/manuelle Starts auf `master` veröffentlichen nur nach
+erfolgreichen Prüfungen genau den getesteten Build. Kein erneuter Build im HTML-Test.
+Renovate merged stabile Minor-/Patch-Updates nach Checks, aber keine Major-/0.x-Updates.
+GitHub-Branchschutz und Pages müssen administrativ eingerichtet werden;
+siehe `documentation/RENOVATE_SETUP.md`.
+Screenshots dienen als Review-Hilfe, nicht als automatische Pixelvergleichs-Baselines.
 
 ## Validierungs-Workflow nach Änderungen
 
@@ -134,7 +151,7 @@ Pflichtfeldern oder Statuswerten dieses Skript mit anpassen.
 ## Design-/CSS-Konventionen
 
 - **Farbschema ist gesetzt und soll erhalten bleiben** — dunkler Hintergrund
-  (App-Header/Top-Navigation _nie_ verändern, das Farbschema dort ist explizit
+  (App-Header/Top-Navigation **nie** verändern, das Farbschema dort ist explizit
   gewünscht). Bei "Modernisierungs"-Wünschen geht es um Layout/Konsistenz,
   nicht um Farben.
 - **Zentrale Hover/Klick-Interaktion:** `docs/assets/_interactions.scss`

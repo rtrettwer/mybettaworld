@@ -6,7 +6,6 @@ date: 2026-03-24 19:30:00 +0200
 categories: [tank]
 tags: [zucht, betta, nachwuchs, aktive_laichung]
 excerpt: "Neues Zuchtbecken im ehemaligen Dschungel-Becken-Setup."
-image: /assets/images/tanks/
 aktiv: true
 dimensions: 60x30x30 cm (Tetra Starter 60)
 fassungsvermoegen: 54L

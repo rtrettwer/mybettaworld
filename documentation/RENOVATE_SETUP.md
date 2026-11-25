@@ -1,99 +1,71 @@
-# Branch Protection Rules für Renovate
+# Renovate und sichere Veröffentlichung
 
-Um sicherzustellen, dass Renovate PRs nicht automatisch gemerged werden und alle Tests bestehen müssen, konfiguriere folgende Branch Protection Rules in GitHub:
+Renovate ist für `rtrettwer/mybettaworld` bereits aktiv. Die Konfiguration liegt in
+`renovate.json`, die CI in `.github/workflows/ci.yml`.
 
-## Einrichtung in GitHub
+## Einmalige GitHub-Einstellungen
 
-1. **Gehe zu**: Repository → Settings → Branches → Branch protection rules → Add rule
+1. Unter **Settings → Pages → Build and deployment** die Quelle **GitHub Actions**
+   auswählen. Kein paralleles Deployment aus einem Branch aktiv lassen.
+2. Unter **Settings → Rules → Rulesets** eine aktive Regel für `master` anlegen:
+   Pull Request verlangen, **Website prüfen** als verpflichtenden Statuscheck
+   auswählen und einen aktuellen Branchstand verlangen. Den Namen nach dem
+   ersten CI-Lauf auswählen; alte Namen wie `lint`, `test` oder `build` passen nicht.
+3. Force-Pushes und Branch-Löschung sperren; Renovate keinen pauschalen Bypass geben.
+   Keine verpflichtende manuelle Freigabe für jeden PR erzwingen, wenn Renovate
+   wirklich ohne Eingriff mergen soll. Major- und 0.x-Updates bleiben über die
+   Renovate-Regeln ohnehin manuell.
+4. Im Environment **github-pages** nur `master` als Deployment-Branch zulassen.
+   Keine manuelle Environment-Freigabe aktivieren, wenn automatisch deployed werden soll.
+5. GitHub-Benachrichtigungen für fehlgeschlagene Actions aktivieren und das
+   Dependency Dashboard abonnieren.
 
-2. **Branch name pattern**: `main` (oder `master`)
+Bei der Bestandsaufnahme war `master` **nicht geschützt**. Diese Einstellungen
+müssen mit Repository-Administrationsrechten gesetzt werden; sie werden nicht
+durch die Konfigurationsdateien aktiviert.
 
-3. **Aktiviere folgende Optionen**:
-   - ✅ **Require a pull request before merging**
-     - ✅ Require approvals: 1
-     - ✅ Dismiss stale pull request approvals when new commits are pushed
+## Update-Regeln
 
-   - ✅ **Require status checks to pass before merging**
-     - ✅ Require branches to be up to date before merging
-     - Füge hinzu:
-       - `lint`
-       - `build`
-       - `test`
+Renovate prüft npm, Bundler, Python-Requirements, Versionsdateien,
+GitHub Actions und Pre-commit-Konfiguration. Neue Update-PRs werden montags vor
+6 Uhr Berliner Zeit gebündelt erstellt, höchstens drei gleichzeitig.
 
-   - ✅ **Require conversation resolution before merging**
+- Stabile Patch-/Minor-Updates: drei Tage Mindestalter, Automerge nach grünen Checks.
+- Action-Digest-Updates: Automerge nach grünen Checks.
+- Major-Updates: Freigabe im Dependency Dashboard, anschließend manueller Merge.
+- 0.x-Versionen: manuell, weil auch Minor-Updates inkompatibel sein können.
+- Lockfile-Maintenance: wöchentlich, manueller Merge.
+- Bekannte Sicherheitsupdates: ohne Wochenzeitfenster und Wartefrist, aber manueller Merge.
 
-   - ✅ **Do not allow bypassing the above settings**
+Renovate wartet mit `platformAutomerge: false` selbst auf die Checks. Ein zusätzlicher
+Automerge-Workflow, ein persönliches Zugriffstoken und eine automatische
+PR-Approval-Aktion sind nicht nötig. Das GitHub-Häkchen „Allow auto-merge“ wird für
+diesen Modus nicht benötigt. Branchschutz bleibt die verbindliche Merge-Schranke.
 
-## Automatische Email-Benachrichtigungen
+## Betrieb
 
-### GitHub Notifications konfigurieren:
+Jeder Pull Request muss **Website prüfen** bestehen. Der Check führt Generierung,
+Linting, Skript- und Inhaltsprüfungen, Jekyll-Build, HTML-Prüfung und Browsertests aus.
+Nach dem Merge läuft die Kette auf `master` erneut; nur dieser geprüfte Build
+wird veröffentlicht.
 
-1. **Gehe zu**: GitHub Settings (persönlich) → Notifications
+Bei Fehlern bleiben Merge und Deployment blockiert. Der vorherige erfolgreiche
+Stand bleibt online. Details stehen im Actions-Protokoll und gegebenenfalls im
+Artefakt `browser-report`. Lokal lassen sich Fehler mit `npm run content:update`
+und `npm run check` nachvollziehen.
 
-2. **Email notification preferences**:
-   - ✅ Pull requests
-   - ✅ Issues
-   - ✅ Actions
+Screenshots sind Review-Hilfen, keine automatisch freigegebenen Referenzbilder.
+Für größere Designänderungen weiterhin Desktop und Mobil kurz ansehen.
 
-3. **Custom routing** (optional):
-   - Für mybettaworld Repository: deine@email.com
+## Aktuell bekannte Upgrade-Kandidaten
 
-### Renovate-spezifische Notifications:
+Die Bestandsaufnahme am 25.11.2026 zeigte unter anderem Commitlint 18 → 21
+und Markdownlint CLI 0.48 → 0.50. Solche Major-/0.x-Sprünge separat prüfen.
+HTML-Proofer, Jekyll Feed, Jekyll SEO Tag und Prettier wurden innerhalb ihrer
+bestehenden kompatiblen Versionsbereiche aktualisiert.
+Google Protobuf ist auf 4.36.2 aktualisiert; dessen native Linux-Pakete unterstützen
+Ruby 4.0. Ein erfolgreicher macOS-Build allein weist diese Kompatibilität nicht nach.
 
-Renovate sendet automatisch Benachrichtigungen wenn:
-
-- ✅ Ein neuer PR erstellt wird
-- ⚠️ Ein PR nicht gemerged werden kann (Konflikte, fehlgeschlagene Tests)
-- 🔒 Ein PR bereit zum Review ist
-- ❌ Ein PR fehlgeschlagen ist
-
-Du erhältst diese als:
-
-- 📧 Email (wenn in GitHub Notifications aktiviert)
-- 🔔 GitHub Notification
-
-## Renovate Dashboard
-
-Renovate erstellt auch ein **Dependency Dashboard** Issue in deinem Repository mit:
-
-- ⏳ Offene PRs
-- ⚠️ Probleme/Konflikte
-- ✅ Bereits gemergete Updates
-- 🔍 Verfügbare Updates
-
-## Testen der Konfiguration
-
-Nach dem Aktivieren von Renovate:
-
-1. Renovate erstellt das Dependency Dashboard Issue
-2. Renovate scannt alle Dependencies
-3. Renovate erstellt PRs (max. 3 gleichzeitig)
-4. Du erhältst Email-Benachrichtigungen
-5. PRs können nur gemerged werden wenn:
-   - ✅ Alle Tests bestehen (lint, build, test)
-   - ✅ Manuelle Approval vorhanden
-   - ✅ Keine Konflikte vorhanden
-
-## Wichtig
-
-⚠️ **Renovate merged NIEMALS automatisch** mit dieser Konfiguration!
-
-Jeder PR erfordert:
-
-1. ✅ Erfolgreiche Tests
-2. 👀 Manuelle Review
-3. ✔️ Manueller Merge
-
-Du kannst jederzeit lokal testen:
-
-```bash
-# Renovate Branch auschecken
-git fetch origin
-git checkout renovate/dependency-name
-
-# Lokal testen
-cd docs && bundle exec jekyll serve
-# Öffne: http://localhost:4000
-
-# Visuell prüfen, dass alles funktioniert
-```
+Jekyll 4.4.1 und Minima 2.5.2 hatten bei der Abfrage kein neueres stabiles Release.
+RuboCop wird durch `rubocop-jekyll` auf die 1.57-Reihe begrenzt; ein isoliertes
+RuboCop-Update genügt deshalb nicht. Keine erzwungenen pauschalen Updates verwenden.

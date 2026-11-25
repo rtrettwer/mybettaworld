@@ -2,6 +2,17 @@
 # https://yamllint.readthedocs.io/
 
 extends: default
+ignore: |
+  .git/
+  .idea/
+  .venv/
+  node_modules/
+  vendor/
+  docs/vendor/
+  docs/_site/
+  docs/.jekyll-cache/
+  playwright-report/
+  test-results/
 
 rules:
   # Erlaubt längere Zeilen für Jekyll-Konfigurationen
@@ -35,3 +46,4 @@ rules:
   # Erlaubt truthy Werte wie yes/no
   truthy:
     allowed-values: ["true", "false", "yes", "no"]
+    check-keys: false

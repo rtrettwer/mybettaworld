@@ -16,7 +16,7 @@ Dabei habe ich die Gelegenheit genutzt und die Jungfische gezählt und jeden fot
 Und dann habe ich sie auf Kleinanzeigen zum Verkauf gestellt.
 
 Insgesamt gibt es zwei sehr besondere Fische (Männchen), die ich vermutlich behalten möchte.
-Schau dir ihre Fisch-Profile an - [Bluey](/fish/2026/03/25/fish_bluey) und [Zuko](/fish/2026/03/25/fish_zuko)!
+Die beiden heißen [Bluey](/fish/2026/03/25/fish_bluey) und Zuko. Für [Bluey](/fish/2026/03/25/fish_bluey) gibt es bereits ein Fisch-Profil.
 
 Ansonsten habe ich vor allem zwei Ausprägungen:
 

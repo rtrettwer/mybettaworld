@@ -11,6 +11,8 @@ timeline_image: /assets/images/fish/bandit/bandit_timeline.webp
 fish_name: "Bandit"
 fish_birth: "2025-03-15"
 fish_arrival: "2025-07-24"
+fish_status: "deceased"
+fish_death_date: "2026-11-24"
 fish_price: "36 €"
 fish_type: "Betta splendens (Domestic), Plakat (Kurzflosser)"
 fish_fins: "Plakat (Kurzflosser)"
@@ -22,7 +24,7 @@ fish_pattern: "Marble (wechselnde Fleckenverteilung); schwarze Flossenränder; a
 fish_pectorals: "hell/weißliche Spitzen sichtbar"
 fish_behavior: "sehr nestaktiv; bildet häufig Schaumnester; reaktiv auf Bewegung; initial Jagdtrieb gegenüber Garnelen und ruhigen Boden-/Algenfressern (Amano, Otocinclus); mit schnellen Schwarmfischen (Neons) deutlich weniger fokussiert auf Mitbewohner"
 fish_feeding: "ausgeprägter 'Picky Eater'; bevorzugt Lebendfutter (Artemia, Wasserflöhe); Frost- und Trockenfutter meist abgelehnt, gelegentlich Annahme von NatureHolic Betta-Granulat"
-fish_health: "Diagnose: Camallanus (Fräskopfwürmer) mit sichtbaren roten Endoparasiten; Maßnahmen: Quarantäne, Behandlung mit Nematol (zweimal dosiert), Umzug in frisches Quarantänebecken, gezielte Aufbaufütterung mit Lebendfutter; Status: aktuell blasser und etwas dünn, aber wieder munter; keine sichtbaren Würmer mehr; erholt sich in Einzelhaltung; Hinweis: Display-Becken wegen Wirbellosen nicht behandelt, Bodengrund abgesaugt und Filter ergänzt"
+fish_health: "Diagnose: Camallanus (Fräskopfwürmer) mit sichtbaren roten Endoparasiten; Maßnahmen: Quarantäne, Behandlung mit Nematol (zweimal dosiert), Umzug in frisches Quarantänebecken, gezielte Aufbaufütterung mit Lebendfutter; Camallanus-Befall erfolgreich überstanden; später Schwimmprobleme und aufgetriebener Bauch, zuletzt Bauchwassersucht (abstehende Schuppen, Farbverlust, Atemnot, Futterverweigerung); am 24.11.2026 verstorben"
 fish_housing: "Übergangsphase im 30-L-Behälter mit Pflanzen, Heizung und Licht — sehr gutes Nestverhalten; aktuell Einzelhaltung zur Rekonvaleszenz; Höhlen und Deckung werden angenommen"
 fish_breeding: "solide Plakat-Proportionen mit guter Caudalbreite; Marble mit Mask, starke Metallic/Irideszenz; Farbresultate in der Nachzucht erfahrungsgemäß variabel (Marble 'springt'); Empfehlung: erst nach vollständiger Erholung und stabiler Kondition (mind. 3–4 Wochen symptomfrei, guter Ernährungszustand) über Zucht nachdenken"
 fish_special_traits: "auffällige weiße Gesichtsmaske ('Bandit'), starke Irideszenz, Marble-Pattern, hellblaue Augen"
@@ -130,3 +132,13 @@ Schon am Tag darauf haben sich die beiden gepaart. Am Abend habe ich [Shadow](/f
 
 Am Freitag waren die ersten Larven sichtbar, am Samstag sind die ersten frei geschwommen.
 Am Sonntag (28.03.) habe ich Bandit wieder aus dem Zuchtbecken genommen und in sein [Gras-Becken](/tank/2025/09/30/tank_babys) gesetzt.
+
+## November 2026 - Krankheit
+
+Schon seit ein paar Wochen hatte Bandit Schwimmprobleme und einen etwas dicken Bauch. Weil er ansonsten recht agil war und gut gefressen hat, habe ich mir nichts weiter gedacht. Rückblickend hätte ich früher mit ihm zum Tierarzt gehen sollen.
+
+In den letzten Tagen lag er fast nur noch in der Hängematte, konnte nicht mehr richtig schwimmen, hat schwer geatmet und nicht mehr gefressen. Außerdem standen ihm die Schuppen am Ende ab und er hat ein bisschen von seiner Farbe verloren - Anzeichen für Bauchwassersucht.
+
+## 24.11.2026 - Tod
+
+Bandit ist gestern gestorben. Ich hätte nicht gedacht, dass man wegen eines Fisches so traurig sein kann, aber ich bin es. Mach es gut, kleiner Bandit. Es ist ein Trost, dass er mit seinen Nachkommen weiterlebt.

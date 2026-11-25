@@ -1,9 +1,4 @@
-# Galerie-Metadaten für alle Bilder in /assets/images
-# Die Captions werden als Alt-Text für die Bilder verwendet
-
-# Fisch-Bilder - Allgemein
-
-# Bandit (Betta Splendens)
+# Galerie-Metadaten; individuelle Titel und Bildbeschreibungen bleiben erhalten.
 - path: /assets/images/fish/bandit/IMG_20250712_063319.webp
   title: Bandit am Morgen
   caption: Bandit zeigt seine schönen Farben im Morgenlicht
@@ -12,10 +7,14 @@
   caption: Bandit schwimmt entspannt durch sein Zuhause
 - path: /assets/images/fish/bandit/IMG_20250716_171652.webp
   title: Ein Eimer für Bandit
-  caption: Die tollen Farben in den Schuppen sieht man nicht in jedem Licht. Es sieht aus als hätte er eine kleine Galaxie auf dem Rücken.
+  caption:
+    Die tollen Farben in den Schuppen sieht man nicht in jedem Licht. Es sieht aus als hätte er eine kleine Galaxie
+    auf dem Rücken.
 - path: /assets/images/fish/bandit/IMG_20250725_180445.webp
   title: Höhle
-  caption: Bandit schwimmt gerade aus der großen Höhlenöffnung des Höhlenbeckens heraus. Er schwimmt dort mehrmals täglich rein und raus.
+  caption:
+    Bandit schwimmt gerade aus der großen Höhlenöffnung des Höhlenbeckens heraus. Er schwimmt dort mehrmals täglich
+    rein und raus.
 - path: /assets/images/fish/bandit/IMG_20250725_182706.webp
   title: Bandit erkundet
   caption: Bandit auf Erkundungstour in seinem Aquarium
@@ -28,8 +27,6 @@
 - path: /assets/images/fish/bandit/IMG_20250912_110538.webp
   title: Bandit im September
   caption: Bandit hat sich prächtig entwickelt
-
-# Kampfi (Betta Splendens)
 - path: /assets/images/fish/kampfi/IMG_20250409_191625.webp
   title: Kampfi am Abend
   caption: Kampfi in entspannter Abendhaltung
@@ -51,25 +48,15 @@
 - path: /assets/images/fish/kampfi/P5211330.webp
   title: Kampfi Finalshot
   caption: Abschließende Aufnahme von Kampfi in Bestform
-
-# Lila (Betta Splendens)
 - path: /assets/images/fish/lila/IMG_20251008_202221.webp
   title: Lilas Ruhe
   caption: Lila in einer ruhigen, meditativen Pose
-
-# Shadow (Betta Splendens)
 - path: /assets/images/fish/shadow/shadow.webp
   title: Shadow Portrait
   caption: Shadow, der geheimnisvolle dunkle Kampffisch
-
-# Sir Pryce (Betta Splendens)
-
-# Sonnenschein (Betta Splendens)
 - path: /assets/images/fish/sonnenschein/IMG_20250801_152543.webp
   title: Sonnenschein Debut
   caption: Sonnenschein bei ihrer ersten Fotosession
-
-# Futter und Lebendfutter
 - path: /assets/images/food/artemia/artemia_incubator.webp
   title: Artemia Inkubator
   caption: Professioneller Artemia-Inkubator für die Aufzucht von Salzwasserkrebschen
@@ -100,8 +87,6 @@
 - path: /assets/images/food/wasserfloehe/wasserfloehe.webp
   title: Wasserflöhe
   caption: Lebende Wasserflöhe als nahrhaftes Lebendfutter
-
-# Verschiedenes
 - path: /assets/images/misc/IMAGE_79f582fb-66cf-4bab-9483-346401629236.webp
   title: Aquaristik Moment
   caption: Spontaner Moment aus dem Aquaristik-Alltag
@@ -147,8 +132,6 @@
 - path: /assets/images/misc/icon.webp
   title: Website Icon
   caption: Offizielles Icon der Betta-Website
-
-# Aquarien - Baby Becken
 - path: /assets/images/tanks/babies/IMG_20250912_110435.webp
   title: Baby Becken September
   caption: Das Jungfisch-Becken im September mit heranwachsenden Betta-Babys
@@ -173,16 +156,12 @@
 - path: /assets/images/tanks/babies/babies.webp
   title: Baby Becken Übersicht
   caption: Komplettansicht des Baby-Beckens für Betta-Nachwuchs
-
-# Zucht Becken
 - path: /assets/images/tanks/breeding/babies_bandit.webp
   title: Bandits Nachwuchs
   caption: Junge Nachkommen von Bandit im Zuchtbecken
 - path: /assets/images/tanks/breeding/breeding.webp
   title: Zucht Becken
   caption: Speziell eingerichtetes Becken für die Betta-Zucht
-
-# Höhlen Becken
 - path: /assets/images/tanks/cave/IMG_20250711_072639.webp
   title: Höhlen Becken Morgen
   caption: Das Höhlen-Becken im frühen Morgenlicht
@@ -204,8 +183,6 @@
 - path: /assets/images/tanks/cave/cave.webp
   title: Höhlen Becken Komplett
   caption: Komplettansicht des Höhlen-Beckens mit natürlicher Struktur
-
-# Dschungel Becken
 - path: /assets/images/tanks/jungle/IMG_20250228_213939.webp
   title: Dschungel Becken Aufbau
   caption: Früher Aufbau des Dschungel-Beckens im Februar
@@ -269,8 +246,6 @@
 - path: /assets/images/tanks/jungle/jungle.webp
   title: Dschungel Becken Komplett
   caption: Komplettansicht des dicht bepflanzten Dschungel-Biotops
-
-# Mangroven Becken
 - path: /assets/images/tanks/mangrove/IMG_20250717_110233.webp
   title: Mangroven Setup
   caption: Spezielles Mangroven-Setup mit einzigartiger Wasserlandschaft
@@ -295,13 +270,9 @@
 - path: /assets/images/tanks/mangrove/mangrove.webp
   title: Mangroven Becken Übersicht
   caption: Komplettansicht des einzigartigen Mangroven-Biotops
-
-# Quarantäne Becken
 - path: /assets/images/tanks/quarantine/quarantine.webp
   title: Quarantäne Becken
   caption: Speziell eingerichtetes Quarantäne-Becken für neue oder kranke Fische
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2025-10-16
 - path: /assets/images/fish/bandit/IMG_20251015_205127.webp
   title: /assets/images/fish/bandit/IMG_20251015_205127.webp
   caption: (Platzhalter)
@@ -476,8 +447,6 @@
 - path: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
   title: /assets/images/fish/sonnenschein/sonnenschein_timeline.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2025-10-20
 - path: /assets/images/fish/lila/IMG_20251016_203509.webp
   title: /assets/images/fish/lila/IMG_20251016_203509.webp
   caption: (Platzhalter)
@@ -556,10 +525,6 @@
 - path: /assets/images/fish/sonnenschein/IMG_20251016_203402.webp
   title: /assets/images/fish/sonnenschein/IMG_20251016_203402.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2025-12-03
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2025-12-03
 - path: /assets/images/fish/breedlings/IMG_20251203_113518.webp
   title: /assets/images/fish/breedlings/IMG_20251203_113518.webp
   caption: (Platzhalter)
@@ -578,8 +543,6 @@
 - path: /assets/images/fish/breedlings/IMG_20251203_114320.webp
   title: /assets/images/fish/breedlings/IMG_20251203_114320.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2025-12-05
 - path: /assets/images/fish/breedlings/IMG_20251203_135246.webp
   title: /assets/images/fish/breedlings/IMG_20251203_135246.webp
   caption: (Platzhalter)
@@ -595,8 +558,6 @@
 - path: /assets/images/fish/breedlings/IMG_20251203_140237.webp
   title: /assets/images/fish/breedlings/IMG_20251203_140237.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2026-04-26
 - path: /assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp
   title: /assets/images/fish/breedlings/m_blauer_wasserdrache/IMG_20251203_114607.webp
   caption: (Platzhalter)
@@ -795,13 +756,8 @@
 - path: /assets/images/fish/breedlings/m_tuerkis/IMG_20251203_140316.webp
   title: /assets/images/fish/breedlings/m_tuerkis/IMG_20251203_140316.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2026-06-29
 - path: /assets/images/fish/bluey/XX.webp
   title: /assets/images/fish/bluey/XX.webp
-  caption: (Platzhalter)
-- path: /assets/images/fish/breedlings_2/XX.webp
-  title: /assets/images/fish/breedlings_2/XX.webp
   caption: (Platzhalter)
 - path: /assets/images/fish/girl_1/XX.webp
   title: /assets/images/fish/girl_1/XX.webp
@@ -815,8 +771,6 @@
 - path: /assets/images/fish/krieger/XX.webp
   title: /assets/images/fish/krieger/XX.webp
   caption: (Platzhalter)
-
-# Automatisch hinzugefügte neue Fisch-Bilder am 2026-06-29
 - path: /assets/images/fish/bluey/bluey (1).webp
   title: /assets/images/fish/bluey/bluey (1).webp
   caption: (Platzhalter)
@@ -865,3 +819,102 @@
 - path: /assets/images/fish/zuko/zuko (4).webp
   title: /assets/images/fish/zuko/zuko (4).webp
   caption: (Platzhalter)
+- path: /assets/images/fish/boy_1/XX.webp
+  title: boy_1
+  caption: ""
+- path: /assets/images/fish/boy_2/XX.webp
+  title: boy_2
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/165cde26-c1cf-4fac-8d4f-22caa0ab13a5.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/1ee25ca1-ee11-4532-9799-451d128a473c.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/4a2b696f-71aa-4b17-a68a-5590f6412986.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/6d02746d-e6b5-477b-bfbb-2009c0eaee3a.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/795b2cfd-1d52-479c-9d6d-f8c900405003.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/947d79ee-ca3b-4055-8248-b7082ef188b2.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/a1e7fedb-5f2a-496b-9294-f28f9b4395aa.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/b900bec6-3145-40b8-bb31-13d29d7424e3.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/de45ccc7-cb51-448c-9f0f-b7d1ddcee89f.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/e6352b30-37db-4106-98e1-09b46b462be9.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/f485016a-7825-4b1b-a408-51fadcbb5375.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/colorful/f7393af4-6e42-4260-bc9f-0c8a7eafaf8c.webp
+  title: colorful
+  caption: ""
+- path: /assets/images/fish/breedlings_2/females/4d9b2458-a95c-401e-a93d-b8f997066eb1.webp
+  title: females
+  caption: ""
+- path: /assets/images/fish/breedlings_2/females/5cd038b9-4a78-4720-966d-71473cbc3101.webp
+  title: females
+  caption: ""
+- path: /assets/images/fish/breedlings_2/females/ad730b16-def5-4b36-a765-f29a73667bc6.webp
+  title: females
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/0a908093-3977-497d-a6cb-900e2649ab6a.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/4cd2aedb-25cb-46f9-9919-be3b4c95c1c9.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/67b3260c-b036-4d66-85f4-fd1e0a7abfd0.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/7746cdc9-5b42-4fe8-abdf-4adfed39c859.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/a4f9f3cf-4bf9-429c-b1b7-e74243422a15.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/b13824b7-a01a-46d3-984b-ada2f72158c0.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/bd9be103-c772-438c-88d0-61e6440a17e5.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/breedlings_2/light/ec5a0301-dfd3-4904-9a00-10b2cc48f55b.webp
+  title: light
+  caption: ""
+- path: /assets/images/fish/girl_1/timeline.webp
+  title: girl_1
+  caption: ""
+- path: /assets/images/fish/girl_2/timeline.webp
+  title: girl_2
+  caption: ""
+- path: /assets/images/fish/girl_3/timeline.webp
+  title: girl_3
+  caption: ""
+- path: /assets/images/fish/haekchen/XX.webp
+  title: haekchen
+  caption: ""
+- path: /assets/images/fish/krieger/timeline.webp
+  title: krieger
+  caption: ""
+- path: /assets/images/fish/violet/timeline.webp
+  title: violet
+  caption: ""
+- path: /assets/images/fish/zuko/XX.webp
+  title: zuko
+  caption: ""
+- path: /assets/images/fish/zuko/timeline.webp
+  title: zuko
+  caption: ""

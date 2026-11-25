@@ -13,7 +13,7 @@ Delta, Halfmoon, Marble, Dragon... Was bedeutet das alles? Und wie erkenne ich e
 Farbschlag meine Fische haben?
 Hier versuche ich, eine Unterscheidung zu erklären und sie auf meine Fische anzuwenden. Meine Informationen habe ich aus anderen Blogs oder Artikeln zusammengetragen.
 
-### Betta-Art: Domestic vs. Wildformen
+## Betta-Art: Domestic vs. Wildformen
 
 **Domestic Betta splendens**
 
@@ -28,7 +28,7 @@ Hier versuche ich, eine Unterscheidung zu erklären und sie auf meine Fische anz
 - Dezente, durchgehende Färbung ohne „Show"-Muster
 - Wenig bis keine Dragon-Schuppen
 
-### Flossenform
+## Flossenform
 
 Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flossenform ist eines der wichtigsten Unterscheidungsmerkmale:
 
@@ -49,7 +49,7 @@ Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flo
 - **Super Delta:** ca. 160°, sehr breite Caudale, aber nicht voll 180°.
 - **Dumbo:** Stark vergrößerte Brustflossen, gibt es sowohl lang- als auch kurzflossig.
 
-### Farbe und Muster
+## Farbe und Muster
 
 **Grundfarben:** Rot, Blau (steel/royal/türkis), Schwarz, Weiß, Kupfer/Braun, Gelb/Orange
 
@@ -66,7 +66,7 @@ Betta-Fische (Kampffische) gibt es in lang- und kurzflossigen Varianten. Die Flo
 - **Irideszenz:** farbiger Schimmer (grün/blau/türkis) punktuell oder flächig
 - **Dragon:** deckende, dick wirkende Metallic-Schuppen mit klaren Kanten
 
-### Geschlechtsmerkmale
+## Geschlechtsmerkmale
 
 **Männchen:** stärkeres Drohen/Fächern, Schaumnestbau, oft kräftigere Flossen
 **Weibchen:** kürzere Flossen, kompakter Körper, Legedorn (kleiner heller Punkt am Bauch), bei Sichtkontakt oft
@@ -109,7 +109,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/lila/IMG_20251008_202116.webp" alt="[Lila](/fish/2025/07/28/fish_lila)" class="fish-card-img">
+    <img src="/assets/images/fish/lila/IMG_20251008_202221.webp" alt="Lila" class="fish-card-img">
     <div class="fish-card-title">[Lila](/fish/2025/07/28/fish_lila) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -120,7 +120,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
   <div class="fish-card">
-    <img src="/assets/images/fish/sonnenschein/IMG_20251001_115231_thumbnail.webp" alt="[Sonnenschein](/fish/2025/07/28/fish_sonnenschein)" class="fish-card-img">
+    <img src="/assets/images/fish/sonnenschein/IMG_20250801_152543_thumbnail.webp" alt="Sonnenschein" class="fish-card-img">
     <div class="fish-card-title">[Sonnenschein](/fish/2025/07/28/fish_sonnenschein) <span class="fish-gender">♀</span></div>
     <ul>
       <li><strong>Typ:</strong> Domestic</li>
@@ -131,7 +131,7 @@ vertikale Bereitschaftsbalken
     </ul>
   </div>
 <div class="fish-card">
-  <img src="/assets/images/fish/sirPryce/sir_pryce.webp" alt="[Sir Pryce](/fish/2025/07/28/fish_sir_pryce)" class="fish-card-img">
+  <img src="/assets/images/fish/sirPryce/IMG_20251016_204600.webp" alt="Sir Pryce" class="fish-card-img">
   <div class="fish-card-title">[Sir Pryce](/fish/2025/07/28/fish_sir_pryce) <span class="fish-gender">♂</span></div>
   <ul>
     <li><strong>Typ:</strong> Domestic</li>

@@ -46,7 +46,7 @@ Zur Erholung war sie kurz im [Gras-Becken](/tank/2025/09/30/tank_babys) und ist 
 ## Juli 2026 - Krankheit
 
 Leider ist Shadow krank und ich kann nicht sagen, was es ist. Sie hat einen unglaublich dicken, geschwollenen Bauch und schnappt nach Luft.
-Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im Quarantäne-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt.
+Ich habe sie 4 Tage mit esha2000 behandelt, aber es hat nicht geholfen. Ich vermute eine Laichverhärtung und hoffe, dass sie im [Quarantäne](/tank/2025/09/30/tank_quarantaene)-Becken bei 27 Grad genug Ruhe und Erholung hat, dass ihr Immunsystem das gebacken bekommt.
 
 ## 24.07.2026 - Tod
 

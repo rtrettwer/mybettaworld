@@ -6,7 +6,19 @@ repos:
     rev: v5.0.0
     hooks:
       - id: check-merge-conflict
+        stages: [pre-commit]
       - id: check-added-large-files
         args: ["--maxkb=2000"]
+        stages: [pre-commit]
       - id: check-yaml
         args: ["--unsafe"]
+        stages: [pre-commit]
+  - repo: local
+    hooks:
+      - id: website-pre-push
+        name: Website vorbereiten und prüfen
+        entry: bash scripts/pre_push.sh
+        language: system
+        stages: [pre-push]
+        pass_filenames: false
+        always_run: true
